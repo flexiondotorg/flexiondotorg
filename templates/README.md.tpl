@@ -50,12 +50,12 @@ If you appreciate the work I do, then [please consider sponsoring me too](https:
   - {{.Description}}
 {{- end}}
 
-<!--
-### 🌱 Latest projects I created or started working on
-{{range rss "https://wimpysworld.com/projects/rss.xml" 5}}
-- [{{.Title}}]({{.URL}}) ({{humanize .PublishedAt}})
-{{- end}}
--->
+### Recent stars ⭐️
+
+{{range recentStars 5}}
+- [{{.Repo.Name}}]({{.Repo.URL}}) ({{.Repo.Stargazers}})
+  - {{.Repo.Description}}
+{{end}}
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
