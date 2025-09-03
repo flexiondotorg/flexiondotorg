@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (6 days ago)
+- [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 week ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [flexiondotorg/tokentank](https://github.com/flexiondotorg/tokentank) (1 week ago)
+- [flexiondotorg/tokentank](https://github.com/flexiondotorg/tokentank) (2 weeks ago)
   - A delightful Go terminal application that displays remaining credit balances for AI providers in a gorgeous, human-friendly interface.
 - [wolfi-dev/os](https://github.com/wolfi-dev/os) (1 month ago)
   - Main package repository for production Wolfi images
@@ -42,8 +42,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (6 days ago)
-- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (6 days ago)
+- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
+- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 week ago)
 - [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (1 week ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 weeks ago)
@@ -51,15 +51,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.10.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.10.1), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.10.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.10.1), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250831](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250831), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250831](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250831), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 1 week ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 2 months ago)
   - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 2 months ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 3 months ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 
 ### Recent starred projects ⭐️
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 - [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (707)
   - The most advanced Web UI for AI chat
-- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (54316)
+- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (54329)
   - The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data 🔥
 
 ### 🎙️ Podcast
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Running Linux on an IPad](https://linuxmatters.sh/63/) (today)
+- [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 day ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (2 weeks ago)
 - [Coding in My Pants](https://linuxmatters.sh/61/) (4 weeks ago)
 - [Frankenstein&#39;s Ubuntu Server Framework](https://linuxmatters.sh/60/) (1 month ago)
@@ -100,7 +100,7 @@ Here are some recent episodes:
 
 ### ✍️ Blog
 
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (2 months ago)
+- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (3 months ago)
 - [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (3 months ago)
 - [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (4 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
