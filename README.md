@@ -51,10 +51,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250901](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250901), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.10.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.10.1), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250831](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250831), 1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 1 week ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 2 months ago)
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
-- [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (611)
+- [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (612)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
 - [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (509)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 - [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (707)
   - The most advanced Web UI for AI chat
-- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (54433)
+- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (54448)
   - The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data 🔥
 
 ### 🎙️ Podcast
