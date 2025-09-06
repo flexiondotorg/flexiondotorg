@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server to fetch YouTube transcripts
 - [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (622)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
-- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (526)
+- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (527)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 - [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (708)
   - The most advanced Web UI for AI chat
-- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (55238)
+- [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) (55245)
   - The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data 🔥
 
 ### 🎙️ Podcast
