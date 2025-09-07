@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (102)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (103)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
