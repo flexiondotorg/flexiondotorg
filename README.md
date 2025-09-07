@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (103)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (104)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
-- [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (624)
+- [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (625)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
 - [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (537)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
