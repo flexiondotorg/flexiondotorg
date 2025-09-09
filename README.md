@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
 - [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (547)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
-- [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (709)
+- [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (710)
   - The most advanced Web UI for AI chat
 
 ### 🎙️ Podcast
