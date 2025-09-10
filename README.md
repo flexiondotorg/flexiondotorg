@@ -30,14 +30,14 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (today)
+  - 
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 weeks ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [flexiondotorg/tokentank](https://github.com/flexiondotorg/tokentank) (3 weeks ago)
   - A delightful Go terminal application that displays remaining credit balances for AI providers in a gorgeous, human-friendly interface.
-- [wolfi-dev/os](https://github.com/wolfi-dev/os) (1 month ago)
-  - Main package repository for production Wolfi images
 
 ### Recent pull requests 🛠️
 
