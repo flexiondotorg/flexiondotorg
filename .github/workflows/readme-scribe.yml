@@ -12,16 +12,16 @@ jobs:
   readme-scribe:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - name: Generate README.md
-        uses: muesli/readme-scribe@v0.1
+        uses: muesli/readme-scribe@5a187a2a36ef894335f17a7d01c32b0e28c6d948 # v0.1
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         with:
           template: "templates/README.md.tpl"
           writeTo: "README.md"
       - name: Commit README.md
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0 # v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -31,7 +31,7 @@ jobs:
           commit_user_email: actions@github.com
           commit_author: GitHub Actions <actions@github.com>
       - name: Push README.md to wimpysworld/.github/profile
-        uses: nkoppel/push-files-to-another-repository@v1.1.4
+        uses: nkoppel/push-files-to-another-repository@82da78d76ccb187ccaf0b8fde044c4153ab5d3e1 # v1.1.4
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
