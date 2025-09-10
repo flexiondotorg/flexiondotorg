@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
+- [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 weeks ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [flexiondotorg/tokentank](https://github.com/flexiondotorg/tokentank) (2 weeks ago)
+- [flexiondotorg/tokentank](https://github.com/flexiondotorg/tokentank) (3 weeks ago)
   - A delightful Go terminal application that displays remaining credit balances for AI providers in a gorgeous, human-friendly interface.
 - [wolfi-dev/os](https://github.com/wolfi-dev/os) (1 month ago)
   - Main package repository for production Wolfi images
@@ -42,8 +42,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
-- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 week ago)
+- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
+- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 weeks ago)
 - [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 weeks ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (3 weeks ago)
@@ -51,13 +51,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250908](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250908), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250908](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250908), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.1), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.1), 5 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 weeks ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 2 months ago)
+- [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 3 months ago)
   - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
 - [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 3 months ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
