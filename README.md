@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (today)
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 day ago)
   - Common project documents and templates for Noughty Linux 👻
-- [noughtylinux/community](https://github.com/noughtylinux/community) (today)
+- [noughtylinux/community](https://github.com/noughtylinux/community) (1 day ago)
   - A place for Noughty Linux community discussion and documentation 🫂
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
@@ -45,15 +45,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 - [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
 - [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 weeks ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 weeks ago)
-- [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 weeks ago)
+- [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (3 weeks ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (3 weeks ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250909](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250909), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250909](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250909), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.1), 5 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.1), 6 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 weeks ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
