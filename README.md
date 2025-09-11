@@ -65,6 +65,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (649)
+  - Miracle is a Wayland tiling window manager built on Mir
 - [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (107)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
 - [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (557)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
-- [TypingMind/typingmind](https://github.com/TypingMind/typingmind) (712)
-  - The most advanced Web UI for AI chat
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
