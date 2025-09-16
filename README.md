@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (650)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (115)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (116)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
+- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (today)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 weeks ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (4 weeks ago)
 - [Coding in My Pants](https://linuxmatters.sh/61/) (1 month ago)
 - [Frankenstein&#39;s Ubuntu Server Framework](https://linuxmatters.sh/60/) (1 month ago)
-- [Old Man Yells at GMail](https://linuxmatters.sh/59/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
