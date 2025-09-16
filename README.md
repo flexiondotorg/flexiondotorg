@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (650)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (114)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (115)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
 - [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (646)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
-- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (569)
+- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (570)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 
 ### 🎙️ Podcast
