@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (650)
+- [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (651)
   - Miracle is a Wayland tiling window manager built on Mir
 - [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (121)
   - Exploring the integration between Nix and AI coding agents
