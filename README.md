@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 week ago)
   - Common project documents and templates for Noughty Linux 👻
@@ -45,15 +45,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 - [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (3 weeks ago)
 - [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (3 weeks ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (3 weeks ago)
-- [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (3 weeks ago)
+- [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (4 weeks ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (1 month ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250910](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250910), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250910](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250910), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 5 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 6 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 3 weeks ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
@@ -82,9 +82,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 day ago)
+- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 days ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 weeks ago)
-- [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (4 weeks ago)
+- [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (1 month ago)
 - [Coding in My Pants](https://linuxmatters.sh/61/) (1 month ago)
 - [Frankenstein&#39;s Ubuntu Server Framework](https://linuxmatters.sh/60/) (1 month ago)
 
