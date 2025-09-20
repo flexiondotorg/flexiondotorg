@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server to fetch YouTube transcripts
 - [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (656)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
-- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (579)
+- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (580)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 
 ### 🎙️ Podcast
