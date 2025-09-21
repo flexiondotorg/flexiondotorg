@@ -30,10 +30,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 week ago)
-  - Common project documents and templates for Noughty Linux 👻
 - [noughtylinux/community](https://github.com/noughtylinux/community) (1 week ago)
   - A place for Noughty Linux community discussion and documentation 🫂
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 week ago)
+  - Common project documents and templates for Noughty Linux 👻
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (3 weeks ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (3 weeks ago)
