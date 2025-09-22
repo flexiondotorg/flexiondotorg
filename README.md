@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [noughtylinux/community](https://github.com/noughtylinux/community) (1 week ago)
   - A place for Noughty Linux community discussion and documentation 🫂
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (653)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (123)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (124)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (5 days ago)
+- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (6 days ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 weeks ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (1 month ago)
 - [Coding in My Pants](https://linuxmatters.sh/61/) (1 month ago)
