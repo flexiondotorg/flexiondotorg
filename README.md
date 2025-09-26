@@ -28,12 +28,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (today)
+  - Common project documents and templates for Nøughty Linux 👻
+- [noughtylinux/community](https://github.com/noughtylinux/community) (today)
+  - A place for Nøughty Linux community discussion and documentation 🫂
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [noughtylinux/community](https://github.com/noughtylinux/community) (2 weeks ago)
-  - A place for Noughty Linux community discussion and documentation 🫂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (2 weeks ago)
-  - Common project documents and templates for Noughty Linux 👻
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 month ago)
