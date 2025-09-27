@@ -29,11 +29,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
-  - 
-- [noughtylinux/community](https://github.com/noughtylinux/community) (1 day ago)
-  - A place for Nøughty Linux community discussion and documentation 🫂
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 day ago)
   - Common project documents and templates for Nøughty Linux 👻
+- [noughtylinux/community](https://github.com/noughtylinux/community) (1 day ago)
+  - A place for Nøughty Linux community discussion and documentation 🫂
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
