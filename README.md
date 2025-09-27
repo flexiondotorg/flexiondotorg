@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+  - 
 - [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 day ago)
   - Common project documents and templates for Nøughty Linux 👻
 - [noughtylinux/community](https://github.com/noughtylinux/community) (1 day ago)
@@ -36,8 +38,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
-- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 month ago)
-  - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 
 ### Recent pull requests 🛠️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server to fetch YouTube transcripts
 - [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (663)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
-- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (599)
+- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (600)
   - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 
 ### 🎙️ Podcast
