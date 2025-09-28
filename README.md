@@ -30,11 +30,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 day ago)
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (2 days ago)
   - Common project documents and templates for Nøughty Linux 👻
-- [noughtylinux/community](https://github.com/noughtylinux/community) (1 day ago)
+- [noughtylinux/community](https://github.com/noughtylinux/community) (2 days ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250920](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250920), 5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250920](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250920), 6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 2 weeks ago)
   - The Github Action for Determinate Nix
@@ -65,6 +65,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1)
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (655)
   - Miracle is a Wayland tiling window manager built on Mir
 - [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (137)
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - MCP server to fetch YouTube transcripts
 - [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (663)
   - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
-- [ref-tools/ref-tools-mcp](https://github.com/ref-tools/ref-tools-mcp) (599)
-  - An MCP server to stop hallucinations with token efficient search over public and private documentation.
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
