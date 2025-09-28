@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250920](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250920), 6 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250925](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250925), today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 2 weeks ago)
   - The Github Action for Determinate Nix
@@ -65,6 +65,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [iLib-js/UCD](https://github.com/iLib-js/UCD) (8)
+  - The Unicode Character Database encoded as json files
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (655)
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (69)
   - MCP server to fetch YouTube transcripts
-- [shaneholloman/mcp-knowledge-graph](https://github.com/shaneholloman/mcp-knowledge-graph) (665)
-  - MCP server enabling persistent memory for Claude through a local knowledge graph - fork focused on local development
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
