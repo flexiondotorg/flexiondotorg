@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (2 days ago)
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (3 days ago)
   - Common project documents and templates for Nøughty Linux 👻
-- [noughtylinux/community](https://github.com/noughtylinux/community) (2 days ago)
+- [noughtylinux/community](https://github.com/noughtylinux/community) (3 days ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
   - Oval Tutu&#39;s GitHub profile ️🟢
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250925](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250925), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20250925](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20250925), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 2 weeks ago)
   - The Github Action for Determinate Nix
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [iLib-js/UCD](https://github.com/iLib-js/UCD) (8)
+- [iLib-js/UCD](https://github.com/iLib-js/UCD) (9)
   - The Unicode Character Database encoded as json files
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
