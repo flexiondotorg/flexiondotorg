@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (5 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (6 days ago)
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 week ago)
   - Common project documents and templates for Nøughty Linux 👻
-- [noughtylinux/community](https://github.com/noughtylinux/community) (6 days ago)
+- [noughtylinux/community](https://github.com/noughtylinux/community) (1 week ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -51,15 +51,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251001](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251001), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251001](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251001), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 2 weeks ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 3 weeks ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 1 month ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 3 months ago)
   - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 3 months ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 4 months ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 
 ### Recent starred projects ⭐️
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (2 days ago)
+- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (3 days ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 weeks ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (1 month ago)
@@ -100,7 +100,7 @@ Here are some recent episodes:
 
 ### ✍️ Blog
 
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (3 months ago)
+- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (4 months ago)
 - [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (4 months ago)
 - [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (5 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
