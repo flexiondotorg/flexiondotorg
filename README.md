@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (5 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (6 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 week ago)
   - Common project documents and templates for Nøughty Linux 👻
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251001](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251001), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251001](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251001), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.2), 3 weeks ago)
   - The Github Action for Determinate Nix
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (3 days ago)
+- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (4 days ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 weeks ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (1 month ago)
-- [Coding in My Pants](https://linuxmatters.sh/61/) (1 month ago)
+- [Coding in My Pants](https://linuxmatters.sh/61/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
