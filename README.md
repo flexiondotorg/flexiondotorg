@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [noughtylinux/community](https://github.com/noughtylinux/community) (2 weeks ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 2 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251002](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251002), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -101,7 +101,7 @@ Here are some recent episodes:
 ### ✍️ Blog
 
 - [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (4 months ago)
-- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (4 months ago)
-- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (5 months ago)
+- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (5 months ago)
+- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (6 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
 - [Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/) (2 years ago)
