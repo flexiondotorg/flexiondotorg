@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The Unicode Character Database encoded as json files
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (660)
+- [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (661)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (171)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (172)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (70)
   - MCP server to fetch YouTube transcripts
