@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251014](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251014), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251014](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251014), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 1 week ago)
   - The Github Action for Determinate Nix
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (3 days ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (4 days ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (2 weeks ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
-- [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (1 month ago)
+- [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
