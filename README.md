@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 weeks ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [noughtylinux/community](https://github.com/noughtylinux/community) (3 weeks ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251016](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251016), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251016](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251016), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 1 week ago)
   - The Github Action for Determinate Nix
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (4 days ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (5 days ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (2 weeks ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
