@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [noughtylinux/config](https://github.com/noughtylinux/config) (2 days ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (3 days ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -44,18 +44,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
 - [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
-- [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 month ago)
+- [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 months ago)
 - [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 2 weeks ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 1 month ago)
+- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 4 months ago)
   - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
