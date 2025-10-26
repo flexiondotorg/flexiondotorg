@@ -28,22 +28,22 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [noughtylinux/config](https://github.com/noughtylinux/config) (3 days ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (4 days ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 weeks ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [noughtylinux/community](https://github.com/noughtylinux/community) (4 weeks ago)
+- [noughtylinux/community](https://github.com/noughtylinux/community) (1 month ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (4 weeks ago)
+- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 month ago)
   - Common project documents and templates for Nøughty Linux 👻
 
 ### Recent pull requests 🛠️
 
 
-- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
-- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (1 month ago)
+- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
+- [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 months ago)
 - [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
 - [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 2 weeks ago)
   - The Github Action for Determinate Nix
