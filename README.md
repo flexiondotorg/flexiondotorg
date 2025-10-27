@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [noughtylinux/config](https://github.com/noughtylinux/config) (4 days ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (5 days ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251019](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251019), 6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 2 weeks ago)
   - The Github Action for Determinate Nix
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (666)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (204)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (205)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (70)
   - MCP server to fetch YouTube transcripts
