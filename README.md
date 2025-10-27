@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (666)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (208)
+- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (209)
   - Exploring the integration between Nix and AI coding agents
 - [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (70)
   - MCP server to fetch YouTube transcripts
