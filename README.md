@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [noughtylinux/config](https://github.com/noughtylinux/config) (5 days ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (6 days ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 weeks ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [noughtylinux/community](https://github.com/noughtylinux/community) (1 month ago)
   - A place for Nøughty Linux community discussion and documentation 🫂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.11.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.11.3), 2 weeks ago)
   - The Github Action for Determinate Nix
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (1 week ago)
-- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (3 weeks ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (2 weeks ago)
+- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (4 weeks ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
 - [Mirrors, Motors and Makefiles](https://linuxmatters.sh/62/) (2 months ago)
