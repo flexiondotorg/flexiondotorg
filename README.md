@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 day ago)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (today)
   - Linux Matters Podcast 🐧🎤
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -65,6 +65,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1)
+  - Linux Matters Podcast 🐧🎤
 - [iLib-js/UCD](https://github.com/iLib-js/UCD) (10)
   - The Unicode Character Database encoded as json files
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (9)
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Miracle is a Wayland tiling window manager built on Mir
 - [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (213)
   - Exploring the integration between Nix and AI coding agents
-- [cottongeeks/ytt-mcp](https://github.com/cottongeeks/ytt-mcp) (70)
-  - MCP server to fetch YouTube transcripts
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
