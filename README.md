@@ -65,6 +65,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8279)
+  - HTML5 &lt;audio&gt; or &lt;video&gt; player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1)
   - Linux Matters Podcast 🐧🎤
 - [iLib-js/UCD](https://github.com/iLib-js/UCD) (10)
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (669)
   - Miracle is a Wayland tiling window manager built on Mir
-- [numtide/nix-ai-tools](https://github.com/numtide/nix-ai-tools) (213)
-  - Exploring the integration between Nix and AI coding agents
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
