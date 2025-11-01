@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 day ago)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (2 days ago)
   - Linux Matters Podcast 🐧🎤
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [noughtylinux/config](https://github.com/noughtylinux/config) (1 week ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
@@ -51,9 +51,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.0), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.0), 2 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8281)
+- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8282)
   - HTML5 &lt;audio&gt; or &lt;video&gt; player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1)
   - Linux Matters Podcast 🐧🎤
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Panache, for Men](https://linuxmatters.sh/67/) (3 days ago)
+- [Panache, for Men](https://linuxmatters.sh/67/) (4 days ago)
 - [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (2 weeks ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
-- [Running Linux on an IPad](https://linuxmatters.sh/63/) (1 month ago)
+- [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
