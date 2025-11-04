@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (4 days ago)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (5 days ago)
   - Linux Matters Podcast 🐧🎤
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.0), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.0), 5 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Panache, for Men](https://linuxmatters.sh/67/) (6 days ago)
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (2 weeks ago)
+- [Panache, for Men](https://linuxmatters.sh/67/) (1 week ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (3 weeks ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 months ago)
