@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Linux Matters Podcast 🐧🎤
 - [iLib-js/UCD](https://github.com/iLib-js/UCD) (10)
   - The Unicode Character Database encoded as json files
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (11)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (12)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [miracle-wm-org/miracle-wm](https://github.com/miracle-wm-org/miracle-wm) (669)
   - Miracle is a Wayland tiling window manager built on Mir
