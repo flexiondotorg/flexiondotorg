@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (today)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 day ago)
   - Linux Matters Podcast 🐧🎤
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [noughtylinux/config](https://github.com/noughtylinux/config) (1 week ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (2 weeks ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.1), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.1), 1 day ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
