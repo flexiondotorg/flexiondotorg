@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Linux Matters Podcast 🐧🎤
 - [iLib-js/UCD](https://github.com/iLib-js/UCD) (10)
   - The Unicode Character Database encoded as json files
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (13)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (14)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 
 ### 🎙️ Podcast
