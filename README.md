@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+  - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (6 days ago)
   - Linux Matters Podcast 🐧🎤
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 weeks ago)
@@ -36,8 +38,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [noughtylinux/.github](https://github.com/noughtylinux/.github) (1 month ago)
-  - Common project documents and templates for Nøughty Linux 👻
 
 ### Recent pull requests 🛠️
 
@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), today)
+  - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.2), 4 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 2 weeks ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 5 months ago)
   - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.1.0](https://github.com/wimpysworld/faff/releases/tag/0.1.0), 5 months ago)
-  - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 
 ### Recent starred projects ⭐️
 
