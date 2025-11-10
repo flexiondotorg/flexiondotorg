@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (5 days ago)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (6 days ago)
   - Linux Matters Podcast 🐧🎤
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [noughtylinux/config](https://github.com/noughtylinux/config) (2 weeks ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
@@ -51,9 +51,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.2), 3 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.12.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.12.2), 4 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 1 week ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 2 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
