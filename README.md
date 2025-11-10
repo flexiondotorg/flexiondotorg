@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(ci): update freetype download URL to use savannah mirror](https://github.com/flexiondotorg/ffmpeg-go/pull/9) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
+- [ci(workflow): add arm64 support and refactor GitHub Actions](https://github.com/flexiondotorg/ffmpeg-go/pull/1) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
 - [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
 - [feat: modernize issue templates with YAML forms and contact links](https://github.com/Oval-Tutu/.github/pull/2) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
 - [refactor(dockerfile): switch from custom ffmpeg to jellyfin-ffmpeg](https://github.com/wimpysworld/stream-sprout/pull/66) on [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (2 months ago)
-- [feat: Add TypingMind Plugin Server health check workflow](https://github.com/flexiondotorg/typingmind/pull/2) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
-- [Add automated upstream sync workflow](https://github.com/flexiondotorg/typingmind/pull/1) on [flexiondotorg/typingmind](https://github.com/flexiondotorg/typingmind) (2 months ago)
 
 ### Recent releases 📦️
 
