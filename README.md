@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [csnewman/ffmpeg-go](https://github.com/csnewman/ffmpeg-go) (69)
   - Go bindings for the FFmpeg libraries
