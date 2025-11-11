@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(download): implement robust file download with retry and resume capability](https://github.com/flexiondotorg/ffmpeg-go/pull/16) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
+- [fix(ci): improve macos dependency installation in ffmpeg workflow](https://github.com/flexiondotorg/ffmpeg-go/pull/15) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
 - [fix(macOS): update zlib to version 1.3.1](https://github.com/flexiondotorg/ffmpeg-go/pull/13) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
 - [fix: update libiconv download URL path](https://github.com/flexiondotorg/ffmpeg-go/pull/12) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
 - [fix(ci): update freetype download URL to use savannah mirror](https://github.com/flexiondotorg/ffmpeg-go/pull/9) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [ci(workflow): add arm64 support and refactor GitHub Actions](https://github.com/flexiondotorg/ffmpeg-go/pull/1) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
 
 ### Recent releases 📦️
 
