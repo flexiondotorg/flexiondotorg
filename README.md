@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (6 days ago)
+- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 week ago)
   - Linux Matters Podcast 🐧🎤
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [fix(macOS): update zlib to version 1.3.1](https://github.com/flexiondotorg/ffmpeg-go/pull/13) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
-- [fix: update libiconv download URL path](https://github.com/flexiondotorg/ffmpeg-go/pull/12) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
-- [fix(ci): update freetype download URL to use savannah mirror](https://github.com/flexiondotorg/ffmpeg-go/pull/9) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
-- [ci(workflow): add arm64 support and refactor GitHub Actions](https://github.com/flexiondotorg/ffmpeg-go/pull/1) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (today)
+- [fix(macOS): update zlib to version 1.3.1](https://github.com/flexiondotorg/ffmpeg-go/pull/13) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
+- [fix: update libiconv download URL path](https://github.com/flexiondotorg/ffmpeg-go/pull/12) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
+- [fix(ci): update freetype download URL to use savannah mirror](https://github.com/flexiondotorg/ffmpeg-go/pull/9) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
+- [ci(workflow): add arm64 support and refactor GitHub Actions](https://github.com/flexiondotorg/ffmpeg-go/pull/1) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
 - [feat: add organization-wide label sync workflow and documentation](https://github.com/Oval-Tutu/.github/pull/3) on [Oval-Tutu/.github](https://github.com/Oval-Tutu/.github) (2 months ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), 1 day ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 1 day ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 2 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Panache, for Men](https://linuxmatters.sh/67/) (1 week ago)
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (3 weeks ago)
+- [Panache, for Men](https://linuxmatters.sh/67/) (2 weeks ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (4 weeks ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 - [Running Linux on an IPad](https://linuxmatters.sh/63/) (2 months ago)
@@ -101,7 +101,7 @@ Here are some recent episodes:
 ### ✍️ Blog
 
 - [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (5 months ago)
-- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (5 months ago)
-- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (6 months ago)
+- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (6 months ago)
+- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (7 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
 - [Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/) (2 years ago)
