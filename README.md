@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (3 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 week ago)
   - Linux Matters Podcast 🐧🎤
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [fix(ci): create compatibility symlinks for older automake version](https://github.com/flexiondotorg/ffmpeg-go/pull/18) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [feat(download): implement robust file download with retry and resume capability](https://github.com/flexiondotorg/ffmpeg-go/pull/16) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
+- [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
+- [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
+- [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
+- [fix(ci): create compatibility symlinks for older automake version](https://github.com/flexiondotorg/ffmpeg-go/pull/18) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
+- [feat(download): implement robust file download with retry and resume capability](https://github.com/flexiondotorg/ffmpeg-go/pull/16) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), 2 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), 3 days ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 2 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 3 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 2 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -82,9 +82,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (1 day ago)
+- [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (2 days ago)
 - [Panache, for Men](https://linuxmatters.sh/67/) (2 weeks ago)
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (4 weeks ago)
+- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (1 month ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
 
