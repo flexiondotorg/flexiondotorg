@@ -28,12 +28,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (3 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 week ago)
   - Linux Matters Podcast 🐧🎤
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 weeks ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [noughtylinux/config](https://github.com/noughtylinux/config) (3 weeks ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
@@ -51,12 +51,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), 3 days ago)
   - The Github Action for Determinate Nix
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 3 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251026](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251026), 2 weeks ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 5 months ago)
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [csnewman/ffmpeg-go](https://github.com/csnewman/ffmpeg-go) (70)
   - Go bindings for the FFmpeg libraries
-- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8286)
+- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8287)
   - HTML5 &lt;audio&gt; or &lt;video&gt; player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1)
   - Linux Matters Podcast 🐧🎤
