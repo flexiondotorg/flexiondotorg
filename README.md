@@ -51,10 +51,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), today)
+  - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.0), 3 days ago)
-  - The Github Action for Determinate Nix
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 3 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
