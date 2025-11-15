@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (4 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (5 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (1 week ago)
   - Linux Matters Podcast 🐧🎤
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor: reorganise project structure with standardised build directories](https://github.com/flexiondotorg/ffmpeg-go/pull/43) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 day ago)
-- [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (3 days ago)
-- [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (3 days ago)
-- [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (3 days ago)
-- [fix(ci): create compatibility symlinks for older automake version](https://github.com/flexiondotorg/ffmpeg-go/pull/18) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (3 days ago)
+- [refactor: reorganise project structure with standardised build directories](https://github.com/flexiondotorg/ffmpeg-go/pull/43) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (2 days ago)
+- [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (4 days ago)
+- [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (4 days ago)
+- [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (4 days ago)
+- [fix(ci): create compatibility symlinks for older automake version](https://github.com/flexiondotorg/ffmpeg-go/pull/18) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), 2 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 4 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 5 days ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (3 days ago)
+- [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (4 days ago)
 - [Panache, for Men](https://linuxmatters.sh/67/) (2 weeks ago)
 - [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (1 month ago)
 - [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
-- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (1 month ago)
+- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
