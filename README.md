@@ -83,9 +83,9 @@ I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@
 Here are some recent episodes:
 
 - [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (6 days ago)
-- [Panache, for Men](https://linuxmatters.sh/67/) (2 weeks ago)
+- [Panache, for men](https://linuxmatters.sh/67/) (2 weeks ago)
 - [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (1 month ago)
-- [MacOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
+- [macOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
 - [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 months ago)
 
 ### 📺️ YouTube
