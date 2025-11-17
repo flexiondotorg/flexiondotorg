@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [csnewman/ffmpeg-go](https://github.com/csnewman/ffmpeg-go) (70)
+- [csnewman/ffmpeg-go](https://github.com/csnewman/ffmpeg-go) (71)
   - Go bindings for the FFmpeg libraries
 - [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8288)
   - HTML5 &lt;audio&gt; or &lt;video&gt; player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
