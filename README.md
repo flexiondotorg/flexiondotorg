@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), 6 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.2), today)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
