@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 week ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (2 weeks ago)
   - Linux Matters Podcast 🐧🎤
-- [noughtylinux/config](https://github.com/noughtylinux/config) (3 weeks ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (4 weeks ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -42,7 +42,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor: reorganise project structure with standardised build directories](https://github.com/flexiondotorg/ffmpeg-go/pull/43) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (5 days ago)
+- [refactor: reorganise project structure with standardised build directories](https://github.com/flexiondotorg/ffmpeg-go/pull/43) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (6 days ago)
 - [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
 - [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
 - [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
@@ -51,9 +51,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), 5 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.1), 6 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 1 week ago)
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
