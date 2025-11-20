@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 week ago)
@@ -36,8 +38,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Linux Matters Podcast 🐧🎤
 - [noughtylinux/config](https://github.com/noughtylinux/config) (4 weeks ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
-  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 
 ### Recent pull requests 🛠️
 
