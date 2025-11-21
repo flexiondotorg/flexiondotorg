@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -36,7 +36,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Drop the mix, ship the show—metadata, cover art, and all 🪩
 - [linuxmatters/.github](https://github.com/linuxmatters/.github) (2 weeks ago)
   - Linux Matters Podcast 🐧🎤
-- [noughtylinux/config](https://github.com/noughtylinux/config) (4 weeks ago)
+- [noughtylinux/config](https://github.com/noughtylinux/config) (1 month ago)
   - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
 
 ### Recent pull requests 🛠️
@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.2), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.2), 2 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
