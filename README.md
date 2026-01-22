@@ -32,21 +32,21 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/antsy-alien-attack](https://github.com/wimpysworld/antsy-alien-attack) (today)
   - A game, written in Bash, that is a somewhat retro-a-like shoot &#39;em up. Hopefully.
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
-  - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (today)
-  - RGB levels plugin for OBS Studio 🎚️🌈
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (today)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
+- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (today)
+  - RGB levels plugin for OBS Studio 🎚️🌈
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
+  - apt-get for .debs published via GitHub or direct download 📦
 
 ### Recent pull requests 🛠️
 
 
+- [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
 - [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
 - [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
 - [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 - [feat(data): add character description support](https://github.com/wimpysworld/glyph-party/pull/9) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
-- [chore(deps): update ucd-full to v17 for Unicode 17 data](https://github.com/wimpysworld/glyph-party/pull/8) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (22)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (23)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5990)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5991)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83621)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83667)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
