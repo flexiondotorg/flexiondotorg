@@ -28,53 +28,53 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
+  - File downloader for archive.org ⬇️
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 week ago)
-  - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (2 weeks ago)
-  - Linux Matters Podcast 🐧🎤
-- [noughtylinux/config](https://github.com/noughtylinux/config) (1 month ago)
-  - Nix flake for Nøughty Linux terminal environment and desktop shell ️❄️
+- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1 day ago)
+  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (2 days ago)
+  - The A to Z of Modern Unix 🐧
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 days ago)
+  - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
 
 ### Recent pull requests 🛠️
 
 
-- [refactor: reorganise project structure with standardised build directories](https://github.com/flexiondotorg/ffmpeg-go/pull/43) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
-- [chore(deps): update library versions and fix build process](https://github.com/flexiondotorg/ffmpeg-go/pull/21) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
-- [fix: resolve automake version mismatch issues in builds](https://github.com/flexiondotorg/ffmpeg-go/pull/20) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
-- [chore: update libiconv download URL to use mirror service](https://github.com/flexiondotorg/ffmpeg-go/pull/19) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
-- [fix(ci): create compatibility symlinks for older automake version](https://github.com/flexiondotorg/ffmpeg-go/pull/18) on [flexiondotorg/ffmpeg-go](https://github.com/flexiondotorg/ffmpeg-go) (1 week ago)
+- [refactor(utils): consolidate size constants and remove unused code](https://github.com/wimpysworld/ia-get/pull/94) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
+- [fix: sanitize filenames for cross-platform compatibility](https://github.com/wimpysworld/ia-get/pull/93) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
+- [feat: add retry logic and extended timeouts for large file downloads](https://github.com/wimpysworld/ia-get/pull/91) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
+- [ci: add CI workflow and improve release pipeline](https://github.com/wimpysworld/ia-get/pull/90) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (1 day ago)
+- [Add Research Badger plugin to user-contributed list](https://github.com/TypingMind/awesome-typingmind/pull/17) on [TypingMind/awesome-typingmind](https://github.com/TypingMind/awesome-typingmind) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.13.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.13.2), 2 days ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), today)
+  - File downloader for archive.org ⬇️
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.5.20251110](https://github.com/wimpysworld/nix-config/releases/tag/v25.5.20251110), 1 week ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260120](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260120), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.2.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.2.0), 1 week ago)
-  - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) ([0.1.6](https://github.com/wimpysworld/stream-sprout/releases/tag/0.1.6), 2 months ago)
-  - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [wimpysworld/nixos-needsreboot](https://github.com/wimpysworld/nixos-needsreboot) ([0.2.9](https://github.com/wimpysworld/nixos-needsreboot/releases/tag/0.2.9), 5 months ago)
-  - Determine if you need to reboot ️♻️ your NixOS machine ️❄️
+- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) ([0.1.0](https://github.com/wimpysworld/plugin-research-badger/releases/tag/0.1.0), 1 day ago)
+  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.1.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.1.0), 1 week ago)
+  - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
 
 ### Recent starred projects ⭐️
 
 
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2)
-  - Drop the mix, ship the show—metadata, cover art, and all 🪩
-- [csnewman/ffmpeg-go](https://github.com/csnewman/ffmpeg-go) (71)
-  - Go bindings for the FFmpeg libraries
-- [mediaelement/mediaelement](https://github.com/mediaelement/mediaelement) (8289)
-  - HTML5 &lt;audio&gt; or &lt;video&gt; player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
-- [linuxmatters/.github](https://github.com/linuxmatters/.github) (1)
-  - Linux Matters Podcast 🐧🎤
-- [iLib-js/UCD](https://github.com/iLib-js/UCD) (10)
-  - The Unicode Character Database encoded as json files
+- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
+  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (19)
+  - The A to Z of Modern Unix 🐧
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5988)
+  - ✨ AI Coding, Vim Style
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83152)
+  - The open source coding agent.
+- [docfork/docfork](https://github.com/docfork/docfork) (387)
+  - Docfork - Up-to-date Docs for AI Agents.
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Frameworks, Filesystems and Fixes](https://linuxmatters.sh/68/) (1 week ago)
-- [Panache, for men](https://linuxmatters.sh/67/) (3 weeks ago)
-- [Terminal Full of Sparkles](https://linuxmatters.sh/66/) (1 month ago)
-- [macOS Made Me Snap!](https://linuxmatters.sh/65/) (1 month ago)
-- [Ethical Retro Gaming](https://linuxmatters.sh/64/) (2 months ago)
+- [Points of You](https://linuxmatters.sh/73/) (2 days ago)
+- [Lets get Trippy](https://linuxmatters.sh/72/) (2 weeks ago)
+- [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
+- [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
+- [He&#39;s a very nøughty boy](https://linuxmatters.sh/69/) (1 month ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
@@ -100,8 +100,8 @@ Here are some recent episodes:
 
 ### ✍️ Blog
 
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (5 months ago)
-- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (6 months ago)
-- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (7 months ago)
+- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (7 months ago)
+- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (8 months ago)
+- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (9 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
 - [Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/) (2 years ago)
