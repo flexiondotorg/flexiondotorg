@@ -42,15 +42,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
+- [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
 - [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 - [feat(data): add character description support](https://github.com/wimpysworld/glyph-party/pull/9) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 - [chore(deps): update ucd-full to v17 for Unicode 17 data](https://github.com/wimpysworld/glyph-party/pull/8) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
-- [fix(volume): add minimum space validation and error handling](https://github.com/wimpysworld/nothing-but-nix/pull/45) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
-- [fix(build): move TMPDIR to /nix for builds](https://github.com/wimpysworld/nothing-but-nix/pull/44) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
 
 ### Recent releases 📦️
 
 
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), today)
+  - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v7](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v7), today)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), today)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260120](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260120), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) ([0.1.0](https://github.com/wimpysworld/plugin-research-badger/releases/tag/0.1.0), 1 day ago)
-  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 
 ### Recent starred projects ⭐️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5990)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83433)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83501)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
