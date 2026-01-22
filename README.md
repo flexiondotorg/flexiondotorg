@@ -30,10 +30,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
-  - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
+  - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (today)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 - [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (today)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: clean up deprecated packages and improve CI handling](https://github.com/wimpysworld/deb-get/pull/1648) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
 - [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
 - [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
 - [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
 - [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
-- [feat(data): add character description support](https://github.com/wimpysworld/glyph-party/pull/9) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5991)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83713)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83770)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
