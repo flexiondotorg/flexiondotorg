@@ -28,16 +28,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
-  - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/antsy-alien-attack](https://github.com/wimpysworld/antsy-alien-attack) (today)
   - A game, written in Bash, that is a somewhat retro-a-like shoot &#39;em up. Hopefully.
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
+  - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (today)
   - RGB levels plugin for OBS Studio 🎚️🌈
 - [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (today)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [wimpysworld/obs-dvd-screensaver](https://github.com/wimpysworld/obs-dvd-screensaver) (today)
-  - DVD screen saver for OBS Studio 📀
 
 ### Recent pull requests 🛠️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5990)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83575)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83621)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
