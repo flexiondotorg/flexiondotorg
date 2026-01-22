@@ -32,21 +32,21 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - File downloader for archive.org ⬇️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
+  - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1 day ago)
-  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 
 ### Recent pull requests 🛠️
 
 
+- [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+- [feat(data): add character description support](https://github.com/wimpysworld/glyph-party/pull/9) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+- [chore(deps): update ucd-full to v17 for Unicode 17 data](https://github.com/wimpysworld/glyph-party/pull/8) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 - [fix(volume): add minimum space validation and error handling](https://github.com/wimpysworld/nothing-but-nix/pull/45) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
 - [fix(build): move TMPDIR to /nix for builds](https://github.com/wimpysworld/nothing-but-nix/pull/44) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
-- [feat(action): add graceful skip for macOS and Windows runners](https://github.com/wimpysworld/nothing-but-nix/pull/40) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
-- [refactor(utils): consolidate size constants and remove unused code](https://github.com/wimpysworld/ia-get/pull/94) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
-- [fix: sanitize filenames for cross-platform compatibility](https://github.com/wimpysworld/ia-get/pull/93) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (20)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (21)
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5990)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83293)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83433)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
