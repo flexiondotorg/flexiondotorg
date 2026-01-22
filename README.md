@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
   - File downloader for archive.org ⬇️
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
+  - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1 day ago)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (2 days ago)
   - The A to Z of Modern Unix 🐧
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 days ago)
-  - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
 
 ### Recent pull requests 🛠️
 
 
+- [feat(action): add graceful skip for macOS and Windows runners](https://github.com/wimpysworld/nothing-but-nix/pull/40) on [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
 - [refactor(utils): consolidate size constants and remove unused code](https://github.com/wimpysworld/ia-get/pull/94) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
 - [fix: sanitize filenames for cross-platform compatibility](https://github.com/wimpysworld/ia-get/pull/93) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
 - [feat: add retry logic and extended timeouts for large file downloads](https://github.com/wimpysworld/ia-get/pull/91) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
 - [ci: add CI workflow and improve release pipeline](https://github.com/wimpysworld/ia-get/pull/90) on [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (1 day ago)
-- [Add Research Badger plugin to user-contributed list](https://github.com/TypingMind/awesome-typingmind/pull/17) on [TypingMind/awesome-typingmind](https://github.com/TypingMind/awesome-typingmind) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (19)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5988)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5989)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83152)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83210)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
