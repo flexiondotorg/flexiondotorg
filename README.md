@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (today)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (1 day ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (today)
+- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 day ago)
   - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
-- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (today)
+- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (1 day ago)
   - RGB levels plugin for OBS Studio 🎚️🌈
 
 ### Recent pull requests 🛠️
 
 
-- [chore: clean up deprecated packages and improve CI handling](https://github.com/wimpysworld/deb-get/pull/1648) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
-- [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
-- [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
-- [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (today)
-- [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+- [chore: clean up deprecated packages and improve CI handling](https://github.com/wimpysworld/deb-get/pull/1648) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
+- [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
+- [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (1 day ago)
+- [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (1 day ago)
+- [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v8](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v8), today)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v8](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v8), 1 day ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), today)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), today)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 1 day ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), today)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 1 day ago)
   - File downloader for archive.org ⬇️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 2 days ago)
   - The Github Action for Determinate Nix
 
 ### Recent starred projects ⭐️
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5992)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83834)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (83873)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (387)
   - Docfork - Up-to-date Docs for AI Agents.
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Points of You](https://linuxmatters.sh/73/) (2 days ago)
+- [Points of You](https://linuxmatters.sh/73/) (3 days ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (2 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
