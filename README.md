@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
+  - Homebrew tap for quickemu and quickgui
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (today)
   - Quickemu website
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
-  - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 day ago)
-  - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
+- [wimpysworld/antsy-alien-attack](https://github.com/wimpysworld/antsy-alien-attack) (1 day ago)
+  - A game, written in Bash, that is a somewhat retro-a-like shoot &#39;em up. Hopefully.
 
 ### Recent pull requests 🛠️
 
 
+- [chore(opensuse): remove aeon appliance handling. fixes #1793](https://github.com/quickemu-project/quickemu/pull/1799) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(bios): set machine type to pc for legacy BIOS boot](https://github.com/quickemu-project/quickemu/pull/1798) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(windows): enforce minimum 2 CPU cores for Windows 11 guests](https://github.com/quickemu-project/quickemu/pull/1797) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [chore: clean up deprecated packages and improve CI handling](https://github.com/wimpysworld/deb-get/pull/1648) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
 - [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
-- [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (24)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5992)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5993)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85172)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85232)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
