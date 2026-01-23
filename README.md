@@ -28,14 +28,14 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (today)
-  - Quickemu website
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
+- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (today)
+  - Quickemu website
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/antsy-alien-attack](https://github.com/wimpysworld/antsy-alien-attack) (1 day ago)
-  - A game, written in Bash, that is a somewhat retro-a-like shoot &#39;em up. Hopefully.
 - [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (1 day ago)
   - RGB levels plugin for OBS Studio 🎚️🌈
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5992)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (84873)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (84942)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
