@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (today)
   - Quickemu website
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (1 day ago)
-  - RGB levels plugin for OBS Studio 🎚️🌈
+- [wimpysworld/stream-sprout](https://github.com/wimpysworld/stream-sprout) (1 day ago)
+  - Restream a video source to multiple destinations such as Twitch, YouTube, Owncast and Peertube 📡
 
 ### Recent pull requests 🛠️
 
 
+- [fix(bios): set machine type to pc for legacy BIOS boot](https://github.com/quickemu-project/quickemu/pull/1798) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(windows): enforce minimum 2 CPU cores for Windows 11 guests](https://github.com/quickemu-project/quickemu/pull/1797) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [chore: clean up deprecated packages and improve CI handling](https://github.com/wimpysworld/deb-get/pull/1648) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
 - [ci: optimize package testing workflow](https://github.com/wimpysworld/deb-get/pull/1647) on [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
 - [feat(cli): add commitlint integration for scoped commits](https://github.com/wimpysworld/faff/pull/26) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (1 day ago)
-- [refactor: use file-based operations to avoid ARG_MAX limits with larg…](https://github.com/wimpysworld/faff/pull/25) on [wimpysworld/faff](https://github.com/wimpysworld/faff) (1 day ago)
-- [feat(search): add multi-term search with AND logic](https://github.com/wimpysworld/glyph-party/pull/10) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5992)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85128)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85172)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
