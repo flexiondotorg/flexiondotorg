@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickget): resolve failing ISO downloads](https://github.com/quickemu-project/quickemu/pull/1804) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [ci(test-quickget): split tests into detect/matrix per-distro workflow](https://github.com/quickemu-project/quickemu/pull/1803) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(public_dir): respect public_dir setting when loading VM](https://github.com/quickemu-project/quickemu/pull/1802) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [refactor(firmware): use od to read qcow2 magic bytes](https://github.com/quickemu-project/quickemu/pull/1801) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [chore(opensuse): remove aeon appliance handling. fixes #1793](https://github.com/quickemu-project/quickemu/pull/1799) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(bios): set machine type to pc for legacy BIOS boot](https://github.com/quickemu-project/quickemu/pull/1798) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5994)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85380)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85400)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
