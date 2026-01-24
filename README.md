@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(quickemu): warn on unstable TSC for macOS Ventura&#43; on AMD](https://github.com/quickemu-project/quickemu/pull/1815) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): support algorithm-prefixed hashes and b2sum](https://github.com/quickemu-project/quickemu/pull/1814) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): accept HygonGenuine CPUs and skip x86 checks on ARM hosts](https://github.com/quickemu-project/quickemu/pull/1813) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): enable GL on macOS (cocoa) and prefer virtio GL](https://github.com/quickemu-project/quickemu/pull/1812) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): integrate OpenCore into macOS disk image by default](https://github.com/quickemu-project/quickemu/pull/1811) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): skip x86 CPU feature checks on Apple Silicon](https://github.com/quickemu-project/quickemu/pull/1810) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (27)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5997)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5999)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86143)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86191)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (389)
   - Docfork - Up-to-date Docs for AI Agents.
