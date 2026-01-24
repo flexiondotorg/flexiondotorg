@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): set xres/yres only for devices that support them](https://github.com/quickemu-project/quickemu/pull/1818) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickemu): enable pflash secure property only when secureboot on](https://github.com/quickemu-project/quickemu/pull/1817) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [feat(quickemu): add CPU flag management with deduplication](https://github.com/quickemu-project/quickemu/pull/1816) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): warn on unstable TSC for macOS Ventura&#43; on AMD](https://github.com/quickemu-project/quickemu/pull/1815) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): support algorithm-prefixed hashes and b2sum](https://github.com/quickemu-project/quickemu/pull/1814) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): accept HygonGenuine CPUs and skip x86 checks on ARM hosts](https://github.com/quickemu-project/quickemu/pull/1813) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickemu): enable GL on macOS (cocoa) and prefer virtio GL](https://github.com/quickemu-project/quickemu/pull/1812) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickget): integrate OpenCore into macOS disk image by default](https://github.com/quickemu-project/quickemu/pull/1811) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6000)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86310)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86330)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (390)
   - Docfork - Up-to-date Docs for AI Agents.
