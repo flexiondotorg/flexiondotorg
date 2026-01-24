@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): skip x86 CPU feature checks on Apple Silicon](https://github.com/quickemu-project/quickemu/pull/1810) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(devshell): enable EFI boot on macOS by patching OVMF paths](https://github.com/quickemu-project/quickemu/pull/1809) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): improve TSC flag detection for macOS on AMD CPUs](https://github.com/quickemu-project/quickemu/pull/1808) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): resize Batocera image for GPT expansion](https://github.com/quickemu-project/quickemu/pull/1807) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): add hash verification for Archcraft, KolibriOS, Mabox](https://github.com/quickemu-project/quickemu/pull/1806) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): conditionalise KVM-specific CPU flags for Windows](https://github.com/quickemu-project/quickemu/pull/1805) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5995)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85894)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85941)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (389)
   - Docfork - Up-to-date Docs for AI Agents.
