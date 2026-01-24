@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(quickemu): enable GL on macOS (cocoa) and prefer virtio GL](https://github.com/quickemu-project/quickemu/pull/1812) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): integrate OpenCore into macOS disk image by default](https://github.com/quickemu-project/quickemu/pull/1811) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): skip x86 CPU feature checks on Apple Silicon](https://github.com/quickemu-project/quickemu/pull/1810) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(devshell): enable EFI boot on macOS by patching OVMF paths](https://github.com/quickemu-project/quickemu/pull/1809) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): improve TSC flag detection for macOS on AMD CPUs](https://github.com/quickemu-project/quickemu/pull/1808) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickget): resize Batocera image for GPT expansion](https://github.com/quickemu-project/quickemu/pull/1807) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5997)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86037)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86088)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (389)
   - Docfork - Up-to-date Docs for AI Agents.
