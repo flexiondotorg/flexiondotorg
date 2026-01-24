@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
+  - Homebrew tap for quickemu and quickgui
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
-  - Homebrew tap for quickemu and quickgui
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (1 day ago)
   - Quickemu website
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(quickget): integrate OpenCore into macOS disk image by default](https://github.com/quickemu-project/quickemu/pull/1811) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): skip x86 CPU feature checks on Apple Silicon](https://github.com/quickemu-project/quickemu/pull/1810) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(devshell): enable EFI boot on macOS by patching OVMF paths](https://github.com/quickemu-project/quickemu/pull/1809) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): improve TSC flag detection for macOS on AMD CPUs](https://github.com/quickemu-project/quickemu/pull/1808) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): resize Batocera image for GPT expansion](https://github.com/quickemu-project/quickemu/pull/1807) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickget): add hash verification for Archcraft, KolibriOS, Mabox](https://github.com/quickemu-project/quickemu/pull/1806) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (26)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (27)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5995)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5997)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85991)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86037)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (389)
   - Docfork - Up-to-date Docs for AI Agents.
