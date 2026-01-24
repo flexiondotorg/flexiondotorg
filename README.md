@@ -42,15 +42,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickget): add hash verification for Archcraft, KolibriOS, Mabox](https://github.com/quickemu-project/quickemu/pull/1806) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickemu): conditionalise KVM-specific CPU flags for Windows](https://github.com/quickemu-project/quickemu/pull/1805) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): resolve failing ISO downloads](https://github.com/quickemu-project/quickemu/pull/1804) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [ci(test-quickget): split tests into detect/matrix per-distro workflow](https://github.com/quickemu-project/quickemu/pull/1803) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [fix(public_dir): respect public_dir setting when loading VM](https://github.com/quickemu-project/quickemu/pull/1802) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [refactor(firmware): use od to read qcow2 magic bytes](https://github.com/quickemu-project/quickemu/pull/1801) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [chore(opensuse): remove aeon appliance handling. fixes #1793](https://github.com/quickemu-project/quickemu/pull/1799) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), today)
+  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 1 day ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 2 days ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 2 days ago)
   - File downloader for archive.org ⬇️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 3 days ago)
-  - The Github Action for Determinate Nix
 
 ### Recent starred projects ⭐️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5994)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85417)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85463)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
