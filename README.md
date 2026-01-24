@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): improve TSC flag detection for macOS on AMD CPUs](https://github.com/quickemu-project/quickemu/pull/1808) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickget): resize Batocera image for GPT expansion](https://github.com/quickemu-project/quickemu/pull/1807) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): add hash verification for Archcraft, KolibriOS, Mabox](https://github.com/quickemu-project/quickemu/pull/1806) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): conditionalise KVM-specific CPU flags for Windows](https://github.com/quickemu-project/quickemu/pull/1805) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): resolve failing ISO downloads](https://github.com/quickemu-project/quickemu/pull/1804) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [ci(test-quickget): split tests into detect/matrix per-distro workflow](https://github.com/quickemu-project/quickemu/pull/1803) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(public_dir): respect public_dir setting when loading VM](https://github.com/quickemu-project/quickemu/pull/1802) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5994)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85463)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85526)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
