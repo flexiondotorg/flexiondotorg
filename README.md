@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
-  - Homebrew tap for quickemu and quickgui
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (today)
-  - Quickemu website
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
+  - Homebrew tap for quickemu and quickgui
+- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (1 day ago)
+  - Quickemu website
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (2 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
 
 ### Recent pull requests 🛠️
 
 
-- [fix(quickget): resolve failing ISO downloads](https://github.com/quickemu-project/quickemu/pull/1804) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [ci(test-quickget): split tests into detect/matrix per-distro workflow](https://github.com/quickemu-project/quickemu/pull/1803) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(public_dir): respect public_dir setting when loading VM](https://github.com/quickemu-project/quickemu/pull/1802) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [refactor(firmware): use od to read qcow2 magic bytes](https://github.com/quickemu-project/quickemu/pull/1801) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [chore(opensuse): remove aeon appliance handling. fixes #1793](https://github.com/quickemu-project/quickemu/pull/1799) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickget): resolve failing ISO downloads](https://github.com/quickemu-project/quickemu/pull/1804) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [ci(test-quickget): split tests into detect/matrix per-distro workflow](https://github.com/quickemu-project/quickemu/pull/1803) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(public_dir): respect public_dir setting when loading VM](https://github.com/quickemu-project/quickemu/pull/1802) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [refactor(firmware): use od to read qcow2 magic bytes](https://github.com/quickemu-project/quickemu/pull/1801) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [chore(opensuse): remove aeon appliance handling. fixes #1793](https://github.com/quickemu-project/quickemu/pull/1799) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), today)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 1 day ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 1 day ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 2 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 1 day ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 2 days ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 1 day ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 2 days ago)
   - File downloader for archive.org ⬇️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 2 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.15.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.15.2), 3 days ago)
   - The Github Action for Determinate Nix
 
 ### Recent starred projects ⭐️
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (5994)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85400)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (85417)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (388)
   - Docfork - Up-to-date Docs for AI Agents.
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Points of You](https://linuxmatters.sh/73/) (3 days ago)
+- [Points of You](https://linuxmatters.sh/73/) (4 days ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (2 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
-- [He&#39;s a very nøughty boy](https://linuxmatters.sh/69/) (1 month ago)
+- [He&#39;s a very nøughty boy](https://linuxmatters.sh/69/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
