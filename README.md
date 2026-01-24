@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
-  - Homebrew tap for quickemu and quickgui
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
+  - Homebrew tap for quickemu and quickgui
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (1 day ago)
   - Quickemu website
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(quickemu): derive SHARE_PATH from QEMU binary](https://github.com/quickemu-project/quickemu/pull/1819) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): set xres/yres only for devices that support them](https://github.com/quickemu-project/quickemu/pull/1818) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): enable pflash secure property only when secureboot on](https://github.com/quickemu-project/quickemu/pull/1817) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): add CPU flag management with deduplication](https://github.com/quickemu-project/quickemu/pull/1816) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): warn on unstable TSC for macOS Ventura&#43; on AMD](https://github.com/quickemu-project/quickemu/pull/1815) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickget): support algorithm-prefixed hashes and b2sum](https://github.com/quickemu-project/quickemu/pull/1814) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6000)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86330)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86356)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (390)
   - Docfork - Up-to-date Docs for AI Agents.
