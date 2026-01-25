@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickget): exit on curl failure in web_get](https://github.com/quickemu-project/quickemu/pull/1830) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickemu): enable xhci when braille devices used](https://github.com/quickemu-project/quickemu/pull/1829) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): enable vmware TSC and disable ACPI PCI hotplug for macOS](https://github.com/quickemu-project/quickemu/pull/1827) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): select correct sound card for macOS guests](https://github.com/quickemu-project/quickemu/pull/1826) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [perf(quickemu): enable TRIM/discard and detect-zeroes for qcow2 drives](https://github.com/quickemu-project/quickemu/pull/1825) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [perf(quickemu): tune TCG translation cache and enable multithreaded TCG](https://github.com/quickemu-project/quickemu/pull/1824) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [build(packaging): sync Nix flakes, devshell and Debian packaging](https://github.com/quickemu-project/quickemu/pull/1823) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86991)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87044)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (392)
   - Docfork - Up-to-date Docs for AI Agents.
