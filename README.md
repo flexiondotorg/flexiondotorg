@@ -28,25 +28,25 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
   - Homebrew tap for quickemu and quickgui
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (2 days ago)
-  - Quickemu website
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (2 days ago)
+  - Quickemu website
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (3 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
 
 ### Recent pull requests 🛠️
 
 
+- [docs(quickemu): clarify CPU, display and VM comments](https://github.com/quickemu-project/quickemu/pull/1822) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [refactor: quote expansions and add ShellCheck directive](https://github.com/quickemu-project/quickemu/pull/1821) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): add ARM64 (aarch64) download support](https://github.com/quickemu-project/quickemu/pull/1820) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [feat(quickemu): derive SHARE_PATH from QEMU binary](https://github.com/quickemu-project/quickemu/pull/1819) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [fix(quickemu): set xres/yres only for devices that support them](https://github.com/quickemu-project/quickemu/pull/1818) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickemu): enable pflash secure property only when secureboot on](https://github.com/quickemu-project/quickemu/pull/1817) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [feat(quickemu): add CPU flag management with deduplication](https://github.com/quickemu-project/quickemu/pull/1816) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86441)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86482)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (390)
   - Docfork - Up-to-date Docs for AI Agents.
