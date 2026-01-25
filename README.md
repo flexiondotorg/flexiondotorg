@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [perf(quickemu): tune TCG translation cache and enable multithreaded TCG](https://github.com/quickemu-project/quickemu/pull/1824) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [build(packaging): sync Nix flakes, devshell and Debian packaging](https://github.com/quickemu-project/quickemu/pull/1823) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [docs(quickemu): clarify CPU, display and VM comments](https://github.com/quickemu-project/quickemu/pull/1822) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [refactor: quote expansions and add ShellCheck directive](https://github.com/quickemu-project/quickemu/pull/1821) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): add ARM64 (aarch64) download support](https://github.com/quickemu-project/quickemu/pull/1820) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [feat(quickemu): derive SHARE_PATH from QEMU binary](https://github.com/quickemu-project/quickemu/pull/1819) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86518)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86556)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (390)
   - Docfork - Up-to-date Docs for AI Agents.
