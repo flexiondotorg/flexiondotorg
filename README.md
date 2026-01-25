@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [perf(quickemu): enable TRIM/discard and detect-zeroes for qcow2 drives](https://github.com/quickemu-project/quickemu/pull/1825) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [perf(quickemu): tune TCG translation cache and enable multithreaded TCG](https://github.com/quickemu-project/quickemu/pull/1824) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [build(packaging): sync Nix flakes, devshell and Debian packaging](https://github.com/quickemu-project/quickemu/pull/1823) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [docs(quickemu): clarify CPU, display and VM comments](https://github.com/quickemu-project/quickemu/pull/1822) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [refactor: quote expansions and add ShellCheck directive](https://github.com/quickemu-project/quickemu/pull/1821) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickget): add ARM64 (aarch64) download support](https://github.com/quickemu-project/quickemu/pull/1820) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (30)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6001)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86850)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86898)
   - The open source coding agent.
-- [docfork/docfork](https://github.com/docfork/docfork) (390)
+- [docfork/docfork](https://github.com/docfork/docfork) (391)
   - Docfork - Up-to-date Docs for AI Agents.
 
 ### 🎙️ Podcast
