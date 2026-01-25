@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(quickget): add architecture-aware output and filenames](https://github.com/quickemu-project/quickemu/pull/1840) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): detect audio backends via sockets, not pidof](https://github.com/quickemu-project/quickemu/pull/1839) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [perf(quickemu): improve disk I/O defaults (cache,aio)](https://github.com/quickemu-project/quickemu/pull/1837) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): add Azure Linux (3.0) support](https://github.com/quickemu-project/quickemu/pull/1835) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): disable GL when display backend is none](https://github.com/quickemu-project/quickemu/pull/1834) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [build(flake): update nixpkgs to nixos-unstable](https://github.com/quickemu-project/quickemu/pull/1832) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (31)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6004)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6003)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87226)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87249)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (392)
   - Docfork - Up-to-date Docs for AI Agents.
