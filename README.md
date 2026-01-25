@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
   - Homebrew tap for quickemu and quickgui
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (1 day ago)
+- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (2 days ago)
   - Quickemu website
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (2 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (3 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
 
 ### Recent pull requests 🛠️
 
 
-- [feat(quickemu): derive SHARE_PATH from QEMU binary](https://github.com/quickemu-project/quickemu/pull/1819) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): set xres/yres only for devices that support them](https://github.com/quickemu-project/quickemu/pull/1818) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): enable pflash secure property only when secureboot on](https://github.com/quickemu-project/quickemu/pull/1817) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickemu): add CPU flag management with deduplication](https://github.com/quickemu-project/quickemu/pull/1816) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickemu): warn on unstable TSC for macOS Ventura&#43; on AMD](https://github.com/quickemu-project/quickemu/pull/1815) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [feat(quickget): add ARM64 (aarch64) download support](https://github.com/quickemu-project/quickemu/pull/1820) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [feat(quickemu): derive SHARE_PATH from QEMU binary](https://github.com/quickemu-project/quickemu/pull/1819) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(quickemu): set xres/yres only for devices that support them](https://github.com/quickemu-project/quickemu/pull/1818) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(quickemu): enable pflash secure property only when secureboot on](https://github.com/quickemu-project/quickemu/pull/1817) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [feat(quickemu): add CPU flag management with deduplication](https://github.com/quickemu-project/quickemu/pull/1816) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), today)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 day ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 1 day ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 2 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 2 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 3 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 2 days ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 3 days ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 2 days ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 3 days ago)
   - File downloader for archive.org ⬇️
 
 ### Recent starred projects ⭐️
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (29)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6001)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86409)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86441)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (390)
   - Docfork - Up-to-date Docs for AI Agents.
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Points of You](https://linuxmatters.sh/73/) (4 days ago)
+- [Points of You](https://linuxmatters.sh/73/) (5 days ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (2 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
