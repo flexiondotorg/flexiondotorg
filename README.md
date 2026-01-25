@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): detect audio backends via sockets, not pidof](https://github.com/quickemu-project/quickemu/pull/1839) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [perf(quickemu): improve disk I/O defaults (cache,aio)](https://github.com/quickemu-project/quickemu/pull/1837) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickget): add Azure Linux (3.0) support](https://github.com/quickemu-project/quickemu/pull/1835) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): disable GL when display backend is none](https://github.com/quickemu-project/quickemu/pull/1834) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [build(flake): update nixpkgs to nixos-unstable](https://github.com/quickemu-project/quickemu/pull/1832) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickget): exit on curl failure in web_get](https://github.com/quickemu-project/quickemu/pull/1830) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6004)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87160)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87199)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (392)
   - Docfork - Up-to-date Docs for AI Agents.
