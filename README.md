@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86937)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (86991)
   - The open source coding agent.
-- [docfork/docfork](https://github.com/docfork/docfork) (391)
+- [docfork/docfork](https://github.com/docfork/docfork) (392)
   - Docfork - Up-to-date Docs for AI Agents.
 
 ### 🎙️ Podcast
