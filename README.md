@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [perf(quickemu): improve disk I/O defaults (cache,aio)](https://github.com/quickemu-project/quickemu/pull/1837) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [feat(quickget): add Azure Linux (3.0) support](https://github.com/quickemu-project/quickemu/pull/1835) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickemu): disable GL when display backend is none](https://github.com/quickemu-project/quickemu/pull/1834) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [build(flake): update nixpkgs to nixos-unstable](https://github.com/quickemu-project/quickemu/pull/1832) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): exit on curl failure in web_get](https://github.com/quickemu-project/quickemu/pull/1830) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): enable xhci when braille devices used](https://github.com/quickemu-project/quickemu/pull/1829) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): enable vmware TSC and disable ACPI PCI hotplug for macOS](https://github.com/quickemu-project/quickemu/pull/1827) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): select correct sound card for macOS guests](https://github.com/quickemu-project/quickemu/pull/1826) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (30)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (31)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6002)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6004)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87100)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (87160)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (392)
   - Docfork - Up-to-date Docs for AI Agents.
