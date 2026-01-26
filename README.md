@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): read &#34;Vendor ID&#34; for CPU vendor detection](https://github.com/quickemu-project/quickemu/pull/1846) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): remove integrated OpenCore support, require OpenCore.qcow2](https://github.com/quickemu-project/quickemu/pull/1844) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(macos): prevent default sound card overriding the compatible selection](https://github.com/quickemu-project/quickemu/pull/1843) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): only add &#39;topoext&#39; cpu flag for x86_64 AMD guests](https://github.com/quickemu-project/quickemu/pull/1842) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [feat(quickget): add architecture-aware output and filenames](https://github.com/quickemu-project/quickemu/pull/1840) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickemu): detect audio backends via sockets, not pidof](https://github.com/quickemu-project/quickemu/pull/1839) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6003)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88127)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88194)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (395)
   - Docfork - Up-to-date Docs for AI Agents.
