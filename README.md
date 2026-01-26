@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): simplify display device selection and remove -vga none](https://github.com/quickemu-project/quickemu/pull/1848) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): enable SPICE display reconnection for running VMs](https://github.com/quickemu-project/quickemu/pull/1847) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): read &#34;Vendor ID&#34; for CPU vendor detection](https://github.com/quickemu-project/quickemu/pull/1846) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): remove integrated OpenCore support, require OpenCore.qcow2](https://github.com/quickemu-project/quickemu/pull/1844) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(macos): prevent default sound card overriding the compatible selection](https://github.com/quickemu-project/quickemu/pull/1843) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): only add &#39;topoext&#39; cpu flag for x86_64 AMD guests](https://github.com/quickemu-project/quickemu/pull/1842) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (33)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6004)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6005)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88673)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88693)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (397)
   - Docfork - Up-to-date Docs for AI Agents.
