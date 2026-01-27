@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
   - Homebrew tap for quickemu and quickgui 🍻
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (4 days ago)
@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260125](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260125), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 3 days ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 4 days ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 5 days ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 5 days ago)
-  - File downloader for archive.org ⬇️
 
 ### Recent starred projects ⭐️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6012)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89418)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89491)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (399)
   - Docfork - Up-to-date Docs for AI Agents.
