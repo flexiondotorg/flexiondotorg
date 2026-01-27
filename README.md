@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (today)
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
   - Homebrew tap for quickemu and quickgui
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (3 days ago)
+- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (4 days ago)
   - Quickemu website
-- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (4 days ago)
+- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (5 days ago)
   - RGB levels plugin for OBS Studio 🎚️🌈
 
 ### Recent pull requests 🛠️
 
 
-- [fix(quickemu): simplify display device selection and remove -vga none](https://github.com/quickemu-project/quickemu/pull/1848) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [feat(quickemu): enable SPICE display reconnection for running VMs](https://github.com/quickemu-project/quickemu/pull/1847) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): read &#34;Vendor ID&#34; for CPU vendor detection](https://github.com/quickemu-project/quickemu/pull/1846) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(quickemu): remove integrated OpenCore support, require OpenCore.qcow2](https://github.com/quickemu-project/quickemu/pull/1844) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
-- [fix(macos): prevent default sound card overriding the compatible selection](https://github.com/quickemu-project/quickemu/pull/1843) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+- [fix(quickemu): simplify display device selection and remove -vga none](https://github.com/quickemu-project/quickemu/pull/1848) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [feat(quickemu): enable SPICE display reconnection for running VMs](https://github.com/quickemu-project/quickemu/pull/1847) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(quickemu): read &#34;Vendor ID&#34; for CPU vendor detection](https://github.com/quickemu-project/quickemu/pull/1846) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(quickemu): remove integrated OpenCore support, require OpenCore.qcow2](https://github.com/quickemu-project/quickemu/pull/1844) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [fix(macos): prevent default sound card overriding the compatible selection](https://github.com/quickemu-project/quickemu/pull/1843) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 2 days ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 3 days ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 3 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 4 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 4 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 5 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 4 days ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 5 days ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 4 days ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.3](https://github.com/wimpysworld/ia-get/releases/tag/0.1.3), 5 days ago)
   - File downloader for archive.org ⬇️
 
 ### Recent starred projects ⭐️
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6006)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88766)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88787)
   - The open source coding agent.
-- [docfork/docfork](https://github.com/docfork/docfork) (397)
+- [docfork/docfork](https://github.com/docfork/docfork) (398)
   - Docfork - Up-to-date Docs for AI Agents.
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Points of You](https://linuxmatters.sh/73/) (6 days ago)
-- [Lets get Trippy](https://linuxmatters.sh/72/) (2 weeks ago)
+- [Points of You](https://linuxmatters.sh/73/) (1 week ago)
+- [Lets get Trippy](https://linuxmatters.sh/72/) (3 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
 - [He&#39;s a very nøughty boy](https://linuxmatters.sh/69/) (2 months ago)
