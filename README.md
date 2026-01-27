@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (33)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6006)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6007)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88787)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (88852)
   - The open source coding agent.
-- [docfork/docfork](https://github.com/docfork/docfork) (398)
+- [docfork/docfork](https://github.com/docfork/docfork) (399)
   - Docfork - Up-to-date Docs for AI Agents.
 
 ### 🎙️ Podcast
