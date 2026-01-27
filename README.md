@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(quickemu): use vmware-svga display for macOS guests](https://github.com/quickemu-project/quickemu/pull/1855) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickget): pin macOS OpenCore and OVMF downloads to last-good commit](https://github.com/quickemu-project/quickemu/pull/1854) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [feat(quickemu): enable local SPICE over Unix sockets with VirGL](https://github.com/quickemu-project/quickemu/pull/1851) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
 - [fix(quickemu): simplify display device selection and remove -vga none](https://github.com/quickemu-project/quickemu/pull/1848) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 - [feat(quickemu): enable SPICE display reconnection for running VMs](https://github.com/quickemu-project/quickemu/pull/1847) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickemu): read &#34;Vendor ID&#34; for CPU vendor detection](https://github.com/quickemu-project/quickemu/pull/1846) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6014)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89897)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89929)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (399)
   - Docfork - Up-to-date Docs for AI Agents.
