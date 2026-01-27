@@ -30,10 +30,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (today)
+  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 day ago)
   - Homebrew tap for quickemu and quickgui 🍻
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (4 days ago)
   - Quickemu website
 - [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (5 days ago)
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6014)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89790)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (89841)
   - The open source coding agent.
 - [docfork/docfork](https://github.com/docfork/docfork) (399)
   - Docfork - Up-to-date Docs for AI Agents.
