@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5455)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5456)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (34)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (35)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6024)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6025)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (90839)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (90883)
   - The open source coding agent.
 
 ### 🎙️ Podcast
