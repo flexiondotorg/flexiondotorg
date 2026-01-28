@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6024)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (90776)
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) (90839)
   - The open source coding agent.
 
 ### 🎙️ Podcast
