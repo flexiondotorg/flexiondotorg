@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(spectral): align spectral interpretation thresholds](https://github.com/linuxmatters/jivetalking/pull/15) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): add adeclick click/pop repair after loudnorm](https://github.com/linuxmatters/jivetalking/pull/14) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): enforce minimum 10ms attack for DS201 gate](https://github.com/linuxmatters/jivetalking/pull/13) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): migrate limiter from UREI 1176 to CBS Volumax style](https://github.com/linuxmatters/jivetalking/pull/12) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): aggression-based DS201 gate thresholding](https://github.com/linuxmatters/jivetalking/pull/11) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (40)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6052)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6053)
   - ✨ AI Coding, Vim Style
 
 ### 🎙️ Podcast
