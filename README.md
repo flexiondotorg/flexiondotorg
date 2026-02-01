@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): add adeclick click/pop repair after loudnorm](https://github.com/linuxmatters/jivetalking/pull/14) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): enforce minimum 10ms attack for DS201 gate](https://github.com/linuxmatters/jivetalking/pull/13) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): migrate limiter from UREI 1176 to CBS Volumax style](https://github.com/linuxmatters/jivetalking/pull/12) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): aggression-based DS201 gate thresholding](https://github.com/linuxmatters/jivetalking/pull/11) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): refine long speech regions to golden sub-window](https://github.com/linuxmatters/jivetalking/pull/10) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [fix(analyzer): require significant regression before stopping search](https://github.com/linuxmatters/jivetalking/pull/9) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32500)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32502)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5526)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5528)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
