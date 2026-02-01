@@ -31,7 +31,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-  - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (5 days ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(spectral): align spectral interpretation thresholds](https://github.com/linuxmatters/jivetalking/pull/15) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): add adeclick click/pop repair after loudnorm](https://github.com/linuxmatters/jivetalking/pull/14) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [fix(processor): enforce minimum 10ms attack for DS201 gate](https://github.com/linuxmatters/jivetalking/pull/13) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(processor): migrate limiter from UREI 1176 to CBS Volumax style](https://github.com/linuxmatters/jivetalking/pull/12) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32507)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32510)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5544)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5547)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
