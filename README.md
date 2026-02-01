@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): add crest-factor penalty for silence candidates](https://github.com/linuxmatters/jivetalking/pull/19) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(spectral): align spectral interpretation thresholds](https://github.com/linuxmatters/jivetalking/pull/15) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add adeclick click/pop repair after loudnorm](https://github.com/linuxmatters/jivetalking/pull/14) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
