@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32498)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32499)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5525)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (39)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (40)
   - The A to Z of Modern Unix 🐧
 - [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6048)
   - ✨ AI Coding, Vim Style
