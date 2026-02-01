@@ -28,53 +28,53 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+  - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (5 days ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (2 days ago)
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (6 days ago)
   - Homebrew tap for quickemu and quickgui 🍻
-- [quickemu-project/quickemu-project.github.io](https://github.com/quickemu-project/quickemu-project.github.io) (5 days ago)
-  - Quickemu website
-- [wimpysworld/obs-rgb-levels](https://github.com/wimpysworld/obs-rgb-levels) (6 days ago)
-  - RGB levels plugin for OBS Studio 🎚️🌈
 
 ### Recent pull requests 🛠️
 
 
-- [feat(quickemu): prefer GTK display backend and add GTK-&gt;SDL fallback](https://github.com/quickemu-project/quickemu/pull/1857) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickemu): disable serial by default for macOS and Windows](https://github.com/quickemu-project/quickemu/pull/1856) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickemu): use vmware-svga display for macOS guests](https://github.com/quickemu-project/quickemu/pull/1855) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [fix(quickget): pin macOS OpenCore and OVMF downloads to last-good commit](https://github.com/quickemu-project/quickemu/pull/1854) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
-- [feat(quickemu): enable local SPICE over Unix sockets with VirGL](https://github.com/quickemu-project/quickemu/pull/1851) on [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 day ago)
+- [feat(processor): aggression-based DS201 gate thresholding](https://github.com/linuxmatters/jivetalking/pull/11) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [feat(processor): refine long speech regions to golden sub-window](https://github.com/linuxmatters/jivetalking/pull/10) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [fix(analyzer): require significant regression before stopping search](https://github.com/linuxmatters/jivetalking/pull/9) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [chore(release): bump version to 0.1.2](https://github.com/wimpysworld/glyph-party/pull/14) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
+- [feat(ui): prevent FOUC and improve theme toggle](https://github.com/wimpysworld/glyph-party/pull/13) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260125](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260125), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 4 days ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 5 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 1 week ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 6 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 6 days ago)
+- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 1 week ago)
   - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 
 ### Recent starred projects ⭐️
 
 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5458)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32498)
+  - Create beautiful applications using Go
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5525)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
-- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (35)
+- [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (39)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6025)
+- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6048)
   - ✨ AI Coding, Vim Style
-- [anomalyco/opencode](https://github.com/anomalyco/opencode) (90986)
-  - The open source coding agent.
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
@@ -100,7 +100,7 @@ Here are some recent episodes:
 
 ### ✍️ Blog
 
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (7 months ago)
+- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (8 months ago)
 - [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (8 months ago)
 - [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (9 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
