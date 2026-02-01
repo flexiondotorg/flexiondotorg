@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32511)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32510)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5549)
   - Text editor for your terminal: easy, powerful and fast
