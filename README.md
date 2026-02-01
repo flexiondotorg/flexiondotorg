@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Professional podcast audio pre-processor. Raw voice → broadcast-ready at -18 LUFS 🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(processor): enforce minimum 10ms attack for DS201 gate](https://github.com/linuxmatters/jivetalking/pull/13) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [refactor(processor): migrate limiter from UREI 1176 to CBS Volumax style](https://github.com/linuxmatters/jivetalking/pull/12) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): aggression-based DS201 gate thresholding](https://github.com/linuxmatters/jivetalking/pull/11) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): refine long speech regions to golden sub-window](https://github.com/linuxmatters/jivetalking/pull/10) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [fix(analyzer): require significant regression before stopping search](https://github.com/linuxmatters/jivetalking/pull/9) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [chore(release): bump version to 0.1.2](https://github.com/wimpysworld/glyph-party/pull/14) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
-- [feat(ui): prevent FOUC and improve theme toggle](https://github.com/wimpysworld/glyph-party/pull/13) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32499)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32500)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5525)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5526)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
