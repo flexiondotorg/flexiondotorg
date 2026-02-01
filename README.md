@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32510)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32509)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5549)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5551)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 - [linuxmatters/terminal-velocity](https://github.com/linuxmatters/terminal-velocity) (40)
   - The A to Z of Modern Unix 🐧
-- [olimorris/codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim) (6057)
-  - ✨ AI Coding, Vim Style
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
