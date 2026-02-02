@@ -28,30 +28,30 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (5 days ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (6 days ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (6 days ago)
+- [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 week ago)
   - Homebrew tap for quickemu and quickgui 🍻
 
 ### Recent pull requests 🛠️
 
 
-- [feat(processor): add crest-factor penalty for silence candidates](https://github.com/linuxmatters/jivetalking/pull/19) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [fix(spectral): align spectral interpretation thresholds](https://github.com/linuxmatters/jivetalking/pull/15) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [feat(processor): add crest-factor penalty for silence candidates](https://github.com/linuxmatters/jivetalking/pull/19) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [fix(spectral): align spectral interpretation thresholds](https://github.com/linuxmatters/jivetalking/pull/15) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32510)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32511)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5554)
   - Text editor for your terminal: easy, powerful and fast
