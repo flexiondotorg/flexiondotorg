@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (5 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (6 days ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [quickemu-project/homebrew-quickemu](https://github.com/quickemu-project/homebrew-quickemu) (1 week ago)
   - Homebrew tap for quickemu and quickgui 🍻
@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(processor): implement three-zone temporal bias for silence selection](https://github.com/linuxmatters/jivetalking/pull/20) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add crest-factor penalty for silence candidates](https://github.com/linuxmatters/jivetalking/pull/19) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): implement three-zone temporal bias for silence selection](https://github.com/linuxmatters/jivetalking/pull/20) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): add crest-factor penalty for silence candidates](https://github.com/linuxmatters/jivetalking/pull/19) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [fix(processor): average aspectralstats spectral metrics across frames](https://github.com/linuxmatters/jivetalking/pull/18) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [docs(analysis): add Levelator comparison and update documentation](https://github.com/linuxmatters/jivetalking/pull/17) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [feat(processor): add speech stability, voicing density &amp; SNR scoring](https://github.com/linuxmatters/jivetalking/pull/16) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (6)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32535)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32537)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5577)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5579)
   - Text editor for your terminal: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Points of You](https://linuxmatters.sh/73/) (1 week ago)
-- [Lets get Trippy](https://linuxmatters.sh/72/) (3 weeks ago)
+- [Points of You](https://linuxmatters.sh/73/) (2 weeks ago)
+- [Lets get Trippy](https://linuxmatters.sh/72/) (4 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (1 month ago)
 - [He&#39;s a very nøughty boy](https://linuxmatters.sh/69/) (2 months ago)
