@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.0), today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/faff](https://github.com/wimpysworld/faff) ([0.2.0](https://github.com/wimpysworld/faff/releases/tag/0.2.0), 1 week ago)
-  - Drop the faff, dodge the judgment. Another bloody AI commit generator, but this one stays local 🦙
 
 ### Recent starred projects ⭐️
 
