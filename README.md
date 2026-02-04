@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (5 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (6 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [fix(processor): reject silence candidates with large peak-RMS gap](https://github.com/linuxmatters/jivetalking/pull/24) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add stability scoring for silence candidates](https://github.com/linuxmatters/jivetalking/pull/23) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [docs(processor): update comments for anlmdn-based noise profile usage](https://github.com/linuxmatters/jivetalking/pull/22) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(analysis): add --analysis-only mode to perform Pass 1](https://github.com/linuxmatters/jivetalking/pull/21) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): implement three-zone temporal bias for silence selection](https://github.com/linuxmatters/jivetalking/pull/20) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [fix(processor): reject silence candidates with large peak-RMS gap](https://github.com/linuxmatters/jivetalking/pull/24) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): add stability scoring for silence candidates](https://github.com/linuxmatters/jivetalking/pull/23) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [docs(processor): update comments for anlmdn-based noise profile usage](https://github.com/linuxmatters/jivetalking/pull/22) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(analysis): add --analysis-only mode to perform Pass 1](https://github.com/linuxmatters/jivetalking/pull/21) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): implement three-zone temporal bias for silence selection](https://github.com/linuxmatters/jivetalking/pull/20) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.0), today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (today)
+- [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 day ago)
 - [Points of You](https://linuxmatters.sh/73/) (2 weeks ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (4 weeks ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
