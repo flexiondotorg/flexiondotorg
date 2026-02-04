@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (21)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (22)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32563)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32562)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5604)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5607)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
