@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(filesync): add Syncthing mixins and key-generation script](https://github.com/wimpysworld/nix-config/pull/616) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(processor): reject silence candidates with large peak-RMS gap](https://github.com/linuxmatters/jivetalking/pull/24) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [feat(processor): add stability scoring for silence candidates](https://github.com/linuxmatters/jivetalking/pull/23) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [docs(processor): update comments for anlmdn-based noise profile usage](https://github.com/linuxmatters/jivetalking/pull/22) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [feat(analysis): add --analysis-only mode to perform Pass 1](https://github.com/linuxmatters/jivetalking/pull/21) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-- [feat(processor): implement three-zone temporal bias for silence selection](https://github.com/linuxmatters/jivetalking/pull/20) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (6990)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (6991)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (38)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32570)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32571)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5668)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5671)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
