@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 week ago)
@@ -42,19 +42,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(logging): add high_crest_factor tip and improve level tips](https://github.com/linuxmatters/jivetalking/pull/37) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [perf(processor): reduce allocations and avoid redundant analysis](https://github.com/linuxmatters/jivetalking/pull/36) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): consolidate spectral metric accumulation in analyzer](https://github.com/linuxmatters/jivetalking/pull/35) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [docs(readme): add analysis-only mode and clarify data flow](https://github.com/linuxmatters/jivetalking/pull/34) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(logging): normalise final spectral metrics for gain comparison](https://github.com/linuxmatters/jivetalking/pull/33) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(logging): prefer speech crest factor in analysis display](https://github.com/linuxmatters/jivetalking/pull/32) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260203](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260203), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.0), 3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260128](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260128), 1 week ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 2 weeks ago)
