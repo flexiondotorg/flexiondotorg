@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(logging): add recording tips to analysis output](https://github.com/linuxmatters/jivetalking/pull/29) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [docs(readme): recommend 10-15s room tone at recording start](https://github.com/linuxmatters/jivetalking/pull/28) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): use two-pass silence candidate selection](https://github.com/linuxmatters/jivetalking/pull/27) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(filesync): add Syncthing mixins and key-generation script](https://github.com/wimpysworld/nix-config/pull/616) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(processor): reject silence candidates with large peak-RMS gap](https://github.com/linuxmatters/jivetalking/pull/24) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
-- [feat(processor): add stability scoring for silence candidates](https://github.com/linuxmatters/jivetalking/pull/23) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (6999)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7000)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (43)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32591)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5718)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5720)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
