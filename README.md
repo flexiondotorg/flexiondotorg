@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(processor): consolidate spectral metric accumulation in analyzer](https://github.com/linuxmatters/jivetalking/pull/35) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [docs(readme): add analysis-only mode and clarify data flow](https://github.com/linuxmatters/jivetalking/pull/34) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(logging): normalise final spectral metrics for gain comparison](https://github.com/linuxmatters/jivetalking/pull/33) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(logging): prefer speech crest factor in analysis display](https://github.com/linuxmatters/jivetalking/pull/32) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(logging): make recording tips speech-aware and refine rules](https://github.com/linuxmatters/jivetalking/pull/31) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): prefer speech-specific metrics when available](https://github.com/linuxmatters/jivetalking/pull/30) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32592)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5729)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5732)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
