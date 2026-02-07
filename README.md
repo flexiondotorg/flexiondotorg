@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7005)
   - 🍿 A collection of QoL plugins for Neovim
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (46)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (47)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32603)
   - Create beautiful applications using Go
