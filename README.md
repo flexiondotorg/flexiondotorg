@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(processor): reject silence candidates with high crest factor](https://github.com/linuxmatters/jivetalking/pull/39) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [feat(processor): add LA-2A hot-input protection](https://github.com/linuxmatters/jivetalking/pull/38) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(policy): add Falcon sensor and Kolide policy mixins](https://github.com/wimpysworld/nix-config/pull/617) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(logging): add high_crest_factor tip and improve level tips](https://github.com/linuxmatters/jivetalking/pull/37) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [perf(processor): reduce allocations and avoid redundant analysis](https://github.com/linuxmatters/jivetalking/pull/36) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor(processor): consolidate spectral metric accumulation in analyzer](https://github.com/linuxmatters/jivetalking/pull/35) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [docs(readme): add analysis-only mode and clarify data flow](https://github.com/linuxmatters/jivetalking/pull/34) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.1), today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260203](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260203), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (47)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32610)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32611)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5748)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5749)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
