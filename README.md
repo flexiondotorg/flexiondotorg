@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(policy): add Falcon sensor and Kolide policy mixins](https://github.com/wimpysworld/nix-config/pull/617) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(logging): add high_crest_factor tip and improve level tips](https://github.com/linuxmatters/jivetalking/pull/37) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [perf(processor): reduce allocations and avoid redundant analysis](https://github.com/linuxmatters/jivetalking/pull/36) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): consolidate spectral metric accumulation in analyzer](https://github.com/linuxmatters/jivetalking/pull/35) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [docs(readme): add analysis-only mode and clarify data flow](https://github.com/linuxmatters/jivetalking/pull/34) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(logging): normalise final spectral metrics for gain comparison](https://github.com/linuxmatters/jivetalking/pull/33) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (46)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32601)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32602)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5737)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5739)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
