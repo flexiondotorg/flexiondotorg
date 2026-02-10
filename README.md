@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -51,12 +51,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), today)
+  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260203](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260203), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.8](https://github.com/quickemu-project/quickemu/releases/tag/4.9.8), 2 weeks ago)
-  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v9](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v9), 2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 2 weeks ago)
