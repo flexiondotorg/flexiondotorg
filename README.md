@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7041)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7042)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (51)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32672)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5807)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5809)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
   - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
