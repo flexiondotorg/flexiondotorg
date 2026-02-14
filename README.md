@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(workflows): add CI to build, publish to FlakeHub and release ISO](https://github.com/wimpysworld/nix-config/pull/619) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/618) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(processor): reject silence candidates with high crest factor](https://github.com/linuxmatters/jivetalking/pull/39) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
 - [feat(processor): add LA-2A hot-input protection](https://github.com/linuxmatters/jivetalking/pull/38) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
 - [feat(policy): add Falcon sensor and Kolide policy mixins](https://github.com/wimpysworld/nix-config/pull/617) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
-- [feat(logging): add high_crest_factor tip and improve level tips](https://github.com/linuxmatters/jivetalking/pull/37) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
 
 ### Recent releases 📦️
 
