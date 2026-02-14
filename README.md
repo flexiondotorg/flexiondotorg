@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5438)
+  - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7055)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32717)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5840)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5841)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [wimpysworld/plugin-research-badger](https://github.com/wimpysworld/plugin-research-badger) (1)
-  - Relentlessly dig through online sources to uncover comprehensive insights on any topic 🦡
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
