@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(workflows): add per-package summary and FlakeHub publish swap](https://github.com/wimpysworld/nix-config/pull/623) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(flake): filter local packages by meta.platforms](https://github.com/wimpysworld/nix-config/pull/622) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [ci(workflows): enable parallel evaluation and tidy workflows](https://github.com/wimpysworld/nix-config/pull/621) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/620) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [ci(workflows): add CI to build, publish to FlakeHub and release ISO](https://github.com/wimpysworld/nix-config/pull/619) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/618) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260211](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260211), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260211](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260211), today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 1 day ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32723)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5842)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5843)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
