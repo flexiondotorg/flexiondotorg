@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix: defer OIDC token acquisition until after Nix evaluation](https://github.com/DeterminateSystems/flakehub-push/pull/276) on [DeterminateSystems/flakehub-push](https://github.com/DeterminateSystems/flakehub-push) (today)
 - [ci(workflows): add per-package summary and FlakeHub publish swap](https://github.com/wimpysworld/nix-config/pull/623) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(flake): filter local packages by meta.platforms](https://github.com/wimpysworld/nix-config/pull/622) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [ci(workflows): enable parallel evaluation and tidy workflows](https://github.com/wimpysworld/nix-config/pull/621) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/620) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [ci(workflows): add CI to build, publish to FlakeHub and release ISO](https://github.com/wimpysworld/nix-config/pull/619) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32723)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32724)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5843)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5845)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
