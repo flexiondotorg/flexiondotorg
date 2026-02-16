@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(github-actions/builder): emit publish_ver and use for FlakeHub tagging](https://github.com/wimpysworld/nix-config/pull/635) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [ci(github-actions/builder): build flakehub-push from fork, skip ISO build](https://github.com/wimpysworld/nix-config/pull/634) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(hardware/streamdeck): add Stream Deck XL decks and update mixin](https://github.com/wimpysworld/nix-config/pull/633) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(secrets): add host- prefix and consolidate initrd keys](https://github.com/wimpysworld/nix-config/pull/632) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor: remove obsolete scripts and use ansi colours for duf](https://github.com/wimpysworld/nix-config/pull/631) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(users): split yubikey mixin into gpg/ssh/u2f modules](https://github.com/wimpysworld/nix-config/pull/630) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32741)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32743)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5863)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
