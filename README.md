@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [build(formatting): replace nixfmt-rfc-style with nixfmt; add just format](https://github.com/wimpysworld/nix-config/pull/636) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [ci(github-actions/builder): emit publish_ver and use for FlakeHub tagging](https://github.com/wimpysworld/nix-config/pull/635) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [ci(github-actions/builder): build flakehub-push from fork, skip ISO build](https://github.com/wimpysworld/nix-config/pull/634) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(hardware/streamdeck): add Stream Deck XL decks and update mixin](https://github.com/wimpysworld/nix-config/pull/633) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32744)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5867)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5868)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
