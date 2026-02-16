@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(server/borgbackup): allow services to inhibit sleep without auth](https://github.com/wimpysworld/nix-config/pull/628) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(home-manager/gpg): declarative GPG key management via hybrid approach](https://github.com/wimpysworld/nix-config/pull/627) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(server/borgbackup): add BorgBackup mixin with jobs, tools, and t…](https://github.com/wimpysworld/nix-config/pull/626) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: remove nvd and extra settings from justfile](https://github.com/wimpysworld/nix-config/pull/625) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/624) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix: defer OIDC token acquisition until after Nix evaluation](https://github.com/DeterminateSystems/flakehub-push/pull/276) on [DeterminateSystems/flakehub-push](https://github.com/DeterminateSystems/flakehub-push) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32731)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32732)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5853)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5855)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
