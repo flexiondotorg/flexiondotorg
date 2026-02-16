@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(secrets): add host- prefix and consolidate initrd keys](https://github.com/wimpysworld/nix-config/pull/632) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor: remove obsolete scripts and use ansi colours for duf](https://github.com/wimpysworld/nix-config/pull/631) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(users): split yubikey mixin into gpg/ssh/u2f modules](https://github.com/wimpysworld/nix-config/pull/630) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/629) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(server/borgbackup): allow services to inhibit sleep without auth](https://github.com/wimpysworld/nix-config/pull/628) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(home-manager/gpg): declarative GPG key management via hybrid approach](https://github.com/wimpysworld/nix-config/pull/627) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32740)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32741)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5861)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
