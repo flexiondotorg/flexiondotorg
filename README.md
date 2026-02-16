@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/629) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(server/borgbackup): allow services to inhibit sleep without auth](https://github.com/wimpysworld/nix-config/pull/628) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(home-manager/gpg): declarative GPG key management via hybrid approach](https://github.com/wimpysworld/nix-config/pull/627) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(server/borgbackup): add BorgBackup mixin with jobs, tools, and t…](https://github.com/wimpysworld/nix-config/pull/626) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: remove nvd and extra settings from justfile](https://github.com/wimpysworld/nix-config/pull/625) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/624) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32732)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32738)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5856)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5857)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
