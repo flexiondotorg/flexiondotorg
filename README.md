@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: remove obsolete scripts and use ansi colours for duf](https://github.com/wimpysworld/nix-config/pull/631) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [refactor(users): split yubikey mixin into gpg/ssh/u2f modules](https://github.com/wimpysworld/nix-config/pull/630) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/629) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(server/borgbackup): allow services to inhibit sleep without auth](https://github.com/wimpysworld/nix-config/pull/628) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(home-manager/gpg): declarative GPG key management via hybrid approach](https://github.com/wimpysworld/nix-config/pull/627) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(server/borgbackup): add BorgBackup mixin with jobs, tools, and t…](https://github.com/wimpysworld/nix-config/pull/626) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: remove nvd and extra settings from justfile](https://github.com/wimpysworld/nix-config/pull/625) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5441)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7071)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7072)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32738)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32739)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5858)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
