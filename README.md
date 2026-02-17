@@ -28,34 +28,34 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 weeks ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (2 weeks ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (3 weeks ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 
 ### Recent pull requests 🛠️
 
 
-- [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [build(formatting): replace nixfmt-rfc-style with nixfmt; add just format](https://github.com/wimpysworld/nix-config/pull/636) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [ci(github-actions/builder): emit publish_ver and use for FlakeHub tagging](https://github.com/wimpysworld/nix-config/pull/635) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [build(formatting): replace nixfmt-rfc-style with nixfmt; add just format](https://github.com/wimpysworld/nix-config/pull/636) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [ci(github-actions/builder): emit publish_ver and use for FlakeHub tagging](https://github.com/wimpysworld/nix-config/pull/635) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260214](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260214), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260214](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260214), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 2 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 6 days ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32746)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5868)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5869)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 week ago)
-- [Points of You](https://linuxmatters.sh/73/) (3 weeks ago)
+- [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (2 weeks ago)
+- [Points of You](https://linuxmatters.sh/73/) (4 weeks ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (1 month ago)
 - [Give me the Aux](https://linuxmatters.sh/71/) (1 month ago)
 - [Grummaging Gophers &amp; Gods](https://linuxmatters.sh/70/) (2 months ago)
