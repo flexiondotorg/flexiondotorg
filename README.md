@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(install-system): add FlakeHub cache, SOPS age key and SSH injection](https://github.com/wimpysworld/nix-config/pull/643) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(home-manager/development/direnv): add direnv-instant integration](https://github.com/wimpysworld/nix-config/pull/642) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32753)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5873)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5875)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
