@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [build(formatting): replace nixfmt-rfc-style with nixfmt; add just format](https://github.com/wimpysworld/nix-config/pull/636) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5442)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7077)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7079)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
