@@ -42,15 +42,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [build(formatting): replace nixfmt-rfc-style with nixfmt; add just format](https://github.com/wimpysworld/nix-config/pull/636) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [ci(github-actions/builder): emit publish_ver and use for FlakeHub tagging](https://github.com/wimpysworld/nix-config/pull/635) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.0), today)
+  - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260214](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260214), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 days ago)
@@ -59,21 +61,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.6](https://github.com/wimpysworld/deb-get/releases/tag/0.4.6), 3 weeks ago)
-  - apt-get for .debs published via GitHub or direct download 📦
 
 ### Recent starred projects ⭐️
 
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5442)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7075)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7076)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wailsapp/wails](https://github.com/wailsapp/wails) (32746)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5869)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5868)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
