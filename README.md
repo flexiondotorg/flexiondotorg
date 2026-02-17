@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(home-manager/development/direnv): add direnv-instant integration](https://github.com/wimpysworld/nix-config/pull/642) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(home-manager): consolidate legacy scripts into noughty](https://github.com/wimpysworld/nix-config/pull/639) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(common): extract shared configuration into common/default.nix](https://github.com/wimpysworld/nix-config/pull/638) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix(nixos): remove nixos.label that breaks fh apply](https://github.com/wimpysworld/nix-config/pull/637) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
