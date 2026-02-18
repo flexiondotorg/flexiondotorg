@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/646) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(install-system): improve install-system pre-copy, activation and reliability](https://github.com/wimpysworld/nix-config/pull/645) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(nixos/felkor): add felkor NixOS host configuration](https://github.com/wimpysworld/nix-config/pull/644) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(install-system): add FlakeHub cache, SOPS age key and SSH injection](https://github.com/wimpysworld/nix-config/pull/643) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(home-manager/development/direnv): add direnv-instant integration](https://github.com/wimpysworld/nix-config/pull/642) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
