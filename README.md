@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (4 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(nixos/felkor): add felkor NixOS host configuration](https://github.com/wimpysworld/nix-config/pull/644) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(install-system): add FlakeHub cache, SOPS age key and SSH injection](https://github.com/wimpysworld/nix-config/pull/643) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(home-manager/development/direnv): add direnv-instant integration](https://github.com/wimpysworld/nix-config/pull/642) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [feat(nixos/felkor): add felkor NixOS host configuration](https://github.com/wimpysworld/nix-config/pull/644) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(install-system): add FlakeHub cache, SOPS age key and SSH injection](https://github.com/wimpysworld/nix-config/pull/643) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(home-manager/development/direnv): add direnv-instant integration](https://github.com/wimpysworld/nix-config/pull/642) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/641) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [refactor(desktop): reorganise Wayland compositor and tidy waybar](https://github.com/wimpysworld/nix-config/pull/640) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260216](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260216), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260216](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260216), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.0), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.0), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 days ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 4 days ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 1 week ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (today)
+- [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 day ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (2 weeks ago)
 - [Points of You](https://linuxmatters.sh/73/) (4 weeks ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (1 month ago)
