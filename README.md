@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(noughty): add structured host and user metadata](https://github.com/wimpysworld/nix-config/pull/648) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/647) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/646) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(install-system): improve install-system pre-copy, activation and reliability](https://github.com/wimpysworld/nix-config/pull/645) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(nixos/felkor): add felkor NixOS host configuration](https://github.com/wimpysworld/nix-config/pull/644) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(install-system): add FlakeHub cache, SOPS age key and SSH injection](https://github.com/wimpysworld/nix-config/pull/643) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5444)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7089)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7090)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32785)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32786)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5912)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
