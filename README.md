@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(mixins): standardise dynamic directory imports](https://github.com/wimpysworld/nix-config/pull/653) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(housekeeping): add CI freshener, refactor mixins, and add Google Meet launcher](https://github.com/wimpysworld/nix-config/pull/652) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/651) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(assistants): add skills framework and improve agents prompts and docs](https://github.com/wimpysworld/nix-config/pull/650) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/649) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(noughty): add structured host and user metadata](https://github.com/wimpysworld/nix-config/pull/648) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5446)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7099)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7100)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32798)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32799)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5930)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
