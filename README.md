@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(console): start kmscon proactively on VT1 to avoid blank screen o…](https://github.com/wimpysworld/nix-config/pull/659) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(defold): update to 1.12.1](https://github.com/wimpysworld/nix-config/pull/658) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 10.145.17-2](https://github.com/wimpysworld/nix-config/pull/657) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [ci(freshener): make prefetch resilient for wavebox and defold](https://github.com/wimpysworld/nix-config/pull/656) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [docs(assistants/rosey): clarify role, delegation and tool constraints](https://github.com/wimpysworld/nix-config/pull/655) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(nix-config): adopt inherit syntax and apply formatting](https://github.com/wimpysworld/nix-config/pull/654) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5447)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5448)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7100)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32801)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32803)
   - Create beautiful applications using Go
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (5934)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
