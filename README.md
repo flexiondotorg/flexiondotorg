@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (1 week ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(assistants): add skills framework and improve agents prompts and docs](https://github.com/wimpysworld/nix-config/pull/650) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/649) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(noughty): add structured host and user metadata](https://github.com/wimpysworld/nix-config/pull/648) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/647) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/646) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [feat(install-system): improve install-system pre-copy, activation and reliability](https://github.com/wimpysworld/nix-config/pull/645) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5445)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5446)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7097)
   - 🍿 A collection of QoL plugins for Neovim
