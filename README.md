@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5446)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5447)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7100)
   - 🍿 A collection of QoL plugins for Neovim
