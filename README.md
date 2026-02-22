@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/662) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(flake): extract builder helpers for outputs and devshells](https://github.com/wimpysworld/nix-config/pull/661) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(registry): migrate system and user registries to TOML](https://github.com/wimpysworld/nix-config/pull/660) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(console): start kmscon proactively on VT1 to avoid blank screen o…](https://github.com/wimpysworld/nix-config/pull/659) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(defold): update to 1.12.1](https://github.com/wimpysworld/nix-config/pull/658) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(wavebox): update to 10.145.17-2](https://github.com/wimpysworld/nix-config/pull/657) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5449)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7103)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7104)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (52)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
