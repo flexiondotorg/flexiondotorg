@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(heynote): support macOS builds alongside Linux](https://github.com/wimpysworld/nix-config/pull/663) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/662) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(flake): extract builder helpers for outputs and devshells](https://github.com/wimpysworld/nix-config/pull/661) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(registry): migrate system and user registries to TOML](https://github.com/wimpysworld/nix-config/pull/660) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(console): start kmscon proactively on VT1 to avoid blank screen o…](https://github.com/wimpysworld/nix-config/pull/659) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(defold): update to 1.12.1](https://github.com/wimpysworld/nix-config/pull/658) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
