@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [perf(falcon-sensor): tune systemd resource and OOM settings](https://github.com/wimpysworld/nix-config/pull/670) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(flake): add FlakeHub token management and inline catppuccin palette](https://github.com/wimpysworld/nix-config/pull/669) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/668) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: add needs-reboot check and show NVD diff after apply](https://github.com/wimpysworld/nix-config/pull/667) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(agents): add writing skills and enforce concise writing rules](https://github.com/wimpysworld/nix-config/pull/666) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(hypr-session): add window placement session manager for Hyprland](https://github.com/wimpysworld/nix-config/pull/665) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (55)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32848)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32849)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5978)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5979)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
