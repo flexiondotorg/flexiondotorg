@@ -51,10 +51,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260221](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260221), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), today)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260220](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260220), 3 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 1 week ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 2 weeks ago)
@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (55)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32846)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32847)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5969)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (5970)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
