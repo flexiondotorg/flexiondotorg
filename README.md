@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(network/tailscale): migrate module to OAuth client credentials](https://github.com/wimpysworld/nix-config/pull/675) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/674) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(network): add captive-portal mixin and captive-browser](https://github.com/wimpysworld/nix-config/pull/673) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 10.145.41-2](https://github.com/wimpysworld/nix-config/pull/672) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(nixos): reorganise mixins and gate by host tags](https://github.com/wimpysworld/nix-config/pull/671) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [perf(falcon-sensor): tune systemd resource and OOM settings](https://github.com/wimpysworld/nix-config/pull/670) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5453)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7123)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7124)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (56)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32860)
+- [wailsapp/wails](https://github.com/wailsapp/wails) (32861)
   - Create beautiful applications using Go
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (6004)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (6005)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### 🎙️ Podcast
