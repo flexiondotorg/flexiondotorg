@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5453)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7124)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7126)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (56)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
