@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(media-production): gate DaVinci Resolve, Defold and Blender on host tags](https://github.com/wimpysworld/nix-config/pull/678) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/677) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(oterm): add MCP servers and oterm template, integrate with ollama](https://github.com/wimpysworld/nix-config/pull/676) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(network/tailscale): migrate module to OAuth client credentials](https://github.com/wimpysworld/nix-config/pull/675) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
