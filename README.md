@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19621)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1117)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1119)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5455)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7134)
   - 🍿 A collection of QoL plugins for Neovim
