@@ -65,7 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1114)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19619)
+  - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1116)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5455)
   - Mirror of the LuaJIT git repository
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wailsapp/wails](https://github.com/wailsapp/wails) (32889)
-  - Create beautiful applications using Go
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
