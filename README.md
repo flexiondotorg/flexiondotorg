@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat: add OpenChambre Web package with Home Manager integration and auto-update workflow](https://github.com/wimpysworld/nix-config/pull/682) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/681) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(media-production): gate DaVinci Resolve, Defold and Blender on host tags](https://github.com/wimpysworld/nix-config/pull/678) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/677) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19631)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19633)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1143)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1144)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
