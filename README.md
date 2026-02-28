@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/681) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(media-production): gate DaVinci Resolve, Defold and Blender on host tags](https://github.com/wimpysworld/nix-config/pull/678) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/677) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(oterm): add MCP servers and oterm template, integrate with ollama](https://github.com/wimpysworld/nix-config/pull/676) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19623)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19625)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1134)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1137)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7136)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7137)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
