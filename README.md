@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(home-manager): gate desktop mixins behind host.is.workstation](https://github.com/wimpysworld/nix-config/pull/685) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore: add archive to syncthing](https://github.com/wimpysworld/nix-config/pull/684) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [build(opencode): pin opencode input to v1.2.14](https://github.com/wimpysworld/nix-config/pull/683) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: add OpenChambre Web package with Home Manager integration and auto-update workflow](https://github.com/wimpysworld/nix-config/pull/682) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/681) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7140)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7141)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
