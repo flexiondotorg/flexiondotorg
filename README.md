@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (1 week ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 weeks ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 weeks ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 weeks ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 month ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) (1 month ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
@@ -42,24 +42,24 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(media-production): gate DaVinci Resolve, Defold and Blender on host tags](https://github.com/wimpysworld/nix-config/pull/678) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/677) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(oterm): add MCP servers and oterm template, integrate with ollama](https://github.com/wimpysworld/nix-config/pull/676) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(opencode): add opencode-desktop package and enable in home mixin](https://github.com/wimpysworld/nix-config/pull/680) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/679) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(media-production): gate DaVinci Resolve, Defold and Blender on host tags](https://github.com/wimpysworld/nix-config/pull/678) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/677) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(oterm): add MCP servers and oterm template, integrate with ollama](https://github.com/wimpysworld/nix-config/pull/676) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260224](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260224), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260224](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260224), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 3 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 4 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 1 week ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 2 weeks ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 2 weeks ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 3 weeks ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent starred projects ⭐️
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19623)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1126)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1128)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
