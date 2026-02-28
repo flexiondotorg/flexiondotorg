@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(home-manager): gate desktop mixins behind host.is.workstation](https://github.com/wimpysworld/nix-config/pull/685) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: add archive to syncthing](https://github.com/wimpysworld/nix-config/pull/684) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [build(opencode): pin opencode input to v1.2.14](https://github.com/wimpysworld/nix-config/pull/683) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: add OpenChambre Web package with Home Manager integration and auto-update workflow](https://github.com/wimpysworld/nix-config/pull/682) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/681) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
