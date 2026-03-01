@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [build(home-manager): use nodejs_22 for JavaScript tooling](https://github.com/wimpysworld/nix-config/pull/687) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(home-manager): gate desktop mixins behind host.is.workstation](https://github.com/wimpysworld/nix-config/pull/685) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: add archive to syncthing](https://github.com/wimpysworld/nix-config/pull/684) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [build(opencode): pin opencode input to v1.2.14](https://github.com/wimpysworld/nix-config/pull/683) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat: add OpenChambre Web package with Home Manager integration and auto-update workflow](https://github.com/wimpysworld/nix-config/pull/682) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260224](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260224), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 5 days ago)
   - The Github Action for Determinate Nix
@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19643)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19645)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1163)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1165)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
