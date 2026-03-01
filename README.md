@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(openchambre-web): update to 1.8.2](https://github.com/wimpysworld/nix-config/pull/688) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [build(home-manager): use nodejs_22 for JavaScript tooling](https://github.com/wimpysworld/nix-config/pull/687) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(home-manager): gate desktop mixins behind host.is.workstation](https://github.com/wimpysworld/nix-config/pull/685) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: add archive to syncthing](https://github.com/wimpysworld/nix-config/pull/684) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [build(opencode): pin opencode input to v1.2.14](https://github.com/wimpysworld/nix-config/pull/683) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19645)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1165)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1171)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5456)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7143)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7144)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
