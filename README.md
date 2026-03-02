@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1202)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5457)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7151)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7152)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
