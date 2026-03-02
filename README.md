@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(openchamber-web): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/692) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(openchamber-desktop): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/691) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(openchamber): add desktop package and rename web package](https://github.com/wimpysworld/nix-config/pull/690) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/689) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(openchambre-web): update to 1.8.2](https://github.com/wimpysworld/nix-config/pull/688) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [build(home-manager): use nodejs_22 for JavaScript tooling](https://github.com/wimpysworld/nix-config/pull/687) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19654)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19658)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1192)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1194)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7150)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7151)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (57)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
