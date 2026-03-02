@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(openchamber): add desktop package and rename web package](https://github.com/wimpysworld/nix-config/pull/690) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/689) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(openchambre-web): update to 1.8.2](https://github.com/wimpysworld/nix-config/pull/688) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [build(home-manager): use nodejs_22 for JavaScript tooling](https://github.com/wimpysworld/nix-config/pull/687) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(openchamber): add desktop package and rename web package](https://github.com/wimpysworld/nix-config/pull/690) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/689) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(openchambre-web): update to 1.8.2](https://github.com/wimpysworld/nix-config/pull/688) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [build(home-manager): use nodejs_22 for JavaScript tooling](https://github.com/wimpysworld/nix-config/pull/687) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(desktop): restrict desktop mixins to workstations](https://github.com/wimpysworld/nix-config/pull/686) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 5 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 6 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19655)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1190)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1191)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
@@ -100,7 +100,7 @@ Here are some recent episodes:
 
 ### ✍️ Blog
 
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (8 months ago)
+- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (9 months ago)
 - [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (9 months ago)
 - [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (10 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
