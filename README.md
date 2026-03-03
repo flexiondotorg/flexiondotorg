@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(defold): update to 1.12.2](https://github.com/wimpysworld/nix-config/pull/694) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(pkgs/gitbutler): add GitButler package and freshener CI job](https://github.com/wimpysworld/nix-config/pull/693) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(openchamber-web): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/692) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(openchamber-desktop): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/691) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(openchamber): add desktop package and rename web package](https://github.com/wimpysworld/nix-config/pull/690) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/689) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19679)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19678)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1216)
   - Desktop and web interface for OpenCode AI agent
