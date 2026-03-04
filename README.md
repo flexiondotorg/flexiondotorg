@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/695) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(defold): update to 1.12.2](https://github.com/wimpysworld/nix-config/pull/694) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(pkgs/gitbutler): add GitButler package and freshener CI job](https://github.com/wimpysworld/nix-config/pull/693) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-web): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/692) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-desktop): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/691) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/695) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(defold): update to 1.12.2](https://github.com/wimpysworld/nix-config/pull/694) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(pkgs/gitbutler): add GitButler package and freshener CI job](https://github.com/wimpysworld/nix-config/pull/693) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(openchamber-web): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/692) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(openchamber-desktop): update to 1.8.3](https://github.com/wimpysworld/nix-config/pull/691) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.16.3](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.16.3), 1 week ago)
   - The Github Action for Determinate Nix
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19707)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1234)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1235)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [The Smell of Git](https://linuxmatters.sh/76/) (today)
+- [The Smell of Git](https://linuxmatters.sh/76/) (1 day ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (2 weeks ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (4 weeks ago)
 - [Points of You](https://linuxmatters.sh/73/) (1 month ago)
