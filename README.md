@@ -65,9 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19753)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19754)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1254)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1255)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
