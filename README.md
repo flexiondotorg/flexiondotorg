@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19747)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19748)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1249)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1250)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7161)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7162)
   - 🍿 A collection of QoL plugins for Neovim
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (58)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
