@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/703) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(gitbutler): update to 0.19.5](https://github.com/wimpysworld/nix-config/pull/702) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-web): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/701) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-desktop): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/700) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(config,alter): add repository metadata and token substitution](https://github.com/wimpysworld/tailor/pull/3) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(claude-code): patch ccstatusline and add status line config](https://github.com/wimpysworld/nix-config/pull/699) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Bespoke project templates for GitHub repositories 🪡
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19764)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19767)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1261)
+- [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1262)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
