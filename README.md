@@ -30,7 +30,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - Bespoke project templates for GitHub repositories 🪡
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(gitbutler): update to 0.19.5](https://github.com/wimpysworld/nix-config/pull/702) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(openchamber-web): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/701) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(openchamber-desktop): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/700) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [feat(config,alter): add repository metadata and token substitution](https://github.com/wimpysworld/tailor/pull/3) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(claude-code): patch ccstatusline and add status line config](https://github.com/wimpysworld/nix-config/pull/699) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/698) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-web): update to 1.8.4](https://github.com/wimpysworld/nix-config/pull/697) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-desktop): update to 1.8.4](https://github.com/wimpysworld/nix-config/pull/696) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/695) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Bespoke project templates for GitHub repositories 🪡
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19759)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19763)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [btriapitsyn/openchamber](https://github.com/btriapitsyn/openchamber) (1261)
   - Desktop and web interface for OpenCode AI agent
