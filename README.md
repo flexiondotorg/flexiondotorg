@@ -19,7 +19,7 @@ We have a modest [Discord server for Wimpy's World](https://wimpysworld.io/disco
 
 I [steam live-coding on Twitch](https://twitch.tv/WimpysWorld) 📡 and those streams are [archived on YouTube](https://youtube.com/WimpysWorld) 📺️
 
-These awesome people sponsor me: [CreeperLKF](https://github.com/CreeperLKF) [mmartial](https://github.com/mmartial) [da-moon](https://github.com/da-moon) [castrojo](https://github.com/castrojo)  Thank you! ❤️
+These awesome people sponsor me: [CreeperLKF](https://github.com/CreeperLKF) [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
 If you appreciate my work, then [please consider sponsoring me too](https://github.com/sponsors/flexiondotorg) 🤑 **Curious what I've been working on recently?**
 <div align="center">
   <img align="center" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/snake/github-contribution-grid-snake-dark.svg">
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Bespoke project templates for GitHub repositories 🪡
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19780)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19781)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1282)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1284)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5459)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7171)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7172)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
