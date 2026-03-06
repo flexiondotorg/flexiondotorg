@@ -29,7 +29,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-  - Bespoke project templates for GitHub repositories 🪡
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [docs: streamline readme for clarity and accessibility](https://github.com/wimpysworld/tailor/pull/15) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: alter tailor swatches](https://github.com/wimpysworld/tailor/pull/14) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [fix(alter): skip config.yml during swatch processing](https://github.com/wimpysworld/tailor/pull/13) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(config): implement config-as-standard-swatch with automatic merging](https://github.com/wimpysworld/tailor/pull/12) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(automerge): merge open Dependabot PRs on workflow_dispatch](https://github.com/wimpysworld/tailor/pull/11) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [ci(automerge): grant actions write permission to automerge workflows](https://github.com/wimpysworld/tailor/pull/10) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
@@ -66,14 +66,14 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
-  - Bespoke project templates for GitHub repositories 🪡
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19783)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1294)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5460)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7172)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7171)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
