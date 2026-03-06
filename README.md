@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - Bespoke project templates for GitHub repositories 🪡
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 weeks ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: alter tailor swatches](https://github.com/wimpysworld/tailor/pull/14) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [fix(alter): skip config.yml during swatch processing](https://github.com/wimpysworld/tailor/pull/13) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(config): implement config-as-standard-swatch with automatic merging](https://github.com/wimpysworld/tailor/pull/12) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(automerge): merge open Dependabot PRs on workflow_dispatch](https://github.com/wimpysworld/tailor/pull/11) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(automerge): grant actions write permission to automerge workflows](https://github.com/wimpysworld/tailor/pull/10) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(alter): add {{MERGE_STRATEGY}} token for repository-aware merge strategy](https://github.com/wimpysworld/tailor/pull/9) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(automerge): implement trigger-driven deployment and removal logic](https://github.com/wimpysworld/tailor/pull/8) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Bespoke project templates for GitHub repositories 🪡
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19783)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1292)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1294)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5460)
   - Mirror of the LuaJIT git repository
