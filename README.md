@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Bespoke project templates for GitHub repositories 🪡
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(docket): implement GitHub authentication status display command](https://github.com/wimpysworld/tailor/pull/4) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(development): add rosey shell aliases for claude and opencode](https://github.com/wimpysworld/nix-config/pull/704) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/703) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(gitbutler): update to 0.19.5](https://github.com/wimpysworld/nix-config/pull/702) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(openchamber-web): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/701) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [feat(docket): implement GitHub authentication status display command](https://github.com/wimpysworld/tailor/pull/4) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(development): add rosey shell aliases for claude and opencode](https://github.com/wimpysworld/nix-config/pull/704) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/703) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(gitbutler): update to 0.19.5](https://github.com/wimpysworld/nix-config/pull/702) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(openchamber-web): update to 1.8.5](https://github.com/wimpysworld/nix-config/pull/701) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260225](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260225), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Bespoke project templates for GitHub repositories 🪡
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19773)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1271)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1274)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5459)
   - Mirror of the LuaJIT git repository
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [The Smell of Git](https://linuxmatters.sh/76/) (2 days ago)
+- [The Smell of Git](https://linuxmatters.sh/76/) (3 days ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (2 weeks ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
 - [Points of You](https://linuxmatters.sh/73/) (1 month ago)
