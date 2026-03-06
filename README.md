@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(automerge): merge open Dependabot PRs on workflow_dispatch](https://github.com/wimpysworld/tailor/pull/11) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [ci(automerge): grant actions write permission to automerge workflows](https://github.com/wimpysworld/tailor/pull/10) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [feat(alter): add {{MERGE_STRATEGY}} token for repository-aware merge strategy](https://github.com/wimpysworld/tailor/pull/9) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(automerge): implement trigger-driven deployment and removal logic](https://github.com/wimpysworld/tailor/pull/8) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/705) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [ci: add linter config and GitHub CI workflow](https://github.com/wimpysworld/tailor/pull/5) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(docket): implement GitHub authentication status display command](https://github.com/wimpysworld/tailor/pull/4) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(development): add rosey shell aliases for claude and opencode](https://github.com/wimpysworld/nix-config/pull/704) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Bespoke project templates for GitHub repositories 🪡
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19783)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19782)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1284)
   - Desktop and web interface for OpenCode AI agent
