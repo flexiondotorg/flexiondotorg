@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - Bespoke project templates for GitHub repositories 🪡
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (2 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/705) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [ci: add linter config and GitHub CI workflow](https://github.com/wimpysworld/tailor/pull/5) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(docket): implement GitHub authentication status display command](https://github.com/wimpysworld/tailor/pull/4) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [feat(development): add rosey shell aliases for claude and opencode](https://github.com/wimpysworld/nix-config/pull/704) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/703) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(gitbutler): update to 0.19.5](https://github.com/wimpysworld/nix-config/pull/702) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
