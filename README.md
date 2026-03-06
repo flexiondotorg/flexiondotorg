@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Bespoke project templates for GitHub repositories 🪡
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19782)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19781)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1288)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1289)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5460)
   - Mirror of the LuaJIT git repository
