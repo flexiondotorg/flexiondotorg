@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - CLI and GitHub Action to apply a tailored configuration across your repositories
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19789)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1306)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1308)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7172)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7173)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
