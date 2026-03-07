@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - CLI and GitHub Action to apply a tailored configuration across your repositories
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19795)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19796)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1317)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1319)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5459)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7177)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7178)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
