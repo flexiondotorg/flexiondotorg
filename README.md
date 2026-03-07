@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(config): implement settings and labels management](https://github.com/wimpysworld/tailor/pull/16) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [docs: streamline readme for clarity and accessibility](https://github.com/wimpysworld/tailor/pull/15) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [chore: alter tailor swatches](https://github.com/wimpysworld/tailor/pull/14) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [fix(alter): skip config.yml during swatch processing](https://github.com/wimpysworld/tailor/pull/13) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [feat(config): implement config-as-standard-swatch with automatic merging](https://github.com/wimpysworld/tailor/pull/12) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [ci(automerge): merge open Dependabot PRs on workflow_dispatch](https://github.com/wimpysworld/tailor/pull/11) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19785)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1296)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1297)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5458)
   - Mirror of the LuaJIT git repository
