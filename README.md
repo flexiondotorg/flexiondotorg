@@ -30,7 +30,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - CLI and GitHub Action to apply a tailored configuration across your repositories
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(agents): add model tier configuration and enhance reuse-driven design patterns](https://github.com/wimpysworld/nix-config/pull/706) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [Docs](https://github.com/wimpysworld/tailor/pull/17) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(config): implement settings and labels management](https://github.com/wimpysworld/tailor/pull/16) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [docs: streamline readme for clarity and accessibility](https://github.com/wimpysworld/tailor/pull/15) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [chore: alter tailor swatches](https://github.com/wimpysworld/tailor/pull/14) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [fix(alter): skip config.yml during swatch processing](https://github.com/wimpysworld/tailor/pull/13) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - CLI and GitHub Action to apply a tailored configuration across your repositories
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19796)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19798)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1319)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1323)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5459)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5460)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7178)
   - 🍿 A collection of QoL plugins for Neovim
