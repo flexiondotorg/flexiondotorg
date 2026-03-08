@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - CLI and GitHub Action to apply a tailored configuration across your repositories
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [refactor(config): consolidate source/destination to path, move to root dotfile](https://github.com/wimpysworld/tailor/pull/18) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(agents): add model tier configuration and enhance reuse-driven design patterns](https://github.com/wimpysworld/nix-config/pull/706) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [Docs](https://github.com/wimpysworld/tailor/pull/17) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(config): implement settings and labels management](https://github.com/wimpysworld/tailor/pull/16) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [refactor(config): consolidate source/destination to path, move to root dotfile](https://github.com/wimpysworld/tailor/pull/18) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(agents): add model tier configuration and enhance reuse-driven design patterns](https://github.com/wimpysworld/nix-config/pull/706) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [Docs](https://github.com/wimpysworld/tailor/pull/17) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(config): implement settings and labels management](https://github.com/wimpysworld/tailor/pull/16) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 2 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 3 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - CLI and GitHub Action to apply a tailored configuration across your repositories
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19800)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1325)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1326)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5461)
   - Mirror of the LuaJIT git repository
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [The Smell of Git](https://linuxmatters.sh/76/) (4 days ago)
+- [The Smell of Git](https://linuxmatters.sh/76/) (5 days ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (2 weeks ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
 - [Points of You](https://linuxmatters.sh/73/) (1 month ago)
