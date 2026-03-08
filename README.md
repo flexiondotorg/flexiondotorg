@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci: add dependency review security gate and actionlint workflow validation](https://github.com/wimpysworld/tailor/pull/22) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(measure): implement phase 1 health classification for README and LICENSE](https://github.com/wimpysworld/tailor/pull/21) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [docs: update documentation and remove PR template checklist](https://github.com/wimpysworld/tailor/pull/20) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [refactor(config): consolidate source/destination to path, move to root dotfile](https://github.com/wimpysworld/tailor/pull/18) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(agents): add model tier configuration and enhance reuse-driven design patterns](https://github.com/wimpysworld/nix-config/pull/706) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19809)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1339)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1340)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5461)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7184)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7185)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
