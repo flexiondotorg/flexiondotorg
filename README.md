@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(stdlib): use Go 1.25 stdlib replacements](https://github.com/wimpysworld/tailor/pull/23) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci: add dependency review security gate and actionlint workflow validation](https://github.com/wimpysworld/tailor/pull/22) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(measure): implement phase 1 health classification for README and LICENSE](https://github.com/wimpysworld/tailor/pull/21) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [docs: update documentation and remove PR template checklist](https://github.com/wimpysworld/tailor/pull/20) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [refactor(config): consolidate source/destination to path, move to root dotfile](https://github.com/wimpysworld/tailor/pull/18) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
