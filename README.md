@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-  - CLI and GitHub Action to apply a tailored configuration across your repositories
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 weeks ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [docs: update documentation and remove PR template checklist](https://github.com/wimpysworld/tailor/pull/20) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [refactor(config): consolidate source/destination to path, move to root dotfile](https://github.com/wimpysworld/tailor/pull/18) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [feat(agents): add model tier configuration and enhance reuse-driven design patterns](https://github.com/wimpysworld/nix-config/pull/706) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [Docs](https://github.com/wimpysworld/tailor/pull/17) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(config): implement settings and labels management](https://github.com/wimpysworld/tailor/pull/16) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -66,10 +66,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
-  - CLI and GitHub Action to apply a tailored configuration across your repositories
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19800)
+  - Ready-to-wear project templates for GitHub repositories 👔
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19802)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1328)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1329)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5461)
   - Mirror of the LuaJIT git repository
