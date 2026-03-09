@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5462)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7188)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7190)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
