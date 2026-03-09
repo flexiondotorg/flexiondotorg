@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(claude-code): integrate LSP servers and update documentation](https://github.com/wimpysworld/nix-config/pull/708) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/707) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat: migrate to Blue Oak Model License 1.0.0](https://github.com/wimpysworld/tailor/pull/24) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [refactor(stdlib): use Go 1.25 stdlib replacements](https://github.com/wimpysworld/tailor/pull/23) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [ci: add dependency review security gate and actionlint workflow validation](https://github.com/wimpysworld/tailor/pull/22) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
