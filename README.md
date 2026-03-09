@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/707) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat: migrate to Blue Oak Model License 1.0.0](https://github.com/wimpysworld/tailor/pull/24) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [refactor(stdlib): use Go 1.25 stdlib replacements](https://github.com/wimpysworld/tailor/pull/23) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [ci: add dependency review security gate and actionlint workflow validation](https://github.com/wimpysworld/tailor/pull/22) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(measure): implement phase 1 health classification for README and LICENSE](https://github.com/wimpysworld/tailor/pull/21) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19814)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19815)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1346)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1350)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5461)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5462)
   - Mirror of the LuaJIT git repository
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7187)
   - 🍿 A collection of QoL plugins for Neovim
