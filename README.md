@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [docs(assistants): document agents, permissions, and development infrastructure](https://github.com/wimpysworld/nix-config/pull/709) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(claude-code): integrate LSP servers and update documentation](https://github.com/wimpysworld/nix-config/pull/708) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/707) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat: migrate to Blue Oak Model License 1.0.0](https://github.com/wimpysworld/tailor/pull/24) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5462)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7187)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7188)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
