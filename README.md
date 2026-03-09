@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [feat: migrate to Blue Oak Model License 1.0.0](https://github.com/wimpysworld/tailor/pull/24) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [refactor(stdlib): use Go 1.25 stdlib replacements](https://github.com/wimpysworld/tailor/pull/23) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [ci: add dependency review security gate and actionlint workflow validation](https://github.com/wimpysworld/tailor/pull/22) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [feat(measure): implement phase 1 health classification for README and LICENSE](https://github.com/wimpysworld/tailor/pull/21) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [docs: update documentation and remove PR template checklist](https://github.com/wimpysworld/tailor/pull/20) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(gh): implement PAT robustness with graceful degradation](https://github.com/wimpysworld/tailor/pull/19) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19814)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19813)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1346)
   - Desktop and web interface for OpenCode AI agent
