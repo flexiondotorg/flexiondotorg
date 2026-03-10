@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
   - Homebrew tap for wimpysworld tools
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(release): install Nix to provide nix-hash for GoReleaser](https://github.com/wimpysworld/tailor/pull/27) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(release): integrate GoReleaser for cross-platform builds and publishing](https://github.com/wimpysworld/tailor/pull/26) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [docs(assistants): document agents, permissions, and development infrastructure](https://github.com/wimpysworld/nix-config/pull/709) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
