@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19828)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19829)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1380)
   - Desktop and web interface for OpenCode AI agent
