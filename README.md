@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,22 +42,22 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [docs(assistants): document agents, permissions, and development infrastructure](https://github.com/wimpysworld/nix-config/pull/709) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(claude-code): integrate LSP servers and update documentation](https://github.com/wimpysworld/nix-config/pull/708) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/707) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [docs(assistants): document agents, permissions, and development infrastructure](https://github.com/wimpysworld/nix-config/pull/709) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(claude-code): integrate LSP servers and update documentation](https://github.com/wimpysworld/nix-config/pull/708) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/707) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [docs(swatches): improve contributor and security guidance](https://github.com/wimpysworld/tailor/pull/25) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 5 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 3 weeks ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 4 weeks ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.2.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.2.2), 1 month ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19817)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1356)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1357)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5462)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7190)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7191)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [The Smell of Git](https://linuxmatters.sh/76/) (6 days ago)
-- [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (2 weeks ago)
+- [The Smell of Git](https://linuxmatters.sh/76/) (1 week ago)
+- [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (3 weeks ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
 - [Points of You](https://linuxmatters.sh/73/) (1 month ago)
 - [Lets get Trippy](https://linuxmatters.sh/72/) (2 months ago)
