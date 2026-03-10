@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(release): install Nix to provide nix-hash for GoReleaser](https://github.com/wimpysworld/tailor/pull/27) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(release): integrate GoReleaser for cross-platform builds and publishing](https://github.com/wimpysworld/tailor/pull/26) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [docs(assistants): document agents, permissions, and development infrastructure](https://github.com/wimpysworld/nix-config/pull/709) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(claude-code): integrate LSP servers and update documentation](https://github.com/wimpysworld/nix-config/pull/708) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19826)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1374)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1376)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5462)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5464)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7192)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7193)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
