@@ -42,19 +42,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(workflows): refactor release job to use matrix strategy for variants](https://github.com/wimpysworld/tailor/pull/33) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [fix(workflows): correct CodeQL and flake-lock handling in security swatch](https://github.com/wimpysworld/tailor/pull/31) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/711) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: publish GitHub Action from main repo with v-prefixed tags](https://github.com/wimpysworld/tailor/pull/30) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([0.1.0](https://github.com/wimpysworld/tailor/releases/tag/0.1.0), 1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 5 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 6 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19845)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1405)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1406)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
   - Mirror of the LuaJIT git repository
