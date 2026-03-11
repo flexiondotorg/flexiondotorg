@@ -28,8 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
-  - Homebrew tap for wimpysworld tools
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
+  - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19838)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19840)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1398)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1399)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7207)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7208)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
