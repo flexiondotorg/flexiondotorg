@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
   - Homebrew tap for wimpysworld tools
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [ci(release): install Nix to provide nix-hash for GoReleaser](https://github.com/wimpysworld/tailor/pull/27) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(release): integrate GoReleaser for cross-platform builds and publishing](https://github.com/wimpysworld/tailor/pull/26) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [ci(release): install Nix to provide nix-hash for GoReleaser](https://github.com/wimpysworld/tailor/pull/27) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(release): integrate GoReleaser for cross-platform builds and publishing](https://github.com/wimpysworld/tailor/pull/26) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([0.1.0](https://github.com/wimpysworld/tailor/releases/tag/0.1.0), today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([0.1.0](https://github.com/wimpysworld/tailor/releases/tag/0.1.0), 1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260304](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260304), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 5 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 6 days ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -101,7 +101,7 @@ Here are some recent episodes:
 ### ✍️ Blog
 
 - [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (9 months ago)
-- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (9 months ago)
-- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (10 months ago)
+- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (10 months ago)
+- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (11 months ago)
 - [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
 - [Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/) (2 years ago)
