@@ -32,7 +32,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19841)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19843)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1401)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1403)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7211)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7212)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
