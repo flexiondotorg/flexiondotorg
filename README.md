@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(workflows): consolidate security scanning and simplify swatch management](https://github.com/wimpysworld/tailor/pull/35) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [fix(ci): add least-privilege permissions to GitHub Actions workflows](https://github.com/wimpysworld/tailor/pull/34) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): refactor release job to use matrix strategy for variants](https://github.com/wimpysworld/tailor/pull/33) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [fix(workflows): correct CodeQL and flake-lock handling in security swatch](https://github.com/wimpysworld/tailor/pull/31) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/711) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat: publish GitHub Action from main repo with v-prefixed tags](https://github.com/wimpysworld/tailor/pull/30) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19845)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19846)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1406)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1409)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7213)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7214)
   - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
