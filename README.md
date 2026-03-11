@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(workflows): consolidate govulncheck into builder and add weekly schedule](https://github.com/wimpysworld/tailor/pull/40) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [docs: add GitHub Action usage documentation to README](https://github.com/wimpysworld/tailor/pull/39) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): add code quality checks and Go Report Card refresh](https://github.com/wimpysworld/tailor/pull/38) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [refactor(workflows): consolidate update-action-tag into builder](https://github.com/wimpysworld/tailor/pull/37) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(action): add gated inputs to run tailor commands](https://github.com/wimpysworld/tailor/pull/36) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [refactor(workflows): consolidate security scanning and simplify swatch management](https://github.com/wimpysworld/tailor/pull/35) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19850)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19852)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1410)
   - Desktop and web interface for OpenCode AI agent
