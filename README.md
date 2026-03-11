@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (today)
+  - Nix packages published by wimpysworld
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
@@ -36,8 +38,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 month ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19852)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19854)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1410)
   - Desktop and web interface for OpenCode AI agent
