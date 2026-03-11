@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/711) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [feat: publish GitHub Action from main repo with v-prefixed tags](https://github.com/wimpysworld/tailor/pull/30) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(swatch): add security workflow and fix topics preservation](https://github.com/wimpysworld/tailor/pull/29) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [fix(alter,swatch): align swatch output and recut behaviour with spec](https://github.com/wimpysworld/tailor/pull/28) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [ci(release): install Nix to provide nix-hash for GoReleaser](https://github.com/wimpysworld/tailor/pull/27) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(release): integrate GoReleaser for cross-platform builds and publishing](https://github.com/wimpysworld/tailor/pull/26) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(development/go): add go-licenses, goreleaser, govulncheck](https://github.com/wimpysworld/nix-config/pull/710) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19836)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19835)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1387)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1389)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5464)
   - Mirror of the LuaJIT git repository
