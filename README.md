@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(swatch): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/48) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: upgrade to Go 1.26.1](https://github.com/wimpysworld/tailor/pull/46) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [refactor(settings): remove admin-only repository fields from model](https://github.com/wimpysworld/tailor/pull/45) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [fix: correct release workflow and make tailor available via flake.nix swatch](https://github.com/wimpysworld/tailor/pull/44) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): refactor release workflow to fix GitHub Actions trigger bug](https://github.com/wimpysworld/tailor/pull/43) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [feat(nix): integrate wimpysworld/nix-packages as external Nix registry](https://github.com/wimpysworld/tailor/pull/42) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19858)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19859)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1427)
   - Desktop and web interface for OpenCode AI agent
