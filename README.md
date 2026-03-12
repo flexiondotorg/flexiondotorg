@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(workflows): set explicit base branch for flake.lock update PR](https://github.com/wimpysworld/tailor/pull/51) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [ci(workflows): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/50) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): add tailor baste step to builder workflow](https://github.com/wimpysworld/tailor/pull/49) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(swatch): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/48) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [chore: upgrade to Go 1.26.1](https://github.com/wimpysworld/tailor/pull/46) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [refactor(settings): remove admin-only repository fields from model](https://github.com/wimpysworld/tailor/pull/45) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [fix: correct release workflow and make tailor available via flake.nix swatch](https://github.com/wimpysworld/tailor/pull/44) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.1](https://github.com/wimpysworld/tailor/releases/tag/v0.1.1), 1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), today)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19861)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19862)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1430)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1431)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5468)
   - Mirror of the LuaJIT git repository
