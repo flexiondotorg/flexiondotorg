@@ -29,12 +29,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (today)
-  - Nix packages published by wimpysworld
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
+  - Nix packages published by Wimpy&#39;s World ️❄️
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
@@ -42,39 +42,39 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [ci(workflows): consolidate govulncheck into builder and add weekly schedule](https://github.com/wimpysworld/tailor/pull/40) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [docs: add GitHub Action usage documentation to README](https://github.com/wimpysworld/tailor/pull/39) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [ci(workflows): add code quality checks and Go Report Card refresh](https://github.com/wimpysworld/tailor/pull/38) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [refactor(workflows): consolidate update-action-tag into builder](https://github.com/wimpysworld/tailor/pull/37) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(action): add gated inputs to run tailor commands](https://github.com/wimpysworld/tailor/pull/36) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [ci(workflows): refactor release workflow to fix GitHub Actions trigger bug](https://github.com/wimpysworld/tailor/pull/43) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [feat(nix): integrate wimpysworld/nix-packages as external Nix registry](https://github.com/wimpysworld/tailor/pull/42) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [ci(workflows): consolidate govulncheck into builder and add weekly schedule](https://github.com/wimpysworld/tailor/pull/40) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [docs: add GitHub Action usage documentation to README](https://github.com/wimpysworld/tailor/pull/39) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [ci(workflows): add code quality checks and Go Report Card refresh](https://github.com/wimpysworld/tailor/pull/38) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([0.1.0](https://github.com/wimpysworld/tailor/releases/tag/0.1.0), 1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.1](https://github.com/wimpysworld/tailor/releases/tag/v0.1.1), 1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 6 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), 1 day ago)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 4 weeks ago)
+- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 1 month ago)
   - Quickly create and run optimised Windows, macOS and Linux virtual machines
 
 ### Recent starred projects ⭐️
 
 
+- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
+  - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19854)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19856)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1410)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1412)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
   - Mirror of the LuaJIT git repository
-- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (7214)
-  - 🍿 A collection of QoL plugins for Neovim
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
