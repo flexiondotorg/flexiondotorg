@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19855)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1412)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1420)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5465)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5466)
   - Mirror of the LuaJIT git repository
 
 ### 🎙️ Podcast
