@@ -28,25 +28,25 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (today)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
-  - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 
 ### Recent pull requests 🛠️
 
 
+- [chore(deps): upgrade Go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/12) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [ci(workflows): set explicit base branch for flake.lock update PR](https://github.com/wimpysworld/tailor/pull/51) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/50) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): add tailor baste step to builder workflow](https://github.com/wimpysworld/tailor/pull/49) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [feat(swatch): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/48) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [chore: upgrade to Go 1.26.1](https://github.com/wimpysworld/tailor/pull/46) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 
 ### Recent releases 📦️
 
