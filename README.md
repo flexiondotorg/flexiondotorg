@@ -30,12 +30,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (today)
   - Nix packages published by Wimpy&#39;s World ️❄️
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) (3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 
