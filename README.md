@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix: correct release workflow and make tailor available via flake.nix swatch](https://github.com/wimpysworld/tailor/pull/44) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
 - [ci(workflows): refactor release workflow to fix GitHub Actions trigger bug](https://github.com/wimpysworld/tailor/pull/43) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [feat(nix): integrate wimpysworld/nix-packages as external Nix registry](https://github.com/wimpysworld/tailor/pull/42) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [ci(workflows): consolidate govulncheck into builder and add weekly schedule](https://github.com/wimpysworld/tailor/pull/40) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 - [docs: add GitHub Action usage documentation to README](https://github.com/wimpysworld/tailor/pull/39) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
-- [ci(workflows): add code quality checks and Go Report Card refresh](https://github.com/wimpysworld/tailor/pull/38) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19855)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19856)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1420)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1422)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5466)
+- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5467)
   - Mirror of the LuaJIT git repository
 
 ### 🎙️ Podcast
