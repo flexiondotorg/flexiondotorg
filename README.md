@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [build(pkgs): apply package and build-system updates](https://github.com/wimpysworld/nix-config/pull/713) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/712) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore(build): upgrade go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/jivetalking/pull/47) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(builder): eliminate code smells in builder module](https://github.com/linuxmatters/ffmpeg-statigo/pull/14) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
-- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/ffmpeg-statigo/pull/13) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19870)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19871)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1496)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1499)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5469)
   - Mirror of the LuaJIT git repository
