@@ -19,7 +19,7 @@ We have a modest [Discord server for Wimpy's World](https://wimpysworld.io/disco
 
 I [steam live-coding on Twitch](https://twitch.tv/WimpysWorld) 📡 and those streams are [archived on YouTube](https://youtube.com/WimpysWorld) 📺️
 
-These awesome people sponsor me: [CreeperLKF](https://github.com/CreeperLKF) [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
+These awesome people sponsor me: [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
 If you appreciate my work, then [please consider sponsoring me too](https://github.com/sponsors/flexiondotorg) 🤑 **Curious what I've been working on recently?**
 <div align="center">
   <img align="center" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/snake/github-contribution-grid-snake-dark.svg">
@@ -28,39 +28,39 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (today)
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
-- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (today)
+- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1 day ago)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 
 ### Recent pull requests 🛠️
 
 
-- [chore(deps): upgrade Go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/12) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [ci(workflows): set explicit base branch for flake.lock update PR](https://github.com/wimpysworld/tailor/pull/51) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [ci(workflows): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/50) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [ci(workflows): add tailor baste step to builder workflow](https://github.com/wimpysworld/tailor/pull/49) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
-- [feat(swatch): add cubic.dev AI code review configuration](https://github.com/wimpysworld/tailor/pull/48) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [chore(build): upgrade go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/jivetalking/pull/47) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [refactor(builder): eliminate code smells in builder module](https://github.com/linuxmatters/ffmpeg-statigo/pull/14) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/ffmpeg-statigo/pull/13) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [chore(deps): upgrade Go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/12) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [ci(workflows): set explicit base branch for flake.lock update PR](https://github.com/wimpysworld/tailor/pull/51) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
-- [quickemu-project/quickemu](https://github.com/quickemu-project/quickemu) ([4.9.9](https://github.com/quickemu-project/quickemu/releases/tag/4.9.9), 1 month ago)
-  - Quickly create and run optimised Windows, macOS and Linux virtual machines
 
 ### Recent starred projects ⭐️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19865)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1434)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1435)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5469)
   - Mirror of the LuaJIT git repository
