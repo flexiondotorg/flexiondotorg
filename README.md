@@ -28,25 +28,25 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
+  - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
-  - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1 day ago)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 
 ### Recent pull requests 🛠️
 
 
+- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore(build): upgrade go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/jivetalking/pull/47) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(builder): eliminate code smells in builder module](https://github.com/linuxmatters/ffmpeg-statigo/pull/14) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
 - [chore(tailor): fit project with community health files](https://github.com/linuxmatters/ffmpeg-statigo/pull/13) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
 - [chore(deps): upgrade Go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/12) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
-- [ci(workflows): set explicit base branch for flake.lock update PR](https://github.com/wimpysworld/tailor/pull/51) on [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
 
 ### Recent releases 📦️
 
