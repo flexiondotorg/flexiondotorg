@@ -30,33 +30,33 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1 day ago)
-  - Nix packages published by Wimpy&#39;s World ️❄️
 
 ### Recent pull requests 🛠️
 
 
+- [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): decompose analyzer into focused modules](https://github.com/linuxmatters/jivetalking/pull/49) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(pkgs): apply package and build-system updates](https://github.com/wimpysworld/nix-config/pull/713) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/712) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [chore(build): upgrade go from 1.24.0 to 1.26.1](https://github.com/linuxmatters/jivetalking/pull/47) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), today)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260309](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260309), 2 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
 - [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19873)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19875)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1522)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1526)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5470)
   - Mirror of the LuaJIT git repository
