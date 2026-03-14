@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (1 day ago)
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (2 days ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
-- [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(processor): decompose analyzer into focused modules](https://github.com/linuxmatters/jivetalking/pull/49) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [build(pkgs): apply package and build-system updates](https://github.com/wimpysworld/nix-config/pull/713) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/712) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor(processor): decompose analyzer into focused modules](https://github.com/linuxmatters/jivetalking/pull/49) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [build(pkgs): apply package and build-system updates](https://github.com/wimpysworld/nix-config/pull/713) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/712) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 1 day ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 2 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 3 weeks ago)
+- [wimpysworld/nothing-but-nix](https://github.com/wimpysworld/nothing-but-nix) ([v10](https://github.com/wimpysworld/nothing-but-nix/releases/tag/v10), 4 weeks ago)
   - Create a 130GB Nix ️store in GitHub runners ❄️ Multi-partition BTRFS RAID-0 for /nix 💪 Brutally purges unnecessary software 🪓 Dynamically grows the Nix store 📈
 
 ### Recent starred projects ⭐️
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19882)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19883)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1535)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1537)
   - Desktop and web interface for OpenCode AI agent
 - [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5471)
   - Mirror of the LuaJIT git repository
