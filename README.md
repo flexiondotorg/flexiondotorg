@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor,ui): migrate LUFS target to -16 and add LUFS value to filenames](https://github.com/linuxmatters/jivetalking/pull/54) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): add voice-activated detection and adaptive speech RMS minimum](https://github.com/linuxmatters/jivetalking/pull/53) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): reject digital silence in room tone candidate selection](https://github.com/linuxmatters/jivetalking/pull/52) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): enable silence detection throughout recordings](https://github.com/linuxmatters/jivetalking/pull/51) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor(processor): decompose analyzer into focused modules](https://github.com/linuxmatters/jivetalking/pull/49) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4333)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4346)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
