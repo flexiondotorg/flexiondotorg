@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): enable silence detection throughout recordings](https://github.com/linuxmatters/jivetalking/pull/51) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): decompose analyzer into focused modules](https://github.com/linuxmatters/jivetalking/pull/49) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [build(pkgs): apply package and build-system updates](https://github.com/wimpysworld/nix-config/pull/713) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/712) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(tailor): fit project with community health files](https://github.com/linuxmatters/jivetalking/pull/48) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4144)
+  - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19886)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1541)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1549)
   - Desktop and web interface for OpenCode AI agent
-- [LuaJIT/LuaJIT](https://github.com/LuaJIT/LuaJIT) (5471)
-  - Mirror of the LuaJIT git repository
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
