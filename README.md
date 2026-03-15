@@ -32,12 +32,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (3 days ago)
-  - Homebrew tap for Wimpy&#39;s World tools 🚰
-- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (3 days ago)
-  - Nix packages published by Wimpy&#39;s World ️❄️
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
+  - Ready-to-wear project templates for GitHub repositories 👔
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (3 days ago)
+  - Homebrew tap for Wimpy&#39;s World tools 🚰
 
 ### Recent pull requests 🛠️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4674)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4681)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19899)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19898)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1600)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1602)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
