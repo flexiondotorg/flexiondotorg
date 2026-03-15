@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): implement pre-gain compensation for clamped LUFS ceilings](https://github.com/linuxmatters/jivetalking/pull/58) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [perf(processor): reduce la2aHighCrestMaxDeficit from 8.0 to 6.0 dB](https://github.com/linuxmatters/jivetalking/pull/57) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(processor): implement adaptive crest factor compression for quiet recordings](https://github.com/linuxmatters/jivetalking/pull/56) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor: resolve golangci-lint violations and add linter configuration](https://github.com/linuxmatters/jivetalking/pull/55) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [feat(processor,ui): migrate LUFS target to -16 and add LUFS value to filenames](https://github.com/linuxmatters/jivetalking/pull/54) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(processor): add voice-activated detection and adaptive speech RMS minimum](https://github.com/linuxmatters/jivetalking/pull/53) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4524)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4543)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19893)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19894)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1583)
   - Desktop and web interface for OpenCode AI agent
