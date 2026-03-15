@@ -34,10 +34,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (3 days ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
+- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (3 days ago)
+  - Nix packages published by Wimpy&#39;s World ️❄️
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
-  - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4564)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4570)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
