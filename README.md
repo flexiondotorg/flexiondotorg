@@ -30,32 +30,32 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (2 days ago)
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (3 days ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
-- [feat(processor,ui): migrate LUFS target to -16 and add LUFS value to filenames](https://github.com/linuxmatters/jivetalking/pull/54) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add voice-activated detection and adaptive speech RMS minimum](https://github.com/linuxmatters/jivetalking/pull/53) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): reject digital silence in room tone candidate selection](https://github.com/linuxmatters/jivetalking/pull/52) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): enable silence detection throughout recordings](https://github.com/linuxmatters/jivetalking/pull/51) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [fix(cli): handle user cancellation in analysis mode and nil measurements](https://github.com/linuxmatters/jivetalking/pull/50) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor: resolve golangci-lint violations and add linter configuration](https://github.com/linuxmatters/jivetalking/pull/55) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor,ui): migrate LUFS target to -16 and add LUFS value to filenames](https://github.com/linuxmatters/jivetalking/pull/54) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): add voice-activated detection and adaptive speech RMS minimum](https://github.com/linuxmatters/jivetalking/pull/53) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): reject digital silence in room tone candidate selection](https://github.com/linuxmatters/jivetalking/pull/52) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): enable silence detection throughout recordings](https://github.com/linuxmatters/jivetalking/pull/51) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 1 day ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 2 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 2 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 3 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4404)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4425)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19891)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19892)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (1567)
   - Desktop and web interface for OpenCode AI agent
