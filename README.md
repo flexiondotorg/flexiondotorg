@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (4 days ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (4 days ago)
-  - Ready-to-wear project templates for GitHub repositories 👔
 - [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (4 days ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (4 days ago)
+  - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
+- [chore: update ffmpeg-statigo to v8.0.1.4](https://github.com/linuxmatters/jivedrop/pull/15) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+- [ci(workflow): adopt unified tailor sentinel gate pattern and consolidate release mechanism](https://github.com/linuxmatters/jivetalking/pull/62) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): consolidate spectral averaging and extract region pair construction](https://github.com/linuxmatters/jivetalking/pull/61) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/714) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(processor): simplify analyzer and normaliser implementation](https://github.com/linuxmatters/jivetalking/pull/60) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(processor): move pre-gain calculation before Pass 3](https://github.com/linuxmatters/jivetalking/pull/59) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(processor): implement pre-gain compensation for clamped LUFS ceilings](https://github.com/linuxmatters/jivetalking/pull/58) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4821)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4829)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19899)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19900)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1960)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1965)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
