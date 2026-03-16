@@ -28,36 +28,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (4 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (4 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (3 days ago)
+- [wimpysworld/homebrew-tap](https://github.com/wimpysworld/homebrew-tap) (4 days ago)
   - Homebrew tap for Wimpy&#39;s World tools 🚰
 
 ### Recent pull requests 🛠️
 
 
-- [refactor(processor): move pre-gain calculation before Pass 3](https://github.com/linuxmatters/jivetalking/pull/59) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): implement pre-gain compensation for clamped LUFS ceilings](https://github.com/linuxmatters/jivetalking/pull/58) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [perf(processor): reduce la2aHighCrestMaxDeficit from 8.0 to 6.0 dB](https://github.com/linuxmatters/jivetalking/pull/57) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): implement adaptive crest factor compression for quiet recordings](https://github.com/linuxmatters/jivetalking/pull/56) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor: resolve golangci-lint violations and add linter configuration](https://github.com/linuxmatters/jivetalking/pull/55) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor(processor): move pre-gain calculation before Pass 3](https://github.com/linuxmatters/jivetalking/pull/59) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): implement pre-gain compensation for clamped LUFS ceilings](https://github.com/linuxmatters/jivetalking/pull/58) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [perf(processor): reduce la2aHighCrestMaxDeficit from 8.0 to 6.0 dB](https://github.com/linuxmatters/jivetalking/pull/57) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): implement adaptive crest factor compression for quiet recordings](https://github.com/linuxmatters/jivetalking/pull/56) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor: resolve golangci-lint violations and add linter configuration](https://github.com/linuxmatters/jivetalking/pull/55) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260311](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260311), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 2 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 3 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 4 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4681)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4690)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19898)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1602)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1618)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
