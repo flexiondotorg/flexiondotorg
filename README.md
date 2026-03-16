@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(processor): consolidate spectral averaging and extract region pair construction](https://github.com/linuxmatters/jivetalking/pull/61) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/714) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(processor): simplify analyzer and normaliser implementation](https://github.com/linuxmatters/jivetalking/pull/60) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): move pre-gain calculation before Pass 3](https://github.com/linuxmatters/jivetalking/pull/59) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [feat(processor): implement pre-gain compensation for clamped LUFS ceilings](https://github.com/linuxmatters/jivetalking/pull/58) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [perf(processor): reduce la2aHighCrestMaxDeficit from 8.0 to 6.0 dB](https://github.com/linuxmatters/jivetalking/pull/57) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4792)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4799)
   - MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19899)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1894)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (1909)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
