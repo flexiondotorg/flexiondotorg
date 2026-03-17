@@ -28,12 +28,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
-  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (5 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (5 days ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(lint): resolve 22&#43; Go linter errors across codebase](https://github.com/linuxmatters/jivedrop/pull/17) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [chore(gitbutler): update to 0.19.6](https://github.com/wimpysworld/nix-config/pull/718) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-web): update to 1.8.7](https://github.com/wimpysworld/nix-config/pull/717) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 10.146.26-2](https://github.com/wimpysworld/nix-config/pull/716) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-desktop): update to 1.8.7](https://github.com/wimpysworld/nix-config/pull/715) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [ci(tailor): fit with tailor project templates](https://github.com/linuxmatters/jivedrop/pull/16) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4955)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (4963)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19904)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19905)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 - [openchamber/openchamber](https://github.com/openchamber/openchamber) (2042)
   - Desktop and web interface for OpenCode AI agent
