@@ -28,36 +28,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (5 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (6 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (5 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (6 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
-- [refactor(main): resolve code smells via workflow abstraction](https://github.com/linuxmatters/jivedrop/pull/18) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
-- [fix(lint): resolve 22&#43; Go linter errors across codebase](https://github.com/linuxmatters/jivedrop/pull/17) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
-- [chore(gitbutler): update to 0.19.6](https://github.com/wimpysworld/nix-config/pull/718) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(openchamber-web): update to 1.8.7](https://github.com/wimpysworld/nix-config/pull/717) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(wavebox): update to 10.146.26-2](https://github.com/wimpysworld/nix-config/pull/716) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [refactor(main): resolve code smells via workflow abstraction](https://github.com/linuxmatters/jivedrop/pull/18) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
+- [fix(lint): resolve 22&#43; Go linter errors across codebase](https://github.com/linuxmatters/jivedrop/pull/17) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
+- [chore(gitbutler): update to 0.19.6](https://github.com/wimpysworld/nix-config/pull/718) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(openchamber-web): update to 1.8.7](https://github.com/wimpysworld/nix-config/pull/717) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(wavebox): update to 10.146.26-2](https://github.com/wimpysworld/nix-config/pull/716) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260314](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260314), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260314](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260314), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 2 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 4 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 5 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 5 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 6 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 1 week ago)
   - The Github Action for Determinate Nix
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5042)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5054)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (4)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19906)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2058)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2059)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (today)
+- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (1 day ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (2 weeks ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (4 weeks ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
