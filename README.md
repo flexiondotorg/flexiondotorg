@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5127)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5136)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (5)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (6)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19908)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2076)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2077)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
