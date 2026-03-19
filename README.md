@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260316](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260316), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5252)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5260)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (10)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (11)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19912)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2099)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2103)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
