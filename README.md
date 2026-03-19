@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci: consolidate CI/CD workflows into unified builder pipeline](https://github.com/linuxmatters/jivefire/pull/24) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [refactor(linting): apply golangci-lint fixes across codebase](https://github.com/linuxmatters/jivefire/pull/23) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/719) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(main): resolve code smells via workflow abstraction](https://github.com/linuxmatters/jivedrop/pull/18) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
 - [fix(lint): resolve 22&#43; Go linter errors across codebase](https://github.com/linuxmatters/jivedrop/pull/17) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
-- [chore(gitbutler): update to 0.19.6](https://github.com/wimpysworld/nix-config/pull/718) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5308)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5321)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (13)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19915)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19917)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2122)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2125)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
