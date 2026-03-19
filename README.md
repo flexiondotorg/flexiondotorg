@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [ci: consolidate CI/CD workflows into unified builder pipeline](https://github.com/linuxmatters/jivefire/pull/24) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [refactor(linting): apply golangci-lint fixes across codebase](https://github.com/linuxmatters/jivefire/pull/23) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/719) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(main): resolve code smells via workflow abstraction](https://github.com/linuxmatters/jivedrop/pull/18) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
-- [fix(lint): resolve 22&#43; Go linter errors across codebase](https://github.com/linuxmatters/jivedrop/pull/17) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5327)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5330)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
