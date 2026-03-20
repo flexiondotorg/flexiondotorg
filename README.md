@@ -29,7 +29,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-  - A different class of Cider 🍎
+  - Apple Music with less Cider, no music interruptions, lean code, and no hangover 🍎
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
@@ -65,7 +65,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5412)
+- [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
+  - Castlabs Electron for Content Security
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5419)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -73,8 +75,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19926)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2150)
-  - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
