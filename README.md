@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
 - [ci: consolidate CI/CD workflows into unified builder pipeline](https://github.com/linuxmatters/jivefire/pull/24) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
 - [refactor(linting): apply golangci-lint fixes across codebase](https://github.com/linuxmatters/jivefire/pull/23) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/719) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5427)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5431)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (14)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19926)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19927)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 
 ### 🎙️ Podcast
