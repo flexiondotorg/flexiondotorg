@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), today)
+  - The Github Action for Determinate Nix
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 5 days ago)
@@ -59,21 +61,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) ([v0.1.2](https://github.com/wimpysworld/tailor/releases/tag/v0.1.2), 1 week ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.0), 2 weeks ago)
-  - The Github Action for Determinate Nix
 
 ### Recent starred projects ⭐️
 
 
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5431)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5436)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (14)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19927)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19928)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 
 ### 🎙️ Podcast
