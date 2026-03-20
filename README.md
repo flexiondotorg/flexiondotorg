@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+  - A different class of Cider 🍎
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
@@ -36,8 +38,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1 week ago)
-  - Nix packages published by Wimpy&#39;s World ️❄️
 
 ### Recent pull requests 🛠️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5405)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5410)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19925)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2145)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2146)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
