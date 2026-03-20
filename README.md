@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
 - [ci: consolidate CI/CD workflows into unified builder pipeline](https://github.com/linuxmatters/jivefire/pull/24) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
 - [refactor(linting): apply golangci-lint fixes across codebase](https://github.com/linuxmatters/jivefire/pull/23) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/719) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [refactor(main): resolve code smells via workflow abstraction](https://github.com/linuxmatters/jivedrop/pull/18) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5367)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5398)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (13)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (14)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19921)
+- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19925)
   - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
-- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2131)
+- [openchamber/openchamber](https://github.com/openchamber/openchamber) (2142)
   - Desktop and web interface for OpenCode AI agent
 
 ### 🎙️ Podcast
