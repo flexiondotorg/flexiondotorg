@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(ua): use platform-accurate User-Agent strings with EVS production VMP](https://github.com/wimpysworld/sidra/pull/6) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(widevine): add CastLabs EVS VMP signing and auto-generated release notes](https://github.com/wimpysworld/sidra/pull/5) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [docs: fancy up the header of the README](https://github.com/wimpysworld/sidra/pull/4) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(ci/build): add GitHub Actions CI pipeline with electron-builder packaging](https://github.com/wimpysworld/sidra/pull/2) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.0](https://github.com/wimpysworld/sidra/releases/tag/0.1.0), 1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.1](https://github.com/wimpysworld/sidra/releases/tag/0.1.1), today)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 1 day ago)
   - The Github Action for Determinate Nix
@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2)
+  - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5483)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5487)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (14)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) (19929)
-  - The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
