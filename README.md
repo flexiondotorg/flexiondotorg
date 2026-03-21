@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(config): add region and storefront persistence](https://github.com/wimpysworld/sidra/pull/11) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(tray): implement system tray with about window and i18n support](https://github.com/wimpysworld/sidra/pull/10) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(window): add application menu and preserve window title](https://github.com/wimpysworld/sidra/pull/9) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(widevine): add CDM download splash screen with i18n support](https://github.com/wimpysworld/sidra/pull/8) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(ua): use platform-accurate User-Agent strings with EVS production VMP](https://github.com/wimpysworld/sidra/pull/6) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(widevine): add CastLabs EVS VMP signing and auto-generated release notes](https://github.com/wimpysworld/sidra/pull/5) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5537)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5543)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
