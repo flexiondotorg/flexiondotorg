@@ -28,36 +28,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (3 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (4 days ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (5 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
 
-- [docs: fancy up the header of the README](https://github.com/wimpysworld/sidra/pull/4) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(ci/build): add GitHub Actions CI pipeline with electron-builder packaging](https://github.com/wimpysworld/sidra/pull/2) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
+- [docs: fancy up the header of the README](https://github.com/wimpysworld/sidra/pull/4) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(ci/build): add GitHub Actions CI pipeline with electron-builder packaging](https://github.com/wimpysworld/sidra/pull/2) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.0](https://github.com/wimpysworld/sidra/releases/tag/0.1.0), today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.0](https://github.com/wimpysworld/sidra/releases/tag/0.1.0), 1 day ago)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), today)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 1 day ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 5 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 6 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 1 week ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5467)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5476)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (3 days ago)
+- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (4 days ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (2 weeks ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
-- [Points of You](https://linuxmatters.sh/73/) (1 month ago)
+- [Points of You](https://linuxmatters.sh/73/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
