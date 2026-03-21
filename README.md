@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(window): add application menu and preserve window title](https://github.com/wimpysworld/sidra/pull/9) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [feat(widevine): add CDM download splash screen with i18n support](https://github.com/wimpysworld/sidra/pull/8) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(ua): use platform-accurate User-Agent strings with EVS production VMP](https://github.com/wimpysworld/sidra/pull/6) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(widevine): add CastLabs EVS VMP signing and auto-generated release notes](https://github.com/wimpysworld/sidra/pull/5) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [docs: fancy up the header of the README](https://github.com/wimpysworld/sidra/pull/4) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(ci/build): add GitHub Actions CI pipeline with electron-builder packaging](https://github.com/wimpysworld/sidra/pull/2) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5521)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5526)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
