@@ -28,12 +28,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (4 days ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (5 days ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(widevine): add CastLabs EVS VMP signing and auto-generated release notes](https://github.com/wimpysworld/sidra/pull/5) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [docs: fancy up the header of the README](https://github.com/wimpysworld/sidra/pull/4) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(ci/build): add GitHub Actions CI pipeline with electron-builder packaging](https://github.com/wimpysworld/sidra/pull/2) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [build: add Electron application foundation](https://github.com/wimpysworld/sidra/pull/1) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/720) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [refactor: eliminate dead code and extract common patterns](https://github.com/linuxmatters/jivefire/pull/27) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5476)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5483)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
