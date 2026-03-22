@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(track-log): implement MusicKit event capture and debug logging](https://github.com/wimpysworld/sidra/pull/17) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [ci(release): simplify workflow and use dynamic version from git tags](https://github.com/wimpysworld/sidra/pull/16) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [build: reorganise assets and fix runtime asset paths](https://github.com/wimpysworld/sidra/pull/15) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [refactor: simplify codebase and optimise splash loading](https://github.com/wimpysworld/sidra/pull/14) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [ci(release): automate version management in GitHub Actions](https://github.com/wimpysworld/sidra/pull/13) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [docs: updated for clarity](https://github.com/wimpysworld/sidra/pull/12) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.1](https://github.com/wimpysworld/sidra/releases/tag/0.1.1), 1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.2.0](https://github.com/wimpysworld/sidra/releases/tag/0.2.0), today)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 2 days ago)
   - The Github Action for Determinate Nix
@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5570)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5582)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (16)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (17)
   - Ready-to-wear project templates for GitHub repositories 👔
 
 ### 🎙️ Podcast
