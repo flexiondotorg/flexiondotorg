@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [ci(release): simplify workflow and use dynamic version from git tags](https://github.com/wimpysworld/sidra/pull/16) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [build: reorganise assets and fix runtime asset paths](https://github.com/wimpysworld/sidra/pull/15) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [refactor: simplify codebase and optimise splash loading](https://github.com/wimpysworld/sidra/pull/14) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [ci(release): automate version management in GitHub Actions](https://github.com/wimpysworld/sidra/pull/13) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [docs: updated for clarity](https://github.com/wimpysworld/sidra/pull/12) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(config): add region and storefront persistence](https://github.com/wimpysworld/sidra/pull/11) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(tray): implement system tray with about window and i18n support](https://github.com/wimpysworld/sidra/pull/10) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(window): add application menu and preserve window title](https://github.com/wimpysworld/sidra/pull/9) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5564)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5570)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
