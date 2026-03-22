@@ -28,36 +28,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (4 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (5 days ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (5 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (6 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
 
-- [feat(config): add region and storefront persistence](https://github.com/wimpysworld/sidra/pull/11) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(tray): implement system tray with about window and i18n support](https://github.com/wimpysworld/sidra/pull/10) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(window): add application menu and preserve window title](https://github.com/wimpysworld/sidra/pull/9) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(widevine): add CDM download splash screen with i18n support](https://github.com/wimpysworld/sidra/pull/8) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [fix(ua): use platform-accurate User-Agent strings with EVS production VMP](https://github.com/wimpysworld/sidra/pull/6) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [ci(release): automate version management in GitHub Actions](https://github.com/wimpysworld/sidra/pull/13) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [docs: updated for clarity](https://github.com/wimpysworld/sidra/pull/12) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(config): add region and storefront persistence](https://github.com/wimpysworld/sidra/pull/11) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(tray): implement system tray with about window and i18n support](https://github.com/wimpysworld/sidra/pull/10) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(window): add application menu and preserve window title](https://github.com/wimpysworld/sidra/pull/9) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.1](https://github.com/wimpysworld/sidra/releases/tag/0.1.1), today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.1.1](https://github.com/wimpysworld/sidra/releases/tag/0.1.1), 1 day ago)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 2 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260318](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260318), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 6 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 1 week ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5561)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5564)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (4 days ago)
+- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (5 days ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (2 weeks ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
