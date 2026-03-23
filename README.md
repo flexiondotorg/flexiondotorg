@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(mpris): prevent event loop hang on app quit](https://github.com/wimpysworld/sidra/pull/22) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [docs(pulse): document PulseAudio stream identity and MPRIS volume behaviour](https://github.com/wimpysworld/sidra/pull/21) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(mpris): implement bidirectional MPRIS media player support on Linux](https://github.com/wimpysworld/sidra/pull/20) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(theme): add Catppuccin colour scheme support with live toggle](https://github.com/wimpysworld/sidra/pull/19) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(discord): add Discord Rich Presence integration](https://github.com/wimpysworld/sidra/pull/18) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(track-log): implement MusicKit event capture and debug logging](https://github.com/wimpysworld/sidra/pull/17) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [ci(release): simplify workflow and use dynamic version from git tags](https://github.com/wimpysworld/sidra/pull/16) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5660)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5664)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
