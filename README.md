@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(playback): improve reliability with wedge detector and macOS launch fixes](https://github.com/wimpysworld/sidra/pull/31) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(ci): replace invalid --auto-merge flag on gh pr create](https://github.com/wimpysworld/sidra/pull/30) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [chore(nix): update hashes for v0.3.0](https://github.com/wimpysworld/sidra/pull/29) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(deps): upgrade dbus-next to maintained Holusion fork and resolve security alerts](https://github.com/wimpysworld/sidra/pull/28) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(update): implement automatic version check with tray integration](https://github.com/wimpysworld/sidra/pull/27) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat: add version tracking, Nix packaging, and auto-update foundation](https://github.com/wimpysworld/sidra/pull/26) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5735)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5738)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
