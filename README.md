@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(config): add configurable application start page](https://github.com/wimpysworld/sidra/pull/34) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(nav): add browser controls to sidebar header](https://github.com/wimpysworld/sidra/pull/32) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(playback): improve reliability with wedge detector and macOS launch fixes](https://github.com/wimpysworld/sidra/pull/31) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [fix(ci): replace invalid --auto-merge flag on gh pr create](https://github.com/wimpysworld/sidra/pull/30) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [chore(nix): update hashes for v0.3.0](https://github.com/wimpysworld/sidra/pull/29) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [fix(deps): upgrade dbus-next to maintained Holusion fork and resolve security alerts](https://github.com/wimpysworld/sidra/pull/28) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5755)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5758)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
