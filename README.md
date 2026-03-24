@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (3 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (4 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (6 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 week ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(nav): add browser controls to sidebar header](https://github.com/wimpysworld/sidra/pull/32) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(playback): improve reliability with wedge detector and macOS launch fixes](https://github.com/wimpysworld/sidra/pull/31) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [fix(ci): replace invalid --auto-merge flag on gh pr create](https://github.com/wimpysworld/sidra/pull/30) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [chore(nix): update hashes for v0.3.0](https://github.com/wimpysworld/sidra/pull/29) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [fix(deps): upgrade dbus-next to maintained Holusion fork and resolve security alerts](https://github.com/wimpysworld/sidra/pull/28) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [feat(nav): add browser controls to sidebar header](https://github.com/wimpysworld/sidra/pull/32) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(playback): improve reliability with wedge detector and macOS launch fixes](https://github.com/wimpysworld/sidra/pull/31) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [fix(ci): replace invalid --auto-merge flag on gh pr create](https://github.com/wimpysworld/sidra/pull/30) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [chore(nix): update hashes for v0.3.0](https://github.com/wimpysworld/sidra/pull/29) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [fix(deps): upgrade dbus-next to maintained Holusion fork and resolve security alerts](https://github.com/wimpysworld/sidra/pull/28) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.0](https://github.com/wimpysworld/sidra/releases/tag/0.3.0), today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.0](https://github.com/wimpysworld/sidra/releases/tag/0.3.0), 1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260320](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260320), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260320](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260320), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 3 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 4 days ago)
   - The Github Action for Determinate Nix
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5751)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5755)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (6 days ago)
-- [The Smell of Git](https://linuxmatters.sh/76/) (2 weeks ago)
+- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (1 week ago)
+- [The Smell of Git](https://linuxmatters.sh/76/) (3 weeks ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
 - [Points of You](https://linuxmatters.sh/73/) (2 months ago)
