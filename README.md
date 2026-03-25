@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(core): refine artwork handling, notifications, and security](https://github.com/wimpysworld/sidra/pull/48) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix: round volume values, resolve GSettings schema warning and artwork caching](https://github.com/wimpysworld/sidra/pull/47) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [security: harden Electron windows, IPC, and DOM rendering](https://github.com/wimpysworld/sidra/pull/46) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [refactor: code review fixes and maintainability improvements](https://github.com/wimpysworld/sidra/pull/45) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [test: add comprehensive unit test suite for URL parsing, i18n, and version comparison](https://github.com/wimpysworld/sidra/pull/44) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [refactor(main): extract initialization functions and handlers from app.whenReady](https://github.com/wimpysworld/sidra/pull/43) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (268)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5906)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5908)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
