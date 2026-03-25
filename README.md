@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (4 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (5 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 week ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [test: add comprehensive unit test suite for URL parsing, i18n, and version comparison](https://github.com/wimpysworld/sidra/pull/44) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [refactor(main): extract initialization functions and handlers from app.whenReady](https://github.com/wimpysworld/sidra/pull/43) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [fix(main): improve Widevine CDM status logging](https://github.com/wimpysworld/sidra/pull/42) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [docs: add screenshot to README](https://github.com/wimpysworld/sidra/pull/41) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(ui): add zoom controls and optimise startup sequence](https://github.com/wimpysworld/sidra/pull/40) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [test: add comprehensive unit test suite for URL parsing, i18n, and version comparison](https://github.com/wimpysworld/sidra/pull/44) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [refactor(main): extract initialization functions and handlers from app.whenReady](https://github.com/wimpysworld/sidra/pull/43) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [fix(main): improve Widevine CDM status logging](https://github.com/wimpysworld/sidra/pull/42) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [docs: add screenshot to README](https://github.com/wimpysworld/sidra/pull/41) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(ui): add zoom controls and optimise startup sequence](https://github.com/wimpysworld/sidra/pull/40) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.0](https://github.com/wimpysworld/sidra/releases/tag/0.3.0), 1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.0](https://github.com/wimpysworld/sidra/releases/tag/0.3.0), 2 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260320](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260320), 1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260320](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260320), 2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 5 days ago)
   - The Github Action for Determinate Nix
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (268)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5830)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (5832)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
