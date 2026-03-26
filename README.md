@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(main): restore Cmd&#43;Q and About menu, fix icon and fullscreen issues](https://github.com/wimpysworld/sidra/pull/55) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(tray): add cross-platform icon system with HiDPI support](https://github.com/wimpysworld/sidra/pull/54) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(tray): add now playing section with playback controls](https://github.com/wimpysworld/sidra/pull/53) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(nowplaying): enrich metadata with container, queue, and MPRIS fields](https://github.com/wimpysworld/sidra/pull/52) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(musicKitHook, main): handle MusicKit instance re-attachment and SPA navigation](https://github.com/wimpysworld/sidra/pull/51) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [refactor: code smell remediation across core modules](https://github.com/wimpysworld/sidra/pull/50) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
