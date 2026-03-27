@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(security): harden application against identified vulnerabilities](https://github.com/wimpysworld/sidra/pull/59) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/725) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(integrations): add Windows taskbar integration](https://github.com/wimpysworld/sidra/pull/57) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(integrations): add macOS dock menu and progress bar integration](https://github.com/wimpysworld/sidra/pull/56) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [fix(main): restore Cmd&#43;Q and About menu, fix icon and fullscreen issues](https://github.com/wimpysworld/sidra/pull/55) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (268)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6035)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6037)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
