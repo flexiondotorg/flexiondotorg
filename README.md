@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(security): harden application against identified vulnerabilities](https://github.com/wimpysworld/sidra/pull/59) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/725) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(integrations): add Windows taskbar integration](https://github.com/wimpysworld/sidra/pull/57) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [feat(integrations): add macOS dock menu and progress bar integration](https://github.com/wimpysworld/sidra/pull/56) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [fix(main): restore Cmd&#43;Q and About menu, fix icon and fullscreen issues](https://github.com/wimpysworld/sidra/pull/55) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(tray): add cross-platform icon system with HiDPI support](https://github.com/wimpysworld/sidra/pull/54) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
