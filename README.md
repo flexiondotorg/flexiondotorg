@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(frontend, build): migrate to SvelteKit with TypeScript, Tailwind v4, and shadcn-svelte](https://github.com/wimpysworld/wagall/pull/5) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (today)
 - [feat: add parents zone with student profile, target grades, and API key entry](https://github.com/wimpysworld/wagall/pull/4) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (1 day ago)
 - [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
 - [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
 - [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
-- [fix(security): harden application against identified vulnerabilities](https://github.com/wimpysworld/sidra/pull/59) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6154)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6158)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
