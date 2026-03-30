@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (today)
+- [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (1 day ago)
   - 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 week ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor(frontend, build): migrate to SvelteKit with TypeScript, Tailwind v4, and shadcn-svelte](https://github.com/wimpysworld/wagall/pull/5) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (today)
-- [feat: add parents zone with student profile, target grades, and API key entry](https://github.com/wimpysworld/wagall/pull/4) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (1 day ago)
-- [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
-- [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
-- [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
+- [refactor(frontend, build): migrate to SvelteKit with TypeScript, Tailwind v4, and shadcn-svelte](https://github.com/wimpysworld/wagall/pull/5) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (1 day ago)
+- [feat: add parents zone with student profile, target grades, and API key entry](https://github.com/wimpysworld/wagall/pull/4) on [wimpysworld/wagall](https://github.com/wimpysworld/wagall) (2 days ago)
+- [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
+- [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
+- [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 2 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 3 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 1 week ago)
   - The Github Action for Determinate Nix
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (267)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6181)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6184)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
