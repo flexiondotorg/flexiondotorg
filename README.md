@@ -42,25 +42,25 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: code smells remediation across audio and ui packages](https://github.com/linuxmatters/jivefire/pull/29) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/726) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
 - [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
 - [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
-- [fix(security): harden application against identified vulnerabilities](https://github.com/wimpysworld/sidra/pull/59) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
 
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), today)
+  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), today)
+  - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 4 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.1), 1 week ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.0), 2 weeks ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.0.1.4](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.0.1.4), 2 weeks ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 
 ### Recent starred projects ⭐️
 
