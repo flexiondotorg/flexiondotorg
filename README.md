@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/brook](https://github.com/wimpysworld/brook) (today)
+- [wimpysworld/brook](https://github.com/wimpysworld/brook) (1 day ago)
   - Wayland experiments 🖥️ 🧪
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 week ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
@@ -42,30 +42,30 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor: code smells remediation across audio and ui packages](https://github.com/linuxmatters/jivefire/pull/29) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/726) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
-- [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
-- [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
+- [refactor: code smells remediation across audio and ui packages](https://github.com/linuxmatters/jivefire/pull/29) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/726) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [build(deps): migrate from electron-store to electron-conf](https://github.com/wimpysworld/sidra/pull/62) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
+- [types(hook): add type declarations and JSDoc for musicKit integration](https://github.com/wimpysworld/sidra/pull/61) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
+- [refactor(tray): extract About window logic to dedicated module](https://github.com/wimpysworld/sidra/pull/60) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 2 days ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 1 day ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 2 days ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 1 day ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 2 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 5 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 6 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 5 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 6 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 
 ### Recent starred projects ⭐️
 
 
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35134)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35135)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (9)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -82,9 +82,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [VNC? No way!](https://linuxmatters.sh/78/) (1 day ago)
+- [VNC? No way!](https://linuxmatters.sh/78/) (2 days ago)
 - [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (2 weeks ago)
-- [The Smell of Git](https://linuxmatters.sh/76/) (4 weeks ago)
+- [The Smell of Git](https://linuxmatters.sh/76/) (1 month ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (1 month ago)
 
