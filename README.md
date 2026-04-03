@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: add strix halo workstations](https://github.com/wimpysworld/nix-config/pull/731) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(openchamber-web): update to 1.9.3](https://github.com/wimpysworld/nix-config/pull/730) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(goreleaser-mcp): update to 0.3.4](https://github.com/wimpysworld/nix-config/pull/729) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-desktop): update to 1.9.3](https://github.com/wimpysworld/nix-config/pull/728) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (269)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6457)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6459)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
