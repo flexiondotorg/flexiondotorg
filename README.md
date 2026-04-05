@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(codex): configure Codex CLI declaratively with skills, agents, and security policy](https://github.com/wimpysworld/nix-config/pull/734) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [feat: add strix halo workstations](https://github.com/wimpysworld/nix-config/pull/731) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 - [chore(openchamber-web): update to 1.9.3](https://github.com/wimpysworld/nix-config/pull/730) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(goreleaser-mcp): update to 0.3.4](https://github.com/wimpysworld/nix-config/pull/729) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35237)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35236)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (10)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (270)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6505)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6507)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
