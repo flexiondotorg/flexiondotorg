@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/brook](https://github.com/wimpysworld/brook) (3 days ago)
+- [wimpysworld/brook](https://github.com/wimpysworld/brook) (4 days ago)
   - Wayland experiments 🖥️ 🧪
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat: add strix halo workstations](https://github.com/wimpysworld/nix-config/pull/731) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore(openchamber-web): update to 1.9.3](https://github.com/wimpysworld/nix-config/pull/730) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore(goreleaser-mcp): update to 0.3.4](https://github.com/wimpysworld/nix-config/pull/729) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat: add strix halo workstations](https://github.com/wimpysworld/nix-config/pull/731) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [chore(openchamber-web): update to 1.9.3](https://github.com/wimpysworld/nix-config/pull/730) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [chore(goreleaser-mcp): update to 0.3.4](https://github.com/wimpysworld/nix-config/pull/729) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 5 days ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 4 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 5 days ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 4 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 5 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35226)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35227)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (10)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (270)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6490)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6493)
   - Privacy-first. MCP is the protocol for tool access. We&#39;re the virtualization layer for context.
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [VNC? No way!](https://linuxmatters.sh/78/) (4 days ago)
+- [VNC? No way!](https://linuxmatters.sh/78/) (5 days ago)
 - [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (2 weeks ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (1 month ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
