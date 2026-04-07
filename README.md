@@ -28,34 +28,34 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/brook](https://github.com/wimpysworld/brook) (5 days ago)
+- [wimpysworld/brook](https://github.com/wimpysworld/brook) (6 days ago)
   - Wayland experiments 🖥️ 🧪
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 weeks ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 weeks ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (3 weeks ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 
 ### Recent pull requests 🛠️
 
 
-- [chore: prepare new storage slices](https://github.com/wimpysworld/nix-config/pull/736) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/735) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(codex): configure Codex CLI declaratively with skills, agents, and security policy](https://github.com/wimpysworld/nix-config/pull/734) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [chore: prepare new storage slices](https://github.com/wimpysworld/nix-config/pull/736) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/735) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(codex): configure Codex CLI declaratively with skills, agents, and security policy](https://github.com/wimpysworld/nix-config/pull/734) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat: add librechat to revan](https://github.com/wimpysworld/nix-config/pull/733) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/732) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 6 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.17.2](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.17.2), 1 week ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 6 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 1 week ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 6 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 1 week ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35279)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35285)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (12)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (270)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6653)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6661)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 12 platforms
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [VNC? No way!](https://linuxmatters.sh/78/) (6 days ago)
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (2 weeks ago)
+- [VNC? No way!](https://linuxmatters.sh/78/) (1 week ago)
+- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (3 weeks ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (1 month ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (1 month ago)
 - [Audio Trainers and Wallet Drainers](https://linuxmatters.sh/74/) (2 months ago)
