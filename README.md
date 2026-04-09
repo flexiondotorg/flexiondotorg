@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/brook](https://github.com/wimpysworld/brook) (1 week ago)
   - Wayland experiments 🖥️ 🧪
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(nixos): centralise initrd kernel modules in common config](https://github.com/wimpysworld/nix-config/pull/742) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-web): update to 1.9.4](https://github.com/wimpysworld/nix-config/pull/741) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(defold): update to 1.12.3](https://github.com/wimpysworld/nix-config/pull/740) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 10.147.44-2](https://github.com/wimpysworld/nix-config/pull/739) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(openchamber-desktop): update to 1.9.4](https://github.com/wimpysworld/nix-config/pull/738) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: prepare new storage slices](https://github.com/wimpysworld/nix-config/pull/736) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35428)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35435)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (12)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (271)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6868)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (6875)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 12 platforms
 - [wimpysworld/nix-packages](https://github.com/wimpysworld/nix-packages) (1)
   - Nix packages published by Wimpy&#39;s World ️❄️
