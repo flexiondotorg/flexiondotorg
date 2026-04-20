@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/brook](https://github.com/wimpysworld/brook) (2 weeks ago)
   - Wayland experiments 🖥️ 🧪
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(hermes): include Determinate Nix in agent shell](https://github.com/wimpysworld/nix-config/pull/758) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(claws): deploy Hermes gateway with local inference](https://github.com/wimpysworld/nix-config/pull/753) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(openchamber-web): update to 1.9.5](https://github.com/wimpysworld/nix-config/pull/750) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(openchamber-desktop): update to 1.9.5](https://github.com/wimpysworld/nix-config/pull/749) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(defold): update to 1.12.3](https://github.com/wimpysworld/nix-config/pull/748) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/762) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [feat(hermes): include Determinate Nix in agent shell](https://github.com/wimpysworld/nix-config/pull/758) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(claws): deploy Hermes gateway with local inference](https://github.com/wimpysworld/nix-config/pull/753) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(openchamber-web): update to 1.9.5](https://github.com/wimpysworld/nix-config/pull/750) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(openchamber-desktop): update to 1.9.5](https://github.com/wimpysworld/nix-config/pull/749) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (38929)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (39424)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35774)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35782)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (39)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (7953)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (8146)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 12 platforms
 
 ### 🎙️ Podcast
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Pouring out the Sidra](https://linuxmatters.sh/79/) (5 days ago)
+- [Pouring out the Sidra](https://linuxmatters.sh/79/) (6 days ago)
 - [VNC? No way!](https://linuxmatters.sh/78/) (2 weeks ago)
 - [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (1 month ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (1 month ago)
