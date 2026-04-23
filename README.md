@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) (today)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) (1 day ago)
   - 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/brook](https://github.com/wimpysworld/brook) (3 weeks ago)
   - Wayland experiments 🖥️ 🧪
@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore(repo): remove obsolete development tooling](https://github.com/wimpysworld/nix-config/pull/776) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/775) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(openchamber-web): update to 1.9.6](https://github.com/wimpysworld/nix-config/pull/774) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(llama-cpp): update to 8864](https://github.com/wimpysworld/nix-config/pull/773) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(ollama): update to 0.21.0](https://github.com/wimpysworld/nix-config/pull/772) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(llama-swap): update to 205](https://github.com/wimpysworld/nix-config/pull/779) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(llama-cpp): update to 8895](https://github.com/wimpysworld/nix-config/pull/778) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(repo): remove obsolete development tooling](https://github.com/wimpysworld/nix-config/pull/776) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/775) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(openchamber-web): update to 1.9.6](https://github.com/wimpysworld/nix-config/pull/774) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.0), 1 day ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.0), 2 days ago)
   - The Github Action for Determinate Nix
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 3 weeks ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (43554)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (43862)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35877)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35885)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (44)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (8972)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (9029)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 12 platforms
 
 ### 🎙️ Podcast
