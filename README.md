@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) (1 day ago)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) (2 days ago)
   - 
 - [wimpysworld/brook](https://github.com/wimpysworld/brook) (3 weeks ago)
   - Wayland experiments 🖥️ 🧪
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 weeks ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 weeks ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 month ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
@@ -42,38 +42,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(hermes): provision SSH and GPG credentials for Traya agent](https://github.com/wimpysworld/nix-config/pull/781) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(llama-swap): update to 205](https://github.com/wimpysworld/nix-config/pull/779) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(llama-cpp): update to 8895](https://github.com/wimpysworld/nix-config/pull/778) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(repo): remove obsolete development tooling](https://github.com/wimpysworld/nix-config/pull/776) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/775) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(hermes): provision SSH and GPG credentials for Traya agent](https://github.com/wimpysworld/nix-config/pull/781) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(llama-swap): update to 205](https://github.com/wimpysworld/nix-config/pull/779) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(llama-cpp): update to 8895](https://github.com/wimpysworld/nix-config/pull/778) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(repo): remove obsolete development tooling](https://github.com/wimpysworld/nix-config/pull/776) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/775) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.0), 2 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.0), 3 days ago)
   - The Github Action for Determinate Nix
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 3 weeks ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 3 weeks ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 3 weeks ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 4 weeks ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 3 weeks ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260324](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260324), 4 weeks ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (44737)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (44803)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35904)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (35911)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (44)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (9399)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (9452)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 12 platforms
 
 ### 🎙️ Podcast
