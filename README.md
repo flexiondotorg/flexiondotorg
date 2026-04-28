@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) (5 days ago)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) (6 days ago)
   - 
 - [wimpysworld/brook](https://github.com/wimpysworld/brook) (3 weeks ago)
   - Wayland experiments 🖥️ 🧪
@@ -42,22 +42,22 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/787) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [docs(readme): document --silence-scan-duration flag](https://github.com/linuxmatters/jivetalking/pull/74) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(processor): add --silence-scan-duration flag to limit silence-sample scan](https://github.com/linuxmatters/jivetalking/pull/73) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/783) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [feat(hermes): provision SSH and GPG credentials for Traya agent](https://github.com/wimpysworld/nix-config/pull/781) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/787) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [docs(readme): document --silence-scan-duration flag](https://github.com/linuxmatters/jivetalking/pull/74) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [feat(processor): add --silence-scan-duration flag to limit silence-sample scan](https://github.com/linuxmatters/jivetalking/pull/73) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/783) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [feat(hermes): provision SSH and GPG credentials for Traya agent](https://github.com/wimpysworld/nix-config/pull/781) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.1), 1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.1), 2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.1), 3 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.18.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.18.1), 4 days ago)
   - The Github Action for Determinate Nix
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 3 weeks ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 4 weeks ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 3 weeks ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.2](https://github.com/linuxmatters/jivefire/releases/tag/0.3.2), 4 weeks ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.2](https://github.com/wimpysworld/sidra/releases/tag/0.3.2), 1 month ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (48099)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (48124)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36153)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36156)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (49)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (10677)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (10685)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Pouring out the Sidra](https://linuxmatters.sh/79/) (1 week ago)
-- [VNC? No way!](https://linuxmatters.sh/78/) (3 weeks ago)
+- [Pouring out the Sidra](https://linuxmatters.sh/79/) (2 weeks ago)
+- [VNC? No way!](https://linuxmatters.sh/78/) (4 weeks ago)
 - [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (1 month ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (1 month ago)
 - [Mark&#39;s Meshing About](https://linuxmatters.sh/75/) (2 months ago)
