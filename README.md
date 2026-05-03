@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(processor): split adaptive and reporting helpers](https://github.com/linuxmatters/jivetalking/pull/82) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): split filter config and diagnostics](https://github.com/linuxmatters/jivetalking/pull/81) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): isolate adaptive processing state](https://github.com/linuxmatters/jivetalking/pull/80) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): clean up audio processing and reporting internals](https://github.com/linuxmatters/jivetalking/pull/79) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): clean up audio processing and reporting internals](https://github.com/linuxmatters/jivetalking/pull/78) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(reports): prioritise elected candidates](https://github.com/linuxmatters/jivetalking/pull/77) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (53020)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (53034)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 - [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36500)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12281)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12293)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
