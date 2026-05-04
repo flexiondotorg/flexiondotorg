@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(processor): isolate loudnorm capture to graph finalisation](https://github.com/linuxmatters/jivetalking/pull/84) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): harden temp output publishing and debug log setup](https://github.com/linuxmatters/jivetalking/pull/83) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(home-manager): reorganise agent-related modules under agentic mixin](https://github.com/wimpysworld/nix-config/pull/811) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore: update flake.lock](https://github.com/wimpysworld/nix-config/pull/805) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(processor): split adaptive and reporting helpers](https://github.com/linuxmatters/jivetalking/pull/82) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor(processor): split filter config and diagnostics](https://github.com/linuxmatters/jivetalking/pull/81) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (53513)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (53542)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36530)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36531)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (58)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12484)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12493)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
