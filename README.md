@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(ui): refresh theme styling and splash readiness probe](https://github.com/wimpysworld/sidra/pull/86) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [refactor(processor): remove unused analysis metadata field](https://github.com/linuxmatters/jivetalking/pull/92) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): use progress update events for callbacks](https://github.com/linuxmatters/jivetalking/pull/89) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): centralise loudnorm limiter planning](https://github.com/linuxmatters/jivetalking/pull/87) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore(defold): update to 1.12.4](https://github.com/wimpysworld/nix-config/pull/816) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(processor): replace flat filter config fields with structs](https://github.com/linuxmatters/jivetalking/pull/86) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (54380)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (54411)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36589)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36590)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (60)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12899)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (12924)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
