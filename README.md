@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(snap): resolve confinement issues on Ubuntu 24.04](https://github.com/wimpysworld/sidra/pull/91) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [chore: update screenshot](https://github.com/wimpysworld/sidra/pull/88) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(integrations): implement itms:// protocol handler for Apple Music deeplinks](https://github.com/wimpysworld/sidra/pull/87) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(ui): refresh theme styling and splash readiness probe](https://github.com/wimpysworld/sidra/pull/86) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [refactor(processor): remove unused analysis metadata field](https://github.com/linuxmatters/jivetalking/pull/92) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55172)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55207)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36648)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36651)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (62)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13552)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13569)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
