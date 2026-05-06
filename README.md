@@ -42,15 +42,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [chore: update screenshot](https://github.com/wimpysworld/sidra/pull/88) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [feat(integrations): implement itms:// protocol handler for Apple Music deeplinks](https://github.com/wimpysworld/sidra/pull/87) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(ui): refresh theme styling and splash readiness probe](https://github.com/wimpysworld/sidra/pull/86) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [refactor(processor): remove unused analysis metadata field](https://github.com/linuxmatters/jivetalking/pull/92) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor(processor): use progress update events for callbacks](https://github.com/linuxmatters/jivetalking/pull/89) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor(processor): centralise loudnorm limiter planning](https://github.com/linuxmatters/jivetalking/pull/87) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), today)
+  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), today)
   - File downloader for archive.org ⬇️
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.19.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.19.1), 2 days ago)
@@ -59,21 +61,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.2), 4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.3](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.3), 1 month ago)
-  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55142)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55172)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36645)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36648)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (62)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13541)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13552)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
