@@ -28,52 +28,52 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (today)
+- [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (1 day ago)
   - The year is 2139. Planet Earth is under attack by aliens, and they&#39;re (still) antsy! 👾🛸💥
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (today)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (1 day ago)
   - File downloader for archive.org ⬇️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
 
-- [feat(agentic): integrate pi agent support](https://github.com/wimpysworld/nix-config/pull/824) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(snap): resolve confinement issues on Ubuntu 24.04](https://github.com/wimpysworld/sidra/pull/91) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [chore: update screenshot](https://github.com/wimpysworld/sidra/pull/88) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [feat(integrations): implement itms:// protocol handler for Apple Music deeplinks](https://github.com/wimpysworld/sidra/pull/87) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [feat(agentic): integrate pi agent support](https://github.com/wimpysworld/nix-config/pull/824) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(snap): resolve confinement issues on Ubuntu 24.04](https://github.com/wimpysworld/sidra/pull/91) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [chore: update screenshot](https://github.com/wimpysworld/sidra/pull/88) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [feat(integrations): implement itms:// protocol handler for Apple Music deeplinks](https://github.com/wimpysworld/sidra/pull/87) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), 1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), today)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 1 day ago)
   - File downloader for archive.org ⬇️
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.19.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.19.1), 2 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.19.1](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.19.1), 3 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260501](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260501), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260501](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260501), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.2), 4 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.2), 5 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55305)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (55366)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36657)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36660)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (62)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13596)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (13608)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
