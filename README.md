@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260505](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260505), today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 1 day ago)
   - Reveal odd and invisible whitespace characters.
 - [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.20.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.20.0), 2 days ago)
@@ -59,21 +61,19 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 3 days ago)
   - File downloader for archive.org ⬇️
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260501](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260501), 5 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (56905)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (56927)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36773)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36775)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (66)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (273)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14099)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14104)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 14 platforms
 
 ### 🎙️ Podcast
