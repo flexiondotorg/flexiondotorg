@@ -19,7 +19,7 @@ We have a modest [Discord server for Wimpy's World](https://wimpysworld.io/disco
 
 I [steam live-coding on Twitch](https://twitch.tv/WimpysWorld) 📡 and those streams are [archived on YouTube](https://youtube.com/WimpysWorld) 📺️
 
-These awesome people sponsor me: [v-nils](https://github.com/v-nils) [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
+These awesome people sponsor me: [gthelding](https://github.com/gthelding) [v-nils](https://github.com/v-nils) [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
 If you appreciate my work, then [please consider sponsoring me too](https://github.com/sponsors/flexiondotorg) 🤑 **Curious what I've been working on recently?**
 <div align="center">
   <img align="center" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/snake/github-contribution-grid-snake-dark.svg">
@@ -65,15 +65,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (58647)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (58663)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36901)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36902)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (74)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (75)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (274)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14445)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14448)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 15 platforms
 
 ### 🎙️ Podcast
