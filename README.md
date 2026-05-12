@@ -28,52 +28,52 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (3 days ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (4 days ago)
   - File downloader for archive.org ⬇️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (4 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (5 days ago)
+- [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (6 days ago)
   - The year is 2139. Planet Earth is under attack by aliens, and they&#39;re (still) antsy! 👾🛸💥
 
 ### Recent pull requests 🛠️
 
 
-- [chore: add octo-sts policy for manifest-gen](https://github.com/chainguard-dev/.github/pull/214) on [chainguard-dev/.github](https://github.com/chainguard-dev/.github) (today)
-- [chore(wavebox): update to 148.2.4-2](https://github.com/wimpysworld/nix-config/pull/825) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [feat(agentic): integrate pi agent support](https://github.com/wimpysworld/nix-config/pull/824) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
-- [fix(snap): resolve confinement issues on Ubuntu 24.04](https://github.com/wimpysworld/sidra/pull/91) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
-- [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (5 days ago)
+- [chore: add octo-sts policy for manifest-gen](https://github.com/chainguard-dev/.github/pull/214) on [chainguard-dev/.github](https://github.com/chainguard-dev/.github) (1 day ago)
+- [chore(wavebox): update to 148.2.4-2](https://github.com/wimpysworld/nix-config/pull/825) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [feat(agentic): integrate pi agent support](https://github.com/wimpysworld/nix-config/pull/824) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
+- [fix(snap): resolve confinement issues on Ubuntu 24.04](https://github.com/wimpysworld/sidra/pull/91) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
+- [feat(build): add snap package target with automated publishing](https://github.com/wimpysworld/sidra/pull/89) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (6 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260505](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260505), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260505](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260505), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 3 days ago)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 4 days ago)
   - Reveal odd and invisible whitespace characters.
-- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.20.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.20.0), 4 days ago)
+- [DeterminateSystems/determinate-nix-action](https://github.com/DeterminateSystems/determinate-nix-action) ([v3.20.0](https://github.com/DeterminateSystems/determinate-nix-action/releases/tag/v3.20.0), 5 days ago)
   - The Github Action for Determinate Nix
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), 5 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), 6 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 5 days ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 6 days ago)
   - File downloader for archive.org ⬇️
 
 ### Recent starred projects ⭐️
 
 
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (58283)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (58299)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36877)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (36878)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (74)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (274)
   - Castlabs Electron for Content Security
-- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14361)
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) (14363)
   - Context window optimization for AI coding agents. Sandboxes tool output, 98% reduction. 15 platforms
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Passing the Gourd](https://linuxmatters.sh/80/) (1 week ago)
-- [Pouring out the Sidra](https://linuxmatters.sh/79/) (3 weeks ago)
+- [Passing the Gourd](https://linuxmatters.sh/80/) (2 weeks ago)
+- [Pouring out the Sidra](https://linuxmatters.sh/79/) (4 weeks ago)
 - [VNC? No way!](https://linuxmatters.sh/78/) (1 month ago)
 - [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (1 month ago)
 - [The Smell of Git](https://linuxmatters.sh/76/) (2 months ago)
