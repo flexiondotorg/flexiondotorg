@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(gatus): route Gatus through a Cloudflare tunnel](https://github.com/wimpysworld/nix-config/pull/849) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [fix(hermes): include messaging SDKs in sealed venv](https://github.com/wimpysworld/nix-config/pull/847) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 148.2.23-2](https://github.com/wimpysworld/nix-config/pull/846) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(agentic): align coding agents with shared Fence policy](https://github.com/wimpysworld/nix-config/pull/842) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [feat(agentic): route pi subagents by provider model](https://github.com/wimpysworld/nix-config/pull/841) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore: add octo-sts policy for manifest-gen](https://github.com/chainguard-dev/.github/pull/214) on [chainguard-dev/.github](https://github.com/chainguard-dev/.github) (1 week ago)
-- [chore(wavebox): update to 148.2.4-2](https://github.com/wimpysworld/nix-config/pull/825) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 weeks ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (62954)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (63021)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37264)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37270)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (112)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (114)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (276)
   - Castlabs Electron for Content Security
