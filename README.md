@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 weeks ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 week ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 weeks ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (1 week ago)
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (2 weeks ago)
   - File downloader for archive.org ⬇️
 - [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (2 weeks ago)
   - The year is 2139. Planet Earth is under attack by aliens, and they&#39;re (still) antsy! 👾🛸💥
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(agentsview): add Hermes sync and server support](https://github.com/wimpysworld/nix-config/pull/850) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(gatus): route Gatus through a Cloudflare tunnel](https://github.com/wimpysworld/nix-config/pull/849) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(hermes): include messaging SDKs in sealed venv](https://github.com/wimpysworld/nix-config/pull/847) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(wavebox): update to 148.2.23-2](https://github.com/wimpysworld/nix-config/pull/846) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(agentic): align coding agents with shared Fence policy](https://github.com/wimpysworld/nix-config/pull/842) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(agentsview): add Hermes sync and server support](https://github.com/wimpysworld/nix-config/pull/850) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(gatus): route Gatus through a Cloudflare tunnel](https://github.com/wimpysworld/nix-config/pull/849) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(hermes): include messaging SDKs in sealed venv](https://github.com/wimpysworld/nix-config/pull/847) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(wavebox): update to 148.2.23-2](https://github.com/wimpysworld/nix-config/pull/846) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(agentic): align coding agents with shared Fence policy](https://github.com/wimpysworld/nix-config/pull/842) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260518](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260518), today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260518](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260518), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 1 week ago)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 2 weeks ago)
   - Reveal odd and invisible whitespace characters.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.3](https://github.com/wimpysworld/sidra/releases/tag/0.3.3), 2 weeks ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (63260)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (63270)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37295)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37297)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (116)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
