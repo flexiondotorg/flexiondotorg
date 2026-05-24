@@ -28,9 +28,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 weeks ago)
   - Ready-to-wear project templates for GitHub repositories 👔
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [build(deps): raise brace-expansion override to 5.0.6](https://github.com/wimpysworld/sidra/pull/106) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [build(macos): build both x64 and arm64 DMG artefacts](https://github.com/wimpysworld/sidra/pull/103) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [fix(theme): add missing fields to resolve_theme_key resolver](https://github.com/sinelaw/fresh/pull/2080) on [sinelaw/fresh](https://github.com/sinelaw/fresh) (1 day ago)
-- [feat(auth): hide passkey and cross-device sign-in in auth iframe](https://github.com/wimpysworld/sidra/pull/101) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [feat(agentsview): add Hermes sync and server support](https://github.com/wimpysworld/nix-config/pull/850) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [build(deps): raise brace-expansion override to 5.0.6](https://github.com/wimpysworld/sidra/pull/106) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [build(macos): build both x64 and arm64 DMG artefacts](https://github.com/wimpysworld/sidra/pull/103) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
+- [fix(theme): add missing fields to resolve_theme_key resolver](https://github.com/sinelaw/fresh/pull/2080) on [sinelaw/fresh](https://github.com/sinelaw/fresh) (2 days ago)
+- [feat(auth): hide passkey and cross-device sign-in in auth iframe](https://github.com/wimpysworld/sidra/pull/101) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
+- [feat(agentsview): add Hermes sync and server support](https://github.com/wimpysworld/nix-config/pull/850) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 2 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260518](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260518), 2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260518](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260518), 3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 2 weeks ago)
   - Reveal odd and invisible whitespace characters.
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64034)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64038)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37380)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37382)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (122)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
