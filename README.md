@@ -32,12 +32,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (2 weeks ago)
-  - File downloader for archive.org ⬇️
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (3 days ago)
+  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 weeks ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [wimpysworld/antsy-alien-attack-pico](https://github.com/wimpysworld/antsy-alien-attack-pico) (2 weeks ago)
-  - The year is 2139. Planet Earth is under attack by aliens, and they&#39;re (still) antsy! 👾🛸💥
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (2 weeks ago)
+  - File downloader for archive.org ⬇️
 
 ### Recent pull requests 🛠️
 
@@ -55,23 +55,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 3 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.8](https://github.com/sinelaw/fresh/releases/tag/v0.3.8), 4 days ago)
+  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 2 weeks ago)
   - Reveal odd and invisible whitespace characters.
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 2 weeks ago)
   - File downloader for archive.org ⬇️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.3.2](https://github.com/linuxmatters/jivetalking/releases/tag/0.3.2), 3 weeks ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent starred projects ⭐️
 
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64530)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64566)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37449)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37456)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (128)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (129)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (276)
   - Castlabs Electron for Content Security
