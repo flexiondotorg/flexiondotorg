@@ -51,12 +51,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.9](https://github.com/sinelaw/fresh/releases/tag/v0.3.9), today)
+  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260522](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260522), 1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 4 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.8](https://github.com/sinelaw/fresh/releases/tag/v0.3.8), 5 days ago)
-  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/critters](https://github.com/wimpysworld/critters) ([0.1.0](https://github.com/wimpysworld/critters/releases/tag/0.1.0), 2 weeks ago)
   - Reveal odd and invisible whitespace characters.
 - [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) ([0.1.4](https://github.com/wimpysworld/ia-get/releases/tag/0.1.4), 2 weeks ago)
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (65006)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (65058)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37510)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37513)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (135)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (136)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (276)
   - Castlabs Electron for Content Security
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
+- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (today)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (2 weeks ago)
 - [Passing the Gourd](https://linuxmatters.sh/80/) (4 weeks ago)
 - [Pouring out the Sidra](https://linuxmatters.sh/79/) (1 month ago)
 - [VNC? No way!](https://linuxmatters.sh/78/) (1 month ago)
-- [Tailor Snaps for Big Iron](https://linuxmatters.sh/77/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
