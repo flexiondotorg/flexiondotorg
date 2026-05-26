@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: rename silence domain language to room tone](https://github.com/linuxmatters/jivetalking/pull/96) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [fix(processor): round LUFS value in output filenames](https://github.com/linuxmatters/jivetalking/pull/95) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(deps): raise brace-expansion override to 5.0.6](https://github.com/wimpysworld/sidra/pull/106) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
 - [build(macos): build both x64 and arm64 DMG artefacts](https://github.com/wimpysworld/sidra/pull/103) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
 - [fix(theme): add missing fields to resolve_theme_key resolver](https://github.com/sinelaw/fresh/pull/2080) on [sinelaw/fresh](https://github.com/sinelaw/fresh) (4 days ago)
-- [feat(auth): hide passkey and cross-device sign-in in auth iframe](https://github.com/wimpysworld/sidra/pull/101) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (4 days ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (14)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64862)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (64974)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37490)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37507)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (133)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (134)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (276)
   - Castlabs Electron for Content Security
