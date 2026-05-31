@@ -36,8 +36,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 weeks ago)
-  - Ready-to-wear project templates for GitHub repositories 👔
+- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (3 weeks ago)
+  - File downloader for archive.org ⬇️
 
 ### Recent pull requests 🛠️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (66918)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (66925)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37740)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37742)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (162)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
