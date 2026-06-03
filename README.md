@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) (1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [wimpysworld/ia-get](https://github.com/wimpysworld/ia-get) (3 weeks ago)
-  - File downloader for archive.org ⬇️
 
 ### Recent pull requests 🛠️
 
 
+- [build(deps): update libsrt to 1.5.5](https://github.com/linuxmatters/ffmpeg-statigo/pull/24) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [feat(ffmpeg): update to FFmpeg 8.1.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/23) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [refactor(ui): route progress messages by FileIndex instead of CurrentIndex](https://github.com/linuxmatters/jivetalking/pull/102) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): serialize AVFilterGraphFree calls with mutex for loudnorm concurrency safety](https://github.com/linuxmatters/jivetalking/pull/101) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): remove global DebugLog and thread logger through call chains](https://github.com/linuxmatters/jivetalking/pull/100) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [chore(wavebox): update to 148.2.44-2](https://github.com/wimpysworld/nix-config/pull/870) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (67956)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (68058)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37956)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37977)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (179)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (180)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (276)
   - Castlabs Electron for Content Security
