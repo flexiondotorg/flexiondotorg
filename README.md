@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(ffmpeg): update to FFmpeg 8.1.1](https://github.com/linuxmatters/ffmpeg-statigo/pull/23) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [refactor(ui): route progress messages by FileIndex instead of CurrentIndex](https://github.com/linuxmatters/jivetalking/pull/102) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): serialize AVFilterGraphFree calls with mutex for loudnorm concurrency safety](https://github.com/linuxmatters/jivetalking/pull/101) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor(processor): remove global DebugLog and thread logger through call chains](https://github.com/linuxmatters/jivetalking/pull/100) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [chore(wavebox): update to 148.2.44-2](https://github.com/wimpysworld/nix-config/pull/870) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore: upgrade NixOS from 25.11 to 26.05](https://github.com/wimpysworld/nix-config/pull/869) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (67946)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (67956)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37949)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37956)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (179)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
