@@ -30,7 +30,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor(processor): serialize AVFilterGraphFree calls with mutex for loudnorm concurrency safety](https://github.com/linuxmatters/jivetalking/pull/101) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(processor): remove global DebugLog and thread logger through call chains](https://github.com/linuxmatters/jivetalking/pull/100) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [chore(wavebox): update to 148.2.44-2](https://github.com/wimpysworld/nix-config/pull/870) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore: upgrade NixOS from 25.11 to 26.05](https://github.com/wimpysworld/nix-config/pull/869) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [fix(processor): insert aresample between loudnorm and adeclick in Pass 4](https://github.com/linuxmatters/jivetalking/pull/98) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [refactor(ui): route progress messages by FileIndex instead of CurrentIndex](https://github.com/linuxmatters/jivetalking/pull/102) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor(processor): serialize AVFilterGraphFree calls with mutex for loudnorm concurrency safety](https://github.com/linuxmatters/jivetalking/pull/101) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor(processor): remove global DebugLog and thread logger through call chains](https://github.com/linuxmatters/jivetalking/pull/100) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [chore(wavebox): update to 148.2.44-2](https://github.com/wimpysworld/nix-config/pull/870) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore: upgrade NixOS from 25.11 to 26.05](https://github.com/wimpysworld/nix-config/pull/869) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.4.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.4.1), 2 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.4.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.4.1), 3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260526](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260526), 4 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260526](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260526), 5 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.10](https://github.com/sinelaw/fresh/releases/tag/v0.3.10), 5 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.10](https://github.com/sinelaw/fresh/releases/tag/v0.3.10), 6 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (67935)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (67946)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37946)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (37949)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (179)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
