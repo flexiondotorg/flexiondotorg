@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: int32 clarity, generator split, staleness docs, builder lint](https://github.com/linuxmatters/ffmpeg-statigo/pull/34) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [refactor(examples): replace panic control flow with error returns](https://github.com/linuxmatters/ffmpeg-statigo/pull/33) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [fix(examples): add resource cleanup and document intentional leaks](https://github.com/linuxmatters/ffmpeg-statigo/pull/32) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [refactor: address peer-review findings – builder tests, context threading, atomic writes](https://github.com/linuxmatters/ffmpeg-statigo/pull/31) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [refactor(security,codegen): consolidate decompression cap, harden checksum verification, merge generator allowlists](https://github.com/linuxmatters/ffmpeg-statigo/pull/29) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor(generator): address peer-review findings for size_t heuristic and documentation](https://github.com/linuxmatters/ffmpeg-statigo/pull/28) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor(generator): harden with allowlist, uniform skip policy, and workaround tests](https://github.com/linuxmatters/ffmpeg-statigo/pull/27) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [chore(wavebox): update to 149.2.63-2](https://github.com/wimpysworld/nix-config/pull/873) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor: modernise and harden the generator and build tooling](https://github.com/linuxmatters/ffmpeg-statigo/pull/26) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (68714)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (68755)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38101)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38110)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (186)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
