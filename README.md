@@ -30,36 +30,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) (1 week ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) (2 weeks ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### Recent pull requests 🛠️
 
 
-- [feat(av): add high-level ergonomic pipeline wrapper package](https://github.com/linuxmatters/ffmpeg-statigo/pull/35) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor: int32 clarity, generator split, staleness docs, builder lint](https://github.com/linuxmatters/ffmpeg-statigo/pull/34) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor(examples): replace panic control flow with error returns](https://github.com/linuxmatters/ffmpeg-statigo/pull/33) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [fix(examples): add resource cleanup and document intentional leaks](https://github.com/linuxmatters/ffmpeg-statigo/pull/32) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor: address peer-review findings – builder tests, context threading, atomic writes](https://github.com/linuxmatters/ffmpeg-statigo/pull/31) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [fix(generator): harden manual fixups with fail-loud guards and silence debug leak](https://github.com/linuxmatters/ffmpeg-statigo/pull/36) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [feat(av): add high-level ergonomic pipeline wrapper package](https://github.com/linuxmatters/ffmpeg-statigo/pull/35) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [refactor: int32 clarity, generator split, staleness docs, builder lint](https://github.com/linuxmatters/ffmpeg-statigo/pull/34) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [refactor(examples): replace panic control flow with error returns](https://github.com/linuxmatters/ffmpeg-statigo/pull/33) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
+- [fix(examples): add resource cleanup and document intentional leaks](https://github.com/linuxmatters/ffmpeg-statigo/pull/32) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.12](https://github.com/sinelaw/fresh/releases/tag/v0.3.12), today)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.12](https://github.com/sinelaw/fresh/releases/tag/v0.3.12), 1 day ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([lib-8.1.1.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/lib-8.1.1.0), today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([lib-8.1.1.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/lib-8.1.1.0), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.4.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.4.1), 4 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.4.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.4.1), 5 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260526](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260526), 6 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260526](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260526), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 1 week ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 2 weeks ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent starred projects ⭐️
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (68876)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (68890)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38130)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38135)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (187)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
