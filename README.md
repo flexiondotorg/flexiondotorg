@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): add parallel multi-file processing via bounded worker pool](https://github.com/linuxmatters/jivetalking/pull/107) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(deps): upgrade golang.org/x/sys to v0.45.0](https://github.com/linuxmatters/jivedrop/pull/33) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [chore(deps): upgrade ffmpeg-statigo to v8.1.1.1](https://github.com/linuxmatters/jivedrop/pull/32) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [ci(workflows): pass GITHUB_TOKEN to library downloads in test and build jobs](https://github.com/linuxmatters/jivetalking/pull/106) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(comments): cleanse codebase and correct stale constant documentation](https://github.com/linuxmatters/jivetalking/pull/105) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(processor): replace log-capture loudnorm with stats-file readback](https://github.com/linuxmatters/jivetalking/pull/104) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 
 ### Recent releases 📦️
 
@@ -67,10 +67,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69418)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69430)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38263)
-  - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38270)
+  - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (196)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (277)
