@@ -36,21 +36,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 weeks ago)
-  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+  - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
 
 ### Recent pull requests 🛠️
 
 
+- [build(deps): upgrade golang.org/x/sys to v0.45.0](https://github.com/linuxmatters/jivedrop/pull/33) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [chore(deps): upgrade ffmpeg-statigo to v8.1.1.1](https://github.com/linuxmatters/jivedrop/pull/32) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [ci(workflows): pass GITHUB_TOKEN to library downloads in test and build jobs](https://github.com/linuxmatters/jivetalking/pull/106) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(comments): cleanse codebase and correct stale constant documentation](https://github.com/linuxmatters/jivetalking/pull/105) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor(processor): replace log-capture loudnorm with stats-file readback](https://github.com/linuxmatters/jivetalking/pull/104) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [fix(bindings)!: correct AVUuidEqual signature and pre-release polish](https://github.com/linuxmatters/ffmpeg-statigo/pull/49) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.4](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.4), today)
+  - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.1](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.1), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.12](https://github.com/sinelaw/fresh/releases/tag/v0.3.12), 2 days ago)
@@ -59,17 +61,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) ([v25.11.20260526](https://github.com/wimpysworld/nix-config/releases/tag/v25.11.20260526), 1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.4](https://github.com/wimpysworld/sidra/releases/tag/0.3.4), 2 weeks ago)
-  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent starred projects ⭐️
 
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69387)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69393)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38246)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38254)
   - Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (196)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
