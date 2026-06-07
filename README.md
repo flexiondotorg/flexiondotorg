@@ -30,23 +30,23 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 
 ### Recent pull requests 🛠️
 
 
+- [style(ui): redesign encode progress layout with media-player stats row](https://github.com/linuxmatters/jivedrop/pull/38) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [feat(ui): adopt Charm v2 components for TUI primitives](https://github.com/linuxmatters/jivetalking/pull/110) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(ui): refactor progress UI with spectrum springs and modular rendering](https://github.com/linuxmatters/jivefire/pull/46) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
 - [feat(ui): add Charm v2 animation bling - spring bar, spinner, settling](https://github.com/linuxmatters/jivedrop/pull/36) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
 - [refactor(deps): migrate to Charm v2 suite (bubbletea v2.0.7, lipgloss v2.0.3)](https://github.com/linuxmatters/jivetalking/pull/109) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [chore(deps): upgrade Charm libraries to v2](https://github.com/linuxmatters/jivedrop/pull/35) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69698)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69705)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38505)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38520)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (199)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (200)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (277)
   - Castlabs Electron for Content Security
