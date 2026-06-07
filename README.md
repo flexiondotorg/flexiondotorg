@@ -37,7 +37,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
+  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 
 ### Recent pull requests 🛠️
 
@@ -52,7 +52,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.3](https://github.com/linuxmatters/jivefire/releases/tag/0.3.3), 1 day ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with Cava-inspired real-time audio frequencies 🔥
+  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.4](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.4), 1 day ago)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.1](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.1), 2 days ago)
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69537)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69540)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38398)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38408)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (198)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
