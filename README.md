@@ -42,34 +42,34 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(cli): derive worker count from file count instead of flag](https://github.com/linuxmatters/jivetalking/pull/114) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [refactor: minor tweaks and improvements](https://github.com/linuxmatters/jivetalking/pull/113) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [refactor: minor tweaks and improvements](https://github.com/linuxmatters/jivefire/pull/49) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+- [refactor: minor tweaks and improvements](https://github.com/linuxmatters/jivedrop/pull/40) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
 - [refactor: assorted fixes, clean-ups, improvements and performance tuning](https://github.com/linuxmatters/jivetalking/pull/112) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor: assorted fixes, clean-ups, improvements and performance tuning](https://github.com/linuxmatters/jivetalking/pull/111) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor: assorted fixes, clean-ups, improvements and performance tuning](https://github.com/linuxmatters/jivefire/pull/47) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
-- [refactor: assorted fixes, clean-ups, improvements and performance tuning](https://github.com/linuxmatters/jivedrop/pull/39) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
-- [style(ui): redesign encode progress layout with media-player stats row](https://github.com/linuxmatters/jivedrop/pull/38) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.3.3](https://github.com/linuxmatters/jivefire/releases/tag/0.3.3), 2 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.0), today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.0](https://github.com/linuxmatters/jivefire/releases/tag/0.4.0), today)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.3.4](https://github.com/linuxmatters/jivedrop/releases/tag/0.3.4), 2 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.0), today)
   - Drop your podcast .wav into a shiny MP3 with metadata, cover art, and all 🪩
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.1](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.1), 3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.3.12](https://github.com/sinelaw/fresh/releases/tag/v0.3.12), 4 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.4.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.4.1), 1 week ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent starred projects ⭐️
 
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (16)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69948)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (69994)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38608)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38616)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (205)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
