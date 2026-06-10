@@ -28,10 +28,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 days ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(wavebox): update to 149.2.69-2](https://github.com/wimpysworld/nix-config/pull/878) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(processor): tighten audio detection and replace magic thresholds with derived metrics](https://github.com/linuxmatters/jivetalking/pull/115) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [feat(cli): make --episode flag optional](https://github.com/linuxmatters/jivefire/pull/51) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
 - [feat(encoder): add multi-format support with mp3, aac, and opus presets](https://github.com/linuxmatters/jivedrop/pull/41) on [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (2 days ago)
 - [refactor(audio): migrate from gofft to FFmpeg av_tx RDFT](https://github.com/linuxmatters/jivefire/pull/50) on [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
-- [fix(ci): correct release notes installation instructions](https://github.com/linuxmatters/ffmpeg-statigo/pull/53) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (70837)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (70882)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38795)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38802)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (213)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
