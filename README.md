@@ -28,16 +28,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (today)
   - Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (3 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 
 ### Recent pull requests 🛠️
 
@@ -51,12 +51,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.0](https://github.com/sinelaw/fresh/releases/tag/v0.4.0), 1 day ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.2](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.2), 3 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.0), 3 days ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.0](https://github.com/linuxmatters/jivefire/releases/tag/0.4.0), 3 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.0](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.0), 3 days ago)
@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71246)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71302)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38877)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38884)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (216)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (217)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 - [castlabs/electron-releases](https://github.com/castlabs/electron-releases) (277)
   - Castlabs Electron for Content Security
