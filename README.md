@@ -28,25 +28,25 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (1 day ago)
   - Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (4 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (4 days ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (4 days ago)
+  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent pull requests 🛠️
 
 
+- [feat(pipeline): structured run-records, live observability, and honest quality feedback](https://github.com/linuxmatters/jivetalking/pull/121) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(wayland): replace session-locker, wallpaper, and menu with portable alternatives](https://github.com/wimpysworld/nix-config/pull/879) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [fix(processor): derive ceiling margin from validation corpus](https://github.com/linuxmatters/jivetalking/pull/120) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [refactor(processor,audio): clarify callback semantics, frame aliasing, and cgo cleanup](https://github.com/linuxmatters/jivetalking/pull/119) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [refactor(processor): audit and remove filter adaptation theatre](https://github.com/linuxmatters/jivetalking/pull/118) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-- [chore(wavebox): update to 149.2.69-2](https://github.com/wimpysworld/nix-config/pull/878) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71889)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71901)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38966)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38969)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (221)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
