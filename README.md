@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(processor): add deterministic brickwall limiter with adaptive loudnorm TP tuning](https://github.com/linuxmatters/jivetalking/pull/122) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [feat(pipeline): structured run-records, live observability, and honest quality feedback](https://github.com/linuxmatters/jivetalking/pull/121) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [feat(wayland): replace session-locker, wallpaper, and menu with portable alternatives](https://github.com/wimpysworld/nix-config/pull/879) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [fix(processor): derive ceiling margin from validation corpus](https://github.com/linuxmatters/jivetalking/pull/120) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 - [refactor(processor,audio): clarify callback semantics, frame aliasing, and cgo cleanup](https://github.com/linuxmatters/jivetalking/pull/119) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
-- [refactor(processor): audit and remove filter adaptation theatre](https://github.com/linuxmatters/jivetalking/pull/118) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71948)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (71955)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38988)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (38989)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (222)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
