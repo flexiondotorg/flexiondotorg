@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (2 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
   - Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (5 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (6 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (5 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (6 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent pull requests 🛠️
 
 
-- [refactor(docs): remove brand names from identifiers and consolidate reference documentation](https://github.com/linuxmatters/jivetalking/pull/124) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor: improve test isolation and code clarity across cmd and processor packages](https://github.com/linuxmatters/jivetalking/pull/123) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(processor): add deterministic brickwall limiter with adaptive loudnorm TP tuning](https://github.com/linuxmatters/jivetalking/pull/122) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [feat(pipeline): structured run-records, live observability, and honest quality feedback](https://github.com/linuxmatters/jivetalking/pull/121) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [feat(wayland): replace session-locker, wallpaper, and menu with portable alternatives](https://github.com/wimpysworld/nix-config/pull/879) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [refactor(docs): remove brand names from identifiers and consolidate reference documentation](https://github.com/linuxmatters/jivetalking/pull/124) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor: improve test isolation and code clarity across cmd and processor packages](https://github.com/linuxmatters/jivetalking/pull/123) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(processor): add deterministic brickwall limiter with adaptive loudnorm TP tuning](https://github.com/linuxmatters/jivetalking/pull/122) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(pipeline): structured run-records, live observability, and honest quality feedback](https://github.com/linuxmatters/jivetalking/pull/121) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [feat(wayland): replace session-locker, wallpaper, and menu with portable alternatives](https://github.com/wimpysworld/nix-config/pull/879) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.33.1](https://github.com/kenn-io/agentsview/releases/tag/v0.33.1), 1 day ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.33.1](https://github.com/kenn-io/agentsview/releases/tag/v0.33.1), 2 days ago)
   - Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), 2 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), 3 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.0](https://github.com/sinelaw/fresh/releases/tag/v0.4.0), 3 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.0](https://github.com/sinelaw/fresh/releases/tag/v0.4.0), 4 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.2](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.2), 5 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.2](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.2), 6 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.0](https://github.com/linuxmatters/jivefire/releases/tag/0.4.0), 5 days ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.0](https://github.com/linuxmatters/jivefire/releases/tag/0.4.0), 6 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 
 ### Recent starred projects ⭐️
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (72172)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (72177)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39059)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39062)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (226)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [snap install flatpak](https://linuxmatters.sh/83/) (4 days ago)
+- [snap install flatpak](https://linuxmatters.sh/83/) (5 days ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (2 weeks ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
 - [Passing the Gourd](https://linuxmatters.sh/80/) (1 month ago)
