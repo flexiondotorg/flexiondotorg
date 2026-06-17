@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (5 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (6 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 week ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor(agentic): unify Communication Rules tripwire into one Python core](https://github.com/wimpysworld/nix-config/pull/882) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(wavebox): update to 149.2.92-2](https://github.com/wimpysworld/nix-config/pull/881) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [test(processor): verify noise-floor estimation tie-break determinism](https://github.com/linuxmatters/jivetalking/pull/127) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [Unified VAD detector, grounded speech scoring, and platform-gated VoiceActivated](https://github.com/linuxmatters/jivetalking/pull/126) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor: consolidate first-party packages and trim dead code](https://github.com/linuxmatters/jivetalking/pull/125) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [refactor(agentic): unify Communication Rules tripwire into one Python core](https://github.com/wimpysworld/nix-config/pull/882) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(wavebox): update to 149.2.92-2](https://github.com/wimpysworld/nix-config/pull/881) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [test(processor): verify noise-floor estimation tie-break determinism](https://github.com/linuxmatters/jivetalking/pull/127) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [Unified VAD detector, grounded speech scoring, and platform-gated VoiceActivated](https://github.com/linuxmatters/jivetalking/pull/126) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor: consolidate first-party packages and trim dead code](https://github.com/linuxmatters/jivetalking/pull/125) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.33.1](https://github.com/kenn-io/agentsview/releases/tag/v0.33.1), 4 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.33.1](https://github.com/kenn-io/agentsview/releases/tag/v0.33.1), 5 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), 5 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), 6 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.0](https://github.com/sinelaw/fresh/releases/tag/v0.4.0), 6 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.0](https://github.com/sinelaw/fresh/releases/tag/v0.4.0), 1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.2](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.2), 1 week ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (17)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (73579)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (73595)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39292)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39294)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (238)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [DOSing about with games](https://linuxmatters.sh/84/) (today)
+- [DOSing about with games](https://linuxmatters.sh/84/) (1 day ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 week ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (3 weeks ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
