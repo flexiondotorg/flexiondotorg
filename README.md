@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [refactor(processor): rename calculateSpeechGateThresholdLegacy to calculateSpeechGateThresholdNoProfile](https://github.com/linuxmatters/jivetalking/pull/135) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(linux): add desktop quick actions for MPRIS controls](https://github.com/wimpysworld/sidra/pull/135) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [fix(main): disable console logging in packaged builds](https://github.com/wimpysworld/sidra/pull/134) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 
 ### Recent releases 📦️
 
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75080)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75091)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39523)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39525)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (249)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
