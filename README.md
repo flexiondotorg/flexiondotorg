@@ -28,48 +28,48 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 - [wimpysworld/critters](https://github.com/wimpysworld/critters) (1 day ago)
   - Reveal odd and invisible whitespace characters.
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (1 week ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### Recent pull requests 🛠️
 
 
+- [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [refactor(processor): rename calculateSpeechGateThresholdLegacy to calculateSpeechGateThresholdNoProfile](https://github.com/linuxmatters/jivetalking/pull/135) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [build(linux): add desktop quick actions for MPRIS controls](https://github.com/wimpysworld/sidra/pull/135) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [fix(main): disable console logging in packaged builds](https://github.com/wimpysworld/sidra/pull/134) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [build(dmg): move DMG assets off window](https://github.com/wimpysworld/sidra/pull/133) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [build(deps): bump undici override to 7.28.0](https://github.com/wimpysworld/sidra/pull/132) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [build(snap): migrate packaging config to core24](https://github.com/wimpysworld/sidra/pull/129) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), today)
+  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.1](https://github.com/linuxmatters/jivefire/releases/tag/0.4.1), today)
+  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.1](https://github.com/sinelaw/fresh/releases/tag/v0.4.1), 2 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.33.1](https://github.com/kenn-io/agentsview/releases/tag/v0.33.1), 1 week ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.5.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.5.1), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.2](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.2), 1 week ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.0](https://github.com/linuxmatters/jivefire/releases/tag/0.4.0), 1 week ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 
 ### Recent starred projects ⭐️
 
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (74949)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (74968)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39505)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39509)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (249)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
