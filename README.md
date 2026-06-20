@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [build(linux): add desktop quick actions for MPRIS controls](https://github.com/wimpysworld/sidra/pull/135) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [fix(main): disable console logging in packaged builds](https://github.com/wimpysworld/sidra/pull/134) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [build(dmg): move DMG assets off window](https://github.com/wimpysworld/sidra/pull/133) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
 - [build(deps): bump undici override to 7.28.0](https://github.com/wimpysworld/sidra/pull/132) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 - [build(snap): migrate packaging config to core24](https://github.com/wimpysworld/sidra/pull/129) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [refactor: consolidate codebase with resource safety and performance fixes](https://github.com/linuxmatters/jivetalking/pull/134) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [test(lsp): add protocol coverage](https://github.com/wimpysworld/critters/pull/24) on [wimpysworld/critters](https://github.com/wimpysworld/critters) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (74892)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (74900)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39489)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39491)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (247)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
