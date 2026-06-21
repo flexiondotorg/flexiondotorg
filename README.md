@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63436)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63435)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75353)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75366)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 
 ### 🎙️ Podcast
