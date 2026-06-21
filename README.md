@@ -30,36 +30,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) (1 day ago)
+- [wimpysworld/critters](https://github.com/wimpysworld/critters) (2 days ago)
   - Reveal odd and invisible whitespace characters.
 
 ### Recent pull requests 🛠️
 
 
-- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
-- [refactor(processor): rename calculateSpeechGateThresholdLegacy to calculateSpeechGateThresholdNoProfile](https://github.com/linuxmatters/jivetalking/pull/135) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [build(linux): add desktop quick actions for MPRIS controls](https://github.com/wimpysworld/sidra/pull/135) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (today)
+- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [refactor(processor): rename calculateSpeechGateThresholdLegacy to calculateSpeechGateThresholdNoProfile](https://github.com/linuxmatters/jivetalking/pull/135) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.0](https://github.com/kenn-io/agentsview/releases/tag/v0.34.0), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.0](https://github.com/kenn-io/agentsview/releases/tag/v0.34.0), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), today)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 1 day ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.1](https://github.com/linuxmatters/jivefire/releases/tag/0.4.1), today)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.1](https://github.com/linuxmatters/jivefire/releases/tag/0.4.1), 1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.1](https://github.com/sinelaw/fresh/releases/tag/v0.4.1), 2 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.1](https://github.com/sinelaw/fresh/releases/tag/v0.4.1), 3 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 
 ### Recent starred projects ⭐️
@@ -69,9 +69,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75143)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75154)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39531)
+- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39532)
   - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (249)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [DOSing about with games](https://linuxmatters.sh/84/) (4 days ago)
+- [DOSing about with games](https://linuxmatters.sh/84/) (5 days ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 week ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (3 weeks ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
