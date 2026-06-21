@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75401)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75424)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 
 ### 🎙️ Podcast
