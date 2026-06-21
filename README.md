@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
@@ -36,17 +38,15 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 - [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
-- [wimpysworld/critters](https://github.com/wimpysworld/critters) (2 days ago)
-  - Reveal odd and invisible whitespace characters.
 
 ### Recent pull requests 🛠️
 
 
+- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 - [build(ci): automate Electron toolchain updates](https://github.com/wimpysworld/sidra/pull/136) on [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
-- [refactor(processor): rename calculateSpeechGateThresholdLegacy to calculateSpeechGateThresholdNoProfile](https://github.com/linuxmatters/jivetalking/pull/135) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63434)
+  - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
+- [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
+  - Terminal tints for everyone
 - [ChrisLauinger77/mpris-miniplayer](https://github.com/ChrisLauinger77/mpris-miniplayer) (1)
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75233)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75250)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) (39549)
-  - Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (251)
-  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
