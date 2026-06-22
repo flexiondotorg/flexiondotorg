@@ -51,10 +51,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.4](https://github.com/kenn-io/agentsview/releases/tag/v0.34.4), today)
+  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), today)
   - apt-get for .debs published via GitHub or direct download 📦
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.3](https://github.com/kenn-io/agentsview/releases/tag/v0.34.3), today)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 2 days ago)
@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63449)
+- [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
+  - Terminal-emulator State Machine 
+- [kmscon/kmscon](https://github.com/kmscon/kmscon) (813)
+  - Linux KMS/DRM based virtual Console Emulator
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63450)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
 - [ChrisLauinger77/mpris-miniplayer](https://github.com/ChrisLauinger77/mpris-miniplayer) (1)
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
-- [lazypower/continuity](https://github.com/lazypower/continuity) (18)
-  - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75841)
-  - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
