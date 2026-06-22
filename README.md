@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+  - Ready-to-wear project templates for GitHub repositories 👔
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (2 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
-  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent pull requests 🛠️
 
 
-- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
-- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.1](https://github.com/kenn-io/agentsview/releases/tag/v0.34.1), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.1](https://github.com/kenn-io/agentsview/releases/tag/v0.34.1), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 1 day ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 2 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 1 day ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 2 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.1](https://github.com/linuxmatters/jivefire/releases/tag/0.4.1), 1 day ago)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) ([0.4.1](https://github.com/linuxmatters/jivefire/releases/tag/0.4.1), 2 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
 
 ### Recent starred projects ⭐️
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Small GTK/libadwaita mini player for MPRIS-compatible Linux media players
 - [lazypower/continuity](https://github.com/lazypower/continuity) (18)
   - Give claude the memory of a pair-programmer. No serious dependencies, all substance
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75456)
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (75468)
   - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 
 ### 🎙️ Podcast
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [DOSing about with games](https://linuxmatters.sh/84/) (5 days ago)
+- [DOSing about with games](https://linuxmatters.sh/84/) (6 days ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 week ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (3 weeks ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
