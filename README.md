@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
   - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
@@ -36,22 +38,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Ready-to-wear project templates for GitHub repositories 👔
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
-  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent pull requests 🛠️
 
 
+- [refactor(app): split build, UI, and deploy flows](https://github.com/wimpysworld/glyph-party/pull/18) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (today)
 - [feat(chat): add soju and senpai IRC support](https://github.com/wimpysworld/nix-config/pull/892) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(concord): update to v2.2.6](https://github.com/wimpysworld/nix-config/pull/891) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.4](https://github.com/kenn-io/agentsview/releases/tag/v0.34.4), 1 day ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), today)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
