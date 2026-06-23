@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (today)
-  - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (today)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
+  - apt-get for .debs published via GitHub or direct download 📦
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 day ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (2 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) (3 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent pull requests 🛠️
 
 
-- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
+- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [fix(processor,ui): show meaningful noise floor for voice-activated input](https://github.com/linuxmatters/jivetalking/pull/138) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
+- [fix(ui): make viewport scrollable and add visual scroll indicators](https://github.com/linuxmatters/jivetalking/pull/137) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
+- [refactor: address peer-review findings across README and UI layers](https://github.com/linuxmatters/jivetalking/pull/136) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.4](https://github.com/kenn-io/agentsview/releases/tag/v0.34.4), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.4](https://github.com/kenn-io/agentsview/releases/tag/v0.34.4), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), today)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 day ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 2 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 2 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 3 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 2 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 3 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent starred projects ⭐️
@@ -82,9 +82,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [DOSing about with games](https://linuxmatters.sh/84/) (6 days ago)
-- [snap install flatpak](https://linuxmatters.sh/83/) (1 week ago)
-- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (3 weeks ago)
+- [DOSing about with games](https://linuxmatters.sh/84/) (1 week ago)
+- [snap install flatpak](https://linuxmatters.sh/83/) (2 weeks ago)
+- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (4 weeks ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
 - [Passing the Gourd](https://linuxmatters.sh/80/) (1 month ago)
 
