@@ -28,12 +28,12 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(agentic): add Chromium fence wrapper](https://github.com/wimpysworld/nix-config/pull/899) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(app): split build, UI, and deploy flows](https://github.com/wimpysworld/glyph-party/pull/18) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
 - [feat(chat): add soju and senpai IRC support](https://github.com/wimpysworld/nix-config/pull/892) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [chore(concord): update to v2.2.6](https://github.com/wimpysworld/nix-config/pull/891) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [feat(development): add GitHub and terminal tooling](https://github.com/wimpysworld/nix-config/pull/889) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
@@ -67,9 +67,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
-- [kmscon/kmscon](https://github.com/kmscon/kmscon) (816)
+- [kmscon/kmscon](https://github.com/kmscon/kmscon) (817)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63472)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63471)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
