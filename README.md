@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 day ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (2 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (2 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (3 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (3 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
 
-- [feat(agentic): add Chromium fence wrapper](https://github.com/wimpysworld/nix-config/pull/899) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [refactor(app): split build, UI, and deploy flows](https://github.com/wimpysworld/glyph-party/pull/18) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 day ago)
-- [feat(chat): add soju and senpai IRC support](https://github.com/wimpysworld/nix-config/pull/892) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(concord): update to v2.2.6](https://github.com/wimpysworld/nix-config/pull/891) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [feat(agentic): add Chromium fence wrapper](https://github.com/wimpysworld/nix-config/pull/899) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [refactor(app): split build, UI, and deploy flows](https://github.com/wimpysworld/glyph-party/pull/18) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 days ago)
+- [feat(chat): add soju and senpai IRC support](https://github.com/wimpysworld/nix-config/pull/892) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(concord): update to v2.2.6](https://github.com/wimpysworld/nix-config/pull/891) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 1 day ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 2 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 2 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 3 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 3 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 4 days ago)
+- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 5 days ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 4 days ago)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 5 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent starred projects ⭐️
@@ -84,7 +84,7 @@ Here are some recent episodes:
 
 - [DOSing about with games](https://linuxmatters.sh/84/) (1 week ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (2 weeks ago)
-- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (4 weeks ago)
+- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
 - [Passing the Gourd](https://linuxmatters.sh/80/) (1 month ago)
 
