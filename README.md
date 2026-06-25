@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/900) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(agentic): add Chromium fence wrapper](https://github.com/wimpysworld/nix-config/pull/899) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 - [refactor(app): split build, UI, and deploy flows](https://github.com/wimpysworld/glyph-party/pull/18) on [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (2 days ago)
 - [feat(chat): add soju and senpai IRC support](https://github.com/wimpysworld/nix-config/pull/892) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore(concord): update to v2.2.6](https://github.com/wimpysworld/nix-config/pull/891) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(agentic): reorganise agent commands](https://github.com/wimpysworld/nix-config/pull/890) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Terminal-emulator State Machine 
 - [kmscon/kmscon](https://github.com/kmscon/kmscon) (820)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63481)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63483)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
