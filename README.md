@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (3 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Terminal-emulator State Machine 
 - [kmscon/kmscon](https://github.com/kmscon/kmscon) (820)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63498)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63499)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
