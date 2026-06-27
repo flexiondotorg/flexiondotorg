@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (1 day ago)
 - [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/900) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(agentic): add Chromium fence wrapper](https://github.com/wimpysworld/nix-config/pull/899) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
 
 ### Recent releases 📦️
 
