@@ -28,16 +28,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (today)
+  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 days ago)
-  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (4 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (4 days ago)
+  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (5 days ago)
   - Ready-to-wear project templates for GitHub repositories 👔
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (6 days ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 
 ### Recent pull requests 🛠️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Terminal-emulator State Machine 
 - [kmscon/kmscon](https://github.com/kmscon/kmscon) (820)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63506)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63508)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 - [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
   - Terminal tints for everyone
