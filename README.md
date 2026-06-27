@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), today)
+  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 4 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 5 days ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) ([0.4.1](https://github.com/linuxmatters/jivedrop/releases/tag/0.4.1), 1 week ago)
-  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent starred projects ⭐️
 
