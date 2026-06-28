@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9412)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9415)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
