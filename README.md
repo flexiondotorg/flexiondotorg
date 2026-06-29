@@ -51,10 +51,10 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), today)
+  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 2 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 6 days ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 week ago)
@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5653)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5654)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9485)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9486)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
