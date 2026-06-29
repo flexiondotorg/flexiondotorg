@@ -67,7 +67,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (193)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9423)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9427)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
