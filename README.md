@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5651)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5652)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9473)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9474)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
