@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9420)
+- [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (193)
+  - Linux shell for iOS with additions
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9423)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
 - [kmscon/kmscon](https://github.com/kmscon/kmscon) (821)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63517)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63520)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
-- [lrstanley/bubbletint](https://github.com/lrstanley/bubbletint) (139)
-  - Terminal tints for everyone
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
