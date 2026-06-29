@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (193)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9432)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9440)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
-- [kmscon/kmscon](https://github.com/kmscon/kmscon) (821)
+- [kmscon/kmscon](https://github.com/kmscon/kmscon) (822)
   - Linux KMS/DRM based virtual Console Emulator
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63522)
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) (63525)
   - Iconic font aggregator, collection, &amp; patcher. 3,600&#43; icons, 50&#43; patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more
 
 ### 🎙️ Podcast
