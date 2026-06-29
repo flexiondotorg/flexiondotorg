@@ -28,34 +28,34 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (1 day ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (2 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (5 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (6 days ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (5 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (6 days ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (6 days ago)
+- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 week ago)
   - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
-- [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (2 days ago)
-- [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
+- [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 1 day ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 2 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 5 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.34.5](https://github.com/kenn-io/agentsview/releases/tag/v0.34.5), 6 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 6 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9418)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9420)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
