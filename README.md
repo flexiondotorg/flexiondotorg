@@ -28,13 +28,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (2 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (6 days ago)
+- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (6 days ago)
+- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 - [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 week ago)
   - Ready-to-wear project templates for GitHub repositories 👔
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
-- [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4 days ago)
+- [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 2 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 3 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9486)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9489)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [DOSing about with games](https://linuxmatters.sh/84/) (1 week ago)
-- [snap install flatpak](https://linuxmatters.sh/83/) (2 weeks ago)
+- [DOSing about with games](https://linuxmatters.sh/84/) (2 weeks ago)
+- [snap install flatpak](https://linuxmatters.sh/83/) (3 weeks ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
 - [Passing the Gourd](https://linuxmatters.sh/80/) (2 months ago)
