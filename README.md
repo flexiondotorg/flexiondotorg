@@ -28,6 +28,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
@@ -36,36 +38,34 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
-- [wimpysworld/tailor](https://github.com/wimpysworld/tailor) (1 week ago)
-  - Ready-to-wear project templates for GitHub repositories 👔
 
 ### Recent pull requests 🛠️
 
 
+- [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(defold): update to 1.13.0](https://github.com/wimpysworld/nix-config/pull/906) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(paseo): update to f91806defecb](https://github.com/wimpysworld/nix-config/pull/905) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
 
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 3 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.0](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.0), 1 week ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 1 week ago)
   - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5666)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5665)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
