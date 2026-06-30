@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor(terminal): optimise terminal tooling for server deployments](https://github.com/wimpysworld/nix-config/pull/909) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
 - [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(defold): update to 1.13.0](https://github.com/wimpysworld/nix-config/pull/906) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(paseo): update to f91806defecb](https://github.com/wimpysworld/nix-config/pull/905) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 
 ### Recent releases 📦️
 
@@ -69,7 +69,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9533)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9535)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
