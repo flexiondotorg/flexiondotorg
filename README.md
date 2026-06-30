@@ -65,7 +65,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5671)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5670)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
