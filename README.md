@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(defold): update to 1.13.0](https://github.com/wimpysworld/nix-config/pull/906) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(paseo): update to f91806defecb](https://github.com/wimpysworld/nix-config/pull/905) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [feat(paseo): add Paseo server and desktop support](https://github.com/wimpysworld/nix-config/pull/904) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [feat(voxtype): integrate voice input support with OSD and automation](https://github.com/wimpysworld/nix-config/pull/903) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [fix(agentsview): skip schema DDL for compatible pg push](https://github.com/kenn-io/agentsview/pull/888) on [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4 days ago)
-- [feat(agentic): extend provider routing for append-step calls](https://github.com/wimpysworld/nix-config/pull/902) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
-- [chore(concord): update to v2.2.7](https://github.com/wimpysworld/nix-config/pull/901) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
 
 ### Recent releases 📦️
 
@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5663)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5665)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9508)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9512)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
