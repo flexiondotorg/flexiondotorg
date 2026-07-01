@@ -67,11 +67,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3501)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5680)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5679)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9600)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9601)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
