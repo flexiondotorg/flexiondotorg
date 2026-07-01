@@ -28,11 +28,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
@@ -42,20 +42,20 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [refactor(terminal): optimise terminal tooling for server deployments](https://github.com/wimpysworld/nix-config/pull/909) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(defold): update to 1.13.0](https://github.com/wimpysworld/nix-config/pull/906) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [refactor(terminal): optimise terminal tooling for server deployments](https://github.com/wimpysworld/nix-config/pull/909) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(defold): update to 1.13.0](https://github.com/wimpysworld/nix-config/pull/906) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), 1 day ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.35.0](https://github.com/kenn-io/agentsview/releases/tag/v0.35.0), 2 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 3 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 4 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
@@ -65,11 +65,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5670)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5671)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (194)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9541)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9542)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
