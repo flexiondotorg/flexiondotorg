@@ -69,11 +69,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9593)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9594)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
-- [kmscon/kmscon](https://github.com/kmscon/kmscon) (823)
+- [kmscon/kmscon](https://github.com/kmscon/kmscon) (824)
   - Linux KMS/DRM based virtual Console Emulator
 
 ### 🎙️ Podcast
