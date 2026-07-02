@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [claude-desktop: init at 1.17377.2](https://github.com/numtide/llm-agents.nix/pull/6407) on [numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix) (today)
 - [feat(pkgs): add claude-desktop Electron application package](https://github.com/wimpysworld/nix-config/pull/913) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(concord): update to v2.2.11](https://github.com/wimpysworld/nix-config/pull/912) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(terminal): optimise terminal tooling for server deployments](https://github.com/wimpysworld/nix-config/pull/909) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
-- [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3511)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3513)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5681)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9624)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9625)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
