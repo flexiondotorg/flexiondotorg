@@ -30,7 +30,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (5 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [feat(pkgs): add claude-desktop Electron application package](https://github.com/wimpysworld/nix-config/pull/913) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(concord): update to v2.2.11](https://github.com/wimpysworld/nix-config/pull/912) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor(terminal): optimise terminal tooling for server deployments](https://github.com/wimpysworld/nix-config/pull/909) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [fix(processor): detect voice-activated audio on macOS by counting silence as floored](https://github.com/linuxmatters/jivetalking/pull/139) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (2 days ago)
 - [chore(concord): update to v2.2.9](https://github.com/wimpysworld/nix-config/pull/908) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore(wavebox): update to 149.2.103-2](https://github.com/wimpysworld/nix-config/pull/907) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3507)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3511)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5680)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5681)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9620)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9624)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
