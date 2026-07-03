@@ -28,16 +28,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix) (1 day ago)
   - Nix packages for AI coding agents and development tools. Automatically updated daily.
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (6 days ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
-  - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 
 ### Recent pull requests 🛠️
 
@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.3](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.3), today)
+  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), today)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), 3 days ago)
@@ -59,19 +61,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
-- [wimpysworld/sidra](https://github.com/wimpysworld/sidra) ([0.3.5](https://github.com/wimpysworld/sidra/releases/tag/0.3.5), 1 week ago)
-  - An elegant Apple Music desktop client for Linux, macOS and Windows. No frippery, just quality. A better class of Cider 🍎
 
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3575)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3577)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5690)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9686)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9690)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
