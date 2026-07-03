@@ -28,14 +28,14 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
 - [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
+- [numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix) (1 day ago)
+  - Nix packages for AI coding agents and development tools. Automatically updated daily.
 - [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (6 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) (1 week ago)
-  - apt-get for .debs published via GitHub or direct download 📦
 - [wimpysworld/glyph-party](https://github.com/wimpysworld/glyph-party) (1 week ago)
   - Finally, a Unicode search tool that sparks joy instead of despair. 10,000&#43; characters, zero tears 😂
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3551)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3554)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5688)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (195)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9673)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9677)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
