@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [refactor: extract limiter derivation to separate module](https://github.com/linuxmatters/jive-vocals/pull/145) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
+- [refactor: fix peer review findings in audio, encoder, renderer, and CLI](https://github.com/linuxmatters/jive-visualiser/pull/59) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
+- [refactor: apply peer review findings across codebase](https://github.com/linuxmatters/jive-encoder/pull/49) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
 - [chore(rename): rebrand project and binary to Jive Encoder](https://github.com/linuxmatters/jive-encoder/pull/48) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
 - [refactor(cli): rename project from Jivefire to Jive Visualiser](https://github.com/linuxmatters/jive-visualiser/pull/58) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
-- [refactor: rename project to Jive Vocals](https://github.com/linuxmatters/jive-vocals/pull/144) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
-- [refactor: consolidate limiter derivation and guard duration sentinel](https://github.com/linuxmatters/jive-vocals/pull/143) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 day ago)
-- [perf(iso): reduce image size from 1.8GB to 948MB](https://github.com/wimpysworld/nix-config/pull/915) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
 
 ### Recent releases 📦️
 
