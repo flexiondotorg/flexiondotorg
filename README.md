@@ -28,36 +28,36 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (today)
+- [linuxmatters/jivefire](https://github.com/linuxmatters/jivefire) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies 🔥
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (today)
+- [linuxmatters/jivedrop](https://github.com/linuxmatters/jivedrop) (1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🪩
 
 ### Recent pull requests 🛠️
 
 
-- [refactor: consolidate limiter derivation and guard duration sentinel](https://github.com/linuxmatters/jivetalking/pull/143) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [perf(iso): reduce image size from 1.8GB to 948MB](https://github.com/wimpysworld/nix-config/pull/915) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [ refactor: remove dead code and consolidate config derivation](https://github.com/linuxmatters/jivetalking/pull/142) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (today)
-- [refactor(ci): extract freshener workflow into reusable scripts and pin paseo to release tag](https://github.com/wimpysworld/nix-config/pull/914) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [claude-desktop: init at 1.17377.2](https://github.com/numtide/llm-agents.nix/pull/6407) on [numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix) (1 day ago)
+- [refactor: consolidate limiter derivation and guard duration sentinel](https://github.com/linuxmatters/jivetalking/pull/143) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [perf(iso): reduce image size from 1.8GB to 948MB](https://github.com/wimpysworld/nix-config/pull/915) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [ refactor: remove dead code and consolidate config derivation](https://github.com/linuxmatters/jivetalking/pull/142) on [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) (1 day ago)
+- [refactor(ci): extract freshener workflow into reusable scripts and pin paseo to release tag](https://github.com/wimpysworld/nix-config/pull/914) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [claude-desktop: init at 1.17377.2](https://github.com/numtide/llm-agents.nix/pull/6407) on [numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix) (2 days ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.3](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.3), today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.1.3](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.1.3), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), 3 days ago)
+- [linuxmatters/jivetalking](https://github.com/linuxmatters/jivetalking) ([0.6.1](https://github.com/linuxmatters/jivetalking/releases/tag/0.6.1), 4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises🕺
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 6 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.2](https://github.com/sinelaw/fresh/releases/tag/v0.4.2), 1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [wimpysworld/deb-get](https://github.com/wimpysworld/deb-get) ([0.4.7](https://github.com/wimpysworld/deb-get/releases/tag/0.4.7), 1 week ago)
   - apt-get for .debs published via GitHub or direct download 📦
