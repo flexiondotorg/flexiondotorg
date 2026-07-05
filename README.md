@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [perf: reduce analysis and redraw overhead](https://github.com/linuxmatters/jive-vocals/pull/147) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
+- [perf: reduce allocations in render and preview paths](https://github.com/linuxmatters/jive-visualiser/pull/60) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
 - [fix(ui): align status boxes with filter chain](https://github.com/linuxmatters/jive-vocals/pull/146) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
 - [build(deps): upgrade FFmpeg and 5 static libraries to latest stable](https://github.com/linuxmatters/ffmpeg-statigo/pull/58) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
 - [refactor: extract limiter derivation to separate module](https://github.com/linuxmatters/jive-vocals/pull/145) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 day ago)
-- [refactor: fix peer review findings in audio, encoder, renderer, and CLI](https://github.com/linuxmatters/jive-visualiser/pull/59) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (1 day ago)
-- [refactor: apply peer review findings across codebase](https://github.com/linuxmatters/jive-encoder/pull/49) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3634)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3644)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5698)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (197)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9747)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9753)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
