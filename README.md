@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [fix(encoder): preserve frontmatter while updating stats](https://github.com/linuxmatters/jive-encoder/pull/52) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
+- [refactor: split CLI setup and pass 2 orchestration](https://github.com/linuxmatters/jive-visualiser/pull/61) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
 - [perf: reduce analysis and redraw overhead](https://github.com/linuxmatters/jive-vocals/pull/147) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
 - [perf: reduce allocations in render and preview paths](https://github.com/linuxmatters/jive-visualiser/pull/60) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
 - [fix(ui): align status boxes with filter chain](https://github.com/linuxmatters/jive-vocals/pull/146) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
-- [build(deps): upgrade FFmpeg and 5 static libraries to latest stable](https://github.com/linuxmatters/ffmpeg-statigo/pull/58) on [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
-- [refactor: extract limiter derivation to separate module](https://github.com/linuxmatters/jive-vocals/pull/145) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 day ago)
 
 ### Recent releases 📦️
 
@@ -65,13 +65,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3652)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3660)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5697)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (197)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9757)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9762)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
