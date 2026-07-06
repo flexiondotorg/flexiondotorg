@@ -28,50 +28,50 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
 
 ### Recent pull requests 🛠️
 
 
-- [refactor: remove dead code and simplify internal structures](https://github.com/linuxmatters/jive-vocals/pull/148) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (today)
-- [refactor: fix peer review findings across audio, encoder, UI, and too…](https://github.com/linuxmatters/jive-visualiser/pull/62) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
-- [test: address peer-review findings across all modules](https://github.com/linuxmatters/jive-encoder/pull/53) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
-- [fix(encoder): preserve frontmatter while updating stats](https://github.com/linuxmatters/jive-encoder/pull/52) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (today)
-- [refactor: split CLI setup and pass 2 orchestration](https://github.com/linuxmatters/jive-visualiser/pull/61) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (today)
+- [refactor: remove dead code and simplify internal structures](https://github.com/linuxmatters/jive-vocals/pull/148) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 day ago)
+- [refactor: fix peer review findings across audio, encoder, UI, and too…](https://github.com/linuxmatters/jive-visualiser/pull/62) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (1 day ago)
+- [test: address peer-review findings across all modules](https://github.com/linuxmatters/jive-encoder/pull/53) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 day ago)
+- [fix(encoder): preserve frontmatter while updating stats](https://github.com/linuxmatters/jive-encoder/pull/52) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 day ago)
+- [refactor: split CLI setup and pass 2 orchestration](https://github.com/linuxmatters/jive-visualiser/pull/61) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (1 day ago)
 
 ### Recent releases 📦️
 
 
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), today)
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), today)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 1 day ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), today)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 1 day ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.2.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.2.0), today)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.2.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.2.0), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), 2 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), 3 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3738)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3742)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5700)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (198)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9784)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9787)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
