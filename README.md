@@ -65,16 +65,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent starred projects ⭐️
 
 
+- [emmansun/base64](https://github.com/emmansun/base64) (17)
+  - Base64 with SIMD acceleration
 - [gen2brain/base64](https://github.com/gen2brain/base64) (4)
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3974)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3979)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5706)
   - A key remapping daemon for linux.
-- [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (200)
-  - Linux shell for iOS with additions
 
 ### 🎙️ Podcast
 <img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
