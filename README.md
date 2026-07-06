@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), today)
+  - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 1 day ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
 - [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 1 day ago)
@@ -59,19 +61,17 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
 - [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.2.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.2.0), 1 day ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.36.1](https://github.com/kenn-io/agentsview/releases/tag/v0.36.1), 3 days ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### Recent starred projects ⭐️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3785)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (3807)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5701)
   - A key remapping daemon for linux.
 - [emkey1/ish-AOK](https://github.com/emkey1/ish-AOK) (199)
   - Linux shell for iOS with additions
-- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9805)
+- [getpaseo/paseo](https://github.com/getpaseo/paseo) (9810)
   - Orchestrate multiple coding agents from desktop and mobile
 - [kmscon/libtsm](https://github.com/kmscon/libtsm) (26)
   - Terminal-emulator State Machine 
