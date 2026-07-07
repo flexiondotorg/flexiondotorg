@@ -71,9 +71,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4040)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4048)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5706)
+- [rvaiya/keyd](https://github.com/rvaiya/keyd) (5708)
   - A key remapping daemon for linux.
 
 ### 🎙️ Podcast
