@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(concord): update to v2.3.0](https://github.com/wimpysworld/nix-config/pull/918) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(hermes-agent): update to v2026.7.1](https://github.com/wimpysworld/nix-config/pull/917) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(wavebox): update to 150.2.118-2](https://github.com/wimpysworld/nix-config/pull/916) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [refactor: remove dead code and simplify internal structures](https://github.com/linuxmatters/jive-vocals/pull/148) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (2 days ago)
 - [refactor: fix peer review findings across audio, encoder, UI, and too…](https://github.com/linuxmatters/jive-visualiser/pull/62) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (2 days ago)
-- [test: address peer-review findings across all modules](https://github.com/linuxmatters/jive-encoder/pull/53) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (2 days ago)
-- [fix(encoder): preserve frontmatter while updating stats](https://github.com/linuxmatters/jive-encoder/pull/52) on [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (2 days ago)
-- [refactor: split CLI setup and pass 2 orchestration](https://github.com/linuxmatters/jive-visualiser/pull/61) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (2 days ago)
 
 ### Recent releases 📦️
 
@@ -71,7 +71,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4035)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4040)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [rvaiya/keyd](https://github.com/rvaiya/keyd) (5706)
   - A key remapping daemon for linux.
