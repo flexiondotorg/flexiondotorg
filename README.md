@@ -51,6 +51,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.1](https://github.com/kenn-io/agentsview/releases/tag/v0.37.1), today)
+  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 2 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 3 days ago)
@@ -59,8 +61,6 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
 - [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 3 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) ([v8.1.2.0](https://github.com/linuxmatters/ffmpeg-statigo/releases/tag/v8.1.2.0), 3 days ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
 
 ### Recent starred projects ⭐️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4107)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4109)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
