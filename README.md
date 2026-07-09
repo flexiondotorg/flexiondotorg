@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (3 days ago)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (4 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (3 days ago)
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (3 days ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (4 days ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (3 days ago)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (4 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
 
 ### Recent pull requests 🛠️
 
 
-- [chore(concord): update to v2.3.0](https://github.com/wimpysworld/nix-config/pull/918) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(hermes-agent): update to v2026.7.1](https://github.com/wimpysworld/nix-config/pull/917) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(wavebox): update to 150.2.118-2](https://github.com/wimpysworld/nix-config/pull/916) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [refactor: remove dead code and simplify internal structures](https://github.com/linuxmatters/jive-vocals/pull/148) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (3 days ago)
-- [refactor: fix peer review findings across audio, encoder, UI, and too…](https://github.com/linuxmatters/jive-visualiser/pull/62) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (3 days ago)
+- [chore(concord): update to v2.3.0](https://github.com/wimpysworld/nix-config/pull/918) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(hermes-agent): update to v2026.7.1](https://github.com/wimpysworld/nix-config/pull/917) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [chore(wavebox): update to 150.2.118-2](https://github.com/wimpysworld/nix-config/pull/916) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [refactor: remove dead code and simplify internal structures](https://github.com/linuxmatters/jive-vocals/pull/148) on [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (4 days ago)
+- [refactor: fix peer review findings across audio, encoder, UI, and too…](https://github.com/linuxmatters/jive-visualiser/pull/62) on [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.1](https://github.com/kenn-io/agentsview/releases/tag/v0.37.1), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.1](https://github.com/kenn-io/agentsview/releases/tag/v0.37.1), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 2 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 3 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 3 days ago)
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 4 days ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 3 days ago)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 4 days ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 3 days ago)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 4 days ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
 
 ### Recent starred projects ⭐️
@@ -82,9 +82,9 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Clearing the Decks](https://linuxmatters.sh/85/) (1 day ago)
+- [Clearing the Decks](https://linuxmatters.sh/85/) (2 days ago)
 - [DOSing about with games](https://linuxmatters.sh/84/) (3 weeks ago)
-- [snap install flatpak](https://linuxmatters.sh/83/) (4 weeks ago)
+- [snap install flatpak](https://linuxmatters.sh/83/) (1 month ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (1 month ago)
 
