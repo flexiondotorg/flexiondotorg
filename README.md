@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 week ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
@@ -42,18 +42,18 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(wavebox): update to 150.2.121-2](https://github.com/wimpysworld/nix-config/pull/926) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(concord): update to v2.3.2](https://github.com/wimpysworld/nix-config/pull/925) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(defold): update to 1.13.0-q8VVo3IK](https://github.com/wimpysworld/nix-config/pull/924) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(wavebox): update to 150.2.121-2](https://github.com/wimpysworld/nix-config/pull/926) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(concord): update to v2.3.2](https://github.com/wimpysworld/nix-config/pull/925) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(defold): update to 1.13.0-q8VVo3IK](https://github.com/wimpysworld/nix-config/pull/924) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.5](https://github.com/kenn-io/agentsview/releases/tag/v0.37.5), 2 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.5](https://github.com/kenn-io/agentsview/releases/tag/v0.37.5), 3 days ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 6 days ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
 - [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 1 week ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
@@ -82,7 +82,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Clearing the Decks](https://linuxmatters.sh/85/) (5 days ago)
+- [Clearing the Decks](https://linuxmatters.sh/85/) (6 days ago)
 - [DOSing about with games](https://linuxmatters.sh/84/) (3 weeks ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 month ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
