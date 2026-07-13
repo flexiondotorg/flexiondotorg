@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(paseo): update to v0.1.107](https://github.com/wimpysworld/nix-config/pull/930) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(concord): update to v2.3.5](https://github.com/wimpysworld/nix-config/pull/929) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 - [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 - [chore(wavebox): update to 150.2.121-2](https://github.com/wimpysworld/nix-config/pull/926) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [chore(concord): update to v2.3.2](https://github.com/wimpysworld/nix-config/pull/925) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [chore(defold): update to 1.13.0-q8VVo3IK](https://github.com/wimpysworld/nix-config/pull/924) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4335)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4344)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
