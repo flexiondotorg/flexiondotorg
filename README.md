@@ -51,7 +51,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.37.5](https://github.com/kenn-io/agentsview/releases/tag/v0.37.5), 3 days ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.0](https://github.com/kenn-io/agentsview/releases/tag/v0.38.0), today)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4355)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4357)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
