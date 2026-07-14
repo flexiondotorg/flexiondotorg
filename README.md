@@ -28,7 +28,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
 - [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 week ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
@@ -42,16 +42,16 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
-- [chore(paseo): update to v0.1.107](https://github.com/wimpysworld/nix-config/pull/930) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(concord): update to v2.3.5](https://github.com/wimpysworld/nix-config/pull/929) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
-- [chore(wavebox): update to 150.2.121-2](https://github.com/wimpysworld/nix-config/pull/926) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(paseo): update to v0.1.107](https://github.com/wimpysworld/nix-config/pull/930) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(concord): update to v2.3.5](https://github.com/wimpysworld/nix-config/pull/929) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
+- [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
+- [chore(wavebox): update to 150.2.121-2](https://github.com/wimpysworld/nix-config/pull/926) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.1](https://github.com/kenn-io/agentsview/releases/tag/v0.38.1), today)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.1](https://github.com/kenn-io/agentsview/releases/tag/v0.38.1), 1 day ago)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 - [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 1 week ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4370)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4377)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
@@ -82,8 +82,8 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Clearing the Decks](https://linuxmatters.sh/85/) (6 days ago)
-- [DOSing about with games](https://linuxmatters.sh/84/) (3 weeks ago)
+- [Clearing the Decks](https://linuxmatters.sh/85/) (1 week ago)
+- [DOSing about with games](https://linuxmatters.sh/84/) (4 weeks ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 month ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
 - [Cooking up a framework desktop](https://linuxmatters.sh/81/) (2 months ago)
