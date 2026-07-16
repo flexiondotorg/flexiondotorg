@@ -42,11 +42,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent pull requests 🛠️
 
 
+- [chore(wavebox): update to 150.2.131-2](https://github.com/wimpysworld/nix-config/pull/940) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(paseo): update to v0.1.108](https://github.com/wimpysworld/nix-config/pull/939) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(concord): update to v2.4.1](https://github.com/wimpysworld/nix-config/pull/938) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
 - [fix(agentic): permit fenced unsigned Git workflows](https://github.com/wimpysworld/nix-config/pull/931) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
 - [chore(paseo): update to v0.1.107](https://github.com/wimpysworld/nix-config/pull/930) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(concord): update to v2.3.5](https://github.com/wimpysworld/nix-config/pull/929) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
-- [chore(hermes-agent): update to v2026.7.7](https://github.com/wimpysworld/nix-config/pull/928) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
-- [chore(paseo): update to v0.1.104](https://github.com/wimpysworld/nix-config/pull/927) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 week ago)
 
 ### Recent releases 📦️
 
@@ -73,7 +73,7 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4428)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4436)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
