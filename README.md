@@ -28,38 +28,38 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 ### Recent project contributions 🏗️
 
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
+- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
   - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (1 week ago)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (2 weeks ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (1 week ago)
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (2 weeks ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (1 week ago)
+- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 weeks ago)
   - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (1 week ago)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (2 weeks ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
 
 ### Recent pull requests 🛠️
 
 
-- [chore(wavebox): update to 150.2.131-2](https://github.com/wimpysworld/nix-config/pull/940) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(paseo): update to v0.1.108](https://github.com/wimpysworld/nix-config/pull/939) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [chore(concord): update to v2.4.1](https://github.com/wimpysworld/nix-config/pull/938) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
-- [fix(agentic): permit fenced unsigned Git workflows](https://github.com/wimpysworld/nix-config/pull/931) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (2 days ago)
-- [chore(paseo): update to v0.1.107](https://github.com/wimpysworld/nix-config/pull/930) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (3 days ago)
+- [chore(hermes-agent): update to v2026.7.20](https://github.com/wimpysworld/nix-config/pull/944) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(concord): update to v2.4.3](https://github.com/wimpysworld/nix-config/pull/943) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [chore(paseo): update to v0.1.110](https://github.com/wimpysworld/nix-config/pull/942) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (today)
+- [fix(agentic): load Nix project tools inside Fence](https://github.com/wimpysworld/nix-config/pull/941) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (4 days ago)
+- [chore(wavebox): update to 150.2.131-2](https://github.com/wimpysworld/nix-config/pull/940) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
 
 ### Recent releases 📦️
 
 
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.1](https://github.com/kenn-io/agentsview/releases/tag/v0.38.1), 3 days ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.3](https://github.com/sinelaw/fresh/releases/tag/v0.4.3), 1 week ago)
+- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.4](https://github.com/sinelaw/fresh/releases/tag/v0.4.4), 5 days ago)
   - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 1 week ago)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.1](https://github.com/kenn-io/agentsview/releases/tag/v0.38.1), 1 week ago)
+  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
+- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 2 weeks ago)
   - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 1 week ago)
+- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 2 weeks ago)
   - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 1 week ago)
+- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 2 weeks ago)
   - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
 
 ### Recent starred projects ⭐️
@@ -67,13 +67,13 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 
 - [WoozyMasta/png](https://github.com/WoozyMasta/png) (4)
   - Drop-in accelerated image/png using klauspost zlib, SIMD and decoder optimizations.
-- [emmansun/base64](https://github.com/emmansun/base64) (17)
+- [emmansun/base64](https://github.com/emmansun/base64) (16)
   - Base64 with SIMD acceleration
 - [gen2brain/base64](https://github.com/gen2brain/base64) (4)
   - SIMD-accelerated encoding/base64
 - [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
   - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4380)
+- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4472)
   - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
 
 ### 🎙️ Podcast
@@ -82,11 +82,11 @@ If you appreciate my work, then [please consider sponsoring me too](https://gith
 I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
 Here are some recent episodes:
 
-- [Clearing the Decks](https://linuxmatters.sh/85/) (1 week ago)
+- [Moodling the Fediverse in Europe](https://linuxmatters.sh/86/) (today)
+- [Clearing the Decks](https://linuxmatters.sh/85/) (2 weeks ago)
 - [DOSing about with games](https://linuxmatters.sh/84/) (1 month ago)
 - [snap install flatpak](https://linuxmatters.sh/83/) (1 month ago)
 - [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
-- [Cooking up a framework desktop](https://linuxmatters.sh/81/) (2 months ago)
 
 ### 📺️ YouTube
 <a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
