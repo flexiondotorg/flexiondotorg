@@ -1,0 +1,91 @@
+version: "2"
+linters:
+  enable:
+    - bodyclose
+    - copyloopvar
+    - dupword
+    - errorlint
+    - gocritic
+    - gosec
+    - govet
+    - ineffassign
+    - intrange
+    - misspell
+    - noctx
+    - revive
+    - staticcheck
+    - unconvert
+    - unparam
+    - usestdlibvars
+    - wastedassign
+  settings:
+    gosec:
+      excludes:
+        - G306
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+        - shadow
+    revive:
+      rules:
+        - name: blank-imports
+        - name: context-as-argument
+        - name: dot-imports
+        - name: error-return
+        - name: error-strings
+        - name: error-naming
+        - name: exported
+        - name: increment-decrement
+        - name: var-naming
+        - name: range
+        - name: receiver-naming
+        - name: time-naming
+        - name: unexported-return
+        - name: indent-error-flow
+        - name: errorf
+        - name: empty-block
+        - name: superfluous-else
+        - name: unreachable-code
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      # Test fixtures use credentialed proxy URLs to exercise credential
+      # stripping; they are not real secrets.
+      - path: _test\.go
+        text: "G101"
+        linters:
+          - gosec
+      # The rasterise and placement-score dev tools open an operator-supplied
+      # path by design: the operator names the model, text-map, or frame
+      # directory.
+      - path: tools/(rasterise|placement-score)/main\.go
+        text: "G703"
+        linters:
+          - gosec
+      # audioSinkPresent stats fixed well-known sound-server socket names
+      # (pulse/native, pipewire-0) under the user's own XDG_RUNTIME_DIR.
+      # The joined leaf names are constants, not attacker-controlled path
+      # traversal.
+      - path: internal/engine/audio_linux\.go
+        text: "G703"
+        linters:
+          - gosec
+    paths:
+      - (^|/)third_party(/|$)
+      - (^|/)builtin(/|$)
+      - (^|/)examples(/|$)
+formatters:
+  enable:
+    - gofumpt
+  exclusions:
+    generated: lax
+    paths:
+      - (^|/)third_party(/|$)
+      - (^|/)builtin(/|$)
+      - (^|/)examples(/|$)
