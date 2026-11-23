@@ -131,9 +131,10 @@ ruleset:
 # branch: omit to use the current repository default branch.
 # cname: omit to preserve the domain, use "" to clear it, or set a domain.
 pages:
-  enabled: false
+  enabled: true
   generator: static
   path: pages
+  cname: wimpys.world
   links:
     website: https://wimpys.world/
     forum: ""
@@ -159,7 +160,6 @@ pages:
     email: ""
     feed: ""
   # branch: main
-  # cname: www.example.com
   # Static only. Omit links to leave the page unchanged; {} clears its marked links.
   # Use full HTTPS URLs, or a bare address for email. Empty values add no icon.
   # links:
