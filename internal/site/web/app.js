@@ -101,6 +101,12 @@ const HOST_META = {
 
 const FLIP_IN_MS = 460;
 const FLIP_OUT_MS = 340;
+const DECK_STACK_SLICES = 7;
+const DECK_STACK_MAX_LIFT = 14;
+const DEAL_STAGGER_SEC = 0.062;
+const RECALL_STAGGER_SEC = 0.03;
+const RECALL_FLIGHT_SEC = 0.31;
+const CHAIN_PAUSE_SEC = 0.09;
 
 const BALATRO_FRAG = `
 precision highp float;
@@ -190,13 +196,16 @@ const state = {
   particlesLayer: null,
   shadowTex: null,
   deckShadowTex: null,
+  deckSliceTex: null,
   foilTex: null,
   sparkleTex: null,
 
   // Live records
   deckRecords: [],
   cardRecords: [],
-  exitingCards: [],
+  recallingCards: [],
+  pendingDeck: null,
+  chainDelay: 0,
   particles: [],
   artworkCache: new Map(),
 
@@ -209,8 +218,9 @@ const state = {
     originY: 96,
     viewportW: window.innerWidth,
     viewportH: window.innerHeight,
-    deckW: 176,
-    deckH: 94,
+    deckW: 104,
+    deckH: 146,
+    deckGap: 28,
     cardScale: 1,
     cols: 4,
   },
@@ -983,104 +993,179 @@ function drawCardFaceToCanvas(canvas, deckKey, item, p, artwork) {
 }
 
 // ---------------------------------------------------------------------------
-// Tactile stacked deck texture painter (Projects, Links, Media)
+// Portrait 5:7 physical card-deck painters (placeholder, stack slice, card back)
 // ---------------------------------------------------------------------------
 
-function drawDeckStackCanvas(canvas, deck, count, isActive, w, h, p) {
+function buildDeckSliceTexture(w, h, p) {
+  const { canvas, ctx } = createCanvas(w, h);
+  const radius = 11;
+  roundedRectPath(ctx, 1, 1, w - 2, h - 2, radius);
+  ctx.fillStyle = p.name === 'latte' ? p.surface0 : p.mantle;
+  ctx.fill();
+  ctx.strokeStyle = p.surface1;
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
+  // Subtle bottom card-edge highlight so stacked layers read clearly
+  ctx.strokeStyle = p.name === 'latte' ? 'rgba(255, 255, 255, 0.55)' : 'rgba(205, 214, 244, 0.14)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(radius, h - 2.2);
+  ctx.lineTo(w - radius, h - 2.2);
+  ctx.stroke();
+
+  return canvasToTexture(canvas);
+}
+
+function drawDeckPlaceholderCanvas(canvas, deck, totalCount, isActive, w, h, p) {
   const ctx = canvas.getContext('2d');
   ctx.save();
   ctx.setTransform(TEX_SCALE, 0, 0, TEX_SCALE, 0, 0);
   ctx.clearRect(0, 0, w, h);
 
   const acc = accentColor(p, deck.accent);
-  const stackPad = 8;
-  const topW = w - 6;
-  const topH = h - stackPad - 2;
-  const radius = 13;
+  const radius = 11;
 
-  // Draw 3 layered lower card edges to look like a real physical deck stack
-  for (let layer = 3; layer >= 1; layer -= 1) {
-    const oy = layer * 2.6;
-    const inset = layer * 1.6;
-    roundedRectPath(ctx, 3 + inset, oy + 1, topW - inset * 2, topH, radius);
-    ctx.fillStyle = layer % 2 === 0 ? p.surface0 : p.mantle;
-    ctx.fill();
-    ctx.strokeStyle = p.surface1;
-    ctx.lineWidth = 1;
-    ctx.stroke();
-  }
-
-  // Top card of stack
-  ctx.save();
-  roundedRectPath(ctx, 3, 1, topW, topH, radius);
-  ctx.fillStyle = isActive ? p.base : p.mantle;
+  // Recessed tabletop card slot
+  roundedRectPath(ctx, 1.5, 1.5, w - 3, h - 3, radius);
+  ctx.fillStyle = p.name === 'latte' ? 'rgba(188, 192, 204, 0.34)' : 'rgba(17, 17, 27, 0.44)';
   ctx.fill();
-  ctx.clip();
 
-  // Subtle Balatro diagonal card-back diamond motif
-  ctx.strokeStyle = isActive
-    ? (p.name === 'latte' ? 'rgba(136, 57, 239, 0.11)' : 'rgba(203, 166, 247, 0.11)')
-    : (p.name === 'latte' ? 'rgba(76, 79, 105, 0.06)' : 'rgba(205, 214, 244, 0.05)');
-  ctx.lineWidth = 1;
-  for (let x = -topH; x < topW + topH; x += 14) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x + topH, topH);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(x + topH, 0);
-    ctx.lineTo(x, topH);
-    ctx.stroke();
-  }
+  // Crisp dashed placeholder border
+  ctx.save();
+  ctx.setLineDash([6, 4]);
+  ctx.strokeStyle = isActive ? acc : p.surface1;
+  ctx.globalAlpha = isActive ? 0.85 : 0.65;
+  ctx.lineWidth = isActive ? 1.8 : 1.3;
+  ctx.stroke();
+  ctx.restore();
 
-  // Top aurora bar
-  const grad = ctx.createLinearGradient(3, 0, 3 + topW, 0);
-  grad.addColorStop(0, acc);
-  grad.addColorStop(1, p.blue);
-  ctx.fillStyle = grad;
-  ctx.fillRect(3, 1, topW, isActive ? 4.5 : 3);
+  // Subtle corner registration pips
+  ctx.fillStyle = isActive ? acc : p.muted;
+  ctx.globalAlpha = isActive ? 0.72 : 0.4;
+  ctx.font = `600 9px ${FONT_MONO}`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText('◆', 9, 8);
+  ctx.textAlign = 'right';
+  ctx.textBaseline = 'bottom';
+  ctx.fillText('◆', w - 9, h - 8);
+  ctx.globalAlpha = 1;
 
-  // Subtle inner card-back inset border
-  roundedRectPath(ctx, 8, 7, topW - 10, topH - 11, 9);
-  ctx.strokeStyle = isActive ? acc : p.innerFrame;
-  ctx.globalAlpha = isActive ? 0.35 : 1;
+  // Centred deck label + dealt indicator
+  ctx.font = `700 ${w < 96 ? 12.5 : 14}px ${FONT_SANS}`;
+  ctx.fillStyle = isActive ? p.text : p.subtext;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(deck.label, w / 2, h * 0.45);
+
+  const subStr = `${totalCount} dealt`;
+  ctx.font = `600 ${w < 96 ? 9 : 10}px ${FONT_MONO}`;
+  const pillW = Math.min(w - 18, ctx.measureText(subStr).width + 14);
+  const pillH = 18;
+  const pillX = w / 2 - pillW / 2;
+  const pillY = h * 0.65 - pillH / 2;
+  roundedRectPath(ctx, pillX, pillY, pillW, pillH, 9);
+  ctx.fillStyle = p.name === 'latte' ? 'rgba(239, 241, 245, 0.75)' : 'rgba(30, 30, 46, 0.72)';
+  ctx.fill();
+  ctx.strokeStyle = isActive ? acc : p.surface1;
+  ctx.globalAlpha = isActive ? 0.65 : 0.5;
   ctx.lineWidth = 1;
   ctx.stroke();
   ctx.globalAlpha = 1;
 
+  ctx.fillStyle = isActive ? acc : p.muted;
+  ctx.fillText(subStr, w / 2, pillY + pillH / 2 + 0.5);
+
+  ctx.restore();
+}
+
+function drawDeckTopCardCanvas(canvas, deck, isHighlighted, w, h, p) {
+  const ctx = canvas.getContext('2d');
+  ctx.save();
+  ctx.setTransform(TEX_SCALE, 0, 0, TEX_SCALE, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+
+  const acc = accentColor(p, deck.accent);
+  const radius = 11;
+
+  ctx.save();
+  roundedRectPath(ctx, 1, 1, w - 2, h - 2, radius);
+  ctx.fillStyle = isHighlighted ? p.base : p.mantle;
+  ctx.fill();
+  ctx.clip();
+
+  // Balatro diagonal card-back diamond lattice
+  ctx.strokeStyle = isHighlighted
+    ? (p.name === 'latte' ? 'rgba(136, 57, 239, 0.13)' : 'rgba(203, 166, 247, 0.13)')
+    : (p.name === 'latte' ? 'rgba(76, 79, 105, 0.07)' : 'rgba(205, 214, 244, 0.06)');
+  ctx.lineWidth = 1;
+  for (let x = -h; x < w + h; x += 12) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x + h, h);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x + h, 0);
+    ctx.lineTo(x, h);
+    ctx.stroke();
+  }
+
+  // Top Catppuccin aurora bar
+  const grad = ctx.createLinearGradient(0, 0, w, 0);
+  grad.addColorStop(0, acc);
+  grad.addColorStop(0.65, p.blue);
+  grad.addColorStop(1, p.teal);
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, w, isHighlighted ? 4 : 3);
+
+  // Ornate inner playing-card frame
+  roundedRectPath(ctx, 6, 7.5, w - 12, h - 13.5, 7);
+  ctx.strokeStyle = isHighlighted ? acc : p.surface1;
+  ctx.globalAlpha = isHighlighted ? 0.55 : 0.72;
+  ctx.lineWidth = 1;
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
+  // Subtle corner card pips
+  ctx.fillStyle = acc;
+  ctx.globalAlpha = 0.78;
+  ctx.font = `600 9px ${FONT_MONO}`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText('◆', 10, 11);
+  ctx.textAlign = 'right';
+  ctx.textBaseline = 'bottom';
+  ctx.fillText('◆', w - 10, h - 10);
+  ctx.globalAlpha = 1;
+
   // Deck title
-  ctx.font = `700 ${w < 130 ? 13.5 : 16}px ${FONT_SANS}`;
+  ctx.font = `700 ${w < 96 ? 13 : 14.5}px ${FONT_SANS}`;
   ctx.fillStyle = p.text;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText(deck.label, w / 2, topH * 0.42);
+  ctx.fillText(deck.label, w / 2, h * 0.44);
 
-  // Card count pill
-  const countStr = `${count} ${count === 1 ? 'card' : 'cards'}`;
-  ctx.font = `600 ${w < 130 ? 10 : 11}px ${FONT_MONO}`;
-  const pillW = Math.min(topW - 20, ctx.measureText(countStr).width + 18);
+  // Pill backing for dynamic PIXI.Text live count
+  const pillW = w < 96 ? 50 : 58;
   const pillH = 20;
   const pillX = w / 2 - pillW / 2;
-  const pillY = topH * 0.68 - pillH / 2;
-
+  const pillY = h * 0.65 - pillH / 2;
   roundedRectPath(ctx, pillX, pillY, pillW, pillH, 10);
-  ctx.fillStyle = isActive ? acc : p.base;
+  ctx.fillStyle = isHighlighted ? acc : p.base;
   ctx.fill();
-  if (!isActive) {
+  if (!isHighlighted) {
     ctx.strokeStyle = p.surface1;
     ctx.lineWidth = 1;
     ctx.stroke();
   }
 
-  ctx.fillStyle = isActive ? (p.name === 'latte' ? '#eff1f5' : '#11111b') : p.subtext;
-  ctx.fillText(countStr, w / 2, pillY + pillH / 2 + 0.5);
-
   ctx.restore();
 
-  // Crisp outer border
-  roundedRectPath(ctx, 3, 1, topW, topH, radius);
-  ctx.strokeStyle = isActive ? acc : p.surface1;
-  ctx.lineWidth = isActive ? 2 : 1.5;
+  // Outer crisp playing-card border
+  roundedRectPath(ctx, 1, 1, w - 2, h - 2, radius);
+  ctx.strokeStyle = isHighlighted ? acc : p.surface1;
+  ctx.lineWidth = isHighlighted ? 2 : 1.5;
   ctx.stroke();
 
   ctx.restore();
@@ -1210,17 +1295,100 @@ function updateBackgroundTheme() {
   }
 }
 
+function findDeckRecord(deckKey) {
+  return state.deckRecords.find((d) => d.deck.key === deckKey) || null;
+}
+
+function effectiveDeckKey() {
+  return state.pendingDeck || state.activeDeck;
+}
+
+function redrawDeckRecordTextures(drec, p) {
+  const { deckW, deckH } = state.layout;
+  const isSelected = effectiveDeckKey() === drec.deck.key;
+  drawDeckPlaceholderCanvas(drec.placeholderCanvas, drec.deck, drec.totalCount, isSelected, deckW, deckH, p);
+  drec.placeholderTex.source.update();
+  drawDeckTopCardCanvas(drec.topCardCanvas, drec.deck, isSelected, deckW, deckH, p);
+  drec.topCardTex.source.update();
+  if (drec.countText) {
+    drec.countText.style.fill = isSelected ? (p.name === 'latte' ? '#eff1f5' : '#11111b') : p.subtext;
+  }
+}
+
+function syncDeckVisual(drec, p, dt, snap) {
+  const ratio = drec.totalCount > 0
+    ? Math.max(0, Math.min(1, drec.remainingCount / drec.totalCount))
+    : 0;
+  const targetLift = drec.remainingCount > 0
+    ? Math.max(1.5, ratio * DECK_STACK_MAX_LIFT)
+    : 0;
+  const targetStackScale = drec.remainingCount > 0
+    ? 0.93 + 0.07 * ratio
+    : 0.93;
+
+  if (snap) {
+    drec.visualLift = targetLift;
+    drec.stackScale = targetStackScale;
+  } else {
+    const step = Math.min(1, dt * 22);
+    drec.visualLift += (targetLift - drec.visualLift) * step;
+    drec.stackScale += (targetStackScale - drec.stackScale) * step;
+  }
+
+  const hasCards = drec.remainingCount > 0;
+  const visibleSlices = drec.remainingCount > 1
+    ? Math.max(1, Math.min(DECK_STACK_SLICES, Math.ceil(((drec.remainingCount - 1) / Math.max(1, drec.totalCount - 1)) * DECK_STACK_SLICES)))
+    : 0;
+
+  drec.stackGroup.visible = hasCards;
+  for (let k = 0; k < drec.stackSlices.length; k += 1) {
+    const sl = drec.stackSlices[k];
+    const show = k < visibleSlices;
+    sl.visible = show;
+    if (show) {
+      const frac = k / Math.max(1, visibleSlices);
+      const liftY = -(frac * drec.visualLift);
+      sl.position.set(0, liftY);
+      const sliceScale = 0.93 + 0.07 * ((k + 1) / Math.max(1, DECK_STACK_SLICES)) * ratio;
+      sl.scale.set(sliceScale);
+    }
+  }
+
+  drec.topCardGroup.visible = hasCards;
+  if (hasCards) {
+    const catchScale = drec.catchBump > 0 ? Math.sin(drec.catchBump * Math.PI) * 0.05 : 0;
+    const recoilY = drec.recoil > 0 ? Math.sin(drec.recoil * Math.PI) * 3.5 : 0;
+    drec.topCardGroup.position.set(0, -drec.visualLift + recoilY);
+    drec.topCardGroup.scale.set(drec.stackScale + catchScale);
+
+    const countStr = String(drec.remainingCount);
+    if (drec.lastRenderedCount !== countStr && drec.countText) {
+      drec.countText.text = countStr;
+      drec.lastRenderedCount = countStr;
+    }
+  }
+
+  if (drec.shadowSprite) {
+    drec.shadowSprite.alpha = hasCards ? p.shadowAlpha * 0.85 * (0.42 + 0.58 * ratio) : 0;
+    drec.shadowSprite.y = 5 + drec.visualLift * 0.35;
+  }
+}
+
 function refreshPixiForTheme() {
   const p = palette();
   updateBackgroundTheme();
 
+  if (state.deckSliceTex) {
+    state.deckSliceTex.destroy(true);
+  }
+  state.deckSliceTex = buildDeckSliceTexture(state.layout.deckW, state.layout.deckH, p);
+
   for (const drec of state.deckRecords) {
-    const count = deckItems(drec.deck.key).length;
-    drawDeckStackCanvas(drec.canvas, drec.deck, count, state.activeDeck === drec.deck.key, state.layout.deckW, state.layout.deckH, p);
-    drec.texture.source.update();
-    if (drec.shadowSprite) {
-      drec.shadowSprite.alpha = p.shadowAlpha * 0.85;
+    for (const sl of drec.stackSlices) {
+      sl.texture = state.deckSliceTex;
     }
+    redrawDeckRecordTextures(drec, p);
+    syncDeckVisual(drec, p, 0, true);
   }
 
   for (const rec of state.cardRecords) {
@@ -1241,7 +1409,7 @@ function refreshPixiForTheme() {
 }
 
 // ---------------------------------------------------------------------------
-// Layout geometry (decks above floating cards, open zero-chrome tabletop)
+// Layout geometry (portrait 5:7 decks above floating cards, open tabletop)
 // ---------------------------------------------------------------------------
 
 function measureLayout() {
@@ -1251,9 +1419,9 @@ function measureLayout() {
   const originY = Math.round(spacerRect.top + window.scrollY);
 
   const narrow = viewportW < 600;
-  const deckGap = narrow ? 10 : 20;
-  const deckW = narrow ? Math.max(96, Math.floor((viewportW - 28 - deckGap * 2) / 3)) : 176;
-  const deckH = narrow ? 84 : 96;
+  const deckGap = narrow ? 14 : 28;
+  const deckW = narrow ? Math.max(78, Math.min(92, Math.floor((viewportW - 36 - deckGap * 2) / 3))) : 104;
+  const deckH = Math.round(deckW * (CARD_H / CARD_W));
 
   const usableW = Math.min(1260, Math.max(260, viewportW - (narrow ? 24 : 56)));
   const cardGapX = narrow ? 16 : 26;
@@ -1279,67 +1447,125 @@ function measureLayout() {
   };
 }
 
-function buildDecks() {
+function buildDecks(preserveCounts) {
   if (!state.decksLayer) {
     return;
   }
 
+  const prevCounts = new Map();
+  if (preserveCounts) {
+    for (const old of state.deckRecords) {
+      prevCounts.set(old.deck.key, old.remainingCount);
+    }
+  }
+
   for (const old of state.deckRecords) {
     old.container.destroy({ children: true });
-    old.texture.destroy(true);
+    old.placeholderTex.destroy(true);
+    old.topCardTex.destroy(true);
   }
   state.deckRecords = [];
   if (state.deckShadowTex) {
     state.deckShadowTex.destroy(true);
   }
+  if (state.deckSliceTex) {
+    state.deckSliceTex.destroy(true);
+  }
 
   const p = palette();
   const { viewportW, originY, deckW, deckH, deckGap } = state.layout;
-  state.deckShadowTex = buildSoftShadowTexture(deckW, deckH, 13, 18);
+  state.deckShadowTex = buildSoftShadowTexture(deckW, deckH, 11, 16);
+  state.deckSliceTex = buildDeckSliceTexture(deckW, deckH, p);
 
   const totalW = DECKS.length * deckW + (DECKS.length - 1) * deckGap;
   const startX = (viewportW - totalW) / 2;
-  const centerY = originY + 12 + deckH / 2;
+  const centerY = originY + DECK_STACK_MAX_LIFT + 8 + deckH / 2;
 
   if (els.a11yDecks) {
     els.a11yDecks.textContent = '';
   }
 
+  const selectedKey = effectiveDeckKey();
+
   DECKS.forEach((deck, idx) => {
-    const count = deckItems(deck.key).length;
-    const isActive = state.activeDeck === deck.key;
-    const { canvas } = createCanvas(deckW, deckH);
-    drawDeckStackCanvas(canvas, deck, count, isActive, deckW, deckH, p);
-    const texture = canvasToTexture(canvas);
+    const totalCount = deckItems(deck.key).length;
+    const isSelected = selectedKey === deck.key;
+    const remainingCount = prevCounts.has(deck.key) ? prevCounts.get(deck.key) : totalCount;
+
+    const { canvas: placeholderCanvas } = createCanvas(deckW, deckH);
+    drawDeckPlaceholderCanvas(placeholderCanvas, deck, totalCount, isSelected, deckW, deckH, p);
+    const placeholderTex = canvasToTexture(placeholderCanvas);
+
+    const { canvas: topCardCanvas } = createCanvas(deckW, deckH);
+    drawDeckTopCardCanvas(topCardCanvas, deck, isSelected, deckW, deckH, p);
+    const topCardTex = canvasToTexture(topCardCanvas);
 
     const container = new PIXI.Container();
     const homeX = startX + idx * (deckW + deckGap) + deckW / 2;
     const homeY = centerY;
     container.position.set(homeX, homeY);
 
+    // 1. Recessed dashed placeholder mat always sits at deck origin
+    const placeholderSprite = new PIXI.Sprite(placeholderTex);
+    placeholderSprite.anchor.set(0.5);
+    placeholderSprite.width = deckW;
+    placeholderSprite.height = deckH;
+    container.addChild(placeholderSprite);
+
+    // 2. Dynamic drop shadow underneath physical stack
     const shadowSprite = new PIXI.Sprite(state.deckShadowTex);
     shadowSprite.anchor.set(0.5);
-    shadowSprite.position.set(0, 7);
+    shadowSprite.position.set(0, 6);
     shadowSprite.alpha = p.shadowAlpha * 0.85;
     container.addChild(shadowSprite);
 
-    const sprite = new PIXI.Sprite(texture);
-    sprite.anchor.set(0.5);
-    sprite.width = deckW;
-    sprite.height = deckH;
-    container.addChild(sprite);
+    // 3. Layered card-edge stack group (thins card-by-card as deck deals out)
+    const stackGroup = new PIXI.Container();
+    const stackSlices = [];
+    for (let s = 0; s < DECK_STACK_SLICES; s += 1) {
+      const sl = new PIXI.Sprite(state.deckSliceTex);
+      sl.anchor.set(0.5);
+      sl.width = deckW;
+      sl.height = deckH;
+      stackGroup.addChild(sl);
+      stackSlices.push(sl);
+    }
+    container.addChild(stackGroup);
+
+    // 4. Top card-back sprite + live card counter
+    const topCardGroup = new PIXI.Container();
+    const topCardSprite = new PIXI.Sprite(topCardTex);
+    topCardSprite.anchor.set(0.5);
+    topCardSprite.width = deckW;
+    topCardSprite.height = deckH;
+    topCardGroup.addChild(topCardSprite);
+
+    const countText = new PIXI.Text({
+      text: String(remainingCount),
+      style: {
+        fontFamily: FONT_MONO,
+        fontSize: deckW < 96 ? 10 : 11,
+        fontWeight: '600',
+        fill: isSelected ? (p.name === 'latte' ? '#eff1f5' : '#11111b') : p.subtext,
+      },
+    });
+    countText.anchor.set(0.5);
+    countText.position.set(0, Math.round(deckH * 0.15) + 0.5);
+    countText.resolution = Math.min(window.devicePixelRatio || 1, 2);
+    topCardGroup.addChild(countText);
+    container.addChild(topCardGroup);
 
     state.decksLayer.addChild(container);
 
-    const btn = el('button', 'a11y-deck-btn', `${deck.label} deck, ${count} ${count === 1 ? 'card' : 'cards'}`);
+    const btn = el('button', 'a11y-deck-btn', `${deck.label} deck, ${totalCount} ${totalCount === 1 ? 'card' : 'cards'}`);
     btn.type = 'button';
     btn.dataset.deck = deck.key;
-    btn.setAttribute('aria-pressed', String(isActive));
-    btn.setAttribute('aria-label', `${deck.label} deck (${count} ${count === 1 ? 'card' : 'cards'})`);
+    btn.setAttribute('aria-pressed', String(isSelected));
+    btn.setAttribute('aria-label', `${deck.label} deck (${totalCount} ${totalCount === 1 ? 'card' : 'cards'})`);
     btn.style.left = `${Math.round(homeX - deckW / 2)}px`;
-    btn.style.top = `${Math.round(homeY - originY - deckH / 2)}px`;
+    btn.style.top = `${Math.round(homeY - originY - deckH / 2 - DECK_STACK_MAX_LIFT / 2)}px`;
     btn.style.width = `${Math.round(deckW)}px`;
-    btn.style.height = `${Math.round(deckH)}px`;
+    btn.style.height = `${Math.round(deckH + DECK_STACK_MAX_LIFT / 2)}px`;
 
     btn.addEventListener('pointerenter', () => {
       state.hoveredDeckKey = deck.key;
@@ -1364,20 +1590,36 @@ function buildDecks() {
       els.a11yDecks.appendChild(btn);
     }
 
-    state.deckRecords.push({
+    const drec = {
       deck,
-      canvas,
-      texture,
+      totalCount,
+      remainingCount,
+      lastRenderedCount: String(remainingCount),
+      visualLift: 0,
+      stackScale: 1,
+      placeholderCanvas,
+      placeholderTex,
+      placeholderSprite,
+      topCardCanvas,
+      topCardTex,
+      topCardGroup,
+      topCardSprite,
+      countText,
+      stackGroup,
+      stackSlices,
       container,
       shadowSprite,
-      sprite,
       btn,
       homeX,
       homeY,
       scale: 1,
       pressBounce: 0,
-      rot: (idx - 1) * 0.018,
-    });
+      recoil: 0,
+      catchBump: 0,
+      rot: (idx - 1) * 0.022,
+    };
+    syncDeckVisual(drec, p, 0, true);
+    state.deckRecords.push(drec);
   });
 }
 
@@ -1391,7 +1633,7 @@ function computeCardSlots(count) {
   const { viewportW, originY, deckH, effW, effH, cardGapX, cardGapY, cols } = state.layout;
   const effCols = Math.max(1, Math.min(cols, count));
   const rows = Math.ceil(count / effCols);
-  const cardsTopY = originY + 12 + deckH + 34;
+  const cardsTopY = originY + DECK_STACK_MAX_LIFT + 8 + deckH + 30;
 
   const slots = [];
   let maxBottom = cardsTopY + 180;
@@ -1425,28 +1667,99 @@ function computeCardSlots(count) {
   return slots;
 }
 
-function whipOutCurrentCards() {
+function destroyCardRecord(rec) {
+  if (!rec || rec.destroyed) {
+    return;
+  }
+  rec.destroyed = true;
+  rec.container.destroy({ children: true });
+  rec.texture.destroy(true);
+}
+
+function flushRecallingCards() {
+  for (const rec of state.recallingCards) {
+    const homeDeck = findDeckRecord(rec.homeDeckKey || rec.deckKey);
+    if (homeDeck) {
+      homeDeck.remainingCount = Math.min(homeDeck.totalCount, homeDeck.remainingCount + 1);
+    }
+    destroyCardRecord(rec);
+  }
+  state.recallingCards = [];
+}
+
+function recallCurrentCards() {
   const reduced = isReducedMotion();
-  for (let i = 0; i < state.cardRecords.length; i += 1) {
-    const rec = state.cardRecords[i];
-    if (reduced) {
-      rec.destroyed = true;
-      rec.container.destroy({ children: true });
-      rec.texture.destroy(true);
+  if (els.a11yCards) {
+    els.a11yCards.textContent = '';
+  }
+
+  if (reduced) {
+    for (const rec of state.cardRecords) {
+      destroyCardRecord(rec);
+    }
+    state.cardRecords = [];
+    flushRecallingCards();
+    for (const drec of state.deckRecords) {
+      drec.remainingCount = drec.totalCount;
+    }
+    state.hoveredCardId = null;
+    state.focusedCardId = null;
+    return false;
+  }
+
+  // Reclaim nearest cards first so front rows clear a clean path for rows behind them.
+  const launched = [];
+  for (const rec of state.cardRecords) {
+    if (!rec.launched) {
+      // Never left its home deck; discard immediately and keep it counted in the stack.
+      destroyCardRecord(rec);
       continue;
     }
-    const side = i % 2 === 0 ? -1 : 1;
-    rec.exiting = true;
-    rec.exitVx = side * (2250 + Math.abs(seeded(i + 9)) * 450);
-    rec.exitVy = -180 + seeded(i + 23) * 260;
-    rec.exitVRot = side * (8.5 + Math.abs(seeded(i + 13)) * 3.5);
-    rec.exitLife = 0.3;
-    rec.container.zIndex = 5;
-    state.exitingCards.push(rec);
+    const homeDeck = findDeckRecord(rec.deckKey);
+    const tx = homeDeck ? homeDeck.homeX : state.layout.viewportW / 2;
+    const ty = homeDeck ? homeDeck.homeY : state.layout.originY + 90;
+    launched.push({
+      rec,
+      dist: Math.hypot(rec.x - tx, rec.y - ty),
+    });
   }
+  launched.sort((a, b) => a.dist - b.dist || a.rec.index - b.rec.index);
+
+  for (let queued = 0; queued < launched.length; queued += 1) {
+    const { rec } = launched[queued];
+    const homeDeck = findDeckRecord(rec.deckKey);
+    const targetX = homeDeck ? homeDeck.homeX : state.layout.viewportW / 2;
+    const dx = targetX - rec.x;
+    const leanDir = dx === 0 ? (queued % 2 === 0 ? -1 : 1) : (dx > 0 ? 1 : -1);
+    const bankDeg = 22 + Math.abs(seeded(rec.index + 13)) * 13;
+
+    rec.recalling = true;
+    rec.homeDeckKey = rec.deckKey;
+    rec.recallFromX = rec.x;
+    rec.recallFromY = rec.y;
+    rec.recallFromRot = rec.rot;
+    rec.recallFromScaleX = rec.scaleX;
+    rec.recallFromScaleY = rec.scaleY;
+    rec.recallDelay = queued * RECALL_STAGGER_SEC;
+    rec.recallElapsed = 0;
+    rec.recallDur = RECALL_FLIGHT_SEC;
+    rec.recallSpin = leanDir * bankDeg * (Math.PI / 180);
+    rec.recallArcX = leanDir * (18 + Math.abs(seeded(rec.index + 19)) * 24);
+    rec.hoverOutline.alpha = 0;
+    rec.foilSprite.alpha = 0;
+    rec.container.skew.set(0, 0);
+    rec.container.zIndex = 140 + (launched.length - queued);
+    state.recallingCards.push(rec);
+  }
+
   state.cardRecords = [];
   state.hoveredCardId = null;
   state.focusedCardId = null;
+  if (launched.length > 0) {
+    state.swirlBoost = 1.6;
+    state.chainDelay = CHAIN_PAUSE_SEC;
+  }
+  return launched.length > 0;
 }
 
 function spawnDealSparkles(x, y, accentHex) {
@@ -1477,29 +1790,91 @@ function spawnDealSparkles(x, y, accentHex) {
   }
 }
 
+function spawnDeckArrivalSparkles(x, y, accentHex) {
+  if (!state.particlesLayer || !state.sparkleTex || isReducedMotion()) {
+    return;
+  }
+  const color = hexToNumber(accentHex);
+  const count = 4;
+  for (let i = 0; i < count; i += 1) {
+    const sp = new PIXI.Sprite(state.sparkleTex);
+    sp.anchor.set(0.5);
+    sp.tint = color;
+    const angle = (Math.PI * 2 * i) / count + seeded(x + y + i * 5) * 0.9;
+    const dist = 24 + Math.abs(seeded(y + i * 7)) * 28;
+    sp.position.set(x + Math.cos(angle) * dist, y + Math.sin(angle) * dist * 1.15);
+    sp.scale.set(0.5 + Math.abs(seeded(i + 11)) * 0.45);
+    sp.alpha = 0.95;
+    state.particlesLayer.addChild(sp);
+
+    state.particles.push({
+      sprite: sp,
+      vx: Math.cos(angle) * (55 + Math.abs(seeded(i + 13)) * 45),
+      vy: Math.sin(angle) * (55 + Math.abs(seeded(i + 17)) * 45) - 24,
+      vRot: (i % 2 === 0 ? 1 : -1) * 4.6,
+      life: 0.34,
+      maxLife: 0.34,
+    });
+  }
+}
+
 function dealDeck(deckKey) {
   if (!state.cardsLayer) {
     return;
   }
 
-  whipOutCurrentCards();
+  for (const old of state.cardRecords) {
+    destroyCardRecord(old);
+  }
+  state.cardRecords = [];
+  state.hoveredCardId = null;
+  state.focusedCardId = null;
 
   const items = deckItems(deckKey);
   const p = palette();
   const reduced = isReducedMotion();
-  const { viewportW, originY, cardScale, effW, effH } = state.layout;
+  const { originY, cardScale, effW, effH, deckW } = state.layout;
   const slots = computeCardSlots(items.length);
+  const homeDeck = findDeckRecord(deckKey);
+  const deckScale = Math.max(0.32, (deckW / CARD_W) * cardScale);
+
+  for (const drec of state.deckRecords) {
+    if (drec.deck.key === deckKey) {
+      drec.remainingCount = reduced ? 0 : items.length;
+    } else {
+      drec.remainingCount = drec.totalCount;
+    }
+    redrawDeckRecordTextures(drec, p);
+    syncDeckVisual(drec, p, 0, true);
+  }
 
   if (!reduced) {
-    state.swirlBoost = 2.4;
+    state.swirlBoost = 2.2;
   }
 
   if (els.a11yCards) {
     els.a11yCards.textContent = '';
   }
 
+  const originDeckX = homeDeck ? homeDeck.homeX : state.layout.viewportW / 2;
+  const originDeckY = homeDeck ? homeDeck.homeY - homeDeck.visualLift : originY + 90;
+  const originDeckRot = homeDeck ? homeDeck.rot : 0;
+
+  // Deal farthest destinations first so later cards never cross over settled foreground cards.
+  const dealOrderByIdx = new Array(items.length);
+  items
+    .map((_, idx) => ({
+      idx,
+      dist: Math.hypot(slots[idx].x - originDeckX, slots[idx].y - originDeckY),
+    }))
+    .sort((a, b) => b.dist - a.dist || b.idx - a.idx)
+    .forEach((entry, order) => {
+      dealOrderByIdx[entry.idx] = order;
+    });
+
   items.forEach((item, idx) => {
     const slot = slots[idx];
+    const dealOrder = dealOrderByIdx[idx];
     const cardId = `${deckKey}:${item.id || idx}`;
     const accent = resolveCardAccent(deckKey, item, p);
     const { canvas } = createCanvas(CARD_W, CARD_H);
@@ -1507,7 +1882,7 @@ function dealDeck(deckKey) {
     const texture = canvasToTexture(canvas);
 
     const container = new PIXI.Container();
-    container.zIndex = 20 + idx;
+    container.zIndex = reduced ? 20 + idx : 120 + dealOrder;
 
     const shadowSprite = new PIXI.Sprite(state.shadowTex);
     shadowSprite.anchor.set(0.5);
@@ -1540,13 +1915,6 @@ function dealDeck(deckKey) {
     hoverOutline.alpha = 0;
     container.addChild(hoverOutline);
 
-    // Casino-dealer alternating off-screen fling start pose
-    const side = idx % 2 === 0 ? -1 : 1;
-    const startX = side < 0 ? -280 : viewportW + 280;
-    const startY = slot.y + seeded(idx + 5) * 85 - 35;
-    const spinDeg = 220 + Math.abs(seeded(idx + 11)) * 40;
-    const startRot = side * spinDeg * (Math.PI / 180);
-
     const rec = {
       id: cardId,
       deckKey,
@@ -1567,18 +1935,20 @@ function dealDeck(deckKey) {
       homeY: slot.y,
       baseRot: slot.baseRot,
 
-      x: reduced ? slot.x : startX,
-      y: reduced ? slot.y : startY,
+      x: reduced ? slot.x : originDeckX,
+      y: reduced ? slot.y : originDeckY,
       vx: 0,
       vy: 0,
-      rot: reduced ? slot.baseRot : startRot,
+      rot: reduced ? slot.baseRot : originDeckRot,
       vRot: 0,
-      scaleX: cardScale,
-      scaleY: cardScale,
+      scaleX: reduced ? cardScale : deckScale,
+      scaleY: reduced ? cardScale : deckScale,
       skewX: 0,
       skewY: 0,
 
-      dealDelay: reduced ? 0 : idx * 0.038,
+      dealOrder,
+      dealDelay: reduced ? 0 : dealOrder * DEAL_STAGGER_SEC,
+      launched: reduced,
       dealt: reduced,
       sparkled: reduced,
       pickedUp: false,
@@ -1592,7 +1962,8 @@ function dealDeck(deckKey) {
 
     container.position.set(rec.x, rec.y);
     container.rotation = rec.rot;
-    container.scale.set(cardScale);
+    container.scale.set(rec.scaleX, rec.scaleY);
+    container.visible = reduced;
     state.cardsLayer.addChild(container);
 
     // Accessible aligned button proxy for pointer & keyboard interaction
@@ -1687,6 +2058,18 @@ function handleCardKeyNav(ev, index) {
   }
 }
 
+function updateDeckSelectionStyles() {
+  const p = palette();
+  const selectedKey = effectiveDeckKey();
+  for (const drec of state.deckRecords) {
+    const isSelected = drec.deck.key === selectedKey;
+    redrawDeckRecordTextures(drec, p);
+    if (drec.btn) {
+      drec.btn.setAttribute('aria-pressed', String(isSelected));
+    }
+  }
+}
+
 function switchDeck(deckKey) {
   if (!DECKS.some((d) => d.key === deckKey)) {
     return;
@@ -1694,24 +2077,47 @@ function switchDeck(deckKey) {
   if (state.modalPhase !== 'closed') {
     cancelCardModal(false);
   }
-  const wasSame = state.activeDeck === deckKey;
-  state.activeDeck = deckKey;
 
-  const p = palette();
-  for (const drec of state.deckRecords) {
-    const isActive = drec.deck.key === deckKey;
-    const count = deckItems(drec.deck.key).length;
-    drawDeckStackCanvas(drec.canvas, drec.deck, count, isActive, state.layout.deckW, state.layout.deckH, p);
-    drec.texture.source.update();
-    if (drec.btn) {
-      drec.btn.setAttribute('aria-pressed', String(isActive));
-    }
-    if (isActive && !isReducedMotion()) {
-      drec.pressBounce = 1;
-    }
+  const targetDeck = findDeckRecord(deckKey);
+  if (targetDeck && !isReducedMotion()) {
+    targetDeck.pressBounce = 1;
   }
 
-  dealDeck(deckKey);
+  // Clicking the already-active dealt deck while idle is a calm no-op.
+  if (deckKey === state.activeDeck && state.recallingCards.length === 0 && !state.pendingDeck && state.cardRecords.length > 0) {
+    return;
+  }
+
+  const wasSame = effectiveDeckKey() === deckKey;
+  state.pendingDeck = deckKey;
+  updateDeckSelectionStyles();
+
+  if (isReducedMotion()) {
+    recallCurrentCards();
+    state.activeDeck = deckKey;
+    state.pendingDeck = null;
+    state.chainDelay = 0;
+    dealDeck(deckKey);
+    if (!wasSame) {
+      const meta = DECKS.find((d) => d.key === deckKey);
+      announce(`Dealt ${meta ? meta.label : deckKey} deck, ${deckItems(deckKey).length} cards.`);
+    }
+    return;
+  }
+
+  // If cards are currently on the table, vacuum them back into their home deck first.
+  if (state.cardRecords.length > 0) {
+    recallCurrentCards();
+  }
+
+  // If nothing is recalling, deal immediately.
+  if (state.recallingCards.length === 0) {
+    state.activeDeck = deckKey;
+    state.pendingDeck = null;
+    state.chainDelay = 0;
+    dealDeck(deckKey);
+  }
+
   if (!wasSame) {
     const meta = DECKS.find((d) => d.key === deckKey);
     announce(`Dealt ${meta ? meta.label : deckKey} deck, ${deckItems(deckKey).length} cards.`);
@@ -1738,25 +2144,41 @@ function relayoutScene() {
     }
   }
 
+  // Complete any in-flight recall cleanly on viewport resize so cards stay aligned.
+  if (state.recallingCards.length > 0) {
+    flushRecallingCards();
+  }
+  const queued = state.pendingDeck;
+  state.pendingDeck = null;
+  state.chainDelay = 0;
+
   measureLayout();
-  buildDecks();
+  buildDecks(true);
+
+  if (queued) {
+    state.activeDeck = queued;
+    dealDeck(queued);
+    return;
+  }
 
   const { originY, cardScale, effW, effH } = state.layout;
   const slots = computeCardSlots(state.cardRecords.length);
-  const reduced = isReducedMotion();
 
   state.cardRecords.forEach((rec, idx) => {
     const slot = slots[idx];
     rec.homeX = slot.x;
     rec.homeY = slot.y;
     rec.baseRot = slot.baseRot;
-    if (reduced || !rec.dealing) {
+    if (rec.launched) {
       rec.x = slot.x;
       rec.y = slot.y;
       rec.vx = 0;
       rec.vy = 0;
       rec.rot = slot.baseRot;
       rec.vRot = 0;
+      rec.scaleX = cardScale;
+      rec.scaleY = cardScale;
+      rec.dealt = true;
       rec.container.position.set(rec.x, rec.y);
       rec.container.rotation = rec.rot;
       rec.container.scale.set(cardScale);
@@ -1771,7 +2193,7 @@ function relayoutScene() {
 }
 
 // ---------------------------------------------------------------------------
-// Frame ticker: shader swirl, casino deal springs, idle float, hover 3D tilt
+// Frame ticker: shader swirl, deck stack physics, recall & sequential deal
 // ---------------------------------------------------------------------------
 
 function onTick(ticker) {
@@ -1794,21 +2216,33 @@ function onTick(ticker) {
   }
 
   const t = performance.now() / 1000;
-  const { cardScale } = state.layout;
+  const { cardScale, deckW } = state.layout;
+  const deckScale = Math.max(0.32, (deckW / CARD_W) * cardScale);
+  const selectedKey = effectiveDeckKey();
 
-  // Animate 3 tactile deck stacks
+  // 1. Animate 3 physical playing-card decks + live stack thickness
   for (let i = 0; i < state.deckRecords.length; i += 1) {
     const drec = state.deckRecords[i];
     const isHovered = state.hoveredDeckKey === drec.deck.key;
-    const isActive = state.activeDeck === drec.deck.key;
+    const isSelected = selectedKey === drec.deck.key;
 
     if (drec.pressBounce > 0) {
       drec.pressBounce = Math.max(0, drec.pressBounce - dt * 5.5);
     }
-    const bounceOffset = reduced ? 0 : Math.sin(drec.pressBounce * Math.PI) * 5;
-    const targetScale = reduced ? 1 : (isHovered ? 1.045 : (isActive ? 1.02 : 1)) - drec.pressBounce * 0.04;
-    const targetY = drec.homeY + (reduced ? 0 : (isHovered ? -4 : (isActive ? -2 : 0)) + bounceOffset);
-    const targetRot = reduced ? 0 : (isHovered ? (i - 1) * 0.032 : (i - 1) * 0.014);
+    if (drec.recoil > 0) {
+      drec.recoil = Math.max(0, drec.recoil - dt * 9.5);
+    }
+    if (drec.catchBump > 0) {
+      drec.catchBump = Math.max(0, drec.catchBump - dt * 9.0);
+    }
+
+    syncDeckVisual(drec, p, dt, reduced);
+
+    const bounceOffset = reduced ? 0 : Math.sin(drec.pressBounce * Math.PI) * 4;
+    const hoverLift = drec.remainingCount > 0 ? -4 : -2;
+    const targetScale = reduced ? 1 : (isHovered ? 1.045 : (isSelected ? 1.015 : 1)) - drec.pressBounce * 0.035;
+    const targetY = drec.homeY + (reduced ? 0 : (isHovered ? hoverLift : 0) + bounceOffset);
+    const targetRot = reduced ? 0 : (isHovered ? (i - 1) * 0.035 : (i - 1) * 0.018);
 
     drec.scale += (targetScale - drec.scale) * Math.min(1, dt * 14);
     drec.container.y += (targetY - drec.container.y) * Math.min(1, dt * 14);
@@ -1816,25 +2250,60 @@ function onTick(ticker) {
     drec.container.scale.set(drec.scale);
   }
 
-  // Whip off outgoing cards on deck change
-  for (let i = state.exitingCards.length - 1; i >= 0; i -= 1) {
-    const rec = state.exitingCards[i];
-    rec.exitLife -= dt;
-    rec.x += rec.exitVx * dt;
-    rec.y += rec.exitVy * dt;
-    rec.rot += rec.exitVRot * dt;
+  // 2. Fast magnetic recall: suck cards back into their home deck
+  for (let i = state.recallingCards.length - 1; i >= 0; i -= 1) {
+    const rec = state.recallingCards[i];
+    if (rec.recallDelay > 0) {
+      rec.recallDelay -= dt;
+      continue;
+    }
+
+    rec.recallElapsed += dt;
+    const u = Math.min(1, rec.recallElapsed / rec.recallDur);
+    // Accelerating magnetic pull into the home deck
+    const e = Math.pow(u, 1.55);
+
+    const homeDeck = findDeckRecord(rec.homeDeckKey || rec.deckKey);
+    const targetX = homeDeck ? homeDeck.homeX : state.layout.viewportW / 2;
+    const targetY = homeDeck ? homeDeck.homeY - homeDeck.visualLift : state.layout.originY + 90;
+    const targetRot = homeDeck ? homeDeck.rot : 0;
+
+    const arc = Math.sin(u * Math.PI) * rec.recallArcX;
+    rec.x = rec.recallFromX + (targetX - rec.recallFromX) * e + arc;
+    rec.y = rec.recallFromY + (targetY - rec.recallFromY) * e;
+    rec.rot = rec.recallFromRot + (targetRot + rec.recallSpin - rec.recallFromRot) * e;
+    rec.scaleX = rec.recallFromScaleX + (deckScale - rec.recallFromScaleX) * e;
+    rec.scaleY = rec.recallFromScaleY + (deckScale - rec.recallFromScaleY) * e;
+
     rec.container.position.set(rec.x, rec.y);
     rec.container.rotation = rec.rot;
-    rec.container.alpha = Math.max(0, rec.exitLife / 0.3);
-    if (rec.exitLife <= 0) {
-      rec.destroyed = true;
-      rec.container.destroy({ children: true });
-      rec.texture.destroy(true);
-      state.exitingCards.splice(i, 1);
+    rec.container.scale.set(rec.scaleX, rec.scaleY);
+    rec.container.alpha = u > 0.88 ? Math.max(0.25, 1 - (u - 0.88) / 0.16) : 1;
+
+    if (u >= 1) {
+      if (homeDeck) {
+        homeDeck.remainingCount = Math.min(homeDeck.totalCount, homeDeck.remainingCount + 1);
+        homeDeck.catchBump = 1;
+        spawnDeckArrivalSparkles(homeDeck.homeX, homeDeck.homeY - homeDeck.visualLift, rec.accent);
+      }
+      destroyCardRecord(rec);
+      state.recallingCards.splice(i, 1);
     }
   }
 
-  // Update sparkle particles
+  // Chain the newly requested deck deal once all recalled cards land in their home deck
+  if (state.recallingCards.length === 0 && state.pendingDeck) {
+    if (state.chainDelay > 0) {
+      state.chainDelay -= dt;
+    } else {
+      const nextDeck = state.pendingDeck;
+      state.pendingDeck = null;
+      state.activeDeck = nextDeck;
+      dealDeck(nextDeck);
+    }
+  }
+
+  // 3. Update sparkle particles
   for (let i = state.particles.length - 1; i >= 0; i -= 1) {
     const pt = state.particles[i];
     pt.life -= dt;
@@ -1850,10 +2319,10 @@ function onTick(ticker) {
     }
   }
 
-  // Animate active deck cards
+  // 4. Sequential deal-out from home deck & idle float
   for (let i = 0; i < state.cardRecords.length; i += 1) {
     const rec = state.cardRecords[i];
-    const isHovered = !state.modalOpen && !rec.pickedUp && (state.hoveredCardId === rec.id || state.focusedCardId === rec.id);
+    const isHovered = !state.modalOpen && !rec.pickedUp && rec.dealt && (state.hoveredCardId === rec.id || state.focusedCardId === rec.id);
 
     if (reduced) {
       rec.x = rec.homeX;
@@ -1861,6 +2330,7 @@ function onTick(ticker) {
       rec.rot = rec.baseRot;
       rec.scaleX = isHovered ? cardScale * 1.03 : cardScale;
       rec.scaleY = rec.scaleX;
+      rec.container.visible = !rec.pickedUp;
       rec.container.position.set(rec.x, rec.y);
       rec.container.rotation = rec.rot;
       rec.container.scale.set(rec.scaleX, rec.scaleY);
@@ -1871,10 +2341,37 @@ function onTick(ticker) {
       continue;
     }
 
-    // Staggered casino deal wait
-    if (rec.dealDelay > 0) {
-      rec.dealDelay -= dt;
-      continue;
+    // Sequential deck launch stagger
+    if (!rec.launched) {
+      if (rec.dealDelay > 0) {
+        rec.dealDelay -= dt;
+        continue;
+      }
+      rec.launched = true;
+      const homeDeck = findDeckRecord(rec.deckKey);
+      const launchX = homeDeck ? homeDeck.homeX : state.layout.viewportW / 2;
+      const launchY = homeDeck ? homeDeck.homeY - homeDeck.visualLift : state.layout.originY + 90;
+      if (homeDeck) {
+        homeDeck.remainingCount = Math.max(0, homeDeck.remainingCount - 1);
+        homeDeck.recoil = 1;
+      }
+
+      const dx = rec.homeX - launchX;
+      const flickDir = dx === 0 ? (i % 2 === 0 ? 1 : -1) : (dx > 0 ? 1 : -1);
+      const flickDeg = 28 + Math.abs(seeded(i + 11)) * 14;
+      rec.x = launchX;
+      rec.y = launchY;
+      // Gentle dealer wrist flick angled along the card's travel vector
+      rec.vx = dx * 0.55 + flickDir * 60;
+      rec.vy = -120;
+      rec.rot = flickDir * flickDeg * (Math.PI / 180);
+      rec.vRot = 0;
+      rec.scaleX = deckScale;
+      rec.scaleY = deckScale;
+      rec.container.position.set(rec.x, rec.y);
+      rec.container.rotation = rec.rot;
+      rec.container.scale.set(rec.scaleX, rec.scaleY);
+      rec.container.visible = true;
     }
 
     // Target idle harmonic float (±4px bob, ±1.6deg sway)
@@ -1896,11 +2393,11 @@ function onTick(ticker) {
     const idleRot = rec.baseRot + Math.sin(t * 0.95 + rec.phaseRot) * (1.6 * (Math.PI / 180));
     const targetRot = isHovered ? nx * 0.045 : idleRot;
 
-    // Underdamped spring physics for snappy deal-in overshoot & smooth float
-    const posK = rec.dealt ? (isHovered ? 150 : 62) : 185;
-    const posDamp = rec.dealt ? (isHovered ? 18 : 11) : 16.5;
-    const rotK = rec.dealt ? 95 : 170;
-    const rotDamp = rec.dealt ? 13 : 15.5;
+    // Smooth unhurried spring glide for deal-in & gentle float
+    const posK = rec.dealt ? (isHovered ? 150 : 62) : 115;
+    const posDamp = rec.dealt ? (isHovered ? 18 : 11) : 13.5;
+    const rotK = rec.dealt ? 95 : 105;
+    const rotDamp = rec.dealt ? 13 : 13.0;
 
     rec.vx += ((targetX - rec.x) * posK - rec.vx * posDamp) * dt;
     rec.vy += ((targetY - rec.y) * posK - rec.vy * posDamp) * dt;
@@ -1910,8 +2407,8 @@ function onTick(ticker) {
     rec.vRot += ((targetRot - rec.rot) * rotK - rec.vRot * rotDamp) * dt;
     rec.rot += rec.vRot * dt;
 
-    // Mark dealt + burst subtle sparkles when card snaps into slot
-    if (!rec.dealt && Math.hypot(targetX - rec.x, targetY - rec.y) < 18 && Math.hypot(rec.vx, rec.vy) < 220) {
+    // Mark dealt + burst subtle sparkles when card arrives at its destination
+    if (!rec.dealt && Math.hypot(targetX - rec.x, targetY - rec.y) < 18 && Math.hypot(rec.vx, rec.vy) < 190) {
       rec.dealt = true;
       if (!rec.sparkled) {
         rec.sparkled = true;
@@ -1919,15 +2416,16 @@ function onTick(ticker) {
       }
     }
 
-    // Hover scale, perspective tilt skew, shadow elevation, & foil sheen
+    // Smooth scale-up from deck size during deal + hover scale/tilt
     const targetScaleX = cardScale * (isHovered ? 1.07 - Math.abs(nx) * 0.025 : 1);
     const targetScaleY = cardScale * (isHovered ? 1.07 - Math.abs(ny) * 0.02 : 1);
     const targetSkewX = isHovered ? -ny * 0.06 : 0;
     const targetSkewY = isHovered ? nx * 0.055 : 0;
 
+    const scaleLerp = Math.min(1, dt * (rec.dealt ? 15 : 8.5));
     const lerp = Math.min(1, dt * 15);
-    rec.scaleX += (targetScaleX - rec.scaleX) * lerp;
-    rec.scaleY += (targetScaleY - rec.scaleY) * lerp;
+    rec.scaleX += (targetScaleX - rec.scaleX) * scaleLerp;
+    rec.scaleY += (targetScaleY - rec.scaleY) * scaleLerp;
     rec.skewX += (targetSkewX - rec.skewX) * lerp;
     rec.skewY += (targetSkewY - rec.skewY) * lerp;
 
@@ -1935,7 +2433,7 @@ function onTick(ticker) {
     rec.container.rotation = rec.rot;
     rec.container.scale.set(rec.scaleX, rec.scaleY);
     rec.container.skew.set(rec.skewX, rec.skewY);
-    rec.container.zIndex = isHovered ? 200 : 20 + i;
+    rec.container.zIndex = isHovered ? 200 : (rec.dealt ? 20 + i : 120 + (rec.dealOrder || i));
 
     // Dynamic shadow offset & hover glow
     const targetShadowX = isHovered ? -nx * 12 : 0;

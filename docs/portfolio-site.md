@@ -39,7 +39,7 @@ Content groups into three stacked card decks placed directly above the floating 
 
 ### Stacked deck tray
 
-The tabletop displays three tactile multi-layer Catppuccin card-back stacks (`Projects`, `Links`, `Media`) in a single row above the floating cards. Selecting a stack whips the outgoing cards off alternating viewport edges and deals the new deck in immediately.
+The tabletop displays three portrait `5:7` Catppuccin playing-card stacks (`Projects`, `Links`, `Media`) in a single row above the floating cards. As a deck deals out sequentially, its physical stack thins card by card and reveals a recessed dashed placeholder slot. Selecting another deck vacuums the dealt cards rapidly back into their home deck with arrival sparkles as the stack builds back up, then sequentially deals the newly chosen deck.
 
 ### Portrait `5:7` Top Trumps card face
 
@@ -47,11 +47,11 @@ Each card uses `224px x 314px` logical portrait playing-card proportions, drawn 
 
 - **Top index row**: Language or category dot and label on the left, paired with a release tag, episode number, read time, or live badge in Fira Code on the right.
 - **Upper illustration panel**: Clean unframed artwork using sanitized inline project SVG logos, PNG data URIs, acoustic waveforms for `jive-*` slugs, monogram fallbacks, podcast cover art, or inline Simple Icons brand marks.
-- **Title and description**: Bold Work Sans title with a two-line summary.
-- **Lower Top Trumps stat rows**: Four alternating tinted rows with uppercase labels on the left and bold tabular Fira Code values on the right:
-  - **Projects**: `STARS`, `RELEASE` (green highlight when fresh), `UPDATED`, and `PACKAGES` (`N/8 hosts` with coloured host dots, or `Source`).
-  - **Links**: `CATEGORY`, `HOST`, plus live `ONLINE` and `MEMBERS` for Discord or `ACTIVE` and `PAST SPONSORS` for GitHub Sponsors.
-  - **Media**: Tailored rows for podcast episodes (`EPISODE`, `DURATION`, `PUBLISHED`, `SHOW`), podcast and blog hubs (`LATEST`, `EPISODES` or `POSTS`, `LISTEN` or `SITE`), and blog posts (`READ TIME`, `PUBLISHED`, `SITE`, `FORMAT`).
+- **Title and description**: Bold Work Sans title with multi-line descriptions sized dynamically to fill the space above the bottom stat band (`12.4px` on Projects cards so every project description fits in full).
+- **Bottom-anchored Top Trumps stat rows**: One to two alternating tinted rows anchored to the card bottom with uppercase labels on the left and bold tabular Fira Code values on the right:
+  - **Projects**: `STARS` and `UPDATED`.
+  - **Links**: Live zero-secret stats where public endpoints exist (Discord `ONLINE`/`MEMBERS`, GitHub Sponsors, Mastodon/GoToSocial `FOLLOWERS`/`POSTS`, Bluesky `FOLLOWERS`/`POSTS`, Twitch `FOLLOWERS`/`CHANNEL`, YouTube `SUBSCRIBERS`/`VIDEOS`, Blog `LATEST`/`SITE`, Linux Matters `LATEST`/`PUBLISHED`), crisp single-row identity fields (`HANDLE`, `PROFILE`, `CREATOR`, `SITE`) for static destinations, or custom `site.links[].stats` pairs from `vitrine.yaml`.
+  - **Media**: `DURATION` and `PUBLISHED` on podcast episodes (`LATEST` and `LISTEN` on the podcast hub), and `PUBLISHED` and `SITE` on blog posts (`LATEST` and `SITE` on the blog hub).
 
 ### Physical pick-up, mid-air 3D flip, and portrait `5:7` back face
 
@@ -68,7 +68,7 @@ Visitors dismiss the card by clicking outside it, clicking the close button, or 
 ## Motion, interaction, and accessibility
 
 - **Scroll-synced open canvas**: The PixiJS world container tracks `world.y = -window.scrollY` alongside a `#scroll-spacer` element so cards fly in freely from the viewport edges and scroll naturally without clipping.
-- **Casino-dealer deal-in**: Cards fling rapidly (`38ms` stagger) from alternating left and right viewport edges with alternating spin (`±220deg` to `±260deg`) and snap into gently fanned slots via underdamped springs with subtle deal sparkles.
+- **Sequential deck deal-out and fast recall**: Cards launch farthest-first (`62ms` stagger) from their portrait `5:7` deck at deck scale, glide out with a gentle dealer wrist flick (`±28deg` to `±42deg`) and arrival sparkles, and leave a dashed placeholder behind. Switching decks reclaims dealt cards nearest-first (`30ms` stagger, `310ms` flight, `±22deg` to `±35deg` bank) with arrival sparkles as the home deck rebuilds, then chains straight into the newly selected deck's sequential deal.
 - **Idle float and hover 3D tilt**: Cards bob and rock gently (`±4px`, `±1.6deg`). Hovering or focusing a card pops it forward (`scale: 1.07`), raises its z-order, tracks cursor tilt, and sweeps a Catppuccin holographic foil sheen across the face.
 - **Keyboard and screen-reader layer**: Transparent focusable buttons in `#a11y-layer` align 1:1 with the three decks and active cards, supporting `Tab`, arrow keys, `Home`, `End`, `Enter`, and `Space` with visible `:focus-visible` outlines.
 - **Silent OS reduced motion**: Under `@media (prefers-reduced-motion: reduce)`, spin, deal flights, idle bob, shader motion, sparkles, and flip transitions stop automatically with no visible toggle button.
