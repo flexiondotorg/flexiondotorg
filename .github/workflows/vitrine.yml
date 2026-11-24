@@ -1,0 +1,132 @@
+name: Update profile README
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "cmd/vitrine/**"
+      - "internal/**"
+      - "templates/README.md.tpl"
+      - "vitrine.yaml"
+      - "go.mod"
+      - "go.sum"
+      - ".github/workflows/vitrine.yml"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: vitrine-profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Go
+        uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Generate profile and SVG assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf "${RUNNER_TEMP}/vitrine-assets" "${RUNNER_TEMP}/README.md"
+          mkdir -p "${RUNNER_TEMP}/vitrine-assets"
+          go run ./cmd/vitrine \
+            -config vitrine.yaml \
+            -template templates/README.md.tpl \
+            -out "${RUNNER_TEMP}/README.md" \
+            -assets-dir "${RUNNER_TEMP}/vitrine-assets" \
+            -asset-base-url "__VITRINE_ASSET_BASE__"
+
+      - name: Publish SVG assets to assets branch
+        id: assets
+        run: |
+          set -euo pipefail
+          assets_dir="${RUNNER_TEMP}/vitrine-assets"
+          existing_dir="${RUNNER_TEMP}/assets-existing"
+          publish_dir="${RUNNER_TEMP}/assets-publish"
+
+          shopt -s nullglob
+          svg_files=("${assets_dir}"/*.svg)
+          if [ "${#svg_files[@]}" -eq 0 ]; then
+            echo "No SVG files generated in ${assets_dir}" >&2
+            exit 1
+          fi
+
+          needs_push=true
+          assets_sha=""
+
+          if git ls-remote --exit-code --heads origin assets >/dev/null 2>&1; then
+            git fetch --no-tags --depth=1 origin refs/heads/assets:refs/remotes/origin/assets
+            assets_sha="$(git rev-parse refs/remotes/origin/assets)"
+            rm -rf "${existing_dir}"
+            git worktree add --detach "${existing_dir}" refs/remotes/origin/assets
+            if diff -rq --exclude=.git "${existing_dir}" "${assets_dir}" >/dev/null; then
+              needs_push=false
+            fi
+            git worktree remove --force "${existing_dir}"
+          fi
+
+          if [ "${needs_push}" = "true" ]; then
+            rm -rf "${publish_dir}"
+            git worktree add --orphan -b assets-publish "${publish_dir}"
+            cp -- "${svg_files[@]}" "${publish_dir}/"
+            git -C "${publish_dir}" add -- '*.svg'
+            git -C "${publish_dir}" \
+              -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "chore(assets): update profile SVGs"
+            assets_sha="$(git -C "${publish_dir}" rev-parse HEAD)"
+            git -C "${publish_dir}" push --force origin HEAD:refs/heads/assets
+            git worktree remove --force "${publish_dir}"
+            git branch -D assets-publish
+          fi
+
+          echo "sha=${assets_sha}" >> "${GITHUB_OUTPUT}"
+
+      - name: Render README with pinned asset SHA
+        env:
+          ASSETS_SHA: ${{ steps.assets.outputs.sha }}
+        run: |
+          set -euo pipefail
+          if [[ ! "${ASSETS_SHA}" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Invalid assets commit SHA: ${ASSETS_SHA}" >&2
+            exit 1
+          fi
+          asset_base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${ASSETS_SHA}"
+          sed "s|__VITRINE_ASSET_BASE__|${asset_base}|g" "${RUNNER_TEMP}/README.md" > README.md
+          if [ ! -s README.md ]; then
+            echo "Rendered README.md is empty" >&2
+            exit 1
+          fi
+          if grep -q "__VITRINE_ASSET_BASE__" README.md; then
+            echo "Unreplaced asset base placeholder remains in README.md" >&2
+            exit 1
+          fi
+
+      - name: Commit and push README.md
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- README.md; then
+            echo "README.md is unchanged"
+            exit 0
+          fi
+          git add -- README.md
+          git -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "docs: update profile README"
+          git push origin HEAD:refs/heads/main

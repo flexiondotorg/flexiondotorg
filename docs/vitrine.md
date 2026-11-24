@@ -169,12 +169,12 @@ Two small workflows keep the personal profile and the `wimpysworld` organisation
 
 ### Profile update workflow
 
-The workflow in `flexiondotorg/flexiondotorg` replaces `readme-scribe.yml` and `snake.yml`:
+The workflow in `.github/workflows/vitrine.yml` replaces `readme-scribe.yml` and `snake.yml`:
 
-- **Triggers**: Scheduled cron every 6 hours (or 12 hours), pushes to `main` that touch Vitrine source, `vitrine.yaml`, or `templates/README.md.tpl`, and `workflow_dispatch`.
-- **Permissions**: `contents: write` using only the built-in `GITHUB_TOKEN`.
-- **Asset publishing**: Pushes generated `-dark.svg` and `-light.svg` tile pairs to the `assets` branch and records the resulting commit SHA.
-- **README update**: Renders `README.md` with commit-hashed `raw.githubusercontent.com` URLs (`https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/<sha>/<tile>-dark.svg` and `-light.svg`) inside `<picture>` tags and commits to `main` only when the rendered Markdown changes.
+- **Triggers**: Scheduled cron every 6 hours (`0 */6 * * *`), pushes to `main` that touch `cmd/vitrine/**`, `internal/**`, `templates/README.md.tpl`, `vitrine.yaml`, `go.mod`, `go.sum`, or `.github/workflows/vitrine.yml`, and `workflow_dispatch`.
+- **Permissions**: Top-level `permissions: {}` with job-level `contents: write` using only the built-in `GITHUB_TOKEN`.
+- **Asset publishing**: Compares generated `-dark.svg` and `-light.svg` files against `origin/assets`. When any SVG differs or `origin/assets` does not exist yet, the workflow force-pushes a single-commit orphan `assets` branch containing only the generated SVG files and records its commit SHA. When no SVG changes, the workflow reuses the existing `origin/assets` commit SHA without pushing.
+- **README update**: Substitutes the recorded `assets` commit SHA into `raw.githubusercontent.com` URLs (`https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/<sha>/<tile>-dark.svg` and `-light.svg`) inside `<picture>` tags and commits `README.md` to `main` only when the rendered Markdown changes.
 
 Commit-hashed `raw.githubusercontent.com` URLs solve three problems at once. They bust the GitHub `camo` image proxy cache whenever a tile changes, they keep `main` free of generated SVG churn, and they render identically when `README.md` is mirrored into another repository.
 
@@ -182,12 +182,15 @@ Commit-hashed `raw.githubusercontent.com` URLs solve three problems at once. The
 
 Instead of pushing across repositories with a personal token, `wimpysworld/.github` pulls the rendered profile directly:
 
-- **Triggers**: Scheduled cron offset 10 minutes after the `flexiondotorg/flexiondotorg` workflow, plus `workflow_dispatch`.
-- **Permissions**: `contents: write` using the local `GITHUB_TOKEN` of `wimpysworld/.github`.
+- **Triggers**: Scheduled cron every 6 hours offset by 10 minutes (`10 */6 * * *`), plus `workflow_dispatch`.
+- **Permissions**: Top-level `permissions: {}` with job-level `contents: write` using the local `GITHUB_TOKEN` of `wimpysworld/.github`.
 - **Behaviour**: Fetches `README.md` from `flexiondotorg/flexiondotorg` and commits it to `profile/README.md` only when content differs.
 - **Repository boundary**: The workflow adds no community-health files (such as `CONTRIBUTING.md`, `SECURITY.md`, or issue templates) to `wimpysworld/.github`, because organisation `.github` repositories inject those defaults into other repositories under `wimpysworld`.
 
-## Open questions
+## Resolved design decisions
 
-- **Refresh cadence**: Choose between a 6-hour and a 12-hour cron schedule for the profile update workflow.
-- **Assets branch history**: Decide whether the `assets` branch keeps incremental commits or force-pushes a single orphan commit on each run while updating the commit SHA in `README.md`.
+All earlier open questions are now settled in implementation:
+
+- **Refresh cadence**: The profile update workflow runs every 6 hours (`0 */6 * * *`), and the `wimpysworld/.github` mirror runs 10 minutes later (`10 */6 * * *`).
+- **Assets branch history**: The `assets` branch holds a single orphan commit that updates only when generated SVG files differ from `origin/assets` (or on the first run). Unchanged runs reuse the existing `origin/assets` commit SHA.
+- **Social navigation pills**: The navigation row displays three animated pill tiles for Mastodon, Bluesky, and LinkedIn with authentic brand vector paths.
