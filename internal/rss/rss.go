@@ -51,12 +51,18 @@ type Item struct {
 	Episode         string
 	Duration        string
 	Subtitle        string
+	AudioURL        string
 	ReadTimeMinutes int
 }
 
 type xmlText struct {
 	XMLName xml.Name
 	Value   string `xml:",chardata"`
+}
+
+type rssEnclosure struct {
+	URL  string `xml:"url,attr"`
+	Type string `xml:"type,attr"`
 }
 
 type rssDocument struct {
@@ -68,15 +74,16 @@ type rssChannel struct {
 }
 
 type rssItem struct {
-	Title       string    `xml:"title"`
-	Link        string    `xml:"link"`
-	PubDate     string    `xml:"pubDate"`
-	Description string    `xml:"description"`
-	Summaries   []xmlText `xml:"summary"`
-	Encoded     []xmlText `xml:"encoded"`
-	Episodes    []xmlText `xml:"episode"`
-	Durations   []xmlText `xml:"duration"`
-	Subtitles   []xmlText `xml:"subtitle"`
+	Title       string         `xml:"title"`
+	Link        string         `xml:"link"`
+	PubDate     string         `xml:"pubDate"`
+	Description string         `xml:"description"`
+	Summaries   []xmlText      `xml:"summary"`
+	Encoded     []xmlText      `xml:"encoded"`
+	Episodes    []xmlText      `xml:"episode"`
+	Durations   []xmlText      `xml:"duration"`
+	Subtitles   []xmlText      `xml:"subtitle"`
+	Enclosures  []rssEnclosure `xml:"enclosure"`
 }
 
 type atomDocument struct {
@@ -227,10 +234,30 @@ func parseRSS(data []byte) ([]Item, error) {
 			Episode:         cleanText(selectNamespaceText(raw.Episodes, itunesNamespace, true)),
 			Duration:        formatDuration(selectNamespaceText(raw.Durations, itunesNamespace, true)),
 			Subtitle:        subtitle,
+			AudioURL:        selectAudioEnclosure(raw.Enclosures),
 			ReadTimeMinutes: estimateReadTimeMinutes(encoded, raw.Description),
 		})
 	}
 	return items, nil
+}
+
+func selectAudioEnclosure(enclosures []rssEnclosure) string {
+	var fallback string
+	for _, enc := range enclosures {
+		rawURL := strings.TrimSpace(enc.URL)
+		if err := validateHTTPURL(rawURL); err != nil {
+			continue
+		}
+		mediaType := strings.ToLower(strings.TrimSpace(enc.Type))
+		if strings.HasPrefix(mediaType, "audio/") {
+			return rawURL
+		}
+		lowerURL := strings.ToLower(rawURL)
+		if fallback == "" && (strings.HasSuffix(lowerURL, ".mp3") || strings.HasSuffix(lowerURL, ".m4a") || strings.HasSuffix(lowerURL, ".ogg") || strings.HasSuffix(lowerURL, ".opus")) {
+			fallback = rawURL
+		}
+	}
+	return fallback
 }
 
 func parseAtom(data []byte) ([]Item, error) {

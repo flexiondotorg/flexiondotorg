@@ -233,6 +233,7 @@ func TestParsePodcastRSSMetadata(t *testing.T) {
       <itunes:duration>00:35:00</itunes:duration>
       <itunes:subtitle>Containers, Nix &amp; desktop workflows</itunes:subtitle>
       <itunes:summary>Longer podcast summary that must not override subtitle.</itunes:summary>
+      <enclosure url="https://audio.linuxmatters.net/LMP94.mp3" length="29714776" type="audio/mpeg"/>
     </item>
     <item>
       <title>Episode 93</title>
@@ -306,6 +307,9 @@ func TestParsePodcastRSSMetadata(t *testing.T) {
 		if items[i].Subtitle != tc.subtitle {
 			t.Errorf("items[%d].Subtitle = %q, want %q", i, items[i].Subtitle, tc.subtitle)
 		}
+	}
+	if items[0].AudioURL != "https://audio.linuxmatters.net/LMP94.mp3" {
+		t.Errorf("items[0].AudioURL = %q, want https://audio.linuxmatters.net/LMP94.mp3", items[0].AudioURL)
 	}
 }
 

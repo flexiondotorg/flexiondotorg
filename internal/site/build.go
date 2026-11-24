@@ -723,8 +723,14 @@ func buildMedia(
 			summary = entries[0].Subtitle
 		}
 		badge := ""
+		latestAudio := ""
+		latestEpisode := ""
+		latestDuration := ""
 		if len(entries) > 0 {
 			badge = fmt.Sprintf("%d episodes", len(entries))
+			latestAudio = entries[0].AudioURL
+			latestEpisode = entries[0].Episode
+			latestDuration = entries[0].Duration
 		}
 
 		cards = append(cards, MediaCard{
@@ -736,6 +742,9 @@ func buildMedia(
 			URL:            fallbackURL(pod.SiteURL, pod.URL),
 			SiteURL:        pod.SiteURL,
 			CoverURL:       strings.TrimSpace(pod.CoverURL),
+			AudioURL:       latestAudio,
+			Episode:        latestEpisode,
+			Duration:       latestDuration,
 			Icon:           "podcast",
 			IconSVG:        BrandIconSVG("podcast"),
 			Accent:         "blue",
@@ -760,6 +769,7 @@ func buildMedia(
 				URL:            fallbackURL(entry.URL, pod.SiteURL),
 				SiteURL:        pod.SiteURL,
 				CoverURL:       strings.TrimSpace(pod.CoverURL),
+				AudioURL:       entry.AudioURL,
 				Icon:           "podcast",
 				IconSVG:        BrandIconSVG("podcast"),
 				Accent:         "teal",
@@ -777,7 +787,9 @@ func buildMedia(
 	if blog := cfg.Feeds.Blog; blog != nil && blog.Enabled {
 		entries := make([]MediaEntry, 0, len(blogItems))
 		for _, item := range blogItems {
-			entries = append(entries, toMediaEntry(item, now))
+			entry := toMediaEntry(item, now)
+			entry.Summary = truncateExcerpt(entry.Summary, 180)
+			entries = append(entries, entry)
 		}
 
 		title := strings.TrimSpace(blog.Title)
@@ -833,7 +845,8 @@ func buildMedia(
 				Kind:            "post",
 				Category:        "Blog",
 				Title:           entry.Title,
-				Summary:         entry.Summary,
+				Summary:         truncateExcerpt(entry.Summary, 360),
+				SpeechText:      cleanSpeechText(entry.Title, item.Summary),
 				URL:             fallbackURL(entry.URL, blog.SiteURL),
 				SiteURL:         blog.SiteURL,
 				Icon:            "blog",
@@ -903,10 +916,56 @@ func toMediaEntry(item rss.Item, now time.Time) MediaEntry {
 		Age:             render.FormatCompactAge(item.PublishedAt, now),
 		Episode:         strings.TrimSpace(item.Episode),
 		Duration:        strings.TrimSpace(item.Duration),
+		AudioURL:        strings.TrimSpace(item.AudioURL),
 		Subtitle:        cleanSummaryText(item.Subtitle),
 		Summary:         cleanSummaryText(item.Summary),
 		ReadTimeMinutes: item.ReadTimeMinutes,
 	}
+}
+
+var (
+	reCodeBlock   = regexp.MustCompile(`(?is)<(?:pre|script|style)\b[^>]*>[\s\S]*?</(?:pre|script|style)>`)
+	reBlockBreak  = regexp.MustCompile(`(?i)</(?:p|div|h[1-6]|li|blockquote|section|article|br)>`)
+	reInlineSpace = regexp.MustCompile(`[ \t]+`)
+)
+
+func cleanSpeechText(title, rawHTML string) string {
+	stripped := reCodeBlock.ReplaceAllString(rawHTML, " ")
+	stripped = reBlockBreak.ReplaceAllString(stripped, ". ")
+	body := cleanSummaryText(stripped)
+	body = reInlineSpace.ReplaceAllString(body, " ")
+	body = strings.ReplaceAll(body, "..", ".")
+	body = strings.ReplaceAll(body, " .", ".")
+	body = strings.TrimSpace(body)
+
+	t := strings.TrimSpace(title)
+	switch {
+	case t != "" && body != "":
+		if !strings.HasSuffix(t, ".") && !strings.HasSuffix(t, "!") && !strings.HasSuffix(t, "?") {
+			t += "."
+		}
+		return t + " " + body
+	case body != "":
+		return body
+	default:
+		return t
+	}
+}
+
+func truncateExcerpt(raw string, maxRunes int) string {
+	trimmed := strings.TrimSpace(raw)
+	if maxRunes <= 0 {
+		return trimmed
+	}
+	runes := []rune(trimmed)
+	if len(runes) <= maxRunes {
+		return trimmed
+	}
+	cut := string(runes[:maxRunes])
+	if idx := strings.LastIndexByte(cut, ' '); idx > maxRunes/2 {
+		cut = cut[:idx]
+	}
+	return strings.TrimRight(cut, " ,;:-") + "…"
 }
 
 func cleanSummaryText(raw string) string {

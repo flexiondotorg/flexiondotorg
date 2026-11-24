@@ -197,6 +197,7 @@ type MediaEntry struct {
 	Age             string `json:"age,omitempty"`
 	Episode         string `json:"episode,omitempty"`
 	Duration        string `json:"duration,omitempty"`
+	AudioURL        string `json:"audio_url,omitempty"`
 	Subtitle        string `json:"subtitle,omitempty"`
 	Summary         string `json:"summary,omitempty"`
 	ReadTimeMinutes int    `json:"read_time_minutes,omitempty"`
@@ -210,9 +211,11 @@ type MediaCard struct {
 	Title           string          `json:"title"`
 	Subtitle        string          `json:"subtitle,omitempty"`
 	Summary         string          `json:"summary,omitempty"`
+	SpeechText      string          `json:"speech_text,omitempty"`
 	URL             string          `json:"url"`
 	SiteURL         string          `json:"site_url,omitempty"`
 	CoverURL        string          `json:"cover_url,omitempty"`
+	AudioURL        string          `json:"audio_url,omitempty"`
 	Icon            string          `json:"icon"`
 	IconSVG         string          `json:"icon_svg"`
 	Accent          string          `json:"accent"`

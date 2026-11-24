@@ -298,6 +298,7 @@ site:
 			PublishedAt: now.Add(-2 * 24 * time.Hour),
 			Episode:     "94",
 			Duration:    "42 min",
+			AudioURL:    "https://audio.linuxmatters.net/LMP94.mp3",
 			Subtitle:    "Talking NixOS flakes and Haberdasher.",
 		},
 	}
@@ -306,7 +307,7 @@ site:
 			Title:           "Building Static Sites in Go",
 			URL:             "https://wimpysworld.com/posts/static-go",
 			PublishedAt:     now.Add(-5 * 24 * time.Hour),
-			Summary:         "<p>How <b>cmd/site</b> works.</p>",
+			Summary:         "<p>How <b>cmd/site</b> works.</p><pre><code>fmt.Println(1)</code></pre><p>Fast and simple.</p>",
 			ReadTimeMinutes: 6,
 		},
 	}
@@ -419,14 +420,20 @@ site:
 	if len(data.Media) != 4 {
 		t.Fatalf("len(Media) = %d, want 4 (podcast-hub + 1 ep + blog-hub + 1 post)", len(data.Media))
 	}
-	if data.Media[0].Kind != "podcast-hub" || len(data.Media[0].SubscribeLinks) != 2 {
+	if data.Media[0].Kind != "podcast-hub" || len(data.Media[0].SubscribeLinks) != 2 || data.Media[0].AudioURL != "https://audio.linuxmatters.net/LMP94.mp3" {
 		t.Fatalf("unexpected podcast hub card: %+v", data.Media[0])
+	}
+	if data.Media[1].Kind != "episode" || data.Media[1].AudioURL != "https://audio.linuxmatters.net/LMP94.mp3" {
+		t.Fatalf("unexpected podcast episode card: %+v", data.Media[1])
 	}
 	if data.Media[2].Kind != "blog-hub" || data.Media[2].Title != "Wimpy's World Blog" {
 		t.Fatalf("unexpected blog hub card: %+v", data.Media[2])
 	}
 	if strings.Contains(data.Media[3].Summary, "<p>") || strings.Contains(data.Media[3].Summary, "<b>") {
 		t.Fatalf("blog summary did not strip HTML tags: %q", data.Media[3].Summary)
+	}
+	if !strings.Contains(data.Media[3].SpeechText, "Building Static Sites in Go.") || strings.Contains(data.Media[3].SpeechText, "fmt.Println") {
+		t.Fatalf("blog speech text did not strip code blocks cleanly: %q", data.Media[3].SpeechText)
 	}
 
 	outDir := t.TempDir()
