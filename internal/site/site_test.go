@@ -192,6 +192,20 @@ site:
       url: "https://youtube.com/WimpysWorld"
       icon: "youtube"
       accent: "red"
+    - title: "Steam"
+      slug: "steam"
+      category: "Gaming"
+      description: "PC gaming profile."
+      url: "https://steamcommunity.com/id/wimpress/"
+      icon: "steam"
+      accent: "sapphire"
+    - title: "itch.io"
+      slug: "itchio"
+      category: "Gaming"
+      description: "Indie game releases."
+      url: "https://wimpress.itch.io/"
+      icon: "itchio"
+      accent: "peach"
     - title: "Custom Stat Link"
       slug: "custom-stat"
       category: "Sites"
@@ -307,6 +321,8 @@ site:
 			"bluesky":  {Followers: 821, Posts: 144},
 			"twitch":   {Followers: 1533},
 			"youtube":  {Subscribers: "4.48K", Videos: "144"},
+			"steam":    {Games: 296, Level: 15},
+			"itchio":   {Games: 2},
 		},
 		Podcast:     podcast,
 		Blog:        blog,
@@ -355,8 +371,8 @@ site:
 	if data.Packages[0].Packages[0].Name != "deb-get" || data.Packages[0].Packages[0].URL != "https://apt.wimpys.world/#deb-get" {
 		t.Fatalf("packages not sorted or formatted cleanly: %+v", data.Packages[0].Packages)
 	}
-	if len(data.Links) != 10 {
-		t.Fatalf("len(Links) = %d, want 10", len(data.Links))
+	if len(data.Links) != 12 {
+		t.Fatalf("len(Links) = %d, want 12", len(data.Links))
 	}
 	if data.Links[0].Badge != "184 online" || len(data.Links[0].Meta) != 2 || len(data.Links[0].Stats) != 2 || data.Links[0].Stats[0].Label != "ONLINE" || !data.Links[0].Stats[0].Highlight {
 		t.Fatalf("discord link not enriched: %+v", data.Links[0])
@@ -385,8 +401,14 @@ site:
 	if len(data.Links[8].Stats) != 2 || data.Links[8].Stats[0].Value != "4.48K" || data.Links[8].Stats[1].Value != "144" {
 		t.Fatalf("youtube link live stats wrong: %+v", data.Links[8].Stats)
 	}
-	if len(data.Links[9].Stats) != 1 || data.Links[9].Stats[0].Label != "FOCUS" || data.Links[9].Stats[0].Value != "Indie Games" {
-		t.Fatalf("custom link stats wrong: %+v", data.Links[9].Stats)
+	if len(data.Links[9].Stats) != 2 || data.Links[9].Stats[0].Value != "296" || data.Links[9].Stats[1].Value != "15" {
+		t.Fatalf("steam link live stats wrong: %+v", data.Links[9].Stats)
+	}
+	if len(data.Links[10].Stats) != 2 || data.Links[10].Stats[0].Value != "2" || data.Links[10].Stats[1].Value != "wimpress.itch.io" {
+		t.Fatalf("itch.io link live stats wrong: %+v", data.Links[10].Stats)
+	}
+	if len(data.Links[11].Stats) != 1 || data.Links[11].Stats[0].Label != "FOCUS" || data.Links[11].Stats[0].Value != "Indie Games" {
+		t.Fatalf("custom link stats wrong: %+v", data.Links[11].Stats)
 	}
 	if len(data.Links[2].Sponsors) != 2 || data.Links[2].Sponsors[0].Login != "alice" || data.Links[2].Sponsors[0].URL != "https://github.com/alice" {
 		t.Fatalf("sponsors handles not populated: %+v", data.Links[2].Sponsors)

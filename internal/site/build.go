@@ -414,6 +414,10 @@ func enrichLinkCard(
 		enrichTwitchLinkCard(card, socialProf)
 	case icon == "youtube" || card.ID == "youtube":
 		enrichYouTubeLinkCard(card, socialProf)
+	case icon == "steam" || card.ID == "steam":
+		enrichSteamLinkCard(card, socialProf)
+	case icon == "itchio" || card.ID == "itchio":
+		enrichItchLinkCard(card, socialProf)
 	default:
 		card.Stats = []StatRow{deriveIdentityStat(icon, card.URL, card.HostLabel)}
 	}
@@ -573,6 +577,41 @@ func enrichYouTubeLinkCard(card *LinkCard, prof SocialProfile) {
 	if len(card.Stats) == 0 {
 		card.Stats = []StatRow{deriveIdentityStat("youtube", card.URL, card.HostLabel)}
 	}
+}
+
+func enrichSteamLinkCard(card *LinkCard, prof SocialProfile) {
+	if prof.Games > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "GAMES",
+			Value: render.FormatInt(prof.Games),
+		})
+		card.Meta = append(card.Meta, render.FormatInt(prof.Games)+" games")
+	}
+	if prof.Level > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "LEVEL",
+			Value: render.FormatInt(prof.Level),
+		})
+		card.Meta = append(card.Meta, "Level "+render.FormatInt(prof.Level))
+	}
+	if len(card.Stats) == 0 {
+		card.Stats = []StatRow{deriveIdentityStat("steam", card.URL, card.HostLabel)}
+	}
+}
+
+func enrichItchLinkCard(card *LinkCard, prof SocialProfile) {
+	if prof.Games > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "GAMES",
+			Value: render.FormatInt(prof.Games),
+		})
+		unit := "published games"
+		if prof.Games == 1 {
+			unit = "published game"
+		}
+		card.Meta = append(card.Meta, render.FormatInt(prof.Games)+" "+unit)
+	}
+	card.Stats = append(card.Stats, deriveIdentityStat("itchio", card.URL, card.HostLabel))
 }
 
 func deriveFediverseHandle(rawURL string) string {

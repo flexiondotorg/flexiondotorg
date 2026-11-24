@@ -50,7 +50,7 @@ Each card uses `224px x 314px` logical portrait playing-card proportions, drawn 
 - **Title and description**: Bold Work Sans title with multi-line descriptions sized dynamically to fill the space above the bottom stat band (`12.4px` on Projects cards so every project description fits in full).
 - **Bottom-anchored Top Trumps stat rows**: One to two alternating tinted rows anchored to the card bottom with uppercase labels on the left and bold tabular Fira Code values on the right:
   - **Projects**: `STARS` and `UPDATED`.
-  - **Links**: Live zero-secret stats where public endpoints exist (Discord `ONLINE`/`MEMBERS`, GitHub Sponsors, Mastodon/GoToSocial `FOLLOWERS`/`POSTS`, Bluesky `FOLLOWERS`/`POSTS`, Twitch `FOLLOWERS`/`CHANNEL`, YouTube `SUBSCRIBERS`/`VIDEOS`, Blog `LATEST`/`SITE`, Linux Matters `LATEST`/`PUBLISHED`), crisp single-row identity fields (`HANDLE`, `PROFILE`, `CREATOR`, `SITE`) for static destinations, or custom `site.links[].stats` pairs from `vitrine.yaml`.
+  - **Links**: Live zero-secret stats where public endpoints exist (Discord `ONLINE`/`MEMBERS`, GitHub Sponsors, Mastodon/GoToSocial `FOLLOWERS`/`POSTS`, Bluesky `FOLLOWERS`/`POSTS`, Twitch `FOLLOWERS`/`CHANNEL`, YouTube `SUBSCRIBERS`/`VIDEOS`, Steam `GAMES`/`LEVEL`, itch.io `GAMES`/`CREATOR`, Blog `LATEST`/`SITE`, Linux Matters `LATEST`/`PUBLISHED`), crisp single-row identity fields (`HANDLE`, `PROFILE`, `SITE`) for static destinations, or custom `site.links[].stats` pairs from `vitrine.yaml`.
   - **Media**: `DURATION` and `PUBLISHED` on podcast episodes (`LATEST` and `LISTEN` on the podcast hub), and `PUBLISHED` and `SITE` on blog posts (`LATEST` and `SITE` on the blog hub).
 
 ### Physical pick-up, mid-air 3D flip, and portrait `5:7` back face

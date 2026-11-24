@@ -31,10 +31,13 @@ var (
 	reGTSPosts     = regexp.MustCompile(`(?is)<dd\b[^>]*class="[^"]*\bpostsdd\b[^"]*"[^>]*>\s*([0-9,]+)\s*</dd>`)
 	reYTSubs       = regexp.MustCompile(`(?i)^([0-9]+(?:\.[0-9]+)?[kmb]?)\s+subscribers?$`)
 	reYTVideos     = regexp.MustCompile(`(?i)^([0-9,]+(?:\.[0-9]+)?[kmb]?)\s+videos?$`)
+	reSteamLevel   = regexp.MustCompile(`(?is)persona_level[\s\S]{0,200}?friendPlayerLevelNum">\s*([0-9,]+)\s*<`)
+	reSteamGames   = regexp.MustCompile(`(?is)href="[^"]*/games/\?tab=all"[^>]*>[\s\S]{0,240}?profile_count_link_total">\s*([0-9,]+)\s*<`)
+	reItchGameID   = regexp.MustCompile(`data-game_id="(\d+)"`)
 )
 
 // SocialFetcher retrieves unauthenticated public profile metrics for configured
-// Fediverse (Mastodon / GoToSocial), Bluesky, Twitch, and YouTube link cards.
+// Fediverse (Mastodon / GoToSocial), Bluesky, Twitch, YouTube, Steam, and itch.io link cards.
 type SocialFetcher struct {
 	HTTPClient        *http.Client
 	BlueskyAPIBaseURL string
@@ -92,6 +95,24 @@ func (f *SocialFetcher) FetchAll(ctx context.Context, links []config.SiteLink) (
 				continue
 			}
 			if prof.Subscribers != "" || prof.Videos != "" {
+				profiles[key] = prof
+			}
+		case icon == "steam" || key == "steam":
+			prof, err := f.fetchSteamProfile(ctx, client, link.URL)
+			if err != nil {
+				errs = append(errs, fmt.Errorf("steam (%s): %w", link.URL, err))
+				continue
+			}
+			if prof.Games > 0 || prof.Level > 0 {
+				profiles[key] = prof
+			}
+		case icon == "itchio" || key == "itchio":
+			prof, err := f.fetchItchProfile(ctx, client, link.URL)
+			if err != nil {
+				errs = append(errs, fmt.Errorf("itch.io (%s): %w", link.URL, err))
+				continue
+			}
+			if prof.Games > 0 {
 				profiles[key] = prof
 			}
 		}
@@ -157,6 +178,38 @@ func (f *SocialFetcher) fetchYouTubeProfile(ctx context.Context, client *http.Cl
 		return SocialProfile{}, errors.New("no channel subscriber or video counts found")
 	}
 	return prof, nil
+}
+
+func (f *SocialFetcher) fetchSteamProfile(ctx context.Context, client *http.Client, rawURL string) (SocialProfile, error) {
+	trimmed := strings.TrimSpace(rawURL)
+	if trimmed == "" {
+		return SocialProfile{}, errors.New("empty Steam URL")
+	}
+	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html", maxSocialResponseSize)
+	if err != nil {
+		return SocialProfile{}, err
+	}
+	prof := parseSteamProfileStats(string(body))
+	if prof.Games == 0 && prof.Level == 0 {
+		return SocialProfile{}, errors.New("no public Steam games or level found")
+	}
+	return prof, nil
+}
+
+func (f *SocialFetcher) fetchItchProfile(ctx context.Context, client *http.Client, rawURL string) (SocialProfile, error) {
+	trimmed := strings.TrimSpace(rawURL)
+	if trimmed == "" {
+		return SocialProfile{}, errors.New("empty itch.io URL")
+	}
+	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html", maxSocialResponseSize)
+	if err != nil {
+		return SocialProfile{}, err
+	}
+	games := parseItchPublishedGames(string(body))
+	if games == 0 {
+		return SocialProfile{}, errors.New("no published itch.io games found")
+	}
+	return SocialProfile{Games: games}, nil
 }
 
 func (f *SocialFetcher) fetchBlueskyProfile(ctx context.Context, client *http.Client, rawURL string) (SocialProfile, error) {
@@ -338,6 +391,37 @@ func parseGoToSocialHTMLStats(htmlDoc string) SocialProfile {
 		prof.Posts = parseCommaInt(m[1])
 	}
 	return prof
+}
+
+func parseSteamProfileStats(htmlDoc string) SocialProfile {
+	var prof SocialProfile
+	if m := reSteamGames.FindStringSubmatch(htmlDoc); len(m) == 2 {
+		prof.Games = parseCommaInt(m[1])
+	}
+	if m := reSteamLevel.FindStringSubmatch(htmlDoc); len(m) == 2 {
+		prof.Level = parseCommaInt(m[1])
+	}
+	return prof
+}
+
+func parseItchPublishedGames(htmlDoc string) int {
+	_, rest, ok := strings.Cut(htmlDoc, "user_game_grid")
+	if !ok {
+		return 0
+	}
+	if before, _, hasColl := strings.Cut(rest, "collection_row"); hasColl {
+		rest = before
+	}
+	if before, _, hasHeading := strings.Cut(rest, "<h2"); hasHeading {
+		rest = before
+	}
+	seen := make(map[string]struct{})
+	for _, m := range reItchGameID.FindAllStringSubmatch(rest, -1) {
+		if len(m) == 2 && m[1] != "" {
+			seen[m[1]] = struct{}{}
+		}
+	}
+	return len(seen)
 }
 
 func parseCommaInt(raw string) int {

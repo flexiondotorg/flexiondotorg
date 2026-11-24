@@ -12,12 +12,14 @@ import (
 	"github.com/flexiondotorg/flexiondotorg/internal/rss"
 )
 
-// SocialProfile carries live public counts fetched from a social or video profile endpoint.
+// SocialProfile carries live public counts fetched from a social, video, or gaming profile endpoint.
 type SocialProfile struct {
 	Followers   int
 	Posts       int
 	Subscribers string
 	Videos      string
+	Games       int
+	Level       int
 }
 
 // Input aggregates all live and configured sources consumed by Build.

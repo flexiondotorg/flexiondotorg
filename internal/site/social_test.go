@@ -48,6 +48,22 @@ func TestSocialFetcherMastodonGoToSocialAndBluesky(t *testing.T) {
 		case "/WimpysWorld":
 			w.Header().Set("Content-Type", "text/html")
 			_, _ = w.Write([]byte(`<html><script>var ytInitialData = {"header":{"pageHeaderRenderer":{"content":{"pageHeaderViewModel":{"metadata":{"contentMetadataViewModel":{"metadataRows":[{"metadataParts":[{"text":{"content":"@WimpysWorld"}}]},{"metadataParts":[{"text":{"content":"4.48k subscribers"}},{"text":{"content":"144 videos"}}]}]}}}}}}};</script></html>`))
+		case "/id/wimpress/":
+			w.Header().Set("Content-Type", "text/html")
+			_, _ = w.Write([]byte(`<html><body>
+				<div class="persona_name persona_level">Level <div class="friendPlayerLevel lvl_10"><span class="friendPlayerLevelNum">15</span></div></div>
+				<a href="https://steamcommunity.com/id/wimpress/games/?tab=all"><span class="count_link_label">Games</span><span class="profile_count_link_total"> 296 </span></a>
+			</body></html>`))
+		case "/itch/":
+			w.Header().Set("Content-Type", "text/html")
+			_, _ = w.Write([]byte(`<html><body>
+				<div class="game_grid_widget base_widget user_game_grid">
+					<div data-game_id="2084804" class="game_cell"></div>
+					<div data-game_id="1077213" class="game_cell"></div>
+					<div data-game_id="1077213" class="game_cell"></div>
+				</div>
+				<div class="collection_row"><h2>MFGJ-Summer2021</h2><div data-game_id="9999999"></div></div>
+			</body></html>`))
 		default:
 			http.NotFound(w, r)
 		}
@@ -66,6 +82,8 @@ func TestSocialFetcherMastodonGoToSocialAndBluesky(t *testing.T) {
 		{Title: "Bluesky", Slug: "bluesky", Icon: "bluesky", URL: "https://bsky.app/profile/wimpys.world"},
 		{Title: "Twitch", Slug: "twitch", Icon: "twitch", URL: "https://twitch.tv/WimpysWorld"},
 		{Title: "YouTube", Slug: "youtube", Icon: "youtube", URL: srv.URL + "/WimpysWorld"},
+		{Title: "Steam", Slug: "steam", Icon: "steam", URL: srv.URL + "/id/wimpress/"},
+		{Title: "itch.io", Slug: "itchio", Icon: "itchio", URL: srv.URL + "/itch/"},
 		{Title: "Broken Bluesky", Slug: "broken-bsky", Icon: "bluesky", URL: "https://bsky.app/profile/missing.invalid"},
 		{Title: "Static Link", Slug: "oval-tutu", Icon: "globe", URL: "https://oval-tutu.com"},
 	}
@@ -88,6 +106,12 @@ func TestSocialFetcherMastodonGoToSocialAndBluesky(t *testing.T) {
 	}
 	if got["youtube"] != (SocialProfile{Subscribers: "4.48K", Videos: "144"}) {
 		t.Errorf("youtube = %+v, want {Subscribers:4.48K Videos:144}", got["youtube"])
+	}
+	if got["steam"] != (SocialProfile{Games: 296, Level: 15}) {
+		t.Errorf("steam = %+v, want {Games:296 Level:15}", got["steam"])
+	}
+	if got["itchio"] != (SocialProfile{Games: 2}) {
+		t.Errorf("itchio = %+v, want {Games:2}", got["itchio"])
 	}
 	if _, exists := got["oval-tutu"]; exists {
 		t.Errorf("unexpected social stats for non-social link: %+v", got["oval-tutu"])
