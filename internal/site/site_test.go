@@ -150,6 +150,57 @@ site:
       url: "https://github.com/sponsors/flexiondotorg"
       icon: "heart"
       accent: "pink"
+    - title: "Wimpy's World Blog"
+      slug: "wimpys-world-blog"
+      category: "Sites"
+      description: "Articles on Linux and NixOS."
+      url: "https://wimpysworld.com"
+      icon: "blog"
+      accent: "mauve"
+    - title: "Linux Matters"
+      slug: "linux-matters"
+      category: "Sites"
+      description: "Fortnightly Linux podcast."
+      url: "https://linuxmatters.sh"
+      icon: "podcast"
+      accent: "blue"
+    - title: "Mastodon"
+      slug: "mastodon"
+      category: "Social"
+      description: "Fediverse updates."
+      url: "https://wimpysworld.social/@martin"
+      icon: "mastodon"
+      accent: "mauve"
+    - title: "Bluesky"
+      slug: "bluesky"
+      category: "Social"
+      description: "Short-form notes."
+      url: "https://bsky.app/profile/wimpys.world"
+      icon: "bluesky"
+      accent: "blue"
+    - title: "Twitch"
+      slug: "twitch"
+      category: "Video"
+      description: "Live Linux streams."
+      url: "https://twitch.tv/WimpysWorld"
+      icon: "twitch"
+      accent: "mauve"
+    - title: "YouTube"
+      slug: "youtube"
+      category: "Video"
+      description: "Linux walkthroughs."
+      url: "https://youtube.com/WimpysWorld"
+      icon: "youtube"
+      accent: "red"
+    - title: "Custom Stat Link"
+      slug: "custom-stat"
+      category: "Sites"
+      description: "Custom stats override."
+      url: "https://oval-tutu.com"
+      icon: "globe"
+      stats:
+        - label: "Focus"
+          value: "Indie Games"
 `))
 	if err != nil {
 		t.Fatalf("config.Parse failed: %v", err)
@@ -247,10 +298,16 @@ site:
 	}
 
 	data, err := Build(Input{
-		Config:      cfg,
-		Catalogue:   cat,
-		GitHub:      ghData,
-		Discord:     disc,
+		Config:    cfg,
+		Catalogue: cat,
+		GitHub:    ghData,
+		Discord:   disc,
+		Social: map[string]SocialProfile{
+			"mastodon": {Followers: 3282, Posts: 327},
+			"bluesky":  {Followers: 821, Posts: 144},
+			"twitch":   {Followers: 1533},
+			"youtube":  {Subscribers: "4.48K", Videos: "144"},
+		},
 		Podcast:     podcast,
 		Blog:        blog,
 		GeneratedAt: now,
@@ -298,14 +355,44 @@ site:
 	if data.Packages[0].Packages[0].Name != "deb-get" || data.Packages[0].Packages[0].URL != "https://apt.wimpys.world/#deb-get" {
 		t.Fatalf("packages not sorted or formatted cleanly: %+v", data.Packages[0].Packages)
 	}
-	if len(data.Links) != 3 {
-		t.Fatalf("len(Links) = %d, want 3", len(data.Links))
+	if len(data.Links) != 10 {
+		t.Fatalf("len(Links) = %d, want 10", len(data.Links))
 	}
-	if data.Links[0].Badge != "184 online" || len(data.Links[0].Meta) != 2 {
+	if data.Links[0].Badge != "184 online" || len(data.Links[0].Meta) != 2 || len(data.Links[0].Stats) != 2 || data.Links[0].Stats[0].Label != "ONLINE" || !data.Links[0].Stats[0].Highlight {
 		t.Fatalf("discord link not enriched: %+v", data.Links[0])
 	}
-	if data.Links[2].Badge != "2 active" || len(data.Links[2].Meta) != 2 {
+	if len(data.Links[1].Stats) != 1 || data.Links[1].Stats[0].Label != "HANDLE" || data.Links[1].Stats[0].Value != "@wimpress:matrix.org" {
+		t.Fatalf("matrix link identity stat wrong: %+v", data.Links[1].Stats)
+	}
+	if data.Links[2].Badge != "2 active" || len(data.Links[2].Meta) != 2 || len(data.Links[2].Stats) != 2 {
 		t.Fatalf("sponsors link not enriched: %+v", data.Links[2])
+	}
+	if len(data.Links[3].Stats) != 2 || data.Links[3].Stats[0].Label != "LATEST" || data.Links[3].Stats[1].Label != "SITE" {
+		t.Fatalf("blog link stats wrong: %+v", data.Links[3].Stats)
+	}
+	if len(data.Links[4].Stats) != 2 || data.Links[4].Stats[0].Value != "#94" || data.Links[4].Stats[1].Label != "PUBLISHED" {
+		t.Fatalf("podcast link stats wrong: %+v", data.Links[4].Stats)
+	}
+	if len(data.Links[5].Stats) != 2 || data.Links[5].Stats[0].Value != "3,282" || data.Links[5].Stats[1].Value != "327" {
+		t.Fatalf("mastodon link live stats wrong: %+v", data.Links[5].Stats)
+	}
+	if len(data.Links[6].Stats) != 2 || data.Links[6].Stats[0].Value != "821" || data.Links[6].Stats[1].Value != "144" {
+		t.Fatalf("bluesky link live stats wrong: %+v", data.Links[6].Stats)
+	}
+	if len(data.Links[7].Stats) != 2 || data.Links[7].Stats[0].Value != "1,533" || data.Links[7].Stats[1].Value != "WimpysWorld" {
+		t.Fatalf("twitch link live stats wrong: %+v", data.Links[7].Stats)
+	}
+	if len(data.Links[8].Stats) != 2 || data.Links[8].Stats[0].Value != "4.48K" || data.Links[8].Stats[1].Value != "144" {
+		t.Fatalf("youtube link live stats wrong: %+v", data.Links[8].Stats)
+	}
+	if len(data.Links[9].Stats) != 1 || data.Links[9].Stats[0].Label != "FOCUS" || data.Links[9].Stats[0].Value != "Indie Games" {
+		t.Fatalf("custom link stats wrong: %+v", data.Links[9].Stats)
+	}
+	if len(data.Links[2].Sponsors) != 2 || data.Links[2].Sponsors[0].Login != "alice" || data.Links[2].Sponsors[0].URL != "https://github.com/alice" {
+		t.Fatalf("sponsors handles not populated: %+v", data.Links[2].Sponsors)
+	}
+	if len(data.Links[2].PastSponsors) != 1 || data.Links[2].PastSponsors[0].Login != "carol" {
+		t.Fatalf("past sponsors handles not populated: %+v", data.Links[2].PastSponsors)
 	}
 	if len(data.Media) != 4 {
 		t.Fatalf("len(Media) = %d, want 4 (podcast-hub + 1 ep + blog-hub + 1 post)", len(data.Media))
@@ -380,9 +467,26 @@ site:
 	if !strings.Contains(indexHTML, `<script type="module" src="./app.js"></script>`) {
 		t.Fatal("index.html missing ES module script tag for app.js")
 	}
-	for _, wantID := range []string{"btn-theme-system", "btn-theme-light", "btn-theme-dark", "pixi-root", "scroll-spacer"} {
+	for _, wantID := range []string{
+		"btn-theme-system",
+		"btn-theme-light",
+		"btn-theme-dark",
+		"pixi-root",
+		"scroll-spacer",
+		"card-modal",
+		"flip-float-wrap",
+		"flip-scene",
+		"flip-card",
+		"flip-face-front",
+		"flip-face-back",
+	} {
 		if !strings.Contains(indexHTML, `id="`+wantID+`"`) {
 			t.Errorf("index.html missing expected element id %q", wantID)
+		}
+	}
+	for _, wantAttr := range []string{`role="dialog"`, `aria-modal="true"`, `aria-labelledby="modal-title"`} {
+		if !strings.Contains(indexHTML, wantAttr) {
+			t.Errorf("index.html missing expected dialog attribute %q", wantAttr)
 		}
 	}
 	for _, removedID := range []string{"btn-view-floating", "btn-view-grid", "btn-drift-toggle", "header-stats", "deck-nav", "sort-controls"} {

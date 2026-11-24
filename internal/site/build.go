@@ -51,7 +51,7 @@ func Build(in Input) (*SiteData, error) {
 	hostLogos := make(map[string]string)
 	packages := buildPackages(in.Catalogue, hostLogos)
 	projects := buildProjects(in.Catalogue, now)
-	links := buildLinks(cfg, in.GitHub, in.Discord)
+	links := buildLinks(cfg, in.GitHub, in.Discord, in.Social, in.Podcast, in.Blog, now)
 	media := buildMedia(cfg, in.Podcast, in.Blog, in.YouTube, now)
 
 	profile := buildProfile(cfg)
@@ -315,7 +315,14 @@ func describePackageHost(name string) (displayName, description, accent string) 
 	}
 }
 
-func buildLinks(cfg *config.Config, ghData *gh.ProfileData, disc discord.Status) []LinkCard {
+func buildLinks(
+	cfg *config.Config,
+	ghData *gh.ProfileData,
+	disc discord.Status,
+	social map[string]SocialProfile,
+	podcastItems, blogItems []rss.Item,
+	now time.Time,
+) []LinkCard {
 	configured := cfg.Site.Links
 	if len(configured) == 0 && len(cfg.Profile.Links) > 0 {
 		configured = make([]config.SiteLink, 0, len(cfg.Profile.Links))
@@ -335,13 +342,7 @@ func buildLinks(cfg *config.Config, ghData *gh.ProfileData, disc discord.Status)
 	seen := make(map[string]int, len(configured))
 
 	for i, link := range configured {
-		slug := slugify(link.Slug)
-		if slug == "" {
-			slug = slugify(link.Title)
-		}
-		if slug == "" {
-			slug = fmt.Sprintf("link-%d", i+1)
-		}
+		slug := linkLookupKey(link, i)
 		seen[slug]++
 		id := slug
 		if seen[slug] > 1 {
@@ -366,30 +367,93 @@ func buildLinks(cfg *config.Config, ghData *gh.ProfileData, disc discord.Status)
 			Accent:      accent,
 		}
 
-		enrichLinkCard(&card, ghData, disc)
+		enrichLinkCard(&card, link, cfg, ghData, disc, social[slug], podcastItems, blogItems, now)
 		cards = append(cards, card)
 	}
 	return cards
 }
 
-func enrichLinkCard(card *LinkCard, ghData *gh.ProfileData, disc discord.Status) {
+func enrichLinkCard(
+	card *LinkCard,
+	link config.SiteLink,
+	cfg *config.Config,
+	ghData *gh.ProfileData,
+	disc discord.Status,
+	socialProf SocialProfile,
+	podcastItems, blogItems []rss.Item,
+	now time.Time,
+) {
 	icon := strings.ToLower(strings.TrimSpace(card.Icon))
-	if icon == "discord" || card.ID == "discord" {
-		if disc.Online > 0 {
-			card.Badge = render.FormatInt(disc.Online) + " online"
-			card.Meta = append(card.Meta, render.FormatInt(disc.Online)+" online")
-		}
-		if disc.Members > 0 {
-			card.Meta = append(card.Meta, render.FormatInt(disc.Members)+" members")
-			if card.Badge == "" {
-				card.Badge = render.FormatInt(disc.Members) + " members"
+	if len(link.Stats) > 0 {
+		for _, s := range link.Stats {
+			if len(card.Stats) >= 2 {
+				break
 			}
+			card.Stats = append(card.Stats, StatRow{
+				Label: strings.ToUpper(strings.TrimSpace(s.Label)),
+				Value: strings.TrimSpace(s.Value),
+			})
 		}
 		return
 	}
 
-	isSponsors := icon == "heart" || card.ID == "github-sponsors" || strings.Contains(strings.ToLower(card.URL), "github.com/sponsors/")
-	if isSponsors && ghData != nil {
+	switch {
+	case icon == "discord" || card.ID == "discord":
+		enrichDiscordLinkCard(card, disc)
+	case icon == "heart" || card.ID == "github-sponsors" || strings.Contains(strings.ToLower(card.URL), "github.com/sponsors/"):
+		enrichSponsorsLinkCard(card, cfg, ghData)
+	case icon == "blog" || card.ID == "wimpys-world-blog":
+		enrichBlogLinkCard(card, blogItems, now)
+	case icon == "podcast" || card.ID == "linux-matters":
+		enrichPodcastLinkCard(card, podcastItems, now)
+	case icon == "mastodon" || card.ID == "mastodon":
+		enrichSocialLinkCard(card, socialProf, deriveFediverseHandle(card.URL))
+	case icon == "bluesky" || card.ID == "bluesky":
+		enrichSocialLinkCard(card, socialProf, deriveBlueskyHandle(card.URL))
+	case icon == "twitch" || card.ID == "twitch":
+		enrichTwitchLinkCard(card, socialProf)
+	case icon == "youtube" || card.ID == "youtube":
+		enrichYouTubeLinkCard(card, socialProf)
+	default:
+		card.Stats = []StatRow{deriveIdentityStat(icon, card.URL, card.HostLabel)}
+	}
+}
+
+func enrichDiscordLinkCard(card *LinkCard, disc discord.Status) {
+	if disc.Online > 0 {
+		card.Badge = render.FormatInt(disc.Online) + " online"
+		card.Meta = append(card.Meta, render.FormatInt(disc.Online)+" online")
+		card.Stats = append(card.Stats, StatRow{
+			Label:     "ONLINE",
+			Value:     render.FormatInt(disc.Online),
+			Highlight: true,
+		})
+	}
+	if disc.Members > 0 {
+		card.Meta = append(card.Meta, render.FormatInt(disc.Members)+" members")
+		if card.Badge == "" {
+			card.Badge = render.FormatInt(disc.Members) + " members"
+		}
+		card.Stats = append(card.Stats, StatRow{
+			Label: "MEMBERS",
+			Value: render.FormatInt(disc.Members),
+		})
+	}
+	if len(card.Stats) == 0 {
+		card.Stats = []StatRow{deriveIdentityStat("discord", card.URL, card.HostLabel)}
+	}
+}
+
+func enrichSponsorsLinkCard(card *LinkCard, cfg *config.Config, ghData *gh.ProfileData) {
+	handle := ""
+	if cfg != nil {
+		handle = strings.TrimSpace(cfg.Profile.Handle)
+		if handle == "" {
+			handle = strings.TrimSpace(cfg.GitHub.Username)
+		}
+	}
+
+	if ghData != nil {
 		active := ghData.SponsorCount
 		if active == 0 {
 			active = len(ghData.Sponsors)
@@ -398,14 +462,203 @@ func enrichLinkCard(card *LinkCard, ghData *gh.ProfileData, disc discord.Status)
 		if active > 0 {
 			card.Badge = fmt.Sprintf("%s active", render.FormatInt(active))
 			card.Meta = append(card.Meta, fmt.Sprintf("%s active sponsors", render.FormatInt(active)))
+			card.Stats = append(card.Stats, StatRow{
+				Label:     "ACTIVE",
+				Value:     render.FormatInt(active),
+				Highlight: true,
+			})
 		}
 		if past > 0 {
 			card.Meta = append(card.Meta, fmt.Sprintf("%s past sponsors", render.FormatInt(past)))
 			if card.Badge == "" {
 				card.Badge = fmt.Sprintf("%s past sponsors", render.FormatInt(past))
 			}
+			card.Stats = append(card.Stats, StatRow{
+				Label: "PAST SPONSORS",
+				Value: render.FormatInt(past),
+			})
+		}
+		card.Sponsors = buildSponsorRefs(ghData.Sponsors)
+		card.PastSponsors = buildSponsorRefs(ghData.PastSponsors)
+	}
+
+	if len(card.Stats) < 2 && handle != "" {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "GITHUB",
+			Value: "@" + handle,
+		})
+	}
+	if len(card.Stats) == 0 {
+		card.Stats = []StatRow{{Label: "SITE", Value: card.HostLabel}}
+	}
+}
+
+func enrichBlogLinkCard(card *LinkCard, blogItems []rss.Item, now time.Time) {
+	if len(blogItems) > 0 {
+		latest := toMediaEntry(blogItems[0], now)
+		latestVal := fallbackText(latest.Age, latest.DateLabel)
+		if latestVal != "" {
+			card.Stats = append(card.Stats, StatRow{Label: "LATEST", Value: latestVal})
+			card.Meta = append(card.Meta, "Latest post "+latestVal)
+		}
+		card.Meta = append(card.Meta, fmt.Sprintf("%d recent posts", len(blogItems)))
+	}
+	card.Stats = append(card.Stats, StatRow{Label: "SITE", Value: card.HostLabel})
+}
+
+func enrichPodcastLinkCard(card *LinkCard, podcastItems []rss.Item, now time.Time) {
+	if len(podcastItems) > 0 {
+		latest := toMediaEntry(podcastItems[0], now)
+		if latest.Episode != "" {
+			card.Stats = append(card.Stats, StatRow{Label: "LATEST", Value: "#" + latest.Episode})
+			card.Meta = append(card.Meta, "Episode #"+latest.Episode)
+		}
+		if age := fallbackText(latest.Age, latest.DateLabel); age != "" {
+			card.Stats = append(card.Stats, StatRow{Label: "PUBLISHED", Value: age})
+			card.Meta = append(card.Meta, "Published "+age)
 		}
 	}
+	if len(card.Stats) == 0 {
+		card.Stats = []StatRow{{Label: "SITE", Value: card.HostLabel}}
+	}
+}
+
+func enrichSocialLinkCard(card *LinkCard, prof SocialProfile, fallbackHandle string) {
+	if prof.Followers > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "FOLLOWERS",
+			Value: render.FormatInt(prof.Followers),
+		})
+		card.Meta = append(card.Meta, render.FormatInt(prof.Followers)+" followers")
+	}
+	if prof.Posts > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "POSTS",
+			Value: render.FormatInt(prof.Posts),
+		})
+		card.Meta = append(card.Meta, render.FormatInt(prof.Posts)+" posts")
+	}
+	if len(card.Stats) == 0 {
+		val := fallbackText(fallbackHandle, card.HostLabel)
+		card.Stats = []StatRow{{Label: "HANDLE", Value: val}}
+	}
+}
+
+func enrichTwitchLinkCard(card *LinkCard, prof SocialProfile) {
+	if prof.Followers > 0 {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "FOLLOWERS",
+			Value: render.FormatInt(prof.Followers),
+		})
+		card.Meta = append(card.Meta, render.FormatInt(prof.Followers)+" followers")
+	}
+	card.Stats = append(card.Stats, deriveIdentityStat("twitch", card.URL, card.HostLabel))
+}
+
+func enrichYouTubeLinkCard(card *LinkCard, prof SocialProfile) {
+	if prof.Subscribers != "" {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "SUBSCRIBERS",
+			Value: prof.Subscribers,
+		})
+		card.Meta = append(card.Meta, prof.Subscribers+" subscribers")
+	}
+	if prof.Videos != "" {
+		card.Stats = append(card.Stats, StatRow{
+			Label: "VIDEOS",
+			Value: prof.Videos,
+		})
+		card.Meta = append(card.Meta, prof.Videos+" videos")
+	}
+	if len(card.Stats) == 0 {
+		card.Stats = []StatRow{deriveIdentityStat("youtube", card.URL, card.HostLabel)}
+	}
+}
+
+func deriveFediverseHandle(rawURL string) string {
+	origin, acct, ok := parseFediverseURL(rawURL)
+	if !ok {
+		return ""
+	}
+	parsed, err := url.Parse(origin)
+	if err != nil || parsed.Host == "" {
+		return "@" + acct
+	}
+	return "@" + acct + "@" + parsed.Host
+}
+
+func deriveBlueskyHandle(rawURL string) string {
+	actor, ok := parseBlueskyActor(rawURL)
+	if !ok {
+		return ""
+	}
+	return "@" + actor
+}
+
+func deriveIdentityStat(icon, rawURL, hostLabel string) StatRow {
+	parsed, err := url.Parse(strings.TrimSpace(rawURL))
+	if err == nil {
+		switch icon {
+		case "matrix":
+			if frag := strings.TrimPrefix(strings.TrimSpace(parsed.Fragment), "/"); frag != "" {
+				return StatRow{Label: "HANDLE", Value: frag}
+			}
+		case "youtube":
+			if seg := lastPathSegment(parsed.Path); seg != "" {
+				if !strings.HasPrefix(seg, "@") {
+					seg = "@" + seg
+				}
+				return StatRow{Label: "CHANNEL", Value: seg}
+			}
+		case "twitch":
+			if seg := lastPathSegment(parsed.Path); seg != "" {
+				return StatRow{Label: "CHANNEL", Value: seg}
+			}
+		case "linkedin", "steam":
+			if seg := lastPathSegment(parsed.Path); seg != "" {
+				return StatRow{Label: "PROFILE", Value: seg}
+			}
+		case "itchio":
+			if host := strings.TrimPrefix(parsed.Host, "www."); host != "" {
+				return StatRow{Label: "CREATOR", Value: host}
+			}
+		}
+	}
+	return StatRow{Label: "SITE", Value: fallbackText(hostLabel, strings.TrimSpace(rawURL))}
+}
+
+func lastPathSegment(rawPath string) string {
+	trimmed := strings.Trim(strings.TrimSpace(rawPath), "/")
+	if trimmed == "" {
+		return ""
+	}
+	parts := strings.Split(trimmed, "/")
+	return strings.TrimSpace(parts[len(parts)-1])
+}
+
+func buildSponsorRefs(list []gh.Sponsor) []SponsorRef {
+	if len(list) == 0 {
+		return nil
+	}
+	refs := make([]SponsorRef, 0, len(list))
+	for _, sp := range list {
+		login := strings.TrimSpace(sp.Login)
+		if login == "" {
+			continue
+		}
+		profileURL := strings.TrimSpace(sp.URL)
+		if profileURL == "" {
+			profileURL = "https://github.com/" + login
+		}
+		refs = append(refs, SponsorRef{
+			Login: login,
+			URL:   profileURL,
+		})
+	}
+	if len(refs) == 0 {
+		return nil
+	}
+	return refs
 }
 
 func buildMedia(

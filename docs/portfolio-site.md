@@ -53,15 +53,17 @@ Each card uses `224px x 314px` logical portrait playing-card proportions, drawn 
   - **Links**: `CATEGORY`, `HOST`, plus live `ONLINE` and `MEMBERS` for Discord or `ACTIVE` and `PAST SPONSORS` for GitHub Sponsors.
   - **Media**: Tailored rows for podcast episodes (`EPISODE`, `DURATION`, `PUBLISHED`, `SHOW`), podcast and blog hubs (`LATEST`, `EPISODES` or `POSTS`, `LISTEN` or `SITE`), and blog posts (`READ TIME`, `PUBLISHED`, `SITE`, `FORMAT`).
 
-### Zoomed HTML detail modal
+### Physical pick-up, mid-air 3D flip, and portrait `5:7` back face
 
-Clicking a card runs a brisk horizontal flip collapse (`scale.x` toward `0`) on the PixiJS card sprite and opens a centred HTML modal dialog (`role="dialog"`, `aria-modal="true"`):
+Clicking a card or activating its keyboard button proxy captures the card's live screen centre, rotation, scale, and `2x` front canvas snapshot, hides the PixiJS sprite on the same frame, and flies a 3D card (`460ms` cubic ease-out, `rotateY(0deg -> 180deg)`, subtle mid-air `rotateX` lift) to viewport centre at portrait `5:7` playing-card size (`min(440px, 90vw)` by `min(616px, 86vh)`). Once landed, the centred card keeps a calm reduced float (`±3px`, `±0.45deg` over `5.6s`) that pauses smoothly when hovering or focusing interactive links.
 
-- **Projects**: Full description, star count, language, release badge and link, Homepage and GitHub actions, and clickable Haberdasher package tiles (`https://<host>/#<slug>`) with each host's inline SVG logo from `HostLogos`.
-- **Links**: Full description, live Discord or GitHub Sponsors metadata, and primary open link.
-- **Media**: Linux Matters Podcast hub (cover art, recent episodes, and subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), Wimpy's World Blog hub, and individual episode or post cards.
+The flipped back face (`role="dialog"`, `aria-modal="true"`, `aria-labelledby="modal-title"`) keeps the playing-card border, top aurora bar, and an internal scroll area with individually clickable details:
 
-Visitors dismiss the modal by clicking outside the dialog, clicking the close button, or pressing `Esc`. Focus stays trapped inside the modal while open and returns to the triggering card button on close.
+- **Projects**: Clickable logo and title (`Homepage` or `RepoURL`), clickable `owner/repo` link, untruncated description, clickable star and release pills, action buttons (`Homepage`, `GitHub`, `Releases`), and a two-column grid of clickable Haberdasher package repository tiles (`https://<host>/#<slug>`) with each host's inline SVG logo, bold host label (`APT`, `RPM`, `PKG`, `APK`, `Flatpak`, `Homebrew`, `Scoop`, `Nix`), and format subtitle, or a `Source & Releases` card link when no package hosts exist.
+- **Links**: Clickable brand icon and title, category badge, full description, live Discord online and member counts or clickable GitHub Sponsors `@login` handles (active and past), and a primary visit button.
+- **Media**: Linux Matters Podcast hub (clickable cover art and title, subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS, and clickable recent episodes), podcast episode cards, and Wimpy's World Blog hub and post cards.
+
+Visitors dismiss the card by clicking outside it, clicking the close button, or pressing `Esc`, which triggers a `340ms` reverse flight (`rotateY(180deg -> 0deg)`) back into the card's live tabletop slot before revealing the PixiJS sprite and restoring focus. Focus stays trapped inside the back face while open, and `prefers-reduced-motion: reduce` opens and closes cleanly without flight, spin, or centre float.
 
 ## Motion, interaction, and accessibility
 

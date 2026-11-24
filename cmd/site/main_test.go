@@ -213,6 +213,11 @@ site:
 		now:          func() time.Time { return fixedNow },
 		httpClient:   srv.Client(),
 		githubClient: ghClient,
+		socialFetcher: &site.SocialFetcher{
+			HTTPClient:        srv.Client(),
+			BlueskyAPIBaseURL: srv.URL,
+			DecapiBaseURL:     srv.URL,
+		},
 		haberdasherHostBaseFn: func(host string) string {
 			return srv.URL + "/hosts/" + host
 		},

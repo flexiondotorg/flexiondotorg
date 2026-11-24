@@ -87,16 +87,20 @@ const PALETTES = {
   },
 };
 
-const HOST_DOT_ACCENTS = [
-  'red',
-  'blue',
-  'sapphire',
-  'teal',
-  'mauve',
-  'peach',
-  'green',
-  'lavender',
-];
+// Exact Haberdasher vendor platform colours from https://<host>.wimpys.world/logo.svg
+const HOST_META = {
+  apt: { label: 'APT', subtitle: 'Debian / Ubuntu', dark: '#E95420', light: '#E95420' },
+  rpm: { label: 'RPM', subtitle: 'Fedora / RHEL', dark: '#EE0000', light: '#EE0000' },
+  pkg: { label: 'PKG', subtitle: 'Arch Linux', dark: '#1793D1', light: '#1793D1' },
+  apk: { label: 'APK', subtitle: 'Alpine Linux', dark: '#7FC0E3', light: '#0D597F' },
+  flatpak: { label: 'Flatpak', subtitle: 'Linux Sandboxed', dark: '#4A90D9', light: '#4A90D9' },
+  brew: { label: 'Homebrew', subtitle: 'macOS / Linux', dark: '#E2A843', light: '#A8700F' },
+  scoop: { label: 'Scoop', subtitle: 'Windows', dark: '#F77FB5', light: '#D9488F' },
+  nix: { label: 'Nix', subtitle: 'Nix Flakes', dark: '#7EBAE4', light: '#5277C3' },
+};
+
+const FLIP_IN_MS = 460;
+const FLIP_OUT_MS = 340;
 
 const BALATRO_FRAG = `
 precision highp float;
@@ -155,7 +159,11 @@ const els = {
   a11yCards: document.getElementById('a11y-cards'),
   liveStatus: document.getElementById('live-status'),
   modal: document.getElementById('card-modal'),
-  modalCard: document.getElementById('modal-card'),
+  flipFloatWrap: document.getElementById('flip-float-wrap'),
+  flipScene: document.getElementById('flip-scene'),
+  flipCard: document.getElementById('flip-card'),
+  flipFront: document.getElementById('flip-face-front'),
+  flipBack: document.getElementById('flip-face-back'),
   themeButtons: Array.from(document.querySelectorAll('.theme-opt[data-theme-mode]')),
 };
 
@@ -167,8 +175,10 @@ const state = {
   theme: document.documentElement.dataset.theme === 'latte' ? 'latte' : 'mocha',
   activeDeck: 'projects',
   modalOpen: false,
+  modalPhase: 'closed', // 'closed' | 'flippingIn' | 'open' | 'flippingOut'
+  modalAnimRaf: 0,
+  activeCard: null,
   lastFocusedEl: null,
-  flippingCard: null,
 
   // PixiJS scene objects
   app: null,
@@ -370,6 +380,9 @@ function applyThemeMode(mode, shouldAnnounce) {
   }
 
   syncThemeControls();
+  if (changed && state.modalPhase !== 'closed') {
+    cancelCardModal(false);
+  }
   if (changed && state.app) {
     refreshPixiForTheme();
   }
@@ -676,11 +689,9 @@ function resolveCardAccent(deckKey, item, p) {
 }
 
 function extractCardTopTrumpsModel(deckKey, item, p) {
-  const totalHosts = (state.data && state.data.packages && state.data.packages.length) || 8;
   const accent = resolveCardAccent(deckKey, item, p);
 
   if (deckKey === 'projects') {
-    const hostCount = (item.hosts || []).length;
     const rows = [
       {
         label: 'STARS',
@@ -688,20 +699,9 @@ function extractCardTopTrumpsModel(deckKey, item, p) {
         valueColor: p.text,
       },
       {
-        label: 'RELEASE',
-        value: item.latest_tag || '—',
-        valueColor: item.fresh ? p.freshText : p.text,
-      },
-      {
         label: 'UPDATED',
         value: item.release_age || '—',
-        valueColor: p.subtext,
-      },
-      {
-        label: 'PACKAGES',
-        value: hostCount > 0 ? `${hostCount}/${totalHosts} hosts` : 'Source',
-        valueColor: hostCount > 0 ? p.text : p.subtext,
-        hostDots: hostCount,
+        valueColor: item.fresh ? p.freshText : p.subtext,
       },
     ];
     return {
@@ -717,41 +717,20 @@ function extractCardTopTrumpsModel(deckKey, item, p) {
   }
 
   if (deckKey === 'links') {
-    const rows = [
-      { label: 'CATEGORY', value: item.category || 'Link', valueColor: p.text },
-      { label: 'HOST', value: item.host_label || 'External', valueColor: p.subtext },
-    ];
-
-    const s = (state.data && state.data.stats) || {};
     const icon = String(item.icon || '').toLowerCase();
     const isDiscord = icon === 'discord' || item.id === 'discord';
-    const isSponsors = icon === 'heart' || item.id === 'github-sponsors' || String(item.url || '').includes('github.com/sponsors/');
+    const rows = [];
 
-    if (isDiscord && (s.discord_online > 0 || s.discord_members > 0)) {
-      rows.push({
-        label: 'ONLINE',
-        value: s.discord_online > 0 ? s.discord_online.toLocaleString('en-GB') : '—',
-        valueColor: p.freshText,
-      });
-      rows.push({
-        label: 'MEMBERS',
-        value: s.discord_members > 0 ? s.discord_members.toLocaleString('en-GB') : '—',
-        valueColor: p.text,
-      });
-    } else if (isSponsors && (s.active_sponsors > 0 || s.past_sponsors > 0)) {
-      rows.push({
-        label: 'ACTIVE',
-        value: String(s.active_sponsors || 0),
-        valueColor: s.active_sponsors > 0 ? p.freshText : p.subtext,
-      });
-      rows.push({
-        label: 'PAST SPONSORS',
-        value: String(s.past_sponsors || 0),
-        valueColor: p.text,
-      });
-    } else {
-      rows.push({ label: 'DECK', value: 'Links', valueColor: p.subtext });
-      rows.push({ label: 'OPEN', value: 'Details ↗', valueColor: p.linkText });
+    if (Array.isArray(item.stats) && item.stats.length > 0) {
+      for (const st of item.stats.slice(0, 2)) {
+        rows.push({
+          label: String(st.label || '').toUpperCase(),
+          value: String(st.value || '—'),
+          valueColor: st.highlight ? p.freshText : p.text,
+        });
+      }
+    } else if (item.host_label) {
+      rows.push({ label: 'SITE', value: item.host_label, valueColor: p.subtext });
     }
 
     return {
@@ -766,37 +745,27 @@ function extractCardTopTrumpsModel(deckKey, item, p) {
     };
   }
 
-  // Media deck
+  // Media deck (deduplicated 2-row layout so descriptions have room to breathe)
   const rows = [];
   if (item.kind === 'episode') {
-    rows.push({ label: 'EPISODE', value: item.episode ? `#${item.episode}` : '—', valueColor: p.text });
     rows.push({ label: 'DURATION', value: item.duration || '—', valueColor: p.text });
     rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.subtext });
-    rows.push({ label: 'SHOW', value: 'Linux Matters', valueColor: p.subtext });
   } else if (item.kind === 'podcast-hub') {
     const entries = item.entries || [];
     const latest = entries[0];
     rows.push({ label: 'LATEST', value: latest && latest.episode ? `#${latest.episode}` : (latest && latest.age) || '—', valueColor: p.text });
-    rows.push({ label: 'EPISODES', value: entries.length > 0 ? `${entries.length} recent` : 'Feed', valueColor: p.text });
     rows.push({ label: 'LISTEN', value: `${(item.subscribe_links || []).length || 1} feeds`, valueColor: p.linkText });
-    rows.push({ label: 'SHOW', value: 'Linux Matters', valueColor: p.subtext });
   } else if (item.kind === 'post') {
-    rows.push({ label: 'READ TIME', value: item.read_time_minutes > 0 ? `${item.read_time_minutes} min` : 'Article', valueColor: p.text });
-    rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.subtext });
+    rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.text });
     rows.push({ label: 'SITE', value: 'wimpysworld.com', valueColor: p.subtext });
-    rows.push({ label: 'FORMAT', value: 'Blog Post', valueColor: p.subtext });
   } else if (item.kind === 'blog-hub') {
     const entries = item.entries || [];
     const latest = entries[0];
-    rows.push({ label: 'POSTS', value: entries.length > 0 ? `${entries.length} recent` : 'Feed', valueColor: p.text });
     rows.push({ label: 'LATEST', value: (latest && (latest.age || latest.date_label)) || '—', valueColor: p.text });
     rows.push({ label: 'SITE', value: 'wimpysworld.com', valueColor: p.subtext });
-    rows.push({ label: 'FEED', value: 'RSS', valueColor: p.linkText });
   } else {
     rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.text });
-    rows.push({ label: 'DATE', value: item.date_label || '—', valueColor: p.subtext });
     rows.push({ label: 'SITE', value: 'YouTube', valueColor: p.subtext });
-    rows.push({ label: 'FORMAT', value: 'Video', valueColor: p.subtext });
   }
 
   return {
@@ -952,23 +921,32 @@ function drawCardFaceToCanvas(canvas, deckKey, item, p, artwork) {
     cursorY += 3;
   }
 
-  ctx.font = `400 11.2px ${FONT_SANS}`;
-  ctx.fillStyle = p.subtext;
-  const maxDescLines = titleLines.length > 1 ? 2 : 2;
-  const descLines = wrapLines(ctx, model.desc, textW, maxDescLines);
-  for (const line of descLines) {
-    ctx.fillText(line, padX, cursorY);
-    cursorY += 15;
-  }
-
-  // 4. Lower Top Trumps stat rows (4 rows, y = 190..302)
-  const rowsStartY = 190;
+  // Compute bottom-anchored stat band first so the description uses every
+  // available line inside the fixed 224 x 314 card geometry.
+  const visibleRows = model.rows.slice(0, 2);
   const rowH = 25;
   const rowGap = 3;
   const rowW = CARD_W - padX * 2;
+  const rowCount = visibleRows.length;
+  const rowsBlockH = rowCount > 0 ? rowCount * rowH + (rowCount - 1) * rowGap : 0;
+  const rowsStartY = rowCount > 0 ? 302 - rowsBlockH : 302;
 
-  for (let r = 0; r < Math.min(4, model.rows.length); r += 1) {
-    const row = model.rows[r];
+  const isProjects = deckKey === 'projects';
+  const descFontSize = isProjects ? 12.4 : 11.2;
+  const descLineH = isProjects ? 16.5 : 15;
+  ctx.font = `400 ${descFontSize}px ${FONT_SANS}`;
+  ctx.fillStyle = p.subtext;
+  const availDescH = Math.max(descLineH * 2, rowsStartY - 8 - cursorY);
+  const maxDescLines = Math.max(2, Math.floor(availDescH / descLineH));
+  const descLines = wrapLines(ctx, model.desc, textW, maxDescLines);
+  for (const line of descLines) {
+    ctx.fillText(line, padX, cursorY);
+    cursorY += descLineH;
+  }
+
+  // 4. Bottom-anchored Top Trumps stat rows (1-2 rows ending at y = 302)
+  for (let r = 0; r < rowCount; r += 1) {
+    const row = visibleRows[r];
     const ry = rowsStartY + r * (rowH + rowGap);
 
     roundedRectPath(ctx, padX, ry, rowW, rowH, 6);
@@ -980,29 +958,17 @@ function drawCardFaceToCanvas(canvas, deckKey, item, p, artwork) {
     ctx.fillStyle = p.muted;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
-    ctx.fillText(row.label, padX + 8, ry + rowH / 2 + 0.5);
+    const labelStr = row.label;
+    ctx.fillText(labelStr, padX + 8, ry + rowH / 2 + 0.5);
+    const labelW = ctx.measureText(labelStr).width;
 
-    // Right tabular value (plus optional tiny coloured host dots on PACKAGES)
+    // Right tabular value
     ctx.font = `600 10.5px ${FONT_MONO}`;
     ctx.fillStyle = row.valueColor || p.text;
     ctx.textAlign = 'right';
-    const valStr = truncateText(ctx, row.value, rowW - 82);
+    const maxValW = Math.max(68, rowW - 22 - labelW);
+    const valStr = truncateText(ctx, row.value, maxValW);
     ctx.fillText(valStr, padX + rowW - 8, ry + rowH / 2 + 0.5);
-
-    if (row.hostDots && row.hostDots > 0) {
-      const valW = ctx.measureText(valStr).width;
-      const dotCount = Math.min(8, row.hostDots);
-      const dotStep = 6.5;
-      const startX = padX + rowW - 8 - valW - 7 - (dotCount - 1) * dotStep;
-      if (startX > padX + 64) {
-        for (let d = 0; d < dotCount; d += 1) {
-          ctx.fillStyle = accentColor(p, HOST_DOT_ACCENTS[d % HOST_DOT_ACCENTS.length]);
-          ctx.beginPath();
-          ctx.arc(startX + d * dotStep, ry + rowH / 2, 2.3, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-    }
   }
 
   ctx.restore(); // End clip
@@ -1615,8 +1581,7 @@ function dealDeck(deckKey) {
       dealDelay: reduced ? 0 : idx * 0.038,
       dealt: reduced,
       sparkled: reduced,
-      flipState: 'idle', // 'idle' | 'closing' | 'hidden'
-      flipProgress: 0,
+      pickedUp: false,
 
       phaseX: idx * 1.13 + 0.5,
       phaseY: idx * 0.89 + 1.7,
@@ -1726,6 +1691,9 @@ function switchDeck(deckKey) {
   if (!DECKS.some((d) => d.key === deckKey)) {
     return;
   }
+  if (state.modalPhase !== 'closed') {
+    cancelCardModal(false);
+  }
   const wasSame = state.activeDeck === deckKey;
   state.activeDeck = deckKey;
 
@@ -1753,6 +1721,9 @@ function switchDeck(deckKey) {
 function relayoutScene() {
   if (!state.app) {
     return;
+  }
+  if (state.modalPhase !== 'closed') {
+    cancelCardModal(false);
   }
   const w = window.innerWidth;
   const h = window.innerHeight;
@@ -1882,31 +1853,17 @@ function onTick(ticker) {
   // Animate active deck cards
   for (let i = 0; i < state.cardRecords.length; i += 1) {
     const rec = state.cardRecords[i];
-    const isHovered = !state.modalOpen && (state.hoveredCardId === rec.id || state.focusedCardId === rec.id);
-
-    // Handle brisk flip collapse when opening detail modal
-    if (rec.flipState === 'closing') {
-      rec.flipProgress += dt / 0.15;
-      if (rec.flipProgress >= 1) {
-        rec.flipProgress = 1;
-        rec.flipState = 'hidden';
-        rec.container.scale.set(0.03 * cardScale, cardScale * 1.06);
-        openDetailModal(rec.deckKey, rec.item, state.lastFocusedEl);
-      } else {
-        const sx = Math.max(0.03, Math.cos(rec.flipProgress * Math.PI * 0.5));
-        rec.container.scale.set(sx * cardScale * 1.07, cardScale * 1.07);
-      }
-      continue;
-    }
-
-    if (rec.flipState === 'hidden') {
-      continue;
-    }
+    const isHovered = !state.modalOpen && !rec.pickedUp && (state.hoveredCardId === rec.id || state.focusedCardId === rec.id);
 
     if (reduced) {
-      rec.container.position.set(rec.homeX, rec.homeY);
-      rec.container.rotation = rec.baseRot;
-      rec.container.scale.set(isHovered ? cardScale * 1.03 : cardScale);
+      rec.x = rec.homeX;
+      rec.y = rec.homeY;
+      rec.rot = rec.baseRot;
+      rec.scaleX = isHovered ? cardScale * 1.03 : cardScale;
+      rec.scaleY = rec.scaleX;
+      rec.container.position.set(rec.x, rec.y);
+      rec.container.rotation = rec.rot;
+      rec.container.scale.set(rec.scaleX, rec.scaleY);
       rec.container.skew.set(0, 0);
       rec.container.zIndex = isHovered ? 200 : 20 + i;
       rec.hoverOutline.alpha = isHovered ? 1 : 0;
@@ -2002,7 +1959,31 @@ function onTick(ticker) {
 // Detail Modal (minimal HTML layer with full project/link/media details)
 // ---------------------------------------------------------------------------
 
-function mountSVG(container, rawSVG) {
+function extractSVGThemeFills(rawSVG) {
+  const result = { light: '', dark: '' };
+  if (!rawSVG || typeof rawSVG !== 'string') {
+    return result;
+  }
+  const styleMatch = rawSVG.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+  if (!styleMatch) {
+    return result;
+  }
+  const css = styleMatch[1];
+  const darkMatch = css.match(/prefers-color-scheme\s*:\s*dark[\s\S]*?fill\s*:\s*(#[0-9a-f]{3,8})/i);
+  const withoutDark = css.replace(/@media[^{]*\{[\s\S]*?\}\s*\}/gi, '');
+  const lightMatch = withoutDark.match(/fill\s*:\s*(#[0-9a-f]{3,8})/i);
+  if (lightMatch) {
+    result.light = lightMatch[1];
+  }
+  if (darkMatch) {
+    result.dark = darkMatch[1];
+  } else if (result.light) {
+    result.dark = result.light;
+  }
+  return result;
+}
+
+function mountSVG(container, rawSVG, opts) {
   if (!container || !rawSVG || typeof rawSVG !== 'string') {
     return false;
   }
@@ -2024,6 +2005,11 @@ function mountSVG(container, rawSVG) {
       return false;
     }
     const imported = document.importNode(svgRoot, true);
+    if (opts && opts.stripStyle) {
+      for (const st of Array.from(imported.querySelectorAll('style'))) {
+        st.remove();
+      }
+    }
     imported.setAttribute('aria-hidden', 'true');
     imported.setAttribute('focusable', 'false');
     container.appendChild(imported);
@@ -2041,6 +2027,14 @@ function mountArtworkDOM(container, item) {
     coverImg.alt = '';
     coverImg.loading = 'lazy';
     coverImg.decoding = 'async';
+    coverImg.addEventListener('error', () => {
+      container.textContent = '';
+      container.classList.remove('is-cover');
+      if (item.icon_svg) {
+        container.classList.add('is-brand-icon');
+        mountSVG(container, item.icon_svg);
+      }
+    });
     container.appendChild(coverImg);
     return;
   }
@@ -2077,25 +2071,70 @@ function buildSubscribeRow(links) {
   return row;
 }
 
-function buildModalContent(deckKey, item) {
-  const scroll = el('div', 'modal-scroll');
+function resolveHostKey(hostRef) {
+  const key = String((hostRef && hostRef.name) || '').toLowerCase().trim();
+  if (HOST_META[key]) {
+    return key;
+  }
+  const sub = String((hostRef && hostRef.host) || '').split('.')[0].toLowerCase().trim();
+  if (HOST_META[sub]) {
+    return sub;
+  }
+  return key || sub;
+}
 
+function resolveHostMeta(hostRef) {
+  const key = resolveHostKey(hostRef);
+  if (HOST_META[key]) {
+    return HOST_META[key];
+  }
+  return {
+    label: (hostRef.name || hostRef.host || 'PKG').toUpperCase(),
+    subtitle: hostRef.host || 'Package repository',
+  };
+}
+
+function buildModalHeader(deckKey, item, primaryURL) {
   const header = el('div', 'modal-header');
   const titleGroup = el('div', 'modal-title-group');
+
   const art = el('div', 'modal-art');
   mountArtworkDOM(art, item);
+  if (primaryURL && isSafeURL(primaryURL)) {
+    const artLink = linkEl(primaryURL, 'modal-art-link');
+    artLink.setAttribute('aria-label', `Open ${item.name || item.title || 'item'}`);
+    artLink.appendChild(art);
+    titleGroup.appendChild(artLink);
+  } else {
+    titleGroup.appendChild(art);
+  }
 
-  const titleCol = el('div');
+  const titleCol = el('div', 'modal-title-col');
   const titleText = item.name || item.title || 'Details';
-  const h2 = el('h2', 'modal-title', titleText);
+  const h2 = el('h2', 'modal-title');
   h2.id = 'modal-title';
+  if (primaryURL && isSafeURL(primaryURL)) {
+    h2.appendChild(linkEl(primaryURL, 'modal-title-link', titleText));
+  } else {
+    h2.textContent = titleText;
+  }
   titleCol.appendChild(h2);
 
-  let eyebrow = '';
   if (deckKey === 'projects') {
-    eyebrow = item.full_name || '';
+    if (item.full_name) {
+      if (item.repo_url && isSafeURL(item.repo_url)) {
+        titleCol.appendChild(linkEl(item.repo_url, 'modal-eyebrow-link', item.full_name));
+      } else {
+        titleCol.appendChild(el('p', 'modal-eyebrow', item.full_name));
+      }
+    }
   } else if (deckKey === 'links') {
-    eyebrow = (item.category || 'Link') + (item.host_label ? ` · ${item.host_label}` : '');
+    const row = el('div', 'modal-eyebrow-row');
+    row.appendChild(el('span', 'modal-category-badge', item.category || 'Link'));
+    if (item.host_label) {
+      row.appendChild(el('span', 'modal-eyebrow', item.host_label));
+    }
+    titleCol.appendChild(row);
   } else if (deckKey === 'media') {
     const parts = [item.category || 'Media'];
     if (item.episode) {
@@ -2104,13 +2143,9 @@ function buildModalContent(deckKey, item) {
     if (item.date_label) {
       parts.push(item.date_label);
     }
-    eyebrow = parts.join(' · ');
-  }
-  if (eyebrow) {
-    titleCol.appendChild(el('p', 'modal-eyebrow', eyebrow));
+    titleCol.appendChild(el('p', 'modal-eyebrow', parts.join(' · ')));
   }
 
-  titleGroup.appendChild(art);
   titleGroup.appendChild(titleCol);
 
   const closeBtn = el('button', 'modal-close', '×');
@@ -2120,7 +2155,28 @@ function buildModalContent(deckKey, item) {
 
   header.appendChild(titleGroup);
   header.appendChild(closeBtn);
-  scroll.appendChild(header);
+  return header;
+}
+
+function buildModalContent(deckKey, item) {
+  const scroll = el('div', 'flip-back-scroll');
+
+  let primaryURL = '';
+  if (deckKey === 'projects') {
+    primaryURL = (item.homepage && isSafeURL(item.homepage))
+      ? item.homepage
+      : ((item.repo_url && isSafeURL(item.repo_url)) ? item.repo_url : '');
+  } else if (deckKey === 'links') {
+    primaryURL = item.url && isSafeURL(item.url) ? item.url : '';
+  } else if (deckKey === 'media') {
+    if (item.kind === 'podcast-hub' || item.kind === 'blog-hub') {
+      primaryURL = (item.site_url && isSafeURL(item.site_url)) ? item.site_url : item.url;
+    } else {
+      primaryURL = item.url;
+    }
+  }
+
+  scroll.appendChild(buildModalHeader(deckKey, item, primaryURL));
 
   if (deckKey === 'projects') {
     if (item.description) {
@@ -2128,7 +2184,13 @@ function buildModalContent(deckKey, item) {
     }
 
     const stats = el('div', 'detail-stats');
-    stats.appendChild(el('span', 'detail-stat', `★ ${item.stars_formatted || item.stars || 0} stars`));
+    const starText = `★ ${item.stars_formatted || item.stars || 0} stars`;
+    if (item.repo_url && isSafeURL(item.repo_url)) {
+      stats.appendChild(linkEl(item.repo_url, 'detail-stat', starText));
+    } else {
+      stats.appendChild(el('span', 'detail-stat', starText));
+    }
+
     if (item.language) {
       const langChip = el('span', 'detail-stat');
       const dot = el('span', 'lang-dot');
@@ -2137,6 +2199,7 @@ function buildModalContent(deckKey, item) {
       langChip.appendChild(document.createTextNode(item.language));
       stats.appendChild(langChip);
     }
+
     if (item.latest_tag) {
       const relLabel = item.latest_tag + (item.release_age ? ` · ${item.release_age}` : '');
       const cls = `detail-stat${item.fresh ? ' is-fresh' : ''}`;
@@ -2149,88 +2212,153 @@ function buildModalContent(deckKey, item) {
     scroll.appendChild(stats);
 
     const actions = el('div', 'detail-actions');
-    if (item.homepage && isSafeURL(item.homepage) && item.homepage !== item.repo_url) {
-      actions.appendChild(linkEl(item.homepage, 'action-btn is-primary', 'Visit Homepage'));
+    const hasHomepage = Boolean(item.homepage && isSafeURL(item.homepage) && item.homepage !== item.repo_url);
+    if (hasHomepage) {
+      actions.appendChild(linkEl(item.homepage, 'action-btn is-primary', 'Homepage ↗'));
     }
     if (item.repo_url && isSafeURL(item.repo_url)) {
-      actions.appendChild(linkEl(item.repo_url, `action-btn${actions.childElementCount === 0 ? ' is-primary' : ''}`, 'View on GitHub'));
+      actions.appendChild(linkEl(item.repo_url, `action-btn${hasHomepage ? '' : ' is-primary'}`, 'GitHub ↗'));
     }
-    if (item.release_url && isSafeURL(item.release_url)) {
-      actions.appendChild(linkEl(item.release_url, 'action-btn', `Latest Release (${item.latest_tag})`));
+    const releasesURL = (item.release_url && isSafeURL(item.release_url))
+      ? item.release_url
+      : (item.repo_url && isSafeURL(item.repo_url) ? `${item.repo_url.replace(/\/$/, '')}/releases` : '');
+    if (releasesURL) {
+      actions.appendChild(linkEl(releasesURL, 'action-btn', 'Releases ↗'));
     }
-    scroll.appendChild(actions);
+    if (actions.childElementCount > 0) {
+      scroll.appendChild(actions);
+    }
 
     if (item.hosts && item.hosts.length > 0) {
       const hostSec = el('div', 'detail-section');
-      hostSec.appendChild(el('h3', 'detail-section-title', 'Install via Haberdasher Packages'));
+      hostSec.appendChild(el('h3', 'detail-section-title', 'Package Repositories'));
       const grid = el('div', 'host-tile-grid');
       const logos = (state.data && state.data.host_logos) || {};
 
       for (const h of item.hosts) {
+        const hostKey = resolveHostKey(h);
+        const meta = resolveHostMeta(h);
         const tile = linkEl(h.url, 'host-tile');
+        if (hostKey) {
+          tile.dataset.host = hostKey;
+        }
         const logoBox = el('span', 'host-tile-logo');
         if (logos[h.host]) {
-          mountSVG(logoBox, logos[h.host]);
+          if (!HOST_META[hostKey]) {
+            const extracted = extractSVGThemeFills(logos[h.host]);
+            if (extracted.dark) {
+              tile.style.setProperty('--host-color-dark', extracted.dark);
+            }
+            if (extracted.light) {
+              tile.style.setProperty('--host-color-light', extracted.light);
+            }
+          }
+          mountSVG(logoBox, logos[h.host], { stripStyle: true });
         }
+        const copy = el('span', 'host-tile-copy');
+        copy.appendChild(el('span', 'host-tile-name', meta.label));
+        copy.appendChild(el('span', 'host-tile-sub', meta.subtitle));
         tile.appendChild(logoBox);
-        tile.appendChild(el('span', '', h.name));
+        tile.appendChild(copy);
         grid.appendChild(tile);
       }
       hostSec.appendChild(grid);
       scroll.appendChild(hostSec);
+    } else if (releasesURL || (item.repo_url && isSafeURL(item.repo_url))) {
+      const srcSec = el('div', 'detail-section');
+      srcSec.appendChild(el('h3', 'detail-section-title', 'Source & Releases'));
+      const cardLink = linkEl(releasesURL || item.repo_url, 'source-card-link');
+      const copy = el('span', 'source-card-copy');
+      copy.appendChild(el('span', 'source-card-title', 'Source & Releases ↗'));
+      copy.appendChild(el('span', 'source-card-sub', 'Browse source code and release artefacts on GitHub'));
+      cardLink.appendChild(copy);
+      srcSec.appendChild(cardLink);
+      scroll.appendChild(srcSec);
     }
   } else if (deckKey === 'links') {
     if (item.description) {
       scroll.appendChild(el('p', 'modal-desc', item.description));
     }
+
     if (item.meta && item.meta.length > 0) {
       const linkStats = el('div', 'detail-stats');
       for (const m of item.meta) {
-        linkStats.appendChild(el('span', 'detail-stat', m));
+        const lower = String(m).toLowerCase();
+        const isFresh = lower.includes('online') || lower.includes('active');
+        linkStats.appendChild(el('span', `detail-stat${isFresh ? ' is-fresh' : ''}`, m));
       }
       scroll.appendChild(linkStats);
     }
-    const linkActions = el('div', 'detail-actions');
-    linkActions.appendChild(linkEl(item.url, 'action-btn is-primary', `Open ${item.title}`));
-    scroll.appendChild(linkActions);
-  } else if (deckKey === 'media') {
-    if (item.summary) {
-      scroll.appendChild(el('p', 'modal-desc', item.summary));
+
+    if (item.sponsors && item.sponsors.length > 0) {
+      const spSec = el('div', 'detail-section');
+      spSec.appendChild(el('h3', 'detail-section-title', 'Active Sponsors'));
+      const list = el('div', 'sponsor-chip-list');
+      for (const sp of item.sponsors) {
+        const href = (sp.url && isSafeURL(sp.url)) ? sp.url : `https://github.com/${encodeURIComponent(sp.login)}`;
+        list.appendChild(linkEl(href, 'sponsor-chip', `@${sp.login}`));
+      }
+      spSec.appendChild(list);
+      scroll.appendChild(spSec);
     }
 
+    if (item.past_sponsors && item.past_sponsors.length > 0) {
+      const pastSec = el('div', 'detail-section');
+      pastSec.appendChild(el('h3', 'detail-section-title', 'Past Sponsors'));
+      const list = el('div', 'sponsor-chip-list');
+      for (const sp of item.past_sponsors) {
+        const href = (sp.url && isSafeURL(sp.url)) ? sp.url : `https://github.com/${encodeURIComponent(sp.login)}`;
+        list.appendChild(linkEl(href, 'sponsor-chip is-past', `@${sp.login}`));
+      }
+      pastSec.appendChild(list);
+      scroll.appendChild(pastSec);
+    }
+
+    const linkActions = el('div', 'detail-actions');
+    linkActions.appendChild(linkEl(item.url, 'action-btn is-primary', `Visit ${item.title} ↗`));
+    scroll.appendChild(linkActions);
+  } else if (deckKey === 'media') {
     const mediaStats = el('div', 'detail-stats');
     if (item.episode) {
       mediaStats.appendChild(el('span', 'detail-stat', `#${item.episode}`));
     }
     if (item.duration) {
       mediaStats.appendChild(el('span', 'detail-stat', item.duration));
-    }
-    if (item.read_time_minutes > 0) {
+    } else if (item.read_time_minutes > 0) {
       mediaStats.appendChild(el('span', 'detail-stat', `${item.read_time_minutes} min read`));
     }
-    if (item.age) {
+    if (item.date_label) {
+      mediaStats.appendChild(el('span', 'detail-stat', item.date_label));
+    } else if (item.age) {
       mediaStats.appendChild(el('span', 'detail-stat', item.age));
     }
     if (mediaStats.childElementCount > 0) {
       scroll.appendChild(mediaStats);
     }
 
-    const mediaActions = el('div', 'detail-actions');
-    let primaryLabel = 'Open';
-    if (item.kind === 'episode') {
-      primaryLabel = 'Listen to Episode';
-    } else if (item.kind === 'post') {
-      primaryLabel = 'Read Article';
-    } else if (item.kind === 'podcast-hub') {
-      primaryLabel = 'Visit Linux Matters';
-    } else if (item.kind === 'blog-hub') {
-      primaryLabel = 'Visit Blog';
-    } else if (item.kind === 'video') {
-      primaryLabel = 'Watch Video';
+    if (item.summary) {
+      scroll.appendChild(el('p', 'modal-desc', item.summary));
     }
-    mediaActions.appendChild(linkEl(item.url, 'action-btn is-primary', primaryLabel));
-    if (item.site_url && item.site_url !== item.url && isSafeURL(item.site_url)) {
-      mediaActions.appendChild(linkEl(item.site_url, 'action-btn', `All ${item.category || 'Entries'}`));
+
+    const mediaActions = el('div', 'detail-actions');
+    let primaryLabel = 'Open ↗';
+    let primaryHref = item.url;
+    if (item.kind === 'episode') {
+      primaryLabel = 'Listen to Episode ↗';
+    } else if (item.kind === 'post') {
+      primaryLabel = 'Read Post ↗';
+    } else if (item.kind === 'podcast-hub') {
+      primaryLabel = 'Visit Linux Matters ↗';
+      primaryHref = (item.site_url && isSafeURL(item.site_url)) ? item.site_url : item.url;
+    } else if (item.kind === 'blog-hub') {
+      primaryLabel = 'Visit Blog ↗';
+      primaryHref = (item.site_url && isSafeURL(item.site_url)) ? item.site_url : item.url;
+    } else if (item.kind === 'video') {
+      primaryLabel = 'Watch Video ↗';
+    }
+    mediaActions.appendChild(linkEl(primaryHref, 'action-btn is-primary', primaryLabel));
+    if (item.site_url && item.site_url !== primaryHref && isSafeURL(item.site_url)) {
+      mediaActions.appendChild(linkEl(item.site_url, 'action-btn', `All ${item.category || 'Entries'} ↗`));
     }
     scroll.appendChild(mediaActions);
 
@@ -2255,8 +2383,7 @@ function buildModalContent(deckKey, item) {
         const metaBits = [];
         if (entry.duration) {
           metaBits.push(entry.duration);
-        }
-        if (entry.read_time_minutes > 0) {
+        } else if (entry.read_time_minutes > 0) {
           metaBits.push(`${entry.read_time_minutes} min read`);
         }
         if (entry.date_label) {
@@ -2282,68 +2409,262 @@ function buildModalContent(deckKey, item) {
   return scroll;
 }
 
-function triggerCardOpen(rec, triggerEl) {
-  if (state.modalOpen || state.flippingCard) {
-    return;
+function captureCardFrontDataURL(rec) {
+  if (!rec || !rec.canvas) {
+    return '';
   }
-  state.lastFocusedEl = triggerEl || document.activeElement;
-  if (isReducedMotion() || !state.app) {
-    openDetailModal(rec.deckKey, rec.item, state.lastFocusedEl);
-    return;
+  try {
+    return rec.canvas.toDataURL('image/png');
+  } catch (_) {
+    return '';
   }
-  state.flippingCard = rec;
-  rec.flipState = 'closing';
-  rec.flipProgress = 0;
-  rec.container.zIndex = 240;
 }
 
-function openDetailModal(deckKey, item, triggerEl) {
-  if (!els.modal || !els.modalCard) {
+function mountFrontFaceSnapshot(rec) {
+  if (!els.flipFront) {
     return;
   }
-  state.lastFocusedEl = triggerEl || state.lastFocusedEl || document.activeElement;
+  els.flipFront.textContent = '';
+  const dataURL = captureCardFrontDataURL(rec);
+  if (dataURL) {
+    const img = document.createElement('img');
+    img.className = 'flip-front-img';
+    img.src = dataURL;
+    img.alt = '';
+    img.draggable = false;
+    els.flipFront.appendChild(img);
+  }
+}
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function formatFlightTransform(dx, dy, rz, sx, sy, rx, ry) {
+  return (
+    `translate3d(${dx.toFixed(2)}px, ${dy.toFixed(2)}px, 0) `
+    + `rotateZ(${rz.toFixed(4)}rad) `
+    + `scale(${sx.toFixed(4)}, ${sy.toFixed(4)}) `
+    + `rotateX(${rx.toFixed(2)}deg) `
+    + `rotateY(${ry.toFixed(2)}deg)`
+  );
+}
+
+function finishModalClose(restoreFocus) {
+  if (state.modalAnimRaf) {
+    window.cancelAnimationFrame(state.modalAnimRaf);
+    state.modalAnimRaf = 0;
+  }
+
+  const rec = state.activeCard;
+  if (rec && !rec.destroyed) {
+    rec.container.visible = true;
+    rec.pickedUp = false;
+  }
+
+  state.activeCard = null;
+  state.modalOpen = false;
+  state.modalPhase = 'closed';
+
+  if (els.flipFloatWrap) {
+    els.flipFloatWrap.classList.remove('is-floating');
+  }
+  if (els.flipCard) {
+    els.flipCard.classList.remove('is-settled');
+    els.flipCard.style.transform = '';
+  }
+  if (els.modal) {
+    els.modal.style.setProperty('--backdrop-progress', '0');
+    els.modal.hidden = true;
+  }
+  document.body.classList.remove('modal-open');
+
+  const returnTarget = state.lastFocusedEl;
+  state.lastFocusedEl = null;
+  if (restoreFocus && returnTarget && typeof returnTarget.focus === 'function') {
+    returnTarget.focus();
+  }
+}
+
+function cancelCardModal(restoreFocus) {
+  if (state.modalPhase === 'closed' && !state.modalOpen) {
+    return;
+  }
+  finishModalClose(Boolean(restoreFocus));
+}
+
+function triggerCardOpen(rec, triggerEl) {
+  if (state.modalPhase !== 'closed' || !els.modal || !els.flipFloatWrap || !els.flipCard || !els.flipBack) {
+    return;
+  }
+
+  state.lastFocusedEl = triggerEl || document.activeElement;
+  state.activeCard = rec;
   state.modalOpen = true;
 
-  els.modalCard.textContent = '';
-  els.modalCard.appendChild(buildModalContent(deckKey, item));
+  const startX = rec.x;
+  const startY = rec.y - window.scrollY;
+  const startRot = rec.rot;
+  const cardScale = state.layout.cardScale || 1;
+  const startW = CARD_W * (rec.scaleX || cardScale);
+  const startH = CARD_H * (rec.scaleY || cardScale);
+
+  mountFrontFaceSnapshot(rec);
+  els.flipBack.textContent = '';
+  els.flipBack.appendChild(buildModalContent(rec.deckKey, rec.item));
+  els.flipFloatWrap.classList.remove('is-floating');
+  els.flipCard.classList.remove('is-settled');
+  els.flipCard.style.transform = '';
+
   els.modal.hidden = false;
   document.body.classList.add('modal-open');
 
-  const closeBtn = els.modalCard.querySelector('.modal-close');
-  if (closeBtn) {
-    closeBtn.focus();
+  if (isReducedMotion() || !state.app) {
+    if (rec && !rec.destroyed) {
+      rec.container.visible = false;
+      rec.pickedUp = true;
+    }
+    els.modal.style.setProperty('--backdrop-progress', '1');
+    els.flipCard.style.transform = 'rotateY(180deg)';
+    els.flipCard.classList.add('is-settled');
+    state.modalPhase = 'open';
+    const closeBtn = els.flipBack.querySelector('.modal-close');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+    return;
   }
+
+  const rect = els.flipFloatWrap.getBoundingClientRect();
+  const targetW = rect.width || Math.min(440, window.innerWidth * 0.9);
+  const targetH = rect.height || Math.min(616, window.innerHeight * 0.86);
+  const targetCx = rect.left + targetW / 2;
+  const targetCy = rect.top + targetH / 2;
+
+  const startDx = startX - targetCx;
+  const startDy = startY - targetCy;
+  const startSx = startW / targetW;
+  const startSy = startH / targetH;
+
+  // Place flying card on the exact tabletop slot and hide the PixiJS sprite on the same frame.
+  els.modal.style.setProperty('--backdrop-progress', '0');
+  els.flipCard.style.transform = formatFlightTransform(startDx, startDy, startRot, startSx, startSy, 0, 0);
+  if (rec && !rec.destroyed) {
+    rec.container.visible = false;
+    rec.pickedUp = true;
+  }
+
+  state.modalPhase = 'flippingIn';
+  const startTime = performance.now();
+
+  const stepIn = (now) => {
+    if (state.modalPhase !== 'flippingIn') {
+      return;
+    }
+    const rawT = Math.min(1, Math.max(0, (now - startTime) / FLIP_IN_MS));
+    const e = easeOutCubic(rawT);
+
+    const dx = startDx * (1 - e);
+    const dy = startDy * (1 - e);
+    const sx = startSx + (1 - startSx) * e;
+    const sy = startSy + (1 - startSy) * e;
+    const rz = startRot * (1 - e);
+    const ry = 180 * e;
+    const rx = Math.sin(rawT * Math.PI) * 10;
+
+    els.flipCard.style.transform = formatFlightTransform(dx, dy, rz, sx, sy, rx, ry);
+    els.modal.style.setProperty('--backdrop-progress', e.toFixed(3));
+
+    if (rawT < 1) {
+      state.modalAnimRaf = window.requestAnimationFrame(stepIn);
+      return;
+    }
+
+    state.modalAnimRaf = 0;
+    state.modalPhase = 'open';
+    els.flipCard.style.transform = 'rotateY(180deg)';
+    els.flipCard.classList.add('is-settled');
+    els.modal.style.setProperty('--backdrop-progress', '1');
+    els.flipFloatWrap.classList.add('is-floating');
+
+    const closeBtn = els.flipBack.querySelector('.modal-close');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+  };
+
+  state.modalAnimRaf = window.requestAnimationFrame(stepIn);
 }
 
 function closeDetailModal() {
-  if (!state.modalOpen || !els.modal) {
+  if (state.modalPhase !== 'open' || !els.modal || !els.flipFloatWrap || !els.flipCard) {
     return;
   }
-  state.modalOpen = false;
-  els.modal.hidden = true;
-  document.body.classList.remove('modal-open');
 
-  if (state.flippingCard) {
-    const rec = state.flippingCard;
-    rec.flipState = 'idle';
-    rec.flipProgress = 0;
-    if (!rec.destroyed) {
-      rec.container.scale.set(state.layout.cardScale);
+  const rec = state.activeCard;
+  if (isReducedMotion() || !state.app || !rec || rec.destroyed) {
+    finishModalClose(true);
+    return;
+  }
+
+  state.modalPhase = 'flippingOut';
+  els.flipFloatWrap.classList.remove('is-floating');
+  els.flipCard.classList.remove('is-settled');
+
+  const rect = els.flipFloatWrap.getBoundingClientRect();
+  const fromW = rect.width || Math.min(440, window.innerWidth * 0.9);
+  const fromH = rect.height || Math.min(616, window.innerHeight * 0.86);
+  const fromCx = rect.left + fromW / 2;
+  const fromCy = rect.top + fromH / 2;
+  const startTime = performance.now();
+
+  const stepOut = (now) => {
+    if (state.modalPhase !== 'flippingOut') {
+      return;
     }
-    state.flippingCard = null;
-  }
+    if (!rec || rec.destroyed) {
+      finishModalClose(true);
+      return;
+    }
 
-  if (state.lastFocusedEl && typeof state.lastFocusedEl.focus === 'function') {
-    state.lastFocusedEl.focus();
-  }
-  state.lastFocusedEl = null;
+    const rawT = Math.min(1, Math.max(0, (now - startTime) / FLIP_OUT_MS));
+    const e = easeOutCubic(rawT);
+
+    const cardScale = state.layout.cardScale || 1;
+    const endX = rec.x;
+    const endY = rec.y - window.scrollY;
+    const endRot = rec.rot;
+    const endSx = (CARD_W * (rec.scaleX || cardScale)) / fromW;
+    const endSy = (CARD_H * (rec.scaleY || cardScale)) / fromH;
+
+    const dx = (endX - fromCx) * e;
+    const dy = (endY - fromCy) * e;
+    const sx = 1 + (endSx - 1) * e;
+    const sy = 1 + (endSy - 1) * e;
+    const rz = endRot * e;
+    const ry = 180 * (1 - e);
+    const rx = Math.sin(rawT * Math.PI) * 8;
+
+    els.flipCard.style.transform = formatFlightTransform(dx, dy, rz, sx, sy, rx, ry);
+    els.modal.style.setProperty('--backdrop-progress', (1 - e).toFixed(3));
+
+    if (rawT < 1) {
+      state.modalAnimRaf = window.requestAnimationFrame(stepOut);
+      return;
+    }
+
+    state.modalAnimRaf = 0;
+    finishModalClose(true);
+  };
+
+  state.modalAnimRaf = window.requestAnimationFrame(stepOut);
 }
 
 function trapModalFocus(ev) {
-  if (!state.modalOpen || ev.key !== 'Tab' || !els.modalCard) {
+  if (!state.modalOpen || ev.key !== 'Tab' || !els.flipBack) {
     return;
   }
-  const focusable = els.modalCard.querySelectorAll(
+  const focusable = els.flipBack.querySelectorAll(
     'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
   );
   if (focusable.length === 0) {
@@ -2417,7 +2738,11 @@ function bindEvents() {
   document.addEventListener('keydown', (ev) => {
     if (state.modalOpen && ev.key === 'Escape') {
       ev.preventDefault();
-      closeDetailModal();
+      if (state.modalPhase === 'flippingIn') {
+        cancelCardModal(true);
+      } else {
+        closeDetailModal();
+      }
       return;
     }
     trapModalFocus(ev);

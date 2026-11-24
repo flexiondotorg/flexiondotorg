@@ -12,12 +12,21 @@ import (
 	"github.com/flexiondotorg/flexiondotorg/internal/rss"
 )
 
+// SocialProfile carries live public counts fetched from a social or video profile endpoint.
+type SocialProfile struct {
+	Followers   int
+	Posts       int
+	Subscribers string
+	Videos      string
+}
+
 // Input aggregates all live and configured sources consumed by Build.
 type Input struct {
 	Config      *config.Config
 	Catalogue   *haberdasher.Catalogue
 	GitHub      *gh.ProfileData
 	Discord     discord.Status
+	Social      map[string]SocialProfile
 	Podcast     []rss.Item
 	Blog        []rss.Item
 	YouTube     []rss.Item
@@ -137,19 +146,35 @@ type PackageHostCard struct {
 	Packages     []PackageEntry `json:"packages"`
 }
 
+// SponsorRef represents a public GitHub sponsor profile link on the Sponsors card.
+type SponsorRef struct {
+	Login string `json:"login"`
+	URL   string `json:"url"`
+}
+
+// StatRow represents one key/value stat row displayed at the bottom of a card.
+type StatRow struct {
+	Label     string `json:"label"`
+	Value     string `json:"value"`
+	Highlight bool   `json:"highlight,omitempty"`
+}
+
 // LinkCard represents one curated site, community, social, or support link in the Links deck.
 type LinkCard struct {
-	ID          string   `json:"id"`
-	Title       string   `json:"title"`
-	Category    string   `json:"category"`
-	Description string   `json:"description"`
-	URL         string   `json:"url"`
-	HostLabel   string   `json:"host_label"`
-	Icon        string   `json:"icon"`
-	IconSVG     string   `json:"icon_svg"`
-	Accent      string   `json:"accent"`
-	Badge       string   `json:"badge,omitempty"`
-	Meta        []string `json:"meta,omitempty"`
+	ID           string       `json:"id"`
+	Title        string       `json:"title"`
+	Category     string       `json:"category"`
+	Description  string       `json:"description"`
+	URL          string       `json:"url"`
+	HostLabel    string       `json:"host_label"`
+	Icon         string       `json:"icon"`
+	IconSVG      string       `json:"icon_svg"`
+	Accent       string       `json:"accent"`
+	Badge        string       `json:"badge,omitempty"`
+	Stats        []StatRow    `json:"stats,omitempty"`
+	Meta         []string     `json:"meta,omitempty"`
+	Sponsors     []SponsorRef `json:"sponsors,omitempty"`
+	PastSponsors []SponsorRef `json:"past_sponsors,omitempty"`
 }
 
 // SubscribeLink describes a podcast or blog subscription pill with an inline vector icon.

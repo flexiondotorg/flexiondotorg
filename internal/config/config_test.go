@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	"path/filepath"
+	"reflect"
 	"slices"
 	"strings"
 	"testing"
@@ -551,8 +552,16 @@ site:
 		cfg.Site.Domain != "wimpys.world" ||
 		cfg.Site.URL != "https://wimpys.world" ||
 		cfg.Site.DefaultDeck != SiteDeckLinks ||
-		!slices.Equal(cfg.Site.Links, wantSiteLinks) {
+		!reflect.DeepEqual(cfg.Site.Links, wantSiteLinks) {
 		t.Errorf("unexpected site config: %+v", cfg.Site)
+	}
+
+	// Custom site.links[].stats validation: valid pair passes, empty label or value fails.
+	if parsed, err := Parse([]byte("site:\n  links:\n    - title: Demo\n      url: https://example.com\n      stats:\n        - label: Focus\n          value: Linux\n")); err != nil || len(parsed.Site.Links[0].Stats) != 1 {
+		t.Errorf("Parse valid site.links.stats failed: %v", err)
+	}
+	if _, err := Parse([]byte("site:\n  links:\n    - title: Demo\n      url: https://example.com\n      stats:\n        - label: Focus\n          value: \"\"\n")); err == nil {
+		t.Error("expected error for empty site.links.stats value")
 	}
 
 	// Discord enabled with only guild_id or only invite_code is valid when url is set.

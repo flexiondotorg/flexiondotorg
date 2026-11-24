@@ -38,6 +38,7 @@ type runtimeDeps struct {
 	now                   func() time.Time
 	httpClient            *http.Client
 	githubClient          *gh.Client
+	socialFetcher         *site.SocialFetcher
 	haberdasherHostBaseFn func(host string) string
 	stdout                io.Writer
 	stderr                io.Writer
@@ -113,8 +114,9 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 	logProgress("fetching GitHub profile, stats, and sponsors...")
 	ghProfile := fetchGitHubProfile(ctx, cfg, ghClient, extraRepos, deps.stderr)
 
-	logProgress("fetching Discord and media feeds...")
+	logProgress("fetching Discord, social profiles, and media feeds...")
 	discordStatus := fetchDiscordStatus(ctx, deps.httpClient, cfg.Discord, deps.stderr)
+	socialProfiles := fetchSocialProfiles(ctx, deps.httpClient, cfg.Site.Links, deps.socialFetcher, deps.stderr)
 	podcastItems := fetchFeed(ctx, deps.httpClient, cfg.Feeds.Podcast, "podcast", deps.stderr)
 	blogItems := fetchFeed(ctx, deps.httpClient, cfg.Feeds.Blog, "blog", deps.stderr)
 	youtubeItems := fetchFeed(ctx, deps.httpClient, cfg.Feeds.YouTube, "youtube", deps.stderr)
@@ -125,6 +127,7 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 		Catalogue:   catalogue,
 		GitHub:      ghProfile,
 		Discord:     discordStatus,
+		Social:      socialProfiles,
 		Podcast:     podcastItems,
 		Blog:        blogItems,
 		YouTube:     youtubeItems,
@@ -318,6 +321,26 @@ func fetchDiscordStatus(
 		status.URL = cfg.URL
 	}
 	return status
+}
+
+func fetchSocialProfiles(
+	ctx context.Context,
+	httpClient *http.Client,
+	links []config.SiteLink,
+	fetcher *site.SocialFetcher,
+	stderr io.Writer,
+) map[string]site.SocialProfile {
+	if len(links) == 0 {
+		return nil
+	}
+	if fetcher == nil {
+		fetcher = &site.SocialFetcher{HTTPClient: httpClient}
+	}
+	profiles, errs := fetcher.FetchAll(ctx, links)
+	for _, err := range errs {
+		fmt.Fprintf(stderr, "warning: social profile fetch failed: %v\n", err)
+	}
+	return profiles
 }
 
 func fetchFeed(

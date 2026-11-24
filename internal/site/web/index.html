@@ -131,8 +131,13 @@
   </div>
 
   <div id="card-modal" class="modal-backdrop" hidden>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-card" id="modal-card"></div>
+    <div id="flip-float-wrap" class="flip-float-wrap">
+      <div id="flip-scene" class="flip-scene">
+        <div id="flip-card" class="flip-card">
+          <div id="flip-face-front" class="flip-face flip-face-front" aria-hidden="true"></div>
+          <div id="flip-face-back" class="flip-face flip-face-back" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+        </div>
+      </div>
     </div>
   </div>
 
