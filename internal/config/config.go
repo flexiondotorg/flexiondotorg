@@ -122,7 +122,7 @@ type ThemeConfig struct {
 // Theme is an alias for ThemeConfig kept for compatibility with existing callers.
 type Theme = ThemeConfig
 
-// NavLink describes a navigation pill shown under the hero banner.
+// NavLink describes a navigation pill shown under the hero banner or a feed section.
 type NavLink struct {
 	Label  string `yaml:"label"`
 	Slug   string `yaml:"slug"`
@@ -182,12 +182,13 @@ type ProjectConfig struct {
 
 // FeedConfig configures a single RSS 2.0 or Atom feed section.
 type FeedConfig struct {
-	Enabled  bool   `yaml:"enabled"`
-	Title    string `yaml:"title"`
-	URL      string `yaml:"url"`
-	SiteURL  string `yaml:"site_url"`
-	CoverURL string `yaml:"cover_url"`
-	MaxItems int    `yaml:"max_items"`
+	Enabled  bool      `yaml:"enabled"`
+	Title    string    `yaml:"title"`
+	URL      string    `yaml:"url"`
+	SiteURL  string    `yaml:"site_url"`
+	CoverURL string    `yaml:"cover_url"`
+	MaxItems int       `yaml:"max_items"`
+	Links    []NavLink `yaml:"links"`
 }
 
 // FeedsConfig groups optional podcast, blog, and YouTube feeds.
@@ -433,13 +434,8 @@ func (c *Config) applyDefaultsAndValidate() error {
 		return err
 	}
 
-	for i, link := range c.Profile.Links {
-		if strings.TrimSpace(link.Label) == "" {
-			return fmt.Errorf("profile.links[%d]: label must not be empty", i)
-		}
-		if strings.TrimSpace(link.URL) == "" {
-			return fmt.Errorf("profile.links[%d]: url must not be empty", i)
-		}
+	if err := validateNavLinks("profile.links", c.Profile.Links); err != nil {
+		return err
 	}
 
 	if err := c.applyGitHubDefaultsAndValidate(); err != nil {
@@ -615,6 +611,23 @@ func validateFeed(name string, feed *FeedConfig) error {
 	feed.URL = strings.TrimSpace(feed.URL)
 	if feed.Enabled && feed.URL == "" {
 		return fmt.Errorf("%s.url must not be empty when enabled", name)
+	}
+	return validateNavLinks(name+".links", feed.Links)
+}
+
+func validateNavLinks(prefix string, links []NavLink) error {
+	for i := range links {
+		links[i].Label = strings.TrimSpace(links[i].Label)
+		links[i].Slug = strings.TrimSpace(links[i].Slug)
+		links[i].URL = strings.TrimSpace(links[i].URL)
+		links[i].Icon = strings.TrimSpace(links[i].Icon)
+		links[i].Accent = strings.TrimSpace(links[i].Accent)
+		if links[i].Label == "" {
+			return fmt.Errorf("%s[%d]: label must not be empty", prefix, i)
+		}
+		if links[i].URL == "" {
+			return fmt.Errorf("%s[%d]: url must not be empty", prefix, i)
+		}
 	}
 	return nil
 }

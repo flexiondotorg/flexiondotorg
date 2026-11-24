@@ -320,6 +320,12 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 						PublishedAt: now.Add(-48 * time.Hour),
 					},
 				},
+				Links: []NavPillView{
+					{Label: "Apple Podcasts", URL: "https://geo.itunes.apple.com/podcast/feed/id1682797246", BaseName: "podcast-apple-podcasts"},
+					{Label: "Spotify", URL: "https://open.spotify.com/show/388W00MbvHGI69accqEHQK", BaseName: "podcast-spotify"},
+					{Label: "YouTube", URL: "https://www.youtube.com/@Linux-Matters", BaseName: "podcast-youtube"},
+					{Label: "RSS", URL: "https://linuxmatters.sh/episode/index.xml", BaseName: "podcast-rss"},
+				},
 			},
 			Blog: &FeedView{
 				Enabled: true,
@@ -373,6 +379,11 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		"- **#94** · **[Episode 1](https://linuxmatters.sh/1)** · `35 min` (today)",
 		"  - Short episode subtitle.",
 		"- **[Episode Plain](https://linuxmatters.sh/2)** (2 days ago)",
+		"<br clear=\"right\" />",
+		`<a href="https://geo.itunes.apple.com/podcast/feed/id1682797246"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-apple-podcasts-dark.svg"><img src="./assets/podcast-apple-podcasts-light.svg" alt="Apple Podcasts"></picture></a>`,
+		`<a href="https://open.spotify.com/show/388W00MbvHGI69accqEHQK"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-spotify-dark.svg"><img src="./assets/podcast-spotify-light.svg" alt="Spotify"></picture></a>`,
+		`<a href="https://www.youtube.com/@Linux-Matters"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-youtube-dark.svg"><img src="./assets/podcast-youtube-light.svg" alt="YouTube"></picture></a>`,
+		`<a href="https://linuxmatters.sh/episode/index.xml"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-rss-dark.svg"><img src="./assets/podcast-rss-light.svg" alt="RSS"></picture></a>`,
 		"./assets/section-packages-dark.svg",
 		"./assets/section-releases-dark.svg",
 		"./assets/section-contributions-dark.svg",
@@ -457,6 +468,23 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		}
 		if !strings.HasSuffix(strings.TrimSpace(got), wantFooter) {
 			t.Errorf("rendered README without videos/streams must still end with Vitrine footer %q:\n%s", wantFooter, got)
+		}
+	})
+
+	t.Run("podcast without links", func(t *testing.T) {
+		t.Parallel()
+		d := makeData()
+		d.Podcast.Links = nil
+		b, err := File(tmplPath, d)
+		if err != nil {
+			t.Fatalf("File error: %v", err)
+		}
+		got := string(b)
+		if strings.Contains(got, "podcast-apple-podcasts") || strings.Contains(got, "podcast-spotify") {
+			t.Errorf("podcast without links must not emit subscribe pills:\n%s", got)
+		}
+		if !strings.Contains(got, "<br clear=\"right\" />") {
+			t.Errorf("podcast without links must still emit clear break:\n%s", got)
 		}
 	})
 

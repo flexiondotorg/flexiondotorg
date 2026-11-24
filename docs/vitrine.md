@@ -91,7 +91,7 @@ Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `b
 
 RSS, YouTube, and Twitch sources are configurable in `vitrine.yaml`:
 
-- **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episode numbers, durations, relative dates, and subtitles beside the podcast cover image.
+- **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episode numbers, durations, relative dates, and subtitles beside the podcast cover image. Optional `links:` on `feeds.podcast` (or any feed) render centred `44px` Catppuccin navigation pills below the episode list using `<feed>-<slug>-dark.svg` and `<feed>-<slug>-light.svg`.
 - **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://wimpysworld.com/posts/rss.xml`) and renders post titles, estimated reading times, relative dates, and summaries.
 - **YouTube Atom feeds**: Parses `<published>` rather than `<updated>`, so edits to old video metadata do not push archive videos to the top.
 - **Twitch status**: Queries `https://decapi.me/twitch/uptime/<channel>` first and falls back to `https://img.shields.io/twitch/status/<channel>.json` without Twitch API credentials.
@@ -147,7 +147,7 @@ The generated `README.md` arranges sections in this order:
 5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
 6. **Projects**: Two-column grid of `408x182` cards combining Haberdasher projects and top-level `projects:` entries, sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to four lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
 7. **Sponsors banner**: Unified `840px` dual-theme animated SVG banner (`sponsors-dark.svg` and `sponsors-light.svg`) with drifting Catppuccin hearts, a neutral `Surface1` border, wrapped active and past sponsor lists, and a `Sponsor on GitHub` call-to-action pill linking to GitHub Sponsors.
-8. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle.
+8. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle, followed by a centred row of Apple Podcasts, Spotify, YouTube, and RSS subscribe pills.
 9. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin count badges.
 10. **Recent Releases**: Latest releases across configured owners, Haberdasher projects, and top-level `projects:` entries.
 11. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).

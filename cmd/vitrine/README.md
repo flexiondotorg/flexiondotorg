@@ -118,9 +118,11 @@ Vitrine fetches repository metadata from GitHub REST endpoints. It embeds logos 
 
 Configure optional Really Simple Syndication (RSS) 2.0 and Atom feeds under `feeds:`:
 
-- `feeds.podcast`: RSS 2.0 podcast feed with optional `cover_url` artwork.
+- `feeds.podcast`: RSS 2.0 podcast feed with optional `cover_url` artwork and optional `links:` subscribe pills (`apple-podcasts`, `spotify`, `youtube`, `rss`, or any supported navigation icon).
 - `feeds.blog`: RSS 2.0 blog feed with estimated reading times and summaries.
 - `feeds.youtube`: YouTube channel Atom feed. Vitrine parses `<published>` so metadata edits on old videos do not reorder the list.
+
+Any feed under `feeds:` accepts an optional `links:` list with the same `label`, `slug`, `url`, and `icon` fields as `profile.links`. Vitrine generates matching `44px` Catppuccin pills prefixed by the feed name (for example, `podcast-apple-podcasts-dark.svg` and `podcast-apple-podcasts-light.svg`).
 
 Set `twitch.enabled: true` with `twitch.channel` to show a live or offline Twitch button under `VIDEOS & STREAMS`. Vitrine checks `decapi.me` first and falls back to Shields JSON without Twitch API credentials.
 

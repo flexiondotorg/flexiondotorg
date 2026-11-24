@@ -78,7 +78,8 @@ type PackageHostView struct {
 	File         string
 }
 
-// FeedView groups a configured RSS or Atom feed with its fetched entries.
+// FeedView groups a configured RSS or Atom feed with its fetched entries and
+// optional navigation pill links.
 type FeedView struct {
 	Enabled  bool
 	Title    string
@@ -86,6 +87,7 @@ type FeedView struct {
 	SiteURL  string
 	CoverURL string
 	Items    []rss.Item
+	Links    []NavPillView
 }
 
 // TwitchView pairs Twitch live or offline status with its rendered SVG tile filenames.

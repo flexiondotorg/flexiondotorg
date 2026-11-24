@@ -63,6 +63,14 @@
 {{- end}}
 {{- end}}
 <br clear="right" />
+{{- if .Podcast.Links}}
+
+<p align="center">
+{{- range .Podcast.Links}}
+  <a href="{{.URL}}">{{pictureTag $.AssetBaseURL .BaseName .Label 0}}</a>
+{{- end}}
+</p>
+{{- end}}
 {{- end}}
 {{- if .PackageHosts}}
 

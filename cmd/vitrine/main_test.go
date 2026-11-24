@@ -108,6 +108,8 @@ func TestRunEndToEndOfflineFixtures(t *testing.T) {
 			})
 		case "/twitch/uptime/examplechannel":
 			_, _ = w.Write([]byte("examplechannel is offline"))
+		case "/podcast.xml":
+			_, _ = w.Write([]byte(`<?xml version="1.0"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"><channel><item><title>Episode 94: Linux Matters</title><link>https://linuxmatters.sh/episode/94</link><pubDate>Mon, 23 Nov 2026 08:00:00 +0000</pubDate><itunes:episode>94</itunes:episode><itunes:duration>35:00</itunes:duration><itunes:subtitle>Weekly Linux news.</itunes:subtitle></item></channel></rss>`))
 		case "/blog.xml":
 			_, _ = w.Write([]byte(`<?xml version="1.0"?><rss version="2.0"><channel><item><title>First Post</title><link>https://example.com/posts/1</link><pubDate>Mon, 23 Nov 2026 10:00:00 +0000</pubDate></item></channel></rss>`))
 		case "/youtube.xml":
@@ -156,6 +158,30 @@ github:
 haberdasher:
   enabled: false
 feeds:
+  podcast:
+    enabled: true
+    title: "Linux Matters Podcast"
+    url: "` + srv.URL + `/podcast.xml"
+    site_url: "https://linuxmatters.sh"
+    cover_url: "https://example.com/cover.png"
+    max_items: 3
+    links:
+      - label: "Apple Podcasts"
+        slug: "apple-podcasts"
+        url: "https://geo.itunes.apple.com/podcast/feed/id1682797246"
+        icon: "apple-podcasts"
+      - label: "Spotify"
+        slug: "spotify"
+        url: "https://open.spotify.com/show/388W00MbvHGI69accqEHQK"
+        icon: "spotify"
+      - label: "YouTube"
+        slug: "youtube"
+        url: "https://www.youtube.com/@Linux-Matters"
+        icon: "youtube"
+      - label: "RSS"
+        slug: "rss"
+        url: "https://linuxmatters.sh/episode/index.xml"
+        icon: "rss"
   blog:
     enabled: true
     title: "Blog"
@@ -239,6 +265,12 @@ output:
 		`./assets/discord-dark.svg`,
 		`./assets/stats-dark.svg`,
 		`<a href="https://github.com/sponsors/exampleuser"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors-dark.svg"><img src="./assets/sponsors-light.svg" alt="Sponsor on GitHub" width="840"></picture></a>`,
+		`./assets/section-podcast-dark.svg`,
+		`<br clear="right" />`,
+		`<a href="https://geo.itunes.apple.com/podcast/feed/id1682797246"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-apple-podcasts-dark.svg"><img src="./assets/podcast-apple-podcasts-light.svg" alt="Apple Podcasts"></picture></a>`,
+		`<a href="https://open.spotify.com/show/388W00MbvHGI69accqEHQK"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-spotify-dark.svg"><img src="./assets/podcast-spotify-light.svg" alt="Spotify"></picture></a>`,
+		`<a href="https://www.youtube.com/@Linux-Matters"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-youtube-dark.svg"><img src="./assets/podcast-youtube-light.svg" alt="YouTube"></picture></a>`,
+		`<a href="https://linuxmatters.sh/episode/index.xml"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/podcast-rss-dark.svg"><img src="./assets/podcast-rss-light.svg" alt="RSS"></picture></a>`,
 		`./assets/section-contributions-dark.svg`,
 		`./assets/section-releases-dark.svg`,
 		`./assets/section-starred-dark.svg`,
@@ -259,6 +291,12 @@ output:
 		`./assets/discord-dark.svg`,
 		`./assets/stats-dark.svg`,
 		`./assets/sponsors-dark.svg`,
+		`./assets/section-podcast-dark.svg`,
+		`<br clear="right" />`,
+		`./assets/podcast-apple-podcasts-dark.svg`,
+		`./assets/podcast-spotify-dark.svg`,
+		`./assets/podcast-youtube-dark.svg`,
+		`./assets/podcast-rss-dark.svg`,
 		`./assets/section-releases-dark.svg`,
 		`./assets/section-contributions-dark.svg`,
 		`./assets/section-starred-dark.svg`,
@@ -295,6 +333,11 @@ output:
 		"discord-light.svg", "discord-dark.svg",
 		"stats-light.svg", "stats-dark.svg",
 		"sponsors-light.svg", "sponsors-dark.svg",
+		"section-podcast-light.svg", "section-podcast-dark.svg",
+		"podcast-apple-podcasts-light.svg", "podcast-apple-podcasts-dark.svg",
+		"podcast-spotify-light.svg", "podcast-spotify-dark.svg",
+		"podcast-youtube-light.svg", "podcast-youtube-dark.svg",
+		"podcast-rss-light.svg", "podcast-rss-dark.svg",
 		"section-contributions-light.svg", "section-contributions-dark.svg",
 		"section-releases-light.svg", "section-releases-dark.svg",
 		"section-starred-light.svg", "section-starred-dark.svg",
@@ -372,14 +415,39 @@ output:
 	if strings.Contains(darkPanel, "-light.svg") || strings.Contains(darkPanel, "<picture>") {
 		t.Errorf("dark preview panel must display -dark.svg directly without <picture> or -light.svg:\n%s", darkPanel)
 	}
-	if !strings.Contains(darkPanel, `./assets/hero-dark.svg`) || !strings.Contains(darkPanel, `./assets/sponsors-dark.svg`) || !strings.Contains(darkPanel, `./assets/twitch-live-demo-dark.svg`) {
+	if !strings.Contains(darkPanel, `./assets/hero-dark.svg`) || !strings.Contains(darkPanel, `./assets/sponsors-dark.svg`) || !strings.Contains(darkPanel, `./assets/podcast-apple-podcasts-dark.svg`) || !strings.Contains(darkPanel, `./assets/twitch-live-demo-dark.svg`) {
 		t.Errorf("dark preview panel missing -dark.svg assets")
 	}
 	if strings.Contains(lightPanel, "-dark.svg") || strings.Contains(lightPanel, "<picture>") {
 		t.Errorf("light preview panel must display -light.svg directly without <picture> or -dark.svg:\n%s", lightPanel)
 	}
-	if !strings.Contains(lightPanel, `./assets/hero-light.svg`) || !strings.Contains(lightPanel, `./assets/sponsors-light.svg`) || !strings.Contains(lightPanel, `./assets/twitch-offline-demo-light.svg`) {
+	if !strings.Contains(lightPanel, `./assets/hero-light.svg`) || !strings.Contains(lightPanel, `./assets/sponsors-light.svg`) || !strings.Contains(lightPanel, `./assets/podcast-apple-podcasts-light.svg`) || !strings.Contains(lightPanel, `./assets/twitch-offline-demo-light.svg`) {
 		t.Errorf("light preview panel missing -light.svg assets")
+	}
+
+	podcastPillChecks := []struct {
+		file       string
+		accent     string
+		pathPrefix string
+	}{
+		{"podcast-apple-podcasts-dark.svg", "#cba6f7", "M5.34 0A5.328 5.328"},
+		{"podcast-spotify-dark.svg", "#a6e3a1", "M12 0C5.4 0 0 5.4"},
+		{"podcast-youtube-dark.svg", "#f38ba8", "M23.498 6.186a3.016"},
+		{"podcast-rss-dark.svg", "#fab387", "M19.199 24C19.199 13.467"},
+		{"podcast-spotify-light.svg", "#40a02b", "M12 0C5.4 0 0 5.4"},
+	}
+	for _, pc := range podcastPillChecks {
+		raw, err := os.ReadFile(filepath.Join(assetsDir, pc.file))
+		if err != nil {
+			t.Fatalf("read %s: %v", pc.file, err)
+		}
+		svgText := string(raw)
+		if !strings.Contains(svgText, `stroke="`+pc.accent+`" stroke-width="1.5"`) {
+			t.Errorf("%s missing accent border %s", pc.file, pc.accent)
+		}
+		if !strings.Contains(svgText, pc.pathPrefix) {
+			t.Errorf("%s missing icon path %q", pc.file, pc.pathPrefix)
+		}
 	}
 }
 
@@ -890,4 +958,74 @@ func TestRenderSponsorsBannerCases(t *testing.T) {
 			t.Errorf("missing sponsors-light.svg")
 		}
 	})
+}
+
+func TestRenderFeedLinkPills(t *testing.T) {
+	t.Parallel()
+
+	sr := svgRenderers{
+		light: svg.NewRenderer(svg.CatppuccinLattePalette()),
+		dark:  svg.NewRenderer(svg.CatppuccinMochaPalette()),
+	}
+
+	feeds := config.FeedsConfig{
+		Podcast: &config.FeedConfig{
+			Enabled: true,
+			Links: []config.NavLink{
+				{Label: "Apple Podcasts", URL: "https://example.com/apple", Icon: "apple-podcasts"},
+				{Label: "Apple Podcasts", URL: "https://example.com/apple-alt", Icon: "apple-podcasts"},
+			},
+		},
+		Blog: &config.FeedConfig{
+			Enabled: true,
+			Links: []config.NavLink{
+				{Label: "RSS", Slug: "rss", URL: "https://example.com/blog.xml", Icon: "rss"},
+			},
+		},
+		YouTube: &config.FeedConfig{
+			Enabled: false,
+			Links: []config.NavLink{
+				{Label: "YouTube", Slug: "youtube", URL: "https://youtube.com/@example", Icon: "youtube"},
+			},
+		},
+	}
+	data := &render.RenderData{
+		Podcast: &render.FeedView{Enabled: true},
+		Blog:    &render.FeedView{Enabled: true},
+		YouTube: &render.FeedView{Enabled: false},
+	}
+
+	written := make(map[string]string)
+	err := renderFeedLinkPills(sr, feeds, func(name string, b []byte) error {
+		written[name] = string(b)
+		return nil
+	}, data)
+	if err != nil {
+		t.Fatalf("renderFeedLinkPills error: %v", err)
+	}
+
+	if len(data.Podcast.Links) != 2 {
+		t.Fatalf("Podcast.Links len = %d, want 2", len(data.Podcast.Links))
+	}
+	if data.Podcast.Links[0].BaseName != "podcast-apple-podcasts" || data.Podcast.Links[1].BaseName != "podcast-apple-podcasts-2" {
+		t.Errorf("unexpected podcast pill base names: %+v", data.Podcast.Links)
+	}
+	if len(data.Blog.Links) != 1 || data.Blog.Links[0].BaseName != "blog-rss" {
+		t.Errorf("unexpected blog pill views: %+v", data.Blog.Links)
+	}
+	if len(data.YouTube.Links) != 0 {
+		t.Errorf("disabled YouTube feed must not populate Links: %+v", data.YouTube.Links)
+	}
+	for _, wantFile := range []string{
+		"podcast-apple-podcasts-dark.svg", "podcast-apple-podcasts-light.svg",
+		"podcast-apple-podcasts-2-dark.svg", "podcast-apple-podcasts-2-light.svg",
+		"blog-rss-dark.svg", "blog-rss-light.svg",
+	} {
+		if _, ok := written[wantFile]; !ok {
+			t.Errorf("missing expected feed pill asset %s", wantFile)
+		}
+	}
+	if _, ok := written["youtube-youtube-dark.svg"]; ok {
+		t.Errorf("disabled YouTube feed must not write pill assets")
+	}
 }

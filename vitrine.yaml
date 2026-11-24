@@ -80,7 +80,7 @@ projects:
     logo: pages/icon.svg
   - repo: quickemu-project/quickemu
     language: Shell
-    logo: pages/icon.svg    
+    logo: pages/icon.svg
   - repo: wimpysworld/nix-config
     language: Nix
     logo: assets/logo.png
@@ -97,6 +97,23 @@ feeds:
     site_url: "https://linuxmatters.sh"
     cover_url: "https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png"
     max_items: 5
+    links:
+      - label: "Apple Podcasts"
+        slug: "apple-podcasts"
+        url: "https://geo.itunes.apple.com/podcast/feed/id1682797246"
+        icon: "apple-podcasts"
+      - label: "Spotify"
+        slug: "spotify"
+        url: "https://open.spotify.com/show/388W00MbvHGI69accqEHQK"
+        icon: "spotify"
+      - label: "YouTube"
+        slug: "youtube"
+        url: "https://www.youtube.com/@Linux-Matters"
+        icon: "youtube"
+      - label: "RSS"
+        slug: "rss"
+        url: "https://linuxmatters.sh/episode/index.xml"
+        icon: "rss"
   blog:
     enabled: true
     title: "Blog"

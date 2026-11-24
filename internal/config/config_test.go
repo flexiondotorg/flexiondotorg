@@ -400,6 +400,14 @@ feeds:
     url: https://linuxmatters.sh/episode/index.xml
     site_url: https://linuxmatters.sh
     cover_url: https://linuxmatters.sh/cover.png
+    links:
+      - label: " Apple Podcasts "
+        slug: " apple-podcasts "
+        url: " https://geo.itunes.apple.com/podcast/feed/id1682797246 "
+        icon: " apple-podcasts "
+      - label: Spotify
+        url: https://open.spotify.com/show/388W00MbvHGI69accqEHQK
+        icon: spotify
   blog:
     enabled: true
     title: Wimpy's World
@@ -471,6 +479,22 @@ output:
 	}
 	if cfg.Feeds.Podcast == nil || cfg.Feeds.Podcast.MaxItems != 5 {
 		t.Errorf("unexpected podcast feed config: %+v", cfg.Feeds.Podcast)
+	}
+	wantPodcastLinks := []NavLink{
+		{
+			Label: "Apple Podcasts",
+			Slug:  "apple-podcasts",
+			URL:   "https://geo.itunes.apple.com/podcast/feed/id1682797246",
+			Icon:  "apple-podcasts",
+		},
+		{
+			Label: "Spotify",
+			URL:   "https://open.spotify.com/show/388W00MbvHGI69accqEHQK",
+			Icon:  "spotify",
+		},
+	}
+	if cfg.Feeds.Podcast == nil || !slices.Equal(cfg.Feeds.Podcast.Links, wantPodcastLinks) {
+		t.Errorf("Feeds.Podcast.Links = %+v, want %+v", cfg.Feeds.Podcast.Links, wantPodcastLinks)
 	}
 	if cfg.Feeds.Blog == nil || cfg.Feeds.Blog.MaxItems != 3 {
 		t.Errorf("unexpected blog feed config: %+v", cfg.Feeds.Blog)
@@ -598,9 +622,24 @@ func TestParseValidationErrors(t *testing.T) {
 			wantErr: "discord.url",
 		},
 		{
+			name:    "nav link missing label",
+			yaml:    "profile:\n  links:\n    - url: https://example.com\n",
+			wantErr: "profile.links[0]: label",
+		},
+		{
 			name:    "nav link missing url",
 			yaml:    "profile:\n  links:\n    - label: Site\n",
-			wantErr: "profile.links[0]",
+			wantErr: "profile.links[0]: url",
+		},
+		{
+			name:    "feed link missing label",
+			yaml:    "feeds:\n  podcast:\n    enabled: true\n    url: https://example.com/feed.xml\n    links:\n      - url: https://example.com/sub\n",
+			wantErr: "feeds.podcast.links[0]: label",
+		},
+		{
+			name:    "feed link missing url",
+			yaml:    "feeds:\n  podcast:\n    enabled: true\n    url: https://example.com/feed.xml\n    links:\n      - label: Spotify\n",
+			wantErr: "feeds.podcast.links[0]: url",
 		},
 		{
 			name:    "sponsor fallback missing login",

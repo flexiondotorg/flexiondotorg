@@ -120,7 +120,7 @@ func TestRenderAllTilesStrictCompliance(t *testing.T) {
 		}
 		assertValidGitHubSVG(t, tc.name+"/hero", hero)
 
-		icons := []string{"globe", "blog", "mastodon", "bluesky", "linkedin", "discord", "github", "heart", "podcast", "twitch", "youtube", "unknown"}
+		icons := []string{"globe", "blog", "mastodon", "bluesky", "linkedin", "discord", "github", "heart", "podcast", "twitch", "youtube", "apple-podcasts", "applepodcasts", "spotify", "rss", "unknown"}
 		for i, icon := range icons {
 			pill, err := r.RenderNavPill(NavPillData{
 				Label:        icon,
@@ -441,95 +441,112 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 	r := NewRenderer(p)
 
 	// 1. Nav pills: platform accent border + icon, coupled icon/text (textX - iconX == 30), width >= 168.
-	brandChecks := []struct {
-		label      string
-		icon       string
-		accent     string
-		pathPrefix string
-		delay      float64
+	for _, theme := range []struct {
+		name string
+		pal  Palette
 	}{
-		{"Mastodon", "mastodon", p.AccentPrimary, "M23.268 5.313", 0.35},
-		{"Bluesky", "bluesky", p.AccentSecondary, "M5.202 2.857", 0.70},
-		{"LinkedIn", "linkedin", p.AccentSapphire, "M20.447 20.452", 1.05},
-	}
-	for _, bc := range brandChecks {
-		pillBytes, err := r.RenderNavPill(NavPillData{Label: bc.label, Icon: bc.icon, DelaySeconds: bc.delay})
-		if err != nil {
-			t.Fatalf("RenderNavPill(%s) error: %v", bc.label, err)
+		{"mocha", p},
+		{"latte", CatppuccinLattePalette()},
+	} {
+		tr := NewRenderer(theme.pal)
+		brandChecks := []struct {
+			label      string
+			icon       string
+			accent     string
+			pathPrefix string
+			delay      float64
+		}{
+			{"Mastodon", "mastodon", theme.pal.AccentPrimary, "M23.268 5.313", 0.35},
+			{"Bluesky", "bluesky", theme.pal.AccentSecondary, "M5.202 2.857", 0.70},
+			{"LinkedIn", "linkedin", theme.pal.AccentSapphire, "M20.447 20.452", 1.05},
+			{"Apple Podcasts", "apple-podcasts", theme.pal.AccentPrimary, "M5.34 0A5.328 5.328", 0.00},
+			{"Apple Podcasts", "applepodcasts", theme.pal.AccentPrimary, "M5.34 0A5.328 5.328", 0.45},
+			{"Spotify", "spotify", theme.pal.AccentGreen, "M12 0C5.4 0 0 5.4", 0.90},
+			{"YouTube", "youtube", theme.pal.AccentRed, "M23.498 6.186a3.016", 1.35},
+			{"RSS", "rss", theme.pal.AccentPeach, "M19.199 24C19.199 13.467", 1.80},
 		}
-		assertValidGitHubSVG(t, "nav-brand-"+bc.icon, pillBytes)
-		pillStr := string(pillBytes)
-		m := reRootDims.FindStringSubmatch(pillStr)
-		if len(m) != 3 {
-			t.Fatalf("RenderNavPill(%s): missing root width/height", bc.label)
-		}
-		w, _ := strconv.Atoi(m[1])
-		h, _ := strconv.Atoi(m[2])
-		if h != 44 {
-			t.Errorf("RenderNavPill(%s): height = %d, want 44", bc.label, h)
-		}
-		if w < 168 {
-			t.Errorf("RenderNavPill(%s): width = %d, want >= 168", bc.label, w)
-		}
-		if !strings.Contains(pillStr, fmt.Sprintf(`stroke="%s" stroke-width="1.5"`, bc.accent)) {
-			t.Errorf("RenderNavPill(%s): missing 1.5px platform accent border %s", bc.label, bc.accent)
-		}
-		if !strings.Contains(pillStr, bc.pathPrefix) {
-			t.Errorf("RenderNavPill(%s): missing authentic brand path %q", bc.label, bc.pathPrefix)
-		}
-		if !strings.Contains(pillStr, fmt.Sprintf("4.4s ease-in-out %ss infinite", formatFloat(bc.delay))) {
-			t.Errorf("RenderNavPill(%s): missing staggered icon breathe delay %v", bc.label, bc.delay)
-		}
-		for _, forbidden := range []string{"url(#cat-sheen)", "skewX", "vitrine-pill-glow", "vitrine-pill-sheen"} {
-			if strings.Contains(pillStr, forbidden) {
-				t.Errorf("RenderNavPill(%s): must not contain diagonal face sheen %q", bc.label, forbidden)
-			}
-		}
-
-		// Parse XML to verify iconX, textX coupling (textX - iconX == 30).
-		var iconX, textX float64
-		var foundIcon, foundText bool
-		var textAnchor string
-		dec := xml.NewDecoder(bytes.NewReader(pillBytes))
-		rootSeen := false
-		for {
-			tok, err := dec.Token()
-			if errors.Is(err, io.EOF) {
-				break
-			}
+		for _, bc := range brandChecks {
+			pillBytes, err := tr.RenderNavPill(NavPillData{Label: bc.label, Icon: bc.icon, DelaySeconds: bc.delay})
 			if err != nil {
-				t.Fatalf("RenderNavPill(%s): XML parse error: %v", bc.label, err)
+				t.Fatalf("%s RenderNavPill(%s/%s) error: %v", theme.name, bc.label, bc.icon, err)
 			}
-			start, ok := tok.(xml.StartElement)
-			if !ok {
-				continue
+			assertValidGitHubSVG(t, theme.name+"/nav-brand-"+bc.icon, pillBytes)
+			pillStr := string(pillBytes)
+			m := reRootDims.FindStringSubmatch(pillStr)
+			if len(m) != 3 {
+				t.Fatalf("%s RenderNavPill(%s): missing root width/height", theme.name, bc.label)
 			}
-			attrs := make(map[string]string, len(start.Attr))
-			for _, a := range start.Attr {
-				attrs[a.Name.Local] = a.Value
+			w, _ := strconv.Atoi(m[1])
+			h, _ := strconv.Atoi(m[2])
+			if h != 44 {
+				t.Errorf("%s RenderNavPill(%s): height = %d, want 44", theme.name, bc.label, h)
 			}
-			switch start.Name.Local {
-			case "svg":
-				if !rootSeen {
-					rootSeen = true
+			if w < 168 {
+				t.Errorf("%s RenderNavPill(%s): width = %d, want >= 168", theme.name, bc.label, w)
+			}
+			if !strings.Contains(pillStr, fmt.Sprintf(`stroke="%s" stroke-width="1.5"`, bc.accent)) {
+				t.Errorf("%s RenderNavPill(%s): missing 1.5px platform accent border %s", theme.name, bc.label, bc.accent)
+			}
+			if !strings.Contains(pillStr, fmt.Sprintf(`fill="%s"/>`, bc.accent)) {
+				t.Errorf("%s RenderNavPill(%s): missing platform accent icon fill %s", theme.name, bc.label, bc.accent)
+			}
+			if !strings.Contains(pillStr, bc.pathPrefix) {
+				t.Errorf("%s RenderNavPill(%s): missing authentic brand path %q", theme.name, bc.label, bc.pathPrefix)
+			}
+			if !strings.Contains(pillStr, fmt.Sprintf("4.4s ease-in-out %ss infinite", formatFloat(bc.delay))) {
+				t.Errorf("%s RenderNavPill(%s): missing staggered icon breathe delay %v", theme.name, bc.label, bc.delay)
+			}
+			for _, forbidden := range []string{"url(#cat-sheen)", "skewX", "vitrine-pill-glow", "vitrine-pill-sheen"} {
+				if strings.Contains(pillStr, forbidden) {
+					t.Errorf("%s RenderNavPill(%s): must not contain diagonal face sheen %q", theme.name, bc.label, forbidden)
+				}
+			}
+
+			// Parse XML to verify iconX, textX coupling (textX - iconX == 30).
+			var iconX, textX float64
+			var foundIcon, foundText bool
+			var textAnchor string
+			dec := xml.NewDecoder(bytes.NewReader(pillBytes))
+			rootSeen := false
+			for {
+				tok, err := dec.Token()
+				if errors.Is(err, io.EOF) {
+					break
+				}
+				if err != nil {
+					t.Fatalf("%s RenderNavPill(%s): XML parse error: %v", theme.name, bc.label, err)
+				}
+				start, ok := tok.(xml.StartElement)
+				if !ok {
 					continue
 				}
-				iconX, _ = strconv.ParseFloat(attrs["x"], 64)
-				foundIcon = true
-			case "text":
-				textX, _ = strconv.ParseFloat(attrs["x"], 64)
-				textAnchor = attrs["text-anchor"]
-				foundText = true
+				attrs := make(map[string]string, len(start.Attr))
+				for _, a := range start.Attr {
+					attrs[a.Name.Local] = a.Value
+				}
+				switch start.Name.Local {
+				case "svg":
+					if !rootSeen {
+						rootSeen = true
+						continue
+					}
+					iconX, _ = strconv.ParseFloat(attrs["x"], 64)
+					foundIcon = true
+				case "text":
+					textX, _ = strconv.ParseFloat(attrs["x"], 64)
+					textAnchor = attrs["text-anchor"]
+					foundText = true
+				}
 			}
-		}
-		if !foundIcon || !foundText {
-			t.Fatalf("RenderNavPill(%s): missing nested icon <svg> (%v) or <text> (%v)", bc.label, foundIcon, foundText)
-		}
-		if textAnchor != "start" {
-			t.Errorf("RenderNavPill(%s): text-anchor = %q, want \"start\"", bc.label, textAnchor)
-		}
-		if diff := math.Abs((textX - iconX) - 30.0); diff > 0.01 {
-			t.Errorf("RenderNavPill(%s): textX - iconX = %.2f, want 30.00", bc.label, textX-iconX)
+			if !foundIcon || !foundText {
+				t.Fatalf("%s RenderNavPill(%s): missing nested icon <svg> (%v) or <text> (%v)", theme.name, bc.label, foundIcon, foundText)
+			}
+			if textAnchor != "start" {
+				t.Errorf("%s RenderNavPill(%s): text-anchor = %q, want \"start\"", theme.name, bc.label, textAnchor)
+			}
+			if diff := math.Abs((textX - iconX) - 30.0); diff > 0.01 {
+				t.Errorf("%s RenderNavPill(%s): textX - iconX = %.2f, want 30.00", theme.name, bc.label, textX-iconX)
+			}
 		}
 	}
 

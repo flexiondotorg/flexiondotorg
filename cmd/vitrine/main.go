@@ -517,6 +517,9 @@ func generateSVGs(
 	if err := renderNavPills(sr, cfg.Profile.Links, writeAsset, data); err != nil {
 		return err
 	}
+	if err := renderFeedLinkPills(sr, cfg.Feeds, writeAsset, data); err != nil {
+		return err
+	}
 	if err := renderDiscordBanner(sr, cfg.Discord, discordStatus, writeAsset, data); err != nil {
 		return err
 	}
@@ -538,6 +541,52 @@ func renderNavPills(
 	writeAsset func(string, []byte) error,
 	data *render.RenderData,
 ) error {
+	pills, err := renderPillLinks(sr, "nav", links, writeAsset)
+	if err != nil {
+		return err
+	}
+	data.NavPills = append(data.NavPills, pills...)
+	return nil
+}
+
+func renderFeedLinkPills(
+	sr svgRenderers,
+	feeds config.FeedsConfig,
+	writeAsset func(string, []byte) error,
+	data *render.RenderData,
+) error {
+	sections := []struct {
+		prefix string
+		cfg    *config.FeedConfig
+		view   *render.FeedView
+	}{
+		{prefix: "podcast", cfg: feeds.Podcast, view: data.Podcast},
+		{prefix: "blog", cfg: feeds.Blog, view: data.Blog},
+		{prefix: "youtube", cfg: feeds.YouTube, view: data.YouTube},
+	}
+	for _, sec := range sections {
+		if sec.cfg == nil || !sec.cfg.Enabled || sec.view == nil || !sec.view.Enabled || len(sec.cfg.Links) == 0 {
+			continue
+		}
+		pills, err := renderPillLinks(sr, sec.prefix, sec.cfg.Links, writeAsset)
+		if err != nil {
+			return err
+		}
+		sec.view.Links = pills
+	}
+	return nil
+}
+
+func renderPillLinks(
+	sr svgRenderers,
+	prefix string,
+	links []config.NavLink,
+	writeAsset func(string, []byte) error,
+) ([]render.NavPillView, error) {
+	if len(links) == 0 {
+		return nil, nil
+	}
+	pills := make([]render.NavPillView, 0, len(links))
 	seen := make(map[string]int, len(links))
 	for i, link := range links {
 		slug := slugify(link.Slug)
@@ -552,7 +601,7 @@ func renderNavPills(
 			slug = fmt.Sprintf("%s-%d", slug, seen[slug])
 		}
 
-		baseName := "nav-" + slug
+		baseName := prefix + "-" + slug
 		lightFile, darkFile, err := writeDualSVG(sr, writeAsset, baseName, func(r *svg.Renderer) ([]byte, error) {
 			return r.RenderNavPill(svg.NavPillData{
 				Label:        link.Label,
@@ -561,9 +610,9 @@ func renderNavPills(
 			})
 		})
 		if err != nil {
-			return err
+			return nil, err
 		}
-		data.NavPills = append(data.NavPills, render.NavPillView{
+		pills = append(pills, render.NavPillView{
 			Label:     link.Label,
 			Slug:      slug,
 			URL:       link.URL,
@@ -574,7 +623,7 @@ func renderNavPills(
 			File:      lightFile,
 		})
 	}
-	return nil
+	return pills, nil
 }
 
 func renderDiscordBanner(
