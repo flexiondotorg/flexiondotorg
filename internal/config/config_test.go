@@ -406,6 +406,13 @@ haberdasher:
     wimpysworld/demo: custom.svg
   png_fallbacks:
     wimpysworld/ia-get: assets/ia-get.png
+projects:
+  - repo: " wimpysworld/nix-config "
+    logo: " assets/logo.png "
+    language: " Nix "
+    homepage: " https://wimpys.world/nix-config "
+    description: " NixOS and Home Manager configuration "
+  - repo: wimpysworld/nothing-but-nix
 feeds:
   podcast:
     enabled: true
@@ -461,6 +468,21 @@ output:
 	}
 	if !cfg.Haberdasher.Enabled || cfg.Haberdasher.Sort != HaberdasherSortRelease || len(cfg.Haberdasher.Hosts) != 1 || cfg.Haberdasher.PNGFallbacks["wimpysworld/ia-get"] != "assets/ia-get.png" {
 		t.Errorf("unexpected haberdasher config: %+v", cfg.Haberdasher)
+	}
+	wantProjects := []ProjectConfig{
+		{
+			Repo:        "wimpysworld/nix-config",
+			Logo:        "assets/logo.png",
+			Language:    "Nix",
+			Homepage:    "https://wimpys.world/nix-config",
+			Description: "NixOS and Home Manager configuration",
+		},
+		{
+			Repo: "wimpysworld/nothing-but-nix",
+		},
+	}
+	if !slices.Equal(cfg.Projects, wantProjects) {
+		t.Errorf("Projects = %+v, want %+v", cfg.Projects, wantProjects)
 	}
 	if starsCfg, err := Parse([]byte("haberdasher:\n  sort: \" STARS \"\n")); err != nil {
 		t.Fatalf("Parse haberdasher.sort=STARS failed: %v", err)
@@ -609,6 +631,36 @@ func TestParseValidationErrors(t *testing.T) {
 			name:    "unknown haberdasher sort",
 			yaml:    "haberdasher:\n  sort: name\n",
 			wantErr: "haberdasher.sort",
+		},
+		{
+			name:    "project missing repo",
+			yaml:    "projects:\n  - language: Nix\n",
+			wantErr: "projects[0].repo",
+		},
+		{
+			name:    "project repo missing slash",
+			yaml:    "projects:\n  - repo: nix-config\n",
+			wantErr: "projects[0].repo",
+		},
+		{
+			name:    "project repo missing owner",
+			yaml:    "projects:\n  - repo: /nix-config\n",
+			wantErr: "projects[0].repo",
+		},
+		{
+			name:    "project repo missing name",
+			yaml:    "projects:\n  - repo: wimpysworld/\n",
+			wantErr: "projects[0].repo",
+		},
+		{
+			name:    "project repo extra slash",
+			yaml:    "projects:\n  - repo: wimpysworld/nix-config/extra\n",
+			wantErr: "projects[0].repo",
+		},
+		{
+			name:    "project repo inner whitespace",
+			yaml:    "projects:\n  - repo: wimpysworld /nix-config\n",
+			wantErr: "projects[0].repo",
 		},
 	}
 

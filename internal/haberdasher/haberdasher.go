@@ -81,21 +81,31 @@ type PackageHost struct {
 
 // Project holds merged Haberdasher and GitHub metadata for one curated project.
 type Project struct {
-	FullName    string
-	Owner       string
-	Name        string
-	Slug        string
-	Description string
-	Homepage    string
-	RepoURL     string
+	FullName      string
+	Owner         string
+	Name          string
+	Slug          string
+	Description   string
+	Homepage      string
+	RepoURL       string
+	Language      string
+	Stars         int
+	LatestTag     string
+	ReleaseURL    string
+	PublishedAt   time.Time
+	Hosts         []string
+	LogoSVG       string
+	LogoDataURI   string
+	defaultBranch string
+}
+
+// ExtraProject defines a non-Haberdasher repository or override merged into the project list.
+type ExtraProject struct {
+	Repo        string
+	Logo        string
 	Language    string
-	Stars       int
-	LatestTag   string
-	ReleaseURL  string
-	PublishedAt time.Time
-	Hosts       []string
-	LogoSVG     string
-	LogoDataURI string
+	Homepage    string
+	Description string
 }
 
 // Catalogue holds the resolved curated projects and package hosts.
@@ -303,7 +313,8 @@ func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 		if branch == "" {
 			branch = defaultDefaultBranch
 		}
-		logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, proj.Name, branch, opts)
+		proj.defaultBranch = branch
+		logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, proj.Name, branch, "", opts)
 		if err != nil {
 			return nil, fmt.Errorf("resolve logo for %s: %w", proj.FullName, err)
 		}
@@ -319,6 +330,198 @@ func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 		Projects: projects,
 		Hosts:    packageHosts,
 	}, nil
+}
+
+// EnrichProjects merges standalone or override projects with an existing
+// project slice, deduplicates case-insensitively by repository full name,
+// fetches GitHub metadata and logos for new entries, and sorts the merged
+// slice according to opts.Sort (defaulting to stars descending).
+func (f *Fetcher) EnrichProjects(
+	ctx context.Context,
+	existing []Project,
+	extras []ExtraProject,
+	opts Options,
+) ([]Project, error) {
+	if f == nil || f.GitHub == nil {
+		return nil, errors.New("haberdasher: GitHub RepoFetcher must not be nil")
+	}
+
+	sortMode, err := normalizeSortMode(opts.Sort)
+	if err != nil {
+		return nil, err
+	}
+
+	projects := slices.Clone(existing)
+	indexByKey := make(map[string]int, len(projects)+len(extras))
+	for i, p := range projects {
+		if key := strings.ToLower(strings.TrimSpace(p.FullName)); key != "" {
+			indexByKey[key] = i
+		}
+	}
+
+	for _, rawExtra := range extras {
+		extra := ExtraProject{
+			Repo:        strings.TrimSpace(rawExtra.Repo),
+			Logo:        strings.TrimSpace(rawExtra.Logo),
+			Language:    strings.TrimSpace(rawExtra.Language),
+			Homepage:    strings.TrimSpace(rawExtra.Homepage),
+			Description: strings.TrimSpace(rawExtra.Description),
+		}
+		if extra.Repo == "" {
+			continue
+		}
+
+		key := strings.ToLower(extra.Repo)
+		if idx, exists := indexByKey[key]; exists {
+			if err := f.applyExtraOverrides(ctx, &projects[idx], extra); err != nil {
+				return nil, fmt.Errorf("apply overrides for %s: %w", projects[idx].FullName, err)
+			}
+			continue
+		}
+
+		meta, err := f.GitHub.FetchRepoMeta(ctx, extra.Repo)
+		if err != nil {
+			return nil, fmt.Errorf("fetch GitHub metadata for %s: %w", extra.Repo, err)
+		}
+
+		resolvedFull := strings.TrimSpace(meta.FullName)
+		if resolvedFull == "" {
+			resolvedFull = extra.Repo
+		}
+		resolvedKey := strings.ToLower(resolvedFull)
+		if idx, exists := indexByKey[resolvedKey]; exists {
+			if err := f.applyExtraOverrides(ctx, &projects[idx], extra); err != nil {
+				return nil, fmt.Errorf("apply overrides for %s: %w", projects[idx].FullName, err)
+			}
+			continue
+		}
+
+		proj, err := f.buildExtraProject(ctx, resolvedFull, meta, extra, opts)
+		if err != nil {
+			return nil, err
+		}
+
+		indexByKey[resolvedKey] = len(projects)
+		indexByKey[key] = len(projects)
+		projects = append(projects, proj)
+	}
+
+	sortProjects(projects, sortMode)
+	return projects, nil
+}
+
+func (f *Fetcher) buildExtraProject(
+	ctx context.Context,
+	resolvedFull string,
+	meta gh.RepoMeta,
+	extra ExtraProject,
+	opts Options,
+) (Project, error) {
+	owner := strings.TrimSpace(meta.Owner)
+	name := strings.TrimSpace(meta.Name)
+	if owner == "" || name == "" {
+		fallbackOwner, fallbackName := splitFullName(resolvedFull)
+		if owner == "" {
+			owner = fallbackOwner
+		}
+		if name == "" {
+			name = fallbackName
+		}
+	}
+
+	description := meta.Description
+	if extra.Description != "" {
+		description = extra.Description
+	}
+	language := meta.Language
+	if extra.Language != "" {
+		language = extra.Language
+	}
+	homepage := strings.TrimSpace(meta.Homepage)
+	if extra.Homepage != "" {
+		homepage = extra.Homepage
+	}
+	if homepage == "" {
+		homepage = strings.TrimSpace(meta.HTMLURL)
+	}
+
+	branch := strings.TrimSpace(meta.DefaultBranch)
+	if branch == "" {
+		branch = defaultDefaultBranch
+	}
+
+	proj := Project{
+		FullName:      resolvedFull,
+		Owner:         owner,
+		Name:          name,
+		Slug:          slugify(name),
+		Description:   description,
+		Homepage:      homepage,
+		RepoURL:       meta.HTMLURL,
+		Language:      language,
+		Stars:         meta.Stars,
+		defaultBranch: branch,
+	}
+	if meta.LatestRelease != nil {
+		proj.LatestTag = meta.LatestRelease.TagName
+		proj.ReleaseURL = meta.LatestRelease.ReleaseURL
+		proj.PublishedAt = meta.LatestRelease.PublishedAt
+	}
+
+	logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, proj.Name, branch, extra.Logo, opts)
+	if err != nil {
+		return Project{}, fmt.Errorf("resolve logo for %s: %w", proj.FullName, err)
+	}
+	proj.LogoSVG = logoSVG
+	proj.LogoDataURI = logoDataURI
+
+	return proj, nil
+}
+
+func (f *Fetcher) applyExtraOverrides(ctx context.Context, proj *Project, extra ExtraProject) error {
+	if extra.Language != "" {
+		proj.Language = extra.Language
+	}
+	if extra.Homepage != "" {
+		proj.Homepage = extra.Homepage
+	}
+	if extra.Description != "" {
+		proj.Description = extra.Description
+	}
+	if extra.Logo == "" {
+		return nil
+	}
+
+	owner := strings.TrimSpace(proj.Owner)
+	name := strings.TrimSpace(proj.Name)
+	if owner == "" || name == "" {
+		fallbackOwner, fallbackName := splitFullName(proj.FullName)
+		if owner == "" {
+			owner = fallbackOwner
+		}
+		if name == "" {
+			name = fallbackName
+		}
+	}
+	branch := strings.TrimSpace(proj.defaultBranch)
+	if branch == "" {
+		branch = defaultDefaultBranch
+	}
+
+	logoSVG, logoDataURI, err := f.loadExtraLogo(ctx, owner, name, branch, extra.Logo)
+	if err != nil {
+		return err
+	}
+	if logoSVG != "" || logoDataURI != "" {
+		proj.LogoSVG = logoSVG
+		proj.LogoDataURI = logoDataURI
+	}
+	return nil
+}
+
+func splitFullName(fullName string) (owner, name string) {
+	owner, name, _ = strings.Cut(strings.TrimSpace(fullName), "/")
+	return strings.TrimSpace(owner), strings.TrimSpace(name)
 }
 
 func normalizeSortMode(sortMode string) (string, error) {
@@ -490,7 +693,7 @@ func extractHostPackages(manifest hostManifest) ([]string, int) {
 
 func (f *Fetcher) resolveLogo(
 	ctx context.Context,
-	fullName, owner, repo, branch string,
+	fullName, owner, repo, branch, extraLogo string,
 	opts Options,
 ) (logoSVG, logoDataURI string, err error) {
 	// Steps 1-4: automatic repository icons (pages/icon.svg -> pages/icon.png -> icon.svg -> icon.png).
@@ -515,7 +718,18 @@ func (f *Fetcher) resolveLogo(
 		}
 	}
 
-	// Step 5: configured PNG fallback fetched from the repository.
+	// Step 5: explicit per-project logo (HTTP/HTTPS URL, local file, or repo-relative path).
+	if trimmed := strings.TrimSpace(extraLogo); trimmed != "" {
+		svgMarkup, dataURI, loadErr := f.loadExtraLogo(ctx, owner, repo, branch, trimmed)
+		if loadErr != nil {
+			return "", "", loadErr
+		}
+		if svgMarkup != "" || dataURI != "" {
+			return svgMarkup, dataURI, nil
+		}
+	}
+
+	// Step 6: configured PNG fallback fetched from the repository.
 	if pngPath, ok := lookupCaseInsensitive(opts.PNGFallbacks, fullName); ok && pngPath != "" && owner != "" && repo != "" {
 		rawPNG, err := f.GitHub.FetchRawFile(ctx, owner, repo, branch, pngPath)
 		if err == nil && len(rawPNG) > 0 {
@@ -526,13 +740,64 @@ func (f *Fetcher) resolveLogo(
 		}
 	}
 
-	// Step 6: configured logo override (local file path or HTTP/HTTPS URL).
+	// Step 7: configured logo override (local file path or HTTP/HTTPS URL).
 	if override, ok := lookupCaseInsensitive(opts.LogoOverrides, fullName); ok && override != "" {
 		return f.loadLogoOverride(ctx, override)
 	}
 
-	// Step 7: empty strings signal internal/svg to draw the fallback placeholder mark.
+	// Step 8: empty strings signal internal/svg to draw the fallback placeholder mark.
 	return "", "", nil
+}
+
+func (f *Fetcher) loadExtraLogo(
+	ctx context.Context,
+	owner, repo, branch, location string,
+) (logoSVG, logoDataURI string, err error) {
+	trimmed := strings.TrimSpace(location)
+	if trimmed == "" {
+		return "", "", nil
+	}
+
+	if strings.HasPrefix(trimmed, "http://") || strings.HasPrefix(trimmed, "https://") {
+		data, contentType, _, err := f.getBytes(ctx, trimmed, maxLogoBytes)
+		if err != nil {
+			return "", "", fmt.Errorf("fetch project logo %s: %w", trimmed, err)
+		}
+		svgMarkup, dataURI := decodeLogoBytes(data, trimmed, contentType)
+		return svgMarkup, dataURI, nil
+	}
+
+	data, localErr := readBoundedFile(trimmed, maxLogoBytes)
+	if localErr == nil {
+		svgMarkup, dataURI := decodeLogoBytes(data, trimmed, "")
+		return svgMarkup, dataURI, nil
+	}
+	if !errors.Is(localErr, os.ErrNotExist) {
+		return "", "", fmt.Errorf("read local project logo %s: %w", trimmed, localErr)
+	}
+
+	if owner == "" || repo == "" {
+		return "", "", nil
+	}
+	raw, fetchErr := f.GitHub.FetchRawFile(ctx, owner, repo, branch, trimmed)
+	if fetchErr != nil {
+		if errors.Is(fetchErr, gh.ErrNotFound) {
+			return "", "", nil
+		}
+		return "", "", fetchErr
+	}
+	svgMarkup, dataURI := decodeLogoBytes(raw, trimmed, "")
+	return svgMarkup, dataURI, nil
+}
+
+func decodeLogoBytes(data []byte, location, contentType string) (logoSVG, logoDataURI string) {
+	if len(data) == 0 {
+		return "", ""
+	}
+	if isPNG(data, location, contentType) {
+		return "", encodePNGDataURI(data)
+	}
+	return strings.TrimSpace(string(data)), ""
 }
 
 func (f *Fetcher) loadLogoOverride(ctx context.Context, location string) (logoSVG, logoDataURI string, err error) {
@@ -552,10 +817,8 @@ func (f *Fetcher) loadLogoOverride(ctx context.Context, location string) (logoSV
 		}
 	}
 
-	if isPNG(data, trimmed, contentType) {
-		return "", encodePNGDataURI(data), nil
-	}
-	return strings.TrimSpace(string(data)), "", nil
+	svgMarkup, dataURI := decodeLogoBytes(data, trimmed, contentType)
+	return svgMarkup, dataURI, nil
 }
 
 func readBoundedFile(path string, maxBytes int64) ([]byte, error) {

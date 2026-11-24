@@ -192,6 +192,15 @@ type HaberdasherConfig struct {
 	PNGFallbacks  map[string]string `yaml:"png_fallbacks"`
 }
 
+// ProjectConfig defines a standalone or override project entry for the Projects grid.
+type ProjectConfig struct {
+	Repo        string `yaml:"repo"`
+	Logo        string `yaml:"logo"`
+	Language    string `yaml:"language"`
+	Homepage    string `yaml:"homepage"`
+	Description string `yaml:"description"`
+}
+
 // FeedConfig configures a single RSS 2.0 or Atom feed section.
 type FeedConfig struct {
 	Enabled  bool   `yaml:"enabled"`
@@ -242,6 +251,7 @@ type Config struct {
 	Theme       ThemeConfig       `yaml:"theme"`
 	GitHub      GitHubConfig      `yaml:"github"`
 	Haberdasher HaberdasherConfig `yaml:"haberdasher"`
+	Projects    []ProjectConfig   `yaml:"projects"`
 	Feeds       FeedsConfig       `yaml:"feeds"`
 	Twitch      TwitchConfig      `yaml:"twitch"`
 	Discord     DiscordConfig     `yaml:"discord"`
@@ -461,6 +471,10 @@ func (c *Config) applyDefaultsAndValidate() error {
 		return err
 	}
 
+	if err := c.applyProjectsDefaultsAndValidate(); err != nil {
+		return err
+	}
+
 	if err := validateFeed("feeds.podcast", c.Feeds.Podcast); err != nil {
 		return err
 	}
@@ -533,6 +547,31 @@ func (c *Config) applyHaberdasherDefaultsAndValidate() error {
 		return fmt.Errorf("haberdasher.sort must be %q or %q, got %q", HaberdasherSortStars, HaberdasherSortRelease, c.Haberdasher.Sort)
 	}
 	return nil
+}
+
+func (c *Config) applyProjectsDefaultsAndValidate() error {
+	for i := range c.Projects {
+		c.Projects[i].Repo = strings.TrimSpace(c.Projects[i].Repo)
+		c.Projects[i].Logo = strings.TrimSpace(c.Projects[i].Logo)
+		c.Projects[i].Language = strings.TrimSpace(c.Projects[i].Language)
+		c.Projects[i].Homepage = strings.TrimSpace(c.Projects[i].Homepage)
+		c.Projects[i].Description = strings.TrimSpace(c.Projects[i].Description)
+		if !isValidRepoFullName(c.Projects[i].Repo) {
+			return fmt.Errorf("projects[%d].repo must be in owner/repo format, got %q", i, c.Projects[i].Repo)
+		}
+	}
+	return nil
+}
+
+func isValidRepoFullName(repo string) bool {
+	owner, name, ok := strings.Cut(repo, "/")
+	if !ok || owner == "" || name == "" || strings.Contains(name, "/") {
+		return false
+	}
+	if strings.ContainsAny(owner, " \t\r\n") || strings.ContainsAny(name, " \t\r\n") {
+		return false
+	}
+	return true
 }
 
 func (c *Config) applyTwitchDefaultsAndValidate() error {

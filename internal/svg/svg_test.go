@@ -522,9 +522,9 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		}
 	}
 
-	// 2. Project card: 408x182, unframed 64x64 logo at (20,34), 3-line wrapped description, top-edge glint, 3-part footer.
+	// 2. Project card: 408x182, unframed 64x64 logo at (20,34), 4-line wrapped description, top-edge glint, 3-part footer.
 	sampleLogo := `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#89b4fa"/></svg>`
-	longTagline := "Quickly create and run optimised Windows, macOS and Linux desktop virtual machines with zero configuration."
+	longTagline := "Create a Nix store of up to 129GiB in GitHub runners with a multi-disk BTRFS pool for /nix that purges unused tools and dynamically grows the Nix store."
 	cardBytes, err := r.RenderProjectCard(ProjectCardData{
 		Slug:         "ia-get",
 		Name:         "ia-get",
@@ -551,6 +551,7 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		`<text x="100" y="68"`,
 		`<text x="100" y="86"`,
 		`<text x="100" y="104"`,
+		`<text x="100" y="122"`,
 		`y1="142" x2="388" y2="142"`,
 		`cy="159"`,
 		`y="163"`,
@@ -559,7 +560,7 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		">Go<",
 		fmt.Sprintf(`<tspan fill="%s">★</tspan> 810`, p.AccentYellow),
 		"1 week ago",
-		"configuration.",
+		"Nix store.",
 	} {
 		if !strings.Contains(cardStr, want) {
 			t.Errorf("RenderProjectCard missing %q", want)
@@ -569,6 +570,26 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		if strings.Contains(cardStr, forbidden) {
 			t.Errorf("RenderProjectCard must not contain %q", forbidden)
 		}
+	}
+
+	// Verify CalVer tags up to 18 characters (such as v26.5.20261113) render untruncated.
+	calverBytes, err := r.RenderProjectCard(ProjectCardData{
+		Slug:       "nix-config",
+		Name:       "nix-config",
+		Tagline:    "Wimpy's NixOS, nix-darwin & Home Manager Configurations",
+		Version:    "v26.5.20261113",
+		Fresh:      true,
+		Language:   "Nix",
+		Stars:      734,
+		ReleaseAge: "5 days ago",
+	})
+	if err != nil {
+		t.Fatalf("RenderProjectCard(calver) error: %v", err)
+	}
+	assertValidGitHubSVG(t, "project-card-calver", calverBytes)
+	calverStr := string(calverBytes)
+	if !strings.Contains(calverStr, ">v26.5.20261113<") || strings.Contains(calverStr, "…") {
+		t.Errorf("RenderProjectCard(calver) truncated CalVer tag: %s", calverStr)
 	}
 
 	// 3. Package host: 198x78, unframed 40x40 logo, top-edge glint, Surface0 count pill in AccentPrimary.

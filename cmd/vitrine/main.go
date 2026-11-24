@@ -136,7 +136,7 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 	}
 
 	catalogue := fetchHaberdasher(ctx, cfg, deps.httpClient, ghClient, deps.stderr)
-	extraRepos := projectFullNames(catalogue)
+	extraRepos := projectFullNames(catalogue, cfg.Projects)
 	data.GitHub = fetchGitHubProfile(ctx, cfg, ghClient, extraRepos, deps.stderr)
 	discordStatus := fetchDiscordStatus(ctx, deps.httpClient, cfg.Discord, deps.stderr)
 	data.Podcast = fetchFeedSection(ctx, deps.httpClient, cfg.Feeds.Podcast, "podcast", deps.stderr)
@@ -226,33 +226,85 @@ func fetchHaberdasher(
 	ghClient *gh.Client,
 	stderr io.Writer,
 ) *haberdasher.Catalogue {
-	if !cfg.Haberdasher.Enabled {
+	if !cfg.Haberdasher.Enabled && len(cfg.Projects) == 0 {
 		return nil
 	}
+
 	fetcher := haberdasher.NewFetcher(httpClient, ghClient)
-	cat, err := fetcher.Fetch(ctx, haberdasher.Options{
+	opts := haberdasher.Options{
 		ConfigURL:     cfg.Haberdasher.ConfigURL,
 		Hosts:         cfg.Haberdasher.Hosts,
 		Sort:          cfg.Haberdasher.Sort,
 		LogoOverrides: cfg.Haberdasher.LogoOverrides,
 		PNGFallbacks:  cfg.Haberdasher.PNGFallbacks,
-	})
-	if err != nil {
-		fmt.Fprintf(stderr, "warning: haberdasher fetch failed: %v\n", err)
-		return nil
 	}
+
+	var cat *haberdasher.Catalogue
+	if cfg.Haberdasher.Enabled {
+		fetched, err := fetcher.Fetch(ctx, opts)
+		if err != nil {
+			fmt.Fprintf(stderr, "warning: haberdasher fetch failed: %v\n", err)
+		} else {
+			cat = fetched
+		}
+	}
+
+	if len(cfg.Projects) == 0 {
+		return cat
+	}
+
+	var existing []haberdasher.Project
+	if cat != nil {
+		existing = cat.Projects
+	}
+	merged, err := fetcher.EnrichProjects(ctx, existing, toExtraProjects(cfg.Projects), opts)
+	if err != nil {
+		fmt.Fprintf(stderr, "warning: project enrichment failed: %v\n", err)
+		return cat
+	}
+	if cat == nil {
+		cat = &haberdasher.Catalogue{}
+	}
+	cat.Projects = merged
 	return cat
 }
 
-func projectFullNames(cat *haberdasher.Catalogue) []string {
-	if cat == nil || len(cat.Projects) == 0 {
-		return nil
+func toExtraProjects(configured []config.ProjectConfig) []haberdasher.ExtraProject {
+	extras := make([]haberdasher.ExtraProject, 0, len(configured))
+	for _, p := range configured {
+		extras = append(extras, haberdasher.ExtraProject{
+			Repo:        p.Repo,
+			Logo:        p.Logo,
+			Language:    p.Language,
+			Homepage:    p.Homepage,
+			Description: p.Description,
+		})
 	}
-	repos := make([]string, 0, len(cat.Projects))
-	for _, p := range cat.Projects {
-		if strings.TrimSpace(p.FullName) != "" {
-			repos = append(repos, p.FullName)
+	return extras
+}
+
+func projectFullNames(cat *haberdasher.Catalogue, configured []config.ProjectConfig) []string {
+	seen := make(map[string]bool)
+	var repos []string
+	add := func(raw string) {
+		trimmed := strings.TrimSpace(raw)
+		if trimmed == "" {
+			return
 		}
+		key := strings.ToLower(trimmed)
+		if seen[key] {
+			return
+		}
+		seen[key] = true
+		repos = append(repos, trimmed)
+	}
+	if cat != nil {
+		for _, p := range cat.Projects {
+			add(p.FullName)
+		}
+	}
+	for _, p := range configured {
+		add(p.Repo)
 	}
 	return repos
 }

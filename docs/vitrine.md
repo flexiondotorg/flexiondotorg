@@ -14,7 +14,7 @@ The Go module is `github.com/flexiondotorg/flexiondotorg`. Vitrine splits CLI or
 | `internal/config/` | Parses `vitrine.yaml`, resolves built-in theme presets, and applies custom colour overrides. | Yes |
 | `internal/discord/` | Fetches live online and member counts for Discord from public endpoints without API secrets. | Optional |
 | `internal/github/` | Fetches user, organisation, stats, contribution, release, star, and public sponsor data. | Yes |
-| `internal/haberdasher/` | Fetches `haberdasher.yaml` and eight repository manifests, merges project records, and resolves logos. | Yes |
+| `internal/haberdasher/` | Fetches `haberdasher.yaml`, repository manifests, and configured standalone projects, merges records, and resolves logos. | Yes |
 | `internal/rss/` | Parses Really Simple Syndication (RSS) 2.0 feeds and YouTube Atom feeds. | Yes |
 | `internal/twitch/` | Checks live or offline channel status from public endpoints without secrets. | Optional |
 | `internal/svg/` | Renders modular animated SVG tiles with Catppuccin and preset theme tokens plus reduced-motion rules. | No |
@@ -30,9 +30,9 @@ Vitrine calls only GitHub Representational State Transfer (REST) endpoints becau
 
 | Profile data | REST source | Notes |
 | --- | --- | --- |
-| Stats strip metrics | `/users/{user}`, `/orgs/{org}`, `/users/{user}/repos`, `/orgs/{org}/repos`, `/search/commits`, and `/search/issues` | Computes deduplicated stars across the user, configured organisations, and Haberdasher projects, plus commits, pull requests, `involves:` issues, and followers. |
+| Stats strip metrics | `/users/{user}`, `/orgs/{org}`, `/users/{user}/repos`, `/orgs/{org}/repos`, `/search/commits`, and `/search/issues` | Computes deduplicated stars across the user, configured organisations, Haberdasher projects, and top-level `projects:` entries, plus commits, pull requests, `involves:` issues, and followers. |
 | Community contributions | `/users/{user}/events/public` and `/search/issues` | Collects external repository contributions outside `exclude_owners` within `contributions_window_days` (365 days in `vitrine.yaml`, 180 days by default). |
-| Recent releases | `/repos/{owner}/{repo}/releases` | Collects recent releases across configured owners and Haberdasher projects. |
+| Recent releases | `/repos/{owner}/{repo}/releases` | Collects recent releases across configured owners, Haberdasher projects, and top-level `projects:` entries. |
 | Starred repositories | `/users/{user}/starred` | Sends `Accept: application/vnd.github.star+json`, excludes owners listed in `exclude_owners`, and renders open by default. |
 
 ### Sponsors
@@ -51,7 +51,7 @@ Vitrine fetches live online counts and total member counts for Discord without b
 2. Fall back to the Discord server widget endpoint (`https://discord.com/api/guilds/<guild_id>/widget.json`) for live presence counts.
 3. Fall back to the Shields JSON endpoint (`https://img.shields.io/discord/<guild_id>.json`) if both Discord endpoints fail.
 
-### Haberdasher curated projects
+### Haberdasher and standalone projects
 
 Vitrine reads the curated project list from `haberdasher.yaml` and fetches all eight package repository manifests:
 
@@ -64,19 +64,24 @@ Vitrine reads the curated project list from `haberdasher.yaml` and fetches all e
 - `https://scoop.wimpys.world/haberdasher.json`
 - `https://nix.wimpys.world/haberdasher.json`
 
-For each curated project, Vitrine enriches the entry with metadata from the GitHub REST API (description, star count, primary language, latest release tag, and release timestamp). Vitrine sorts project cards descending by GitHub star count by default, with latest release date and project name as tie-breakers. Set `haberdasher.sort` in `vitrine.yaml` to `stars` or `release` to control the sort order.
+Use the top-level `projects:` list in `vitrine.yaml` to add non-Haberdasher repositories or to override fields on Haberdasher projects. Each entry requires `repo` in `owner/repo` format and accepts optional `logo`, `language`, `homepage`, and `description` overrides.
+
+Vitrine merges `projects:` with Haberdasher entries by case-insensitive repository name without duplicate cards. When `haberdasher.enabled` is `false`, `projects:` still renders the Projects grid standalone.
+
+For each project, Vitrine fetches GitHub REST API metadata (description, star count, primary language, homepage, latest release tag, and release timestamp). Cards without a homepage link to the GitHub repository URL. Vitrine sorts the merged grid descending by star count by default, with latest release date and project name as tie-breakers. Set `haberdasher.sort` in `vitrine.yaml` to `stars` or `release` to control the sort order.
 
 ### Logo resolution order
 
-GitHub blocks external image references inside rendered SVGs, so Vitrine embeds every project logo inline during generation. Logo resolution follows a seven-step fallback chain:
+GitHub blocks external image references inside rendered SVGs, so Vitrine embeds every project logo inline during generation. Logo resolution follows an eight-step fallback chain:
 
 1. Fetch `pages/icon.svg` from the project repository and inline its SVG markup.
 2. Fetch `pages/icon.png` from the project repository and embed it as a base64 data Uniform Resource Identifier (URI).
 3. Fetch `icon.svg` from the repository root and inline its SVG markup.
 4. Fetch `icon.png` from the repository root and embed it as a base64 data URI.
-5. Fetch a configured PNG asset from `png_fallbacks` in `vitrine.yaml` (for example, `assets/ia-get.png` in `wimpysworld/ia-get`) and embed it as a base64 data URI.
-6. Apply a per-project entry from `logo_overrides` in `vitrine.yaml`.
-7. Generate a placeholder SVG mark (an acoustic waveform for `linuxmatters/jive-*` repositories or an initial monogram) when no logo exists.
+5. Resolve a per-project `logo` from `projects:` in `vitrine.yaml` as an HTTP or HTTPS URL, an existing local file, or a repository-relative file path on the default branch.
+6. Fetch a configured PNG asset from `png_fallbacks` in `vitrine.yaml` (for example, `assets/ia-get.png` in `wimpysworld/ia-get`) and embed it as a base64 data URI.
+7. Apply a per-project entry from `logo_overrides` in `vitrine.yaml`.
+8. Generate a placeholder SVG mark (an acoustic waveform for `linuxmatters/jive-*` repositories or an initial monogram) when no logo exists.
 
 ### Package repositories shelf
 
@@ -142,10 +147,10 @@ The generated `README.md` arranges sections in this order:
 4. **Discord live banner**: Dynamic community banner showing live online presence and total member count from the invite API, widget, or Shields fallback.
 5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
 6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
-7. **Projects**: Two-column grid of `408x182` Haberdasher project cards sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to three lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
+7. **Projects**: Two-column grid of `408x182` cards combining Haberdasher projects and top-level `projects:` entries, sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to four lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
 8. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin or gilt count badges.
 9. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
-10. **Recent Releases**: Latest releases across configured owners and Haberdasher projects.
+10. **Recent Releases**: Latest releases across configured owners, Haberdasher projects, and top-level `projects:` entries.
 11. **Starred**: Open list of recent starred repositories excluding `exclude_owners`.
 12. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle.
 13. **Blog**: Recent posts from the Wimpy's World blog RSS feed showing estimated reading time, age, and summary.

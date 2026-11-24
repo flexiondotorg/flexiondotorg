@@ -69,6 +69,12 @@ haberdasher:
   png_fallbacks:
     wimpysworld/ia-get: "assets/ia-get.png"
 
+projects:
+  - repo: wimpysworld/nix-config
+    language: Nix
+    logo: assets/logo.png
+  - repo: wimpysworld/nothing-but-nix
+
 feeds:
   podcast:
     enabled: true

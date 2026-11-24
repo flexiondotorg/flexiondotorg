@@ -464,7 +464,7 @@ func TestResolveLogoPropagatesNonNotFoundErrors(t *testing.T) {
 		},
 	})
 
-	_, _, err := f.resolveLogo(context.Background(), "wimpysworld/demo", "wimpysworld", "demo", "main", Options{})
+	_, _, err := f.resolveLogo(context.Background(), "wimpysworld/demo", "wimpysworld", "demo", "main", "", Options{})
 	if !errors.Is(err, boom) {
 		t.Fatalf("expected %v, got %v", boom, err)
 	}
@@ -503,6 +503,226 @@ func TestCanonicalHostsComplete(t *testing.T) {
 	}
 	if !slices.Equal(CanonicalHosts, want) {
 		t.Fatalf("CanonicalHosts = %v, want %v", CanonicalHosts, want)
+	}
+}
+
+func TestEnrichProjectsMergedStandaloneAndOverrides(t *testing.T) {
+	t.Parallel()
+
+	nixPNG := append(slices.Clone(pngMagicHeader), []byte("nix-config-logo")...)
+	expectedNixPNGURI := "data:image/png;base64," + base64.StdEncoding.EncodeToString(nixPNG)
+
+	remotePNG := append(slices.Clone(pngMagicHeader), []byte("remote-override-logo")...)
+	expectedRemotePNGURI := "data:image/png;base64," + base64.StdEncoding.EncodeToString(remotePNG)
+
+	tmpDir := t.TempDir()
+	localSVGPath := filepath.Join(tmpDir, "local-extra.svg")
+	if err := os.WriteFile(localSVGPath, []byte(`<svg id="local-extra"></svg>`), 0o600); err != nil {
+		t.Fatalf("write local SVG: %v", err)
+	}
+
+	tTailor := time.Date(2026, 11, 20, 12, 0, 0, 0, time.UTC)
+	tNix := time.Date(2026, 11, 23, 12, 0, 0, 0, time.UTC)
+
+	logoServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/remote.png":
+			w.Header().Set("Content-Type", "image/png")
+			_, _ = w.Write(remotePNG)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer logoServer.Close()
+
+	ghServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/repos/wimpysworld/nix-config":
+			writeJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/nix-config", "name": "nix-config", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "NixOS and Home Manager configuration", "homepage": "", "html_url": "https://github.com/wimpysworld/nix-config",
+				"default_branch": "main", "language": "Shell", "stargazers_count": 420,
+			})
+		case "/repos/wimpysworld/nix-config/releases/latest":
+			writeJSON(t, w, map[string]any{
+				"tag_name": "v2026.11", "html_url": "https://github.com/wimpysworld/nix-config/releases/tag/v2026.11", "published_at": tNix,
+			})
+		case "/repos/wimpysworld/nothing-but-nix":
+			writeJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/nothing-but-nix", "name": "nothing-but-nix", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "Pure Nix flake repository", "homepage": "", "html_url": "https://github.com/wimpysworld/nothing-but-nix",
+				"default_branch": "main", "language": "Nix", "stargazers_count": 85,
+			})
+		case "/repos/wimpysworld/nothing-but-nix/releases/latest":
+			http.NotFound(w, r)
+		case "/repos/wimpysworld/local-icon-app":
+			writeJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/local-icon-app", "name": "local-icon-app", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "Original description", "homepage": "https://local.example", "html_url": "https://github.com/wimpysworld/local-icon-app",
+				"default_branch": "main", "language": "Go", "stargazers_count": 50,
+			})
+		case "/repos/wimpysworld/local-icon-app/releases/latest":
+			http.NotFound(w, r)
+		case "/repos/wimpysworld/auto-icon-app":
+			writeJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/auto-icon-app", "name": "auto-icon-app", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "Auto icon project", "homepage": "", "html_url": "https://github.com/wimpysworld/auto-icon-app",
+				"default_branch": "main", "language": "Rust", "stargazers_count": 20,
+			})
+		case "/repos/wimpysworld/auto-icon-app/releases/latest":
+			http.NotFound(w, r)
+		case "/wimpysworld/nix-config/main/assets/logo.png":
+			_, _ = w.Write(nixPNG)
+		case "/wimpysworld/auto-icon-app/main/pages/icon.svg":
+			_, _ = w.Write([]byte(`<svg id="auto-pages-svg"></svg>`))
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer ghServer.Close()
+
+	ghClient := &gh.Client{
+		HTTPClient: ghServer.Client(),
+		APIBaseURL: ghServer.URL,
+		RawBaseURL: ghServer.URL,
+	}
+	fetcher := NewFetcher(logoServer.Client(), ghClient)
+
+	// 1. Merged mode with deduplication and overrides on an existing Haberdasher project.
+	existing := []Project{
+		{
+			FullName:    "wimpysworld/tailor",
+			Owner:       "wimpysworld",
+			Name:        "tailor",
+			Slug:        "tailor",
+			Description: "Original Tailor description",
+			Homepage:    "https://tailor.wimpys.world/",
+			RepoURL:     "https://github.com/wimpysworld/tailor",
+			Language:    "Go",
+			Stars:       150,
+			PublishedAt: tTailor,
+			Hosts:       []string{"apt.wimpys.world"},
+			LogoSVG:     `<svg id="orig-tailor"></svg>`,
+		},
+	}
+
+	merged, err := fetcher.EnrichProjects(context.Background(), existing, []ExtraProject{
+		{
+			Repo:        "WIMPYSWORLD/TAILOR",
+			Language:    "Golang",
+			Homepage:    "https://custom.tailor.example",
+			Description: "Custom Tailor description",
+			Logo:        logoServer.URL + "/remote.png",
+		},
+		{
+			Repo:     "wimpysworld/nix-config",
+			Language: "Nix",
+			Logo:     "assets/logo.png",
+		},
+		{
+			Repo: "wimpysworld/nothing-but-nix",
+		},
+		{
+			Repo:        "wimpysworld/local-icon-app",
+			Logo:        localSVGPath,
+			Homepage:    "https://override.example",
+			Description: "Overridden description",
+		},
+		{
+			Repo: "wimpysworld/auto-icon-app",
+			Logo: localSVGPath, // Steps 1-4 (pages/icon.svg) take precedence over step 5 (extra.Logo).
+		},
+	}, Options{Sort: SortStars})
+	if err != nil {
+		t.Fatalf("EnrichProjects merged error: %v", err)
+	}
+
+	wantOrder := []string{
+		"wimpysworld/nix-config",      // 420 stars
+		"wimpysworld/tailor",          // 150 stars (deduplicated)
+		"wimpysworld/nothing-but-nix", // 85 stars
+		"wimpysworld/local-icon-app",  // 50 stars
+		"wimpysworld/auto-icon-app",   // 20 stars
+	}
+	if len(merged) != len(wantOrder) {
+		t.Fatalf("expected %d merged projects, got %d", len(wantOrder), len(merged))
+	}
+	byName := make(map[string]Project, len(merged))
+	for i, want := range wantOrder {
+		if merged[i].FullName != want {
+			t.Fatalf("merged[%d] = %q, want %q", i, merged[i].FullName, want)
+		}
+		byName[merged[i].FullName] = merged[i]
+	}
+
+	// Verify caller slice was not mutated.
+	if existing[0].Language != "Go" || existing[0].LogoSVG != `<svg id="orig-tailor"></svg>` {
+		t.Fatalf("EnrichProjects mutated caller existing slice: %+v", existing[0])
+	}
+
+	// Verify overrides applied on deduplicated existing project.
+	tailor := byName["wimpysworld/tailor"]
+	if tailor.Language != "Golang" || tailor.Homepage != "https://custom.tailor.example" || tailor.Description != "Custom Tailor description" {
+		t.Fatalf("unexpected overridden tailor metadata: %+v", tailor)
+	}
+	if tailor.LogoSVG != "" || tailor.LogoDataURI != expectedRemotePNGURI {
+		t.Fatalf("expected remote PNG logo override on tailor, got svg=%q uri=%q", tailor.LogoSVG, tailor.LogoDataURI)
+	}
+	if !slices.Equal(tailor.Hosts, []string{"apt.wimpys.world"}) {
+		t.Fatalf("expected existing Hosts preserved on tailor, got %v", tailor.Hosts)
+	}
+
+	// Verify repo-relative PNG extra.Logo, Language override, and HTMLURL homepage fallback.
+	nix := byName["wimpysworld/nix-config"]
+	if nix.Language != "Nix" || nix.Homepage != "https://github.com/wimpysworld/nix-config" || nix.LatestTag != "v2026.11" {
+		t.Fatalf("unexpected nix-config project: %+v", nix)
+	}
+	if nix.LogoSVG != "" || nix.LogoDataURI != expectedNixPNGURI {
+		t.Fatalf("expected repo-relative PNG data URI for nix-config, got svg=%q uri=%q", nix.LogoSVG, nix.LogoDataURI)
+	}
+
+	// Verify placeholder fallback (empty logo fields) and HTMLURL homepage fallback.
+	nbn := byName["wimpysworld/nothing-but-nix"]
+	if nbn.Language != "Nix" || nbn.Homepage != "https://github.com/wimpysworld/nothing-but-nix" {
+		t.Fatalf("unexpected nothing-but-nix metadata: %+v", nbn)
+	}
+	if nbn.LogoSVG != "" || nbn.LogoDataURI != "" {
+		t.Fatalf("expected empty logo placeholder fallback for nothing-but-nix, got svg=%q uri=%q", nbn.LogoSVG, nbn.LogoDataURI)
+	}
+
+	// Verify local file extra.Logo and explicit Homepage/Description overrides.
+	localApp := byName["wimpysworld/local-icon-app"]
+	if localApp.LogoSVG != `<svg id="local-extra"></svg>` || localApp.LogoDataURI != "" {
+		t.Fatalf("expected local SVG extra.Logo, got svg=%q uri=%q", localApp.LogoSVG, localApp.LogoDataURI)
+	}
+	if localApp.Homepage != "https://override.example" || localApp.Description != "Overridden description" {
+		t.Fatalf("unexpected overrides on local-icon-app: %+v", localApp)
+	}
+
+	// Verify automatic repo icon (step 1) takes precedence over extra.Logo (step 5).
+	autoApp := byName["wimpysworld/auto-icon-app"]
+	if autoApp.LogoSVG != `<svg id="auto-pages-svg"></svg>` || autoApp.LogoDataURI != "" {
+		t.Fatalf("expected pages/icon.svg to beat extra.Logo, got svg=%q uri=%q", autoApp.LogoSVG, autoApp.LogoDataURI)
+	}
+
+	// 2. Standalone mode (existing == nil) with release sort.
+	standalone, err := fetcher.EnrichProjects(context.Background(), nil, []ExtraProject{
+		{Repo: "wimpysworld/nothing-but-nix"},
+		{Repo: "wimpysworld/nix-config", Language: "Nix", Logo: "assets/logo.png"},
+	}, Options{Sort: SortRelease})
+	if err != nil {
+		t.Fatalf("EnrichProjects standalone error: %v", err)
+	}
+	if len(standalone) != 2 || standalone[0].FullName != "wimpysworld/nix-config" || standalone[1].FullName != "wimpysworld/nothing-but-nix" {
+		t.Fatalf("unexpected standalone result: %+v", standalone)
+	}
+
+	// 3. Error cases: nil GitHub client and invalid sort mode.
+	if _, err := NewFetcher(nil, nil).EnrichProjects(context.Background(), nil, nil, Options{}); err == nil {
+		t.Fatal("expected error for nil GitHub RepoFetcher")
+	}
+	if _, err := fetcher.EnrichProjects(context.Background(), nil, nil, Options{Sort: "invalid"}); err == nil {
+		t.Fatal("expected error for invalid sort mode")
 	}
 }
 

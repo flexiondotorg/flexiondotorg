@@ -116,7 +116,7 @@ func TestRunEndToEndOfflineFixtures(t *testing.T) {
 			http.NotFound(w, r)
 		}
 	}))
-	defer srv.Close()
+	t.Cleanup(srv.Close)
 
 	dir := t.TempDir()
 	cfgPath := filepath.Join(dir, "vitrine.yaml")
@@ -573,6 +573,249 @@ func TestToSVGPaletteAndStaggeredDelays(t *testing.T) {
 	if !strings.Contains(written["project-alpha-light.svg"], "#eff1f5") {
 		t.Errorf("project-alpha-light.svg missing Latte base #eff1f5")
 	}
+}
+
+func TestRunProjectsStandaloneAndMerged(t *testing.T) {
+	t.Parallel()
+
+	fixedNow := time.Date(2026, 11, 24, 12, 0, 0, 0, time.UTC)
+	pngBytes := append([]byte{0x89, 'P', 'N', 'G', '\r', '\n', 0x1a, '\n'}, []byte("nix-logo")...)
+
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/haberdasher.yaml":
+			_, _ = w.Write([]byte("sources: [wimpysworld/tailor]\n"))
+		case "/hosts/apt.wimpys.world/haberdasher.json":
+			writeTestJSON(t, w, map[string]any{
+				"assets": []map[string]any{
+					{"identity": map[string]any{"name": "tailor"}, "source": map[string]any{"repository": "wimpysworld/tailor"}},
+				},
+				"homepages": map[string]string{
+					"wimpysworld/tailor": "https://tailor.wimpys.world/",
+				},
+			})
+		case "/hosts/apt.wimpys.world/logo.svg":
+			_, _ = w.Write([]byte(`<svg id="apt"></svg>`))
+		case "/users/exampleuser":
+			writeTestJSON(t, w, map[string]any{"login": "exampleuser", "followers": 10, "public_repos": 1})
+		case "/users/exampleuser/repos":
+			writeTestJSON(t, w, []map[string]any{})
+		case "/search/commits":
+			writeTestJSON(t, w, map[string]any{"total_count": 50})
+		case "/search/issues":
+			writeTestJSON(t, w, map[string]any{"total_count": 0, "items": []any{}})
+		case "/users/exampleuser/events/public":
+			writeTestJSON(t, w, []any{})
+		case "/users/exampleuser/starred":
+			writeTestJSON(t, w, []any{})
+		case "/sponsors/exampleuser/sponsors_partial":
+			_, _ = w.Write([]byte(`<html></html>`))
+		case "/repos/wimpysworld/tailor":
+			writeTestJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/tailor", "name": "tailor", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "Tailor tool", "homepage": "https://tailor.wimpys.world/", "html_url": "https://github.com/wimpysworld/tailor",
+				"default_branch": "main", "language": "Go", "stargazers_count": 100,
+			})
+		case "/repos/wimpysworld/tailor/releases/latest":
+			writeTestJSON(t, w, map[string]any{
+				"tag_name": "v0.6.6", "html_url": "https://github.com/wimpysworld/tailor/releases/tag/v0.6.6", "published_at": fixedNow.Add(-48 * time.Hour),
+			})
+		case "/repos/wimpysworld/nix-config":
+			writeTestJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/nix-config", "name": "nix-config", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "NixOS and Home Manager configuration", "homepage": "", "html_url": "https://github.com/wimpysworld/nix-config",
+				"default_branch": "main", "language": "Shell", "stargazers_count": 250,
+			})
+		case "/repos/wimpysworld/nix-config/releases/latest":
+			writeTestJSON(t, w, map[string]any{
+				"tag_name": "v2026.11", "html_url": "https://github.com/wimpysworld/nix-config/releases/tag/v2026.11", "published_at": fixedNow.Add(-12 * time.Hour),
+			})
+		case "/repos/wimpysworld/nothing-but-nix":
+			writeTestJSON(t, w, map[string]any{
+				"full_name": "wimpysworld/nothing-but-nix", "name": "nothing-but-nix", "owner": map[string]string{"login": "wimpysworld"},
+				"description": "Pure Nix flake showcase", "homepage": "", "html_url": "https://github.com/wimpysworld/nothing-but-nix",
+				"default_branch": "main", "language": "Nix", "stargazers_count": 75,
+			})
+		case "/repos/wimpysworld/nothing-but-nix/releases/latest":
+			http.NotFound(w, r)
+		case "/wimpysworld/tailor/main/pages/icon.svg":
+			_, _ = w.Write([]byte(`<svg id="tailor-icon"></svg>`))
+		case "/wimpysworld/nix-config/main/assets/logo.png":
+			_, _ = w.Write(pngBytes)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	t.Cleanup(srv.Close)
+
+	tmplPath := filepath.Join("..", "..", "templates", "README.md.tpl")
+
+	// Standalone mode: haberdasher.enabled is false, but top-level projects still render and feed GitHub stats/releases.
+	t.Run("standalone without haberdasher", func(t *testing.T) {
+		t.Parallel()
+		dir := t.TempDir()
+		cfgPath := filepath.Join(dir, "vitrine.yaml")
+		cfgYAML := `profile:
+  name: "Example Dev"
+  handle: "exampleuser"
+  hero_title: "EXAMPLE"
+  hero_url: "https://example.com"
+github:
+  username: "exampleuser"
+  max_items: 5
+haberdasher:
+  enabled: false
+projects:
+  - repo: wimpysworld/nix-config
+    language: Nix
+    logo: assets/logo.png
+  - repo: wimpysworld/nothing-but-nix
+output:
+  asset_base_url: "./assets"
+`
+		if err := os.WriteFile(cfgPath, []byte(cfgYAML), 0o600); err != nil {
+			t.Fatalf("write config: %v", err)
+		}
+
+		outPath := filepath.Join(dir, "README.md")
+		assetsDir := filepath.Join(dir, "assets")
+		ghClient := &gh.Client{
+			HTTPClient: srv.Client(),
+			APIBaseURL: srv.URL,
+			RawBaseURL: srv.URL,
+			WebBaseURL: srv.URL,
+		}
+		var stderr bytes.Buffer
+		if err := run(context.Background(), []string{
+			"-config", cfgPath,
+			"-template", tmplPath,
+			"-out", outPath,
+			"-assets-dir", assetsDir,
+		}, runtimeDeps{
+			now:          func() time.Time { return fixedNow },
+			httpClient:   srv.Client(),
+			githubClient: ghClient,
+			stderr:       &stderr,
+		}); err != nil {
+			t.Fatalf("run standalone failed: %v (stderr: %s)", err, stderr.String())
+		}
+
+		readmeBytes, err := os.ReadFile(outPath)
+		if err != nil {
+			t.Fatalf("read README.md: %v", err)
+		}
+		readme := string(readmeBytes)
+
+		nixIdx := strings.Index(readme, `href="https://github.com/wimpysworld/nix-config"`)
+		nbnIdx := strings.Index(readme, `href="https://github.com/wimpysworld/nothing-but-nix"`)
+		if nixIdx < 0 || nbnIdx < 0 || nixIdx >= nbnIdx {
+			t.Fatalf("expected nix-config card before nothing-but-nix card in README:\n%s", readme)
+		}
+		if !strings.Contains(readme, `[**wimpysworld/nix-config**](https://github.com/wimpysworld/nix-config)`) || !strings.Contains(readme, "v2026.11") {
+			t.Errorf("expected nix-config release from ExtraReleaseRepos in README:\n%s", readme)
+		}
+		if strings.Contains(readme, "section-packages") {
+			t.Errorf("standalone projects without haberdasher must not render Package Repositories section")
+		}
+
+		statsSVG, err := os.ReadFile(filepath.Join(assetsDir, "stats-dark.svg"))
+		if err != nil {
+			t.Fatalf("read stats-dark.svg: %v", err)
+		}
+		if !strings.Contains(string(statsSVG), "325") {
+			t.Errorf("expected stats-dark.svg to include 325 stars (250 + 75) from ExtraReleaseRepos:\n%s", string(statsSVG))
+		}
+
+		nixSVG, err := os.ReadFile(filepath.Join(assetsDir, "project-nix-config-dark.svg"))
+		if err != nil {
+			t.Fatalf("read project-nix-config-dark.svg: %v", err)
+		}
+		if !strings.Contains(string(nixSVG), "data:image/png;base64,") || !strings.Contains(string(nixSVG), ">Nix<") {
+			t.Errorf("project-nix-config-dark.svg missing embedded PNG logo or Nix language:\n%s", string(nixSVG))
+		}
+
+		nbnSVG, err := os.ReadFile(filepath.Join(assetsDir, "project-nothing-but-nix-dark.svg"))
+		if err != nil {
+			t.Fatalf("read project-nothing-but-nix-dark.svg: %v", err)
+		}
+		if strings.Contains(string(nbnSVG), "data:image/png;base64,") || !strings.Contains(string(nbnSVG), ">Nix<") {
+			t.Errorf("project-nothing-but-nix-dark.svg expected placeholder monogram and Nix language:\n%s", string(nbnSVG))
+		}
+	})
+
+	// Merged mode: haberdasher.enabled is true and projects deduplicates an override on tailor while adding nix-config.
+	t.Run("merged with haberdasher", func(t *testing.T) {
+		t.Parallel()
+		dir := t.TempDir()
+		cfgPath := filepath.Join(dir, "vitrine.yaml")
+		cfgYAML := `profile:
+  name: "Example Dev"
+  handle: "exampleuser"
+  hero_title: "EXAMPLE"
+  hero_url: "https://example.com"
+github:
+  username: "exampleuser"
+  max_items: 5
+haberdasher:
+  enabled: true
+  config_url: "` + srv.URL + `/haberdasher.yaml"
+  hosts: []
+projects:
+  - repo: WIMPYSWORLD/TAILOR
+    description: "Overridden Tailor description"
+  - repo: wimpysworld/nix-config
+    language: Nix
+    logo: assets/logo.png
+output:
+  asset_base_url: "./assets"
+`
+		if err := os.WriteFile(cfgPath, []byte(cfgYAML), 0o600); err != nil {
+			t.Fatalf("write config: %v", err)
+		}
+
+		cfg, err := config.Load(cfgPath)
+		if err != nil {
+			t.Fatalf("config.Load failed: %v", err)
+		}
+		ghClient := &gh.Client{
+			HTTPClient: srv.Client(),
+			APIBaseURL: srv.URL,
+			RawBaseURL: srv.URL,
+			WebBaseURL: srv.URL,
+		}
+		fetcher := haberdasher.NewFetcher(srv.Client(), ghClient)
+		opts := haberdasher.Options{
+			ConfigURL: cfg.Haberdasher.ConfigURL,
+			Hosts:     []string{"apt.wimpys.world"},
+			Sort:      cfg.Haberdasher.Sort,
+			HostBaseURLOverride: func(host string) string {
+				return srv.URL + "/hosts/" + host
+			},
+		}
+		cat, err := fetcher.Fetch(context.Background(), opts)
+		if err != nil {
+			t.Fatalf("Fetch failed: %v", err)
+		}
+		merged, err := fetcher.EnrichProjects(context.Background(), cat.Projects, toExtraProjects(cfg.Projects), opts)
+		if err != nil {
+			t.Fatalf("EnrichProjects failed: %v", err)
+		}
+		if len(merged) != 2 {
+			t.Fatalf("expected 2 merged projects without duplicate tailor, got %d: %+v", len(merged), merged)
+		}
+		if merged[0].FullName != "wimpysworld/nix-config" || merged[1].FullName != "wimpysworld/tailor" {
+			t.Fatalf("unexpected merged order: %q, %q", merged[0].FullName, merged[1].FullName)
+		}
+		if merged[1].Description != "Overridden Tailor description" {
+			t.Errorf("expected overridden description on tailor, got %q", merged[1].Description)
+		}
+
+		cat.Projects = merged
+		names := projectFullNames(cat, cfg.Projects)
+		if len(names) != 2 || names[0] != "wimpysworld/nix-config" || names[1] != "wimpysworld/tailor" {
+			t.Fatalf("unexpected deduplicated projectFullNames: %v", names)
+		}
+	})
 }
 
 func writeTestJSON(t *testing.T, w http.ResponseWriter, payload any) {
