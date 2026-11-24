@@ -622,6 +622,11 @@ button {
 }
 
 .flip-face-back {
+  --card-icon: var(--accent-text);
+  --card-accent-text: var(--accent-text);
+  --card-btn-bg: var(--btn-active-bg);
+  --card-btn-fg: var(--btn-active-fg);
+  --card-top-bar: linear-gradient(90deg, var(--pink), var(--mauve), var(--blue), var(--teal));
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -631,6 +636,67 @@ button {
   overflow: hidden;
   pointer-events: auto;
   cursor: pointer;
+}
+
+/* Per-card brand accent tokens on Links and Media back faces (Mocha dark) */
+.flip-face-back[data-card-accent] {
+  --card-top-bar: linear-gradient(90deg, var(--card-icon) 0%, var(--card-icon) 64%, var(--blue) 100%);
+}
+
+.flip-face-back[data-card-accent="mauve"] { --card-icon: var(--mauve); --card-accent-text: var(--mauve); --card-btn-bg: var(--mauve); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="lavender"] { --card-icon: var(--lavender); --card-accent-text: var(--lavender); --card-btn-bg: var(--lavender); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="blue"] { --card-icon: var(--blue); --card-accent-text: var(--blue); --card-btn-bg: var(--blue); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="sapphire"] { --card-icon: var(--sapphire); --card-accent-text: var(--sapphire); --card-btn-bg: var(--sapphire); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="teal"] { --card-icon: var(--teal); --card-accent-text: var(--teal); --card-btn-bg: var(--teal); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="green"] { --card-icon: var(--green); --card-accent-text: var(--green); --card-btn-bg: var(--green); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="yellow"] { --card-icon: var(--yellow); --card-accent-text: var(--yellow); --card-btn-bg: var(--yellow); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="peach"] { --card-icon: var(--peach); --card-accent-text: var(--peach); --card-btn-bg: var(--peach); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="red"] { --card-icon: var(--red); --card-accent-text: var(--red); --card-btn-bg: var(--red); --card-btn-fg: #11111b; }
+.flip-face-back[data-card-accent="pink"] { --card-icon: var(--pink); --card-accent-text: var(--pink); --card-btn-bg: var(--pink); --card-btn-fg: #11111b; }
+
+/* WCAG AA >= 4.5:1 brand accent tokens in Catppuccin Latte (light) */
+:root[data-theme="latte"] .flip-face-back[data-card-accent="mauve"] { --card-icon: #8839ef; --card-accent-text: #8839ef; --card-btn-bg: #8839ef; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="lavender"] { --card-icon: #7287fd; --card-accent-text: #4a5fd9; --card-btn-bg: #4a5fd9; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="blue"] { --card-icon: #1e66f5; --card-accent-text: #1752c8; --card-btn-bg: #1e66f5; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="sapphire"] { --card-icon: #209fb5; --card-accent-text: #0e6c7d; --card-btn-bg: #0e6c7d; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="teal"] { --card-icon: #179299; --card-accent-text: #0d6e74; --card-btn-bg: #0d6e74; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="green"] { --card-icon: #40a02b; --card-accent-text: #2a6f1d; --card-btn-bg: #2a6f1d; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="yellow"] { --card-icon: #df8e1d; --card-accent-text: #8f5900; --card-btn-bg: #df8e1d; --card-btn-fg: #11111b; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="peach"] { --card-icon: #fe640b; --card-accent-text: #b84400; --card-btn-bg: #c44900; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="red"] { --card-icon: #d20f39; --card-accent-text: #c40e35; --card-btn-bg: #d20f39; --card-btn-fg: #eff1f5; }
+:root[data-theme="latte"] .flip-face-back[data-card-accent="pink"] { --card-icon: #ea76cb; --card-accent-text: #a82482; --card-btn-bg: #a82482; --card-btn-fg: #eff1f5; }
+
+/* Dedicated Linux Matters charcoal (#141414) + amber-gold (#feb81e) branding */
+.flip-face-back[data-card-brand="linux-matters"] {
+  --base: #141414;
+  --mantle: #1d1d1d;
+  --surface0: #292929;
+  --surface1: #343434;
+  --control-border: #4d4d54;
+  --text: #f4f4f6;
+  --subtext: #c8c8cf;
+  --link-text: #feb81e;
+  --card-icon: #feb81e;
+  --card-accent-text: #feb81e;
+  --card-btn-bg: #feb81e;
+  --card-btn-fg: #141414;
+  --card-top-bar: linear-gradient(90deg, #feb81e 0%, #f59e0b 100%);
+}
+
+:root[data-theme="latte"] .flip-face-back[data-card-brand="linux-matters"] {
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --surface0: #ccd0da;
+  --surface1: #bcc0cc;
+  --control-border: #7c7f93;
+  --text: #4c4f69;
+  --subtext: #5c5f77;
+  --link-text: #946000;
+  --card-icon: #c98800;
+  --card-accent-text: #946000;
+  --card-btn-bg: #feb81e;
+  --card-btn-fg: #141414;
+  --card-top-bar: linear-gradient(90deg, #feb81e 0%, #d98200 100%);
 }
 
 .flip-face-back:focus {
@@ -643,7 +709,7 @@ button {
   flex: none;
   height: 4px;
   width: 100%;
-  background: linear-gradient(90deg, var(--pink), var(--mauve), var(--blue), var(--teal));
+  background: var(--card-top-bar);
 }
 
 .flip-back-scroll {
@@ -691,7 +757,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-text);
+  color: var(--card-icon, var(--accent-text));
 }
 
 .modal-art svg,
@@ -783,7 +849,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--accent-text);
+  color: var(--card-accent-text, var(--accent-text));
 }
 
 .modal-close {
@@ -899,21 +965,21 @@ a.detail-stat.is-fresh:hover {
 }
 
 .action-btn:hover {
-  border-color: var(--accent-text);
+  border-color: var(--card-accent-text, var(--accent-text));
   background: var(--surface0);
   color: var(--link-text);
 }
 
 .action-btn.is-primary {
-  background: var(--btn-active-bg);
-  border-color: var(--btn-active-bg);
-  color: var(--btn-active-fg);
+  background: var(--card-btn-bg, var(--btn-active-bg));
+  border-color: var(--card-btn-bg, var(--btn-active-bg));
+  color: var(--card-btn-fg, var(--btn-active-fg));
 }
 
 .action-btn.is-primary:hover {
   opacity: 0.92;
-  background: var(--btn-active-bg);
-  color: var(--btn-active-fg);
+  background: var(--card-btn-bg, var(--btn-active-bg));
+  color: var(--card-btn-fg, var(--btn-active-fg));
 }
 
 .detail-section {
@@ -1146,9 +1212,9 @@ a.detail-stat.is-fresh:hover {
 }
 
 .player-rate-btn:hover {
-  border-color: var(--accent-text);
+  border-color: var(--card-accent-text, var(--accent-text));
   background: var(--surface0);
-  color: var(--accent-text);
+  color: var(--card-accent-text, var(--accent-text));
 }
 
 .player-center-controls {
@@ -1164,8 +1230,8 @@ a.detail-stat.is-fresh:hover {
   height: 54px;
   border-radius: 50%;
   border: 0;
-  background: var(--btn-active-bg);
-  color: var(--btn-active-fg);
+  background: var(--card-btn-bg, var(--btn-active-bg));
+  color: var(--card-btn-fg, var(--btn-active-fg));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1204,9 +1270,9 @@ a.detail-stat.is-fresh:hover {
 }
 
 .player-reset-btn:hover {
-  border-color: var(--accent-text);
+  border-color: var(--card-accent-text, var(--accent-text));
   background: var(--surface0);
-  color: var(--accent-text);
+  color: var(--card-accent-text, var(--accent-text));
 }
 
 .player-reset-btn[hidden] {
@@ -1235,8 +1301,8 @@ a.detail-stat.is-fresh:hover {
   border-radius: var(--radius-pill);
   background: linear-gradient(
     90deg,
-    var(--accent-text) 0%,
-    var(--accent-text) var(--range-pct),
+    var(--card-accent-text, var(--accent-text)) 0%,
+    var(--card-accent-text, var(--accent-text)) var(--range-pct),
     var(--surface1) var(--range-pct),
     var(--surface1) 100%
   );
@@ -1249,7 +1315,7 @@ a.detail-stat.is-fresh:hover {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--btn-active-bg);
+  background: var(--card-btn-bg, var(--btn-active-bg));
   border: 2px solid var(--base);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
   cursor: pointer;
@@ -1259,7 +1325,7 @@ a.detail-stat.is-fresh:hover {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--btn-active-bg);
+  background: var(--card-btn-bg, var(--btn-active-bg));
   border: 2px solid var(--base);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
   cursor: pointer;
@@ -1299,9 +1365,9 @@ a.detail-stat.is-fresh:hover {
 }
 
 .player-mute-btn:hover {
-  border-color: var(--accent-text);
+  border-color: var(--card-accent-text, var(--accent-text));
   background: var(--surface0);
-  color: var(--accent-text);
+  color: var(--card-accent-text, var(--accent-text));
 }
 
 .player-mute-btn svg {
@@ -1361,7 +1427,7 @@ a.detail-stat.is-fresh:hover {
 }
 
 .subscribe-pill:hover {
-  border-color: var(--accent-text);
+  border-color: var(--card-accent-text, var(--accent-text));
   background: var(--surface0);
   color: var(--link-text);
 }

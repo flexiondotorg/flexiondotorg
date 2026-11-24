@@ -183,7 +183,7 @@ site:
       description: "Fortnightly podcast about Linux, open-source software, and the community around it."
       url: "https://linuxmatters.sh"
       icon: "podcast"
-      accent: "blue"
+      accent: "yellow"
     - title: "Wimpy's World Discord"
       slug: "discord"
       category: "Community"

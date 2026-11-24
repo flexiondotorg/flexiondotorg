@@ -695,9 +695,23 @@ function buildSparkleTexture() {
 // Top Trumps card face painter (224 x 314 @ 2x)
 // ---------------------------------------------------------------------------
 
+function isLinuxMattersItem(deckKey, item) {
+  if (!item) {
+    return false;
+  }
+  const url = String(item.site_url || item.url || '').toLowerCase();
+  if (deckKey === 'media' && item.kind === 'episode' && url.includes('linuxmatters')) {
+    return true;
+  }
+  return deckKey === 'links' && (item.id === 'linux-matters' || url.includes('linuxmatters'));
+}
+
 function resolveCardAccent(deckKey, item, p) {
   if (deckKey === 'projects') {
     return item.language_color || p.mauve;
+  }
+  if (isLinuxMattersItem(deckKey, item)) {
+    return p.name === 'latte' ? '#c98800' : '#feb81e';
   }
   return accentColor(p, item.accent);
 }
@@ -3895,6 +3909,10 @@ function finishModalClose(restoreFocus) {
     els.flipCard.classList.remove('is-settled');
     els.flipCard.style.transform = '';
   }
+  if (els.flipBack) {
+    delete els.flipBack.dataset.cardAccent;
+    delete els.flipBack.dataset.cardBrand;
+  }
   if (els.modal) {
     els.modal.style.setProperty('--backdrop-progress', '0');
     els.modal.hidden = true;
@@ -3919,6 +3937,25 @@ function cancelCardModal(restoreFocus) {
   finishModalClose(Boolean(restoreFocus));
 }
 
+function applyBackFaceBranding(deckKey, item) {
+  if (!els.flipBack) {
+    return;
+  }
+  delete els.flipBack.dataset.cardAccent;
+  delete els.flipBack.dataset.cardBrand;
+
+  if (isLinuxMattersItem(deckKey, item)) {
+    els.flipBack.dataset.cardBrand = 'linux-matters';
+    return;
+  }
+  if (deckKey === 'links' || (deckKey === 'media' && item && item.accent)) {
+    const acc = String((item && item.accent) || '').toLowerCase().trim();
+    if (acc) {
+      els.flipBack.dataset.cardAccent = acc;
+    }
+  }
+}
+
 function triggerCardOpen(rec, triggerEl, byKeyboard) {
   if (state.modalPhase !== 'closed' || !els.modal || !els.flipFloatWrap || !els.flipCard || !els.flipBack) {
     return;
@@ -3939,6 +3976,7 @@ function triggerCardOpen(rec, triggerEl, byKeyboard) {
   const startH = CARD_H * (rec.scaleY || cardScale);
 
   mountFrontFaceSnapshot(rec);
+  applyBackFaceBranding(rec.deckKey, rec.item);
   els.flipBack.textContent = '';
   els.flipBack.appendChild(buildModalContent(rec.deckKey, rec.item));
   els.flipFloatWrap.classList.remove('is-floating');

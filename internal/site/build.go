@@ -780,7 +780,7 @@ func buildMedia(
 				AudioURL:       entry.AudioURL,
 				Icon:           "podcast",
 				IconSVG:        BrandIconSVG("podcast"),
-				Accent:         "teal",
+				Accent:         "yellow",
 				Badge:          epBadge,
 				Episode:        entry.Episode,
 				Duration:       entry.Duration,
