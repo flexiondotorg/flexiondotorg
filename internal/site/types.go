@@ -122,7 +122,8 @@ type PackageEntry struct {
 	URL      string `json:"url"`
 }
 
-// PackageHostCard represents one Haberdasher package host in the Packages deck.
+// PackageHostCard represents one Haberdasher package repository host record
+// used to supply package host metadata and inline SVG logos for project cards.
 type PackageHostCard struct {
 	ID           string         `json:"id"`
 	Name         string         `json:"name"`

@@ -31,8 +31,6 @@ const (
 
 	// SiteDeckProjects selects the Projects card deck on initial load.
 	SiteDeckProjects = "projects"
-	// SiteDeckPackages selects the Packages card deck on initial load.
-	SiteDeckPackages = "packages"
 	// SiteDeckLinks selects the Links card deck on initial load.
 	SiteDeckLinks = "links"
 	// SiteDeckMedia selects the Media card deck on initial load.
@@ -657,12 +655,12 @@ func (c *Config) applySiteDefaultsAndValidate() error {
 		deck = SiteDeckProjects
 	}
 	switch deck {
-	case SiteDeckProjects, SiteDeckPackages, SiteDeckLinks, SiteDeckMedia:
+	case SiteDeckProjects, SiteDeckLinks, SiteDeckMedia:
 		c.Site.DefaultDeck = deck
 	default:
 		return fmt.Errorf(
-			"site.default_deck must be one of %q, %q, %q, or %q, got %q",
-			SiteDeckProjects, SiteDeckPackages, SiteDeckLinks, SiteDeckMedia, c.Site.DefaultDeck,
+			"site.default_deck must be one of %q, %q, or %q, got %q",
+			SiteDeckProjects, SiteDeckLinks, SiteDeckMedia, c.Site.DefaultDeck,
 		)
 	}
 

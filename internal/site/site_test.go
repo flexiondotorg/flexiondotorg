@@ -325,7 +325,17 @@ site:
 		t.Fatalf("Write failed: %v", err)
 	}
 
-	for _, name := range []string{"index.html", "data.json", "style.css", "app.js", "icon.svg", ".nojekyll", "CNAME"} {
+	for _, name := range []string{
+		"index.html",
+		"data.json",
+		"style.css",
+		"app.js",
+		"icon.svg",
+		"vendor/pixi.min.mjs",
+		"vendor/pixi.LICENSE",
+		".nojekyll",
+		"CNAME",
+	} {
 		path := filepath.Join(outDir, name)
 		if _, err := os.Stat(path); err != nil {
 			t.Errorf("expected output file %q: %v", name, err)
@@ -366,6 +376,19 @@ site:
 	}
 	if len(roundTrip.Projects) != 2 || roundTrip.Profile.Title != "Wimpy's World" {
 		t.Fatalf("unexpected round-tripped SiteData: %+v", roundTrip.Profile)
+	}
+	if !strings.Contains(indexHTML, `<script type="module" src="./app.js"></script>`) {
+		t.Fatal("index.html missing ES module script tag for app.js")
+	}
+	for _, wantID := range []string{"btn-theme-system", "btn-theme-light", "btn-theme-dark", "pixi-root", "scroll-spacer"} {
+		if !strings.Contains(indexHTML, `id="`+wantID+`"`) {
+			t.Errorf("index.html missing expected element id %q", wantID)
+		}
+	}
+	for _, removedID := range []string{"btn-view-floating", "btn-view-grid", "btn-drift-toggle", "header-stats", "deck-nav", "sort-controls"} {
+		if strings.Contains(indexHTML, `id="`+removedID+`"`) {
+			t.Errorf("index.html still contains removed chrome id %q", removedID)
+		}
 	}
 }
 

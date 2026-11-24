@@ -12,11 +12,14 @@ GitHub Pages serves the site from `flexiondotorg/flexiondotorg` with custom doma
 
 Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.github/workflows/pages.yml` workflow uses top-level `permissions: {}`, `contents: read` on the build job, and `pages: write` plus `id-token: write` on the deploy job with `GITHUB_TOKEN` only.
 
-## Visual direction
+## Visual direction and hybrid tabletop architecture
 
-The site uses clean **Catppuccin** floating cards matching [docs/vitrine.md](vitrine.md). **Catppuccin Mocha** is the default dark theme, and a one-click toggle switches to **Catppuccin Latte** light mode while respecting `prefers-color-scheme` on first load.
+The site renders a stripped-back, Balatro-inspired Top Trumps floating playing-card tabletop in **Catppuccin** palettes matching [docs/vitrine.md](vitrine.md). A single full-viewport fixed **PixiJS v8** canvas (`vendor/pixi.min.mjs`, vendored with zero npm build steps) runs behind a minimal HTML layer for the header, accessible focus buttons, quiet footer, and zoomed detail modal.
 
-Typography uses **Work Sans** for headings and interface copy alongside **Fira Code** (`tabular-nums`) for release versions, star counts, and package metadata, with system font fallbacks. Every card uses a single `1.5px` rounded border (`14px` to `16px` radius), subtle Catppuccin aurora accents, and unframed artwork without double borders or corner studs. Both themes enforce Web Content Accessibility Guidelines (WCAG) AA contrast ratios across text and interactive controls.
+- **Minimal header**: Shows the brand mark, title, subtitle, and a three-way icon theme switch (**System** monitor icon, **Light** sun icon for Catppuccin Latte, and **Dark** moon icon for Catppuccin Mocha) persisted in `localStorage`.
+- **Zero-chrome open stage**: There are no stats pills, duplicate deck tabs, sort toggles, view-mode toggles, drift-pause buttons, section headings, captions, or stage container borders. Project order is driven strictly by `vitrine.yaml`.
+- **Swirling Catppuccin shader**: A custom PixiJS v8 WebGL GLSL ES 3.00 fragment shader paints a subtle domain-warped Catppuccin background that pulses gently on deck deals and falls back cleanly if shaders are unavailable.
+- **Typography and contrast**: Cards and HTML chrome use **Work Sans** for titles and copy alongside **Fira Code** (`tabular-nums`) for structured stats, meeting Web Content Accessibility Guidelines (WCAG) AA contrast in both Mocha and Latte.
 
 | Role | Catppuccin Mocha (dark) | Catppuccin Latte (light) |
 | --- | --- | --- |
@@ -26,62 +29,53 @@ Typography uses **Work Sans** for headings and interface copy alongside **Fira C
 | Card border (`1.5px`) | Surface1 (`#45475a`) | Surface1 (`#bcc0cc`) |
 | Primary ink | Text (`#cdd6f4`) | Text (`#4c4f69`) |
 | Secondary ink | Subtext1 (`#bac2de`) | Subtext1 (`#5c5f77`) |
+| Link ink (WCAG AA) | Blue (`#89b4fa`) | Deep Blue (`#1752c8`) |
+| Fresh release ink | Green (`#a6e3a1`) | Deep Green (`#2a6f1d`) |
 | Aurora accents | Mauve, Lavender, Blue, Teal (`#cba6f7`, `#b4befe`, `#89b4fa`, `#94e2d5`) | Mauve, Lavender, Blue, Teal (`#8839ef`, `#7287fd`, `#1e66f5`, `#179299`) |
-| Positive accent | Green (`#a6e3a1`) | Green (`#40a02b`) |
-| Alert accent | Red (`#f38ba8`) | Red (`#d20f39`) |
-| Info or link accent | Sapphire (`#74c7ec`) | Sapphire (`#209fb5`) |
 
-## Card and deck anatomy
+## Decks and Top Trumps playing cards
 
-Content groups into four stacked card decks: `Projects`, `Packages`, `Links`, and `Media`. Each card has three visual states: a stacked deck back, a fanned front face, and a flipped zoomed detail face.
+Content groups into three stacked card decks placed directly above the floating cards: `Projects`, `Links`, and `Media`. `vitrine.yaml` validates `site.default_deck` against `projects`, `links`, and `media`.
 
-### Card back and deck dock
+### Stacked deck tray
 
-The dock displays tactile three-layer Catppuccin card-back stacks for `Projects`, `Packages`, `Links`, and `Media`. On desktop load, `Projects` starts fanned across the stage while `Packages`, `Links`, and `Media` wait stacked in the dock. Selecting any stacked deck fans its cards onto the stage.
+The tabletop displays three tactile multi-layer Catppuccin card-back stacks (`Projects`, `Links`, `Media`) in a single row above the floating cards. Selecting a stack whips the outgoing cards off alternating viewport edges and deals the new deck in immediately.
 
-### Card front
+### Portrait `5:7` Top Trumps card face
 
-- **Single crisp border**: Rounded `1.5px` border over Mocha Base (`#1e1e2e`) or Latte Base (`#eff1f5`) with a thin aurora top band.
-- **Top metadata row**: Primary language or category on the left, and latest release tag, package count, or live badge in Fira Code on the right.
-- **Unframed artwork**: Sanitized inline project or host SVG logo, PNG data URI, acoustic waveform for `jive-*` slugs, monogram fallback, podcast cover art, or inline Simple Icons brand mark.
-- **Title and summary**: Name set in Work Sans with a two-line summary.
-- **Compact footer**: Star count, release age, host count, package previews, or duration and reading time in Fira Code.
+Each card uses `224px x 314px` logical portrait playing-card proportions, drawn onto `2x` (`448px x 628px`) offscreen canvases and uploaded to mipmapped, linearly filtered `PIXI.Texture` sprites for crisp GPU anti-aliased rendering:
 
-### Flipped zoomed detail face
+- **Top index row**: Language or category dot and label on the left, paired with a release tag, episode number, read time, or live badge in Fira Code on the right.
+- **Upper illustration panel**: Clean unframed artwork using sanitized inline project SVG logos, PNG data URIs, acoustic waveforms for `jive-*` slugs, monogram fallbacks, podcast cover art, or inline Simple Icons brand marks.
+- **Title and description**: Bold Work Sans title with a two-line summary.
+- **Lower Top Trumps stat rows**: Four alternating tinted rows with uppercase labels on the left and bold tabular Fira Code values on the right:
+  - **Projects**: `STARS`, `RELEASE` (green highlight when fresh), `UPDATED`, and `PACKAGES` (`N/8 hosts` with coloured host dots, or `Source`).
+  - **Links**: `CATEGORY`, `HOST`, plus live `ONLINE` and `MEMBERS` for Discord or `ACTIVE` and `PAST SPONSORS` for GitHub Sponsors.
+  - **Media**: Tailored rows for podcast episodes (`EPISODE`, `DURATION`, `PUBLISHED`, `SHOW`), podcast and blog hubs (`LATEST`, `EPISODES` or `POSTS`, `LISTEN` or `SITE`), and blog posts (`READ TIME`, `PUBLISHED`, `SITE`, `FORMAT`).
 
-Selecting a card opens a centred modal dialog that flips with CSS 3D `rotateY(180deg)` to reveal the detail face:
+### Zoomed HTML detail modal
 
-- **Projects**: Full description, star count, language, latest release tag and age with direct release link, Homepage and GitHub links, and clickable Haberdasher package tiles (`https://<host>/#<slug>`) with each host's inline SVG logo.
-- **Packages**: Host logo, host URL, package count, and clickable links to `https://<host>/#<pkgName>` for every published package on that host.
-- **Links**: Full description, category, live Discord or GitHub Sponsors metadata when available, and primary open link.
-- **Media**: Linux Matters Podcast hub (cover art, recent episodes, and subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), Wimpy's World Blog hub (recent posts with reading time and summaries), and individual episode and post cards.
+Clicking a card runs a brisk horizontal flip collapse (`scale.x` toward `0`) on the PixiJS card sprite and opens a centred HTML modal dialog (`role="dialog"`, `aria-modal="true"`):
 
-Visitors dismiss the modal by clicking outside the card, clicking the close button, or pressing `Esc`. Focus stays trapped inside the modal while open and returns to the triggering card on close.
+- **Projects**: Full description, star count, language, release badge and link, Homepage and GitHub actions, and clickable Haberdasher package tiles (`https://<host>/#<slug>`) with each host's inline SVG logo from `HostLogos`.
+- **Links**: Full description, live Discord or GitHub Sponsors metadata, and primary open link.
+- **Media**: Linux Matters Podcast hub (cover art, recent episodes, and subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), Wimpy's World Blog hub, and individual episode or post cards.
 
-## Interaction, physics, and accessibility
+Visitors dismiss the modal by clicking outside the dialog, clicking the close button, or pressing `Esc`. Focus stays trapped inside the modal while open and returns to the triggering card button on close.
 
-The front end uses vanilla JavaScript and CSS 3D transforms (`translate3d`, `rotate`, and `rotateY`) with no framework runtime.
+## Motion, interaction, and accessibility
 
-- **Air-current constellation**: Desktop views compute a non-overlapping constellation layout that adapts to viewport width, with cards drifting gently via `requestAnimationFrame`.
-- **Pointer-wake breeze with hover dampening**: Pointer motion applies a soft wake impulse to nearby cards. Hovering or focusing a card dampens its motion to zero and lifts it for reliable clicking.
-- **Toolbar controls**: One-click buttons switch decks, sort `Projects` by `Stars` (default) or `Latest release`, toggle between `Floating` and `Grid` views, pause or resume drift, and switch between `Mocha` and `Latte`.
-- **Keyboard navigation**: Visitors move across cards with `Tab` and arrow keys, open a card with `Enter` or `Space`, and dismiss details with `Esc`.
-- **Automatic calm layout**: Coarse-pointer devices (`@media (pointer: coarse)`) and `@media (prefers-reduced-motion: reduce)` default directly to the calm `Grid` layout with no animation loop running.
+- **Scroll-synced open canvas**: The PixiJS world container tracks `world.y = -window.scrollY` alongside a `#scroll-spacer` element so cards fly in freely from the viewport edges and scroll naturally without clipping.
+- **Casino-dealer deal-in**: Cards fling rapidly (`38ms` stagger) from alternating left and right viewport edges with alternating spin (`±220deg` to `±260deg`) and snap into gently fanned slots via underdamped springs with subtle deal sparkles.
+- **Idle float and hover 3D tilt**: Cards bob and rock gently (`±4px`, `±1.6deg`). Hovering or focusing a card pops it forward (`scale: 1.07`), raises its z-order, tracks cursor tilt, and sweeps a Catppuccin holographic foil sheen across the face.
+- **Keyboard and screen-reader layer**: Transparent focusable buttons in `#a11y-layer` align 1:1 with the three decks and active cards, supporting `Tab`, arrow keys, `Home`, `End`, `Enter`, and `Space` with visible `:focus-visible` outlines.
+- **Silent OS reduced motion**: Under `@media (prefers-reduced-motion: reduce)`, spin, deal flights, idle bob, shader motion, sparkles, and flip transitions stop automatically with no visible toggle button.
 
 ## Single-config data pipeline (`cmd/site` and `internal/site`)
 
 Both `cmd/vitrine` and `cmd/site` read `vitrine.yaml` via `internal/config` (`SiteConfig` and `SiteLink` under `site:`).
 
-`cmd/site` accepts `-config`, `-out`, `-verbose`, and `-version`. It reuses `internal/haberdasher`, `internal/github`, `internal/discord`, and `internal/rss` to assemble data, passes it to `internal/site.Build`, and emits static output (`index.html`, `data.json`, `style.css`, `app.js`, `icon.svg`, `.nojekyll`, and `CNAME`) via `internal/site.Write` using `//go:embed web/*`.
-
-Curated external entries live under `site.links` in `vitrine.yaml`:
-
-- **Sites**: Wimpy's World Blog, Linux Matters, Oval Tutu.
-- **Community**: Wimpy's World Discord (enriched with live online and member counts), Matrix.
-- **Social**: Mastodon, Bluesky, LinkedIn.
-- **Video**: YouTube, Twitch.
-- **Gaming**: Steam, itch.io.
-- **Support**: GitHub Sponsors (enriched with live active and past sponsor counts).
+`cmd/site` accepts `-config`, `-out`, `-verbose`, and `-version`. It reuses `internal/haberdasher`, `internal/github`, `internal/discord`, and `internal/rss` to assemble data, passes it to `internal/site.Build`, and emits static output (`index.html`, `data.json`, `style.css`, `app.js`, `icon.svg`, `vendor/pixi.min.mjs`, `vendor/pixi.LICENSE`, `.nojekyll`, and `CNAME`) via `internal/site.Write` using `//go:embed web/* web/vendor/*`.
 
 ## Deployment workflow and Tailor transition
 
@@ -92,5 +86,5 @@ To retire the legacy Tailor holding page in `pages/`, set `pages.enabled: false`
 ## Local preview and verification
 
 - **Local preview**: Run `just site` to build the portfolio site from `vitrine.yaml` and serve it locally at `http://127.0.0.1:18475`.
-- **Automated checks**: Run `just build`, `just test`, `go test -race ./...`, `golangci-lint run --config .golangci.yml ./...`, and `actionlint` before pushing.
+- **Automated checks**: Run `golangci-lint fmt --config .golangci.yml`, `just build`, `just test`, `go test -race ./...`, `golangci-lint run --config .golangci.yml ./...`, and `actionlint` before pushing.
 - **Rendered verification**: Inspect the live preview in headless Chromium across desktop, mobile, Mocha, Latte, and `prefers-reduced-motion: reduce` states.

@@ -19,18 +19,21 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap">
   <script>
     (function () {
+      var mode = 'system';
       try {
         var saved = localStorage.getItem('wimpys-world-theme');
-        if (saved === 'latte' || saved === 'mocha') {
-          document.documentElement.dataset.theme = saved;
-          return;
+        if (saved === 'system' || saved === 'light' || saved === 'dark') {
+          mode = saved;
+        } else if (saved === 'latte') {
+          mode = 'light';
+        } else if (saved === 'mocha') {
+          mode = 'dark';
         }
       } catch (_) {}
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.documentElement.dataset.theme = 'latte';
-      } else {
-        document.documentElement.dataset.theme = 'mocha';
-      }
+      var prefersLight = Boolean(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var resolved = (mode === 'light' || (mode === 'system' && prefersLight)) ? 'latte' : 'mocha';
+      document.documentElement.dataset.themeMode = mode;
+      document.documentElement.dataset.theme = resolved;
     })();
   </script>
   <link rel="stylesheet" href="./style.css">
@@ -38,10 +41,12 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="app-shell">
-    <header class="site-header">
+  <div id="pixi-root" class="pixi-root" aria-hidden="true"></div>
+
+  <div class="page-layer">
+    <header class="site-header" id="site-header">
       <div class="brand-block">
-        <img class="brand-mark" src="./icon.svg" alt="" width="44" height="44">
+        <img class="brand-mark" src="./icon.svg" alt="" width="40" height="40">
         <div class="brand-copy">
           <h1 class="site-title">{{.Title}}</h1>
           {{- if .Description}}
@@ -50,57 +55,49 @@
         </div>
       </div>
 
-      <div class="header-actions" aria-label="Display settings">
-        <div class="segmented" role="group" aria-label="View mode">
-          <button type="button" class="ctrl-btn" id="btn-view-floating" data-view="floating" aria-pressed="true">Floating</button>
-          <button type="button" class="ctrl-btn" id="btn-view-grid" data-view="grid" aria-pressed="false">Grid</button>
-        </div>
-
-        <button type="button" class="ctrl-btn" id="btn-drift-toggle" aria-pressed="false">Pause drift</button>
-
-        <button type="button" class="ctrl-btn theme-btn" id="btn-theme-toggle" aria-label="Switch colour theme">
-          <span class="theme-dot" aria-hidden="true"></span>
-          <span id="theme-label">Mocha</span>
+      <div class="theme-switch" role="group" aria-label="Colour theme">
+        <button type="button" class="theme-opt" id="btn-theme-system" data-theme-mode="system" aria-label="System colour theme" aria-pressed="true" title="System theme">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+        <button type="button" class="theme-opt" id="btn-theme-light" data-theme-mode="light" aria-label="Light theme (Catppuccin Latte)" aria-pressed="false" title="Catppuccin Latte (Light)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+        </button>
+        <button type="button" class="theme-opt" id="btn-theme-dark" data-theme-mode="dark" aria-label="Dark theme (Catppuccin Mocha)" aria-pressed="false" title="Catppuccin Mocha (Dark)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
       </div>
     </header>
 
-    <div class="stats-bar" id="header-stats" aria-label="Portfolio highlights"></div>
-
-    <div class="toolbar" aria-label="Deck navigation and sorting">
-      <nav class="deck-nav" id="deck-nav" aria-label="Card decks"></nav>
-
-      <div class="sort-controls" id="sort-controls" role="group" aria-label="Sort projects">
-        <span class="sort-label">Sort</span>
-        <div class="segmented">
-          <button type="button" class="ctrl-btn" id="btn-sort-stars" data-sort="stars" aria-pressed="true">Stars</button>
-          <button type="button" class="ctrl-btn" id="btn-sort-release" data-sort="release" aria-pressed="false">Latest release</button>
-        </div>
-      </div>
-    </div>
-
-    <main id="main" class="stage-root" tabindex="-1">
+    <main id="main" class="tabletop-main" tabindex="-1">
       <div id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
-      <section class="deck-heading-row">
-        <h2 class="deck-heading" id="active-deck-heading">Projects</h2>
-        <p class="deck-hint" id="active-deck-hint">Select any card to flip for full details and package links.</p>
-      </section>
-
-      <section id="stage" class="card-stage" aria-labelledby="active-deck-heading"></section>
-
-      <section id="deck-dock-wrap" class="deck-dock-wrap" aria-label="Stacked card decks">
-        <div class="dock-header">
-          <h2 class="dock-title">Decks</h2>
-          <p class="dock-caption">Switch between fanned decks on the stage.</p>
+      <div id="scroll-spacer" class="scroll-spacer">
+        <div id="a11y-layer" class="a11y-layer">
+          <nav id="a11y-decks" class="a11y-decks" aria-label="Card decks"></nav>
+          <div id="a11y-cards" class="a11y-cards" role="region" aria-label="Active deck cards"></div>
         </div>
-        <div id="deck-dock" class="deck-dock"></div>
-      </section>
+      </div>
 
       <noscript>
         <section class="noscript-fallback">
           <h2>{{.Title}}</h2>
-          <p>Enable JavaScript for the interactive floating card decks, or browse the links below.</p>
+          <p>Enable JavaScript for the interactive playing-card tabletop, or browse the links below.</p>
           <ul>
             {{- range .Data.Links}}
             <li><a href="{{.URL}}" rel="noopener noreferrer">{{.Title}}</a> - {{.Description}}</li>
@@ -135,16 +132,11 @@
 
   <div id="card-modal" class="modal-backdrop" hidden>
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-scene">
-        <div class="modal-flipper" id="modal-flipper">
-          <div class="modal-face modal-face-front" id="modal-front" aria-hidden="true"></div>
-          <div class="modal-face modal-face-back" id="modal-back"></div>
-        </div>
-      </div>
+      <div class="modal-card" id="modal-card"></div>
     </div>
   </div>
 
   <script id="site-data" type="application/json">{{.SiteData}}</script>
-  <script src="./app.js" defer></script>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>

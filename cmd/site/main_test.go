@@ -248,6 +248,11 @@ site:
 	if len(got.Media) != 4 {
 		t.Errorf("len(Media) = %d, want 4", len(got.Media))
 	}
+	for _, rel := range []string{"vendor/pixi.min.mjs", "vendor/pixi.LICENSE"} {
+		if _, err := os.Stat(filepath.Join(outDir, rel)); err != nil {
+			t.Errorf("expected vendored asset %q: %v", rel, err)
+		}
+	}
 	if !strings.Contains(stderr.String(), "site: done in") {
 		t.Errorf("expected verbose completion log in stderr, got: %s", stderr.String())
 	}

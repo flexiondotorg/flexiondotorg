@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-//go:embed web/*
+//go:embed web/* web/vendor/*
 var webAssets embed.FS
 
 type indexTemplateData struct {
@@ -26,7 +26,8 @@ type indexTemplateData struct {
 }
 
 // Write emits the static portfolio site (index.html, data.json, style.css,
-// app.js, icon.svg, .nojekyll, and optional CNAME) into outDir.
+// app.js, icon.svg, vendor/pixi.min.mjs, vendor/pixi.LICENSE, .nojekyll,
+// and optional CNAME) into outDir.
 func Write(outDir string, data *SiteData) error {
 	if data == nil {
 		return errors.New("site: data must not be nil")
@@ -65,6 +66,19 @@ func Write(outDir string, data *SiteData) error {
 	}
 
 	for _, asset := range []string{"style.css", "app.js", "icon.svg"} {
+		content, readErr := fs.ReadFile(webAssets, "web/"+asset)
+		if readErr != nil {
+			return fmt.Errorf("site: read embedded asset %q: %w", asset, readErr)
+		}
+		if err := writeRootFile(root, asset, content); err != nil {
+			return err
+		}
+	}
+
+	if err := root.Mkdir("vendor", 0o750); err != nil && !errors.Is(err, os.ErrExist) {
+		return fmt.Errorf("site: create vendor directory: %w", err)
+	}
+	for _, asset := range []string{"vendor/pixi.min.mjs", "vendor/pixi.LICENSE"} {
 		content, readErr := fs.ReadFile(webAssets, "web/"+asset)
 		if readErr != nil {
 			return fmt.Errorf("site: read embedded asset %q: %w", asset, readErr)

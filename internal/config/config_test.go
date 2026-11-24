@@ -438,7 +438,7 @@ site:
   title: " Wimpy's World "
   description: " Open-source portfolio "
   domain: " wimpys.world "
-  default_deck: " PACKAGES "
+  default_deck: " LINKS "
   links:
     - title: " Matrix "
       slug: " matrix "
@@ -550,7 +550,7 @@ site:
 		cfg.Site.Description != "Open-source portfolio" ||
 		cfg.Site.Domain != "wimpys.world" ||
 		cfg.Site.URL != "https://wimpys.world" ||
-		cfg.Site.DefaultDeck != SiteDeckPackages ||
+		cfg.Site.DefaultDeck != SiteDeckLinks ||
 		!slices.Equal(cfg.Site.Links, wantSiteLinks) {
 		t.Errorf("unexpected site config: %+v", cfg.Site)
 	}
@@ -719,6 +719,11 @@ func TestParseValidationErrors(t *testing.T) {
 		{
 			name:    "unknown site default_deck",
 			yaml:    "site:\n  default_deck: archive\n",
+			wantErr: "site.default_deck",
+		},
+		{
+			name:    "removed packages site default_deck",
+			yaml:    "site:\n  default_deck: packages\n",
 			wantErr: "site.default_deck",
 		},
 		{

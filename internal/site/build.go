@@ -38,7 +38,9 @@ func Build(in Input) (*SiteData, error) {
 
 	cfg := in.Config
 	defaultDeck := strings.ToLower(strings.TrimSpace(cfg.Site.DefaultDeck))
-	if defaultDeck == "" {
+	switch defaultDeck {
+	case config.SiteDeckProjects, config.SiteDeckLinks, config.SiteDeckMedia:
+	default:
 		defaultDeck = config.SiteDeckProjects
 	}
 	defaultSort := strings.ToLower(strings.TrimSpace(cfg.Haberdasher.Sort))
