@@ -85,7 +85,7 @@ Both `cmd/vitrine` and `cmd/site` read `vitrine.yaml` via `internal/config` (`Si
 
 `.github/workflows/pages.yml` builds and deploys the site on `main` pushes, every 6 hours at 15 minutes past the hour (`cron: "15 */6 * * *"`), and `workflow_dispatch`. Generated HTML is built into `${RUNNER_TEMP}/site` and uploaded via `actions/upload-pages-artifact` and `actions/deploy-pages`; it is never committed to Git.
 
-To retire the legacy Tailor holding page in `pages/`, set `pages.enabled: false` in `.tailor.yml`, remove `.github/workflows/tailor-pages.yml` and the holding-page files, and verify with `tailor measure`.
+`.tailor.yml` keeps `pages.enabled: false` so Tailor does not overwrite the custom Pages workflow, while `pages/icon.svg` remains as the canonical project icon and `flake.nix` supplies `miniserve` for local previews.
 
 ## Local preview and verification
 

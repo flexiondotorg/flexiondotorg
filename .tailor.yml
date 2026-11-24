@@ -142,7 +142,7 @@ ruleset:
 # branch: omit to use the current repository default branch.
 # cname: omit to preserve the domain, use "" to clear it, or set a domain.
 pages:
-  enabled: true
+  enabled: false
   generator: static
   path: pages
   cname: wimpys.world

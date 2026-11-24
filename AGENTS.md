@@ -7,7 +7,7 @@ This repository builds the `flexiondotorg` GitHub profile README through `cmd/vi
 - Enter the Nix development shell with `direnv allow`, or run `nix develop` when `direnv` is absent.
 - Stage any new file under `nix/` or `flake.nix` with `git add` before flake evaluation, because Nix flakes ignore untracked files.
 - Run `direnv reload` after Nix file changes, because `.envrc` enables `nix_direnv_manual_reload`.
-- Use the Nix-provided `playwright-mcp` server (`.mcp.json`, headless Chromium) against `just pages` to inspect site output.
+- Use the Nix-provided `playwright-mcp` server (`.mcp.json`, headless Chromium) against `just site` to inspect site output.
 
 ## Build and test
 
@@ -19,7 +19,7 @@ Run every command from the repository root inside the Nix development shell:
 - Check workflows, `go mod tidy`, formatting, `golangci-lint`, `govulncheck`, and `gocyclo`: `just lint`
 - Tidy `go.mod` and format Go source with `gofumpt` in place: `just lint correct`
 - Validate GitHub Actions workflows only: `actionlint`
-- Preview static Pages output at `http://127.0.0.1:18473`: `just pages`
+- Build and preview the portfolio site at `http://127.0.0.1:18475`: `just site`
 - Render and preview the Vitrine profile at `http://127.0.0.1:18474`: `just preview`
 - Audit repository health files and GitHub settings against `.tailor.yml`: `tailor measure`
 - Preview Tailor template changes without file writes: `tailor baste`

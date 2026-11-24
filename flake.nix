@@ -53,6 +53,7 @@
                 actionlint
                 gh
                 just
+                miniserve
               ]
               ++ (if tailorPkgs ? tailor then [ tailorPkgs.tailor ] else [ ])
               ++ import ./nix/loader.nix { inherit pkgs; };

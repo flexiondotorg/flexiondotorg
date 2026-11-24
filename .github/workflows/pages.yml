@@ -1,8 +1,11 @@
 name: Deploy portfolio site
 
 on:
-  # Manual-only until tailor-pages.yml is retired and wimpys.world is ready to launch.
-  # Enable push (main) and schedule ("15 */6 * * *") at launch.
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "15 */6 * * *"
   workflow_dispatch:
 
 permissions: {}
