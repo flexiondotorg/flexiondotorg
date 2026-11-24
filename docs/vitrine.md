@@ -163,7 +163,7 @@ Vitrine replaces the contribution snake workflow (`.github/workflows/snake.yml`)
 Every SVG emitted by `internal/svg` follows five strict rules:
 
 - Animate only GPU-friendly Cascading Style Sheets (CSS) `@keyframes` properties: `transform`, `opacity`, and `stroke-dashoffset`.
-- Apply staggered GPU-only top-edge glints across cards, banners, pills, and the package shelf instead of face shimmers. Section dividers use circle ornaments instead of diamonds, and the hero banner animates Catppuccin Harmonic Aurora Waves.
+- Apply staggered GPU-only top-edge glints across cards, banners, pills, and the package shelf instead of face shimmers. Section dividers use symmetric circle ornaments (matching `AccentPrimary` inner pips and `AccentTertiary` outer pips) with static `Surface1` grey flanking rules, and the hero banner animates Catppuccin Harmonic Aurora Waves.
 - Include `@media (prefers-reduced-motion: reduce)` in every animated SVG to stop animation and present a calm static frame.
 - Embed all logos, icons, and raster art inline as SVG geometry or base64 data URIs.
 - Declare `'Work Sans'` and `'Fira Code'` with system font fallbacks instead of external font imports.

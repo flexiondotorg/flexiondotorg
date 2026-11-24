@@ -831,25 +831,36 @@ func TestRenderSectionDividerZeroOverlap(t *testing.T) {
 					if attrs["cy"] != "21" || attrs["r"] != "3.5" {
 						t.Errorf("%q: left divider circle has cy=%q r=%q, want cy=\"21\" r=\"3.5\"", tc.title, attrs["cy"], attrs["r"])
 					}
+					if attrs["fill"] != r.Palette().AccentPrimary {
+						t.Errorf("%q: inner left circle fill = %q, want AccentPrimary %q", tc.title, attrs["fill"], r.Palette().AccentPrimary)
+					}
 					foundLeft = true
 				case "vitrine-divider-dot-right":
 					rightDotX, _ = strconv.ParseFloat(attrs["cx"], 64)
 					if attrs["cy"] != "21" || attrs["r"] != "3.5" {
 						t.Errorf("%q: right divider circle has cy=%q r=%q, want cy=\"21\" r=\"3.5\"", tc.title, attrs["cy"], attrs["r"])
 					}
+					if attrs["fill"] != r.Palette().AccentPrimary {
+						t.Errorf("%q: inner right circle fill = %q, want AccentPrimary %q", tc.title, attrs["fill"], r.Palette().AccentPrimary)
+					}
 					foundRight = true
+				default:
+					if attrs["r"] == "3" && attrs["fill"] != r.Palette().AccentTertiary {
+						t.Errorf("%q: outer extremity circle at cx=%s fill = %q, want AccentTertiary %q", tc.title, attrs["cx"], attrs["fill"], r.Palette().AccentTertiary)
+					}
 				}
 			case "line":
-				if strings.Contains(attrs["class"], "vitrine-rule-trace") {
-					x1, _ := strconv.ParseFloat(attrs["x1"], 64)
-					x2, _ := strconv.ParseFloat(attrs["x2"], 64)
-					if x1 < 420 {
-						leftRuleEnd = x2
-						foundLeftRule = true
-					} else {
-						rightRuleStart = x1
-						foundRightRule = true
-					}
+				x1, _ := strconv.ParseFloat(attrs["x1"], 64)
+				x2, _ := strconv.ParseFloat(attrs["x2"], 64)
+				if attrs["stroke"] != r.Palette().Surface1 {
+					t.Errorf("%q: divider rule stroke = %q, want static Surface1 %q", tc.title, attrs["stroke"], r.Palette().Surface1)
+				}
+				if x1 < 420 {
+					leftRuleEnd = x2
+					foundLeftRule = true
+				} else {
+					rightRuleStart = x1
+					foundRightRule = true
 				}
 			}
 		}

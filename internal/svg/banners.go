@@ -245,9 +245,9 @@ func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
 }
 
 // RenderSectionDivider renders an 840x42 Catppuccin section divider banner
-// with a single 1.5px border, centred bold uppercase Work Sans title, widely
-// spaced AccentPrimary and AccentTertiary circle pips, and outward-flowing
-// Catppuccin gradient flanking rules.
+// with a single 1.5px border, centred bold uppercase Work Sans title, symmetric
+// AccentPrimary inner circle pips and AccentTertiary outer extremity pips, and
+// static Surface1 grey flanking rules.
 func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 	p := r.palette
 	upper := strings.ToUpper(TruncateText(fallbackString(data.Title, "SECTION"), 36))
@@ -272,25 +272,19 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 
 	var leftRuleSVG strings.Builder
 	if leftRuleEnd > 36.0 {
-		leftLen := leftRuleEnd - 28.0
 		fmt.Fprintf(&leftRuleSVG,
 			`<line x1="28" y1="21" x2="%s" y2="21" stroke="%s" stroke-width="1" opacity="0.65"/>
-<line x1="28" y1="21" x2="%s" y2="21" stroke="url(#cat-accent)" stroke-width="1.5" class="vitrine-rule-trace vitrine-rule-left" pathLength="%s"/>
 <circle cx="22" cy="21" r="3" fill="%s"/>`,
 			formatFloat(leftRuleEnd), escapeXML(p.Surface1),
-			formatFloat(leftRuleEnd), formatFloat(leftLen),
-			escapeXML(p.AccentPrimary),
+			escapeXML(p.AccentTertiary),
 		)
 	}
 
 	var rightRuleSVG strings.Builder
 	if rightRuleEnd >= rightRuleStart+16.0 {
-		rightLen := rightRuleEnd - rightRuleStart
 		fmt.Fprintf(&rightRuleSVG,
-			`<line x1="%s" y1="21" x2="%s" y2="21" stroke="%s" stroke-width="1" opacity="0.65"/>
-<line x1="%s" y1="21" x2="%s" y2="21" stroke="url(#cat-accent)" stroke-width="1.5" class="vitrine-rule-trace vitrine-rule-right" pathLength="%s"/>`,
+			`<line x1="%s" y1="21" x2="%s" y2="21" stroke="%s" stroke-width="1" opacity="0.65"/>`,
 			formatFloat(rightRuleStart), formatFloat(rightRuleEnd), escapeXML(p.Surface1),
-			formatFloat(rightRuleStart), formatFloat(rightRuleEnd), formatFloat(rightLen),
 		)
 		if subtitle == "" {
 			fmt.Fprintf(&rightRuleSVG, "\n"+`<circle cx="%s" cy="21" r="3" fill="%s"/>`, formatFloat(rightRuleEnd+6), escapeXML(p.AccentTertiary))
@@ -300,27 +294,9 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="840" height="42" viewBox="0 0 840 42" role="img" aria-label="%s">
 %s
 <style>
-  @keyframes vitrine-divider-out-left {
-    0%% { stroke-dashoffset: -64; opacity: 0.7; }
-    50%% { stroke-dashoffset: 0; opacity: 1; }
-    100%% { stroke-dashoffset: 64; opacity: 0.7; }
-  }
-  @keyframes vitrine-divider-out-right {
-    0%% { stroke-dashoffset: 64; opacity: 0.7; }
-    50%% { stroke-dashoffset: 0; opacity: 1; }
-    100%% { stroke-dashoffset: -64; opacity: 0.7; }
-  }
   @keyframes vitrine-divider-dot-pulse {
     0%%, 100%% { transform: scale(0.9); opacity: 0.65; }
     50%% { transform: scale(1.18); opacity: 1; }
-  }
-  .vitrine-rule-left {
-    stroke-dasharray: 48 16;
-    animation: vitrine-divider-out-left 6.5s linear infinite;
-  }
-  .vitrine-rule-right {
-    stroke-dasharray: 48 16;
-    animation: vitrine-divider-out-right 6.5s linear infinite;
   }
   .vitrine-divider-dot-left,
   .vitrine-divider-dot-right {
@@ -337,14 +313,14 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 <!-- Single 1.5px Surface1 section divider banner -->
 <rect x="1" y="4" width="838" height="34" rx="10" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
 
-<!-- Left outward-flowing gradient rule and AccentPrimary circle pip -->
+<!-- Left static grey rule and AccentPrimary inner circle pip -->
 %s
 <circle class="vitrine-divider-dot-left" cx="%s" cy="21" r="3.5" fill="%s"/>
 
 <!-- Centred bold uppercase Work Sans title -->
 <text x="420" y="25.5" text-anchor="middle" font-family="%s" font-size="13" font-weight="700" letter-spacing="2.8" fill="%s">%s</text>
 
-<!-- Right AccentTertiary circle pip and outward-flowing gradient rule -->
+<!-- Right AccentPrimary inner circle pip and static grey rule -->
 <circle class="vitrine-divider-dot-right" cx="%s" cy="21" r="3.5" fill="%s"/>
 %s
 %s
@@ -356,7 +332,7 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 		leftRuleSVG.String(),
 		formatFloat(leftDotX), escapeXML(p.AccentPrimary),
 		fontSans, escapeXML(p.Text), escapeXML(upper),
-		formatFloat(rightDotX), escapeXML(p.AccentTertiary),
+		formatFloat(rightDotX), escapeXML(p.AccentPrimary),
 		rightRuleSVG.String(),
 		subtitleSVG,
 	)
