@@ -1,13 +1,15 @@
 profile:
   name: "Martin Wimpress"
   handle: "flexiondotorg"
-  eyebrow: ""
-  hero_title: "WIMPY'S WORLD"
-  hero_subtitle: "Linux, Quickemu, Linux Matters & Open-Source Craft"
+  eyebrow: "Welcome!"
+  hero_title: "MARTIN WIMPRESS"
+  hero_subtitle: "Linux enthusiast. Nix wrangler. Podcaster. Occasional developer."
   hero_url: "https://wimpys.world"
   hero_cta: "wimpys.world"
   bio: >-
-    Hello! I am Martin (also known as Wimpy), a Linux user, open-source developer, and community builder behind [Quickemu](https://github.com/quickemu-project/quickemu), the [Linux Matters](https://linuxmatters.sh) podcast, and [Wimpy's World](https://wimpys.world). I also tinker with indie games at [Oval Tutu](https://oval-tutu.com).
+    Hello! I am Martin (also known as Wimpy), a long-time Linux user, open-source developer, and community builder. I am a co-presenter of the [Linux Matters](https://linuxmatters.sh) podcast, a hobbyist game developer at [Oval Tutu](https://oval-tutu.com), and a [Chainguardian](https://chainguard.dev).
+
+    I used to be the lead developer of [Ubuntu MATE](https://ubuntu-mate.org), but these days I prefer to make applications and games in my spare time. Below you will find links to some of my current projects, my first-party package repositories, and the podcast.
   links:
     - label: "Mastodon"
       slug: "mastodon"
@@ -37,17 +39,20 @@ theme:
 github:
   username: "flexiondotorg"
   orgs:
-    - "wimpysworld"
+    - "linuxmatters"
+    - "noughtylinux"
+    - "Oval-Tutu"
     - "quickemu-project"
     - "ubuntu-mate"
-    - "linuxmatters"
+    - "wimpysworld"
   exclude_owners:
     - "flexiondotorg"
-    - "wimpysworld"
     - "linuxmatters"
+    - "noughtylinux"
+    - "Oval-Tutu"
     - "quickemu-project"
     - "ubuntu-mate"
-    - "Oval-Tutu"
+    - "wimpysworld"
   max_items: 5
   contributions_window_days: 365
   sponsors_url: "https://github.com/sponsors/flexiondotorg"
@@ -73,6 +78,9 @@ projects:
   - repo: wimpysworld/nix-config
     language: Nix
     logo: assets/logo.png
+  - repo: wimpysworld/extra-life
+    language: Nix
+    logo: pages/icon.svg
   - repo: wimpysworld/nothing-but-nix
 
 feeds:

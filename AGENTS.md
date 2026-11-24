@@ -20,6 +20,7 @@ Run every command from the repository root inside the Nix development shell:
 - Tidy `go.mod` and format Go source with `gofumpt` in place: `just lint correct`
 - Validate GitHub Actions workflows only: `actionlint`
 - Preview static Pages output at `http://127.0.0.1:18473`: `just pages`
+- Render and preview the Vitrine profile at `http://127.0.0.1:18474`: `just preview`
 - Audit repository health files and GitHub settings against `.tailor.yml`: `tailor measure`
 - Preview Tailor template changes without file writes: `tailor baste`
 
