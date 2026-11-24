@@ -18,6 +18,8 @@ import (
 	"slices"
 	"strings"
 	"time"
+	"unicode"
+	"unicode/utf8"
 
 	gh "github.com/flexiondotorg/flexiondotorg/internal/github"
 	"gopkg.in/yaml.v3"
@@ -291,11 +293,16 @@ func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 			homepage = repoHomepages[key]
 		}
 
+		repoName := strings.TrimSpace(meta.Name)
+		if repoName == "" {
+			_, repoName = splitFullName(resolvedFull)
+		}
+
 		proj := Project{
 			FullName:    resolvedFull,
 			Owner:       meta.Owner,
-			Name:        meta.Name,
-			Slug:        slugify(meta.Name),
+			Name:        ProjectTitle(repoName),
+			Slug:        slugify(repoName),
 			Description: meta.Description,
 			Homepage:    homepage,
 			RepoURL:     meta.HTMLURL,
@@ -314,7 +321,7 @@ func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 			branch = defaultDefaultBranch
 		}
 		proj.defaultBranch = branch
-		logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, proj.Name, branch, "", opts)
+		logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, repoName, branch, "", opts)
 		if err != nil {
 			return nil, fmt.Errorf("resolve logo for %s: %w", proj.FullName, err)
 		}
@@ -418,14 +425,14 @@ func (f *Fetcher) buildExtraProject(
 	opts Options,
 ) (Project, error) {
 	owner := strings.TrimSpace(meta.Owner)
-	name := strings.TrimSpace(meta.Name)
-	if owner == "" || name == "" {
+	repoName := strings.TrimSpace(meta.Name)
+	if owner == "" || repoName == "" {
 		fallbackOwner, fallbackName := splitFullName(resolvedFull)
 		if owner == "" {
 			owner = fallbackOwner
 		}
-		if name == "" {
-			name = fallbackName
+		if repoName == "" {
+			repoName = fallbackName
 		}
 	}
 
@@ -453,8 +460,8 @@ func (f *Fetcher) buildExtraProject(
 	proj := Project{
 		FullName:      resolvedFull,
 		Owner:         owner,
-		Name:          name,
-		Slug:          slugify(name),
+		Name:          ProjectTitle(repoName),
+		Slug:          slugify(repoName),
 		Description:   description,
 		Homepage:      homepage,
 		RepoURL:       meta.HTMLURL,
@@ -468,7 +475,7 @@ func (f *Fetcher) buildExtraProject(
 		proj.PublishedAt = meta.LatestRelease.PublishedAt
 	}
 
-	logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, proj.Name, branch, extra.Logo, opts)
+	logoSVG, logoDataURI, err := f.resolveLogo(ctx, proj.FullName, proj.Owner, repoName, branch, extra.Logo, opts)
 	if err != nil {
 		return Project{}, fmt.Errorf("resolve logo for %s: %w", proj.FullName, err)
 	}
@@ -493,22 +500,25 @@ func (f *Fetcher) applyExtraOverrides(ctx context.Context, proj *Project, extra 
 	}
 
 	owner := strings.TrimSpace(proj.Owner)
-	name := strings.TrimSpace(proj.Name)
-	if owner == "" || name == "" {
+	_, repoName := splitFullName(proj.FullName)
+	if owner == "" || repoName == "" {
 		fallbackOwner, fallbackName := splitFullName(proj.FullName)
 		if owner == "" {
 			owner = fallbackOwner
 		}
-		if name == "" {
-			name = fallbackName
+		if repoName == "" {
+			repoName = fallbackName
 		}
+	}
+	if repoName == "" {
+		repoName = strings.TrimSpace(proj.Slug)
 	}
 	branch := strings.TrimSpace(proj.defaultBranch)
 	if branch == "" {
 		branch = defaultDefaultBranch
 	}
 
-	logoSVG, logoDataURI, err := f.loadExtraLogo(ctx, owner, name, branch, extra.Logo)
+	logoSVG, logoDataURI, err := f.loadExtraLogo(ctx, owner, repoName, branch, extra.Logo)
 	if err != nil {
 		return err
 	}
@@ -517,6 +527,38 @@ func (f *Fetcher) applyExtraOverrides(ctx context.Context, proj *Project, extra 
 		proj.LogoDataURI = logoDataURI
 	}
 	return nil
+}
+
+// ProjectTitle derives a display name from a GitHub repository name (or
+// owner/repo string) using Haberdasher's naming rules: split on hyphens, keep
+// the repository name unchanged when any segment has two or fewer characters,
+// otherwise capitalise the first letter of each segment (preserving internal
+// capitals such as WonKey) and join segments with spaces.
+func ProjectTitle(repo string) string {
+	trimmed := strings.TrimSpace(repo)
+	if trimmed == "" {
+		return ""
+	}
+	if _, after, ok := strings.Cut(trimmed, "/"); ok {
+		trimmed = strings.TrimSpace(after)
+	}
+	if trimmed == "" {
+		return ""
+	}
+
+	parts := strings.Split(trimmed, "-")
+	for _, part := range parts {
+		if utf8.RuneCountInString(part) <= 2 {
+			return trimmed
+		}
+	}
+
+	titled := make([]string, len(parts))
+	for i, part := range parts {
+		r, size := utf8.DecodeRuneInString(part)
+		titled[i] = string(unicode.ToUpper(r)) + part[size:]
+	}
+	return strings.Join(titled, " ")
 }
 
 func splitFullName(fullName string) (owner, name string) {

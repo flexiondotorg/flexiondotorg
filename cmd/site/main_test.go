@@ -241,8 +241,8 @@ site:
 	if len(got.Projects) != 2 {
 		t.Fatalf("len(Projects) = %d, want 2", len(got.Projects))
 	}
-	if got.Projects[0].Name != "deb-get" || got.Projects[1].Name != "extra-tool" {
-		t.Errorf("unexpected project order: %+v", got.Projects)
+	if got.Projects[0].Name != "Deb Get" || got.Projects[0].Slug != "deb-get" || got.Projects[1].Name != "Extra Tool" || got.Projects[1].Slug != "extra-tool" {
+		t.Errorf("unexpected project order or display names: %+v", got.Projects)
 	}
 	if len(got.Packages) != 1 || got.Packages[0].Host != "apt.wimpys.world" {
 		t.Errorf("unexpected packages: %+v", got.Packages)

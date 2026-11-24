@@ -327,8 +327,11 @@ func TestFetchCatalogueHostsLogoChainAndSorting(t *testing.T) {
 		}
 	}
 
-	// Verify 7-step logo resolution order and host mapping.
+	// Verify 7-step logo resolution order, display title rules, and host mapping.
 	tailor := byName["wimpysworld/tailor"]
+	if tailor.Name != "Tailor" || tailor.Slug != "tailor" {
+		t.Fatalf("unexpected display name/slug for tailor: name=%q slug=%q", tailor.Name, tailor.Slug)
+	}
 	if tailor.LogoSVG != `<svg id="tailor-icon"></svg>` || tailor.LogoDataURI != "" {
 		t.Fatalf("step 1 (pages/icon.svg) failed for tailor: svg=%q uri=%q", tailor.LogoSVG, tailor.LogoDataURI)
 	}
@@ -352,21 +355,30 @@ func TestFetchCatalogueHostsLogoChainAndSorting(t *testing.T) {
 	}
 
 	wonkey := byName["wimpysworld/WonKey"]
-	if wonkey.Slug != "wonkey" || wonkey.LogoSVG != `<svg id="local-override"></svg>` || wonkey.Homepage != "https://wonkey.wimpys.world/" {
+	if wonkey.Name != "WonKey" || wonkey.Slug != "wonkey" || wonkey.LogoSVG != `<svg id="local-override"></svg>` || wonkey.Homepage != "https://wonkey.wimpys.world/" {
 		t.Fatalf("step 6 (local SVG override) or homepage fallback failed for WonKey: %+v", wonkey)
 	}
 
 	iaget := byName["wimpysworld/ia-get"]
+	if iaget.Name != "ia-get" || iaget.Slug != "ia-get" {
+		t.Fatalf("unexpected display name/slug for ia-get: name=%q slug=%q", iaget.Name, iaget.Slug)
+	}
 	if iaget.LogoSVG != "" || iaget.LogoDataURI != expectedPNGURI {
 		t.Fatalf("step 5 (PNGFallbacks) failed for ia-get: svg=%q uri=%q", iaget.LogoSVG, iaget.LogoDataURI)
 	}
 
 	nyala := byName["wimpysworld/nyala"]
+	if nyala.Name != "Nyala" || nyala.Slug != "nyala" {
+		t.Fatalf("unexpected display name/slug for nyala: name=%q slug=%q", nyala.Name, nyala.Slug)
+	}
 	if nyala.LogoSVG != "" || nyala.LogoDataURI != expectedPNGURI {
 		t.Fatalf("step 6 (remote PNG override) failed for nyala: svg=%q uri=%q", nyala.LogoSVG, nyala.LogoDataURI)
 	}
 
 	jive := byName["linuxmatters/jive-vocals"]
+	if jive.Name != "Jive Vocals" || jive.Slug != "jive-vocals" {
+		t.Fatalf("unexpected display name/slug for jive-vocals: name=%q slug=%q", jive.Name, jive.Slug)
+	}
 	if jive.LogoSVG != "" || jive.LogoDataURI != "" {
 		t.Fatalf("step 7 (empty fallback) failed for jive-vocals: svg=%q uri=%q", jive.LogoSVG, jive.LogoDataURI)
 	}
@@ -746,6 +758,31 @@ func TestFetchNilGitHubAndSlugify(t *testing.T) {
 	for _, tc := range cases {
 		if got := slugify(tc.input); got != tc.want {
 			t.Errorf("slugify(%q) = %q, want %q", tc.input, got, tc.want)
+		}
+	}
+}
+
+func TestProjectTitle(t *testing.T) {
+	t.Parallel()
+
+	cases := []struct {
+		input string
+		want  string
+	}{
+		{input: "wimpysworld/ia-get", want: "ia-get"},
+		{input: "wimpysworld/hue-jackman", want: "Hue Jackman"},
+		{input: "linuxmatters/jive-vocals", want: "Jive Vocals"},
+		{input: "wimpysworld/WonKey", want: "WonKey"},
+		{input: "wimpysworld/tailor", want: "Tailor"},
+		{input: "sidra", want: "Sidra"},
+		{input: "nothing-but-nix", want: "Nothing But Nix"},
+		{input: "quickemu", want: "Quickemu"},
+		{input: "a-b", want: "a-b"},
+		{input: "", want: ""},
+	}
+	for _, tc := range cases {
+		if got := ProjectTitle(tc.input); got != tc.want {
+			t.Errorf("ProjectTitle(%q) = %q, want %q", tc.input, got, tc.want)
 		}
 	}
 }
