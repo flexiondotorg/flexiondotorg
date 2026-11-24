@@ -400,6 +400,8 @@ func enrichLinkCard(
 	switch {
 	case icon == "discord" || card.ID == "discord":
 		enrichDiscordLinkCard(card, disc)
+	case icon == "github" || card.ID == "github":
+		enrichGitHubLinkCard(card, cfg, ghData)
 	case icon == "heart" || card.ID == "github-sponsors" || strings.Contains(strings.ToLower(card.URL), "github.com/sponsors/"):
 		enrichSponsorsLinkCard(card, cfg, ghData)
 	case icon == "blog" || card.ID == "wimpys-world-blog":
@@ -445,6 +447,52 @@ func enrichDiscordLinkCard(card *LinkCard, disc discord.Status) {
 	}
 	if len(card.Stats) == 0 {
 		card.Stats = []StatRow{deriveIdentityStat("discord", card.URL, card.HostLabel)}
+	}
+}
+
+func enrichGitHubLinkCard(card *LinkCard, cfg *config.Config, ghData *gh.ProfileData) {
+	handle := ""
+	if cfg != nil {
+		handle = strings.TrimSpace(cfg.Profile.Handle)
+		if handle == "" {
+			handle = strings.TrimSpace(cfg.GitHub.Username)
+		}
+	}
+
+	if ghData != nil {
+		if ghData.Stats.TotalStars > 0 {
+			stars := render.FormatInt(ghData.Stats.TotalStars)
+			card.Stats = append(card.Stats, StatRow{
+				Label: "STARS",
+				Value: stars,
+			})
+			card.Meta = append(card.Meta, stars+" stars")
+		}
+		if ghData.Stats.Followers > 0 {
+			followers := render.FormatInt(ghData.Stats.Followers)
+			card.Stats = append(card.Stats, StatRow{
+				Label: "FOLLOWERS",
+				Value: followers,
+			})
+			card.Meta = append(card.Meta, followers+" followers")
+		}
+		totalRepos := ghData.Stats.PublicRepos + ghData.Stats.OrgRepos
+		if totalRepos > 0 {
+			card.Meta = append(card.Meta, render.FormatInt(totalRepos)+" repos")
+		}
+		if ghData.Stats.TotalCommits > 0 {
+			card.Meta = append(card.Meta, render.FormatInt(ghData.Stats.TotalCommits)+" commits")
+		}
+		card.Sponsors = buildSponsorRefs(ghData.Sponsors)
+		card.PastSponsors = buildSponsorRefs(ghData.PastSponsors)
+	}
+
+	if len(card.Stats) == 0 {
+		if handle != "" {
+			card.Stats = []StatRow{{Label: "HANDLE", Value: "@" + handle}}
+		} else {
+			card.Stats = []StatRow{deriveIdentityStat("github", card.URL, card.HostLabel)}
+		}
 	}
 }
 
@@ -657,6 +705,10 @@ func deriveIdentityStat(icon, rawURL, hostLabel string) StatRow {
 			if seg := lastPathSegment(parsed.Path); seg != "" {
 				return StatRow{Label: "PROFILE", Value: seg}
 			}
+		case "github":
+			if seg := lastPathSegment(parsed.Path); seg != "" {
+				return StatRow{Label: "HANDLE", Value: "@" + strings.TrimPrefix(seg, "@")}
+			}
 		case "itchio":
 			if host := strings.TrimPrefix(parsed.Host, "www."); host != "" {
 				return StatRow{Label: "CREATOR", Value: host}
@@ -705,54 +757,10 @@ func buildMedia(
 	podcastItems, blogItems, youtubeItems []rss.Item,
 	now time.Time,
 ) []MediaCard {
-	cards := make([]MediaCard, 0, 2+len(podcastItems)+len(blogItems)+len(youtubeItems))
+	cards := make([]MediaCard, 0, len(podcastItems)+len(blogItems)+len(youtubeItems))
 
 	if pod := cfg.Feeds.Podcast; pod != nil && pod.Enabled {
 		subLinks := buildSubscribeLinks(pod.Links)
-		entries := make([]MediaEntry, 0, len(podcastItems))
-		for _, item := range podcastItems {
-			entries = append(entries, toMediaEntry(item, now))
-		}
-
-		title := strings.TrimSpace(pod.Title)
-		if title == "" {
-			title = "Linux Matters Podcast"
-		}
-		summary := "Recent episodes on Linux, open-source software, and the community."
-		if len(entries) > 0 && entries[0].Subtitle != "" {
-			summary = entries[0].Subtitle
-		}
-		badge := ""
-		latestAudio := ""
-		latestEpisode := ""
-		latestDuration := ""
-		if len(entries) > 0 {
-			badge = fmt.Sprintf("%d episodes", len(entries))
-			latestAudio = entries[0].AudioURL
-			latestEpisode = entries[0].Episode
-			latestDuration = entries[0].Duration
-		}
-
-		cards = append(cards, MediaCard{
-			ID:             "podcast-hub",
-			Kind:           "podcast-hub",
-			Category:       "Podcast",
-			Title:          title,
-			Summary:        summary,
-			URL:            fallbackURL(pod.SiteURL, pod.URL),
-			SiteURL:        pod.SiteURL,
-			CoverURL:       strings.TrimSpace(pod.CoverURL),
-			AudioURL:       latestAudio,
-			Episode:        latestEpisode,
-			Duration:       latestDuration,
-			Icon:           "podcast",
-			IconSVG:        BrandIconSVG("podcast"),
-			Accent:         "blue",
-			Badge:          badge,
-			SubscribeLinks: subLinks,
-			Entries:        entries,
-		})
-
 		for i, item := range podcastItems {
 			entry := toMediaEntry(item, now)
 			epBadge := entry.Duration
@@ -785,55 +793,6 @@ func buildMedia(
 	}
 
 	if blog := cfg.Feeds.Blog; blog != nil && blog.Enabled {
-		entries := make([]MediaEntry, 0, len(blogItems))
-		for _, item := range blogItems {
-			entry := toMediaEntry(item, now)
-			entry.Summary = truncateExcerpt(entry.Summary, 180)
-			entries = append(entries, entry)
-		}
-
-		title := strings.TrimSpace(blog.Title)
-		if title == "" || strings.EqualFold(title, "Blog") {
-			title = "Wimpy's World Blog"
-		}
-		summary := "Recent posts on Linux, NixOS, open-source software, and tools."
-		if len(entries) > 0 && entries[0].Summary != "" {
-			summary = entries[0].Summary
-		}
-		badge := ""
-		if len(entries) > 0 {
-			badge = fmt.Sprintf("%d posts", len(entries))
-		}
-
-		blogLinks := buildSubscribeLinks(blog.Links)
-		if len(blogLinks) == 0 && strings.TrimSpace(blog.URL) != "" {
-			blogLinks = []SubscribeLink{
-				{
-					Label:   "RSS",
-					URL:     blog.URL,
-					Icon:    "rss",
-					IconSVG: BrandIconSVG("rss"),
-					Accent:  "peach",
-				},
-			}
-		}
-
-		cards = append(cards, MediaCard{
-			ID:             "blog-hub",
-			Kind:           "blog-hub",
-			Category:       "Blog",
-			Title:          title,
-			Summary:        summary,
-			URL:            fallbackURL(blog.SiteURL, blog.URL),
-			SiteURL:        blog.SiteURL,
-			Icon:           "blog",
-			IconSVG:        BrandIconSVG("blog"),
-			Accent:         "mauve",
-			Badge:          badge,
-			SubscribeLinks: blogLinks,
-			Entries:        entries,
-		})
-
 		for i, item := range blogItems {
 			entry := toMediaEntry(item, now)
 			postBadge := entry.DateLabel

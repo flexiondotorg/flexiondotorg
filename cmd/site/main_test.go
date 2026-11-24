@@ -250,8 +250,8 @@ site:
 	if len(got.Links) != 2 || got.Links[0].Badge != "195 online" || got.Links[1].Badge != "1 active" {
 		t.Errorf("unexpected links enrichment: %+v", got.Links)
 	}
-	if len(got.Media) != 4 {
-		t.Errorf("len(Media) = %d, want 4", len(got.Media))
+	if len(got.Media) != 2 {
+		t.Errorf("len(Media) = %d, want 2", len(got.Media))
 	}
 	for _, rel := range []string{"vendor/pixi.min.mjs", "vendor/pixi.LICENSE"} {
 		if _, err := os.Stat(filepath.Join(outDir, rel)); err != nil {

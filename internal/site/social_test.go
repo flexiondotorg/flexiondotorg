@@ -117,3 +117,20 @@ func TestSocialFetcherMastodonGoToSocialAndBluesky(t *testing.T) {
 		t.Errorf("unexpected social stats for non-social link: %+v", got["oval-tutu"])
 	}
 }
+
+func TestParseYouTubeChannelStatsFallbacks(t *testing.T) {
+	t.Parallel()
+
+	// Non-breaking space + legacy c4TabbedHeaderRenderer
+	c4HTML := `<html><script>var ytInitialData = {"header":{"c4TabbedHeaderRenderer":{"subscriberCountText":{"simpleText":"4.48K\u00a0subscribers"},"videosCountText":{"runs":[{"text":"144"},{"text":" videos"}]}}}};</script></html>`
+	got := parseYouTubeChannelStats(c4HTML)
+	if got != (SocialProfile{Subscribers: "4.48K", Videos: "144"}) {
+		t.Errorf("c4TabbedHeaderRenderer = %+v, want {4.48K 144}", got)
+	}
+
+	// Candidate URL normalization prefers canonical www.youtube.com/@handle
+	candidates := buildYouTubeCandidateURLs("https://youtube.com/WimpysWorld")
+	if len(candidates) < 2 || candidates[0] != "https://www.youtube.com/@WimpysWorld" || candidates[1] != "https://www.youtube.com/WimpysWorld" {
+		t.Errorf("buildYouTubeCandidateURLs = %v, want [@WimpysWorld, /WimpysWorld, ...]", candidates)
+	}
+}

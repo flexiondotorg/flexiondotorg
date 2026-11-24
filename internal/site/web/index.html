@@ -87,6 +87,20 @@
     <main id="main" class="tabletop-main" tabindex="-1">
       <div id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
+      {{- if .Data.Profile.Bio}}
+      <section class="intro-bio" id="intro-bio" aria-label="About {{.Data.Profile.Name}}">
+        <div class="intro-bio-inner">
+          {{- range .Data.Profile.Bio}}
+          <p>
+            {{- range .Segments -}}
+              {{- if .URL -}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Text}}</a>{{- else -}}{{.Text}}{{- end -}}
+            {{- end -}}
+          </p>
+          {{- end}}
+        </div>
+      </section>
+      {{- end}}
+
       <div id="scroll-spacer" class="scroll-spacer">
         <div id="a11y-layer" class="a11y-layer">
           <nav id="a11y-decks" class="a11y-decks" aria-label="Card decks"></nav>
@@ -108,24 +122,29 @@
     </main>
 
     <footer class="site-footer" id="site-footer">
-      <div class="footer-bio">
-        {{- range .Data.Profile.Bio}}
-        <p>
-          {{- range .Segments -}}
-            {{- if .URL -}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Text}}</a>{{- else -}}{{.Text}}{{- end -}}
-          {{- end -}}
-        </p>
-        {{- end}}
+      <div class="footer-rule" aria-hidden="true">
+        <span class="footer-rule-line"></span>
+        <span class="footer-rule-pip">◆</span>
+        <span class="footer-rule-line"></span>
       </div>
-      <div class="footer-meta">
-        {{- if .Data.Profile.GitHubURL}}
-        <a href="{{.Data.Profile.GitHubURL}}" target="_blank" rel="noopener noreferrer">GitHub</a>
-        {{- end}}
-        {{- if .Data.Profile.SponsorsURL}}
-        <a href="{{.Data.Profile.SponsorsURL}}" target="_blank" rel="noopener noreferrer">Sponsors</a>
-        {{- end}}
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <span class="footer-updated">Updated <time datetime="{{.Data.GeneratedAt}}">{{.Data.UpdatedLabel}}</time></span>
+      <div class="footer-bar">
+        <div class="footer-group footer-left">
+          <span>© {{.Year}} {{.Data.Profile.Name}}</span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <a href="{{.LicenseURL}}" target="_blank" rel="noopener noreferrer">BlueOak-1.0.0</a>
+        </div>
+        <div class="footer-group footer-center">
+          <span>Built with Go, PixiJS, and Catppuccin</span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <a href="{{.RepoURL}}" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+        <div class="footer-group footer-right">
+          {{- if .Data.Profile.SponsorsURL}}
+          <a class="footer-sponsor" href="{{.Data.Profile.SponsorsURL}}" target="_blank" rel="noopener noreferrer">Sponsor <span class="footer-heart" aria-hidden="true">♥</span></a>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          {{- end}}
+          <span class="footer-updated">Updated <time datetime="{{.Data.GeneratedAt}}">{{.Data.UpdatedLabel}}</time></span>
+        </div>
       </div>
     </footer>
   </div>
@@ -135,7 +154,7 @@
       <div id="flip-scene" class="flip-scene">
         <div id="flip-card" class="flip-card">
           <div id="flip-face-front" class="flip-face flip-face-front" aria-hidden="true"></div>
-          <div id="flip-face-back" class="flip-face flip-face-back" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+          <div id="flip-face-back" class="flip-face flip-face-back" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"></div>
         </div>
       </div>
     </div>

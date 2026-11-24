@@ -43,7 +43,7 @@ const PALETTES = {
     innerFrame: 'rgba(205, 214, 244, 0.08)',
     badgeBg: '#181825',
     shadowAlpha: 0.42,
-    foilAlpha: 0.25,
+    foilAlpha: 0.13,
     swirlA: '#11111b',
     swirlB: '#181828',
     swirlC: '#231f38',
@@ -79,7 +79,7 @@ const PALETTES = {
     innerFrame: 'rgba(76, 79, 105, 0.09)',
     badgeBg: '#e6e9ef',
     shadowAlpha: 0.22,
-    foilAlpha: 0.2,
+    foilAlpha: 0.11,
     swirlA: '#dce0e8',
     swirlB: '#d2d7e5',
     swirlC: '#c9d2e8',
@@ -107,6 +107,15 @@ const DEAL_STAGGER_SEC = 0.062;
 const RECALL_STAGGER_SEC = 0.03;
 const RECALL_FLIGHT_SEC = 0.31;
 const CHAIN_PAUSE_SEC = 0.09;
+const TILT_MAX_Y = 12 * (Math.PI / 180);
+const TILT_MAX_X = 10 * (Math.PI / 180);
+const TILT_PERSPECTIVE_D = 850;
+const FLAT_CARD_CORNERS = [
+  -CARD_W / 2, -CARD_H / 2,
+  CARD_W / 2, -CARD_H / 2,
+  CARD_W / 2, CARD_H / 2,
+  -CARD_W / 2, CARD_H / 2,
+];
 
 const BALATRO_FRAG = `
 precision highp float;
@@ -186,6 +195,7 @@ const state = {
   mediaCleanup: null,
   activeCard: null,
   lastFocusedEl: null,
+  openedByKeyboard: false,
 
   // PixiJS scene objects
   app: null,
@@ -198,7 +208,8 @@ const state = {
   shadowTex: null,
   deckShadowTex: null,
   deckSliceTex: null,
-  foilTex: null,
+  foilTexA: null,
+  foilTexB: null,
   sparkleTex: null,
 
   // Live records
@@ -642,32 +653,24 @@ function buildSoftShadowTexture(w, h, r, pad) {
   return canvasToTexture(canvas);
 }
 
-function buildFoilTexture(w, h, r) {
+function buildFoilTexture(w, h, r, flipDiagonal) {
   const { canvas, ctx } = createCanvas(w, h);
   ctx.save();
   roundedRectPath(ctx, 0, 0, w, h, r);
   ctx.clip();
 
-  const grad = ctx.createLinearGradient(0, 0, w, h);
+  const grad = flipDiagonal
+    ? ctx.createLinearGradient(w, 0, 0, h)
+    : ctx.createLinearGradient(0, 0, w, h);
   grad.addColorStop(0.0, 'rgba(245, 194, 231, 0.0)');
-  grad.addColorStop(0.18, 'rgba(203, 166, 247, 0.55)');
-  grad.addColorStop(0.36, 'rgba(137, 180, 250, 0.72)');
-  grad.addColorStop(0.5, 'rgba(255, 255, 255, 0.92)');
-  grad.addColorStop(0.64, 'rgba(148, 226, 213, 0.72)');
-  grad.addColorStop(0.82, 'rgba(249, 226, 175, 0.48)');
+  grad.addColorStop(0.24, 'rgba(203, 166, 247, 0.24)');
+  grad.addColorStop(0.40, 'rgba(137, 180, 250, 0.34)');
+  grad.addColorStop(0.50, 'rgba(255, 255, 255, 0.42)');
+  grad.addColorStop(0.60, 'rgba(148, 226, 213, 0.32)');
+  grad.addColorStop(0.76, 'rgba(249, 226, 175, 0.20)');
   grad.addColorStop(1.0, 'rgba(245, 194, 231, 0.0)');
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, w, h);
-
-  // Fine holographic micro-lines
-  ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
-  ctx.lineWidth = 1;
-  for (let d = -h; d < w + h; d += 12) {
-    ctx.beginPath();
-    ctx.moveTo(d, 0);
-    ctx.lineTo(d - h * 0.4, h);
-    ctx.stroke();
-  }
   ctx.restore();
   return canvasToTexture(canvas);
 }
@@ -1272,7 +1275,8 @@ async function initPixi() {
 
   // Shared procedural textures
   state.shadowTex = buildSoftShadowTexture(CARD_W, CARD_H, CARD_RADIUS, 26);
-  state.foilTex = buildFoilTexture(CARD_W, CARD_H, CARD_RADIUS);
+  state.foilTexA = buildFoilTexture(CARD_W, CARD_H, CARD_RADIUS, false);
+  state.foilTexB = buildFoilTexture(CARD_W, CARD_H, CARD_RADIUS, true);
   state.sparkleTex = buildSparkleTexture();
 
   app.ticker.add(onTick);
@@ -1395,7 +1399,8 @@ function refreshPixiForTheme() {
   for (const rec of state.cardRecords) {
     rec.shadowSprite.alpha = p.shadowAlpha;
     if (rec.hoverOutline) {
-      drawCardHoverOutline(rec.hoverOutline, resolveCardAccent(rec.deckKey, rec.item, p));
+      const corners = rec.isTilted ? projectCardCorners(rec.tiltX, rec.tiltY) : FLAT_CARD_CORNERS;
+      drawCardHoverOutline(rec.hoverOutline, resolveCardAccent(rec.deckKey, rec.item, p), corners);
     }
     drawCardFaceToCanvas(rec.canvas, rec.deckKey, rec.item, p, null);
     rec.texture.source.update();
@@ -1624,10 +1629,88 @@ function buildDecks(preserveCounts) {
   });
 }
 
-function drawCardHoverOutline(graphics, accentHex) {
+function projectCardCorners(rotX, rotY) {
+  const hw = CARD_W / 2;
+  const hh = CARD_H / 2;
+  const cosY = Math.cos(rotY);
+  const sinY = Math.sin(rotY);
+  const cosX = Math.cos(rotX);
+  const sinX = Math.sin(rotX);
+  const d = TILT_PERSPECTIVE_D;
+
+  const raw = [
+    [-hw, -hh],
+    [hw, -hh],
+    [hw, hh],
+    [-hw, hh],
+  ];
+  const out = new Array(8);
+  for (let i = 0; i < 4; i += 1) {
+    const x0 = raw[i][0];
+    const y0 = raw[i][1];
+    const x1 = x0 * cosY;
+    const z1 = -x0 * sinY;
+    const y2 = y0 * cosX - z1 * sinX;
+    const z2 = y0 * sinX + z1 * cosX;
+    const scale = d / (d - z2);
+    out[i * 2] = x1 * scale;
+    out[i * 2 + 1] = y2 * scale;
+  }
+  return out;
+}
+
+function drawCardHoverOutline(graphics, accentHex, corners) {
   graphics.clear();
-  graphics.roundRect(-CARD_W / 2 - 1, -CARD_H / 2 - 1, CARD_W + 2, CARD_H + 2, CARD_RADIUS + 1);
-  graphics.stroke({ width: 2.5, color: hexToNumber(accentHex), alpha: 0.92 });
+  if (!corners || corners === FLAT_CARD_CORNERS) {
+    graphics.roundRect(-CARD_W / 2 - 1, -CARD_H / 2 - 1, CARD_W + 2, CARD_H + 2, CARD_RADIUS + 1);
+    graphics.stroke({ width: 2.25, color: hexToNumber(accentHex), alpha: 0.88 });
+    return;
+  }
+
+  // Trace the 4 perspective-projected corners with rounded bevels matching CARD_RADIUS
+  const pts = [
+    [corners[0] * 1.008, corners[1] * 1.006],
+    [corners[2] * 1.008, corners[3] * 1.006],
+    [corners[4] * 1.008, corners[5] * 1.006],
+    [corners[6] * 1.008, corners[7] * 1.006],
+  ];
+  const r = CARD_RADIUS + 1;
+  for (let i = 0; i < 4; i += 1) {
+    const prev = pts[(i + 3) % 4];
+    const curr = pts[i];
+    const next = pts[(i + 1) % 4];
+    const dx1 = prev[0] - curr[0];
+    const dy1 = prev[1] - curr[1];
+    const len1 = Math.hypot(dx1, dy1) || 1;
+    const dx2 = next[0] - curr[0];
+    const dy2 = next[1] - curr[1];
+    const len2 = Math.hypot(dx2, dy2) || 1;
+    const off1 = Math.min(r, len1 * 0.3) / len1;
+    const off2 = Math.min(r, len2 * 0.3) / len2;
+    const sx = curr[0] + dx1 * off1;
+    const sy = curr[1] + dy1 * off1;
+    const ex = curr[0] + dx2 * off2;
+    const ey = curr[1] + dy2 * off2;
+    if (i === 0) {
+      graphics.moveTo(sx, sy);
+    } else {
+      graphics.lineTo(sx, sy);
+    }
+    graphics.quadraticCurveTo(curr[0], curr[1], ex, ey);
+  }
+  graphics.closePath();
+  graphics.stroke({ width: 2.25, color: hexToNumber(accentHex), alpha: 0.88 });
+}
+
+function applyCardPerspective(rec, rotX, rotY, accentHex) {
+  const isFlat = rotX === 0 && rotY === 0;
+  const c = isFlat ? FLAT_CARD_CORNERS : projectCardCorners(rotX, rotY);
+  rec.cardMesh.setCorners(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7]);
+  rec.foilMeshA.setCorners(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7]);
+  rec.foilMeshB.setCorners(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7]);
+  if (isFlat || rec.hoverOutline.alpha > 0.01) {
+    drawCardHoverOutline(rec.hoverOutline, accentHex, c);
+  }
 }
 
 function computeCardSlots(count) {
@@ -1747,8 +1830,14 @@ function recallCurrentCards() {
     rec.recallSpin = leanDir * bankDeg * (Math.PI / 180);
     rec.recallArcX = leanDir * (18 + Math.abs(seeded(rec.index + 19)) * 24);
     rec.hoverOutline.alpha = 0;
-    rec.foilSprite.alpha = 0;
-    rec.container.skew.set(0, 0);
+    rec.foilMeshA.alpha = 0;
+    rec.foilMeshB.alpha = 0;
+    rec.tiltX = 0;
+    rec.tiltY = 0;
+    if (rec.isTilted) {
+      applyCardPerspective(rec, 0, 0, rec.accent);
+      rec.isTilted = false;
+    }
     rec.container.zIndex = 140 + (launched.length - queued);
     state.recallingCards.push(rec);
   }
@@ -1891,28 +1980,60 @@ function dealDeck(deckKey) {
     shadowSprite.alpha = p.shadowAlpha;
     container.addChild(shadowSprite);
 
-    const cardSprite = new PIXI.Sprite(texture);
-    cardSprite.anchor.set(0.5);
-    cardSprite.width = CARD_W;
-    cardSprite.height = CARD_H;
-    container.addChild(cardSprite);
+    const hw = CARD_W / 2;
+    const hh = CARD_H / 2;
 
-    const foilMask = new PIXI.Graphics();
-    foilMask.roundRect(-CARD_W / 2, -CARD_H / 2, CARD_W, CARD_H, CARD_RADIUS);
-    foilMask.fill(0xffffff);
-    container.addChild(foilMask);
+    const cardMesh = new PIXI.PerspectiveMesh({
+      texture,
+      verticesX: 12,
+      verticesY: 16,
+      x0: -hw,
+      y0: -hh,
+      x1: hw,
+      y1: -hh,
+      x2: hw,
+      y2: hh,
+      x3: -hw,
+      y3: hh,
+    });
+    container.addChild(cardMesh);
 
-    const foilSprite = new PIXI.Sprite(state.foilTex);
-    foilSprite.anchor.set(0.5);
-    foilSprite.width = CARD_W * 1.45;
-    foilSprite.height = CARD_H * 1.45;
-    foilSprite.alpha = 0;
-    foilSprite.blendMode = 'screen';
-    foilSprite.mask = foilMask;
-    container.addChild(foilSprite);
+    const foilMeshA = new PIXI.PerspectiveMesh({
+      texture: state.foilTexA,
+      verticesX: 8,
+      verticesY: 10,
+      x0: -hw,
+      y0: -hh,
+      x1: hw,
+      y1: -hh,
+      x2: hw,
+      y2: hh,
+      x3: -hw,
+      y3: hh,
+    });
+    foilMeshA.alpha = 0;
+    foilMeshA.blendMode = 'screen';
+    container.addChild(foilMeshA);
+
+    const foilMeshB = new PIXI.PerspectiveMesh({
+      texture: state.foilTexB,
+      verticesX: 8,
+      verticesY: 10,
+      x0: -hw,
+      y0: -hh,
+      x1: hw,
+      y1: -hh,
+      x2: hw,
+      y2: hh,
+      x3: -hw,
+      y3: hh,
+    });
+    foilMeshB.alpha = 0;
+    foilMeshB.blendMode = 'screen';
+    container.addChild(foilMeshB);
 
     const hoverOutline = new PIXI.Graphics();
-    drawCardHoverOutline(hoverOutline, accent);
+    drawCardHoverOutline(hoverOutline, accent, FLAT_CARD_CORNERS);
     hoverOutline.alpha = 0;
     container.addChild(hoverOutline);
 
@@ -1926,8 +2047,9 @@ function dealDeck(deckKey) {
       texture,
       container,
       shadowSprite,
-      cardSprite,
-      foilSprite,
+      cardMesh,
+      foilMeshA,
+      foilMeshB,
       hoverOutline,
       btn: null,
       destroyed: false,
@@ -1944,8 +2066,9 @@ function dealDeck(deckKey) {
       vRot: 0,
       scaleX: reduced ? cardScale : deckScale,
       scaleY: reduced ? cardScale : deckScale,
-      skewX: 0,
-      skewY: 0,
+      tiltX: 0,
+      tiltY: 0,
+      isTilted: false,
 
       dealOrder,
       dealDelay: reduced ? 0 : dealOrder * DEAL_STAGGER_SEC,
@@ -1987,15 +2110,22 @@ function dealDeck(deckKey) {
       }
     });
     btn.addEventListener('focus', () => {
-      state.focusedCardId = cardId;
+      try {
+        if (btn.matches(':focus-visible')) {
+          state.focusedCardId = cardId;
+        }
+      } catch (_) {
+        state.focusedCardId = cardId;
+      }
     });
     btn.addEventListener('blur', () => {
       if (state.focusedCardId === cardId) {
         state.focusedCardId = null;
       }
     });
-    btn.addEventListener('click', () => {
-      triggerCardOpen(rec, btn);
+    btn.addEventListener('click', (ev) => {
+      const byKeyboard = ev.detail === 0;
+      triggerCardOpen(rec, btn, byKeyboard);
     });
     btn.addEventListener('keydown', (ev) => {
       handleCardKeyNav(ev, idx);
@@ -2071,9 +2201,55 @@ function updateDeckSelectionStyles() {
   }
 }
 
-function switchDeck(deckKey) {
+function normalizeDeckKey(raw) {
+  const clean = String(raw || '').toLowerCase().replace(/^#/, '').trim();
+  return DECKS.some((d) => d.key === clean) ? clean : '';
+}
+
+function resolveInitialDeck(data) {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const fromQuery = normalizeDeckKey(params.get('deck'));
+    if (fromQuery) {
+      return fromQuery;
+    }
+  } catch (_) {
+    // Ignore malformed query string.
+  }
+
+  const fromHash = normalizeDeckKey(window.location.hash);
+  if (fromHash) {
+    return fromHash;
+  }
+
+  const host = String(window.location.hostname || '').toLowerCase();
+  if (host === 'links.wimpys.world') {
+    return 'links';
+  }
+
+  return normalizeDeckKey(data && data.default_deck) || 'projects';
+}
+
+function syncDeckHash(deckKey) {
+  try {
+    const targetHash = `#${deckKey}`;
+    if (window.location.hash !== targetHash && window.history && typeof window.history.replaceState === 'function') {
+      const url = new URL(window.location.href);
+      url.hash = targetHash;
+      url.searchParams.delete('deck');
+      window.history.replaceState(null, '', url.pathname + url.search + url.hash);
+    }
+  } catch (_) {
+    // Ignore history API restrictions in opaque origins.
+  }
+}
+
+function switchDeck(deckKey, opts) {
   if (!DECKS.some((d) => d.key === deckKey)) {
     return;
+  }
+  if (!opts || opts.syncHash !== false) {
+    syncDeckHash(deckKey);
   }
   if (state.modalPhase !== 'closed') {
     cancelCardModal(false);
@@ -2331,14 +2507,20 @@ function onTick(ticker) {
       rec.rot = rec.baseRot;
       rec.scaleX = isHovered ? cardScale * 1.03 : cardScale;
       rec.scaleY = rec.scaleX;
+      rec.tiltX = 0;
+      rec.tiltY = 0;
+      if (rec.isTilted) {
+        applyCardPerspective(rec, 0, 0, resolveCardAccent(rec.deckKey, rec.item, p));
+        rec.isTilted = false;
+      }
       rec.container.visible = !rec.pickedUp;
       rec.container.position.set(rec.x, rec.y);
       rec.container.rotation = rec.rot;
       rec.container.scale.set(rec.scaleX, rec.scaleY);
-      rec.container.skew.set(0, 0);
       rec.container.zIndex = isHovered ? 200 : 20 + i;
       rec.hoverOutline.alpha = isHovered ? 1 : 0;
-      rec.foilSprite.alpha = 0;
+      rec.foilMeshA.alpha = 0;
+      rec.foilMeshB.alpha = 0;
       continue;
     }
 
@@ -2392,7 +2574,7 @@ function onTick(ticker) {
     }
 
     const idleRot = rec.baseRot + Math.sin(t * 0.95 + rec.phaseRot) * (1.6 * (Math.PI / 180));
-    const targetRot = isHovered ? nx * 0.045 : idleRot;
+    const targetRot = isHovered ? nx * 0.015 : idleRot;
 
     // Smooth unhurried spring glide for deal-in & gentle float
     const posK = rec.dealt ? (isHovered ? 150 : 62) : 115;
@@ -2417,40 +2599,52 @@ function onTick(ticker) {
       }
     }
 
-    // Smooth scale-up from deck size during deal + hover scale/tilt
-    const targetScaleX = cardScale * (isHovered ? 1.07 - Math.abs(nx) * 0.025 : 1);
-    const targetScaleY = cardScale * (isHovered ? 1.07 - Math.abs(ny) * 0.02 : 1);
-    const targetSkewX = isHovered ? -ny * 0.06 : 0;
-    const targetSkewY = isHovered ? nx * 0.055 : 0;
+    // Smooth scale-up from deck size during deal + true 3D perspective hover tilt
+    const targetScale = cardScale * (isHovered ? 1.06 : 1);
+    const targetTiltY = isHovered ? nx * TILT_MAX_Y : 0;
+    const targetTiltX = isHovered ? -ny * TILT_MAX_X : 0;
 
     const scaleLerp = Math.min(1, dt * (rec.dealt ? 15 : 8.5));
     const lerp = Math.min(1, dt * 15);
-    rec.scaleX += (targetScaleX - rec.scaleX) * scaleLerp;
-    rec.scaleY += (targetScaleY - rec.scaleY) * scaleLerp;
-    rec.skewX += (targetSkewX - rec.skewX) * lerp;
-    rec.skewY += (targetSkewY - rec.skewY) * lerp;
+    rec.scaleX += (targetScale - rec.scaleX) * scaleLerp;
+    rec.scaleY += (targetScale - rec.scaleY) * scaleLerp;
+    rec.tiltX += (targetTiltX - rec.tiltX) * lerp;
+    rec.tiltY += (targetTiltY - rec.tiltY) * lerp;
 
     rec.container.position.set(rec.x, rec.y);
     rec.container.rotation = rec.rot;
     rec.container.scale.set(rec.scaleX, rec.scaleY);
-    rec.container.skew.set(rec.skewX, rec.skewY);
     rec.container.zIndex = isHovered ? 200 : (rec.dealt ? 20 + i : 120 + (rec.dealOrder || i));
 
     // Dynamic shadow offset & hover glow
-    const targetShadowX = isHovered ? -nx * 12 : 0;
-    const targetShadowY = isHovered ? 20 - ny * 7 : 10;
+    const targetShadowX = isHovered ? -nx * 10 : 0;
+    const targetShadowY = isHovered ? 18 - ny * 6 : 10;
     rec.shadowSprite.x += (targetShadowX - rec.shadowSprite.x) * lerp;
     rec.shadowSprite.y += (targetShadowY - rec.shadowSprite.y) * lerp;
 
     const targetOutline = isHovered ? 1 : 0;
     rec.hoverOutline.alpha += (targetOutline - rec.hoverOutline.alpha) * lerp;
 
-    const targetFoil = isHovered ? p.foilAlpha : 0;
-    rec.foilSprite.alpha += (targetFoil - rec.foilSprite.alpha) * lerp;
-    if (rec.foilSprite.alpha > 0.01) {
-      rec.foilSprite.x = nx * 42;
-      rec.foilSprite.y = ny * 48;
+    const cardAccent = resolveCardAccent(rec.deckKey, rec.item, p);
+    if (Math.abs(rec.tiltX) > 0.0004 || Math.abs(rec.tiltY) > 0.0004) {
+      applyCardPerspective(rec, rec.tiltX, rec.tiltY, cardAccent);
+      rec.isTilted = true;
+    } else if (rec.isTilted) {
+      rec.tiltX = 0;
+      rec.tiltY = 0;
+      applyCardPerspective(rec, 0, 0, cardAccent);
+      rec.isTilted = false;
     }
+
+    // Restrained dual-diagonal satin sheen tracking pointer angle across tilted plane
+    const targetFoilA = isHovered
+      ? p.foilAlpha * Math.max(0.18, Math.min(1, 0.56 + (nx + ny) * 0.36))
+      : 0;
+    const targetFoilB = isHovered
+      ? p.foilAlpha * Math.max(0.18, Math.min(1, 0.56 + (-nx + ny) * 0.36))
+      : 0;
+    rec.foilMeshA.alpha += (targetFoilA - rec.foilMeshA.alpha) * lerp;
+    rec.foilMeshB.alpha += (targetFoilB - rec.foilMeshB.alpha) * lerp;
   }
 }
 
@@ -3214,12 +3408,65 @@ function buildBlogSpeechPlayer(speechText) {
   return wrap;
 }
 
+function makeActionIconSVG(kind) {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('focusable', 'false');
+
+  const add = (tag, attrs) => {
+    const node = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      node.setAttribute(k, v);
+    }
+    svg.appendChild(node);
+  };
+
+  if (kind === 'github') {
+    add('path', {
+      d: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+      fill: 'currentColor',
+    });
+  } else if (kind === 'globe') {
+    add('circle', { cx: '12', cy: '12', r: '9.5', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.9' });
+    add('ellipse', { cx: '12', cy: '12', rx: '4.2', ry: '9.5', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.8' });
+    add('line', { x1: '2.8', y1: '12', x2: '21.2', y2: '12', stroke: 'currentColor', 'stroke-width': '1.8' });
+  } else if (kind === 'package') {
+    add('path', {
+      d: 'M12 2.5 20.5 7.2v9.6L12 21.5 3.5 16.8V7.2L12 2.5Z',
+      fill: 'none',
+      stroke: 'currentColor',
+      'stroke-width': '1.9',
+      'stroke-linejoin': 'round',
+    });
+    add('path', {
+      d: 'M3.8 7.4 12 12l8.2-4.6M12 12v9.3M7.8 4.9 16.2 9.6',
+      fill: 'none',
+      stroke: 'currentColor',
+      'stroke-width': '1.8',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
+    });
+  }
+  return svg;
+}
+
+function actionLinkWithIcon(href, className, iconKind, label) {
+  const a = linkEl(href, className);
+  const iconWrap = el('span', 'action-btn-icon');
+  iconWrap.appendChild(makeActionIconSVG(iconKind));
+  a.appendChild(iconWrap);
+  a.appendChild(document.createTextNode(label));
+  return a;
+}
+
 function buildSubscribeRow(links) {
   const row = el('div', 'subscribe-row');
   for (const sub of links) {
     const pill = linkEl(sub.url, 'subscribe-pill');
     if (sub.icon_svg) {
-      const iconSpan = el('span');
+      const iconSpan = el('span', 'subscribe-icon');
       mountSVG(iconSpan, sub.icon_svg);
       pill.appendChild(iconSpan);
     }
@@ -3305,14 +3552,7 @@ function buildModalHeader(deckKey, item, primaryURL) {
   }
 
   titleGroup.appendChild(titleCol);
-
-  const closeBtn = el('button', 'modal-close', '×');
-  closeBtn.type = 'button';
-  closeBtn.setAttribute('aria-label', 'Close details');
-  closeBtn.addEventListener('click', closeDetailModal);
-
   header.appendChild(titleGroup);
-  header.appendChild(closeBtn);
   return header;
 }
 
@@ -3372,66 +3612,70 @@ function buildModalContent(deckKey, item) {
     const actions = el('div', 'detail-actions');
     const hasHomepage = Boolean(item.homepage && isSafeURL(item.homepage) && item.homepage !== item.repo_url);
     if (hasHomepage) {
-      actions.appendChild(linkEl(item.homepage, 'action-btn is-primary', 'Homepage ↗'));
+      actions.appendChild(actionLinkWithIcon(item.homepage, 'action-btn is-primary', 'globe', 'Homepage'));
     }
     if (item.repo_url && isSafeURL(item.repo_url)) {
-      actions.appendChild(linkEl(item.repo_url, `action-btn${hasHomepage ? '' : ' is-primary'}`, 'GitHub ↗'));
+      actions.appendChild(actionLinkWithIcon(item.repo_url, `action-btn${hasHomepage ? '' : ' is-primary'}`, 'github', 'GitHub'));
     }
     const releasesURL = (item.release_url && isSafeURL(item.release_url))
       ? item.release_url
       : (item.repo_url && isSafeURL(item.repo_url) ? `${item.repo_url.replace(/\/$/, '')}/releases` : '');
-    if (releasesURL) {
-      actions.appendChild(linkEl(releasesURL, 'action-btn', 'Releases ↗'));
-    }
     if (actions.childElementCount > 0) {
       scroll.appendChild(actions);
     }
 
-    if (item.hosts && item.hosts.length > 0) {
-      const hostSec = el('div', 'detail-section');
-      hostSec.appendChild(el('h3', 'detail-section-title', 'Package Repositories'));
+    const hasHosts = Boolean(item.hosts && item.hosts.length > 0);
+    if (hasHosts || releasesURL) {
+      const installSec = el('div', 'detail-section');
+      installSec.appendChild(el('h3', 'detail-section-title', 'Install'));
       const grid = el('div', 'host-tile-grid');
       const logos = (state.data && state.data.host_logos) || {};
 
-      for (const h of item.hosts) {
-        const hostKey = resolveHostKey(h);
-        const meta = resolveHostMeta(h);
-        const tile = linkEl(h.url, 'host-tile');
-        if (hostKey) {
-          tile.dataset.host = hostKey;
-        }
-        const logoBox = el('span', 'host-tile-logo');
-        if (logos[h.host]) {
-          if (!HOST_META[hostKey]) {
-            const extracted = extractSVGThemeFills(logos[h.host]);
-            if (extracted.dark) {
-              tile.style.setProperty('--host-color-dark', extracted.dark);
-            }
-            if (extracted.light) {
-              tile.style.setProperty('--host-color-light', extracted.light);
-            }
+      if (hasHosts) {
+        for (const h of item.hosts) {
+          const hostKey = resolveHostKey(h);
+          const meta = resolveHostMeta(h);
+          const tile = linkEl(h.url, 'host-tile');
+          if (hostKey) {
+            tile.dataset.host = hostKey;
           }
-          mountSVG(logoBox, logos[h.host], { stripStyle: true });
+          const logoBox = el('span', 'host-tile-logo');
+          if (logos[h.host]) {
+            if (!HOST_META[hostKey]) {
+              const extracted = extractSVGThemeFills(logos[h.host]);
+              if (extracted.dark) {
+                tile.style.setProperty('--host-color-dark', extracted.dark);
+              }
+              if (extracted.light) {
+                tile.style.setProperty('--host-color-light', extracted.light);
+              }
+            }
+            mountSVG(logoBox, logos[h.host], { stripStyle: true });
+          }
+          const copy = el('span', 'host-tile-copy');
+          copy.appendChild(el('span', 'host-tile-name', meta.label));
+          copy.appendChild(el('span', 'host-tile-sub', meta.subtitle));
+          tile.appendChild(logoBox);
+          tile.appendChild(copy);
+          grid.appendChild(tile);
         }
-        const copy = el('span', 'host-tile-copy');
-        copy.appendChild(el('span', 'host-tile-name', meta.label));
-        copy.appendChild(el('span', 'host-tile-sub', meta.subtitle));
-        tile.appendChild(logoBox);
-        tile.appendChild(copy);
-        grid.appendChild(tile);
       }
-      hostSec.appendChild(grid);
-      scroll.appendChild(hostSec);
-    } else if (releasesURL || (item.repo_url && isSafeURL(item.repo_url))) {
-      const srcSec = el('div', 'detail-section');
-      srcSec.appendChild(el('h3', 'detail-section-title', 'Source & Releases'));
-      const cardLink = linkEl(releasesURL || item.repo_url, 'source-card-link');
-      const copy = el('span', 'source-card-copy');
-      copy.appendChild(el('span', 'source-card-title', 'Source & Releases ↗'));
-      copy.appendChild(el('span', 'source-card-sub', 'Browse source code and release artefacts on GitHub'));
-      cardLink.appendChild(copy);
-      srcSec.appendChild(cardLink);
-      scroll.appendChild(srcSec);
+
+      if (releasesURL) {
+        const relTile = linkEl(releasesURL, 'host-tile');
+        relTile.dataset.host = 'releases';
+        const relLogo = el('span', 'host-tile-logo');
+        relLogo.appendChild(makeActionIconSVG('package'));
+        const relCopy = el('span', 'host-tile-copy');
+        relCopy.appendChild(el('span', 'host-tile-name', 'Releases'));
+        relCopy.appendChild(el('span', 'host-tile-sub', item.latest_tag ? `${item.latest_tag} · Archives` : 'Direct downloads'));
+        relTile.appendChild(relLogo);
+        relTile.appendChild(relCopy);
+        grid.appendChild(relTile);
+      }
+
+      installSec.appendChild(grid);
+      scroll.appendChild(installSec);
     }
   } else if (deckKey === 'links') {
     if (item.description) {
@@ -3447,6 +3691,15 @@ function buildModalContent(deckKey, item) {
       }
       scroll.appendChild(linkStats);
     }
+
+    const linkActions = el('div', 'detail-actions');
+    linkActions.appendChild(linkEl(item.url, 'action-btn is-primary', `Visit ${item.title} ↗`));
+    const isGitHubCard = String(item.icon || '').toLowerCase() === 'github' || item.id === 'github';
+    const sponsorsURL = state.data && state.data.profile && state.data.profile.sponsors_url;
+    if (isGitHubCard && sponsorsURL && isSafeURL(sponsorsURL)) {
+      linkActions.appendChild(linkEl(sponsorsURL, 'action-btn', 'Sponsor on GitHub ♥'));
+    }
+    scroll.appendChild(linkActions);
 
     if (item.sponsors && item.sponsors.length > 0) {
       const spSec = el('div', 'detail-section');
@@ -3471,10 +3724,6 @@ function buildModalContent(deckKey, item) {
       pastSec.appendChild(list);
       scroll.appendChild(pastSec);
     }
-
-    const linkActions = el('div', 'detail-actions');
-    linkActions.appendChild(linkEl(item.url, 'action-btn is-primary', `Visit ${item.title} ↗`));
-    scroll.appendChild(linkActions);
   } else if (deckKey === 'media') {
     const mediaStats = el('div', 'detail-stats');
     if (item.episode) {
@@ -3636,6 +3885,8 @@ function finishModalClose(restoreFocus) {
   state.activeCard = null;
   state.modalOpen = false;
   state.modalPhase = 'closed';
+  state.hoveredCardId = null;
+  state.focusedCardId = null;
 
   if (els.flipFloatWrap) {
     els.flipFloatWrap.classList.remove('is-floating');
@@ -3651,9 +3902,13 @@ function finishModalClose(restoreFocus) {
   document.body.classList.remove('modal-open');
 
   const returnTarget = state.lastFocusedEl;
+  const shouldRestoreFocus = Boolean(restoreFocus && state.openedByKeyboard);
   state.lastFocusedEl = null;
-  if (restoreFocus && returnTarget && typeof returnTarget.focus === 'function') {
+  state.openedByKeyboard = false;
+  if (shouldRestoreFocus && returnTarget && typeof returnTarget.focus === 'function') {
     returnTarget.focus();
+  } else if (document.activeElement && typeof document.activeElement.blur === 'function') {
+    document.activeElement.blur();
   }
 }
 
@@ -3664,14 +3919,17 @@ function cancelCardModal(restoreFocus) {
   finishModalClose(Boolean(restoreFocus));
 }
 
-function triggerCardOpen(rec, triggerEl) {
+function triggerCardOpen(rec, triggerEl, byKeyboard) {
   if (state.modalPhase !== 'closed' || !els.modal || !els.flipFloatWrap || !els.flipCard || !els.flipBack) {
     return;
   }
 
   state.lastFocusedEl = triggerEl || document.activeElement;
+  state.openedByKeyboard = Boolean(byKeyboard);
   state.activeCard = rec;
   state.modalOpen = true;
+  state.hoveredCardId = null;
+  state.focusedCardId = null;
 
   const startX = rec.x;
   const startY = rec.y - window.scrollY;
@@ -3699,10 +3957,7 @@ function triggerCardOpen(rec, triggerEl) {
     els.flipCard.style.transform = 'rotateY(180deg)';
     els.flipCard.classList.add('is-settled');
     state.modalPhase = 'open';
-    const closeBtn = els.flipBack.querySelector('.modal-close');
-    if (closeBtn) {
-      closeBtn.focus();
-    }
+    els.flipBack.focus();
     return;
   }
 
@@ -3757,11 +4012,7 @@ function triggerCardOpen(rec, triggerEl) {
     els.flipCard.classList.add('is-settled');
     els.modal.style.setProperty('--backdrop-progress', '1');
     els.flipFloatWrap.classList.add('is-floating');
-
-    const closeBtn = els.flipBack.querySelector('.modal-close');
-    if (closeBtn) {
-      closeBtn.focus();
-    }
+    els.flipBack.focus();
   };
 
   state.modalAnimRaf = window.requestAnimationFrame(stepIn);
@@ -3907,7 +4158,30 @@ function bindEvents() {
     });
   }
 
+  if (els.flipBack) {
+    els.flipBack.addEventListener('click', (ev) => {
+      if (state.modalPhase !== 'open') {
+        return;
+      }
+      const sel = window.getSelection && window.getSelection();
+      if (sel && String(sel).trim().length > 0) {
+        return;
+      }
+      if (ev.target && ev.target.closest('a, button, input, select, textarea, label, .media-player')) {
+        return;
+      }
+      closeDetailModal();
+    });
+  }
+
   window.addEventListener('beforeunload', stopActiveMediaPlayer);
+
+  window.addEventListener('hashchange', () => {
+    const fromHash = normalizeDeckKey(window.location.hash);
+    if (fromHash && fromHash !== effectiveDeckKey()) {
+      switchDeck(fromHash, { syncHash: false });
+    }
+  });
 
   document.addEventListener('keydown', (ev) => {
     if (state.modalOpen && ev.key === 'Escape') {
@@ -3925,8 +4199,7 @@ function bindEvents() {
 
 async function bootstrap(data) {
   state.data = data;
-  const candidateDeck = String(data.default_deck || 'projects').toLowerCase();
-  state.activeDeck = DECKS.some((d) => d.key === candidateDeck) ? candidateDeck : 'projects';
+  state.activeDeck = resolveInitialDeck(data);
 
   syncThemeControls();
   bindEvents();
@@ -3947,12 +4220,19 @@ async function bootstrap(data) {
   buildDecks();
   dealDeck(state.activeDeck);
 
-  // Re-bake textures cleanly if web fonts finish loading slightly after initial paint
+  // Re-bake textures and re-sync spacer origin if web fonts finish loading after initial paint
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => {
-      if (state.app) {
-        refreshPixiForTheme();
+      if (!state.app) {
+        return;
       }
+      const nextOriginY = els.scrollSpacer
+        ? Math.round(els.scrollSpacer.getBoundingClientRect().top + window.scrollY)
+        : state.layout.originY;
+      if (Math.abs(nextOriginY - state.layout.originY) > 1) {
+        relayoutScene();
+      }
+      refreshPixiForTheme();
     });
   }
 }

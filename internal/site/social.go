@@ -22,6 +22,7 @@ const (
 	maxSocialResponseSize  = 1 << 20
 	maxYouTubeResponseSize = 4 << 20
 	socialUserAgent        = "vitrine-site/1.0 (+https://wimpys.world)"
+	youtubeConsentCookie   = "SOCS=CAESEwgDEgk0ODE3Nzk3MjQaAmVuIAEaBgiA_LyaBg"
 	ytInitialDataPrefix    = "var ytInitialData = "
 	ytInitialDataEndMarker = ";</script>"
 )
@@ -29,8 +30,10 @@ const (
 var (
 	reGTSFollowers = regexp.MustCompile(`(?is)<dd\b[^>]*class="[^"]*\bfolloweddd\b[^"]*"[^>]*>\s*([0-9,]+)\s*</dd>`)
 	reGTSPosts     = regexp.MustCompile(`(?is)<dd\b[^>]*class="[^"]*\bpostsdd\b[^"]*"[^>]*>\s*([0-9,]+)\s*</dd>`)
-	reYTSubs       = regexp.MustCompile(`(?i)^([0-9]+(?:\.[0-9]+)?[kmb]?)\s+subscribers?$`)
+	reYTSubs       = regexp.MustCompile(`(?i)^([0-9,]+(?:\.[0-9]+)?[kmb]?)\s+subscribers?$`)
 	reYTVideos     = regexp.MustCompile(`(?i)^([0-9,]+(?:\.[0-9]+)?[kmb]?)\s+videos?$`)
+	reYTJSONSubs   = regexp.MustCompile(`(?i)"(?:content|simpleText|label)"\s*:\s*"([0-9,]+(?:\.[0-9]+)?[kmb]?)(?:\s|\\u00a0|\\u202f)+subscribers?"`)
+	reYTJSONVideos = regexp.MustCompile(`(?i)"(?:content|simpleText|label)"\s*:\s*"([0-9,]+(?:\.[0-9]+)?[kmb]?)(?:\s|\\u00a0|\\u202f)+videos?"`)
 	reSteamLevel   = regexp.MustCompile(`(?is)persona_level[\s\S]{0,200}?friendPlayerLevelNum">\s*([0-9,]+)\s*<`)
 	reSteamGames   = regexp.MustCompile(`(?is)href="[^"]*/games/\?tab=all"[^>]*>[\s\S]{0,240}?profile_count_link_total">\s*([0-9,]+)\s*<`)
 	reItchGameID   = regexp.MustCompile(`data-game_id="(\d+)"`)
@@ -153,7 +156,7 @@ func (f *SocialFetcher) fetchTwitchProfile(ctx context.Context, client *http.Cli
 	}
 
 	endpoint := f.decapiBase() + "/twitch/followcount/" + url.PathEscape(channel)
-	body, err := fetchPublicBytes(ctx, client, endpoint, "text/plain", maxSocialResponseSize)
+	body, err := fetchPublicBytes(ctx, client, endpoint, "text/plain")
 	if err != nil {
 		return SocialProfile{}, err
 	}
@@ -165,19 +168,74 @@ func (f *SocialFetcher) fetchTwitchProfile(ctx context.Context, client *http.Cli
 }
 
 func (f *SocialFetcher) fetchYouTubeProfile(ctx context.Context, client *http.Client, rawURL string) (SocialProfile, error) {
-	trimmed := strings.TrimSpace(rawURL)
-	if trimmed == "" {
+	candidates := buildYouTubeCandidateURLs(rawURL)
+	if len(candidates) == 0 {
 		return SocialProfile{}, errors.New("empty YouTube URL")
 	}
-	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html", maxYouTubeResponseSize)
-	if err != nil {
-		return SocialProfile{}, err
+
+	headers := map[string]string{
+		"Cookie":          youtubeConsentCookie,
+		"Accept-Language": "en-US,en;q=0.9",
 	}
-	prof := parseYouTubeChannelStats(string(body))
-	if prof.Subscribers == "" && prof.Videos == "" {
-		return SocialProfile{}, errors.New("no channel subscriber or video counts found")
+
+	var lastErr error
+	for _, endpoint := range candidates {
+		body, err := fetchPublicBytesWithHeaders(ctx, client, endpoint, "text/html", maxYouTubeResponseSize, headers)
+		if err != nil {
+			lastErr = err
+			continue
+		}
+		prof := parseYouTubeChannelStats(string(body))
+		if prof.Subscribers != "" || prof.Videos != "" {
+			return prof, nil
+		}
 	}
-	return prof, nil
+	if lastErr != nil {
+		return SocialProfile{}, lastErr
+	}
+	return SocialProfile{}, errors.New("no channel subscriber or video counts found")
+}
+
+func buildYouTubeCandidateURLs(rawURL string) []string {
+	trimmed := strings.TrimSpace(rawURL)
+	if trimmed == "" {
+		return nil
+	}
+	parsed, err := url.Parse(trimmed)
+	if err != nil || parsed.Host == "" {
+		return []string{trimmed}
+	}
+
+	// Normalize apex youtube.com to www.youtube.com so Go's http.Client keeps
+	// the SOCS consent cookie on the initial request instead of stripping it on 301.
+	normalized := *parsed
+	if strings.EqualFold(normalized.Host, "youtube.com") || strings.EqualFold(normalized.Host, "m.youtube.com") {
+		normalized.Host = "www.youtube.com"
+	}
+
+	var out []string
+	add := func(u string) {
+		if u == "" {
+			return
+		}
+		for _, existing := range out {
+			if existing == u {
+				return
+			}
+		}
+		out = append(out, u)
+	}
+
+	// Prefer the canonical @handle URL when given a bare vanity path like /WimpysWorld.
+	seg := strings.Trim(normalized.Path, "/")
+	if seg != "" && !strings.Contains(seg, "/") && !strings.HasPrefix(seg, "@") && strings.EqualFold(normalized.Host, "www.youtube.com") {
+		handleURL := normalized
+		handleURL.Path = "/@" + seg
+		add(handleURL.String())
+	}
+	add(normalized.String())
+	add(trimmed)
+	return out
 }
 
 func (f *SocialFetcher) fetchSteamProfile(ctx context.Context, client *http.Client, rawURL string) (SocialProfile, error) {
@@ -185,7 +243,7 @@ func (f *SocialFetcher) fetchSteamProfile(ctx context.Context, client *http.Clie
 	if trimmed == "" {
 		return SocialProfile{}, errors.New("empty Steam URL")
 	}
-	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html", maxSocialResponseSize)
+	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html")
 	if err != nil {
 		return SocialProfile{}, err
 	}
@@ -201,7 +259,7 @@ func (f *SocialFetcher) fetchItchProfile(ctx context.Context, client *http.Clien
 	if trimmed == "" {
 		return SocialProfile{}, errors.New("empty itch.io URL")
 	}
-	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html", maxSocialResponseSize)
+	body, err := fetchPublicBytes(ctx, client, trimmed, "text/html")
 	if err != nil {
 		return SocialProfile{}, err
 	}
@@ -219,7 +277,7 @@ func (f *SocialFetcher) fetchBlueskyProfile(ctx context.Context, client *http.Cl
 	}
 
 	endpoint := f.blueskyBase() + "/xrpc/app.bsky.actor.getProfile?actor=" + url.QueryEscape(actor)
-	body, err := fetchPublicBytes(ctx, client, endpoint, "application/json", maxSocialResponseSize)
+	body, err := fetchPublicBytes(ctx, client, endpoint, "application/json")
 	if err != nil {
 		return SocialProfile{}, err
 	}
@@ -245,7 +303,7 @@ func (f *SocialFetcher) fetchFediverseProfile(ctx context.Context, client *http.
 
 	// Primary path: standard Mastodon public account lookup API.
 	apiURL := origin + "/api/v1/accounts/lookup?acct=" + url.QueryEscape(acct)
-	if body, err := fetchPublicBytes(ctx, client, apiURL, "application/json", maxSocialResponseSize); err == nil {
+	if body, err := fetchPublicBytes(ctx, client, apiURL, "application/json"); err == nil {
 		var payload struct {
 			FollowersCount int `json:"followers_count"`
 			StatusesCount  int `json:"statuses_count"`
@@ -259,7 +317,7 @@ func (f *SocialFetcher) fetchFediverseProfile(ctx context.Context, client *http.
 	}
 
 	// Fallback path: public GoToSocial / Fediverse HTML profile page stats.
-	htmlBody, err := fetchPublicBytes(ctx, client, strings.TrimSpace(rawURL), "text/html", maxSocialResponseSize)
+	htmlBody, err := fetchPublicBytes(ctx, client, strings.TrimSpace(rawURL), "text/html")
 	if err != nil {
 		return SocialProfile{}, err
 	}
@@ -270,7 +328,17 @@ func (f *SocialFetcher) fetchFediverseProfile(ctx context.Context, client *http.
 	return prof, nil
 }
 
-func fetchPublicBytes(ctx context.Context, client *http.Client, endpoint, accept string, maxBytes int64) ([]byte, error) {
+func fetchPublicBytes(ctx context.Context, client *http.Client, endpoint, accept string) ([]byte, error) {
+	return fetchPublicBytesWithHeaders(ctx, client, endpoint, accept, maxSocialResponseSize, nil)
+}
+
+func fetchPublicBytesWithHeaders(
+	ctx context.Context,
+	client *http.Client,
+	endpoint, accept string,
+	maxBytes int64,
+	extraHeaders map[string]string,
+) ([]byte, error) {
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
 		return nil, fmt.Errorf("build request: %w", err)
@@ -279,6 +347,9 @@ func fetchPublicBytes(ctx context.Context, client *http.Client, endpoint, accept
 	req.Header.Set("Accept-Language", "en-GB,en;q=0.9")
 	if accept != "" {
 		req.Header.Set("Accept", accept)
+	}
+	for k, v := range extraHeaders {
+		req.Header.Set(k, v)
 	}
 
 	resp, err := client.Do(req)
@@ -299,6 +370,11 @@ func fetchPublicBytes(ctx context.Context, client *http.Client, endpoint, accept
 	return body, nil
 }
 
+func normalizeSpaces(s string) string {
+	replacer := strings.NewReplacer("\u00a0", " ", "\u202f", " ", "\u2009", " ")
+	return strings.TrimSpace(replacer.Replace(s))
+}
+
 func parseYouTubeChannelStats(htmlDoc string) SocialProfile {
 	start := strings.Index(htmlDoc, ytInitialDataPrefix)
 	if start < 0 {
@@ -309,6 +385,7 @@ func parseYouTubeChannelStats(htmlDoc string) SocialProfile {
 	if end < 0 {
 		return SocialProfile{}
 	}
+	rawJSON := rest[:end]
 
 	var payload struct {
 		Header struct {
@@ -329,26 +406,62 @@ func parseYouTubeChannelStats(htmlDoc string) SocialProfile {
 					} `json:"pageHeaderViewModel"`
 				} `json:"content"`
 			} `json:"pageHeaderRenderer"`
+			C4TabbedHeaderRenderer struct {
+				SubscriberCountText struct {
+					SimpleText string `json:"simpleText"`
+				} `json:"subscriberCountText"`
+				VideosCountText struct {
+					Runs []struct {
+						Text string `json:"text"`
+					} `json:"runs"`
+				} `json:"videosCountText"`
+			} `json:"c4TabbedHeaderRenderer"`
 		} `json:"header"`
-	}
-	if err := json.Unmarshal([]byte(rest[:end]), &payload); err != nil {
-		return SocialProfile{}
 	}
 
 	var prof SocialProfile
-	for _, row := range payload.Header.PageHeaderRenderer.Content.PageHeaderViewModel.Metadata.ContentMetadataViewModel.MetadataRows {
-		for _, part := range row.MetadataParts {
-			content := strings.TrimSpace(part.Text.Content)
-			if prof.Subscribers == "" {
-				if m := reYTSubs.FindStringSubmatch(content); len(m) == 2 {
-					prof.Subscribers = strings.ToUpper(m[1])
+	if err := json.Unmarshal([]byte(rawJSON), &payload); err == nil {
+		for _, row := range payload.Header.PageHeaderRenderer.Content.PageHeaderViewModel.Metadata.ContentMetadataViewModel.MetadataRows {
+			for _, part := range row.MetadataParts {
+				content := normalizeSpaces(part.Text.Content)
+				if prof.Subscribers == "" {
+					if m := reYTSubs.FindStringSubmatch(content); len(m) == 2 {
+						prof.Subscribers = strings.ToUpper(m[1])
+					}
+				}
+				if prof.Videos == "" {
+					if m := reYTVideos.FindStringSubmatch(content); len(m) == 2 {
+						prof.Videos = strings.ToUpper(m[1])
+					}
 				}
 			}
-			if prof.Videos == "" {
-				if m := reYTVideos.FindStringSubmatch(content); len(m) == 2 {
-					prof.Videos = strings.ToUpper(m[1])
-				}
+		}
+
+		c4 := payload.Header.C4TabbedHeaderRenderer
+		if prof.Subscribers == "" && c4.SubscriberCountText.SimpleText != "" {
+			if m := reYTSubs.FindStringSubmatch(normalizeSpaces(c4.SubscriberCountText.SimpleText)); len(m) == 2 {
+				prof.Subscribers = strings.ToUpper(m[1])
 			}
+		}
+		if prof.Videos == "" && len(c4.VideosCountText.Runs) > 0 {
+			var b strings.Builder
+			for _, run := range c4.VideosCountText.Runs {
+				b.WriteString(run.Text)
+			}
+			if m := reYTVideos.FindStringSubmatch(normalizeSpaces(b.String())); len(m) == 2 {
+				prof.Videos = strings.ToUpper(m[1])
+			}
+		}
+	}
+
+	if prof.Subscribers == "" {
+		if m := reYTJSONSubs.FindStringSubmatch(rawJSON); len(m) == 2 {
+			prof.Subscribers = strings.ToUpper(m[1])
+		}
+	}
+	if prof.Videos == "" {
+		if m := reYTJSONVideos.FindStringSubmatch(rawJSON); len(m) == 2 {
+			prof.Videos = strings.ToUpper(m[1])
 		}
 	}
 	return prof

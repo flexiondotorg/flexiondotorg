@@ -8,6 +8,7 @@ GitHub Pages serves the site from `flexiondotorg/flexiondotorg` with custom doma
 
 - Apex `A` and `AAAA` records point `wimpys.world` to GitHub Pages.
 - A `CNAME` record points `www.wimpys.world` to `flexiondotorg.github.io`.
+- Cloudflare Redirect Rules permanently redirect `wimpysworld.link` (and `www.wimpysworld.link`) to `https://links.wimpys.world`, and `links.wimpys.world` to `https://wimpys.world/#links`, opening the site directly on the `Links` deck.
 - GitHub Pages enforces HTTPS for the custom domain.
 
 Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.github/workflows/pages.yml` workflow uses top-level `permissions: {}`, `contents: read` on the build job, and `pages: write` plus `id-token: write` on the deploy job with `GITHUB_TOKEN` only.
@@ -16,7 +17,8 @@ Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.g
 
 The site renders a stripped-back, Balatro-inspired Top Trumps floating playing-card tabletop in **Catppuccin** palettes matching [docs/vitrine.md](vitrine.md). A single full-viewport fixed **PixiJS v8** canvas (`vendor/pixi.min.mjs`, vendored with zero npm build steps) runs behind a minimal HTML layer for the header, accessible focus buttons, quiet footer, and zoomed detail modal.
 
-- **Minimal header**: Shows the brand mark, title, subtitle, and a three-way icon theme switch (**System** monitor icon, **Light** sun icon for Catppuccin Latte, and **Dark** moon icon for Catppuccin Mocha) persisted in `localStorage`.
+- **Minimal header and editorial intro**: Shows the brand mark, title, subtitle, and a three-way icon theme switch (**System**, **Light** for Catppuccin Latte, and **Dark** for Catppuccin Mocha) persisted in `localStorage`, followed by a balanced two-column intro bio divided by a centred vertical Catppuccin aurora bar directly above the card decks (collapsing to a left-accented stack on narrow viewports).
+- **Subtle tabletop footer**: Pinned at the bottom of the page beneath a thin Catppuccin aurora fade rule and playing-card diamond pip, showing copyright, `BlueOak-1.0.0` licence link, stack credit (`Go, PixiJS, and Catppuccin`), repository link, subtle `Sponsor` link, and the last-updated date.
 - **Zero-chrome open stage**: There are no stats pills, duplicate deck tabs, sort toggles, view-mode toggles, drift-pause buttons, section headings, captions, or stage container borders. Project order is driven strictly by `vitrine.yaml`.
 - **Swirling Catppuccin shader**: A custom PixiJS v8 WebGL GLSL ES 3.00 fragment shader paints a subtle domain-warped Catppuccin background that pulses gently on deck deals and falls back cleanly if shaders are unavailable.
 - **Typography and contrast**: Cards and HTML chrome use **Work Sans** for titles and copy alongside **Fira Code** (`tabular-nums`) for structured stats, meeting Web Content Accessibility Guidelines (WCAG) AA contrast in both Mocha and Latte.
@@ -35,7 +37,7 @@ The site renders a stripped-back, Balatro-inspired Top Trumps floating playing-c
 
 ## Decks and Top Trumps playing cards
 
-Content groups into three stacked card decks placed directly above the floating cards: `Projects`, `Links`, and `Media`. `vitrine.yaml` validates `site.default_deck` against `projects`, `links`, and `media`.
+Content groups into three stacked card decks placed directly above the floating cards: `Projects`, `Links`, and `Media`. `vitrine.yaml` validates `site.default_deck` against `projects`, `links`, and `media`. Deep links via `#projects`, `#links`, `#media`, `?deck=<name>`, or the `links.wimpys.world` hostname select the initial deck automatically, and switching decks syncs the URL hash.
 
 ### Stacked deck tray
 
@@ -50,8 +52,8 @@ Each card uses `224px x 314px` logical portrait playing-card proportions, drawn 
 - **Title and description**: Bold Work Sans title with multi-line descriptions sized dynamically to fill the space above the bottom stat band (`12.4px` on Projects cards so every project description fits in full).
 - **Bottom-anchored Top Trumps stat rows**: One to two alternating tinted rows anchored to the card bottom with uppercase labels on the left and bold tabular Fira Code values on the right:
   - **Projects**: `STARS` and `UPDATED`.
-  - **Links**: Live zero-secret stats where public endpoints exist (Discord `ONLINE`/`MEMBERS`, GitHub Sponsors, Mastodon/GoToSocial `FOLLOWERS`/`POSTS`, Bluesky `FOLLOWERS`/`POSTS`, Twitch `FOLLOWERS`/`CHANNEL`, YouTube `SUBSCRIBERS`/`VIDEOS`, Steam `GAMES`/`LEVEL`, itch.io `GAMES`/`CREATOR`, Blog `LATEST`/`SITE`, Linux Matters `LATEST`/`PUBLISHED`), crisp single-row identity fields (`HANDLE`, `PROFILE`, `SITE`) for static destinations, or custom `site.links[].stats` pairs from `vitrine.yaml`.
-  - **Media**: `DURATION` and `PUBLISHED` on podcast episodes (`LATEST` and `LISTEN` on the podcast hub), and `PUBLISHED` and `SITE` on blog posts (`LATEST` and `SITE` on the blog hub).
+  - **Links**: Live zero-secret stats where public endpoints exist (Discord `ONLINE`/`MEMBERS`, GitHub `STARS`/`FOLLOWERS`, Mastodon/GoToSocial `FOLLOWERS`/`POSTS`, Bluesky `FOLLOWERS`/`POSTS`, Twitch `FOLLOWERS`/`CHANNEL`, YouTube `SUBSCRIBERS`/`VIDEOS`, Steam `GAMES`/`LEVEL`, itch.io `GAMES`/`CREATOR`, Blog `LATEST`/`SITE`, Linux Matters `LATEST`/`PUBLISHED`), crisp single-row identity fields (`HANDLE`, `PROFILE`, `SITE`) for static destinations, or custom `site.links[].stats` pairs from `vitrine.yaml`.
+  - **Media**: Individual Linux Matters podcast episodes (`DURATION` and `PUBLISHED`) and Wimpy's World blog posts (`PUBLISHED` and `SITE`), without aggregate hub cards.
 
 ### Physical pick-up, mid-air 3D flip, and portrait `5:7` back face
 
@@ -59,17 +61,17 @@ Clicking a card or activating its keyboard button proxy captures the card's live
 
 The flipped back face (`role="dialog"`, `aria-modal="true"`, `aria-labelledby="modal-title"`) keeps the playing-card border, top aurora bar, and an internal scroll area with individually clickable details:
 
-- **Projects**: Clickable logo and title (`Homepage` or `RepoURL`), clickable `owner/repo` link, untruncated description, clickable star and release pills, action buttons (`Homepage`, `GitHub`, `Releases`), and a two-column grid of clickable Haberdasher package repository tiles (`https://<host>/#<slug>`) with each host's inline SVG logo, bold host label (`APT`, `RPM`, `PKG`, `APK`, `Flatpak`, `Homebrew`, `Scoop`, `Nix`), and format subtitle, or a `Source & Releases` card link when no package hosts exist.
-- **Links**: Clickable brand icon and title, category badge, full description, live Discord online and member counts or clickable GitHub Sponsors `@login` handles (active and past), and a primary visit button.
-- **Media**: Linux Matters Podcast hub and episode cards (clickable cover art and title, Catppuccin mini HTML5 `<audio>` player with prominent Play/Pause button, draggable scrub bar, and persisted volume control sourced from RSS `<enclosure>` URLs, plus subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), and Wimpy's World Blog hub and post cards (including an in-browser Web Speech API text-to-speech mini player with Play/Pause, chunk progress scrubbing, speed control, and volume control). Audio and speech stop cleanly when the card closes.
+- **Projects**: Clickable logo and title (`Homepage` or `RepoURL`), clickable `owner/repo` link, untruncated description, clickable star and release pills, icon action buttons (`Homepage` and `GitHub`), and an **Install** two-column grid of clickable Haberdasher package repository tiles (`https://<host>/#<slug>`) alongside a `Releases` archive box tile (`Direct downloads` or latest tag).
+- **Links**: Clickable brand icon and title, category badge, full description, live Discord online and member counts or GitHub stats, primary visit button, and on the GitHub card a secondary `Sponsor on GitHub` button plus clickable active and past sponsor `@login` chips.
+- **Media**: Individual Linux Matters Podcast episode cards (clickable cover art and title, Catppuccin mini HTML5 `<audio>` player with prominent Play/Pause button, draggable scrub bar, and persisted volume control sourced from RSS `<enclosure>` URLs, plus single-row subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), and individual Wimpy's World Blog post cards (including an in-browser Web Speech API text-to-speech mini player with Play/Pause, chunk progress scrubbing, speed control, and volume control). Audio and speech stop cleanly when the card closes.
 
-Visitors dismiss the card by clicking outside it, clicking the close button, or pressing `Esc`, which triggers a `340ms` reverse flight (`rotateY(180deg -> 0deg)`) back into the card's live tabletop slot before revealing the PixiJS sprite and restoring focus. Focus stays trapped inside the back face while open, and `prefers-reduced-motion: reduce` opens and closes cleanly without flight, spin, or centre float.
+Visitors dismiss the card by clicking any non-interactive area of the flipped card, clicking outside it, or pressing `Esc`, which triggers a `340ms` reverse flight (`rotateY(180deg -> 0deg)`) back into the card's live tabletop slot before revealing the PixiJS sprite and clearing any lingering pointer selection. Focus stays trapped inside the back face while open, keyboard opens restore focus on `Esc`, and `prefers-reduced-motion: reduce` opens and closes cleanly without flight, spin, or centre float.
 
 ## Motion, interaction, and accessibility
 
 - **Scroll-synced open canvas**: The PixiJS world container tracks `world.y = -window.scrollY` alongside a `#scroll-spacer` element so cards fly in freely from the viewport edges and scroll naturally without clipping.
 - **Sequential deck deal-out and fast recall**: Cards launch farthest-first (`62ms` stagger) from their portrait `5:7` deck at deck scale, glide out with a gentle dealer wrist flick (`±28deg` to `±42deg`) and arrival sparkles, and leave a dashed placeholder behind. Switching decks reclaims dealt cards nearest-first (`30ms` stagger, `310ms` flight, `±22deg` to `±35deg` bank) with arrival sparkles as the home deck rebuilds, then chains straight into the newly selected deck's sequential deal.
-- **Idle float and hover 3D tilt**: Cards bob and rock gently (`±4px`, `±1.6deg`). Hovering or focusing a card pops it forward (`scale: 1.07`), raises its z-order, tracks cursor tilt, and sweeps a Catppuccin holographic foil sheen across the face.
+- **Idle float and hover 3D perspective tilt**: Cards bob and rock gently (`±4px`, `±1.6deg`). Hovering or focusing a card pops it forward (`scale: 1.06`), raises its z-order, projects true 3D perspective corner tilt via `PIXI.PerspectiveMesh` (`±12deg` yaw, `±10deg` pitch, `850px` camera distance) with opposing shadow lift, and glides a restrained dual-diagonal Catppuccin satin sheen across the tilted card face.
 - **Keyboard and screen-reader layer**: Transparent focusable buttons in `#a11y-layer` align 1:1 with the three decks and active cards, supporting `Tab`, arrow keys, `Home`, `End`, `Enter`, and `Space` with visible `:focus-visible` outlines.
 - **Silent OS reduced motion**: Under `@media (prefers-reduced-motion: reduce)`, spin, deal flights, idle bob, shader motion, sparkles, and flip transitions stop automatically with no visible toggle button.
 

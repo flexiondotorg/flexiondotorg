@@ -11,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 //go:embed web/* web/vendor/*
@@ -21,6 +22,9 @@ type indexTemplateData struct {
 	Description string
 	URL         string
 	Domain      string
+	Year        int
+	RepoURL     string
+	LicenseURL  string
 	SiteData    *SiteData
 	Data        *SiteData
 }
@@ -121,12 +125,27 @@ func renderIndexHTML(data *SiteData) ([]byte, error) {
 		desc = data.Profile.BioPlainText
 	}
 
+	year := time.Now().UTC().Year()
+	if parsed, parseErr := time.Parse(time.RFC3339, strings.TrimSpace(data.GeneratedAt)); parseErr == nil && parsed.Year() > 0 {
+		year = parsed.Year()
+	}
+
+	handle := strings.TrimSpace(data.Profile.Handle)
+	repoURL := "https://github.com/flexiondotorg/flexiondotorg"
+	if handle != "" {
+		repoURL = "https://github.com/" + handle + "/" + handle
+	}
+	licenseURL := repoURL + "/blob/main/LICENSE"
+
 	var buf bytes.Buffer
 	err = tmpl.Execute(&buf, indexTemplateData{
 		Title:       title,
 		Description: desc,
 		URL:         strings.TrimSpace(data.Profile.URL),
 		Domain:      strings.TrimSpace(data.Profile.Domain),
+		Year:        year,
+		RepoURL:     repoURL,
+		LicenseURL:  licenseURL,
 		SiteData:    data,
 		Data:        data,
 	})
