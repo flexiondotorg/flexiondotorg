@@ -14,8 +14,8 @@ mcp:
   playwright: true
 
 repository:
-  description: A ✨special ✨ repository
-  homepage: https://github.com/flexiondotorg # tailor: inferred homepage "https://github.com/flexiondotorg"
+  description: "A GitHub profile with panache, animated Catppuccin SVG cards, and the wimpys.world portfolio"
+  homepage: https://wimpys.world
   has_wiki: false
   has_discussions: false
   has_projects: false
@@ -37,6 +37,17 @@ repository:
   secret_scanning: enabled
   secret_scanning_push_protection: enabled
   secret_scanning_non_provider_patterns: enabled
+  topics:
+    - github-profile
+    - github-profile-readme
+    - go
+    - golang
+    - svg
+    - catppuccin
+    - github-actions
+    - github-pages
+    - portfolio
+    - nix
 
 immutable_releases:
   enabled: false

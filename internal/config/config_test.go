@@ -12,7 +12,10 @@ func TestPresets(t *testing.T) {
 	t.Parallel()
 
 	presets := Presets()
-	for _, name := range []string{PresetCatppuccinMocha, PresetCatppuccinLatte, PresetObsidianGilt} {
+	if len(presets) != 2 {
+		t.Fatalf("Presets() returned %d presets, want 2", len(presets))
+	}
+	for _, name := range []string{PresetCatppuccinMocha, PresetCatppuccinLatte} {
 		p, ok := presets[name]
 		if !ok {
 			t.Fatalf("missing built-in preset %q", name)
@@ -85,29 +88,6 @@ func TestPresets(t *testing.T) {
 	}
 	if got := presets[PresetCatppuccinLatte]; got != wantLatte {
 		t.Fatalf("catppuccin-latte palette mismatch:\ngot:  %+v\nwant: %+v", got, wantLatte)
-	}
-
-	wantObsidian := Palette{
-		Base:            "#121216",
-		Mantle:          "#0d0d11",
-		Surface0:        "#19191f",
-		Surface1:        "#7a5e25",
-		Text:            "#f4efe4",
-		Subtext:         "#b3aa99",
-		Muted:           "#7d7668",
-		AccentPrimary:   "#cfa84f",
-		AccentSecondary: "#f0d890",
-		AccentTertiary:  "#7a5e25",
-		AccentPink:      "#f0d890",
-		AccentGreen:     "#4fb885",
-		AccentRed:       "#c9545c",
-		AccentPeach:     "#cfa84f",
-		AccentYellow:    "#f0d890",
-		AccentSapphire:  "#6c9bc9",
-		IsLight:         false,
-	}
-	if got := presets[PresetObsidianGilt]; got != wantObsidian {
-		t.Fatalf("obsidian-gilt palette mismatch:\ngot:  %+v\nwant: %+v", got, wantObsidian)
 	}
 
 	// Mutating the returned map must not alter built-in presets.
@@ -187,10 +167,10 @@ func TestResolvePaletteDualPresetsAndValidation(t *testing.T) {
 			wantLight: PresetCatppuccinLatte,
 		},
 		{
-			name:      "legacy preset obsidian-gilt applies to both dark and light",
-			theme:     ThemeConfig{Preset: PresetObsidianGilt},
-			wantDark:  PresetObsidianGilt,
-			wantLight: PresetObsidianGilt,
+			name:      "dark_preset latte only falls back light to dark_preset",
+			theme:     ThemeConfig{DarkPreset: PresetCatppuccinLatte},
+			wantDark:  PresetCatppuccinLatte,
+			wantLight: PresetCatppuccinLatte,
 		},
 		{
 			name:      "explicit preset mocha applies to both dark and light",
@@ -205,28 +185,28 @@ func TestResolvePaletteDualPresetsAndValidation(t *testing.T) {
 			wantLight: PresetCatppuccinLatte,
 		},
 		{
-			name:      "explicit dark_preset obsidian-gilt and light_preset latte",
-			theme:     ThemeConfig{DarkPreset: PresetObsidianGilt, LightPreset: PresetCatppuccinLatte},
-			wantDark:  PresetObsidianGilt,
+			name:      "explicit dark_preset mocha and light_preset latte",
+			theme:     ThemeConfig{DarkPreset: PresetCatppuccinMocha, LightPreset: PresetCatppuccinLatte},
+			wantDark:  PresetCatppuccinMocha,
 			wantLight: PresetCatppuccinLatte,
 		},
 		{
-			name:      "dark_preset obsidian-gilt only falls back light to dark_preset",
-			theme:     ThemeConfig{DarkPreset: PresetObsidianGilt},
-			wantDark:  PresetObsidianGilt,
-			wantLight: PresetObsidianGilt,
+			name:      "explicit dark_preset latte and light_preset mocha",
+			theme:     ThemeConfig{DarkPreset: PresetCatppuccinLatte, LightPreset: PresetCatppuccinMocha},
+			wantDark:  PresetCatppuccinLatte,
+			wantLight: PresetCatppuccinMocha,
 		},
 		{
 			name:      "preset with light_preset override",
-			theme:     ThemeConfig{Preset: PresetObsidianGilt, LightPreset: PresetCatppuccinLatte},
-			wantDark:  PresetObsidianGilt,
+			theme:     ThemeConfig{Preset: PresetCatppuccinMocha, LightPreset: PresetCatppuccinLatte},
+			wantDark:  PresetCatppuccinMocha,
 			wantLight: PresetCatppuccinLatte,
 		},
 		{
 			name:      "preset with dark_preset override",
-			theme:     ThemeConfig{Preset: PresetObsidianGilt, DarkPreset: PresetCatppuccinMocha},
+			theme:     ThemeConfig{Preset: PresetCatppuccinLatte, DarkPreset: PresetCatppuccinMocha},
 			wantDark:  PresetCatppuccinMocha,
-			wantLight: PresetObsidianGilt,
+			wantLight: PresetCatppuccinLatte,
 		},
 	}
 
@@ -274,10 +254,10 @@ func TestResolvePaletteDualPresetsAndValidation(t *testing.T) {
 	}
 
 	// Invalid hex overrides fail.
-	badHexes := []string{"121216", "#fff", "#12345g", "#1234567", "rgb(0,0,0)"}
+	badHexes := []string{"1e1e2e", "#fff", "#12345g", "#1234567", "rgb(0,0,0)"}
 	for _, bad := range badHexes {
 		_, err := ResolvePalette(Theme{
-			Preset:    PresetObsidianGilt,
+			Preset:    PresetCatppuccinMocha,
 			Overrides: Palette{AccentRed: bad},
 		})
 		if err == nil {
@@ -355,12 +335,12 @@ github:
 	}
 
 	// Legacy single-theme preset parses identically for dark and light.
-	legacy, err := Parse([]byte("theme:\n  preset: obsidian-gilt\n"))
+	legacy, err := Parse([]byte("theme:\n  preset: catppuccin-latte\n"))
 	if err != nil {
 		t.Fatalf("Parse legacy preset failed: %v", err)
 	}
-	if legacy.Theme.DarkPreset != PresetObsidianGilt || legacy.Theme.LightPreset != PresetObsidianGilt {
-		t.Errorf("legacy preset resolved to dark=%q light=%q, want obsidian-gilt for both", legacy.Theme.DarkPreset, legacy.Theme.LightPreset)
+	if legacy.Theme.DarkPreset != PresetCatppuccinLatte || legacy.Theme.LightPreset != PresetCatppuccinLatte {
+		t.Errorf("legacy preset resolved to dark=%q light=%q, want catppuccin-latte for both", legacy.Theme.DarkPreset, legacy.Theme.LightPreset)
 	}
 
 	fullYAML := `
@@ -378,7 +358,7 @@ profile:
       slug: website
       url: https://wimpys.world
       icon: globe
-      accent: gilt
+      accent: mauve
 theme:
   dark_preset: catppuccin-mocha
   light_preset: catppuccin-latte

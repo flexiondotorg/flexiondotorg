@@ -378,6 +378,7 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		`alt="VIDEOS &amp; STREAMS"`,
 		"[Video 1](https://youtube.com/watch?v=1)",
 		"./assets/twitch-status-dark.svg",
+		`<p align="center"><sub>Crafted with <a href="https://github.com/flexiondotorg/flexiondotorg/tree/main/cmd/vitrine">Vitrine</a></sub></p>`,
 	}
 	prevIdx := -1
 	for _, marker := range orderMarkers {
@@ -389,6 +390,11 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 			t.Errorf("marker %q (pos %d) must appear after previous marker (pos %d):\n%s", marker, idx, prevIdx, readme)
 		}
 		prevIdx = idx
+	}
+
+	const wantFooter = `<p align="center"><sub>Crafted with <a href="https://github.com/flexiondotorg/flexiondotorg/tree/main/cmd/vitrine">Vitrine</a></sub></p>`
+	if !strings.HasSuffix(strings.TrimSpace(readme), wantFooter) {
+		t.Errorf("rendered README must end with Vitrine footer %q:\n%s", wantFooter, readme)
 	}
 
 	t.Run("youtube only", func(t *testing.T) {
@@ -441,6 +447,9 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		got := string(b)
 		if strings.Contains(got, "section-videos") || strings.Contains(got, "twitch-status") || strings.Contains(got, "[Video 1]") {
 			t.Errorf("disabled videos/streams must be omitted:\n%s", got)
+		}
+		if !strings.HasSuffix(strings.TrimSpace(got), wantFooter) {
+			t.Errorf("rendered README without videos/streams must still end with Vitrine footer %q:\n%s", wantFooter, got)
 		}
 	})
 }

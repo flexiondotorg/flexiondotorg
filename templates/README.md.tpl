@@ -137,3 +137,5 @@
 </p>
 {{- end}}
 {{- end}}
+
+<p align="center"><sub>Crafted with <a href="https://github.com/flexiondotorg/flexiondotorg/tree/main/cmd/vitrine">Vitrine</a></sub></p>

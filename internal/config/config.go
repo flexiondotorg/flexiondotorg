@@ -12,8 +12,6 @@ import (
 )
 
 const (
-	// PresetObsidianGilt is the built-in Obsidian and Gilt palette preset.
-	PresetObsidianGilt = "obsidian-gilt"
 	// PresetCatppuccinMocha is the built-in Catppuccin Mocha dark palette preset.
 	PresetCatppuccinMocha = "catppuccin-mocha"
 	// PresetCatppuccinLatte is the built-in Catppuccin Latte light palette preset.
@@ -89,25 +87,6 @@ var builtinPresets = map[string]Palette{
 		AccentYellow:    "#df8e1d",
 		AccentSapphire:  "#209fb5",
 		IsLight:         true,
-	},
-	PresetObsidianGilt: {
-		Base:            "#121216",
-		Mantle:          "#0d0d11",
-		Surface0:        "#19191f",
-		Surface1:        "#7a5e25",
-		Text:            "#f4efe4",
-		Subtext:         "#b3aa99",
-		Muted:           "#7d7668",
-		AccentPrimary:   "#cfa84f",
-		AccentSecondary: "#f0d890",
-		AccentTertiary:  "#7a5e25",
-		AccentPink:      "#f0d890",
-		AccentGreen:     "#4fb885",
-		AccentRed:       "#c9545c",
-		AccentPeach:     "#cfa84f",
-		AccentYellow:    "#f0d890",
-		AccentSapphire:  "#6c9bc9",
-		IsLight:         false,
 	},
 }
 

@@ -1,6 +1,6 @@
 # Vitrine design and architecture
 
-Vitrine is a Go command-line interface (`cmd/vitrine`) that builds dynamic README files for GitHub profiles and animated Scalable Vector Graphics (SVG) tiles. Configuration lives in `vitrine.yaml` and layout lives in `templates/README.md.tpl`. No user-specific values sit in Go source code, so any developer can fork the repository or run the binary with another configuration file.
+Vitrine is a Go command-line interface (`cmd/vitrine`) that builds dynamic README files for GitHub profiles and animated Scalable Vector Graphics (SVG) tiles. Configuration lives in `vitrine.yaml` and layout lives in `templates/README.md.tpl`. No user-specific values sit in Go source code, so any developer can fork the repository or run the binary with another configuration file. For setup, flags, and configuration examples, read the [Vitrine user guide](../cmd/vitrine/README.md).
 
 This design replaces `muesli/readme-scribe`, `github-readme-stats`, third-party badge services for core profile tiles, and `.github/workflows/snake.yml`. Every data fetch runs without a Personal Access Token (PAT) and uses only the built-in `GITHUB_TOKEN` plus public web endpoints.
 
@@ -17,7 +17,7 @@ The Go module is `github.com/flexiondotorg/flexiondotorg`. Vitrine splits CLI or
 | `internal/haberdasher/` | Fetches `haberdasher.yaml`, repository manifests, and configured standalone projects, merges records, and resolves logos. | Yes |
 | `internal/rss/` | Parses Really Simple Syndication (RSS) 2.0 feeds and YouTube Atom feeds. | Yes |
 | `internal/twitch/` | Checks live or offline channel status from public endpoints without secrets. | Optional |
-| `internal/svg/` | Renders modular animated SVG tiles with Catppuccin and preset theme tokens plus reduced-motion rules. | No |
+| `internal/svg/` | Renders modular animated SVG tiles with Catppuccin theme tokens plus reduced-motion rules. | No |
 | `internal/render/` | Executes `templates/README.md.tpl` with `<picture>` helpers and writes final Markdown output. | No |
 
 ## Zero-PAT data sources
@@ -85,7 +85,7 @@ GitHub blocks external image references inside rendered SVGs, so Vitrine embeds 
 
 ### Package repositories shelf
 
-Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `brew`, `scoop`, and `nix` on `.wimpys.world`. Each tile links to `https://<host>`, displays an unframed `40x40` host logo from `https://<host>/logo.svg`, and shows the active package count from that host's `haberdasher.json` in a Catppuccin or gilt count badge.
+Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `brew`, `scoop`, and `nix` on `.wimpys.world`. Each tile links to `https://<host>`, displays an unframed `40x40` host logo from `https://<host>/logo.svg`, and shows the active package count from that host's `haberdasher.json` in a Catppuccin count badge.
 
 ### Feeds and Twitch
 
@@ -122,11 +122,10 @@ The `flexiondotorg` profile uses **Catppuccin Mocha** for GitHub dark mode (`-da
 
 ### Built-in theme presets
 
-Vitrine ships with three built-in presets selectable in `vitrine.yaml`, plus field-level custom hex overrides for any token:
+Vitrine ships with two built-in Catppuccin presets selectable in `vitrine.yaml`, plus field-level custom hex overrides for any token:
 
-- `catppuccin-mocha` (active dark variant for `flexiondotorg/flexiondotorg`)
-- `catppuccin-latte` (active light variant for `flexiondotorg/flexiondotorg`)
-- `obsidian-gilt` (optional dark collector-card preset retained for custom profiles)
+- `catppuccin-mocha` (dark default, active dark variant for `flexiondotorg/flexiondotorg`)
+- `catppuccin-latte` (light default, active light variant for `flexiondotorg/flexiondotorg`)
 
 ### Typography, borders, and logos
 
@@ -149,12 +148,13 @@ The generated `README.md` arranges sections in this order:
 6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
 7. **Projects**: Two-column grid of `408x182` cards combining Haberdasher projects and top-level `projects:` entries, sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to four lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
 8. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle.
-9. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin or gilt count badges.
+9. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin count badges.
 10. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
 11. **Recent Releases**: Latest releases across configured owners, Haberdasher projects, and top-level `projects:` entries.
 12. **Starred**: Open list of recent starred repositories excluding `exclude_owners`.
 13. **Blog**: Recent posts from the Wimpy's World blog RSS feed showing estimated reading time, age, and summary.
 14. **Videos & Streams (`VIDEOS & STREAMS`)**: Recent YouTube videos with the Twitch live or offline status button below (titled `VIDEOS` or `STREAMS` when only one source is enabled).
+15. **Footer**: Quiet centred `Crafted with Vitrine` line linking to [`cmd/vitrine`](../cmd/vitrine/README.md).
 
 Vitrine replaces the contribution snake workflow (`.github/workflows/snake.yml`), so the repository drops both that workflow and its `snake` branch.
 
