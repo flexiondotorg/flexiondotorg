@@ -50,6 +50,23 @@
 {{- end}}
 </p>
 {{- end}}
+{{- if and .Podcast .Podcast.Enabled .Podcast.Items}}
+
+<p align="center">
+  {{pictureTag .AssetBaseURL (index .SectionBases "podcast") "Podcast" 840}}
+</p>
+{{- if .Podcast.CoverURL}}
+
+<a href="{{.Podcast.SiteURL}}"><img align="right" src="{{.Podcast.CoverURL}}" alt="{{.Podcast.Title}}" width="160" height="160"></a>
+{{- end}}
+{{range .Podcast.Items}}
+- {{if .Episode}}**#{{.Episode}}** · {{end}}**[{{.Title}}]({{.URL}})**{{if .Duration}} · `{{.Duration}}`{{end}} ({{humanize .PublishedAt}})
+{{- if .Subtitle}}
+  - {{.Subtitle}}
+{{- end}}
+{{- end}}
+<br clear="right" />
+{{- end}}
 {{- if .PackageHosts}}
 
 <p align="center">
@@ -88,23 +105,6 @@
 {{range .GitHub.Starred}}
 - [**{{.RepoFullName}}**]({{.RepoURL}}) · `★ {{formatInt .Stars}}`{{if .Description}} - {{.Description}}{{end}}
 {{- end}}
-{{- end}}
-{{- if and .Podcast .Podcast.Enabled .Podcast.Items}}
-
-<p align="center">
-  {{pictureTag .AssetBaseURL (index .SectionBases "podcast") "Podcast" 840}}
-</p>
-{{- if .Podcast.CoverURL}}
-
-<a href="{{.Podcast.SiteURL}}"><img align="right" src="{{.Podcast.CoverURL}}" alt="{{.Podcast.Title}}" width="160" height="160"></a>
-{{- end}}
-{{range .Podcast.Items}}
-- {{if .Episode}}**#{{.Episode}}** · {{end}}**[{{.Title}}]({{.URL}})**{{if .Duration}} · `{{.Duration}}`{{end}} ({{humanize .PublishedAt}})
-{{- if .Subtitle}}
-  - {{.Subtitle}}
-{{- end}}
-{{- end}}
-<br clear="right" />
 {{- end}}
 {{- if and .Blog .Blog.Enabled .Blog.Items}}
 
