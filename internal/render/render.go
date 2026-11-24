@@ -102,6 +102,17 @@ type TwitchView struct {
 	File      string
 }
 
+// SponsorsView pairs GitHub Sponsors link details with its rendered SVG banner filenames.
+type SponsorsView struct {
+	Enabled   bool
+	URL       string
+	Alt       string
+	BaseName  string
+	LightFile string
+	DarkFile  string
+	File      string
+}
+
 // RenderData carries all profile configuration, fetched data, and rendered SVG
 // filenames passed into the Markdown template.
 //
@@ -114,6 +125,7 @@ type RenderData struct {
 	HeroFile      string
 	NavPills      []NavPillView
 	Discord       *DiscordView
+	Sponsors      *SponsorsView
 	Projects      []ProjectView
 	PackageHosts  []PackageHostView
 	StatsBase     string

@@ -264,6 +264,12 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 				URL:      "https://wimpysworld.io/discord",
 				BaseName: "discord",
 			},
+			Sponsors: &SponsorsView{
+				Enabled:  true,
+				URL:      "https://github.com/sponsors/flexiondotorg",
+				Alt:      "Sponsor on GitHub",
+				BaseName: "sponsors",
+			},
 			StatsBase: "stats",
 			StatsFile: "stats-light.svg",
 			Projects: []ProjectView{
@@ -360,15 +366,16 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		"Short bio line.",
 		"./assets/discord-dark.svg",
 		"./assets/stats-dark.svg",
-		"Sponsor on GitHub",
 		"./assets/section-projects-dark.svg",
+		"./assets/project-quickemu-dark.svg",
+		`<a href="https://github.com/sponsors/flexiondotorg"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors-dark.svg"><img src="./assets/sponsors-light.svg" alt="Sponsor on GitHub" width="840"></picture></a>`,
 		"./assets/section-podcast-dark.svg",
 		"- **#94** · **[Episode 1](https://linuxmatters.sh/1)** · `35 min` (today)",
 		"  - Short episode subtitle.",
 		"- **[Episode Plain](https://linuxmatters.sh/2)** (2 days ago)",
 		"./assets/section-packages-dark.svg",
-		"./assets/section-contributions-dark.svg",
 		"./assets/section-releases-dark.svg",
+		"./assets/section-contributions-dark.svg",
 		"./assets/section-starred-dark.svg",
 		"./assets/section-blog-dark.svg",
 		"- **[Post 1](https://wimpysworld.com/1)** · `4 min read` (today)",
@@ -450,6 +457,23 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		}
 		if !strings.HasSuffix(strings.TrimSpace(got), wantFooter) {
 			t.Errorf("rendered README without videos/streams must still end with Vitrine footer %q:\n%s", wantFooter, got)
+		}
+	})
+
+	t.Run("nil sponsors fallback", func(t *testing.T) {
+		t.Parallel()
+		d := makeData()
+		d.Sponsors = nil
+		b, err := File(tmplPath, d)
+		if err != nil {
+			t.Fatalf("File error: %v", err)
+		}
+		got := string(b)
+		if strings.Contains(got, "sponsors-dark.svg") {
+			t.Errorf("nil Sponsors must not emit sponsors-dark.svg:\n%s", got)
+		}
+		if !strings.Contains(got, `href="https://github.com/sponsors/flexiondotorg">Sponsor on GitHub</a>`) {
+			t.Errorf("nil Sponsors fallback link missing:\n%s", got)
 		}
 	})
 }

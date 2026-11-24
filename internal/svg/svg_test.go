@@ -245,6 +245,15 @@ func TestRenderAllTilesStrictCompliance(t *testing.T) {
 		}
 		assertValidGitHubSVG(t, tc.name+"/discord", discord)
 
+		sponsors, err := r.RenderSponsorsBanner(SponsorsData{
+			Active: []string{"alice", "bob"},
+			Past:   []string{"fredre", "jmelahman", "da-moon"},
+		})
+		if err != nil {
+			t.Fatalf("%s RenderSponsorsBanner error: %v", tc.name, err)
+		}
+		assertValidGitHubSVG(t, tc.name+"/sponsors", sponsors)
+
 		divider, err := r.RenderSectionDivider(SectionData{
 			Title:    "CURATED PROJECTS",
 			Subtitle: "SORTED BY LATEST RELEASE",
@@ -310,6 +319,8 @@ func TestCatppuccinMochaAndLattePalettesAndFonts(t *testing.T) {
 		out["stats"] = string(b)
 		b, _ = r.RenderDiscordBanner(DiscordData{Online: 169, Members: 2857})
 		out["discord"] = string(b)
+		b, _ = r.RenderSponsorsBanner(SponsorsData{Past: []string{"fredre", "jmelahman"}})
+		out["sponsors"] = string(b)
 		b, _ = r.RenderSectionDivider(SectionData{Title: "PROJECTS"})
 		out["divider"] = string(b)
 		b, _ = r.RenderTwitchStatus(TwitchData{Live: true, Uptime: "1h 12m"})
@@ -1062,4 +1073,181 @@ func TestPaletteByNameAndHelpers(t *testing.T) {
 	if got := FormatCompactCount(1420); got != "1.4k" {
 		t.Errorf("FormatCompactCount(1420) = %q, want 1.4k", got)
 	}
+}
+
+func TestRenderSponsorsBanner(t *testing.T) {
+	t.Parallel()
+
+	mocha := CatppuccinMochaPalette()
+	latte := CatppuccinLattePalette()
+
+	pastSeventeen := []string{
+		"fredre", "jmelahman", "da-moon", "mmartial", "castrojo", "roryrjb",
+		"sonwh98", "casmokey", "the-shank", "ipkpjersi", "AlbanDAVID", "Simmonz",
+		"CreeperLKF", "v-nils", "gthelding", "edgeform", "user8446",
+	}
+
+	t.Run("zero active and 17 past sponsors mocha and latte", func(t *testing.T) {
+		t.Parallel()
+		for _, tc := range []struct {
+			name string
+			p    Palette
+		}{
+			{name: "mocha", p: mocha},
+			{name: "latte", p: latte},
+		} {
+			r := NewRenderer(tc.p)
+			raw, err := r.RenderSponsorsBanner(SponsorsData{
+				Past: pastSeventeen,
+			})
+			if err != nil {
+				t.Fatalf("%s RenderSponsorsBanner error: %v", tc.name, err)
+			}
+			assertValidGitHubSVG(t, "sponsors-17-"+tc.name, raw)
+			s := string(raw)
+
+			m := reRootDims.FindStringSubmatch(s)
+			if len(m) != 3 {
+				t.Fatalf("%s: missing root width/height", tc.name)
+			}
+			w, _ := strconv.Atoi(m[1])
+			h, _ := strconv.Atoi(m[2])
+			if w != 840 {
+				t.Errorf("%s: width = %d, want 840", tc.name, w)
+			}
+			if h <= sponsorsMinHeight {
+				t.Errorf("%s: height = %d, want > %d for 17 wrapped past sponsors", tc.name, h, sponsorsMinHeight)
+			}
+
+			for _, login := range pastSeventeen {
+				if !strings.Contains(s, login) {
+					t.Errorf("%s: missing past sponsor %q in rendered SVG", tc.name, login)
+				}
+			}
+			if strings.Contains(s, "more</text>") || strings.Contains(s, "…") {
+				t.Errorf("%s: 17 past sponsors must not be truncated:\n%s", tc.name, s)
+			}
+
+			for _, want := range []string{
+				`fill="url(#card-bg)"`,
+				fmt.Sprintf(`stroke="%s" stroke-width="1.5"`, tc.p.Surface1),
+				`clip-path="url(#sponsors-clip)"`,
+				`sponsors-cta-border`,
+				`sponsors-cta-fill`,
+				`sponsors-text-scrim`,
+				`vitrine-heart-rise-a`,
+				`vitrine-heart-rise-b`,
+				`vitrine-heart-rise-c`,
+				`vitrine-heart-sway-l`,
+				`vitrine-heart-sway-r`,
+				`vitrine-heart-beat`,
+				`animation-delay:-`,
+				`Sponsor on GitHub`,
+				`Past sponsors: `,
+				fmt.Sprintf(`fill="%s"`, tc.p.AccentPink),
+				fmt.Sprintf(`fill="%s"`, tc.p.AccentRed),
+				fmt.Sprintf(`fill="%s"`, tc.p.AccentPeach),
+				fmt.Sprintf(`fill="%s"`, tc.p.AccentPrimary),
+			} {
+				if !strings.Contains(s, want) {
+					t.Errorf("%s: RenderSponsorsBanner missing %q", tc.name, want)
+				}
+			}
+
+			if strings.Contains(s, `stroke="url(#cat-accent)"`) {
+				t.Errorf("%s: RenderSponsorsBanner must use neutral Surface1 border, not url(#cat-accent)", tc.name)
+			}
+		}
+	})
+
+	t.Run("active and past sponsors", func(t *testing.T) {
+		t.Parallel()
+		r := NewRenderer(mocha)
+		raw, err := r.RenderSponsorsBanner(SponsorsData{
+			Active: []string{"alice", "@bob"},
+			Past:   []string{"@charlie", "dana"},
+		})
+		if err != nil {
+			t.Fatalf("RenderSponsorsBanner(active+past) error: %v", err)
+		}
+		assertValidGitHubSVG(t, "sponsors-active-past", raw)
+		s := string(raw)
+		for _, want := range []string{
+			"Thank you to my sponsors",
+			"Sponsored by ",
+			"@alice, @bob",
+			"Past sponsors: ",
+			"charlie, dana",
+			"Sponsor on GitHub",
+		} {
+			if !strings.Contains(s, want) {
+				t.Errorf("active+past SVG missing %q:\n%s", want, s)
+			}
+		}
+		if strings.Contains(s, "@charlie") {
+			t.Errorf("past sponsors must not render with @ prefix")
+		}
+	})
+
+	t.Run("zero sponsors invitation state", func(t *testing.T) {
+		t.Parallel()
+		r := NewRenderer(latte)
+		raw, err := r.RenderSponsorsBanner(SponsorsData{})
+		if err != nil {
+			t.Fatalf("RenderSponsorsBanner(empty) error: %v", err)
+		}
+		assertValidGitHubSVG(t, "sponsors-empty", raw)
+		s := string(raw)
+
+		m := reRootDims.FindStringSubmatch(s)
+		if len(m) != 3 {
+			t.Fatalf("missing root width/height")
+		}
+		h, _ := strconv.Atoi(m[2])
+		if h != sponsorsMinHeight {
+			t.Errorf("empty sponsors height = %d, want minimum %d", h, sponsorsMinHeight)
+		}
+		if !strings.Contains(s, "Enjoy my work?") || !strings.Contains(s, "Sponsor on GitHub") {
+			t.Errorf("empty sponsors SVG missing invitation copy or CTA:\n%s", s)
+		}
+		if strings.Contains(s, "Past sponsors:") || strings.Contains(s, "Sponsored by ") {
+			t.Errorf("empty sponsors SVG must omit sponsor list prefixes")
+		}
+	})
+
+	t.Run("large sponsor lists overflow gracefully", func(t *testing.T) {
+		t.Parallel()
+		var manyActive, manyPast []string
+		for i := range 36 {
+			manyActive = append(manyActive, fmt.Sprintf("active-sponsor-%02d", i+1))
+		}
+		for i := range 52 {
+			manyPast = append(manyPast, fmt.Sprintf("past-sponsor-%02d", i+1))
+		}
+
+		r := NewRenderer(mocha)
+		raw, err := r.RenderSponsorsBanner(SponsorsData{
+			Active: manyActive,
+			Past:   manyPast,
+		})
+		if err != nil {
+			t.Fatalf("RenderSponsorsBanner(overflow) error: %v", err)
+		}
+		assertValidGitHubSVG(t, "sponsors-overflow", raw)
+		s := string(raw)
+
+		reMore := regexp.MustCompile(`\+\d+ more`)
+		matches := reMore.FindAllString(s, -1)
+		if len(matches) != 2 {
+			t.Errorf("expected +N more overflow markers for both active and past lists, got %v", matches)
+		}
+		m := reRootDims.FindStringSubmatch(s)
+		if len(m) != 3 {
+			t.Fatalf("missing root width/height")
+		}
+		h, _ := strconv.Atoi(m[2])
+		if h > 220 {
+			t.Errorf("overflow height = %d, expected bounded height <= 220", h)
+		}
+	})
 }

@@ -24,20 +24,6 @@
   <a href="https://github.com/{{.Config.GitHub.Username}}">{{pictureTag .AssetBaseURL .StatsBase "GitHub statistics" 840}}</a>
 </p>
 {{- end}}
-{{- if .GitHub}}
-{{- $sponsorsURL := .Config.GitHub.SponsorsURL}}
-{{- if not $sponsorsURL}}{{$sponsorsURL = printf "https://github.com/sponsors/%s" .Config.GitHub.Username}}{{end}}
-{{- if .GitHub.Sponsors}}
-
-<p align="center"><sub>Sponsored by {{range $i, $s := .GitHub.Sponsors}}{{if $i}}, {{end}}<a href="{{$s.URL}}">@{{$s.Login}}</a>{{end}} · <a href="{{$sponsorsURL}}">Sponsor on GitHub</a></sub></p>
-{{- else if .Config.GitHub.Username}}
-
-<p align="center"><sub>Enjoy my work? <a href="{{$sponsorsURL}}">Sponsor on GitHub</a></sub></p>
-{{- end}}
-{{- if .GitHub.PastSponsors}}
-<p align="center"><sub>Past sponsors: {{range $i, $s := .GitHub.PastSponsors}}{{if $i}}, {{end}}{{$s.Login}}{{end}}</sub></p>
-{{- end}}
-{{- end}}
 {{- if .Projects}}
 
 <p align="center">
@@ -49,6 +35,17 @@
   <a href="{{.URL}}">{{pictureTag $.AssetBaseURL .BaseName .Name 408}}</a>
 {{- end}}
 </p>
+{{- end}}
+{{- if and .Sponsors .Sponsors.Enabled .Sponsors.BaseName}}
+
+<p align="center">
+  <a href="{{.Sponsors.URL}}">{{pictureTag .AssetBaseURL .Sponsors.BaseName (or .Sponsors.Alt "Sponsor on GitHub") 840}}</a>
+</p>
+{{- else if and .GitHub .Config.GitHub.Username}}
+{{- $sponsorsURL := .Config.GitHub.SponsorsURL}}
+{{- if not $sponsorsURL}}{{$sponsorsURL = printf "https://github.com/sponsors/%s" .Config.GitHub.Username}}{{end}}
+
+<p align="center"><sub>Enjoy my work? <a href="{{$sponsorsURL}}">Sponsor on GitHub</a></sub></p>
 {{- end}}
 {{- if and .Podcast .Podcast.Enabled .Podcast.Items}}
 
@@ -79,15 +76,6 @@
 {{- end}}
 </p>
 {{- end}}
-{{- if and .GitHub .GitHub.Contributions}}
-
-<p align="center">
-  {{pictureTag .AssetBaseURL (index .SectionBases "contributions") "Community Contributions" 840}}
-</p>
-{{range .GitHub.Contributions}}
-- [**{{.RepoFullName}}**]({{.RepoURL}}) ({{humanize .OccurredAt}}){{if .Description}} - {{.Description}}{{end}}
-{{- end}}
-{{- end}}
 {{- if and .GitHub .GitHub.Releases}}
 
 <p align="center">
@@ -95,6 +83,15 @@
 </p>
 {{range .GitHub.Releases}}
 - [**{{.RepoFullName}}**]({{.RepoURL}}) ([`{{.TagName}}`]({{.ReleaseURL}}), {{humanize .PublishedAt}}){{if .Description}} - {{.Description}}{{end}}
+{{- end}}
+{{- end}}
+{{- if and .GitHub .GitHub.Contributions}}
+
+<p align="center">
+  {{pictureTag .AssetBaseURL (index .SectionBases "contributions") "Community Contributions" 840}}
+</p>
+{{range .GitHub.Contributions}}
+- [**{{.RepoFullName}}**]({{.RepoURL}}) ({{humanize .OccurredAt}}){{if .Description}} - {{.Description}}{{end}}
 {{- end}}
 {{- end}}
 {{- if and .GitHub .GitHub.Starred}}

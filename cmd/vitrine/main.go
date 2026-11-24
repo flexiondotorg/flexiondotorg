@@ -34,6 +34,7 @@ const (
 
 type cliOptions struct {
 	showVersion  bool
+	verbose      bool
 	configPath   string
 	templatePath string
 	outPath      string
@@ -135,9 +136,19 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 		SectionFiles: make(map[string]string),
 	}
 
+	logProgress := func(format string, args ...any) {
+		if opts.verbose {
+			fmt.Fprintf(deps.stderr, "vitrine: "+format+"\n", args...)
+		}
+	}
+	startedAt := time.Now()
+
+	logProgress("fetching Haberdasher projects and package hosts...")
 	catalogue := fetchHaberdasher(ctx, cfg, deps.httpClient, ghClient, deps.stderr)
 	extraRepos := projectFullNames(catalogue, cfg.Projects)
+	logProgress("fetching GitHub profile, stats, and sponsors...")
 	data.GitHub = fetchGitHubProfile(ctx, cfg, ghClient, extraRepos, deps.stderr)
+	logProgress("fetching Discord, feeds, and Twitch...")
 	discordStatus := fetchDiscordStatus(ctx, deps.httpClient, cfg.Discord, deps.stderr)
 	data.Podcast = fetchFeedSection(ctx, deps.httpClient, cfg.Feeds.Podcast, "podcast", deps.stderr)
 	data.Blog = fetchFeedSection(ctx, deps.httpClient, cfg.Feeds.Blog, "blog", deps.stderr)
@@ -148,6 +159,7 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 		return fmt.Errorf("create assets directory %q: %w", opts.assetsDir, err)
 	}
 
+	logProgress("generating SVG tiles...")
 	if err := generateSVGs(renderers, opts.assetsDir, cfg, catalogue, discordStatus, twitchStatus, opts.previewHTML != "", &data); err != nil {
 		return err
 	}
@@ -168,6 +180,7 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 		}
 	}
 
+	logProgress("done in %s", time.Since(startedAt).Round(100*time.Millisecond))
 	return nil
 }
 
@@ -177,6 +190,7 @@ func parseFlags(args []string, stderr io.Writer) (cliOptions, error) {
 	fs.SetOutput(stderr)
 
 	fs.BoolVar(&opts.showVersion, "version", false, "print version and exit")
+	fs.BoolVar(&opts.verbose, "verbose", false, "log fetch and render progress to stderr")
 	fs.StringVar(&opts.configPath, "config", "vitrine.yaml", "path to vitrine YAML configuration")
 	fs.StringVar(&opts.templatePath, "template", "templates/README.md.tpl", "path to README template")
 	fs.StringVar(&opts.outPath, "out", "README.md", "path to rendered Markdown output")
@@ -512,6 +526,9 @@ func generateSVGs(
 	if err := renderStatsAndDividers(sr, cfg, writeAsset, data); err != nil {
 		return err
 	}
+	if err := renderSponsorsBanner(sr, cfg.GitHub, data.GitHub, writeAsset, data); err != nil {
+		return err
+	}
 	return renderTwitchTiles(sr, cfg.Twitch, twitchStatus, includePreviewTiles, writeAsset, data)
 }
 
@@ -830,6 +847,67 @@ func videosSectionTitle(youtubeEnabled, twitchEnabled bool) string {
 	default:
 		return ""
 	}
+}
+
+func renderSponsorsBanner(
+	sr svgRenderers,
+	cfg config.GitHubConfig,
+	profile *gh.ProfileData,
+	writeAsset func(string, []byte) error,
+	data *render.RenderData,
+) error {
+	username := strings.TrimSpace(cfg.Username)
+	if profile == nil && username == "" {
+		return nil
+	}
+
+	var active []string
+	var past []string
+	if profile != nil {
+		for _, s := range profile.Sponsors {
+			if login := strings.TrimSpace(s.Login); login != "" {
+				active = append(active, login)
+			}
+		}
+		for _, s := range profile.PastSponsors {
+			if login := strings.TrimSpace(s.Login); login != "" {
+				past = append(past, login)
+			}
+		}
+	}
+
+	sponsorsURL := strings.TrimSpace(cfg.SponsorsURL)
+	if sponsorsURL == "" {
+		if username == "" && profile != nil {
+			username = strings.TrimSpace(profile.Stats.Username)
+		}
+		if username != "" {
+			sponsorsURL = fmt.Sprintf("https://github.com/sponsors/%s", username)
+		} else {
+			sponsorsURL = "https://github.com/sponsors"
+		}
+	}
+
+	lightFile, darkFile, err := writeDualSVG(sr, writeAsset, "sponsors", func(r *svg.Renderer) ([]byte, error) {
+		return r.RenderSponsorsBanner(svg.SponsorsData{
+			Active: active,
+			Past:   past,
+		})
+	})
+	if err != nil {
+		return err
+	}
+
+	data.Sponsors = &render.SponsorsView{
+		Enabled:   true,
+		URL:       sponsorsURL,
+		Alt:       "Sponsor on GitHub",
+		BaseName:  "sponsors",
+		LightFile: lightFile,
+		DarkFile:  darkFile,
+		File:      lightFile,
+	}
+	return nil
 }
 
 func renderTwitchTiles(

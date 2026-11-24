@@ -219,3 +219,12 @@ type TwitchData struct {
 	Uptime  string
 	Channel string
 }
+
+// SponsorsData configures the full-width animated GitHub Sponsors banner tile.
+type SponsorsData struct {
+	Active      []string
+	Past        []string
+	Headline    string
+	Subheadline string
+	CTA         string
+}

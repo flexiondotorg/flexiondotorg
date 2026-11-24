@@ -37,10 +37,10 @@ Vitrine calls only GitHub Representational State Transfer (REST) endpoints becau
 
 ### Sponsors
 
-GitHub hides sponsor lists from `GITHUB_TOKEN` on the GraphQL API. Vitrine scrapes the public GitHub Sponsors Hypertext Markup Language (HTML) partials directly:
+GitHub hides sponsor lists from `GITHUB_TOKEN` on the GraphQL API. Vitrine scrapes the public GitHub Sponsors Hypertext Markup Language (HTML) partials directly and renders them into a unified dual-theme animated `840px` Sponsors SVG banner (`sponsors-dark.svg` and `sponsors-light.svg`) with drifting Catppuccin hearts, a neutral `Surface1` border, and a `Sponsor on GitHub` call-to-action pill:
 
-- **Active sponsors**: Fetches `sponsors_partial?filter=active` and renders each active sponsor as a clickable `@handle` link beside the GitHub Sponsors link.
-- **Past sponsors**: Fetches `sponsors_partial?filter=inactive` and renders past sponsor handles on a separate understated line as plain unclickable text.
+- **Active sponsors**: Fetches `sponsors_partial?filter=active` and displays active sponsor `@handle` names inside the banner.
+- **Past sponsors**: Fetches `sponsors_partial?filter=inactive` and wraps past sponsor handles dynamically across lines inside the banner, expanding the banner height automatically.
 - **Fallback list**: Applies an optional `sponsors_fallback` list in `vitrine.yaml` when an upstream request fails or markup changes.
 
 ### Discord live banner
@@ -145,12 +145,12 @@ The generated `README.md` arranges sections in this order:
 3. **Short bio**: Concise Markdown introduction covering Quickemu, Linux Matters, Wimpy's World, and Oval Tutu (without an Ubuntu MATE mention).
 4. **Discord live banner**: Dynamic community banner showing live online presence and total member count from the invite API, widget, or Shields fallback.
 5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
-6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
-7. **Projects**: Two-column grid of `408x182` cards combining Haberdasher projects and top-level `projects:` entries, sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to four lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
+6. **Projects**: Two-column grid of `408x182` cards combining Haberdasher projects and top-level `projects:` entries, sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to four lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
+7. **Sponsors banner**: Unified `840px` dual-theme animated SVG banner (`sponsors-dark.svg` and `sponsors-light.svg`) with drifting Catppuccin hearts, a neutral `Surface1` border, wrapped active and past sponsor lists, and a `Sponsor on GitHub` call-to-action pill linking to GitHub Sponsors.
 8. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle.
 9. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin count badges.
-10. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
-11. **Recent Releases**: Latest releases across configured owners, Haberdasher projects, and top-level `projects:` entries.
+10. **Recent Releases**: Latest releases across configured owners, Haberdasher projects, and top-level `projects:` entries.
+11. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
 12. **Starred**: Open list of recent starred repositories excluding `exclude_owners`.
 13. **Blog**: Recent posts from the Wimpy's World blog RSS feed showing estimated reading time, age, and summary.
 14. **Videos & Streams (`VIDEOS & STREAMS`)**: Recent YouTube videos with the Twitch live or offline status button below (titled `VIDEOS` or `STREAMS` when only one source is enabled).

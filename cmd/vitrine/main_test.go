@@ -238,14 +238,13 @@ output:
 		`./assets/nav-mastodon-dark.svg`,
 		`./assets/discord-dark.svg`,
 		`./assets/stats-dark.svg`,
+		`<a href="https://github.com/sponsors/exampleuser"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors-dark.svg"><img src="./assets/sponsors-light.svg" alt="Sponsor on GitHub" width="840"></picture></a>`,
 		`./assets/section-contributions-dark.svg`,
 		`./assets/section-releases-dark.svg`,
 		`./assets/section-starred-dark.svg`,
 		`./assets/section-videos-dark.svg`,
 		`alt="VIDEOS &amp; STREAMS"`,
 		`./assets/twitch-status-dark.svg`,
-		`Enjoy my work? <a href="https://github.com/sponsors/exampleuser">Sponsor on GitHub</a>`,
-		`Past sponsors: alice, bob`,
 		`[**external/repo**](https://github.com/external/repo)`,
 		`[**other/project**](https://github.com/other/project) · ` + "`★ 13,647`",
 		`**[First Post](https://example.com/posts/1)** (today)`,
@@ -259,9 +258,9 @@ output:
 	ordered := []string{
 		`./assets/discord-dark.svg`,
 		`./assets/stats-dark.svg`,
-		`Sponsor on GitHub`,
-		`./assets/section-contributions-dark.svg`,
+		`./assets/sponsors-dark.svg`,
 		`./assets/section-releases-dark.svg`,
+		`./assets/section-contributions-dark.svg`,
 		`./assets/section-starred-dark.svg`,
 		`./assets/section-blog-dark.svg`,
 		`./assets/section-videos-dark.svg`,
@@ -295,6 +294,7 @@ output:
 		"nav-mastodon-light.svg", "nav-mastodon-dark.svg",
 		"discord-light.svg", "discord-dark.svg",
 		"stats-light.svg", "stats-dark.svg",
+		"sponsors-light.svg", "sponsors-dark.svg",
 		"section-contributions-light.svg", "section-contributions-dark.svg",
 		"section-releases-light.svg", "section-releases-dark.svg",
 		"section-starred-light.svg", "section-starred-dark.svg",
@@ -337,6 +337,25 @@ output:
 		t.Errorf("section-videos-dark.svg missing VIDEOS &amp; STREAMS heading:\n%s", string(videosSVG))
 	}
 
+	sponsorsDarkSVG, err := os.ReadFile(filepath.Join(assetsDir, "sponsors-dark.svg"))
+	if err != nil {
+		t.Fatalf("read sponsors-dark.svg: %v", err)
+	}
+	for _, want := range []string{"#1e1e2e", `stroke="#45475a" stroke-width="1.5"`, "alice, bob", "Sponsor on GitHub"} {
+		if !strings.Contains(string(sponsorsDarkSVG), want) {
+			t.Errorf("sponsors-dark.svg missing %q", want)
+		}
+	}
+	sponsorsLightSVG, err := os.ReadFile(filepath.Join(assetsDir, "sponsors-light.svg"))
+	if err != nil {
+		t.Fatalf("read sponsors-light.svg: %v", err)
+	}
+	for _, want := range []string{"#eff1f5", `stroke="#bcc0cc" stroke-width="1.5"`, "alice, bob", "Sponsor on GitHub"} {
+		if !strings.Contains(string(sponsorsLightSVG), want) {
+			t.Errorf("sponsors-light.svg missing %q", want)
+		}
+	}
+
 	previewBytes, err := os.ReadFile(previewPath)
 	if err != nil {
 		t.Fatalf("read preview.html: %v", err)
@@ -353,13 +372,13 @@ output:
 	if strings.Contains(darkPanel, "-light.svg") || strings.Contains(darkPanel, "<picture>") {
 		t.Errorf("dark preview panel must display -dark.svg directly without <picture> or -light.svg:\n%s", darkPanel)
 	}
-	if !strings.Contains(darkPanel, `./assets/hero-dark.svg`) || !strings.Contains(darkPanel, `./assets/twitch-live-demo-dark.svg`) {
+	if !strings.Contains(darkPanel, `./assets/hero-dark.svg`) || !strings.Contains(darkPanel, `./assets/sponsors-dark.svg`) || !strings.Contains(darkPanel, `./assets/twitch-live-demo-dark.svg`) {
 		t.Errorf("dark preview panel missing -dark.svg assets")
 	}
 	if strings.Contains(lightPanel, "-dark.svg") || strings.Contains(lightPanel, "<picture>") {
 		t.Errorf("light preview panel must display -light.svg directly without <picture> or -dark.svg:\n%s", lightPanel)
 	}
-	if !strings.Contains(lightPanel, `./assets/hero-light.svg`) || !strings.Contains(lightPanel, `./assets/twitch-offline-demo-light.svg`) {
+	if !strings.Contains(lightPanel, `./assets/hero-light.svg`) || !strings.Contains(lightPanel, `./assets/sponsors-light.svg`) || !strings.Contains(lightPanel, `./assets/twitch-offline-demo-light.svg`) {
 		t.Errorf("light preview panel missing -light.svg assets")
 	}
 }
@@ -824,4 +843,51 @@ func writeTestJSON(t *testing.T, w http.ResponseWriter, payload any) {
 	if err := json.NewEncoder(w).Encode(payload); err != nil {
 		t.Fatalf("encode json: %v", err)
 	}
+}
+
+func TestRenderSponsorsBannerCases(t *testing.T) {
+	t.Parallel()
+
+	sr := svgRenderers{
+		light: svg.NewRenderer(svg.CatppuccinLattePalette()),
+		dark:  svg.NewRenderer(svg.CatppuccinMochaPalette()),
+	}
+
+	t.Run("skipped when no profile and no username", func(t *testing.T) {
+		t.Parallel()
+		data := &render.RenderData{}
+		written := make(map[string]string)
+		err := renderSponsorsBanner(sr, config.GitHubConfig{}, nil, func(name string, b []byte) error {
+			written[name] = string(b)
+			return nil
+		}, data)
+		if err != nil {
+			t.Fatalf("renderSponsorsBanner error: %v", err)
+		}
+		if data.Sponsors != nil || len(written) != 0 {
+			t.Fatalf("expected no sponsors output when inactive, got view=%+v files=%v", data.Sponsors, written)
+		}
+	})
+
+	t.Run("renders when username set even with nil profile", func(t *testing.T) {
+		t.Parallel()
+		data := &render.RenderData{}
+		written := make(map[string]string)
+		err := renderSponsorsBanner(sr, config.GitHubConfig{Username: "flexiondotorg"}, nil, func(name string, b []byte) error {
+			written[name] = string(b)
+			return nil
+		}, data)
+		if err != nil {
+			t.Fatalf("renderSponsorsBanner error: %v", err)
+		}
+		if data.Sponsors == nil || !data.Sponsors.Enabled || data.Sponsors.URL != "https://github.com/sponsors/flexiondotorg" || data.Sponsors.BaseName != "sponsors" {
+			t.Fatalf("unexpected SponsorsView: %+v", data.Sponsors)
+		}
+		if _, ok := written["sponsors-dark.svg"]; !ok {
+			t.Errorf("missing sponsors-dark.svg")
+		}
+		if _, ok := written["sponsors-light.svg"]; !ok {
+			t.Errorf("missing sponsors-light.svg")
+		}
+	})
 }

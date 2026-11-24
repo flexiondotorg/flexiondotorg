@@ -9,6 +9,11 @@ default:
 preview:
     #!/usr/bin/env bash
     set -euo pipefail
+    url="http://127.0.0.1:18474"
+    if ! command -v miniserve >/dev/null 2>&1; then
+        echo "Error: miniserve not found. Enter the Nix dev shell (direnv allow or nix develop) first." >&2
+        exit 1
+    fi
     out="$(mktemp -d -t vitrine-preview.XXXXXX)"
     trap 'rm -rf "${out}"' EXIT
     mkdir -p "${out}/assets"
@@ -16,11 +21,15 @@ preview:
         GITHUB_TOKEN="$(gh auth token 2>/dev/null || true)"
         export GITHUB_TOKEN
     fi
+    echo "Rendering Vitrine preview..."
     go run ./cmd/vitrine \
+        -verbose \
         -config vitrine.yaml \
         -template templates/README.md.tpl \
         -out "${out}/README.md" \
         -assets-dir "${out}/assets" \
         -asset-base-url ./assets \
         -preview-html "${out}/index.html"
+    echo ""
+    echo "Vitrine preview ready at ${url} (press Ctrl-C to stop)"
     miniserve --index index.html --interfaces 127.0.0.1 --port 18474 "${out}"

@@ -11,7 +11,8 @@ Vitrine generates dual `-dark.svg` and `-light.svg` files for each enabled secti
 - Hero banner with animated Catppuccin aurora waves, title, subtitle, and link pill.
 - Social navigation pills for links such as Mastodon, Bluesky, and LinkedIn.
 - Discord community banner with live online and total member counts.
-- Five-metric GitHub statistics strip for stars, commits, pull requests, issues, and followers, plus active and past sponsor lines.
+- Five-metric GitHub statistics strip for stars, commits, pull requests, issues, and followers.
+- Animated GitHub Sponsors banner (`sponsors-dark.svg` and `sponsors-light.svg`) with floating Catppuccin hearts, wrapped active and past sponsor lists, and a `Sponsor on GitHub` call-to-action pill.
 - Two-column Projects grid with inline logos, descriptions, release tags, primary languages, star counts, and release ages.
 - Optional Package Repositories shelf from Haberdasher manifests.
 - Dynamic lists for community contributions, recent releases, starred repositories, podcasts, blog posts, YouTube videos, and Twitch live status.
@@ -49,6 +50,7 @@ This command writes output into a temporary directory and serves the preview at 
 | `-assets-dir` | `assets/generated` | Output directory for generated SVG tiles. |
 | `-asset-base-url` | `output.asset_base_url` | Base URL or relative path prefix for `<picture>` image URLs. |
 | `-preview-html` | `""` | Optional output path for a local HTML preview page for dark and light themes. |
+| `-verbose` | `false` | Log fetch and render progress to standard error. |
 | `-version` | `false` | Print the binary version and exit. |
 
 ## Configuration (`vitrine.yaml`)
