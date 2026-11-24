@@ -28,6 +28,10 @@ const (
 	DefaultConfigURL = "https://raw.githubusercontent.com/wimpysworld/haberdasher/main/haberdasher.yaml"
 	// DefaultUserAgent is sent when Fetcher.UserAgent is empty.
 	DefaultUserAgent = "vitrine/1.0"
+	// SortStars sorts projects descending by GitHub star count.
+	SortStars = "stars"
+	// SortRelease sorts projects descending by latest release timestamp.
+	SortRelease = "release"
 
 	defaultHTTPTimeout   = 30 * time.Second
 	maxConfigBytes       = 2 << 20
@@ -104,6 +108,7 @@ type Catalogue struct {
 type Options struct {
 	ConfigURL           string
 	Hosts               []string
+	Sort                string
 	LogoOverrides       map[string]string
 	PNGFallbacks        map[string]string
 	HostBaseURLOverride func(host string) string
@@ -201,10 +206,15 @@ func (f *Fetcher) getBytes(ctx context.Context, targetURL string, maxBytes int64
 
 // Fetch downloads haberdasher.yaml and every configured package host manifest,
 // enriches each curated repository via GitHub, resolves project logos, and
-// sorts projects descending by latest release timestamp.
+// sorts projects according to opts.Sort (defaulting to stars descending).
 func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 	if f == nil || f.GitHub == nil {
 		return nil, errors.New("haberdasher: GitHub RepoFetcher must not be nil")
+	}
+
+	sortMode, err := normalizeSortMode(opts.Sort)
+	if err != nil {
+		return nil, err
 	}
 
 	configURL := strings.TrimSpace(opts.ConfigURL)
@@ -303,23 +313,67 @@ func (f *Fetcher) Fetch(ctx context.Context, opts Options) (*Catalogue, error) {
 		projects = append(projects, proj)
 	}
 
-	slices.SortFunc(projects, func(a, b Project) int {
-		if !a.PublishedAt.Equal(b.PublishedAt) {
-			if a.PublishedAt.After(b.PublishedAt) {
-				return -1
-			}
-			return 1
-		}
-		if a.Stars != b.Stars {
-			return cmp.Compare(b.Stars, a.Stars)
-		}
-		return cmp.Compare(a.FullName, b.FullName)
-	})
+	sortProjects(projects, sortMode)
 
 	return &Catalogue{
 		Projects: projects,
 		Hosts:    packageHosts,
 	}, nil
+}
+
+func normalizeSortMode(sortMode string) (string, error) {
+	mode := strings.ToLower(strings.TrimSpace(sortMode))
+	switch mode {
+	case "", SortStars:
+		return SortStars, nil
+	case SortRelease:
+		return SortRelease, nil
+	default:
+		return "", fmt.Errorf("haberdasher: unknown sort mode %q", sortMode)
+	}
+}
+
+func sortProjects(projects []Project, sortMode string) {
+	mode := strings.ToLower(strings.TrimSpace(sortMode))
+	if mode == SortRelease {
+		slices.SortFunc(projects, func(a, b Project) int {
+			if c := comparePublishedDesc(a, b); c != 0 {
+				return c
+			}
+			if a.Stars != b.Stars {
+				return cmp.Compare(b.Stars, a.Stars)
+			}
+			return compareFullNameAsc(a, b)
+		})
+		return
+	}
+
+	slices.SortFunc(projects, func(a, b Project) int {
+		if a.Stars != b.Stars {
+			return cmp.Compare(b.Stars, a.Stars)
+		}
+		if c := comparePublishedDesc(a, b); c != 0 {
+			return c
+		}
+		return compareFullNameAsc(a, b)
+	})
+}
+
+func comparePublishedDesc(a, b Project) int {
+	if a.PublishedAt.Equal(b.PublishedAt) {
+		return 0
+	}
+	if a.PublishedAt.After(b.PublishedAt) {
+		return -1
+	}
+	return 1
+}
+
+func compareFullNameAsc(a, b Project) int {
+	if c := cmp.Compare(strings.ToLower(a.FullName), strings.ToLower(b.FullName)); c != 0 {
+		return c
+	}
+	return cmp.Compare(a.FullName, b.FullName)
 }
 
 func (f *Fetcher) fetchSources(ctx context.Context, configURL string) ([]string, error) {

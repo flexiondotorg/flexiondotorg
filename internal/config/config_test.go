@@ -335,6 +335,9 @@ github:
 	if !slices.Equal(minimal.Haberdasher.Hosts, wantHosts) {
 		t.Errorf("Haberdasher.Hosts = %v, want %v", minimal.Haberdasher.Hosts, wantHosts)
 	}
+	if minimal.Haberdasher.Sort != HaberdasherSortStars {
+		t.Errorf("Haberdasher.Sort = %q, want %q", minimal.Haberdasher.Sort, HaberdasherSortStars)
+	}
 	if minimal.Twitch.PrimaryBaseURL != defaultTwitchPrimary {
 		t.Errorf("Twitch.PrimaryBaseURL = %q, want %q", minimal.Twitch.PrimaryBaseURL, defaultTwitchPrimary)
 	}
@@ -396,6 +399,7 @@ github:
 haberdasher:
   enabled: true
   config_url: https://example.com/haberdasher.yaml
+  sort: release
   hosts:
     - apt.wimpys.world
   logo_overrides:
@@ -455,8 +459,13 @@ output:
 	if !slices.Equal(cfg.GitHub.ExcludeOwners, []string{"flexiondotorg", "wimpysworld"}) {
 		t.Errorf("GitHub.ExcludeOwners = %v, want [flexiondotorg wimpysworld]", cfg.GitHub.ExcludeOwners)
 	}
-	if !cfg.Haberdasher.Enabled || len(cfg.Haberdasher.Hosts) != 1 || cfg.Haberdasher.PNGFallbacks["wimpysworld/ia-get"] != "assets/ia-get.png" {
+	if !cfg.Haberdasher.Enabled || cfg.Haberdasher.Sort != HaberdasherSortRelease || len(cfg.Haberdasher.Hosts) != 1 || cfg.Haberdasher.PNGFallbacks["wimpysworld/ia-get"] != "assets/ia-get.png" {
 		t.Errorf("unexpected haberdasher config: %+v", cfg.Haberdasher)
+	}
+	if starsCfg, err := Parse([]byte("haberdasher:\n  sort: \" STARS \"\n")); err != nil {
+		t.Fatalf("Parse haberdasher.sort=STARS failed: %v", err)
+	} else if starsCfg.Haberdasher.Sort != HaberdasherSortStars {
+		t.Errorf("Haberdasher.Sort = %q, want %q", starsCfg.Haberdasher.Sort, HaberdasherSortStars)
 	}
 	if cfg.Feeds.Podcast == nil || cfg.Feeds.Podcast.MaxItems != 5 {
 		t.Errorf("unexpected podcast feed config: %+v", cfg.Feeds.Podcast)
@@ -595,6 +604,11 @@ func TestParseValidationErrors(t *testing.T) {
 			name:    "sponsor fallback missing login",
 			yaml:    "github:\n  sponsors_fallback:\n    - url: https://github.com/alice\n",
 			wantErr: "sponsors_fallback",
+		},
+		{
+			name:    "unknown haberdasher sort",
+			yaml:    "haberdasher:\n  sort: name\n",
+			wantErr: "haberdasher.sort",
 		},
 	}
 

@@ -64,7 +64,7 @@ Vitrine reads the curated project list from `haberdasher.yaml` and fetches all e
 - `https://scoop.wimpys.world/haberdasher.json`
 - `https://nix.wimpys.world/haberdasher.json`
 
-For each curated project, Vitrine enriches the entry with metadata from the GitHub REST API (description, star count, primary language, latest release tag, and release timestamp). Vitrine sorts project cards in descending order by latest release date on GitHub so the newest software appears first.
+For each curated project, Vitrine enriches the entry with metadata from the GitHub REST API (description, star count, primary language, latest release tag, and release timestamp). Vitrine sorts project cards descending by GitHub star count by default, with latest release date and project name as tie-breakers. Set `haberdasher.sort` in `vitrine.yaml` to `stars` or `release` to control the sort order.
 
 ### Logo resolution order
 
@@ -142,7 +142,7 @@ The generated `README.md` arranges sections in this order:
 4. **Discord live banner**: Dynamic community banner showing live online presence and total member count from the invite API, widget, or Shields fallback.
 5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
 6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
-7. **Projects**: Two-column grid of `408x182` Haberdasher project cards sorted descending by latest release date. Each card shows an unframed `64x64` logo, title, up to three lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
+7. **Projects**: Two-column grid of `408x182` Haberdasher project cards sorted descending by GitHub star count by default (configurable via `haberdasher.sort: stars` or `release`). Each card shows an unframed `64x64` logo, title, up to three lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
 8. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin or gilt count badges.
 9. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
 10. **Recent Releases**: Latest releases across configured owners and Haberdasher projects.

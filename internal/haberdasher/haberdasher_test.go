@@ -266,8 +266,49 @@ func TestFetchCatalogueHostsLogoChainAndSorting(t *testing.T) {
 		t.Fatalf("unexpected nix host: %+v", cat.Hosts[2])
 	}
 
-	// Verify Projects sorting: PublishedAt desc, then Stars desc, then FullName asc.
-	wantOrder := []string{
+	// Verify default Projects sorting: Stars desc, then PublishedAt desc, then FullName asc.
+	wantStarsOrder := []string{
+		"wimpysworld/WonKey",       // 200 stars
+		"wimpysworld/ia-get",       // 100 stars
+		"wimpysworld/tailor",       // 40 stars
+		"wimpysworld/nyala",        // 30 stars
+		"linuxmatters/jive-vocals", // 15 stars
+		"wimpysworld/pages-png",    // 12 stars
+		"wimpysworld/root-svg",     // 11 stars
+		"wimpysworld/root-png",     // 10 stars
+	}
+	if len(cat.Projects) != len(wantStarsOrder) {
+		t.Fatalf("expected %d projects, got %d", len(wantStarsOrder), len(cat.Projects))
+	}
+	byName := make(map[string]Project, len(cat.Projects))
+	for i, want := range wantStarsOrder {
+		if cat.Projects[i].FullName != want {
+			t.Fatalf("stars project[%d] = %q, want %q", i, cat.Projects[i].FullName, want)
+		}
+		byName[cat.Projects[i].FullName] = cat.Projects[i]
+	}
+
+	// Verify explicit release sorting: PublishedAt desc, then Stars desc, then FullName asc.
+	releaseCat, err := fetcher.Fetch(context.Background(), Options{
+		ConfigURL: habServer.URL + "/haberdasher.yaml",
+		Hosts:     []string{"apt.wimpys.world", "flatpak.wimpys.world", "nix.wimpys.world"},
+		Sort:      SortRelease,
+		PNGFallbacks: map[string]string{
+			"wimpysworld/root-png": "assets/unused.png",
+			"wimpysworld/ia-get":   "assets/ia-get.png",
+		},
+		LogoOverrides: map[string]string{
+			"wimpysworld/wonkey": localSVGPath,
+			"wimpysworld/nyala":  habServer.URL + "/override/remote.png",
+		},
+		HostBaseURLOverride: func(host string) string {
+			return habServer.URL + "/hosts/" + host
+		},
+	})
+	if err != nil {
+		t.Fatalf("Fetch (release sort) returned error: %v", err)
+	}
+	wantReleaseOrder := []string{
 		"wimpysworld/tailor",       // 2026-11-22
 		"wimpysworld/pages-png",    // 2026-11-21 18:00
 		"wimpysworld/root-svg",     // 2026-11-21 12:00
@@ -277,17 +318,17 @@ func TestFetchCatalogueHostsLogoChainAndSorting(t *testing.T) {
 		"wimpysworld/nyala",        // no release, 30 stars
 		"linuxmatters/jive-vocals", // no release, 15 stars
 	}
-	if len(cat.Projects) != len(wantOrder) {
-		t.Fatalf("expected %d projects, got %d", len(wantOrder), len(cat.Projects))
+	if len(releaseCat.Projects) != len(wantReleaseOrder) {
+		t.Fatalf("expected %d release-sorted projects, got %d", len(wantReleaseOrder), len(releaseCat.Projects))
 	}
-	for i, want := range wantOrder {
-		if cat.Projects[i].FullName != want {
-			t.Fatalf("project[%d] = %q, want %q", i, cat.Projects[i].FullName, want)
+	for i, want := range wantReleaseOrder {
+		if releaseCat.Projects[i].FullName != want {
+			t.Fatalf("release project[%d] = %q, want %q", i, releaseCat.Projects[i].FullName, want)
 		}
 	}
 
 	// Verify 7-step logo resolution order and host mapping.
-	tailor := cat.Projects[0]
+	tailor := byName["wimpysworld/tailor"]
 	if tailor.LogoSVG != `<svg id="tailor-icon"></svg>` || tailor.LogoDataURI != "" {
 		t.Fatalf("step 1 (pages/icon.svg) failed for tailor: svg=%q uri=%q", tailor.LogoSVG, tailor.LogoDataURI)
 	}
@@ -295,42 +336,103 @@ func TestFetchCatalogueHostsLogoChainAndSorting(t *testing.T) {
 		t.Fatalf("unexpected canonical hosts for tailor: %v", tailor.Hosts)
 	}
 
-	pagesPNG := cat.Projects[1]
+	pagesPNG := byName["wimpysworld/pages-png"]
 	if pagesPNG.LogoSVG != "" || pagesPNG.LogoDataURI != expectedPagesPNGURI {
 		t.Fatalf("step 2 (pages/icon.png) failed for pages-png: svg=%q uri=%q", pagesPNG.LogoSVG, pagesPNG.LogoDataURI)
 	}
 
-	rootSVG := cat.Projects[2]
+	rootSVG := byName["wimpysworld/root-svg"]
 	if rootSVG.LogoSVG != `<svg id="root-svg-icon"></svg>` || rootSVG.LogoDataURI != "" {
 		t.Fatalf("step 3 (root icon.svg) failed for root-svg: svg=%q uri=%q", rootSVG.LogoSVG, rootSVG.LogoDataURI)
 	}
 
-	rootPNG := cat.Projects[3]
+	rootPNG := byName["wimpysworld/root-png"]
 	if rootPNG.LogoSVG != "" || rootPNG.LogoDataURI != expectedRootPNGURI {
 		t.Fatalf("step 4 (root icon.png) failed for root-png: svg=%q uri=%q", rootPNG.LogoSVG, rootPNG.LogoDataURI)
 	}
 
-	wonkey := cat.Projects[4]
+	wonkey := byName["wimpysworld/WonKey"]
 	if wonkey.Slug != "wonkey" || wonkey.LogoSVG != `<svg id="local-override"></svg>` || wonkey.Homepage != "https://wonkey.wimpys.world/" {
 		t.Fatalf("step 6 (local SVG override) or homepage fallback failed for WonKey: %+v", wonkey)
 	}
 
-	iaget := cat.Projects[5]
+	iaget := byName["wimpysworld/ia-get"]
 	if iaget.LogoSVG != "" || iaget.LogoDataURI != expectedPNGURI {
 		t.Fatalf("step 5 (PNGFallbacks) failed for ia-get: svg=%q uri=%q", iaget.LogoSVG, iaget.LogoDataURI)
 	}
 
-	nyala := cat.Projects[6]
+	nyala := byName["wimpysworld/nyala"]
 	if nyala.LogoSVG != "" || nyala.LogoDataURI != expectedPNGURI {
 		t.Fatalf("step 6 (remote PNG override) failed for nyala: svg=%q uri=%q", nyala.LogoSVG, nyala.LogoDataURI)
 	}
 
-	jive := cat.Projects[7]
+	jive := byName["linuxmatters/jive-vocals"]
 	if jive.LogoSVG != "" || jive.LogoDataURI != "" {
 		t.Fatalf("step 7 (empty fallback) failed for jive-vocals: svg=%q uri=%q", jive.LogoSVG, jive.LogoDataURI)
 	}
 	if !strings.EqualFold(jive.Homepage, "https://linuxmatters.sh/jive/vocals/") {
 		t.Fatalf("expected homepage fallback from nix manifest, got %q", jive.Homepage)
+	}
+}
+
+func TestSortProjectsModesAndTieBreakers(t *testing.T) {
+	t.Parallel()
+
+	tNewer := time.Date(2026, 11, 22, 12, 0, 0, 0, time.UTC)
+	tOlder := time.Date(2026, 11, 20, 12, 0, 0, 0, time.UTC)
+
+	input := []Project{
+		{FullName: "org/zebra", Stars: 50, PublishedAt: tOlder},
+		{FullName: "org/Beta", Stars: 50, PublishedAt: tOlder},
+		{FullName: "org/alpha", Stars: 50, PublishedAt: tOlder},
+		{FullName: "org/fresh-tie", Stars: 50, PublishedAt: tNewer},
+		{FullName: "org/top-stars", Stars: 120, PublishedAt: time.Time{}},
+		{FullName: "org/newest-low", Stars: 5, PublishedAt: tNewer},
+		{FullName: "org/Zero-B", Stars: 5, PublishedAt: time.Time{}},
+		{FullName: "org/zero-a", Stars: 5, PublishedAt: time.Time{}},
+	}
+
+	for _, mode := range []string{"", SortStars, " STARS "} {
+		got := slices.Clone(input)
+		sortProjects(got, mode)
+		want := []string{
+			"org/top-stars",  // 120 stars
+			"org/fresh-tie",  // 50 stars, newer release
+			"org/alpha",      // 50 stars, older release, name tie-breaker (case-insensitive)
+			"org/Beta",       // 50 stars, older release, name tie-breaker
+			"org/zebra",      // 50 stars, older release, name tie-breaker
+			"org/newest-low", // 5 stars, newer release
+			"org/zero-a",     // 5 stars, no release, name tie-breaker
+			"org/Zero-B",     // 5 stars, no release, name tie-breaker
+		}
+		for i, wantName := range want {
+			if got[i].FullName != wantName {
+				t.Errorf("sortProjects(%q)[%d] = %q, want %q", mode, i, got[i].FullName, wantName)
+			}
+		}
+	}
+
+	gotRelease := slices.Clone(input)
+	sortProjects(gotRelease, SortRelease)
+	wantRelease := []string{
+		"org/fresh-tie",  // tNewer, 50 stars
+		"org/newest-low", // tNewer, 5 stars
+		"org/alpha",      // tOlder, 50 stars, case-insensitive name
+		"org/Beta",       // tOlder, 50 stars
+		"org/zebra",      // tOlder, 50 stars
+		"org/top-stars",  // no release, 120 stars
+		"org/zero-a",     // no release, 5 stars, case-insensitive name
+		"org/Zero-B",     // no release, 5 stars
+	}
+	for i, wantName := range wantRelease {
+		if gotRelease[i].FullName != wantName {
+			t.Errorf("sortProjects(release)[%d] = %q, want %q", i, gotRelease[i].FullName, wantName)
+		}
+	}
+
+	f := NewFetcher(nil, stubRepoFetcher{})
+	if _, err := f.Fetch(context.Background(), Options{Sort: "invalid"}); err == nil {
+		t.Fatal("expected error for invalid sort mode")
 	}
 }
 

@@ -233,6 +233,7 @@ func fetchHaberdasher(
 	cat, err := fetcher.Fetch(ctx, haberdasher.Options{
 		ConfigURL:     cfg.Haberdasher.ConfigURL,
 		Hosts:         cfg.Haberdasher.Hosts,
+		Sort:          cfg.Haberdasher.Sort,
 		LogoOverrides: cfg.Haberdasher.LogoOverrides,
 		PNGFallbacks:  cfg.Haberdasher.PNGFallbacks,
 	})

@@ -56,6 +56,7 @@ github:
 haberdasher:
   enabled: true
   config_url: "https://raw.githubusercontent.com/wimpysworld/haberdasher/main/haberdasher.yaml"
+  sort: stars
   hosts:
     - "apt.wimpys.world"
     - "rpm.wimpys.world"
@@ -83,14 +84,14 @@ feeds:
     site_url: "https://wimpysworld.com"
     max_items: 5
   youtube:
-    enabled: true
+    enabled: false
     title: "YouTube"
     url: "https://www.youtube.com/feeds/videos.xml?channel_id=UChpYmMp7EFaxuogUX1eAqyw"
     site_url: "https://youtube.com/WimpysWorld"
     max_items: 5
 
 twitch:
-  enabled: true
+  enabled: false
   channel: "WimpysWorld"
   url: "https://twitch.tv/WimpysWorld"
 

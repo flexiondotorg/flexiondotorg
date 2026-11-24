@@ -26,6 +26,11 @@ const (
 	// DefaultLightPreset is the default light theme preset.
 	DefaultLightPreset = PresetCatppuccinLatte
 
+	// HaberdasherSortStars sorts curated Haberdasher projects descending by GitHub star count.
+	HaberdasherSortStars = "stars"
+	// HaberdasherSortRelease sorts curated Haberdasher projects descending by latest release timestamp.
+	HaberdasherSortRelease = "release"
+
 	defaultMaxItems                = 5
 	defaultContributionsWindowDays = 180
 	defaultTwitchPrimary           = "https://decapi.me/twitch/uptime"
@@ -181,6 +186,7 @@ type GitHubConfig struct {
 type HaberdasherConfig struct {
 	Enabled       bool              `yaml:"enabled"`
 	ConfigURL     string            `yaml:"config_url"`
+	Sort          string            `yaml:"sort"`
 	Hosts         []string          `yaml:"hosts"`
 	LogoOverrides map[string]string `yaml:"logo_overrides"`
 	PNGFallbacks  map[string]string `yaml:"png_fallbacks"`
@@ -451,8 +457,8 @@ func (c *Config) applyDefaultsAndValidate() error {
 		return err
 	}
 
-	if len(c.Haberdasher.Hosts) == 0 {
-		c.Haberdasher.Hosts = DefaultHaberdasherHosts()
+	if err := c.applyHaberdasherDefaultsAndValidate(); err != nil {
+		return err
 	}
 
 	if err := validateFeed("feeds.podcast", c.Feeds.Podcast); err != nil {
@@ -508,6 +514,23 @@ func (c *Config) applyGitHubDefaultsAndValidate() error {
 		if strings.TrimSpace(c.GitHub.SponsorsFallback[i].URL) == "" {
 			c.GitHub.SponsorsFallback[i].URL = "https://github.com/" + login
 		}
+	}
+	return nil
+}
+
+func (c *Config) applyHaberdasherDefaultsAndValidate() error {
+	if len(c.Haberdasher.Hosts) == 0 {
+		c.Haberdasher.Hosts = DefaultHaberdasherHosts()
+	}
+	sortMode := strings.ToLower(strings.TrimSpace(c.Haberdasher.Sort))
+	if sortMode == "" {
+		sortMode = HaberdasherSortStars
+	}
+	switch sortMode {
+	case HaberdasherSortStars, HaberdasherSortRelease:
+		c.Haberdasher.Sort = sortMode
+	default:
+		return fmt.Errorf("haberdasher.sort must be %q or %q, got %q", HaberdasherSortStars, HaberdasherSortRelease, c.Haberdasher.Sort)
 	}
 	return nil
 }
