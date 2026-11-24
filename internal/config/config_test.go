@@ -333,6 +333,9 @@ github:
 	if minimal.Discord.ShieldsBaseURL != defaultDiscordShields {
 		t.Errorf("Discord.ShieldsBaseURL = %q, want %q", minimal.Discord.ShieldsBaseURL, defaultDiscordShields)
 	}
+	if minimal.Site.DefaultDeck != SiteDeckProjects {
+		t.Errorf("Site.DefaultDeck = %q, want %q", minimal.Site.DefaultDeck, SiteDeckProjects)
+	}
 
 	// Legacy single-theme preset parses identically for dark and light.
 	legacy, err := Parse([]byte("theme:\n  preset: catppuccin-latte\n"))
@@ -431,6 +434,19 @@ discord:
   shields_base_url: https://shields.example.test
 output:
   asset_base_url: https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/abc123
+site:
+  title: " Wimpy's World "
+  description: " Open-source portfolio "
+  domain: " wimpys.world "
+  default_deck: " PACKAGES "
+  links:
+    - title: " Matrix "
+      slug: " matrix "
+      category: " Community "
+      description: " Federated chat "
+      url: " https://matrix.to/#/@wimpress:matrix.org "
+      icon: " matrix "
+      accent: " teal "
 `
 	cfg, err := Parse([]byte(fullYAML))
 	if err != nil {
@@ -518,6 +534,25 @@ output:
 	}
 	if cfg.Output.AssetBaseURL != "https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/abc123" {
 		t.Errorf("Output.AssetBaseURL = %q", cfg.Output.AssetBaseURL)
+	}
+	wantSiteLinks := []SiteLink{
+		{
+			Title:       "Matrix",
+			Slug:        "matrix",
+			Category:    "Community",
+			Description: "Federated chat",
+			URL:         "https://matrix.to/#/@wimpress:matrix.org",
+			Icon:        "matrix",
+			Accent:      "teal",
+		},
+	}
+	if cfg.Site.Title != "Wimpy's World" ||
+		cfg.Site.Description != "Open-source portfolio" ||
+		cfg.Site.Domain != "wimpys.world" ||
+		cfg.Site.URL != "https://wimpys.world" ||
+		cfg.Site.DefaultDeck != SiteDeckPackages ||
+		!slices.Equal(cfg.Site.Links, wantSiteLinks) {
+		t.Errorf("unexpected site config: %+v", cfg.Site)
 	}
 
 	// Discord enabled with only guild_id or only invite_code is valid when url is set.
@@ -681,6 +716,21 @@ func TestParseValidationErrors(t *testing.T) {
 			yaml:    "projects:\n  - repo: wimpysworld /nix-config\n",
 			wantErr: "projects[0].repo",
 		},
+		{
+			name:    "unknown site default_deck",
+			yaml:    "site:\n  default_deck: archive\n",
+			wantErr: "site.default_deck",
+		},
+		{
+			name:    "site link missing title",
+			yaml:    "site:\n  links:\n    - url: https://example.com\n",
+			wantErr: "site.links[0]: title",
+		},
+		{
+			name:    "site link missing url",
+			yaml:    "site:\n  links:\n    - title: Example\n",
+			wantErr: "site.links[0]: url",
+		},
 	}
 
 	for _, tc := range cases {
@@ -731,5 +781,20 @@ func TestLoadFromFile(t *testing.T) {
 	}
 	if _, err := nilCfg.ResolveLightPalette(); err == nil {
 		t.Fatal("expected error for nil Config.ResolveLightPalette")
+	}
+}
+
+func TestLoadRepositoryVitrineYAML(t *testing.T) {
+	t.Parallel()
+
+	cfg, err := Load(filepath.Join("..", "..", "vitrine.yaml"))
+	if err != nil {
+		t.Fatalf("Load repository vitrine.yaml failed: %v", err)
+	}
+	if cfg.Site.Domain != "wimpys.world" || cfg.Site.DefaultDeck != SiteDeckProjects {
+		t.Fatalf("unexpected repository site config: %+v", cfg.Site)
+	}
+	if len(cfg.Site.Links) != 13 {
+		t.Fatalf("len(Site.Links) = %d, want 13", len(cfg.Site.Links))
 	}
 }

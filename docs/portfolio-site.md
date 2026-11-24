@@ -1,6 +1,6 @@
 # Portfolio site design and architecture (`wimpys.world`)
 
-The portfolio site at `https://wimpys.world` is a static web application hosted on GitHub Pages (`flexiondotorg.github.io`). It replaces the current Tailor static holding page in `pages/` and shares the Go data packages built for Vitrine.
+The portfolio site at `https://wimpys.world` is a static web application hosted on GitHub Pages (`flexiondotorg.github.io`). It is built by `cmd/site` and `internal/site`, driven by the single `vitrine.yaml` configuration file shared with `cmd/vitrine`.
 
 ## Hosting and security
 
@@ -10,13 +10,13 @@ GitHub Pages serves the site from `flexiondotorg/flexiondotorg` with custom doma
 - A `CNAME` record points `www.wimpys.world` to `flexiondotorg.github.io`.
 - GitHub Pages enforces HTTPS for the custom domain.
 
-Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled build workflow uses only the built-in `GITHUB_TOKEN` and standard OpenID Connect (OIDC) permissions for GitHub Pages.
+Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.github/workflows/pages.yml` workflow uses top-level `permissions: {}`, `contents: read` on the build job, and `pages: write` plus `id-token: write` on the deploy job with `GITHUB_TOKEN` only.
 
 ## Visual direction
 
-The site uses modern, clean, crisp **Catppuccin** floating cards that match the palette and typography in [docs/vitrine.md](vitrine.md). **Catppuccin Mocha** is the default dark theme, and a one-click toggle switches to **Catppuccin Latte** light mode while respecting `prefers-color-scheme` on initial load.
+The site uses clean **Catppuccin** floating cards matching [docs/vitrine.md](vitrine.md). **Catppuccin Mocha** is the default dark theme, and a one-click toggle switches to **Catppuccin Latte** light mode while respecting `prefers-color-scheme` on first load.
 
-Typography uses **Work Sans** for headings and interface copy alongside **Fira Code** for release versions, star counts, and package metadata, with clean system font fallbacks. Every card uses a single crisp `1.5px` rounded border, generous breathing space, subtle Catppuccin aurora accents, and unframed project logos without ornate frames or Tarot filigree.
+Typography uses **Work Sans** for headings and interface copy alongside **Fira Code** (`tabular-nums`) for release versions, star counts, and package metadata, with system font fallbacks. Every card uses a single `1.5px` rounded border (`14px` to `16px` radius), subtle Catppuccin aurora accents, and unframed artwork without double borders or corner studs. Both themes enforce Web Content Accessibility Guidelines (WCAG) AA contrast ratios across text and interactive controls.
 
 | Role | Catppuccin Mocha (dark) | Catppuccin Latte (light) |
 | --- | --- | --- |
@@ -26,7 +26,6 @@ Typography uses **Work Sans** for headings and interface copy alongside **Fira C
 | Card border (`1.5px`) | Surface1 (`#45475a`) | Surface1 (`#bcc0cc`) |
 | Primary ink | Text (`#cdd6f4`) | Text (`#4c4f69`) |
 | Secondary ink | Subtext1 (`#bac2de`) | Subtext1 (`#5c5f77`) |
-| Muted ink | Overlay0 (`#6c7086`) | Overlay0 (`#8c8fa1`) |
 | Aurora accents | Mauve, Lavender, Blue, Teal (`#cba6f7`, `#b4befe`, `#89b4fa`, `#94e2d5`) | Mauve, Lavender, Blue, Teal (`#8839ef`, `#7287fd`, `#1e66f5`, `#179299`) |
 | Positive accent | Green (`#a6e3a1`) | Green (`#40a02b`) |
 | Alert accent | Red (`#f38ba8`) | Red (`#d20f39`) |
@@ -34,78 +33,64 @@ Typography uses **Work Sans** for headings and interface copy alongside **Fira C
 
 ## Card and deck anatomy
 
-Content groups into stacked card decks: `Projects`, `Packages`, `Links`, and an optional `Media` deck. Each card has three visual states: a stacked back, a fanned front face, and a flipped detail face.
+Content groups into four stacked card decks: `Projects`, `Packages`, `Links`, and `Media`. Each card has three visual states: a stacked deck back, a fanned front face, and a flipped zoomed detail face.
 
-### Card back
+### Card back and deck dock
 
-Stacked decks show a clean Catppuccin card back with a single `1.5px` border, a subtle Catppuccin aurora accent band, and the centred deck title (`Projects`, `Packages`, `Links`, or `Media`) in Work Sans. Selecting a deck fans its cards out onto the stage.
+The dock displays tactile three-layer Catppuccin card-back stacks for `Projects`, `Packages`, `Links`, and `Media`. On desktop load, `Projects` starts fanned across the stage while `Packages`, `Links`, and `Media` wait stacked in the dock. Selecting any stacked deck fans its cards onto the stage.
 
 ### Card front
 
-The front face balances clean Catppuccin styling with rapid scannability:
-
-- **Single crisp border**: Rounded `1.5px` border over Mocha Base (`#1e1e2e`) or Latte Base (`#eff1f5`) with no double frames or corner studs.
-- **Top metadata row**: Primary language indicator and latest release tag set in Fira Code.
-- **Unframed project logo**: Inline project logo placed cleanly on the card canvas with no medallion frame, resolved through the shared Haberdasher logo pipeline (`pages/icon.svg`, `pages/icon.png`, `icon.svg`, `icon.png`, configured PNG fallbacks, `logo_overrides`, and placeholder mark).
-- **Title**: Project or entry name set cleanly in Work Sans below the logo.
-- **Compact stats row**: Star count, latest release age, count of package hosts, and primary language.
+- **Single crisp border**: Rounded `1.5px` border over Mocha Base (`#1e1e2e`) or Latte Base (`#eff1f5`) with a thin aurora top band.
+- **Top metadata row**: Primary language or category on the left, and latest release tag, package count, or live badge in Fira Code on the right.
+- **Unframed artwork**: Sanitized inline project or host SVG logo, PNG data URI, acoustic waveform for `jive-*` slugs, monogram fallback, podcast cover art, or inline Simple Icons brand mark.
+- **Title and summary**: Name set in Work Sans with a two-line summary.
+- **Compact footer**: Star count, release age, host count, package previews, or duration and reading time in Fira Code.
 
 ### Flipped zoomed detail face
 
-Selecting a fanned card brings it forward and flips it with `rotateY(180deg)` to expose a zoomed detail face:
+Selecting a card opens a centred modal dialog that flips with CSS 3D `rotateY(180deg)` to reveal the detail face:
 
-- Full project or site description.
-- Direct link to the latest GitHub release.
-- Clickable Haberdasher package tiles linking to `https://<host>/#<package>` for every host that distributes the package.
-- Homepage link and GitHub repository link.
+- **Projects**: Full description, star count, language, latest release tag and age with direct release link, Homepage and GitHub links, and clickable Haberdasher package tiles (`https://<host>/#<slug>`) with each host's inline SVG logo.
+- **Packages**: Host logo, host URL, package count, and clickable links to `https://<host>/#<pkgName>` for every published package on that host.
+- **Links**: Full description, category, live Discord or GitHub Sponsors metadata when available, and primary open link.
+- **Media**: Linux Matters Podcast hub (cover art, recent episodes, and subscribe pills for Apple Podcasts, Spotify, YouTube, and RSS), Wimpy's World Blog hub (recent posts with reading time and summaries), and individual episode and post cards.
 
-Visitors dismiss the zoomed card by clicking outside the card bounds or pressing `Esc`.
+Visitors dismiss the modal by clicking outside the card, clicking the close button, or pressing `Esc`. Focus stays trapped inside the modal while open and returns to the triggering card on close.
 
 ## Interaction, physics, and accessibility
 
-The front end uses vanilla JavaScript and Cascading Style Sheets (CSS) 3D transforms (`translate3d`, `rotateX`, and `rotateY`) with no heavy front-end framework.
+The front end uses vanilla JavaScript and CSS 3D transforms (`translate3d`, `rotate`, and `rotateY`) with no framework runtime.
 
-- **Floating stacked decks and air-current physics**: Stacked decks fan out into gentle air-current drift across the stage.
-- **Pointer-wake breeze with hover dampening**: Pointer motion applies a subtle wake impulse to nearby cards. Hovering over a card dampens its motion so the card settles cleanly under the pointer for reliable clicking.
-- **Grid view and theme toggles**: One-click controls switch immediately between floating cards and a flat **Grid view**, and toggle between **Catppuccin Mocha** and **Catppuccin Latte**.
-- **Keyboard navigation**: Visitors can move across decks and cards with `Tab` and arrow keys, open or flip a card with `Enter` or `Space`, and dismiss the zoomed face with `Esc`.
-- **Automatic calm layout**: Touchscreens (coarse-pointer media queries) and `@media (prefers-reduced-motion: reduce)` default directly to the calm grid layout with air-current drift disabled.
+- **Air-current constellation**: Desktop views compute a non-overlapping constellation layout that adapts to viewport width, with cards drifting gently via `requestAnimationFrame`.
+- **Pointer-wake breeze with hover dampening**: Pointer motion applies a soft wake impulse to nearby cards. Hovering or focusing a card dampens its motion to zero and lifts it for reliable clicking.
+- **Toolbar controls**: One-click buttons switch decks, sort `Projects` by `Stars` (default) or `Latest release`, toggle between `Floating` and `Grid` views, pause or resume drift, and switch between `Mocha` and `Latte`.
+- **Keyboard navigation**: Visitors move across cards with `Tab` and arrow keys, open a card with `Enter` or `Space`, and dismiss details with `Esc`.
+- **Automatic calm layout**: Coarse-pointer devices (`@media (pointer: coarse)`) and `@media (prefers-reduced-motion: reduce)` default directly to the calm `Grid` layout with no animation loop running.
 
-## Data pipeline and deployment transition
+## Single-config data pipeline (`cmd/site` and `internal/site`)
 
-The portfolio build reuses the Go `internal/` packages from Vitrine (`internal/config`, `internal/github`, `internal/haberdasher`, `internal/rss`, and optionally `internal/discord` and `internal/twitch`).
+Both `cmd/vitrine` and `cmd/site` read `vitrine.yaml` via `internal/config` (`SiteConfig` and `SiteLink` under `site:`).
 
-### Portfolio data assembly
+`cmd/site` accepts `-config`, `-out`, `-verbose`, and `-version`. It reuses `internal/haberdasher`, `internal/github`, `internal/discord`, and `internal/rss` to assemble data, passes it to `internal/site.Build`, and emits static output (`index.html`, `data.json`, `style.css`, `app.js`, `icon.svg`, `.nojekyll`, and `CNAME`) via `internal/site.Write` using `//go:embed web/*`.
 
-The site generator combines two data streams into static HTML and JSON build assets:
+Curated external entries live under `site.links` in `vitrine.yaml`:
 
-1. **Haberdasher projects**: Every curated project in `haberdasher.yaml` enriched with metadata from the GitHub Representational State Transfer (REST) API and all eight `*.wimpys.world/haberdasher.json` manifests, sorted descending by latest release date on GitHub.
-2. **Curated site entries**: Non-Haberdasher entries configured in YAML, such as the Linux Matters website (`https://linuxmatters.sh`) and the Wimpy's World blog (`https://wimpysworld.com`).
+- **Sites**: Wimpy's World Blog, Linux Matters, Oval Tutu.
+- **Community**: Wimpy's World Discord (enriched with live online and member counts), Matrix.
+- **Social**: Mastodon, Bluesky, LinkedIn.
+- **Video**: YouTube, Twitch.
+- **Gaming**: Steam, itch.io.
+- **Support**: GitHub Sponsors (enriched with live active and past sponsor counts).
 
-### Transition from Tailor Pages
+## Deployment workflow and Tailor transition
 
-Currently `.tailor.yml` sets `pages.enabled: true` (`generator: static`, `path: pages`, `cname: wimpys.world`) and manages `.github/workflows/tailor-pages.yml` (`alteration: always`) to publish the holding page from `pages/`.
+`.github/workflows/pages.yml` builds and deploys the site on `main` pushes, every 6 hours at 15 minutes past the hour (`cron: "15 */6 * * *"`), and `workflow_dispatch`. Generated HTML is built into `${RUNNER_TEMP}/site` and uploaded via `actions/upload-pages-artifact` and `actions/deploy-pages`; it is never committed to Git.
 
-When Track 2 goes live, the repository transitions in four steps:
+To retire the legacy Tailor holding page in `pages/`, set `pages.enabled: false` in `.tailor.yml`, remove `.github/workflows/tailor-pages.yml` and the holding-page files, and verify with `tailor measure`.
 
-1. Set `pages.enabled: false` in `.tailor.yml` so Tailor stops managing GitHub Pages and `tailor-pages.yml`.
-2. Remove `.github/workflows/tailor-pages.yml` and the holding-page files that the generator replaces.
-3. Add a custom workflow for GitHub Pages triggered on `main` pushes, a recurring schedule, and `workflow_dispatch`.
-4. Build the site into a temporary output directory during the workflow and deploy it with `actions/upload-pages-artifact` and `actions/deploy-pages`.
+## Local preview and verification
 
-The custom workflow uses minimal permissions (`contents: read` for the build job, plus `pages: write` and `id-token: write` for the deploy job). The workflow never commits generated HTML or build output to Git.
-
-### Local preview and rendered verification
-
-Development and Continuous Integration (CI) verification follow two checks before deployment:
-
-- **Local preview**: A local build and serve task (exposed via `just pages`) generates the site and serves it over HTTP for live browser inspection.
-- **Playwright verification**: Automated browser checks verify layout, contrast in both Catppuccin Mocha and Latte themes, card flipping, outside-click and `Esc` dismissal, the **Grid view** and theme toggles, keyboard navigation, and zero broken assets or console errors across desktop, mobile, and `@media (prefers-reduced-motion: reduce)` states.
-
-## Open questions
-
-These decisions stay open until Track 1 (`vitrine`) ships:
-
-- **Initial deck state**: Decide whether the `Projects` deck loads already fanned on the stage or stacked until clicked.
-- **Curated non-Haberdasher entries**: Finalise the exact list of external sites, podcasts, talks, and social cards included outside `haberdasher.yaml`.
-- **Rebuild cadence**: Set the cron schedule for the custom workflow for GitHub Pages.
+- **Local preview**: Run `just site` to build the portfolio site from `vitrine.yaml` and serve it locally at `http://127.0.0.1:18475`.
+- **Automated checks**: Run `just build`, `just test`, `go test -race ./...`, `golangci-lint run --config .golangci.yml ./...`, and `actionlint` before pushing.
+- **Rendered verification**: Inspect the live preview in headless Chromium across desktop, mobile, Mocha, Latte, and `prefers-reduced-motion: reduce` states.
