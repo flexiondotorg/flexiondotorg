@@ -1,6 +1,6 @@
 # Vitrine design and architecture
 
-Vitrine is a Go CLI (`cmd/vitrine`) that builds dynamic README files for GitHub profiles and animated Scalable Vector Graphics (SVG) tiles. Configuration lives in `vitrine.yaml` and layout lives in `templates/README.md.tpl`. No user-specific values sit in Go source code, so any developer can fork the repository or run the binary with a different configuration file.
+Vitrine is a Go command-line interface (`cmd/vitrine`) that builds dynamic README files for GitHub profiles and animated Scalable Vector Graphics (SVG) tiles. Configuration lives in `vitrine.yaml` and layout lives in `templates/README.md.tpl`. No user-specific values sit in Go source code, so any developer can fork the repository or run the binary with another configuration file.
 
 This design replaces `muesli/readme-scribe`, `github-readme-stats`, third-party badge services for core profile tiles, and `.github/workflows/snake.yml`. Every data fetch runs without a Personal Access Token (PAT) and uses only the built-in `GITHUB_TOKEN` plus public web endpoints.
 
@@ -10,18 +10,19 @@ The Go module is `github.com/flexiondotorg/flexiondotorg`. Vitrine splits CLI or
 
 | Path | Responsibility | Shared with portfolio site |
 | --- | --- | --- |
-| `cmd/vitrine/` | Parses CLI flags, loads configuration, runs fetchers, writes SVG files, and renders `README.md`. | No |
+| `cmd/vitrine/` | Parses CLI flags, loads configuration, runs fetchers, writes dark and light SVG files, and renders `README.md`. | No |
 | `internal/config/` | Parses `vitrine.yaml`, resolves built-in theme presets, and applies custom colour overrides. | Yes |
-| `internal/github/` | Fetches user, organisation, event, pull request, release, star, and public sponsor data. | Yes |
+| `internal/discord/` | Fetches live online and member counts for Discord from public endpoints without API secrets. | Optional |
+| `internal/github/` | Fetches user, organisation, stats, contribution, release, star, and public sponsor data. | Yes |
 | `internal/haberdasher/` | Fetches `haberdasher.yaml` and eight repository manifests, merges project records, and resolves logos. | Yes |
 | `internal/rss/` | Parses Really Simple Syndication (RSS) 2.0 feeds and YouTube Atom feeds. | Yes |
 | `internal/twitch/` | Checks live or offline channel status from public endpoints without secrets. | Optional |
-| `internal/svg/` | Renders modular animated SVG tiles with theme tokens and reduced-motion rules. | No |
-| `internal/render/` | Executes `templates/README.md.tpl` with template helpers and writes final Markdown output. | No |
+| `internal/svg/` | Renders modular animated SVG tiles with Catppuccin and preset theme tokens plus reduced-motion rules. | No |
+| `internal/render/` | Executes `templates/README.md.tpl` with `<picture>` helpers and writes final Markdown output. | No |
 
 ## Zero-PAT data sources
 
-Vitrine gathers all profile data using unauthenticated public endpoints or the standard repository `GITHUB_TOKEN`. No workflow requires `PERSONAL_GITHUB_TOKEN` or `API_TOKEN_GITHUB`.
+Vitrine gathers all profile data from unauthenticated public endpoints or the standard repository `GITHUB_TOKEN`. No workflow requires `PERSONAL_GITHUB_TOKEN` or `API_TOKEN_GITHUB`.
 
 ### GitHub REST API
 
@@ -29,15 +30,26 @@ Vitrine calls only GitHub Representational State Transfer (REST) endpoints becau
 
 | Profile data | REST source | Notes |
 | --- | --- | --- |
-| User and organisation stats | `/users/{user}`, `/orgs/{org}`, and `/users/{user}/repos` | Aggregates public repository counts, followers, and stars. |
-| Recent contributions | `/users/{user}/events/public` | Filters public events to deduplicated repository contributions. |
-| Recent pull requests | `/search/issues` | Queries authored public pull requests sorted by creation date. |
+| Stats strip metrics | `/users/{user}`, `/orgs/{org}`, `/users/{user}/repos`, `/orgs/{org}/repos`, `/search/commits`, and `/search/issues` | Computes deduplicated stars across the user, configured organisations, and Haberdasher projects, plus commits, pull requests, `involves:` issues, and followers. |
+| Community contributions | `/users/{user}/events/public` and `/search/issues` | Collects external repository contributions outside `exclude_owners` within `contributions_window_days` (default 180 days). |
 | Recent releases | `/repos/{owner}/{repo}/releases` | Collects recent releases across configured owners and Haberdasher projects. |
-| Recent starred repositories | `/users/{user}/starred` | Sends `Accept: application/vnd.github.star+json` to obtain `starred_at` timestamps. |
+| Starred repositories | `/users/{user}/starred` | Sends `Accept: application/vnd.github.star+json`, excludes owners listed in `exclude_owners`, and renders open by default. |
 
 ### Sponsors
 
-GitHub hides sponsor lists from `GITHUB_TOKEN` on the GraphQL API. Vitrine fetches the public `https://github.com/sponsors/<user>` page and parses visible sponsor handles and links from its HTML. An optional static fallback list in `vitrine.yaml` covers transient fetch failures or upstream markup changes. The profile renders sponsors as a single understated line rather than a banner.
+GitHub hides sponsor lists from `GITHUB_TOKEN` on the GraphQL API. Vitrine scrapes the public GitHub Sponsors Hypertext Markup Language (HTML) partials directly:
+
+- **Active sponsors**: Fetches `sponsors_partial?filter=active` and renders each active sponsor as a clickable `@handle` link beside the GitHub Sponsors link.
+- **Past sponsors**: Fetches `sponsors_partial?filter=inactive` and renders past sponsor handles on a separate understated line as plain unclickable text.
+- **Fallback list**: Applies an optional `sponsors_fallback` list in `vitrine.yaml` when an upstream request fails or markup changes.
+
+### Discord live banner
+
+Vitrine fetches live online counts and total member counts for Discord without bot tokens or OAuth credentials. Resolution follows a three-step chain:
+
+1. Query the public Discord invite API (`https://discord.com/api/v9/invites/<code>?with_counts=true`) for online presence and total member counts.
+2. Fall back to the Discord server widget endpoint (`https://discord.com/api/guilds/<guild_id>/widget.json`) for live presence counts.
+3. Fall back to the Shields JSON endpoint (`https://img.shields.io/discord/<guild_id>.json`) if both Discord endpoints fail.
 
 ### Haberdasher curated projects
 
@@ -52,86 +64,104 @@ Vitrine reads the curated project list from `haberdasher.yaml` and fetches all e
 - `https://scoop.wimpys.world/haberdasher.json`
 - `https://nix.wimpys.world/haberdasher.json`
 
-For each curated project, Vitrine enriches the entry with metadata from the GitHub REST API (description, star count, primary language, latest release tag, and release timestamp). Vitrine sorts the project cards in descending order by latest release date on GitHub so the most recently shipped software appears first.
+For each curated project, Vitrine enriches the entry with metadata from the GitHub REST API (description, star count, primary language, latest release tag, and release timestamp). Vitrine sorts project cards in descending order by latest release date on GitHub so the newest software appears first.
 
 ### Logo resolution order
 
-GitHub blocks external image references inside rendered SVGs, so Vitrine embeds every project logo inline during generation. Logo resolution follows a four-step fallback chain:
+GitHub blocks external image references inside rendered SVGs, so Vitrine embeds every project logo inline during generation. Logo resolution follows a seven-step fallback chain:
 
 1. Fetch `pages/icon.svg` from the project repository and inline its SVG markup.
-2. Fall back to a configured PNG asset from the repository (for example, `assets/ia-get.png` in `wimpysworld/ia-get`) and embed it as a base64 data Uniform Resource Identifier (URI).
-3. Apply a logo override per project declared in `vitrine.yaml`.
-4. Generate a placeholder SVG mark in Obsidian and Gilt (used for `linuxmatters/jive-*` repositories until dedicated logos exist).
+2. Fetch `pages/icon.png` from the project repository and embed it as a base64 data Uniform Resource Identifier (URI).
+3. Fetch `icon.svg` from the repository root and inline its SVG markup.
+4. Fetch `icon.png` from the repository root and embed it as a base64 data URI.
+5. Fetch a configured PNG asset from `png_fallbacks` in `vitrine.yaml` (for example, `assets/ia-get.png` in `wimpysworld/ia-get`) and embed it as a base64 data URI.
+6. Apply a per-project entry from `logo_overrides` in `vitrine.yaml`.
+7. Generate a placeholder SVG mark (an acoustic waveform for `linuxmatters/jive-*` repositories or an initial monogram) when no logo exists.
 
 ### Package repositories shelf
 
-Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `brew`, `scoop`, and `nix` on `.wimpys.world`. Each tile links to `https://<host>` and embeds the host logo fetched from `https://<host>/logo.svg` alongside the active package count read from that host's `haberdasher.json`.
+Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `brew`, `scoop`, and `nix` on `.wimpys.world`. Each tile links to `https://<host>`, displays an unframed `40x40` host logo from `https://<host>/logo.svg`, and shows the active package count from that host's `haberdasher.json` in a Catppuccin or gilt count badge.
 
 ### Feeds and Twitch
 
-RSS, YouTube, and Twitch sources are opt-in in `vitrine.yaml`:
+RSS, YouTube, and Twitch sources are configurable in `vitrine.yaml`:
 
-- **RSS 2.0 feeds**: Configured for the Linux Matters podcast (`https://linuxmatters.sh/episode/index.xml`) and the Wimpy's World blog (`https://wimpysworld.com/posts/rss.xml`).
-- **YouTube Atom feeds**: Parsed using the `<published>` element rather than `<updated>`, so edits to old video descriptions do not push archive videos to the top.
-- **Twitch status**: Uses `https://decapi.me/twitch/uptime/<channel>` as the primary check and `https://img.shields.io/twitch/status/<channel>.json` as the fallback, requiring no Twitch API credentials. Vitrine renders dedicated online and offline button tiles from this status.
-
-Vitrine implements and prototypes both the YouTube and Twitch integrations so any profile can toggle them in `vitrine.yaml`. Both sections stay inactive on Martin's profile configuration.
+- **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episodes beside the podcast cover image.
+- **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://wimpysworld.com/posts/rss.xml`) for recent posts.
+- **YouTube Atom feeds**: Parses `<published>` rather than `<updated>`, so edits to old video metadata do not push archive videos to the top.
+- **Twitch status**: Queries `https://decapi.me/twitch/uptime/<channel>` first and falls back to `https://img.shields.io/twitch/status/<channel>.json` without Twitch API credentials.
+- **Combined `VIDEOS & STREAMS` section**: Places the Twitch live or offline status tile above recent YouTube videos under `VIDEOS & STREAMS`. The heading switches to `VIDEOS` when only YouTube is enabled, or `STREAMS` when only Twitch is enabled.
 
 ## Visual design and GitHub SVG rules
 
-GitHub renders SVG files in `README.md` only through `<img>` tags in browser secure animated mode. That mode disables internal SVG `<a>` links, `:hover` pseudo-classes, JavaScript execution, external image references, and external web fonts.
+GitHub renders SVG files in `README.md` only through `<img>` tags in secure animated mode. That mode disables internal SVG `<a>` links, `:hover` pseudo-classes, JavaScript execution, external image references, and external web fonts.
 
-Vitrine works within those limits by generating modular animated SVG tiles and wrapping each `<img>` in an outer HTML `<a href="...">` element in `README.md`. Every tile stays self-contained, clickable as a whole unit, and safe under GitHub's content security policy.
+Vitrine works within those limits by generating dual-theme animated SVG pairs (`-dark.svg` and `-light.svg`) for every tile. `templates/README.md.tpl` wraps each pair in an HTML `<picture>` element inside an outer `<a href="...">` link so GitHub selects the matching theme automatically while every tile stays clickable and self-contained.
 
-### Obsidian and Gilt palette
+### Catppuccin Mocha and Latte palettes
 
-The `flexiondotorg` profile uses the **Obsidian and Gilt** palette in both GitHub light and dark modes. Dark collector card stock with an ivory outer rim retains crisp contrast against white and dark GitHub backgrounds without dual light and dark SVG sets.
+The `flexiondotorg` profile uses **Catppuccin Mocha** for GitHub dark mode (`-dark.svg`) and **Catppuccin Latte** for GitHub light mode (`-light.svg`). Both variants share identical geometry, crisp contrast against GitHub canvases, and clean Catppuccin accent colours.
 
-| Role | Name | Hex values |
+| Role | Catppuccin Mocha (`-dark.svg`) | Catppuccin Latte (`-light.svg`) |
 | --- | --- | --- |
-| Primary card stock | Obsidian | `#121216` |
-| Elevated surface | Obsidian elevated | `#19191f` |
-| Outer rim and primary ink | Ivory | `#f4efe4` |
-| Secondary ink | Stone | `#b3aa99` |
-| Muted ink | Ash | `#7d7668` |
-| Gilt gold gradient (3-stop) | Gilt | `#f0d890`, `#cfa84f`, `#7a5e25` |
-| Positive accent | Emerald | `#4fb885` |
-| Alert or live accent | Ruby | `#c9545c` |
-| Info or link accent | Sapphire | `#6c9bc9` |
+| Primary card canvas | Base (`#1e1e2e`) | Base (`#eff1f5`) |
+| Elevated surface | Surface0 (`#313244`) | Mantle (`#e6e9ef`) |
+| Primary ink | Text (`#cdd6f4`) | Text (`#4c4f69`) |
+| Secondary ink | Subtext1 (`#bac2de`) | Subtext1 (`#5c5f77`) |
+| Muted ink | Overlay0 (`#6c7086`) | Overlay0 (`#8c8fa1`) |
+| Warm accent gradient | Yellow, Peach, Maroon (`#f9e2af`, `#fab387`, `#eba0ac`) | Yellow, Peach, Maroon (`#df8e1d`, `#fe640b`, `#e64553`) |
+| Aurora wave accents | Mauve, Lavender, Blue, Teal (`#cba6f7`, `#b4befe`, `#89b4fa`, `#94e2d5`) | Mauve, Lavender, Blue, Teal (`#8839ef`, `#7287fd`, `#1e66f5`, `#179299`) |
+| Positive accent | Green (`#a6e3a1`) | Green (`#40a02b`) |
+| Alert or live accent | Red (`#f38ba8`) | Red (`#d20f39`) |
+| Info or link accent | Sapphire (`#74c7ec`) | Sapphire (`#209fb5`) |
 
 ### Built-in theme presets
 
 Vitrine ships with three built-in presets selectable in `vitrine.yaml`, plus field-level custom hex overrides for any token:
 
-- `obsidian-gilt` (default for `flexiondotorg/flexiondotorg`)
-- `catppuccin-mocha`
-- `catppuccin-latte`
+- `catppuccin-mocha` (active dark variant for `flexiondotorg/flexiondotorg`)
+- `catppuccin-latte` (active light variant for `flexiondotorg/flexiondotorg`)
+- `obsidian-gilt` (optional dark collector-card preset retained for custom profiles)
+
+### Typography, borders, and logos
+
+Every tile uses clean modern geometry and typography:
+
+- **Typography**: Sans-serif headings and body labels specify `'Work Sans'` first with system sans-serif fallbacks (`'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`). Monospace metrics, version tags, and domains specify `'Fira Code'` first with system monospace fallbacks (`'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`). Because GitHub blocks external font files inside `<img>` SVGs, local installations show Work Sans and Fira Code while other viewers fall back cleanly to system fonts.
+- **Single crisp borders**: Every card, banner, pill, and divider uses a single `1.5px` rounded border. Tiles omit double outlines, triple outlines, and corner studs.
+- **Unframed logos**: Project cards display `64x64` project logos directly on the card canvas with no medallion frame. Package repository tiles display `40x40` host logos unframed beside the repository title and count badge.
+- **Hero aurora waves**: The hero banner renders animated Catppuccin Harmonic Aurora Waves across the canvas with the title, subtitle, and a `wimpys.world` pill.
 
 ### Profile tile layout
 
 The generated `README.md` arranges sections in this order:
 
-1. **Hero banner SVG**: Full-width animated nameplate that links to `https://wimpys.world`.
-2. **Navigation pills**: Compact animated pill tiles linking to key sites and social profiles.
-3. **Short bio**: Concise Markdown introduction.
-4. **Haberdasher project cards**: Two-column wrapping grid of project tiles sorted descending by latest release date on GitHub.
-5. **Package repositories shelf**: Eight clickable tiles for the `.wimpys.world` package repositories.
-6. **Stats strip**: Self-rendered SVG summary replacing `github-readme-stats`.
-7. **Sponsors line**: One understated Markdown line listing current sponsors and the sponsorship link.
-8. **Recent activity**: Recent project contributions and recent releases visible by default, with recent pull requests and recent starred repositories tucked inside collapsible `<details>` sections.
-9. **Linux Matters podcast**: Cover art alongside recent episodes from the RSS feed.
-10. **Blog**: Recent posts from the blog RSS feed, followed by optional YouTube and Twitch sections when enabled in `vitrine.yaml`.
+1. **Hero banner SVG**: Full-width banner with Catppuccin Harmonic Aurora Waves, title, subtitle (no eyebrow), and `wimpys.world` pill linking to `https://wimpys.world`.
+2. **Social navigation pills**: Three larger animated pill tiles for Mastodon, Bluesky, and LinkedIn with authentic brand vector paths.
+3. **Short bio**: Concise Markdown introduction covering Quickemu, Linux Matters, Wimpy's World, and Oval Tutu (without an Ubuntu MATE mention).
+4. **Discord live banner**: Dynamic community banner showing live online presence and total member count from the invite API, widget, or Shields fallback.
+5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
+6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
+7. **Projects**: Two-column grid of Haberdasher project cards sorted descending by latest release date. Each card shows an unframed `64x64` logo, title, tagline, version pill, primary language, star count, and release age (with no `N/8` host dots).
+8. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin or gilt count badges.
+9. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (six months by default).
+10. **Recent Releases**: Latest releases across configured owners and Haberdasher projects.
+11. **Starred**: Open list of recent starred repositories excluding `exclude_owners`.
+12. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes from the RSS feed.
+13. **Blog**: Recent posts from the Wimpy's World blog RSS feed.
+14. **Videos & Streams (`VIDEOS & STREAMS`)**: Twitch live or offline status tile above recent YouTube videos (titled `VIDEOS` or `STREAMS` when only one source is enabled).
 
 Vitrine replaces the contribution snake workflow (`.github/workflows/snake.yml`), so the repository drops both that workflow and its `snake` branch.
 
 ### Animation and asset rules
 
-Every SVG emitted by `internal/svg` follows four strict rules:
+Every SVG emitted by `internal/svg` follows five strict rules:
 
 - Animate only GPU-friendly Cascading Style Sheets (CSS) `@keyframes` properties: `transform`, `opacity`, and `stroke-dashoffset`.
+- Apply staggered GPU-only shimmers and glints across social pills, the Discord banner, the stats strip, project cards, the package shelf, and section dividers, alongside the hero banner Catppuccin Harmonic Aurora Waves.
 - Include `@media (prefers-reduced-motion: reduce)` in every animated SVG to stop animation and present a calm static frame.
 - Embed all logos, icons, and raster art inline as SVG geometry or base64 data URIs.
-- Use system font stacks or vector `<path>` wordmarks instead of external font imports.
+- Declare `'Work Sans'` and `'Fira Code'` with system font fallbacks instead of external font imports.
 
 ## Workflows and organisation sync
 
@@ -141,10 +171,10 @@ Two small workflows keep the personal profile and the `wimpysworld` organisation
 
 The workflow in `flexiondotorg/flexiondotorg` replaces `readme-scribe.yml` and `snake.yml`:
 
-- **Triggers**: Scheduled cron every 6 hours (or 12 hours), pushes to `main` touching Vitrine source, `vitrine.yaml`, or `templates/README.md.tpl`, and `workflow_dispatch`.
+- **Triggers**: Scheduled cron every 6 hours (or 12 hours), pushes to `main` that touch Vitrine source, `vitrine.yaml`, or `templates/README.md.tpl`, and `workflow_dispatch`.
 - **Permissions**: `contents: write` using only the built-in `GITHUB_TOKEN`.
-- **Asset publishing**: Pushes generated SVG tiles to the `assets` branch and records the resulting commit SHA.
-- **README update**: Renders `README.md` with commit-hashed `raw.githubusercontent.com` URLs (`https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/<sha>/<tile>.svg`) and commits to `main` only when the rendered Markdown changes.
+- **Asset publishing**: Pushes generated `-dark.svg` and `-light.svg` tile pairs to the `assets` branch and records the resulting commit SHA.
+- **README update**: Renders `README.md` with commit-hashed `raw.githubusercontent.com` URLs (`https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/<sha>/<tile>-dark.svg` and `-light.svg`) inside `<picture>` tags and commits to `main` only when the rendered Markdown changes.
 
 Commit-hashed `raw.githubusercontent.com` URLs solve three problems at once. They bust the GitHub `camo` image proxy cache whenever a tile changes, they keep `main` free of generated SVG churn, and they render identically when `README.md` is mirrored into another repository.
 
@@ -161,4 +191,3 @@ Instead of pushing across repositories with a personal token, `wimpysworld/.gith
 
 - **Refresh cadence**: Choose between a 6-hour and a 12-hour cron schedule for the profile update workflow.
 - **Assets branch history**: Decide whether the `assets` branch keeps incremental commits or force-pushes a single orphan commit on each run while updating the commit SHA in `README.md`.
-- **Navigation pills**: Finalise the exact set of pill links displayed under the hero banner.

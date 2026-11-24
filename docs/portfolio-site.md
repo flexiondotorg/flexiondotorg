@@ -14,20 +14,23 @@ Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled bui
 
 ## Visual direction
 
-The site uses a dark collector's parlour and luxury Tarot deck direction that shares the **Obsidian and Gilt** palette from [docs/vitrine.md](vitrine.md). Visual treatment follows restrained Savile Row and collector craft: crisp hairline borders, subtle foil highlights, generous dark velvet space, and zero kitschy magician clipart.
+The site uses modern, clean, crisp **Catppuccin** floating cards that match the palette and typography in [docs/vitrine.md](vitrine.md). **Catppuccin Mocha** is the default dark theme, and a one-click toggle switches to **Catppuccin Latte** light mode while respecting `prefers-color-scheme` on initial load.
 
-| Role | Name | Hex values |
+Typography uses **Work Sans** for headings and interface copy alongside **Fira Code** for release versions, star counts, and package metadata, with clean system font fallbacks. Every card uses a single crisp `1.5px` rounded border, generous breathing space, subtle Catppuccin aurora accents, and unframed project logos without ornate frames or Tarot filigree.
+
+| Role | Catppuccin Mocha (dark) | Catppuccin Latte (light) |
 | --- | --- | --- |
-| Page background | Velvet ground | `#09090b` |
-| Primary card stock | Obsidian | `#121216` |
-| Elevated surface | Obsidian elevated | `#19191f` |
-| Outer card rim and primary ink | Ivory | `#f4efe4` |
-| Secondary ink | Stone | `#b3aa99` |
-| Muted ink | Ash | `#7d7668` |
-| Gilt foil gradient (3-stop) | Gilt | `#f0d890`, `#cfa84f`, `#7a5e25` |
-| Positive accent | Emerald | `#4fb885` |
-| Alert accent | Ruby | `#c9545c` |
-| Info or link accent | Sapphire | `#6c9bc9` |
+| Stage background | Crust (`#11111b`) | Crust (`#dce0e8`) |
+| Primary card canvas | Base (`#1e1e2e`) | Base (`#eff1f5`) |
+| Elevated surface | Surface0 (`#313244`) | Mantle (`#e6e9ef`) |
+| Card border (`1.5px`) | Surface1 (`#45475a`) | Surface1 (`#bcc0cc`) |
+| Primary ink | Text (`#cdd6f4`) | Text (`#4c4f69`) |
+| Secondary ink | Subtext1 (`#bac2de`) | Subtext1 (`#5c5f77`) |
+| Muted ink | Overlay0 (`#6c7086`) | Overlay0 (`#8c8fa1`) |
+| Aurora accents | Mauve, Lavender, Blue, Teal (`#cba6f7`, `#b4befe`, `#89b4fa`, `#94e2d5`) | Mauve, Lavender, Blue, Teal (`#8839ef`, `#7287fd`, `#1e66f5`, `#179299`) |
+| Positive accent | Green (`#a6e3a1`) | Green (`#40a02b`) |
+| Alert accent | Red (`#f38ba8`) | Red (`#d20f39`) |
+| Info or link accent | Sapphire (`#74c7ec`) | Sapphire (`#209fb5`) |
 
 ## Card and deck anatomy
 
@@ -35,17 +38,17 @@ Content groups into stacked card decks: `Projects`, `Packages`, `Links`, and an 
 
 ### Card back
 
-Stacked decks show a black-and-gold filigree card back stamped with the deck title (`Projects`, `Packages`, `Links`, or `Media`). Selecting a deck fans its cards out onto the table.
+Stacked decks show a clean Catppuccin card back with a single `1.5px` border, a subtle Catppuccin aurora accent band, and the centred deck title (`Projects`, `Packages`, `Links`, or `Media`) in Work Sans. Selecting a deck fans its cards out onto the stage.
 
 ### Card front
 
-The front face combines Tarot proportion with Top Trumps scannability:
+The front face balances clean Catppuccin styling with rapid scannability:
 
-- **Outer rim and frame**: Crisp ivory outer edge (`#f4efe4`) framing a gilt hairline inner border over obsidian stock (`#121216`).
-- **Corner index pips**: Glyph for the primary language and latest release tag positioned in the corners.
-- **Centre crest**: Inline project logo resolved through the shared Haberdasher logo pipeline.
-- **Title**: Project or entry name set cleanly below the crest.
-- **Compact stats plaque**: Star count, latest release age, count of package hosts, and primary language.
+- **Single crisp border**: Rounded `1.5px` border over Mocha Base (`#1e1e2e`) or Latte Base (`#eff1f5`) with no double frames or corner studs.
+- **Top metadata row**: Primary language indicator and latest release tag set in Fira Code.
+- **Unframed project logo**: Inline project logo placed cleanly on the card canvas with no medallion frame, resolved through the shared Haberdasher logo pipeline (`pages/icon.svg`, `pages/icon.png`, `icon.svg`, `icon.png`, configured PNG fallbacks, `logo_overrides`, and placeholder mark).
+- **Title**: Project or entry name set cleanly in Work Sans below the logo.
+- **Compact stats row**: Star count, latest release age, count of package hosts, and primary language.
 
 ### Flipped zoomed detail face
 
@@ -53,7 +56,7 @@ Selecting a fanned card brings it forward and flips it with `rotateY(180deg)` to
 
 - Full project or site description.
 - Direct link to the latest GitHub release.
-- Clickable package badges from Haberdasher linking to `https://<host>/#<package>` for every host that distributes the package.
+- Clickable Haberdasher package tiles linking to `https://<host>/#<package>` for every host that distributes the package.
 - Homepage link and GitHub repository link.
 
 Visitors dismiss the zoomed card by clicking outside the card bounds or pressing `Esc`.
@@ -62,21 +65,21 @@ Visitors dismiss the zoomed card by clicking outside the card bounds or pressing
 
 The front end uses vanilla JavaScript and Cascading Style Sheets (CSS) 3D transforms (`translate3d`, `rotateX`, and `rotateY`) with no heavy front-end framework.
 
-- **Tactile decks and gentle orbit**: Stacked decks fan out into a slow floating orbit across the velvet stage.
-- **Pointer-wake breeze with hover dampening**: Pointer motion applies a subtle wake impulse to nearby cards. Hovering over a card dampens its motion so the card settles cleanly under the cursor for reliable clicking.
-- **Grid view toggle**: A one-click **Grid view** control switches immediately between the floating orbit and a flat scannable grid.
+- **Floating stacked decks and air-current physics**: Stacked decks fan out into gentle air-current drift across the stage.
+- **Pointer-wake breeze with hover dampening**: Pointer motion applies a subtle wake impulse to nearby cards. Hovering over a card dampens its motion so the card settles cleanly under the pointer for reliable clicking.
+- **Grid view and theme toggles**: One-click controls switch immediately between floating cards and a flat **Grid view**, and toggle between **Catppuccin Mocha** and **Catppuccin Latte**.
 - **Keyboard navigation**: Visitors can move across decks and cards with `Tab` and arrow keys, open or flip a card with `Enter` or `Space`, and dismiss the zoomed face with `Esc`.
-- **Automatic calm layout**: Touchscreens (coarse-pointer media queries) and `@media (prefers-reduced-motion: reduce)` default directly to the calm grid layout with orbital motion disabled.
+- **Automatic calm layout**: Touchscreens (coarse-pointer media queries) and `@media (prefers-reduced-motion: reduce)` default directly to the calm grid layout with air-current drift disabled.
 
 ## Data pipeline and deployment transition
 
-The portfolio build reuses the Go `internal/` packages from Vitrine (`internal/config`, `internal/github`, `internal/haberdasher`, `internal/rss`, and optionally `internal/twitch`).
+The portfolio build reuses the Go `internal/` packages from Vitrine (`internal/config`, `internal/github`, `internal/haberdasher`, `internal/rss`, and optionally `internal/discord` and `internal/twitch`).
 
 ### Portfolio data assembly
 
 The site generator combines two data streams into static HTML and JSON build assets:
 
-1. **Haberdasher projects**: Every curated project in `haberdasher.yaml` enriched with metadata from the GitHub REST API and all eight `*.wimpys.world/haberdasher.json` manifests, sorted descending by latest release date on GitHub.
+1. **Haberdasher projects**: Every curated project in `haberdasher.yaml` enriched with metadata from the GitHub Representational State Transfer (REST) API and all eight `*.wimpys.world/haberdasher.json` manifests, sorted descending by latest release date on GitHub.
 2. **Curated site entries**: Non-Haberdasher entries configured in YAML, such as the Linux Matters website (`https://linuxmatters.sh`) and the Wimpy's World blog (`https://wimpysworld.com`).
 
 ### Transition from Tailor Pages
@@ -96,14 +99,13 @@ The custom workflow uses minimal permissions (`contents: read` for the build job
 
 Development and Continuous Integration (CI) verification follow two checks before deployment:
 
-- **Local preview**: A local build and serve task (exposed via `just`) generates the site and serves it over HTTP for live browser inspection.
-- **Playwright verification**: Automated browser checks verify layout, contrast, card flipping, outside-click and `Esc` dismissal, the **Grid view** toggle, keyboard navigation, and zero broken assets or console errors across desktop, mobile, and `@media (prefers-reduced-motion: reduce)` states.
+- **Local preview**: A local build and serve task (exposed via `just pages`) generates the site and serves it over HTTP for live browser inspection.
+- **Playwright verification**: Automated browser checks verify layout, contrast in both Catppuccin Mocha and Latte themes, card flipping, outside-click and `Esc` dismissal, the **Grid view** and theme toggles, keyboard navigation, and zero broken assets or console errors across desktop, mobile, and `@media (prefers-reduced-motion: reduce)` states.
 
 ## Open questions
 
 These decisions stay open until Track 1 (`vitrine`) ships:
 
-- **Initial deck state**: Decide whether the `Projects` deck loads already fanned in orbit or stacked until clicked.
+- **Initial deck state**: Decide whether the `Projects` deck loads already fanned on the stage or stacked until clicked.
 - **Curated non-Haberdasher entries**: Finalise the exact list of external sites, podcasts, talks, and social cards included outside `haberdasher.yaml`.
-- **Typography**: Choose between self-hosted serif and sans-serif fonts and a pure system font stack.
 - **Rebuild cadence**: Set the cron schedule for the custom workflow for GitHub Pages.

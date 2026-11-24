@@ -1,0 +1,98 @@
+profile:
+  name: "Martin Wimpress"
+  handle: "flexiondotorg"
+  eyebrow: ""
+  hero_title: "WIMPY'S WORLD"
+  hero_subtitle: "Linux, Quickemu, Linux Matters & Open-Source Craft"
+  hero_url: "https://wimpys.world"
+  hero_cta: "wimpys.world"
+  bio: >-
+    Hello! I am Martin (also known as Wimpy), a Linux user, open-source developer, and community builder behind [Quickemu](https://github.com/quickemu-project/quickemu), the [Linux Matters](https://linuxmatters.sh) podcast, and [Wimpy's World](https://wimpys.world). I also tinker with indie games at [Oval Tutu](https://oval-tutu.com).
+  links:
+    - label: "Mastodon"
+      slug: "mastodon"
+      url: "https://wimpysworld.social/@martin"
+      icon: "mastodon"
+    - label: "Bluesky"
+      slug: "bluesky"
+      url: "https://bsky.app/profile/wimpys.world"
+      icon: "bluesky"
+    - label: "LinkedIn"
+      slug: "linkedin"
+      url: "https://www.linkedin.com/in/martinwimpress/"
+      icon: "linkedin"
+
+discord:
+  enabled: true
+  name: "Wimpy's World Discord"
+  tagline: "Friendly Linux and open-source community hub"
+  url: "https://wimpysworld.io/discord"
+  invite_code: "vUsydfP"
+  guild_id: "712850672223125565"
+
+theme:
+  dark_preset: catppuccin-mocha
+  light_preset: catppuccin-latte
+
+github:
+  username: "flexiondotorg"
+  orgs:
+    - "wimpysworld"
+    - "quickemu-project"
+    - "ubuntu-mate"
+    - "linuxmatters"
+  exclude_owners:
+    - "flexiondotorg"
+    - "wimpysworld"
+    - "linuxmatters"
+    - "quickemu-project"
+    - "ubuntu-mate"
+    - "Oval-Tutu"
+  max_items: 5
+  contributions_window_days: 180
+  sponsors_url: "https://github.com/sponsors/flexiondotorg"
+  sponsors_fallback: []
+
+haberdasher:
+  enabled: true
+  config_url: "https://raw.githubusercontent.com/wimpysworld/haberdasher/main/haberdasher.yaml"
+  hosts:
+    - "apt.wimpys.world"
+    - "rpm.wimpys.world"
+    - "pkg.wimpys.world"
+    - "apk.wimpys.world"
+    - "flatpak.wimpys.world"
+    - "brew.wimpys.world"
+    - "scoop.wimpys.world"
+    - "nix.wimpys.world"
+  png_fallbacks:
+    wimpysworld/ia-get: "assets/ia-get.png"
+
+feeds:
+  podcast:
+    enabled: true
+    title: "Linux Matters Podcast"
+    url: "https://linuxmatters.sh/episode/index.xml"
+    site_url: "https://linuxmatters.sh"
+    cover_url: "https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png"
+    max_items: 5
+  blog:
+    enabled: true
+    title: "Blog"
+    url: "https://wimpysworld.com/posts/rss.xml"
+    site_url: "https://wimpysworld.com"
+    max_items: 5
+  youtube:
+    enabled: true
+    title: "YouTube"
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UChpYmMp7EFaxuogUX1eAqyw"
+    site_url: "https://youtube.com/WimpysWorld"
+    max_items: 5
+
+twitch:
+  enabled: true
+  channel: "WimpysWorld"
+  url: "https://twitch.tv/WimpysWorld"
+
+output:
+  asset_base_url: "assets/generated"
