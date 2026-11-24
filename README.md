@@ -1,107 +1,115 @@
 <p align="center">
-  <a href="https://wimpysworld.com" target="_blank"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/github-header-image.png"></a>
+  <a href="https://wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/hero-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/hero-light.svg" alt="WIMPY&#39;S WORLD" width="840"></picture></a>
 </p>
 <p align="center">
-  &nbsp;<a href="https://wimpysworld.social/@martin" target="_blank"><img alt="Mastodon" src="https://img.shields.io/badge/Mastodon-6468fa?style=for-the-badge&logo=mastodon&logoColor=%23ffffff"></a>&nbsp;
-  &nbsp;<a href="https://bsky.app/profile/wimpys.world" target="_blank"><img alt="Bluesky" src="https://img.shields.io/badge/Bluesky-0772D8?style=for-the-badge&logo=bluesky&logoColor=%23ffffff"></a>&nbsp;
-  &nbsp;<a href="https://www.linkedin.com/in/martinwimpress/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-1667be?style=for-the-badge&logo=linkedin&logoColor=%23ffffff"></a>&nbsp;
+  <a href="https://wimpysworld.social/@martin"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-mastodon-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-mastodon-light.svg" alt="Mastodon"></picture></a>
+  <a href="https://bsky.app/profile/wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-bluesky-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-bluesky-light.svg" alt="Bluesky"></picture></a>
+  <a href="https://www.linkedin.com/in/martinwimpress/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-linkedin-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/nav-linkedin-light.svg" alt="LinkedIn"></picture></a>
 </p>
-<a href="https://github.com/flexiondotorg" target="_blank"><img align="right" src="https://github-readme-stats.vercel.app/api?username=flexiondotorg&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged&include_all_commits=true&bg_color=0E1117&title_color=fa66ed&icon_color=6bbbfa&text_color=c5c8c6&ring_color=98ed3f&border_radius=8" alt="GitHub Stats"></a>
-<br />
 
-Hello 👋 I'm Martin (*also known as Wimpy*), a long-time Linux user, developer & community builder 🐧 Maker 🪛 [Linux Matters](https://linuxmatters.sh) host 🎙️ Occasional game jam participant and [aspiring game developer](https://oval-tutu.com) using pico-8, LÖVE, and Defold 🕹️
+Hello! I am Martin (also known as Wimpy), a Linux user, open-source developer, and community builder behind [Quickemu](https://github.com/quickemu-project/quickemu), the [Linux Matters](https://linuxmatters.sh) podcast, and [Wimpy's World](https://wimpys.world). I also tinker with indie games at [Oval Tutu](https://oval-tutu.com).
 
-I lead [Ubuntu MATE](https://ubuntu-mate.org) 🧉 and I'm the creator of a [bunch of other projects](https://wimpysworld.com/projects/) and [Quickemu](https://github.com/quickemu-project/) 🧑‍💻
+<p align="center">
+  <a href="https://wimpysworld.io/discord"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/discord-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/discord-light.svg" alt="Wimpy&#39;s World Discord" width="840"></picture></a>
+</p>
 
-We have a modest [Discord server for Wimpy's World](https://wimpysworld.io/discord) 💬 which serves as a community hub. We're a friendly bunch, and all are welcome 🏳️‍🌈 Join us!
+<p align="center">
+  <a href="https://github.com/flexiondotorg"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/stats-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/stats-light.svg" alt="GitHub statistics" width="840"></picture></a>
+</p>
 
-<div align="center"><a href="https://wimpysworld.io/discord" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/712850672223125565?style=for-the-badge&logo=discord&logoColor=%23ffffff&label=Discord&labelColor=%234253e8&color=%23e4e2e2"></a></div>
+<p align="center"><sub>Enjoy my work? <a href="https://github.com/sponsors/flexiondotorg">Sponsor on GitHub</a></sub></p>
+<p align="center"><sub>Past sponsors: fredre, jmelahman, da-moon, mmartial, castrojo, roryrjb, sonwh98, casmokey, the-shank, ipkpjersi, AlbanDAVID, Simmonz, CreeperLKF, v-nils, gthelding, edgeform, user8446</sub></p>
 
-I [steam live-coding on Twitch](https://twitch.tv/WimpysWorld) 📡 and those streams are [archived on YouTube](https://youtube.com/WimpysWorld) 📺️
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-projects-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-projects-light.svg" alt="Projects" width="840"></picture>
+</p>
 
-These awesome people sponsor me: [mmartial](https://github.com/mmartial) [castrojo](https://github.com/castrojo)  Thank you! ❤️
-If you appreciate my work, then [please consider sponsoring me too](https://github.com/sponsors/flexiondotorg) 🤑 **Curious what I've been working on recently?**
-<div align="center">
-  <img align="center" alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/snake/github-contribution-grid-snake-dark.svg">
-</div>
+<p align="center">
+  <a href="https://sidra.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-sidra-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-sidra-light.svg" alt="sidra" width="408"></picture></a>
+  <a href="https://ia-get.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-ia-get-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-ia-get-light.svg" alt="ia-get" width="408"></picture></a>
+  <a href="https://linuxmatters.sh/jive/vocals/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-vocals-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-vocals-light.svg" alt="jive-vocals" width="408"></picture></a>
+  <a href="https://tailor.wimpys.world/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-tailor-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-tailor-light.svg" alt="tailor" width="408"></picture></a>
+  <a href="https://linuxmatters.sh/jive/visualiser/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-visualiser-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-visualiser-light.svg" alt="jive-visualiser" width="408"></picture></a>
+  <a href="https://linuxmatters.sh/jive/encoder/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-encoder-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-jive-encoder-light.svg" alt="jive-encoder" width="408"></picture></a>
+  <a href="https://nyala.wimpys.world/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-nyala-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-nyala-light.svg" alt="nyala" width="408"></picture></a>
+  <a href="https://wonkey.wimpys.world/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-wonkey-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-wonkey-light.svg" alt="WonKey" width="408"></picture></a>
+  <a href="https://hue-jackman.wimpys.world/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-hue-jackman-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/project-hue-jackman-light.svg" alt="hue-jackman" width="408"></picture></a>
+</p>
 
-### Recent project contributions 🏗️
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-packages-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-packages-light.svg" alt="Package Repositories" width="840"></picture>
+</p>
 
+<p align="center">
+  <a href="https://apt.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-apt-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-apt-light.svg" alt="apt (apt.wimpys.world)" width="198"></picture></a>
+  <a href="https://rpm.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-rpm-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-rpm-light.svg" alt="rpm (rpm.wimpys.world)" width="198"></picture></a>
+  <a href="https://pkg.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-pkg-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-pkg-light.svg" alt="pkg (pkg.wimpys.world)" width="198"></picture></a>
+  <a href="https://apk.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-apk-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-apk-light.svg" alt="apk (apk.wimpys.world)" width="198"></picture></a>
+  <a href="https://flatpak.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-flatpak-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-flatpak-light.svg" alt="flatpak (flatpak.wimpys.world)" width="198"></picture></a>
+  <a href="https://brew.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-brew-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-brew-light.svg" alt="brew (brew.wimpys.world)" width="198"></picture></a>
+  <a href="https://scoop.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-scoop-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-scoop-light.svg" alt="scoop (scoop.wimpys.world)" width="198"></picture></a>
+  <a href="https://nix.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-nix-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/host-nix-light.svg" alt="nix (nix.wimpys.world)" width="198"></picture></a>
+</p>
 
-- [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-  - Wimpy&#39;s NixOS, nix-darwin  &amp; Home Manager Configurations ❄️
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) (2 weeks ago)
-  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) (2 weeks ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/ffmpeg-statigo](https://github.com/linuxmatters/ffmpeg-statigo) (2 weeks ago)
-  - Real FFmpeg bindings for Go. Not a wrapper. Not a CLI tool. The actual libraries 📚
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) (2 weeks ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-contributions-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-contributions-light.svg" alt="Community Contributions" width="840"></picture>
+</p>
 
-### Recent pull requests 🛠️
+- [**snapcrafters/discord**](https://github.com/snapcrafters/discord) (today) - A community-maintained package to easily install Discord on Linux
+- [**NixOS/nixpkgs**](https://github.com/NixOS/nixpkgs) (today) - Nix Packages collection & NixOS
+- [**mate-desktop/mate-desktop.org**](https://github.com/mate-desktop/mate-desktop.org) (6 days ago) - mate-desktop.org website
+- [**hajimehoshi/ebiten**](https://github.com/hajimehoshi/ebiten) (2 weeks ago) - A dead simple 2D game engine for Go
+- [**snapcrafters/obs-studio**](https://github.com/snapcrafters/obs-studio) (3 weeks ago) - This is a community-supported modified build of OBS Studio.
 
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-releases-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-releases-light.svg" alt="Recent Releases" width="840"></picture>
+</p>
 
-- [chore(hermes-agent): update to v2026.7.20](https://github.com/wimpysworld/nix-config/pull/944) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(concord): update to v2.4.3](https://github.com/wimpysworld/nix-config/pull/943) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [chore(paseo): update to v0.1.110](https://github.com/wimpysworld/nix-config/pull/942) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (1 day ago)
-- [fix(agentic): load Nix project tools inside Fence](https://github.com/wimpysworld/nix-config/pull/941) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (5 days ago)
-- [chore(wavebox): update to 150.2.131-2](https://github.com/wimpysworld/nix-config/pull/940) on [wimpysworld/nix-config](https://github.com/wimpysworld/nix-config) (6 days ago)
+- [**wimpysworld/nyala**](https://github.com/wimpysworld/nyala) ([`v0.2.1`](https://github.com/wimpysworld/nyala/releases/tag/v0.2.1), today) - A browser for the terminal 🦌
+- [**wimpysworld/hue-jackman**](https://github.com/wimpysworld/hue-jackman) ([`v0.1.0`](https://github.com/wimpysworld/hue-jackman/releases/tag/v0.1.0), today) - Razer Wolverine V2 Chroma RGB control for Linux. Hijack the hues, bub 🎮
+- [**wimpysworld/nix-config**](https://github.com/wimpysworld/nix-config) ([`v26.5.20261113`](https://github.com/wimpysworld/nix-config/releases/tag/v26.5.20261113), 6 days ago) - Wimpy's NixOS, nix-darwin  & Home Manager Configurations ❄️
+- [**wimpysworld/ia-get**](https://github.com/wimpysworld/ia-get) ([`0.2.0`](https://github.com/wimpysworld/ia-get/releases/tag/0.2.0), 1 week ago) - File downloader for archive.org ⬇️
+- [**wimpysworld/tailor**](https://github.com/wimpysworld/tailor) ([`v0.6.6`](https://github.com/wimpysworld/tailor/releases/tag/v0.6.6), 1 week ago) - Ready-to-wear project templates for GitHub repositories 👔
 
-### Recent releases 📦️
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-starred-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-starred-light.svg" alt="Starred" width="840"></picture>
+</p>
 
+- [**moltis-org/moltis**](https://github.com/moltis-org/moltis) · `★ 2,986` - A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, Discord, Teams, and MCP tools. Secure by design, runs on your hardware.
+- [**fencesandbox/fence**](https://github.com/fencesandbox/fence) · `★ 1,024` - Lightweight, container-free sandbox for running commands with network and filesystem restrictions
+- [**hajimehoshi/ebiten**](https://github.com/hajimehoshi/ebiten) · `★ 13,647` - A dead simple 2D game engine for Go
+- [**powerfooI/roamgate**](https://github.com/powerfooI/roamgate) · `★ 329` - A Herdr client for any screen. Control terminals, monitor coding agents, and review files and diffs from desktop or mobile.
+- [**Fovty/HushMic**](https://github.com/Fovty/HushMic) · `★ 283` - Real-time microphone noise suppression for Linux as a system-wide virtual mic (DPDFNet + PipeWire).
 
-- [sinelaw/fresh](https://github.com/sinelaw/fresh) ([v0.4.4](https://github.com/sinelaw/fresh/releases/tag/v0.4.4), 6 days ago)
-  - Terminal based IDE &amp; text editor: easy, powerful and fast
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) ([v0.38.1](https://github.com/kenn-io/agentsview/releases/tag/v0.38.1), 1 week ago)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
-- [linuxmatters/jive-vocals](https://github.com/linuxmatters/jive-vocals) ([0.7.0](https://github.com/linuxmatters/jive-vocals/releases/tag/0.7.0), 2 weeks ago)
-  - Raw microphone recordings into broadcast-ready audio in one command. No configuration, and no surprises 🗣️
-- [linuxmatters/jive-visualiser](https://github.com/linuxmatters/jive-visualiser) ([0.5.0](https://github.com/linuxmatters/jive-visualiser/releases/tag/0.5.0), 2 weeks ago)
-  - Spin your podcast .wav into a groovy MP4 visualiser with spring-driven real-time audio frequencies ✨
-- [linuxmatters/jive-encoder](https://github.com/linuxmatters/jive-encoder) ([0.5.0](https://github.com/linuxmatters/jive-encoder/releases/tag/0.5.0), 2 weeks ago)
-  - Drop your podcast .wav into a shiny MP3, AAC or Opus with metadata, cover art, and all 🗜️
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-podcast-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-podcast-light.svg" alt="Podcast" width="840"></picture>
+</p>
 
-### Recent starred projects ⭐️
+<a href="https://linuxmatters.sh"><img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="160" height="160"></a>
 
+- **#94** · **[A pocket full of Pi](https://linuxmatters.sh/94/)** · `35 min` (1 week ago)
+  - Alan builds a basic build bot, Martin scopes Silo Server, and Mark clears out a collection of carefully catalogued compact computers.
+- **#93** · **[Flatpak Stats vs. Snap Stats](https://linuxmatters.sh/93/)** · `42 min` (3 weeks ago)
+  - Mark spies on the postman, Alan spins up yet more websites, and Martin tailors his, and, possibly your git repo.
+- **#92** · **[Shonky WonKey Donkey](https://linuxmatters.sh/92/)** · `36 min` (1 month ago)
+  - Martin makes some shonky software, Mark gets lightning fast 5G broadband, and Alan helps you find your next Linux machine.
+- **#91** · **[Old man hands](https://linuxmatters.sh/91/)** · `35 min` (1 month ago)
+  - Alan does a job switcheroo, Martin does a notes switcheroo, and Mark does a backdrop switcheroo.
+- **#90** · **[Ooh, you are nøughty](https://linuxmatters.sh/90/)** · `38 min` (2 months ago)
+  - Mark’s been colouring in his walls, Alan’s been reviving NøughtyLinux and Martin’s been chatting in herdr.
+<br clear="right" />
 
-- [WoozyMasta/png](https://github.com/WoozyMasta/png) (4)
-  - Drop-in accelerated image/png using klauspost zlib, SIMD and decoder optimizations.
-- [emmansun/base64](https://github.com/emmansun/base64) (16)
-  - Base64 with SIMD acceleration
-- [gen2brain/base64](https://github.com/gen2brain/base64) (4)
-  - SIMD-accelerated encoding/base64
-- [gen2brain/jpegn](https://github.com/gen2brain/jpegn) (7)
-  - JPEG decoder with SIMD optimizations
-- [kenn-io/agentsview](https://github.com/kenn-io/agentsview) (4495)
-  - Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. 
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-blog-dark.svg"><img src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/dee63a72768ab01d8c2eae570eb1d204c058f38e/section-blog-light.svg" alt="Blog" width="840"></picture>
+</p>
 
-### 🎙️ Podcast
-<img align="right" src="https://raw.githubusercontent.com/flexiondotorg/flexiondotorg/main/.github/linuxmatters.png" alt="Linux Matters Podcast" width="200" height="200">
-
-I co-present [Linux Matters podcast](https://linuxmatters.sh) with my friends [@popey](https://github.com/popey) and [@marxjohnson](https://github.com/marxjohnson).
-Here are some recent episodes:
-
-- [Moodling the Fediverse in Europe](https://linuxmatters.sh/86/) (1 day ago)
-- [Clearing the Decks](https://linuxmatters.sh/85/) (2 weeks ago)
-- [DOSing about with games](https://linuxmatters.sh/84/) (1 month ago)
-- [snap install flatpak](https://linuxmatters.sh/83/) (1 month ago)
-- [Ditching Grammarly for Open Sauce](https://linuxmatters.sh/82/) (1 month ago)
-
-### 📺️ YouTube
-<a href="https://twitch.tv/WimpysWorld" target="_blank"><img alt="Twitch Status" src="https://img.shields.io/twitch/status/WimpysWorld?style=for-the-badge&logo=twitch&logoColor=ffffff&label=Twitch&labelColor=%23904ef9&color=%23e4e2e2"></a>&nbsp;&nbsp;
-<a href="https://youtube.com/WimpysWorld" target="_blank"><img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UChpYmMp7EFaxuogUX1eAqyw?style=for-the-badge&logo=youtube&logoColor=ffffff&label=YouTube&labelColor=%23fb1b20&color=%23e4e2e2"></a>
-
-- [NixOS | More Nix ❄️ packaging &amp; fixes 🩹 for OBS Studio 📡](https://www.youtube.com/watch?v=VqNaOOm7Dhw) (2 years ago)
-- [NixOS | Updating Nix ❄️ packages of OBS Studio 📡 and it&#39;s plugins🔌](https://www.youtube.com/watch?v=phgOv_UCbMM) (2 years ago)
-- [NixOS &amp; Linux | Tinkering with my Nix config ❄️ and poking at some Linux projects 🐧](https://www.youtube.com/watch?v=biVQ_-v8oEo) (2 years ago)
-- [NixOS &amp; Linux 🐧 Automate OBS with Kruiz Control and Scene Switcher](https://www.youtube.com/watch?v=BSITslJbMGA) (2 years ago)
-- [[Linux &amp; NixOS] Catching up on a few projects ❄️ - Part 2](https://www.youtube.com/watch?v=IpiuKvqHU-c) (2 years ago)
-
-### ✍️ Blog
-
-- [faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/) (1 year ago)
-- [Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/) (1 year ago)
-- [Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/) (1 year ago)
-- [Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/) (2 years ago)
-- [Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/) (3 years ago)
+- **[faffing about with diffs](https://wimpysworld.com/posts/faff-ollama-conventional-commit-generator/)** · `3 min read` (1 year ago)
+  - Another bloody AI commit generator, born from pure spite but stays local
+- **[Nothing but Nix](https://wimpysworld.com/posts/nothing-but-nix-github-actions/)** · `7 min read` (1 year ago)
+  - The Nix Space Heist: Reclaiming 130GB in GitHub Actions
+- **[Fuzzel Colour Picker](https://wimpysworld.com/posts/fuzzel-hyprpicker/)** · `5 min read` (1 year ago)
+  - Creating a Proper Colour Picker for Hyprland with Fuzzel
+- **[Install ZeroTier on Steam Deck](https://wimpysworld.com/posts/install-zerotier-on-steamdeck/)** · `4 min read` (3 years ago)
+  - How to persist software installation across SteamOS updates on the Steam Deck.
+- **[Steam Box vs Steam Deck](https://wimpysworld.com/posts/steambox-vs-steamdeck/)** · `9 min read` (3 years ago)
+  - I declined my Steam Deck pre-order and I’m now playing more games on Linux
