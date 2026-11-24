@@ -49,7 +49,7 @@ github:
     - "ubuntu-mate"
     - "Oval-Tutu"
   max_items: 5
-  contributions_window_days: 180
+  contributions_window_days: 365
   sponsors_url: "https://github.com/sponsors/flexiondotorg"
   sponsors_fallback: []
 

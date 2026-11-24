@@ -248,7 +248,7 @@ output:
 		`Past sponsors: alice, bob`,
 		`[**external/repo**](https://github.com/external/repo)`,
 		`[**other/project**](https://github.com/other/project) · ` + "`★ 13,647`",
-		`[First Post](https://example.com/posts/1) (today)`,
+		`**[First Post](https://example.com/posts/1)** (today)`,
 		`[First Video](https://youtube.com/watch?v=abc123) (today)`,
 	} {
 		if !strings.Contains(readme, want) {
@@ -265,8 +265,8 @@ output:
 		`./assets/section-starred-dark.svg`,
 		`./assets/section-blog-dark.svg`,
 		`./assets/section-videos-dark.svg`,
-		`./assets/twitch-status-dark.svg`,
 		`[First Video](https://youtube.com/watch?v=abc123)`,
+		`./assets/twitch-status-dark.svg`,
 	}
 	prevIdx := -1
 	for _, marker := range ordered {
@@ -372,6 +372,7 @@ func TestMarkdownToHTMLAndPreviewTheme(t *testing.T) {
 ### Recent releases
 
 - [**org/repo**](https://example.com) (**v1.0**, *today*) with ` + "`go`" + `
+  - Nested subtitle
 `
 	got := markdownToHTML(md)
 	for _, want := range []string{
@@ -382,6 +383,7 @@ func TestMarkdownToHTMLAndPreviewTheme(t *testing.T) {
 		`<strong>v1.0</strong>`,
 		`<em>today</em>`,
 		`<code>go</code>`,
+		"<ul>\n<li>Nested subtitle</li>\n</ul>\n</li>",
 		`</ul>`,
 	} {
 		if !strings.Contains(got, want) {

@@ -14,9 +14,8 @@ import (
 )
 
 var (
-	reAnyHTTPURL  = regexp.MustCompile(`(?i)https?://[^\s"'<>]+`)
-	reFirstMoveXY = regexp.MustCompile(`^M([0-9]+(?:\.[0-9]+)?)\s+([0-9]+(?:\.[0-9]+)?)`)
-	reRootDims    = regexp.MustCompile(`<svg[^>]+width="([0-9]+)"[^>]+height="([0-9]+)"`)
+	reAnyHTTPURL = regexp.MustCompile(`(?i)https?://[^\s"'<>]+`)
+	reRootDims   = regexp.MustCompile(`<svg[^>]+width="([0-9]+)"[^>]+height="([0-9]+)"`)
 )
 
 // assertValidGitHubSVG verifies XML well-formedness, standalone SVG root
@@ -379,12 +378,15 @@ func TestHeroAuroraWavesAndTypography(t *testing.T) {
 		`font-size="42"`,
 		`font-size="16"`,
 		`vitrine-hero-glint`,
+		`fill="url(#cat-glint)"`,
 		`vitrine-aurora-waves`,
 		`vitrine-wave-flow-1`,
 		`vitrine-wave-flow-2`,
 		`vitrine-wave-flow-3`,
 		`vitrine-dot-5`,
 		`vitrine-hero-cta`,
+		`vitrine-cta-sheen`,
+		`fill="url(#cat-sheen)"`,
 		`wimpys.world ↗`,
 	} {
 		if !strings.Contains(heroStr, want) {
@@ -464,8 +466,13 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		if !strings.Contains(pillStr, bc.pathPrefix) {
 			t.Errorf("RenderNavPill(%s): missing authentic brand path %q", bc.label, bc.pathPrefix)
 		}
-		if !strings.Contains(pillStr, fmt.Sprintf("5.5s ease-in-out %ss infinite", formatFloat(bc.delay))) {
-			t.Errorf("RenderNavPill(%s): missing staggered shimmer delay %v", bc.label, bc.delay)
+		if !strings.Contains(pillStr, fmt.Sprintf("4.4s ease-in-out %ss infinite", formatFloat(bc.delay))) {
+			t.Errorf("RenderNavPill(%s): missing staggered icon breathe delay %v", bc.label, bc.delay)
+		}
+		for _, forbidden := range []string{"url(#cat-sheen)", "skewX", "vitrine-pill-glow", "vitrine-pill-sheen"} {
+			if strings.Contains(pillStr, forbidden) {
+				t.Errorf("RenderNavPill(%s): must not contain diagonal face sheen %q", bc.label, forbidden)
+			}
 		}
 
 		// Parse XML to verify iconX, textX coupling (textX - iconX == 30).
@@ -515,12 +522,13 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 		}
 	}
 
-	// 2. Project card: 408x164, unframed 64x64 logo, staggered sheen, 3-part footer.
+	// 2. Project card: 408x182, unframed 64x64 logo at (20,34), 3-line wrapped description, top-edge glint, 3-part footer.
 	sampleLogo := `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#89b4fa"/></svg>`
+	longTagline := "Quickly create and run optimised Windows, macOS and Linux desktop virtual machines with zero configuration."
 	cardBytes, err := r.RenderProjectCard(ProjectCardData{
 		Slug:         "ia-get",
 		Name:         "ia-get",
-		Tagline:      "Fast resilient downloader.",
+		Tagline:      longTagline,
 		Version:      "v0.2.1",
 		Fresh:        true,
 		Language:     "Go",
@@ -535,25 +543,35 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 	assertValidGitHubSVG(t, "project-card-detail", cardBytes)
 	cardStr := string(cardBytes)
 	for _, want := range []string{
-		`width="408" height="164"`,
-		`x="20" y="24" width="64" height="64"`,
-		`8s ease-in-out 1.25s infinite`,
-		`y1="128" x2="388" y2="128"`,
+		`width="408" height="182" viewBox="0 0 408 182"`,
+		`x="20" y="34" width="64" height="64"`,
+		`vitrine-card-glint`,
+		`fill="url(#cat-glint)" class="vitrine-card-glint"`,
+		`6.5s ease-in-out 1.25s infinite`,
+		`<text x="100" y="68"`,
+		`<text x="100" y="86"`,
+		`<text x="100" y="104"`,
+		`y1="142" x2="388" y2="142"`,
+		`cy="159"`,
+		`y="163"`,
 		"v0.2.1",
 		"vitrine-fresh-ring",
 		">Go<",
 		fmt.Sprintf(`<tspan fill="%s">★</tspan> 810`, p.AccentYellow),
 		"1 week ago",
+		"configuration.",
 	} {
 		if !strings.Contains(cardStr, want) {
 			t.Errorf("RenderProjectCard missing %q", want)
 		}
 	}
-	if strings.Contains(cardStr, "<polygon") {
-		t.Errorf("RenderProjectCard must not draw a polygon frame around the logo")
+	for _, forbidden := range []string{"<polygon", "url(#cat-sheen)", "skewX", "vitrine-card-sheen", "…"} {
+		if strings.Contains(cardStr, forbidden) {
+			t.Errorf("RenderProjectCard must not contain %q", forbidden)
+		}
 	}
 
-	// 3. Package host: 198x78, unframed 40x40 logo, staggered sheen, Surface0 count pill in AccentPrimary.
+	// 3. Package host: 198x78, unframed 40x40 logo, top-edge glint, Surface0 count pill in AccentPrimary.
 	hostBytes, err := r.RenderPackageHost(PackageHostData{
 		Name:         "APT",
 		Host:         "apt.wimpys.world",
@@ -569,7 +587,9 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 	for _, want := range []string{
 		`width="198" height="78"`,
 		`x="14" y="20" width="40" height="40"`,
-		`7s ease-in-out 0.90s infinite`,
+		`vitrine-host-glint`,
+		`fill="url(#cat-glint)" class="vitrine-host-glint"`,
+		`6.5s ease-in-out 0.90s infinite`,
 		fmt.Sprintf(`fill="%s"`, p.Surface0),
 		fmt.Sprintf(`fill="%s">9 pkgs</text>`, p.AccentPrimary),
 	} {
@@ -577,8 +597,10 @@ func TestNavPillsAndProjectAndHostDetails(t *testing.T) {
 			t.Errorf("RenderPackageHost missing %q", want)
 		}
 	}
-	if strings.Contains(hostStr, "<polygon") {
-		t.Errorf("RenderPackageHost must not draw a polygon frame around the logo")
+	for _, forbidden := range []string{"<polygon", "url(#cat-sheen)", "skewX", "vitrine-host-sheen"} {
+		if strings.Contains(hostStr, forbidden) {
+			t.Errorf("RenderPackageHost must not contain %q", forbidden)
+		}
 	}
 }
 
@@ -607,7 +629,6 @@ func TestRenderDiscordBanner(t *testing.T) {
 		`M20.317 4.3698`,
 		fmt.Sprintf(`fill="%s"`, p.AccentGreen),
 		"vitrine-discord-ring",
-		"vitrine-discord-sheen",
 		"169 online",
 		"2,857 members",
 		"JOIN ↗",
@@ -615,6 +636,11 @@ func TestRenderDiscordBanner(t *testing.T) {
 	} {
 		if !strings.Contains(s, want) {
 			t.Errorf("RenderDiscordBanner(full) missing %q", want)
+		}
+	}
+	for _, forbidden := range []string{"url(#cat-sheen)", "skewX", "vitrine-discord-sheen", "vitrine-discord-sweep"} {
+		if strings.Contains(s, forbidden) {
+			t.Errorf("RenderDiscordBanner(full) must not contain diagonal face sheen %q", forbidden)
 		}
 	}
 
@@ -660,6 +686,7 @@ func TestRenderStatsStripFiveMetricsAndCompatibility(t *testing.T) {
 		"STARS", "COMMITS", "PULL REQUESTS", "ISSUES", "FOLLOWERS",
 		"24,810", "18,420", "1,402", "684", "3,920",
 		"vitrine-stats-glint",
+		`fill="url(#cat-glint)"`,
 		"vitrine-stat-dot",
 		fmt.Sprintf(`fill="%s"`, p.AccentYellow),
 		fmt.Sprintf(`fill="%s"`, p.AccentGreen),
@@ -721,10 +748,14 @@ func TestRenderSectionDividerZeroOverlap(t *testing.T) {
 		}
 		assertValidGitHubSVG(t, "divider-"+tc.title, raw)
 
-		var leftDiamondX, rightDiamondX float64
+		var leftDotX, rightDotX float64
 		var foundLeft, foundRight bool
 		var leftRuleEnd, rightRuleStart float64
 		var foundLeftRule, foundRightRule bool
+
+		if strings.Contains(string(raw), "<path") {
+			t.Errorf("%q: RenderSectionDivider must use <circle> pips and zero diamond <path> elements", tc.title)
+		}
 
 		dec := xml.NewDecoder(bytes.NewReader(raw))
 		for {
@@ -744,18 +775,20 @@ func TestRenderSectionDividerZeroOverlap(t *testing.T) {
 				attrs[a.Name.Local] = a.Value
 			}
 			switch start.Name.Local {
-			case "path":
+			case "circle":
 				switch attrs["class"] {
-				case "vitrine-divider-diamond-left":
-					if m := reFirstMoveXY.FindStringSubmatch(attrs["d"]); len(m) == 3 {
-						leftDiamondX, _ = strconv.ParseFloat(m[1], 64)
-						foundLeft = true
+				case "vitrine-divider-dot-left":
+					leftDotX, _ = strconv.ParseFloat(attrs["cx"], 64)
+					if attrs["cy"] != "21" || attrs["r"] != "3.5" {
+						t.Errorf("%q: left divider circle has cy=%q r=%q, want cy=\"21\" r=\"3.5\"", tc.title, attrs["cy"], attrs["r"])
 					}
-				case "vitrine-divider-diamond-right":
-					if m := reFirstMoveXY.FindStringSubmatch(attrs["d"]); len(m) == 3 {
-						rightDiamondX, _ = strconv.ParseFloat(m[1], 64)
-						foundRight = true
+					foundLeft = true
+				case "vitrine-divider-dot-right":
+					rightDotX, _ = strconv.ParseFloat(attrs["cx"], 64)
+					if attrs["cy"] != "21" || attrs["r"] != "3.5" {
+						t.Errorf("%q: right divider circle has cy=%q r=%q, want cy=\"21\" r=\"3.5\"", tc.title, attrs["cy"], attrs["r"])
 					}
+					foundRight = true
 				}
 			case "line":
 				if strings.Contains(attrs["class"], "vitrine-rule-trace") {
@@ -773,27 +806,27 @@ func TestRenderSectionDividerZeroOverlap(t *testing.T) {
 		}
 
 		if !foundLeft || !foundRight {
-			t.Fatalf("%q: missing flanking centre diamonds (foundLeft=%v, foundRight=%v)", tc.title, foundLeft, foundRight)
+			t.Fatalf("%q: missing flanking centre circles (foundLeft=%v, foundRight=%v)", tc.title, foundLeft, foundRight)
 		}
 
 		upper := strings.ToUpper(TruncateText(tc.title, 36))
 		halfTextMax := float64(len([]rune(upper))) * 11.2 / 2.0
-		const diamondRadius = 3.5
+		const dotRadius = 3.5
 
-		leftClearance := (420.0 - halfTextMax) - (leftDiamondX + diamondRadius)
-		rightClearance := (rightDiamondX - diamondRadius) - (420.0 + halfTextMax)
+		leftClearance := (420.0 - halfTextMax) - (leftDotX + dotRadius)
+		rightClearance := (rightDotX - dotRadius) - (420.0 + halfTextMax)
 		if leftClearance < 24.0 {
-			t.Errorf("%q: left diamond too close to title: leftDiamondX=%.2f, halfTextMax=%.2f, clearance=%.2fpx", tc.title, leftDiamondX, halfTextMax, leftClearance)
+			t.Errorf("%q: left circle too close to title: leftDotX=%.2f, halfTextMax=%.2f, clearance=%.2fpx", tc.title, leftDotX, halfTextMax, leftClearance)
 		}
 		if rightClearance < 24.0 {
-			t.Errorf("%q: right diamond too close to title: rightDiamondX=%.2f, halfTextMax=%.2f, clearance=%.2fpx", tc.title, rightDiamondX, halfTextMax, rightClearance)
+			t.Errorf("%q: right circle too close to title: rightDotX=%.2f, halfTextMax=%.2f, clearance=%.2fpx", tc.title, rightDotX, halfTextMax, rightClearance)
 		}
 
-		if foundLeftRule && math.Abs((leftDiamondX-leftRuleEnd)-14.0) > 0.1 {
-			t.Errorf("%q: left rule gap = %.2f, want 14.0", tc.title, leftDiamondX-leftRuleEnd)
+		if foundLeftRule && math.Abs((leftDotX-leftRuleEnd)-14.0) > 0.1 {
+			t.Errorf("%q: left rule gap = %.2f, want 14.0", tc.title, leftDotX-leftRuleEnd)
 		}
-		if foundRightRule && math.Abs((rightRuleStart-rightDiamondX)-14.0) > 0.1 {
-			t.Errorf("%q: right rule gap = %.2f, want 14.0", tc.title, rightRuleStart-rightDiamondX)
+		if foundRightRule && math.Abs((rightRuleStart-rightDotX)-14.0) > 0.1 {
+			t.Errorf("%q: right rule gap = %.2f, want 14.0", tc.title, rightRuleStart-rightDotX)
 		}
 	}
 }

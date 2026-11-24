@@ -8,8 +8,8 @@ import (
 )
 
 // RenderNavPill renders a 44px-tall Catppuccin social navigation pill with a
-// single 1.5px platform-tinted border, an authentic 20x20 brand icon tightly
-// coupled beside a 14px Work Sans label, and a staggered diagonal shimmer sweep.
+// single 1.5px platform-tinted border and an authentic 20x20 brand icon tightly
+// coupled beside a 14px Work Sans label.
 func (r *Renderer) RenderNavPill(data NavPillData) ([]byte, error) {
 	p := r.palette
 	label := TruncateText(fallbackString(data.Label, "Link"), 22)
@@ -23,26 +23,12 @@ func (r *Renderer) RenderNavPill(data NavPillData) ([]byte, error) {
 	delay := math.Max(0, data.DelaySeconds)
 	accent := navPlatformAccent(data.Icon, p)
 
-	extraDefs := fmt.Sprintf(`
-  <clipPath id="pill-clip">
-    <rect x="2" y="2" width="%d" height="40" rx="9"/>
-  </clipPath>`, width-4)
-
 	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="44" viewBox="0 0 %d 44" role="img" aria-label="%s">
 %s
 <style>
-  @keyframes vitrine-pill-sheen {
-    0%% { transform: translateX(-80px); opacity: 0; }
-    12%% { opacity: 1; }
-    42%% { transform: translateX(%dpx); opacity: 1; }
-    52%%, 100%% { transform: translateX(%dpx); opacity: 0; }
-  }
   @keyframes vitrine-icon-breathe {
     0%%, 100%% { opacity: 0.82; }
     50%% { opacity: 1; }
-  }
-  .vitrine-pill-glow {
-    animation: vitrine-pill-sheen 5.5s ease-in-out %ss infinite;
   }
   .vitrine-pill-icon {
     animation: vitrine-icon-breathe 4.4s ease-in-out %ss infinite;
@@ -53,13 +39,6 @@ func (r *Renderer) RenderNavPill(data NavPillData) ([]byte, error) {
 <!-- Single 1.5px platform-accent outer border -->
 <rect x="1" y="1" width="%d" height="42" rx="10" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
 
-<!-- Staggered diagonal shimmer sweep -->
-<g clip-path="url(#pill-clip)">
-  <g class="vitrine-pill-glow">
-    <rect x="0" y="-4" width="64" height="52" fill="url(#cat-sheen)" transform="skewX(-18)"/>
-  </g>
-</g>
-
 <!-- Coupled 20x20 authentic brand icon and 14px Work Sans label -->
 <g class="vitrine-pill-icon">
   %s
@@ -67,9 +46,7 @@ func (r *Renderer) RenderNavPill(data NavPillData) ([]byte, error) {
 <text x="%s" y="27" text-anchor="start" font-family="%s" font-size="14" font-weight="600" letter-spacing="0.2" fill="%s">%s</text>
 </svg>`,
 		width, width, escapeXML(label),
-		r.baseDefs(extraDefs),
-		width+56, width+56,
-		formatFloat(delay),
+		r.baseDefs(""),
 		formatFloat(delay),
 		reducedMotionCSS,
 		width-2, escapeXML(accent),

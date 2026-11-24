@@ -7,9 +7,10 @@ import (
 	"unicode/utf8"
 )
 
-// RenderProjectCard renders a 408x164 Catppuccin project card with a single
-// 1.5px Surface1 border, clipped slim Catppuccin top accent bar, unframed
-// 64x64 logo, staggered diagonal light sheen, and clean 3-part footer.
+// RenderProjectCard renders a 408x182 Catppuccin project card with a single
+// 1.5px Surface1 border, clipped slim Catppuccin top accent bar with staggered
+// top-edge glint, unframed 64x64 logo, 3-line wrapped description, and clean
+// 3-part footer.
 func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 	p := r.palette
 	name := fallbackString(data.Name, fallbackString(data.Slug, "Project"))
@@ -23,13 +24,13 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 		titleMaxRunes = 17
 	}
 	titleText := TruncateText(name, titleMaxRunes)
-	taglineLines := WrapText(data.Tagline, 40, 2)
+	taglineLines := WrapText(data.Tagline, 42, 3)
 
-	logoArt := r.renderLogoArt(data.Slug, name, data.LogoSVG, data.LogoDataURI, 20, 24, 64)
+	logoArt := r.renderLogoArt(data.Slug, name, data.LogoSVG, data.LogoDataURI, 20, 34, 64)
 
 	var taglineSVG strings.Builder
 	for i, line := range taglineLines {
-		y := 67 + i*19
+		y := 68 + i*18
 		fmt.Fprintf(
 			&taglineSVG,
 			`<text x="100" y="%d" font-family="%s" font-size="13" fill="%s">%s</text>`,
@@ -42,7 +43,7 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 	langSVG := ""
 	if lang != "" {
 		langSVG = fmt.Sprintf(
-			`<circle cx="24" cy="144" r="4" fill="%s"/><text x="35" y="148" font-family="%s" font-size="12" font-weight="500" fill="%s">%s</text>`,
+			`<circle cx="24" cy="159" r="4" fill="%s"/><text x="35" y="163" font-family="%s" font-size="12" font-weight="500" fill="%s">%s</text>`,
 			escapeXML(languageColor(lang, p.AccentSecondary)),
 			fontSans, escapeXML(p.Text), escapeXML(lang),
 		)
@@ -50,14 +51,14 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 
 	starLabel := FormatCompactCount(max(0, data.Stars))
 	starsSVG := fmt.Sprintf(
-		`<text x="204" y="148" text-anchor="middle" font-family="%s" font-size="12" font-weight="600" fill="%s"><tspan fill="%s">★</tspan> %s</text>`,
+		`<text x="204" y="163" text-anchor="middle" font-family="%s" font-size="12" font-weight="600" fill="%s"><tspan fill="%s">★</tspan> %s</text>`,
 		fontMono, escapeXML(p.Text), escapeXML(p.AccentYellow), escapeXML(starLabel),
 	)
 
 	ageSVG := ""
 	if age != "" {
 		ageSVG = fmt.Sprintf(
-			`<text x="388" y="148" text-anchor="end" font-family="%s" font-size="11.5" fill="%s">%s</text>`,
+			`<text x="388" y="163" text-anchor="end" font-family="%s" font-size="11.5" fill="%s">%s</text>`,
 			fontMono, escapeXML(p.Muted), escapeXML(age),
 		)
 	}
@@ -65,10 +66,10 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 	delay := math.Max(0, data.DelaySeconds)
 	extraDefs := `
   <clipPath id="card-clip">
-    <rect x="1.75" y="1.75" width="404.5" height="160.5" rx="11.25"/>
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
   </clipPath>`
 
-	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="408" height="164" viewBox="0 0 408 164" role="img" aria-label="%s">
+	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="%s">
 %s
 <style>
   @keyframes vitrine-fresh-pulse {
@@ -80,11 +81,11 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
     0%%, 100%% { transform: scaleY(0.45); opacity: 0.72; }
     50%% { transform: scaleY(1); opacity: 1; }
   }
-  @keyframes vitrine-card-sweep {
+  @keyframes vitrine-card-glint {
     0%% { transform: translateX(-140px); opacity: 0; }
-    8%% { opacity: 1; }
-    32%% { transform: translateX(520px); opacity: 1; }
-    40%%, 100%% { transform: translateX(520px); opacity: 0; }
+    10%% { opacity: 1; }
+    55%% { transform: translateX(430px); opacity: 1; }
+    66%%, 100%% { transform: translateX(430px); opacity: 0; }
   }
   .vitrine-fresh-ring {
     transform-box: fill-box;
@@ -96,21 +97,19 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
     transform-origin: center;
     animation: vitrine-wave 1.8s ease-in-out infinite;
   }
-  .vitrine-card-sheen {
-    animation: vitrine-card-sweep 8s ease-in-out %ss infinite;
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out %ss infinite;
   }
   %s
 </style>
 
 <!-- Single 1.5px Surface1 outer border -->
-<rect x="1" y="1" width="406" height="162" rx="12" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
 
-<!-- Clipped slim 2.5px Catppuccin top bar and staggered diagonal sheen -->
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
 <g clip-path="url(#card-clip)">
   <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
-  <g class="vitrine-card-sheen">
-    <rect x="0" y="-12" width="96" height="188" fill="url(#cat-sheen)" transform="skewX(-18)"/>
-  </g>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
 </g>
 
 <!-- Unframed 64x64 project logo -->
@@ -119,12 +118,12 @@ func (r *Renderer) RenderProjectCard(data ProjectCardData) ([]byte, error) {
 <!-- Top-right release version pill -->
 %s
 
-<!-- Project title and wrapped 2-line description -->
+<!-- Project title and wrapped 3-line description -->
 <text x="100" y="42" font-family="%s" font-size="18" font-weight="700" letter-spacing="-0.2" fill="%s">%s</text>
 %s
 
 <!-- Clean 1px Surface0 footer separator -->
-<line x1="20" y1="128" x2="388" y2="128" stroke="%s" stroke-width="1"/>
+<line x1="20" y1="142" x2="388" y2="142" stroke="%s" stroke-width="1"/>
 
 <!-- Clean 3-part footer: language, stars, release age -->
 <g>
@@ -194,8 +193,8 @@ func (r *Renderer) renderVersionPill(version string, fresh bool) string {
 
 // RenderPackageHost renders a 198x78 Catppuccin Haberdasher package repository
 // card sized so four tiles fit cleanly per row, with a single 1.5px Surface1
-// border, clipped slim Catppuccin top bar, unframed 40x40 host logo, and
-// staggered diagonal sheen.
+// border, clipped slim Catppuccin top bar with staggered top-edge glint, and
+// unframed 40x40 host logo.
 func (r *Renderer) RenderPackageHost(data PackageHostData) ([]byte, error) {
 	p := r.palette
 	name := strings.ToUpper(TruncateText(fallbackString(data.Name, "REPO"), 12))
@@ -223,14 +222,14 @@ func (r *Renderer) RenderPackageHost(data PackageHostData) ([]byte, error) {
 	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="198" height="78" viewBox="0 0 198 78" role="img" aria-label="%s package repository">
 %s
 <style>
-  @keyframes vitrine-host-sweep {
+  @keyframes vitrine-host-glint {
     0%% { transform: translateX(-90px); opacity: 0; }
     10%% { opacity: 1; }
-    36%% { transform: translateX(260px); opacity: 1; }
-    46%%, 100%% { transform: translateX(260px); opacity: 0; }
+    55%% { transform: translateX(220px); opacity: 1; }
+    66%%, 100%% { transform: translateX(220px); opacity: 0; }
   }
-  .vitrine-host-sheen {
-    animation: vitrine-host-sweep 7s ease-in-out %ss infinite;
+  .vitrine-host-glint {
+    animation: vitrine-host-glint 6.5s ease-in-out %ss infinite;
   }
   %s
 </style>
@@ -238,12 +237,10 @@ func (r *Renderer) RenderPackageHost(data PackageHostData) ([]byte, error) {
 <!-- Single 1.5px Surface1 outer border -->
 <rect x="1" y="1" width="196" height="76" rx="10" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
 
-<!-- Clipped slim 2.5px Catppuccin top bar and staggered diagonal sheen -->
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
 <g clip-path="url(#host-clip)">
   <rect x="0" y="1" width="198" height="3.25" fill="url(#cat-accent)"/>
-  <g class="vitrine-host-sheen">
-    <rect x="0" y="-8" width="60" height="94" fill="url(#cat-sheen)" transform="skewX(-18)"/>
-  </g>
+  <rect x="0" y="1.75" width="76" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-host-glint"/>
 </g>
 
 <!-- Unframed 40x40 host logo -->

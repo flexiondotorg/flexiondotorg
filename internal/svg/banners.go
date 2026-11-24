@@ -124,7 +124,7 @@ func (r *Renderer) RenderStatsStrip(data StatsData) ([]byte, error) {
 // RenderDiscordBanner renders an 840x68 full-width Catppuccin Discord
 // community banner with a single 1.5px Catppuccin gradient border, unframed
 // 28x28 Discord Clyde icon, animated AccentGreen sonar ring, Fira Code
-// telemetry, Surface0 JOIN pill, and periodic diagonal light glint.
+// telemetry, and a Surface0 JOIN pill.
 func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
 	p := r.palette
 	name := fallbackString(data.Name, "Wimpy's World Discord")
@@ -183,11 +183,6 @@ func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
 		aria = fmt.Sprintf("%s - %s, %s", titleText, onlineText, membersText)
 	}
 
-	extraDefs := `
-  <clipPath id="discord-clip">
-    <rect x="2" y="2" width="836" height="64" rx="11"/>
-  </clipPath>`
-
 	out := fmt.Sprintf(`<svg xmlns="http://www.w3.org/2000/svg" width="840" height="68" viewBox="0 0 840 68" role="img" aria-label="%s">
 %s
 <style>
@@ -196,32 +191,16 @@ func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
     72%% { transform: scale(2.25); opacity: 0; }
     100%% { transform: scale(2.25); opacity: 0; }
   }
-  @keyframes vitrine-discord-sweep {
-    0%% { transform: translateX(-160px); opacity: 0; }
-    8%% { opacity: 0.85; }
-    32%% { transform: translateX(920px); opacity: 0.85; }
-    40%%, 100%% { transform: translateX(920px); opacity: 0; }
-  }
   .vitrine-discord-ring {
     transform-box: fill-box;
     transform-origin: center;
     animation: vitrine-discord-pulse 2.2s ease-out infinite;
-  }
-  .vitrine-discord-sheen {
-    animation: vitrine-discord-sweep 7.5s ease-in-out infinite;
   }
   %s
 </style>
 
 <!-- Single 1.5px Catppuccin gradient outer border -->
 <rect x="1" y="1" width="838" height="66" rx="12" fill="url(#card-bg)" stroke="url(#cat-accent)" stroke-width="1.5"/>
-
-<!-- Periodic subtle diagonal light glint -->
-<g clip-path="url(#discord-clip)">
-  <g class="vitrine-discord-sheen">
-    <rect x="0" y="-10" width="120" height="88" fill="url(#cat-sheen)" transform="skewX(-18)"/>
-  </g>
-</g>
 
 <!-- Unframed 28x28 Discord Clyde icon in AccentPrimary -->
 %s
@@ -248,7 +227,7 @@ func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
 </g>
 </svg>`,
 		escapeXML(aria),
-		r.baseDefs(extraDefs),
+		r.baseDefs(""),
 		reducedMotionCSS,
 		renderNavIcon("discord", p.AccentPrimary, 24, 20, 28),
 		titleY, fontSans, escapeXML(p.Text), escapeXML(titleText),
@@ -265,22 +244,9 @@ func (r *Renderer) RenderDiscordBanner(data DiscordData) ([]byte, error) {
 	return []byte(out), nil
 }
 
-// dividerDiamondPath builds a crisp diamond centered at (cx, 21) on the
-// section divider midline.
-func dividerDiamondPath(cx, r float64) string {
-	const cy = 21.0
-	return fmt.Sprintf(
-		"M%s %s L%s %s L%s %s L%s %s Z",
-		formatFloat(cx), formatFloat(cy-r),
-		formatFloat(cx+r), formatFloat(cy),
-		formatFloat(cx), formatFloat(cy+r),
-		formatFloat(cx-r), formatFloat(cy),
-	)
-}
-
 // RenderSectionDivider renders an 840x42 Catppuccin section divider banner
 // with a single 1.5px border, centred bold uppercase Work Sans title, widely
-// spaced AccentPrimary and AccentTertiary diamond pips, and outward-flowing
+// spaced AccentPrimary and AccentTertiary circle pips, and outward-flowing
 // Catppuccin gradient flanking rules.
 func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 	p := r.palette
@@ -288,10 +254,10 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 	subtitle := strings.ToUpper(TruncateText(strings.TrimSpace(data.Subtitle), 28))
 
 	halfLabelWidth := float64(len([]rune(upper)))*11.2/2.0 + 34.0
-	leftDiamondX := 420.0 - halfLabelWidth
-	rightDiamondX := 420.0 + halfLabelWidth
-	leftRuleEnd := leftDiamondX - 14.0
-	rightRuleStart := rightDiamondX + 14.0
+	leftDotX := 420.0 - halfLabelWidth
+	rightDotX := 420.0 + halfLabelWidth
+	leftRuleEnd := leftDotX - 14.0
+	rightRuleStart := rightDotX + 14.0
 
 	rightRuleEnd := 812.0
 	subtitleSVG := ""
@@ -310,10 +276,10 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 		fmt.Fprintf(&leftRuleSVG,
 			`<line x1="28" y1="21" x2="%s" y2="21" stroke="%s" stroke-width="1" opacity="0.65"/>
 <line x1="28" y1="21" x2="%s" y2="21" stroke="url(#cat-accent)" stroke-width="1.5" class="vitrine-rule-trace vitrine-rule-left" pathLength="%s"/>
-<path d="%s" fill="%s"/>`,
+<circle cx="22" cy="21" r="3" fill="%s"/>`,
 			formatFloat(leftRuleEnd), escapeXML(p.Surface1),
 			formatFloat(leftRuleEnd), formatFloat(leftLen),
-			dividerDiamondPath(22, 3.2), escapeXML(p.AccentPrimary),
+			escapeXML(p.AccentPrimary),
 		)
 	}
 
@@ -327,7 +293,7 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 			formatFloat(rightRuleStart), formatFloat(rightRuleEnd), formatFloat(rightLen),
 		)
 		if subtitle == "" {
-			fmt.Fprintf(&rightRuleSVG, "\n"+`<path d="%s" fill="%s"/>`, dividerDiamondPath(rightRuleEnd+6, 3.2), escapeXML(p.AccentTertiary))
+			fmt.Fprintf(&rightRuleSVG, "\n"+`<circle cx="%s" cy="21" r="3" fill="%s"/>`, formatFloat(rightRuleEnd+6), escapeXML(p.AccentTertiary))
 		}
 	}
 
@@ -344,6 +310,10 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
     50%% { stroke-dashoffset: 0; opacity: 1; }
     100%% { stroke-dashoffset: -64; opacity: 0.7; }
   }
+  @keyframes vitrine-divider-dot-pulse {
+    0%%, 100%% { transform: scale(0.9); opacity: 0.65; }
+    50%% { transform: scale(1.18); opacity: 1; }
+  }
   .vitrine-rule-left {
     stroke-dasharray: 48 16;
     animation: vitrine-divider-out-left 6.5s linear infinite;
@@ -352,21 +322,30 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
     stroke-dasharray: 48 16;
     animation: vitrine-divider-out-right 6.5s linear infinite;
   }
+  .vitrine-divider-dot-left,
+  .vitrine-divider-dot-right {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-divider-dot-pulse 3.6s ease-in-out infinite;
+  }
+  .vitrine-divider-dot-right {
+    animation-delay: 0.6s;
+  }
   %s
 </style>
 
 <!-- Single 1.5px Surface1 section divider banner -->
 <rect x="1" y="4" width="838" height="34" rx="10" fill="url(#card-bg)" stroke="%s" stroke-width="1.5"/>
 
-<!-- Left outward-flowing gradient rule and AccentPrimary diamond -->
+<!-- Left outward-flowing gradient rule and AccentPrimary circle pip -->
 %s
-<path class="vitrine-divider-diamond-left" d="%s" fill="%s"/>
+<circle class="vitrine-divider-dot-left" cx="%s" cy="21" r="3.5" fill="%s"/>
 
 <!-- Centred bold uppercase Work Sans title -->
 <text x="420" y="25.5" text-anchor="middle" font-family="%s" font-size="13" font-weight="700" letter-spacing="2.8" fill="%s">%s</text>
 
-<!-- Right AccentTertiary diamond and outward-flowing gradient rule -->
-<path class="vitrine-divider-diamond-right" d="%s" fill="%s"/>
+<!-- Right AccentTertiary circle pip and outward-flowing gradient rule -->
+<circle class="vitrine-divider-dot-right" cx="%s" cy="21" r="3.5" fill="%s"/>
 %s
 %s
 </svg>`,
@@ -375,9 +354,9 @@ func (r *Renderer) RenderSectionDivider(data SectionData) ([]byte, error) {
 		reducedMotionCSS,
 		escapeXML(p.Surface1),
 		leftRuleSVG.String(),
-		dividerDiamondPath(leftDiamondX, 3.5), escapeXML(p.AccentPrimary),
+		formatFloat(leftDotX), escapeXML(p.AccentPrimary),
 		fontSans, escapeXML(p.Text), escapeXML(upper),
-		dividerDiamondPath(rightDiamondX, 3.5), escapeXML(p.AccentTertiary),
+		formatFloat(rightDotX), escapeXML(p.AccentTertiary),
 		rightRuleSVG.String(),
 		subtitleSVG,
 	)

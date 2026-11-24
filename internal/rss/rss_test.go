@@ -2,6 +2,7 @@ package rss
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -213,5 +214,242 @@ func TestFetch(t *testing.T) {
 	}
 	if _, err := Fetch(ctx, srv.Client(), "file:///etc/passwd", 5); err == nil {
 		t.Fatal("expected error for non-http scheme")
+	}
+}
+
+func TestParsePodcastRSSMetadata(t *testing.T) {
+	t.Parallel()
+
+	podcastFeed := `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Linux Matters Podcast</title>
+    <item>
+      <title>Episode 94</title>
+      <link>https://linuxmatters.sh/94/</link>
+      <pubDate>Fri, 14 Nov 2025 10:00:00 +0000</pubDate>
+      <description>&lt;p&gt;Short show notes.&lt;/p&gt;</description>
+      <itunes:episode> 94 </itunes:episode>
+      <itunes:duration>00:35:00</itunes:duration>
+      <itunes:subtitle>Containers, Nix &amp; desktop workflows</itunes:subtitle>
+      <itunes:summary>Longer podcast summary that must not override subtitle.</itunes:summary>
+    </item>
+    <item>
+      <title>Episode 93</title>
+      <link>https://linuxmatters.sh/93/</link>
+      <pubDate>Fri, 07 Nov 2025 10:00:00 +0000</pubDate>
+      <itunes:episode>93</itunes:episode>
+      <itunes:duration>00:41:57</itunes:duration>
+      <itunes:subtitle>Rounding up &amp; &#8217;testing&#8217;</itunes:subtitle>
+    </item>
+    <item>
+      <title>Episode 92</title>
+      <link>https://linuxmatters.sh/92/</link>
+      <pubDate>Fri, 31 Oct 2025 10:00:00 +0000</pubDate>
+      <itunes:episode>92</itunes:episode>
+      <itunes:duration>01:05:10</itunes:duration>
+      <summary>Fallback summary when itunes subtitle is absent</summary>
+    </item>
+    <item>
+      <title>Episode 91</title>
+      <link>https://linuxmatters.sh/91/</link>
+      <pubDate>Fri, 24 Oct 2025 10:00:00 +0000</pubDate>
+      <itunes:episode>91</itunes:episode>
+      <itunes:duration>3600</itunes:duration>
+      <itunes:summary>iTunes summary alone stays separate from bare summary</itunes:summary>
+    </item>
+    <item>
+      <title>Episode 90</title>
+      <link>https://linuxmatters.sh/90/</link>
+      <pubDate>Fri, 17 Oct 2025 10:00:00 +0000</pubDate>
+      <itunes:episode>90</itunes:episode>
+      <itunes:duration>2400</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 89</title>
+      <link>https://linuxmatters.sh/89/</link>
+      <pubDate>Fri, 10 Oct 2025 10:00:00 +0000</pubDate>
+      <itunes:episode>89</itunes:episode>
+      <itunes:duration>41:57</itunes:duration>
+    </item>
+  </channel>
+</rss>`
+
+	items, err := Parse([]byte(podcastFeed), 0)
+	if err != nil {
+		t.Fatalf("Parse podcast RSS failed: %v", err)
+	}
+	if len(items) != 6 {
+		t.Fatalf("len(items) = %d, want 6", len(items))
+	}
+
+	want := []struct {
+		episode  string
+		duration string
+		subtitle string
+	}{
+		{episode: "94", duration: "35 min", subtitle: "Containers, Nix & desktop workflows"},
+		{episode: "93", duration: "42 min", subtitle: "Rounding up & ’testing’"},
+		{episode: "92", duration: "1h 5m", subtitle: "Fallback summary when itunes subtitle is absent"},
+		{episode: "91", duration: "1h", subtitle: ""},
+		{episode: "90", duration: "40 min", subtitle: ""},
+		{episode: "89", duration: "42 min", subtitle: ""},
+	}
+
+	for i, tc := range want {
+		if items[i].Episode != tc.episode {
+			t.Errorf("items[%d].Episode = %q, want %q", i, items[i].Episode, tc.episode)
+		}
+		if items[i].Duration != tc.duration {
+			t.Errorf("items[%d].Duration = %q, want %q", i, items[i].Duration, tc.duration)
+		}
+		if items[i].Subtitle != tc.subtitle {
+			t.Errorf("items[%d].Subtitle = %q, want %q", i, items[i].Subtitle, tc.subtitle)
+		}
+	}
+}
+
+func TestFormatDurationEdgeCases(t *testing.T) {
+	t.Parallel()
+
+	cases := []struct {
+		raw  string
+		want string
+	}{
+		{raw: "00:35:00", want: "35 min"},
+		{raw: "00:41:57", want: "42 min"},
+		{raw: "01:05:10", want: "1h 5m"},
+		{raw: "3600", want: "1h"},
+		{raw: "2400", want: "40 min"},
+		{raw: "35:00", want: "35 min"},
+		{raw: "75:30", want: "1h 16m"},
+		{raw: "00:59:45", want: "1h"},
+		{raw: "00:00:15", want: "1 min"},
+		{raw: "20", want: "1 min"},
+		{raw: "0", want: ""},
+		{raw: "00:00:00", want: ""},
+		{raw: "", want: ""},
+		{raw: "   ", want: ""},
+		{raw: "not-a-duration", want: ""},
+		{raw: "01:99:00", want: ""},
+		{raw: "01:02:03:04", want: ""},
+		{raw: "-100", want: ""},
+		{raw: "10:-5", want: ""},
+	}
+
+	for _, tc := range cases {
+		if got := formatDuration(tc.raw); got != tc.want {
+			t.Errorf("formatDuration(%q) = %q, want %q", tc.raw, got, tc.want)
+		}
+	}
+}
+
+func TestParseBlogRSSReadTimeAndSubtitle(t *testing.T) {
+	t.Parallel()
+
+	makeWords := func(n int) string {
+		words := make([]string, n)
+		for i := range n {
+			words[i] = fmt.Sprintf("w%d", i+1)
+		}
+		return strings.Join(words, " ")
+	}
+
+	// 440 words -> (440+110)/220 = 2 min.
+	longHTML := "<article><h1>Post Heading</h1><p>" + makeWords(200) +
+		"</p><p>" + makeWords(238) + `</p><!-- hidden comment --><p><a href="https://example.com" title="a > b">link</a>.</p></article>`
+	// 60 words -> minimum threshold -> max(1, (60+110)/220) = 1 min.
+	thresholdHTML := "<p>" + makeWords(60) + "</p>"
+	// 59 words -> below 60-word threshold -> 0 min.
+	shortHTML := "<p>" + makeWords(59) + "</p>"
+	// 660 words in content:encoded -> (660+110)/220 = 3 min (longer than short description).
+	encodedHTML := "<p>" + makeWords(660) + "</p>"
+
+	blogFeed := fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wimpy's World</title>
+    <item>
+      <title>Full HTML Description Post</title>
+      <link>https://wimpysworld.com/posts/full-html/</link>
+      <pubDate>Thu, 20 Nov 2025 12:00:00 +0000</pubDate>
+      <summary>A crisp one-line summary &amp; overview.</summary>
+      <description><![CDATA[%s]]></description>
+    </item>
+    <item>
+      <title>Content Encoded Post</title>
+      <link>https://wimpysworld.com/posts/content-encoded/</link>
+      <pubDate>Wed, 19 Nov 2025 12:00:00 +0000</pubDate>
+      <summary>Short summary for encoded post.</summary>
+      <description>&lt;p&gt;Brief teaser.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[%s]]></content:encoded>
+    </item>
+    <item>
+      <title>Threshold 60 Words</title>
+      <link>https://wimpysworld.com/posts/threshold/</link>
+      <pubDate>Tue, 18 Nov 2025 12:00:00 +0000</pubDate>
+      <summary>Exactly sixty words.</summary>
+      <description><![CDATA[%s]]></description>
+    </item>
+    <item>
+      <title>Too Short 59 Words</title>
+      <link>https://wimpysworld.com/posts/short/</link>
+      <pubDate>Mon, 17 Nov 2025 12:00:00 +0000</pubDate>
+      <summary>Just under sixty words.</summary>
+      <description><![CDATA[%s]]></description>
+    </item>
+  </channel>
+</rss>`, longHTML, encodedHTML, thresholdHTML, shortHTML)
+
+	items, err := Parse([]byte(blogFeed), 0)
+	if err != nil {
+		t.Fatalf("Parse blog RSS failed: %v", err)
+	}
+	if len(items) != 4 {
+		t.Fatalf("len(items) = %d, want 4", len(items))
+	}
+
+	want := []struct {
+		title    string
+		subtitle string
+		readTime int
+	}{
+		{
+			title:    "Full HTML Description Post",
+			subtitle: "A crisp one-line summary & overview.",
+			readTime: 2,
+		},
+		{
+			title:    "Content Encoded Post",
+			subtitle: "Short summary for encoded post.",
+			readTime: 3,
+		},
+		{
+			title:    "Threshold 60 Words",
+			subtitle: "Exactly sixty words.",
+			readTime: 1,
+		},
+		{
+			title:    "Too Short 59 Words",
+			subtitle: "Just under sixty words.",
+			readTime: 0,
+		},
+	}
+
+	for i, tc := range want {
+		if items[i].Title != tc.title {
+			t.Errorf("items[%d].Title = %q, want %q", i, items[i].Title, tc.title)
+		}
+		if items[i].Subtitle != tc.subtitle {
+			t.Errorf("items[%d].Subtitle = %q, want %q", i, items[i].Subtitle, tc.subtitle)
+		}
+		if items[i].ReadTimeMinutes != tc.readTime {
+			t.Errorf("items[%d].ReadTimeMinutes = %d, want %d", i, items[i].ReadTimeMinutes, tc.readTime)
+		}
+	}
+
+	// Ensure <summary> stays distinct from full HTML <description> stored in Summary.
+	if !strings.Contains(items[0].Summary, "<h1>Post Heading</h1>") {
+		t.Errorf("expected items[0].Summary to keep description content, got %q", items[0].Summary)
 	}
 }

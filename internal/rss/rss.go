@@ -9,9 +9,11 @@ import (
 	"fmt"
 	"html"
 	"io"
+	"math"
 	"net/http"
 	"net/url"
 	"slices"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -20,6 +22,12 @@ const (
 	defaultHTTPTimeout = 15 * time.Second
 	maxBodyBytes       = 4 << 20 // 4 MiB
 	userAgent          = "vitrine/1.0"
+
+	itunesNamespace  = "http://www.itunes.com/dtds/podcast-1.0.dtd"
+	contentNamespace = "http://purl.org/rss/1.0/modules/content/"
+
+	minReadTimeWords = 60
+	wordsPerMinute   = 220
 )
 
 var dateLayouts = []string{
@@ -36,10 +44,19 @@ var dateLayouts = []string{
 
 // Item represents a single normalised entry from an RSS 2.0 or Atom feed.
 type Item struct {
-	Title       string
-	URL         string
-	PublishedAt time.Time
-	Summary     string
+	Title           string
+	URL             string
+	PublishedAt     time.Time
+	Summary         string
+	Episode         string
+	Duration        string
+	Subtitle        string
+	ReadTimeMinutes int
+}
+
+type xmlText struct {
+	XMLName xml.Name
+	Value   string `xml:",chardata"`
 }
 
 type rssDocument struct {
@@ -51,10 +68,15 @@ type rssChannel struct {
 }
 
 type rssItem struct {
-	Title       string `xml:"title"`
-	Link        string `xml:"link"`
-	PubDate     string `xml:"pubDate"`
-	Description string `xml:"description"`
+	Title       string    `xml:"title"`
+	Link        string    `xml:"link"`
+	PubDate     string    `xml:"pubDate"`
+	Description string    `xml:"description"`
+	Summaries   []xmlText `xml:"summary"`
+	Encoded     []xmlText `xml:"encoded"`
+	Episodes    []xmlText `xml:"episode"`
+	Durations   []xmlText `xml:"duration"`
+	Subtitles   []xmlText `xml:"subtitle"`
 }
 
 type atomDocument struct {
@@ -190,11 +212,22 @@ func parseRSS(data []byte) ([]Item, error) {
 		if err != nil {
 			return nil, fmt.Errorf("parse rss pubDate %q: %w", raw.PubDate, err)
 		}
+
+		subtitle := cleanText(selectNamespaceText(raw.Subtitles, itunesNamespace, true))
+		if subtitle == "" {
+			subtitle = cleanText(selectNamespaceText(raw.Summaries, "", false))
+		}
+		encoded := selectNamespaceText(raw.Encoded, contentNamespace, true)
+
 		items = append(items, Item{
-			Title:       cleanText(raw.Title),
-			URL:         strings.TrimSpace(raw.Link),
-			PublishedAt: publishedAt,
-			Summary:     cleanText(raw.Description),
+			Title:           cleanText(raw.Title),
+			URL:             strings.TrimSpace(raw.Link),
+			PublishedAt:     publishedAt,
+			Summary:         cleanText(raw.Description),
+			Episode:         cleanText(selectNamespaceText(raw.Episodes, itunesNamespace, true)),
+			Duration:        formatDuration(selectNamespaceText(raw.Durations, itunesNamespace, true)),
+			Subtitle:        subtitle,
+			ReadTimeMinutes: estimateReadTimeMinutes(encoded, raw.Description),
 		})
 	}
 	return items, nil
@@ -225,6 +258,7 @@ func parseAtom(data []byte) ([]Item, error) {
 			URL:         selectAtomLink(entry.Links),
 			PublishedAt: publishedAt,
 			Summary:     cleanText(summary),
+			Subtitle:    cleanText(entry.Summary),
 		})
 	}
 	return items, nil
@@ -270,6 +304,188 @@ func parseDate(raw string) (time.Time, error) {
 
 func cleanText(s string) string {
 	return strings.TrimSpace(html.UnescapeString(s))
+}
+
+func selectNamespaceText(nodes []xmlText, preferredSpace string, fallbackAny bool) string {
+	var fallback string
+	for _, node := range nodes {
+		if strings.TrimSpace(node.Value) == "" {
+			continue
+		}
+		if node.XMLName.Space == preferredSpace {
+			return node.Value
+		}
+		if fallbackAny && fallback == "" {
+			fallback = node.Value
+		}
+	}
+	return fallback
+}
+
+func formatDuration(raw string) string {
+	totalSeconds, ok := parseDurationSeconds(raw)
+	if !ok || totalSeconds <= 0 {
+		return ""
+	}
+
+	totalMinutes := max(1, (totalSeconds+30)/60)
+	if totalMinutes < 60 {
+		return fmt.Sprintf("%d min", totalMinutes)
+	}
+	hours := totalMinutes / 60
+	mins := totalMinutes % 60
+	if mins == 0 {
+		return fmt.Sprintf("%dh", hours)
+	}
+	return fmt.Sprintf("%dh %dm", hours, mins)
+}
+
+func parseDurationSeconds(raw string) (int, bool) {
+	s := strings.TrimSpace(raw)
+	if s == "" {
+		return 0, false
+	}
+
+	parts := strings.Split(s, ":")
+	switch len(parts) {
+	case 1:
+		return parseNonNegInt(parts[0])
+	case 2:
+		mins, ok1 := parseNonNegInt(parts[0])
+		sec, ok2 := parseNonNegInt(parts[1])
+		if !ok1 || !ok2 || sec >= 60 || mins > math.MaxInt/60-1 {
+			return 0, false
+		}
+		return mins*60 + sec, true
+	case 3:
+		hours, ok1 := parseNonNegInt(parts[0])
+		mins, ok2 := parseNonNegInt(parts[1])
+		sec, ok3 := parseNonNegInt(parts[2])
+		if !ok1 || !ok2 || !ok3 || mins >= 60 || sec >= 60 || hours > math.MaxInt/3600-1 {
+			return 0, false
+		}
+		return hours*3600 + mins*60 + sec, true
+	default:
+		return 0, false
+	}
+}
+
+func parseNonNegInt(s string) (int, bool) {
+	if s == "" {
+		return 0, false
+	}
+	for i := range len(s) {
+		if s[i] < '0' || s[i] > '9' {
+			return 0, false
+		}
+	}
+	n, err := strconv.Atoi(s)
+	if err != nil || n < 0 {
+		return 0, false
+	}
+	return n, true
+}
+
+func estimateReadTimeMinutes(htmlBodies ...string) int {
+	bestWords := 0
+	for _, body := range htmlBodies {
+		if strings.TrimSpace(body) == "" {
+			continue
+		}
+		if words := countHTMLWords(body); words > bestWords {
+			bestWords = words
+		}
+	}
+	if bestWords < minReadTimeWords {
+		return 0
+	}
+	return max(1, (bestWords+wordsPerMinute/2)/wordsPerMinute)
+}
+
+func countHTMLWords(raw string) int {
+	plain := html.UnescapeString(stripHTMLTags(raw))
+	return len(strings.Fields(plain))
+}
+
+func stripHTMLTags(s string) string {
+	var b strings.Builder
+	b.Grow(len(s))
+
+	lastByte := byte(0)
+	for i := 0; i < len(s); {
+		if s[i] == '<' {
+			if next, ok := skipHTMLTag(s, i); ok {
+				if needsTagSeparator(lastByte, s, next) {
+					b.WriteByte(' ')
+					lastByte = ' '
+				}
+				i = next
+				continue
+			}
+		}
+		b.WriteByte(s[i])
+		lastByte = s[i]
+		i++
+	}
+	return b.String()
+}
+
+func skipHTMLTag(s string, start int) (int, bool) {
+	if start+1 >= len(s) {
+		return 0, false
+	}
+	if strings.HasPrefix(s[start:], "<!--") {
+		if end := strings.Index(s[start+4:], "-->"); end >= 0 {
+			return start + 4 + end + 3, true
+		}
+		return len(s), true
+	}
+	if !isTagStartChar(s[start+1]) {
+		return 0, false
+	}
+
+	var quote byte
+	for i := start + 1; i < len(s); i++ {
+		ch := s[i]
+		if quote != 0 {
+			if ch == quote {
+				quote = 0
+			}
+			continue
+		}
+		if ch == '"' || ch == '\'' {
+			quote = ch
+			continue
+		}
+		if ch == '>' {
+			return i + 1, true
+		}
+	}
+	return 0, false
+}
+
+func isTagStartChar(ch byte) bool {
+	return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch == '/' || ch == '!' || ch == '?'
+}
+
+func needsTagSeparator(lastByte byte, s string, nextIdx int) bool {
+	if lastByte == 0 || isASCIIWhitespace(lastByte) || nextIdx >= len(s) {
+		return false
+	}
+	next := s[nextIdx]
+	if isASCIIWhitespace(next) {
+		return false
+	}
+	switch next {
+	case '.', ',', ';', ':', '!', '?', ')', ']':
+		return false
+	default:
+		return true
+	}
+}
+
+func isASCIIWhitespace(ch byte) bool {
+	return ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r' || ch == '\f' || ch == '\v'
 }
 
 func validateHTTPURL(raw string) error {

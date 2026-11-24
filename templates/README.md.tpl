@@ -99,7 +99,10 @@
 <a href="{{.Podcast.SiteURL}}"><img align="right" src="{{.Podcast.CoverURL}}" alt="{{.Podcast.Title}}" width="160" height="160"></a>
 {{- end}}
 {{range .Podcast.Items}}
-- [{{.Title}}]({{.URL}}) ({{humanize .PublishedAt}})
+- {{if .Episode}}**#{{.Episode}}** · {{end}}**[{{.Title}}]({{.URL}})**{{if .Duration}} · `{{.Duration}}`{{end}} ({{humanize .PublishedAt}})
+{{- if .Subtitle}}
+  - {{.Subtitle}}
+{{- end}}
 {{- end}}
 <br clear="right" />
 {{- end}}
@@ -109,7 +112,10 @@
   {{pictureTag .AssetBaseURL (index .SectionBases "blog") "Blog" 840}}
 </p>
 {{range .Blog.Items}}
-- [{{.Title}}]({{.URL}}) ({{humanize .PublishedAt}})
+- **[{{.Title}}]({{.URL}})**{{if gt .ReadTimeMinutes 0}} · `{{.ReadTimeMinutes}} min read`{{end}} ({{humanize .PublishedAt}})
+{{- if .Subtitle}}
+  - {{.Subtitle}}
+{{- end}}
 {{- end}}
 {{- end}}
 {{- $hasTwitch := and .Twitch .Twitch.Enabled .Twitch.BaseName}}
@@ -119,15 +125,15 @@
 <p align="center">
   {{pictureTag .AssetBaseURL (index .SectionBases "videos") (or .VideosHeading "Videos & Streams") 840}}
 </p>
+{{- if $hasYouTube}}
+{{range .YouTube.Items}}
+- [{{.Title}}]({{.URL}}) ({{humanize .PublishedAt}})
+{{- end}}
+{{- end}}
 {{- if $hasTwitch}}
 
 <p align="center">
   <a href="{{.Twitch.URL}}">{{pictureTag .AssetBaseURL .Twitch.BaseName .Twitch.Alt 0}}</a>
 </p>
-{{- end}}
-{{- if $hasYouTube}}
-{{range .YouTube.Items}}
-- [{{.Title}}]({{.URL}}) ({{humanize .PublishedAt}})
-{{- end}}
 {{- end}}
 {{- end}}

@@ -31,7 +31,7 @@ Vitrine calls only GitHub Representational State Transfer (REST) endpoints becau
 | Profile data | REST source | Notes |
 | --- | --- | --- |
 | Stats strip metrics | `/users/{user}`, `/orgs/{org}`, `/users/{user}/repos`, `/orgs/{org}/repos`, `/search/commits`, and `/search/issues` | Computes deduplicated stars across the user, configured organisations, and Haberdasher projects, plus commits, pull requests, `involves:` issues, and followers. |
-| Community contributions | `/users/{user}/events/public` and `/search/issues` | Collects external repository contributions outside `exclude_owners` within `contributions_window_days` (default 180 days). |
+| Community contributions | `/users/{user}/events/public` and `/search/issues` | Collects external repository contributions outside `exclude_owners` within `contributions_window_days` (365 days in `vitrine.yaml`, 180 days by default). |
 | Recent releases | `/repos/{owner}/{repo}/releases` | Collects recent releases across configured owners and Haberdasher projects. |
 | Starred repositories | `/users/{user}/starred` | Sends `Accept: application/vnd.github.star+json`, excludes owners listed in `exclude_owners`, and renders open by default. |
 
@@ -86,11 +86,11 @@ Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `b
 
 RSS, YouTube, and Twitch sources are configurable in `vitrine.yaml`:
 
-- **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episodes beside the podcast cover image.
-- **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://wimpysworld.com/posts/rss.xml`) for recent posts.
+- **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episode numbers, durations, relative dates, and subtitles beside the podcast cover image.
+- **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://wimpysworld.com/posts/rss.xml`) and renders post titles, estimated reading times, relative dates, and summaries.
 - **YouTube Atom feeds**: Parses `<published>` rather than `<updated>`, so edits to old video metadata do not push archive videos to the top.
 - **Twitch status**: Queries `https://decapi.me/twitch/uptime/<channel>` first and falls back to `https://img.shields.io/twitch/status/<channel>.json` without Twitch API credentials.
-- **Combined `VIDEOS & STREAMS` section**: Places the Twitch live or offline status tile above recent YouTube videos under `VIDEOS & STREAMS`. The heading switches to `VIDEOS` when only YouTube is enabled, or `STREAMS` when only Twitch is enabled.
+- **Combined `VIDEOS & STREAMS` section**: Places the Twitch live or offline status button below recent YouTube videos under `VIDEOS & STREAMS`. The heading switches to `VIDEOS` when only YouTube is enabled, or `STREAMS` when only Twitch is enabled.
 
 ## Visual design and GitHub SVG rules
 
@@ -142,14 +142,14 @@ The generated `README.md` arranges sections in this order:
 4. **Discord live banner**: Dynamic community banner showing live online presence and total member count from the invite API, widget, or Shields fallback.
 5. **Stats strip**: Five-metric SVG summary showing deduplicated Stars (across configured organisations and Haberdasher), Commits, Pull Requests, `involves:` Issues, and Followers.
 6. **Sponsors lines**: Active sponsors as clickable links from `sponsors_partial?filter=active` with the GitHub Sponsors link, plus a second line of unclickable past sponsor names from `sponsors_partial?filter=inactive`.
-7. **Projects**: Two-column grid of Haberdasher project cards sorted descending by latest release date. Each card shows an unframed `64x64` logo, title, tagline, version pill, primary language, star count, and release age (with no `N/8` host dots).
+7. **Projects**: Two-column grid of `408x182` Haberdasher project cards sorted descending by latest release date. Each card shows an unframed `64x64` logo, title, up to three lines of description, version pill, primary language, star count, and release age (with no `N/8` host dots).
 8. **Package Repositories**: Eight clickable tiles for the `.wimpys.world` package hosts with unframed `40x40` logos and Catppuccin or gilt count badges.
-9. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (six months by default).
+9. **Community Contributions**: External repositories outside `exclude_owners` from the configured `contributions_window_days` window (365 days in `vitrine.yaml`, 180 days by default).
 10. **Recent Releases**: Latest releases across configured owners and Haberdasher projects.
 11. **Starred**: Open list of recent starred repositories excluding `exclude_owners`.
-12. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes from the RSS feed.
-13. **Blog**: Recent posts from the Wimpy's World blog RSS feed.
-14. **Videos & Streams (`VIDEOS & STREAMS`)**: Twitch live or offline status tile above recent YouTube videos (titled `VIDEOS` or `STREAMS` when only one source is enabled).
+12. **Podcast (`PODCAST`)**: Linux Matters cover art alongside recent episodes showing episode number, duration, age, and subtitle.
+13. **Blog**: Recent posts from the Wimpy's World blog RSS feed showing estimated reading time, age, and summary.
+14. **Videos & Streams (`VIDEOS & STREAMS`)**: Recent YouTube videos with the Twitch live or offline status button below (titled `VIDEOS` or `STREAMS` when only one source is enabled).
 
 Vitrine replaces the contribution snake workflow (`.github/workflows/snake.yml`), so the repository drops both that workflow and its `snake` branch.
 
@@ -158,7 +158,7 @@ Vitrine replaces the contribution snake workflow (`.github/workflows/snake.yml`)
 Every SVG emitted by `internal/svg` follows five strict rules:
 
 - Animate only GPU-friendly Cascading Style Sheets (CSS) `@keyframes` properties: `transform`, `opacity`, and `stroke-dashoffset`.
-- Apply staggered GPU-only shimmers and glints across social pills, the Discord banner, the stats strip, project cards, the package shelf, and section dividers, alongside the hero banner Catppuccin Harmonic Aurora Waves.
+- Apply staggered GPU-only top-edge glints across cards, banners, pills, and the package shelf instead of face shimmers. Section dividers use circle ornaments instead of diamonds, and the hero banner animates Catppuccin Harmonic Aurora Waves.
 - Include `@media (prefers-reduced-motion: reduce)` in every animated SVG to stop animation and present a calm static frame.
 - Embed all logos, icons, and raster art inline as SVG geometry or base64 data URIs.
 - Declare `'Work Sans'` and `'Fira Code'` with system font fallbacks instead of external font imports.

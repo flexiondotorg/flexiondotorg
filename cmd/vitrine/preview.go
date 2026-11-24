@@ -119,6 +119,9 @@ func buildPreviewHTML(markdown string, data render.RenderData, twitchLiveBase, t
     margin: 6px 0 14px;
     padding-left: 22px;
   }
+  .markdown-body li > ul {
+    margin: 2px 0 6px;
+  }
   .markdown-body li { margin: 4px 0; }
   .markdown-body code {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -244,8 +247,21 @@ func markdownToHTML(md string) string {
 	lines := strings.Split(strings.ReplaceAll(md, "\r\n", "\n"), "\n")
 	var out strings.Builder
 	inList := false
+	inOuterItem := false
+	inSubList := false
 
+	closeOuterItem := func() {
+		if inSubList {
+			out.WriteString("</ul>\n")
+			inSubList = false
+		}
+		if inOuterItem {
+			out.WriteString("</li>\n")
+			inOuterItem = false
+		}
+	}
 	closeList := func() {
+		closeOuterItem()
 		if inList {
 			out.WriteString("</ul>\n")
 			inList = false
@@ -272,12 +288,23 @@ func markdownToHTML(md string) string {
 			continue
 		}
 
+		indent := len(rawLine) - len(strings.TrimLeft(rawLine, " \t"))
 		if after, ok := strings.CutPrefix(trimmed, "- "); ok {
+			if indent >= 2 && inOuterItem {
+				if !inSubList {
+					out.WriteString("\n<ul>\n")
+					inSubList = true
+				}
+				fmt.Fprintf(&out, "<li>%s</li>\n", renderInlineMarkdown(after))
+				continue
+			}
+			closeOuterItem()
 			if !inList {
 				out.WriteString("<ul>\n")
 				inList = true
 			}
-			fmt.Fprintf(&out, "<li>%s</li>\n", renderInlineMarkdown(after))
+			fmt.Fprintf(&out, "<li>%s", renderInlineMarkdown(after))
+			inOuterItem = true
 			continue
 		}
 

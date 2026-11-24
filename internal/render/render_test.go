@@ -299,12 +299,39 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 				Title:    "Linux Matters Podcast",
 				SiteURL:  "https://linuxmatters.sh",
 				CoverURL: "https://example.com/cover.png",
-				Items:    []rss.Item{{Title: "Episode 1", URL: "https://linuxmatters.sh/1", PublishedAt: now}},
+				Items: []rss.Item{
+					{
+						Title:       "Episode 1",
+						URL:         "https://linuxmatters.sh/1",
+						PublishedAt: now,
+						Episode:     "94",
+						Duration:    "35 min",
+						Subtitle:    "Short episode subtitle.",
+					},
+					{
+						Title:       "Episode Plain",
+						URL:         "https://linuxmatters.sh/2",
+						PublishedAt: now.Add(-48 * time.Hour),
+					},
+				},
 			},
 			Blog: &FeedView{
 				Enabled: true,
 				Title:   "Blog",
-				Items:   []rss.Item{{Title: "Post 1", URL: "https://wimpysworld.com/1", PublishedAt: now}},
+				Items: []rss.Item{
+					{
+						Title:           "Post 1",
+						URL:             "https://wimpysworld.com/1",
+						PublishedAt:     now,
+						ReadTimeMinutes: 4,
+						Subtitle:        "Short blog summary.",
+					},
+					{
+						Title:       "Post Plain",
+						URL:         "https://wimpysworld.com/2",
+						PublishedAt: now.Add(-72 * time.Hour),
+					},
+				},
 			},
 			Twitch: &TwitchView{
 				Enabled:  true,
@@ -340,11 +367,17 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		"./assets/section-releases-dark.svg",
 		"./assets/section-starred-dark.svg",
 		"./assets/section-podcast-dark.svg",
+		"- **#94** · **[Episode 1](https://linuxmatters.sh/1)** · `35 min` (today)",
+		"  - Short episode subtitle.",
+		"- **[Episode Plain](https://linuxmatters.sh/2)** (2 days ago)",
 		"./assets/section-blog-dark.svg",
+		"- **[Post 1](https://wimpysworld.com/1)** · `4 min read` (today)",
+		"  - Short blog summary.",
+		"- **[Post Plain](https://wimpysworld.com/2)** (3 days ago)",
 		`./assets/section-videos-dark.svg`,
 		`alt="VIDEOS &amp; STREAMS"`,
-		"./assets/twitch-status-dark.svg",
 		"[Video 1](https://youtube.com/watch?v=1)",
+		"./assets/twitch-status-dark.svg",
 	}
 	prevIdx := -1
 	for _, marker := range orderMarkers {
