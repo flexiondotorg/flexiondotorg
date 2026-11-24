@@ -75,6 +75,12 @@ haberdasher:
     wimpysworld/ia-get: "assets/ia-get.png"
 
 projects:
+  - repo: wimpysworld/deb-get
+    language: Shell
+    logo: pages/icon.svg
+  - repo: quickemu-project/quickemu
+    language: Shell
+    logo: pages/icon.svg    
   - repo: wimpysworld/nix-config
     language: Nix
     logo: assets/logo.png
