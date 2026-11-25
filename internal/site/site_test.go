@@ -540,13 +540,23 @@ site:
 		t.Errorf("index.html should place #intro-bio above #scroll-spacer")
 	}
 	for _, wantText := range []string{
-		"© 2026 Martin Wimpress",
-		"BlueOak-1.0.0",
-		"Built with Go, PixiJS, and Catppuccin",
-		"Updated <time",
+		`© 2026 <a href="https://github.com/flexiondotorg"`,
+		">Martin Wimpress</a>",
+		">Built with Go, PixiJS, and Catppuccin</a>",
+		"Sponsor ",
 	} {
 		if !strings.Contains(indexHTML, wantText) {
 			t.Errorf("index.html footer missing expected text %q", wantText)
+		}
+	}
+	for _, unwanted := range []string{
+		"BlueOak-1.0.0",
+		"Updated <time",
+		">Source</a>",
+		"footer-rule-pip\">◆<",
+	} {
+		if strings.Contains(indexHTML, unwanted) {
+			t.Errorf("index.html footer should not contain %q", unwanted)
 		}
 	}
 	for _, wantAttr := range []string{`role="dialog"`, `aria-modal="true"`, `aria-labelledby="modal-title"`} {

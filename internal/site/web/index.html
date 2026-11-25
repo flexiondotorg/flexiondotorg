@@ -144,26 +144,20 @@
     <footer class="site-footer" id="site-footer">
       <div class="footer-rule" aria-hidden="true">
         <span class="footer-rule-line"></span>
-        <span class="footer-rule-pip">◆</span>
+        <span class="footer-rule-pip"></span>
         <span class="footer-rule-line"></span>
       </div>
       <div class="footer-bar">
         <div class="footer-group footer-left">
-          <span>© {{.Year}} {{.Data.Profile.Name}}</span>
-          <span class="meta-sep" aria-hidden="true">·</span>
-          <a href="{{.LicenseURL}}" target="_blank" rel="noopener noreferrer">BlueOak-1.0.0</a>
+          <span>© {{.Year}} <a href="https://github.com/flexiondotorg" target="_blank" rel="noopener noreferrer">{{.Data.Profile.Name}}</a></span>
         </div>
         <div class="footer-group footer-center">
-          <span>Built with Go, PixiJS, and Catppuccin</span>
-          <span class="meta-sep" aria-hidden="true">·</span>
-          <a href="{{.RepoURL}}" target="_blank" rel="noopener noreferrer">Source</a>
+          <a href="{{.RepoURL}}" target="_blank" rel="noopener noreferrer">Built with Go, PixiJS, and Catppuccin</a>
         </div>
         <div class="footer-group footer-right">
           {{- if .Data.Profile.SponsorsURL}}
           <a class="footer-sponsor" href="{{.Data.Profile.SponsorsURL}}" target="_blank" rel="noopener noreferrer">Sponsor <span class="footer-heart" aria-hidden="true">♥</span></a>
-          <span class="meta-sep" aria-hidden="true">·</span>
           {{- end}}
-          <span class="footer-updated">Updated <time datetime="{{.Data.GeneratedAt}}">{{.Data.UpdatedLabel}}</time></span>
         </div>
       </div>
     </footer>
