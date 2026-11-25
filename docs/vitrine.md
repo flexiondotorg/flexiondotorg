@@ -92,7 +92,7 @@ Vitrine builds an eight-tile shelf for `apt`, `rpm`, `pkg`, `apk`, `flatpak`, `b
 RSS, YouTube, and Twitch sources are configurable in `vitrine.yaml`:
 
 - **Podcast (`PODCAST`)**: Reads the Linux Matters RSS 2.0 feed (`https://linuxmatters.sh/episode/index.xml`) and renders episode numbers, durations, relative dates, and subtitles beside the podcast cover image. Optional `links:` on `feeds.podcast` (or any feed) render centred `44px` Catppuccin navigation pills below the episode list using `<feed>-<slug>-dark.svg` and `<feed>-<slug>-light.svg`.
-- **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://wimpysworld.com/posts/rss.xml`) and renders post titles, estimated reading times, relative dates, and summaries.
+- **Blog**: Reads the Wimpy's World RSS 2.0 feed (`https://blog.wimpys.world/posts/rss.xml`) and renders post titles, estimated reading times, relative dates, and summaries.
 - **YouTube Atom feeds**: Parses `<published>` rather than `<updated>`, so edits to old video metadata do not push archive videos to the top.
 - **Twitch status**: Queries `https://decapi.me/twitch/uptime/<channel>` first and falls back to `https://img.shields.io/twitch/status/<channel>.json` without Twitch API credentials.
 - **Combined `VIDEOS & STREAMS` section**: Places the Twitch live or offline status button below recent YouTube videos under `VIDEOS & STREAMS`. The heading switches to `VIDEOS` when only YouTube is enabled, or `STREAMS` when only Twitch is enabled.
