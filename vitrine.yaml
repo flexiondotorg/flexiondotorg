@@ -117,8 +117,8 @@ feeds:
   blog:
     enabled: true
     title: "Blog"
-    url: "https://wimpysworld.com/posts/rss.xml"
-    site_url: "https://wimpysworld.com"
+    url: "https://blog.wimpys.world/posts/rss.xml"
+    site_url: "https://blog.wimpys.world"
     max_items: 5
   youtube:
     enabled: false
@@ -174,7 +174,7 @@ site:
       slug: "wimpys-world-blog"
       category: "Sites"
       description: "Articles on Linux, NixOS, open-source tooling, and personal projects."
-      url: "https://wimpysworld.com"
+      url: "https://blog.wimpys.world"
       icon: "blog"
       accent: "mauve"
     - title: "Linux Matters"
