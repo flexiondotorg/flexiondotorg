@@ -46,6 +46,16 @@ Run every command from the repository root inside the Nix development shell:
 - Put custom build, test, or lint hooks in `just/project/build.sh`, `just/project/test.sh`, or `just/project/lint.sh`. Do not edit Tailor-managed `just/tailor.just`.
 - Update `.tailor.yml` instead of files marked `alteration: always` (`SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SUPPORT.md`, and Tailor-managed workflows).
 
+## Companion repository
+
+This repository pairs with the blog repository (`https://blog.wimpys.world`, currently `flexiondotorg/flexiondotorg.github.io`, hosted on Cloudflare Workers Static Assets).
+
+- Keep shared chrome identical across `wimpys.world` (`internal/site/web/`) and `blog.wimpys.world`: sticky frosted header (`min(1320px, 100%)`, `1.5px` aurora bottom hairline, `40px` `W` badge, `Projects`/`Links`/`Media`/`Blog` nav, `184px x 36px` right utility slot, three-way theme switch), three-column frosted footer (`6px` CSS circle pip, copyright, stack credit, `Sponsor ♥`), `scrollbar-gutter: stable`, and `overflow-x: clip`.
+- Keep Catppuccin Mocha and Latte tokens, `Work Sans` and `Fira Code` fonts, and the `localStorage` theme key (`wimpys-world-theme`) aligned across both sites.
+- Keep the WebGL Balatro swirl clock `(Date.now() / 1000) % (200 * Math.PI)` and static reduced-motion phase `42.0` identical across both sites so cross-site navigation does not reset the background.
+- `vitrine.yaml` consumes `https://blog.wimpys.world/posts/rss.xml` for the GitHub profile README and `wimpys.world` Media cards. Do not hardcode legacy `wimpysworld.com` hostnames in `internal/site/web/app.js`.
+- Whenever you change the shared header, footer, palette tokens, theme key, swirl clock, or blog link targets here, update the companion blog repository or explicitly flag the matching edit.
+
 ## Security and secrets
 
 - Require zero long-lived Personal Access Tokens (PATs) and zero third-party API secrets for automated workflows.

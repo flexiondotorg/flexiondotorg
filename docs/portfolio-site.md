@@ -17,10 +17,10 @@ Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.g
 
 The site renders a stripped-back, Balatro-inspired Top Trumps floating playing-card tabletop in **Catppuccin** palettes matching [docs/vitrine.md](vitrine.md). A single full-viewport fixed **PixiJS v8** canvas (`vendor/pixi.min.mjs`, vendored with zero npm build steps) runs behind a minimal HTML layer for the header, accessible focus buttons, quiet footer, and zoomed detail modal.
 
-- **Minimal header and editorial intro**: Shows the brand mark, title, subtitle, and a three-way icon theme switch (**System**, **Light** for Catppuccin Latte, and **Dark** for Catppuccin Mocha) persisted in `localStorage`, followed by a balanced two-column intro bio divided by a centred vertical Catppuccin aurora bar directly above the card decks (collapsing to a left-accented stack on narrow viewports).
-- **Subtle tabletop footer**: Pinned at the bottom of the page beneath a thin Catppuccin aurora fade rule and playing-card diamond pip, showing copyright, `BlueOak-1.0.0` licence link, stack credit (`Go, PixiJS, and Catppuccin`), repository link, subtle `Sponsor` link, and the last-updated date.
+- **Sticky frosted header and editorial intro**: Shows the `40px` `W` brand mark, title, subtitle, borderless accent-tinted navigation (`Projects`, `Links`, `Media`, and `Blog` linking to `https://blog.wimpys.world`), a fixed `184px x 36px` GitHub utility button, and a three-way icon theme switch (**System**, **Light** for Catppuccin Latte, and **Dark** for Catppuccin Mocha) persisted in `localStorage` under `wimpys-world-theme`. A balanced two-column intro bio divided by a centred vertical Catppuccin aurora bar sits directly above the card decks (collapsing to a left-accented stack on narrow viewports).
+- **Three-column frosted footer**: Pinned at the bottom of the page beneath a thin Catppuccin aurora fade rule and `6px` circle pip, showing copyright linked to `https://github.com/flexiondotorg`, stack credit (`Built with Go, PixiJS, and Catppuccin`) linked to this repository, and a subtle `Sponsor ♥` link.
 - **Zero-chrome open stage**: There are no stats pills, duplicate deck tabs, sort toggles, view-mode toggles, drift-pause buttons, section headings, captions, or stage container borders. Project order is driven strictly by `vitrine.yaml`.
-- **Swirling Catppuccin shader**: A custom PixiJS v8 WebGL GLSL ES 3.00 fragment shader paints a subtle domain-warped Catppuccin background that pulses gently on deck deals and falls back cleanly if shaders are unavailable.
+- **Swirling Catppuccin shader**: A custom PixiJS v8 WebGL GLSL ES 3.00 fragment shader paints a subtle domain-warped Catppuccin background clocked from `(Date.now() / 1000) % (200 * Math.PI)` (and static phase `42.0` under reduced motion) so cross-site navigation to `https://blog.wimpys.world` stays continuous, falling back cleanly if shaders are unavailable.
 - **Typography and contrast**: Cards and HTML chrome use **Work Sans** for titles and copy alongside **Fira Code** (`tabular-nums`) for structured stats, meeting Web Content Accessibility Guidelines (WCAG) AA contrast in both Mocha and Latte.
 
 | Role | Catppuccin Mocha (dark) | Catppuccin Latte (light) |
@@ -74,6 +74,14 @@ Visitors dismiss the card by clicking any non-interactive area of the flipped ca
 - **Idle float and hover 3D perspective tilt**: Cards bob and rock gently (`±4px`, `±1.6deg`). Hovering or focusing a card pops it forward (`scale: 1.06`), raises its z-order, projects true 3D perspective corner tilt via `PIXI.PerspectiveMesh` (`±12deg` yaw, `±10deg` pitch, `850px` camera distance) with opposing shadow lift, and glides a restrained dual-diagonal Catppuccin satin sheen across the tilted card face.
 - **Keyboard and screen-reader layer**: Transparent focusable buttons in `#a11y-layer` align 1:1 with the three decks and active cards, supporting `Tab`, arrow keys, `Home`, `End`, `Enter`, and `Space` with visible `:focus-visible` outlines.
 - **Silent OS reduced motion**: Under `@media (prefers-reduced-motion: reduce)`, spin, deal flights, idle bob, shader motion, sparkles, and flip transitions stop automatically with no visible toggle button.
+
+## Companion blog (`blog.wimpys.world`)
+
+The Hugo blog lives in the companion repository (`flexiondotorg/flexiondotorg.github.io`, hosted at `https://blog.wimpys.world` on Cloudflare Workers Static Assets).
+
+- **Shared chrome and theme**: Both sites use the same `min(1320px, 100%)` sticky frosted header, three-column frosted footer, Catppuccin Mocha and Latte tokens, `Work Sans` and `Fira Code` fonts, `wimpys-world-theme` storage key, and wall-clock WebGL swirl phase so moving between `wimpys.world` and `blog.wimpys.world` feels like one site.
+- **Feed integration**: `vitrine.yaml` fetches `https://blog.wimpys.world/posts/rss.xml` for both the `Media` deck blog cards and the GitHub profile README.
+- **Legacy domain redirects**: Six retired domains (`wimpysworld.com`, `wimpress.com`, `flexion.org`, `wimpress.org`, `wimpress.io`, and `wimpress.co.uk`) redirect blog paths to `https://blog.wimpys.world`, `/projects*` to `https://wimpys.world/#projects`, and all other paths to `https://wimpys.world/` via Cloudflare Redirect Rules tracked in the blog repository's `scripts/cloudflare-redirects.py`.
 
 ## Single-config data pipeline (`cmd/site` and `internal/site`)
 
