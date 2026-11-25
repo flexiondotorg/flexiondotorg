@@ -1,2 +1,5 @@
+.cache/
 .direnv/
+.wrangler/
+dist/
 result/

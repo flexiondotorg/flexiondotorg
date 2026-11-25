@@ -28,10 +28,12 @@ const (
 )
 
 type cliOptions struct {
-	showVersion bool
-	verbose     bool
-	configPath  string
-	outDir      string
+	showVersion  bool
+	verbose      bool
+	configPath   string
+	outDir       string
+	fallbackData string
+	cachePath    string
 }
 
 type runtimeDeps struct {
@@ -137,9 +139,22 @@ func run(ctx context.Context, args []string, deps runtimeDeps) error {
 		return fmt.Errorf("build site data: %w", err)
 	}
 
+	if fallbackData := loadFallbackData(ctx, deps.httpClient, opts.fallbackData, opts.cachePath, deps.stderr); fallbackData != nil {
+		report := site.MergeFallback(siteData, fallbackData, enabledMediaKinds(cfg))
+		if report.Used() {
+			fmt.Fprintf(deps.stderr, "warning: applied fallback data (%s)\n", report.Summary())
+		}
+	}
+
 	logProgress("writing static site assets to %s...", opts.outDir)
 	if err := site.Write(opts.outDir, siteData); err != nil {
 		return fmt.Errorf("write site: %w", err)
+	}
+
+	if strings.TrimSpace(opts.cachePath) != "" {
+		if cacheErr := site.SaveDataCache(opts.cachePath, siteData); cacheErr != nil {
+			fmt.Fprintf(deps.stderr, "warning: save data cache failed: %v\n", cacheErr)
+		}
 	}
 
 	logProgress("done in %s", time.Since(startedAt).Round(100*time.Millisecond))
@@ -155,11 +170,47 @@ func parseFlags(args []string, stderr io.Writer) (cliOptions, error) {
 	fs.BoolVar(&opts.verbose, "verbose", false, "log fetch and build progress to stderr")
 	fs.StringVar(&opts.configPath, "config", "vitrine.yaml", "path to vitrine YAML configuration")
 	fs.StringVar(&opts.outDir, "out", "dist", "directory for generated static site output")
+	fs.StringVar(&opts.fallbackData, "fallback-data", "", "URL or file path to a prior data.json used when live fetches fail")
+	fs.StringVar(&opts.cachePath, "cache", "", "local file path for reading secondary fallback data and persisting built data.json")
 
 	if err := fs.Parse(args); err != nil {
 		return cliOptions{}, err
 	}
 	return opts, nil
+}
+
+func loadFallbackData(
+	ctx context.Context,
+	httpClient *http.Client,
+	fallbackSource string,
+	cachePath string,
+	stderr io.Writer,
+) *site.SiteData {
+	if src := strings.TrimSpace(fallbackSource); src != "" {
+		data, err := site.LoadData(ctx, httpClient, src)
+		if err == nil {
+			return data
+		}
+		fmt.Fprintf(stderr, "warning: load fallback data %q failed: %v\n", src, err)
+	}
+	if path := strings.TrimSpace(cachePath); path != "" {
+		data, err := site.LoadData(ctx, httpClient, path)
+		if err == nil {
+			return data
+		}
+		if !os.IsNotExist(err) {
+			fmt.Fprintf(stderr, "warning: load cache %q failed: %v\n", path, err)
+		}
+	}
+	return nil
+}
+
+func enabledMediaKinds(cfg *config.Config) map[string]bool {
+	return map[string]bool{
+		"episode": cfg.Feeds.Podcast != nil && cfg.Feeds.Podcast.Enabled,
+		"post":    cfg.Feeds.Blog != nil && cfg.Feeds.Blog.Enabled,
+		"video":   cfg.Feeds.YouTube != nil && cfg.Feeds.YouTube.Enabled,
+	}
 }
 
 func fetchHaberdasher(

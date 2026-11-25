@@ -57,3 +57,39 @@ site:
     echo ""
     echo "Portfolio site preview ready at ${url} (press Ctrl-C to stop)"
     miniserve --index index.html --interfaces 127.0.0.1 --port 18475 "${out}"
+
+# Build the wimpys.world portfolio site into dist/ with live data.json fallback
+site-build:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [ -z "${GITHUB_TOKEN:-}" ] && command -v gh >/dev/null 2>&1; then
+        GITHUB_TOKEN="$(gh auth token 2>/dev/null || true)"
+        export GITHUB_TOKEN
+    fi
+    rm -rf dist
+    go run ./cmd/site \
+        -verbose \
+        -config vitrine.yaml \
+        -out dist \
+        -fallback-data https://wimpys.world/data.json \
+        -cache .cache/site-data.json
+
+# Upload a Cloudflare Workers preview version of wimpys.world
+site-preview *args: site-build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if ! command -v wrangler >/dev/null 2>&1; then
+        echo "Error: wrangler not found in PATH." >&2
+        exit 1
+    fi
+    wrangler versions upload {{args}}
+
+# Build wimpys.world (with fallback cache) and deploy with Wrangler
+publish: site-build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if ! command -v wrangler >/dev/null 2>&1; then
+        echo "Error: wrangler not found in PATH." >&2
+        exit 1
+    fi
+    wrangler deploy

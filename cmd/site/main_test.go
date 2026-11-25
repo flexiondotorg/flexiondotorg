@@ -275,6 +275,174 @@ func TestRunErrorsOnMissingConfig(t *testing.T) {
 	}
 }
 
+func TestRunGitHubOutageFallsBackToCachedData(t *testing.T) {
+	t.Parallel()
+
+	fixedNow := time.Date(2026, 11, 25, 10, 0, 0, 0, time.UTC)
+
+	cached := site.SiteData{
+		DefaultSort: "stars",
+		HostLogos:   map[string]string{"apt.wimpys.world": "<svg>apt</svg>"},
+		Stats: site.StatsData{
+			TotalStars:     5000,
+			StarsFormatted: "5,000",
+			Followers:      800,
+			ActiveSponsors: 5,
+			DiscordOnline:  150,
+			DiscordMembers: 1400,
+		},
+		Projects: []site.ProjectCard{
+			{
+				ID:             "deb-get",
+				FullName:       "wimpysworld/deb-get",
+				Name:           "Deb Get",
+				Slug:           "deb-get",
+				Description:    "Cached deb-get description",
+				Language:       "Shell",
+				Stars:          4200,
+				StarsFormatted: "4,200",
+				StarsCompact:   "4.2k",
+				LatestTag:      "v0.4.5",
+			},
+			{
+				ID:             "extra-tool",
+				FullName:       "wimpysworld/extra-tool",
+				Name:           "Extra Tool",
+				Slug:           "extra-tool",
+				Description:    "Cached extra-tool description",
+				Language:       "Nix",
+				Stars:          210,
+				StarsFormatted: "210",
+				StarsCompact:   "210",
+			},
+		},
+		Packages: []site.PackageHostCard{
+			{ID: "apt", Name: "apt", Host: "apt.wimpys.world", PackageCount: 4},
+		},
+		Links: []site.LinkCard{
+			{
+				ID:       "github",
+				Badge:    "5 active",
+				Stats:    []site.StatRow{{Label: "STARS", Value: "5,000"}},
+				Sponsors: []site.SponsorRef{{Login: "alice", URL: "https://github.com/alice"}},
+			},
+		},
+	}
+
+	// Simulate total GitHub outage (503) while blog RSS and fallback data.json succeed.
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/fallback/data.json":
+			writeTestJSON(t, w, cached)
+		case "/blog.xml":
+			_, _ = w.Write([]byte(`<?xml version="1.0"?><rss version="2.0"><channel><item><title>Fresh Blog Post</title><link>https://blog.wimpys.world/posts/fresh/</link><pubDate>Wed, 25 Nov 2026 09:00:00 +0000</pubDate><description>Live post during GitHub outage.</description></item></channel></rss>`))
+		default:
+			http.Error(w, "GitHub unavailable", http.StatusServiceUnavailable)
+		}
+	}))
+	t.Cleanup(srv.Close)
+
+	dir := t.TempDir()
+	cfgPath := filepath.Join(dir, "vitrine.yaml")
+	cfgYAML := `profile:
+  name: "Martin Wimpress"
+  handle: "exampleuser"
+github:
+  username: "exampleuser"
+  sponsors_url: "https://github.com/sponsors/exampleuser"
+haberdasher:
+  enabled: true
+  config_url: "` + srv.URL + `/haberdasher.yaml"
+  sort: stars
+  hosts:
+    - "apt.wimpys.world"
+projects:
+  - repo: "wimpysworld/extra-tool"
+feeds:
+  blog:
+    enabled: true
+    title: "Blog"
+    url: "` + srv.URL + `/blog.xml"
+    site_url: "https://blog.wimpys.world"
+    max_items: 5
+site:
+  title: "Wimpy's World"
+  description: "Updated offline tagline"
+  domain: "wimpys.world"
+  url: "https://wimpys.world"
+  default_deck: "projects"
+  links:
+    - title: "GitHub"
+      slug: "github"
+      category: "Code"
+      description: "Open-source repositories."
+      url: "https://github.com/exampleuser"
+      icon: "github"
+`
+	if err := os.WriteFile(cfgPath, []byte(cfgYAML), 0o600); err != nil {
+		t.Fatalf("write config: %v", err)
+	}
+
+	outDir := filepath.Join(dir, "dist")
+	cacheFile := filepath.Join(dir, "cache", "site-data.json")
+	ghClient := &gh.Client{
+		HTTPClient: srv.Client(),
+		APIBaseURL: srv.URL,
+		RawBaseURL: srv.URL,
+		WebBaseURL: srv.URL,
+	}
+
+	var stderr bytes.Buffer
+	err := run(context.Background(), []string{
+		"-config", cfgPath,
+		"-out", outDir,
+		"-fallback-data", srv.URL + "/fallback/data.json",
+		"-cache", cacheFile,
+	}, runtimeDeps{
+		now:          func() time.Time { return fixedNow },
+		httpClient:   srv.Client(),
+		githubClient: ghClient,
+		haberdasherHostBaseFn: func(host string) string {
+			return srv.URL + "/hosts/" + host
+		},
+		stderr: &stderr,
+	})
+	if err != nil {
+		t.Fatalf("run during GitHub outage failed: %v\nstderr:\n%s", err, stderr.String())
+	}
+
+	dataBytes, err := os.ReadFile(filepath.Join(outDir, "data.json"))
+	if err != nil {
+		t.Fatalf("read data.json: %v", err)
+	}
+	var got site.SiteData
+	if err := json.Unmarshal(dataBytes, &got); err != nil {
+		t.Fatalf("unmarshal data.json: %v", err)
+	}
+
+	if got.Profile.Subtitle != "Updated offline tagline" {
+		t.Errorf("Subtitle = %q, want Updated offline tagline", got.Profile.Subtitle)
+	}
+	if len(got.Projects) != 2 || got.Projects[0].Stars != 4200 || got.Projects[1].Stars != 210 {
+		t.Errorf("expected cached projects restored and sorted, got: %+v", got.Projects)
+	}
+	if len(got.Packages) != 1 || got.Stats.TotalStars != 5000 {
+		t.Errorf("expected cached packages and stats restored: packages=%d stats=%+v", len(got.Packages), got.Stats)
+	}
+	if len(got.Links) != 1 || len(got.Links[0].Sponsors) != 1 || got.Links[0].Badge != "5 active" {
+		t.Errorf("expected cached GitHub link sponsors/badge restored: %+v", got.Links)
+	}
+	if len(got.Media) != 1 || got.Media[0].Title != "Fresh Blog Post" {
+		t.Errorf("expected fresh live blog post alongside cached GitHub data: %+v", got.Media)
+	}
+	if _, err := os.Stat(cacheFile); err != nil {
+		t.Errorf("expected cache file written at %q: %v", cacheFile, err)
+	}
+	if !strings.Contains(stderr.String(), "warning: applied fallback data") {
+		t.Errorf("expected fallback warning in stderr, got: %s", stderr.String())
+	}
+}
+
 func writeTestJSON(t *testing.T, w http.ResponseWriter, v any) {
 	t.Helper()
 	w.Header().Set("Content-Type", "application/json")
