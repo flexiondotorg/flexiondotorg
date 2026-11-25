@@ -2203,9 +2203,21 @@ function handleCardKeyNav(ev, index) {
   }
 }
 
+function syncNavDeckState(deckKey) {
+  const navLinks = document.querySelectorAll('.site-nav [data-deck-nav]');
+  for (const link of navLinks) {
+    if (link.dataset.deckNav === deckKey) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  }
+}
+
 function updateDeckSelectionStyles() {
   const p = palette();
   const selectedKey = effectiveDeckKey();
+  syncNavDeckState(selectedKey);
   for (const drec of state.deckRecords) {
     const isSelected = drec.deck.key === selectedKey;
     redrawDeckRecordTextures(drec, p);
@@ -4221,6 +4233,20 @@ function bindEvents() {
     }
   });
 
+  for (const link of document.querySelectorAll('.site-nav [data-deck-nav]')) {
+    link.addEventListener('click', (ev) => {
+      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button !== 0) {
+        return;
+      }
+      const key = normalizeDeckKey(link.dataset.deckNav);
+      if (!key) {
+        return;
+      }
+      ev.preventDefault();
+      switchDeck(key);
+    });
+  }
+
   document.addEventListener('keydown', (ev) => {
     if (state.modalOpen && ev.key === 'Escape') {
       ev.preventDefault();
@@ -4239,6 +4265,7 @@ async function bootstrap(data) {
   state.data = data;
   state.activeDeck = resolveInitialDeck(data);
 
+  syncNavDeckState(state.activeDeck);
   syncThemeControls();
   bindEvents();
 

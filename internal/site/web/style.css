@@ -1652,7 +1652,7 @@ a.detail-stat.is-fresh:hover {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1120px) {
   .header-inner {
     padding: 12px 18px;
     gap: 10px 14px;
