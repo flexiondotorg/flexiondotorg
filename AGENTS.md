@@ -74,7 +74,7 @@ This repository pairs with the blog repository (`https://blog.wimpys.world`, `fl
 
 - Keep `ruleset.rules.pull_request.enabled: false` in `.tailor.yml`. GitHub rejects `GITHUB_TOKEN` in `bypass_actors` with HTTP 422, which blocks scheduled `README.md` commits to `main`.
 - Keep `.goreleaser.yaml`, `.github/workflows/build-go.yml`, and `Dockerfile` set to `alteration: never` in `.tailor.yml` so Tailor does not scaffold unused release artefacts.
-- Set `pages.enabled: false` in `.tailor.yml` before you switch to a custom scheduled Pages workflow. While `pages.enabled: true`, Tailor enforces an exact match on `.github/workflows/tailor-pages.yml`.
+- Keep `pages.enabled: false` in `.tailor.yml` so Tailor does not scaffold `.github/workflows/tailor-pages.yml`, because `https://wimpys.world` deploys to Cloudflare Workers Static Assets.
 - Render profile README SVGs for `<img>` display only. Omit internal `<a href>`, `:hover`, `<script>`, external URLs, and external fonts.
 - Wrap each clickable SVG tile in an outer HTML `<a>` tag in `README.md`, inline all logos, and honour `prefers-reduced-motion`.
 - Reference `assets` branch SVGs in `README.md` with commit-hashed URLs so GitHub's `camo` proxy busts cached images on every update.
