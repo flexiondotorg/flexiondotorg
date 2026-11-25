@@ -77,17 +77,16 @@ haberdasher:
 projects:
   - repo: wimpysworld/deb-get
     language: Shell
-    logo: pages/icon.svg
-  - repo: quickemu-project/quickemu
-    language: Shell
-    logo: pages/icon.svg
+  - repo: wimpysworld/extra-life
+    language: Nix
+  - repo: wimpysworld/glyph-party
+    language: JavaScript
   - repo: wimpysworld/nix-config
     language: Nix
     logo: assets/logo.png
-  - repo: wimpysworld/extra-life
-    language: Nix
-    logo: pages/icon.svg
   - repo: wimpysworld/nothing-but-nix
+  - repo: quickemu-project/quickemu
+    language: Shell
 
 feeds:
   podcast:
