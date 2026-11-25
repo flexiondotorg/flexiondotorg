@@ -114,7 +114,11 @@
 {{- if and .Blog .Blog.Enabled .Blog.Items}}
 
 <p align="center">
+  {{- if .Blog.SiteURL}}
+  <a href="{{.Blog.SiteURL}}">{{pictureTag .AssetBaseURL (index .SectionBases "blog") "Blog" 840}}</a>
+  {{- else}}
   {{pictureTag .AssetBaseURL (index .SectionBases "blog") "Blog" 840}}
+  {{- end}}
 </p>
 {{range .Blog.Items}}
 - **[{{.Title}}]({{.URL}})**{{if gt .ReadTimeMinutes 0}} · `{{.ReadTimeMinutes}} min read`{{end}} ({{humanize .PublishedAt}})

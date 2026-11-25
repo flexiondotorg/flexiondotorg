@@ -330,6 +330,7 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 			Blog: &FeedView{
 				Enabled: true,
 				Title:   "Blog",
+				SiteURL: "https://blog.wimpys.world",
 				Items: []rss.Item{
 					{
 						Title:           "Post 1",
@@ -388,7 +389,7 @@ func TestRenderREADMETemplateLayoutAndVideosSection(t *testing.T) {
 		"./assets/section-releases-dark.svg",
 		"./assets/section-contributions-dark.svg",
 		"./assets/section-starred-dark.svg",
-		"./assets/section-blog-dark.svg",
+		`<a href="https://blog.wimpys.world"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/section-blog-dark.svg"><img src="./assets/section-blog-light.svg" alt="Blog" width="840"></picture></a>`,
 		"- **[Post 1](https://wimpysworld.com/1)** · `4 min read` (today)",
 		"  - Short blog summary.",
 		"- **[Post Plain](https://wimpysworld.com/2)** (3 days ago)",

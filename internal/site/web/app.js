@@ -724,6 +724,19 @@ function resolveCardAccent(deckKey, item, p) {
   return accentColor(p, item.accent);
 }
 
+function mediaHostLabel(item, fallback) {
+  const raw = String((item && (item.site_url || item.url)) || '').trim();
+  if (raw) {
+    try {
+      const host = new URL(raw).hostname.replace(/^www\./i, '');
+      if (host) {
+        return host;
+      }
+    } catch (_) {}
+  }
+  return fallback;
+}
+
 function extractCardTopTrumpsModel(deckKey, item, p) {
   const accent = resolveCardAccent(deckKey, item, p);
 
@@ -793,12 +806,12 @@ function extractCardTopTrumpsModel(deckKey, item, p) {
     rows.push({ label: 'LISTEN', value: `${(item.subscribe_links || []).length || 1} feeds`, valueColor: p.linkText });
   } else if (item.kind === 'post') {
     rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.text });
-    rows.push({ label: 'SITE', value: 'wimpysworld.com', valueColor: p.subtext });
+    rows.push({ label: 'SITE', value: mediaHostLabel(item, 'blog.wimpys.world'), valueColor: p.subtext });
   } else if (item.kind === 'blog-hub') {
     const entries = item.entries || [];
     const latest = entries[0];
     rows.push({ label: 'LATEST', value: (latest && (latest.age || latest.date_label)) || '—', valueColor: p.text });
-    rows.push({ label: 'SITE', value: 'wimpysworld.com', valueColor: p.subtext });
+    rows.push({ label: 'SITE', value: mediaHostLabel(item, 'blog.wimpys.world'), valueColor: p.subtext });
   } else {
     rows.push({ label: 'PUBLISHED', value: item.age || item.date_label || '—', valueColor: p.text });
     rows.push({ label: 'SITE', value: 'YouTube', valueColor: p.subtext });

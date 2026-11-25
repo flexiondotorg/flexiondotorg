@@ -571,6 +571,18 @@ site:
 			t.Errorf("index.html still contains removed chrome id %q", removedID)
 		}
 	}
+
+	appJSBytes, err := os.ReadFile(filepath.Join(outDir, "app.js"))
+	if err != nil {
+		t.Fatalf("read app.js: %v", err)
+	}
+	appJS := string(appJSBytes)
+	if strings.Contains(appJS, "wimpysworld.com") {
+		t.Errorf("app.js still references legacy wimpysworld.com host")
+	}
+	if !strings.Contains(appJS, "blog.wimpys.world") {
+		t.Errorf("app.js missing blog.wimpys.world fallback host")
+	}
 }
 
 func TestBuildAndWriteValidationErrors(t *testing.T) {
