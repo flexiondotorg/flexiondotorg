@@ -77,7 +77,7 @@ Visitors dismiss the card by clicking any non-interactive area of the flipped ca
 
 ## Companion blog (`blog.wimpys.world`)
 
-The Hugo blog lives in the companion repository (`flexiondotorg/flexiondotorg.github.io`, hosted at `https://blog.wimpys.world` on Cloudflare Workers Static Assets).
+The Hugo blog lives in the companion repository (`flexiondotorg/blog`, hosted at `https://blog.wimpys.world` on Cloudflare Workers Static Assets).
 
 - **Shared chrome and theme**: Both sites use the same `min(1320px, 100%)` sticky frosted header, three-column frosted footer, Catppuccin Mocha and Latte tokens, `Work Sans` and `Fira Code` fonts, `wimpys-world-theme` storage key, and wall-clock WebGL swirl phase so moving between `wimpys.world` and `blog.wimpys.world` feels like one site.
 - **Feed integration**: `vitrine.yaml` fetches `https://blog.wimpys.world/posts/rss.xml` for both the `Media` deck blog cards and the GitHub profile README.
