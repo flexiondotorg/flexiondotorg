@@ -101,7 +101,7 @@ Generated output under `dist/` and `.cache/` is gitignored and never committed. 
 
 ## Local preview and verification
 
-- **Local preview**: Run `just site` to build the portfolio site from `vitrine.yaml` and serve it locally at `http://127.0.0.1:18475`.
-- **Manual Cloudflare preview and publish**: Run `just site-build` to build `dist/` and refresh `.cache/site-data.json`, `just site-preview` to upload a Cloudflare preview version, and `just publish` to deploy `https://wimpys.world` locally with Wrangler.
+- **Local preview**: Run `just serve` to build the portfolio site from `vitrine.yaml` and serve it locally at `http://127.0.0.1:18475`.
+- **Manual Cloudflare preview and publish**: Run `just site-build` to build `dist/` and refresh `.cache/site-data.json`, `just preview` to upload a Cloudflare preview version, and `just publish` to deploy `https://wimpys.world` locally with Wrangler.
 - **Automated checks**: Run `golangci-lint fmt --config .golangci.yml`, `just build`, `just test`, `go test -race ./...`, `golangci-lint run --config .golangci.yml ./...`, and `actionlint` before pushing.
 - **Rendered verification**: Inspect the live preview in headless Chromium across desktop, mobile, Mocha, Latte, and `prefers-reduced-motion: reduce` states.

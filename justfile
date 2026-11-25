@@ -6,7 +6,7 @@ default:
     @just --list
 
 # Render and serve a live Vitrine profile preview at http://127.0.0.1:18474
-preview:
+profile:
     #!/usr/bin/env bash
     set -euo pipefail
     url="http://127.0.0.1:18474"
@@ -34,8 +34,8 @@ preview:
     echo "Vitrine preview ready at ${url} (press Ctrl-C to stop)"
     miniserve --index index.html --interfaces 127.0.0.1 --port 18474 "${out}"
 
-# Build and serve a live wimpys.world portfolio site preview at http://127.0.0.1:18475
-site:
+# Build and serve a live wimpys.world portfolio site locally at http://127.0.0.1:18475
+serve:
     #!/usr/bin/env bash
     set -euo pipefail
     url="http://127.0.0.1:18475"
@@ -75,7 +75,7 @@ site-build:
         -cache .cache/site-data.json
 
 # Upload a Cloudflare Workers preview version of wimpys.world
-site-preview *args: site-build
+preview *args: site-build
     #!/usr/bin/env bash
     set -euo pipefail
     if ! command -v wrangler >/dev/null 2>&1; then
