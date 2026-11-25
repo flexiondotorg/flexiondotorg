@@ -1,17 +1,17 @@
 # Portfolio site design and architecture (`wimpys.world`)
 
-The portfolio site at `https://wimpys.world` is a static web application hosted on GitHub Pages (`flexiondotorg.github.io`). It is built by `cmd/site` and `internal/site`, driven by the single `vitrine.yaml` configuration file shared with `cmd/vitrine`.
+The portfolio site at `https://wimpys.world` is a static web application hosted on Cloudflare Workers Static Assets (`wimpys-world`). It is built by `cmd/site` and `internal/site`, driven by the single `vitrine.yaml` configuration file shared with `cmd/vitrine`.
 
 ## Hosting and security
 
-GitHub Pages serves the site from `flexiondotorg/flexiondotorg` with custom domain `wimpys.world`. Domain Name System (DNS) records live in Cloudflare:
+Cloudflare Workers Static Assets serves the site from `flexiondotorg/flexiondotorg` via `wrangler.jsonc` with custom domain `wimpys.world`. Domain Name System (DNS) records and edge redirects live in Cloudflare:
 
-- Apex `A` and `AAAA` records point `wimpys.world` to GitHub Pages.
-- A `CNAME` record points `www.wimpys.world` to `flexiondotorg.github.io`.
+- Worker Custom Domain `wimpys.world` binds a proxied `AAAA 100::` record to Worker `wimpys-world` with Cloudflare-managed TLS.
+- A proxied `AAAA 100::` record for `www.wimpys.world` pairs with a Cloudflare 301 Redirect Rule forwarding `https://www.wimpys.world<path>` to `https://wimpys.world<path>` with query strings preserved.
 - Cloudflare Redirect Rules permanently redirect `wimpysworld.link` (and `www.wimpysworld.link`) to `https://links.wimpys.world`, and `links.wimpys.world` to `https://wimpys.world/#links`, opening the site directly on the `Links` deck.
-- GitHub Pages enforces HTTPS for the custom domain.
+- Six legacy domains (`wimpysworld.com`, `wimpress.com`, `flexion.org`, `wimpress.org`, `wimpress.io`, and `wimpress.co.uk`) redirect `/projects*` to `https://wimpys.world/#projects` and retired root paths to `https://wimpys.world/` via Cloudflare Redirect Rules managed in `flexiondotorg/blog`.
 
-Deployment uses zero long-lived Personal Access Tokens (PATs). The scheduled `.github/workflows/pages.yml` workflow uses top-level `permissions: {}`, `contents: read` on the build job, and `pages: write` plus `id-token: write` on the deploy job with `GITHUB_TOKEN` only.
+Deployments use zero GitHub Personal Access Tokens (PATs) and zero GitHub repository secrets. Cloudflare Workers Builds manages its own GitHub App connection and Cloudflare API token for automatic `main` deploys and non-production branch previews, while `just publish` provides a local Wrangler escape hatch.
 
 ## Visual direction and hybrid tabletop architecture
 
@@ -87,16 +87,21 @@ The Hugo blog lives in the companion repository (`flexiondotorg/blog`, hosted at
 
 Both `cmd/vitrine` and `cmd/site` read `vitrine.yaml` via `internal/config` (`SiteConfig` and `SiteLink` under `site:`).
 
-`cmd/site` accepts `-config`, `-out`, `-verbose`, and `-version`. It reuses `internal/haberdasher`, `internal/github`, `internal/discord`, and `internal/rss` to assemble data, passes it to `internal/site.Build`, and emits static output (`index.html`, `data.json`, `style.css`, `app.js`, `icon.svg`, `vendor/pixi.min.mjs`, `vendor/pixi.LICENSE`, `.nojekyll`, and `CNAME`) via `internal/site.Write` using `//go:embed web/* web/vendor/*`.
+`cmd/site` accepts `-config`, `-out`, `-fallback-data`, `-cache`, `-verbose`, and `-version`. It reuses `internal/haberdasher`, `internal/github`, `internal/discord`, and `internal/rss` to assemble data, passes it to `internal/site.Build`, optionally merges degraded sections from a previous `data.json` snapshot via `internal/site.MergeFallback` (for example `-fallback-data https://wimpys.world/data.json -cache .cache/site-data.json` so builds survive GitHub API outages), and emits static output (`index.html`, `data.json`, `style.css`, `app.js`, `icon.svg`, `vendor/pixi.min.mjs`, `vendor/pixi.LICENSE`, `.nojekyll`, and `CNAME`) via `internal/site.Write` using `//go:embed web/* web/vendor/*`.
 
 ## Deployment workflow and Tailor transition
 
-`.github/workflows/pages.yml` builds and deploys the site on `main` pushes, every 6 hours at 15 minutes past the hour (`cron: "15 */6 * * *"`), and `workflow_dispatch`. Generated HTML is built into `${RUNNER_TEMP}/site` and uploaded via `actions/upload-pages-artifact` and `actions/deploy-pages`; it is never committed to Git.
+Cloudflare Workers Builds (`wimpys-world`, configured with `wrangler.jsonc`) builds and deploys `dist/` on `main` pushes (including scheduled `README.md` refreshes from `.github/workflows/vitrine.yml`) and uploads preview versions for non-production branches:
 
-`.tailor.yml` keeps `pages.enabled: false` so Tailor does not overwrite the custom Pages workflow, while `pages/icon.svg` remains as the canonical project icon and `flake.nix` supplies `miniserve` for local previews.
+- Build command: `go run ./cmd/site -verbose -config vitrine.yaml -out dist -fallback-data https://wimpys.world/data.json -cache .cache/site-data.json`
+- Deploy command: `npx wrangler deploy`
+- Version command: `npx wrangler versions upload`
+
+Generated output under `dist/` and `.cache/` is gitignored and never committed. `.tailor.yml` keeps `pages.enabled: false` so Tailor does not scaffold a GitHub Pages workflow, while `pages/icon.svg` remains as the canonical project icon and `flake.nix` supplies `miniserve` for local previews.
 
 ## Local preview and verification
 
 - **Local preview**: Run `just site` to build the portfolio site from `vitrine.yaml` and serve it locally at `http://127.0.0.1:18475`.
+- **Manual Cloudflare preview and publish**: Run `just site-build` to build `dist/` and refresh `.cache/site-data.json`, `just site-preview` to upload a Cloudflare preview version, and `just publish` to deploy `https://wimpys.world` locally with Wrangler.
 - **Automated checks**: Run `golangci-lint fmt --config .golangci.yml`, `just build`, `just test`, `go test -race ./...`, `golangci-lint run --config .golangci.yml ./...`, and `actionlint` before pushing.
 - **Rendered verification**: Inspect the live preview in headless Chromium across desktop, mobile, Mocha, Latte, and `prefers-reduced-motion: reduce` states.

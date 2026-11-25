@@ -20,6 +20,9 @@ Run every command from the repository root inside the Nix development shell:
 - Tidy `go.mod` and format Go source with `gofumpt` in place: `just lint correct`
 - Validate GitHub Actions workflows only: `actionlint`
 - Build and preview the portfolio site at `http://127.0.0.1:18475`: `just site`
+- Build the portfolio site into `dist/` with live `data.json` fallback: `just site-build`
+- Upload a Cloudflare Workers preview of `wimpys.world`: `just site-preview`
+- Build and deploy `wimpys.world` with Wrangler: `just publish`
 - Render and preview the Vitrine profile at `http://127.0.0.1:18474`: `just preview`
 - Audit repository health files and GitHub settings against `.tailor.yml`: `tailor measure`
 - Preview Tailor template changes without file writes: `tailor baste`
@@ -40,9 +43,11 @@ Run every command from the repository root inside the Nix development shell:
 ## Architecture notes
 
 - Put the reusable profile README generator CLI in `cmd/vitrine/` and place shared fetchers, renderers, and domain packages in `internal/`.
-- Keep the profile README refresh workflow and the `https://wimpys.world` build-and-deploy workflow in separate GitHub Actions files.
+- Keep the profile README refresh workflow in `.github/workflows/vitrine.yml` and deploy `https://wimpys.world` through Cloudflare Workers Static Assets (`wrangler.jsonc`, Worker `wimpys-world`).
 - Store generated profile README SVGs on the dedicated `assets` branch, never on `main`.
-- Do not commit dynamically generated `https://wimpys.world` site HTML to the repository. Build and deploy it in GitHub Actions.
+- Do not commit dynamically generated `https://wimpys.world` site HTML (`dist/` or `.cache/`) to the repository. Build and deploy it via Cloudflare Workers Builds or `just publish`.
+- Leave `wrangler` out of `flake.nix` so the user's system `wrangler` wrapper is not shadowed on `PATH`.
+- Keep `-fallback-data https://wimpys.world/data.json -cache .cache/site-data.json` working in `cmd/site` so builds degrade cleanly when GitHub REST APIs are unavailable.
 - Put custom build, test, or lint hooks in `just/project/build.sh`, `just/project/test.sh`, or `just/project/lint.sh`. Do not edit Tailor-managed `just/tailor.just`.
 - Update `.tailor.yml` instead of files marked `alteration: always` (`SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SUPPORT.md`, and Tailor-managed workflows).
 
