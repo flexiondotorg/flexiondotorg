@@ -117,6 +117,16 @@ const FLAT_CARD_CORNERS = [
   -CARD_W / 2, CARD_H / 2,
 ];
 
+const SWIRL_PERIOD_SEC = 200 * Math.PI;
+const SWIRL_STATIC_PHASE = 42.0;
+
+function sharedSwirlPhase(reduced) {
+  if (reduced) {
+    return SWIRL_STATIC_PHASE;
+  }
+  return (Date.now() / 1000) % SWIRL_PERIOD_SEC;
+}
+
 const BALATRO_FRAG = `
 precision highp float;
 
@@ -236,8 +246,6 @@ const state = {
     cardScale: 1,
     cols: 4,
   },
-  shaderTime: 0,
-  swirlBoost: 0,
   resizeTimer: 0,
 };
 
@@ -1246,7 +1254,7 @@ async function initPixi() {
       },
       resources: {
         balatroUniforms: {
-          uTime: { value: 0, type: 'f32' },
+          uTime: { value: sharedSwirlPhase(isReducedMotion()), type: 'f32' },
           uResolution: { value: new Float32Array([window.innerWidth, window.innerHeight]), type: 'vec2<f32>' },
           uColorA: { value: new Float32Array(hexToRgb01(p.swirlA)), type: 'vec3<f32>' },
           uColorB: { value: new Float32Array(hexToRgb01(p.swirlB)), type: 'vec3<f32>' },
@@ -1860,7 +1868,6 @@ function recallCurrentCards() {
   state.hoveredCardId = null;
   state.focusedCardId = null;
   if (launched.length > 0) {
-    state.swirlBoost = 1.6;
     state.chainDelay = CHAIN_PAUSE_SEC;
   }
   return launched.length > 0;
@@ -1950,10 +1957,6 @@ function dealDeck(deckKey) {
     }
     redrawDeckRecordTextures(drec, p);
     syncDeckVisual(drec, p, 0, true);
-  }
-
-  if (!reduced) {
-    state.swirlBoost = 2.2;
   }
 
   if (els.a11yCards) {
@@ -2409,12 +2412,12 @@ function onTick(ticker) {
     state.world.y = -window.scrollY;
   }
 
-  // Advance swirling Balatro background shader (frozen when reduced motion)
-  if (!reduced && !state.modalOpen) {
-    state.swirlBoost = Math.max(0, state.swirlBoost - dt * 2.8);
-    state.shaderTime += dt * (1 + state.swirlBoost);
-    if (state.bgFilter && state.bgFilter.resources && state.bgFilter.resources.balatroUniforms) {
-      state.bgFilter.resources.balatroUniforms.uniforms.uTime = state.shaderTime;
+  // Sync swirling Balatro background shader to the shared cross-site clock
+  if (state.bgFilter && state.bgFilter.resources && state.bgFilter.resources.balatroUniforms) {
+    if (reduced) {
+      state.bgFilter.resources.balatroUniforms.uniforms.uTime = SWIRL_STATIC_PHASE;
+    } else if (!state.modalOpen) {
+      state.bgFilter.resources.balatroUniforms.uniforms.uTime = sharedSwirlPhase(false);
     }
   }
 
