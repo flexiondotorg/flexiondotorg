@@ -504,6 +504,7 @@ site:
 		t.Fatal("index.html missing ES module script tag for app.js")
 	}
 	for _, wantID := range []string{
+		"site-header",
 		"btn-theme-system",
 		"btn-theme-light",
 		"btn-theme-dark",
@@ -520,6 +521,19 @@ site:
 	} {
 		if !strings.Contains(indexHTML, `id="`+wantID+`"`) {
 			t.Errorf("index.html missing expected element id %q", wantID)
+		}
+	}
+	for _, wantHeader := range []string{
+		`class="header-inner"`,
+		`<a class="brand-block" href="./">`,
+		`aria-label="Site sections"`,
+		`href="./" aria-current="page"`,
+		`href="https://blog.wimpys.world"`,
+		`class="header-utility header-github-btn"`,
+		`href="https://github.com/flexiondotorg"`,
+	} {
+		if !strings.Contains(indexHTML, wantHeader) {
+			t.Errorf("index.html header missing expected markup %q", wantHeader)
 		}
 	}
 	if strings.Index(indexHTML, `id="intro-bio"`) > strings.Index(indexHTML, `id="scroll-spacer"`) {
