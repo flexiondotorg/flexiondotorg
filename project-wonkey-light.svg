@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="WonKey">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="card-clip">
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-fresh-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    75% { transform: scale(2.2); opacity: 0; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes vitrine-wave {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.72; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+  @keyframes vitrine-card-glint {
+    0% { transform: translateX(-140px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(430px); opacity: 1; }
+    66%, 100% { transform: translateX(430px); opacity: 0; }
+  }
+  .vitrine-fresh-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-fresh-pulse 2.2s ease-out infinite;
+  }
+  .vitrine-wave-bar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-wave 1.8s ease-in-out infinite;
+  }
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out 8.25s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="#bcc0cc" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#card-clip)">
+  <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
+</g>
+
+<!-- Unframed 64x64 project logo -->
+<svg x="20" y="34" width="64" height="64" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet"><title id="vlogo-bd72bef1-wonkey-title">WonKey: a tilted W key with an RGB edge</title><defs><linearGradient id="vlogo-bd72bef1-wonkey-rgb" x1="10" y1="16" x2="54" y2="54" gradientUnits="userSpaceOnUse"><stop stop-color="#ff6492"/><stop offset=".25" stop-color="#ffd166"/><stop offset=".5" stop-color="#6ee7b7"/><stop offset=".75" stop-color="#56ccff"/><stop offset="1" stop-color="#b58aff"/></linearGradient><linearGradient id="vlogo-bd72bef1-wonkey-face" x1="16" y1="10" x2="48" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#334155"/><stop offset="1" stop-color="#111827"/></linearGradient></defs><g transform="rotate(-8 32 32)"><rect x="10" y="16" width="44" height="42" rx="11" fill="#0b1120"/><rect x="10" y="12" width="44" height="42" rx="11" fill="url(#vlogo-bd72bef1-wonkey-rgb)"/><rect x="10" y="8" width="44" height="42" rx="11" fill="url(#vlogo-bd72bef1-wonkey-face)" stroke="#64748b" stroke-width="1.5"/><path d="M17 19a5 5 0 0 1 5-5h20" fill="none" stroke="#94a3b8" stroke-opacity=".4" stroke-width="2" stroke-linecap="round"/><path d="m20 23 5 15 7-10 7 10 5-15" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+
+<!-- Top-right release version pill -->
+<g>
+  <rect x="327" y="22" width="61" height="22" rx="11" fill="#ccd0da" stroke="#bcc0cc" stroke-width="1"/>
+  <text x="357.50" y="36.5" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#4c4f69">v0.2.5</text>
+</g>
+
+<!-- Project title and wrapped 4-line description -->
+<text x="100" y="42" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">WonKey</text>
+<text x="100" y="68" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">Macropad configuration tool for Linux. One</text><text x="100" y="86" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">key, to rule them all 1️⃣</text>
+
+<!-- Clean 1px Surface0 footer separator -->
+<line x1="20" y1="142" x2="388" y2="142" stroke="#ccd0da" stroke-width="1"/>
+
+<!-- Clean 3-part footer: language, stars, release age -->
+<g>
+  <circle cx="24" cy="159" r="4" fill="#00add8"/><text x="35" y="163" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#4c4f69">Go</text>
+  <text x="204" y="163" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#4c4f69"><tspan fill="#df8e1d">★</tspan> 2</text>
+  <text x="388" y="163" text-anchor="end" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#9ca0b0">2w ago</text>
+</g>
+</svg>

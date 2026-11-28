@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="Vectorator">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1e1e2e"/>
+    <stop offset="100%" stop-color="#181825"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="100%" stop-color="#94e2d5"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f5c2e7"/>
+    <stop offset="25%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="75%" stop-color="#94e2d5"/>
+    <stop offset="100%" stop-color="#a6e3a1"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.34"/>
+    <stop offset="68%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#cba6f7" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#94e2d5" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#94e2d5" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="card-clip">
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-fresh-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    75% { transform: scale(2.2); opacity: 0; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes vitrine-wave {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.72; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+  @keyframes vitrine-card-glint {
+    0% { transform: translateX(-140px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(430px); opacity: 1; }
+    66%, 100% { transform: translateX(430px); opacity: 0; }
+  }
+  .vitrine-fresh-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-fresh-pulse 2.2s ease-out infinite;
+  }
+  .vitrine-wave-bar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-wave 1.8s ease-in-out infinite;
+  }
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out 7.70s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="#45475a" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#card-clip)">
+  <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
+</g>
+
+<!-- Unframed 64x64 project logo -->
+<svg x="20" y="34" width="64" height="64" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet"><defs><clipPath id="vlogo-d9b6fc01-window-clip"><rect x="4" y="4" width="56" height="56" rx="10.5"/></clipPath><linearGradient id="vlogo-d9b6fc01-body-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e1e2e"/><stop offset="100%" stop-color="#181825"/></linearGradient><linearGradient id="vlogo-d9b6fc01-frame-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#89b4fa"/><stop offset="55%" stop-color="#74c7ec"/><stop offset="100%" stop-color="#b4befe"/></linearGradient><linearGradient id="vlogo-d9b6fc01-v-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#74c7ec"/><stop offset="50%" stop-color="#89b4fa"/><stop offset="100%" stop-color="#b4befe"/></linearGradient></defs><g id="vlogo-d9b6fc01-window-interior" clip-path="url(#vlogo-d9b6fc01-window-clip)"><rect x="4" y="4" width="56" height="56" fill="url(#vlogo-d9b6fc01-body-bg)"/><rect x="4" y="4" width="56" height="17" fill="#313244"/><line x1="4" y1="21" x2="60" y2="21" stroke="#45475a" stroke-width="1.5"/><rect x="10.5" y="11.5" width="11" height="3" rx="1.5" fill="#6c7086"/><g id="vlogo-d9b6fc01-titlebar-buttons"><circle cx="30" cy="13" r="3.3" fill="#f9e2af"/><circle cx="40" cy="13" r="3.3" fill="#a6e3a1"/><circle cx="50" cy="13" r="3.3" fill="#f38ba8"/></g><g id="vlogo-d9b6fc01-vector-emblem"><line x1="16" y1="49.5" x2="48" y2="49.5" stroke="#74c7ec" stroke-opacity="0.65" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="49.5" r="2.4" fill="#74c7ec"/><circle cx="48" cy="49.5" r="2.4" fill="#b4befe"/><path d="M 18.5 28.5 L 32 49.5 L 45.5 28.5" fill="none" stroke="url(#vlogo-d9b6fc01-v-stroke)" stroke-width="6.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="29.2" y="46.7" width="5.6" height="5.6" rx="1.2" fill="#1e1e2e" stroke="#cdd6f4" stroke-width="2.2"/></g></g><rect id="vlogo-d9b6fc01-window-frame" x="4" y="4" width="56" height="56" rx="10.5" fill="none" stroke="url(#vlogo-d9b6fc01-frame-stroke)" stroke-width="3.4"/></svg>
+
+<!-- Top-right release version pill -->
+<g>
+  <rect x="311" y="22" width="77" height="22" rx="11" fill="#313244" stroke="#a6e3a1" stroke-width="1"/>
+  <circle cx="323" cy="33" r="3.4" fill="#a6e3a1" opacity="0.45" class="vitrine-fresh-ring"/>
+  <circle cx="323" cy="33" r="3.1" fill="#a6e3a1"/>
+  <text x="332" y="36.5" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#cdd6f4">v0.11.1</text>
+</g>
+
+<!-- Project title and wrapped 4-line description -->
+<text x="100" y="42" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.2" fill="#cdd6f4">Vectorator</text>
+<text x="100" y="68" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#a6adc8">A configurable decorator plugin for Wayfire 🔥</text>
+
+<!-- Clean 1px Surface0 footer separator -->
+<line x1="20" y1="142" x2="388" y2="142" stroke="#313244" stroke-width="1"/>
+
+<!-- Clean 3-part footer: language, stars, release age -->
+<g>
+  <circle cx="24" cy="159" r="4" fill="#f34b7d"/><text x="35" y="163" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#cdd6f4">C++</text>
+  <text x="204" y="163" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#cdd6f4"><tspan fill="#f9e2af">★</tspan> 2</text>
+  <text x="388" y="163" text-anchor="end" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#6c7086">today</text>
+</g>
+</svg>

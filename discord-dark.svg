@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="68" viewBox="0 0 840 68" role="img" aria-label="Wimpy&#39;s World Discord - 155 online, 2,854 members">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1e1e2e"/>
+    <stop offset="100%" stop-color="#181825"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="100%" stop-color="#94e2d5"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f5c2e7"/>
+    <stop offset="25%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="75%" stop-color="#94e2d5"/>
+    <stop offset="100%" stop-color="#a6e3a1"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.34"/>
+    <stop offset="68%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#cba6f7" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#94e2d5" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#94e2d5" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<style>
+  @keyframes vitrine-discord-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    72% { transform: scale(2.25); opacity: 0; }
+    100% { transform: scale(2.25); opacity: 0; }
+  }
+  .vitrine-discord-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-discord-pulse 2.2s ease-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Catppuccin gradient outer border -->
+<rect x="1" y="1" width="838" height="66" rx="12" fill="url(#card-bg)" stroke="url(#cat-accent)" stroke-width="1.5"/>
+
+<!-- Unframed 28x28 Discord Clyde icon in AccentPrimary -->
+<svg x="24" y="20" width="28" height="28" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" fill="#cba6f7"/></svg>
+
+<!-- Community title and tagline -->
+<g>
+  <text x="66" y="30" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="-0.1" fill="#cdd6f4">Wimpy&#39;s World Discord</text>
+  <text x="66" y="49" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#a6adc8">Friendly Linux and open-source community hub</text>
+</g>
+
+<!-- Live AccentGreen presence sonar and Fira Code member telemetry -->
+<g>
+  <circle cx="610.60" cy="26" r="4" fill="#a6e3a1" opacity="0.45" class="vitrine-discord-ring"/>
+  <circle cx="610.60" cy="26" r="3.8" fill="#a6e3a1"/>
+  <text x="621.60" y="30" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="700" fill="#cdd6f4">155 online</text>
+  <text x="621.60" y="49" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500" fill="#a6adc8">2,854 members</text>
+</g>
+
+<!-- Subtle Surface1 divider and Surface0 JOIN badge -->
+<line x1="728" y1="19" x2="728" y2="49" stroke="#45475a" stroke-width="1"/>
+<g>
+  <rect x="744" y="19" width="74" height="30" rx="8" fill="#313244" stroke="#cba6f7" stroke-width="1"/>
+  <text x="781" y="38" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8" fill="#cba6f7">JOIN ↗</text>
+</g>
+</svg>

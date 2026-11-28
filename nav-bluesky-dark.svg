@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="44" viewBox="0 0 168 44" role="img" aria-label="Bluesky">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1e1e2e"/>
+    <stop offset="100%" stop-color="#181825"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="100%" stop-color="#94e2d5"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f5c2e7"/>
+    <stop offset="25%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="75%" stop-color="#94e2d5"/>
+    <stop offset="100%" stop-color="#a6e3a1"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.34"/>
+    <stop offset="68%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#cba6f7" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#94e2d5" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#94e2d5" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<style>
+  @keyframes vitrine-icon-breathe {
+    0%, 100% { opacity: 0.82; }
+    50% { opacity: 1; }
+  }
+  .vitrine-pill-icon {
+    animation: vitrine-icon-breathe 4.4s ease-in-out 0.45s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px platform-accent outer border -->
+<rect x="1" y="1" width="166" height="42" rx="10" fill="url(#card-bg)" stroke="#89b4fa" stroke-width="1.5"/>
+
+<!-- Coupled 20x20 authentic brand icon and 14px Work Sans label -->
+<g class="vitrine-pill-icon">
+  <svg x="38.40" y="12" width="20" height="20" viewBox="0 0 24 24"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026" fill="#89b4fa"/></svg>
+</g>
+<text x="68.40" y="27" text-anchor="start" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="0.2" fill="#cdd6f4">Bluesky</text>
+</svg>

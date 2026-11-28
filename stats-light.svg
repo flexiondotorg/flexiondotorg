@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="98" viewBox="0 0 840 98" role="img" aria-label="GitHub statistics">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="stats-top-clip">
+    <rect x="12" y="0" width="816" height="3.5"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-stats-glint {
+    0% { transform: translateX(-180px); opacity: 0; }
+    12% { opacity: 1; }
+    68% { transform: translateX(860px); opacity: 1; }
+    80%, 100% { transform: translateX(860px); opacity: 0; }
+  }
+  @keyframes vitrine-stat-pulse {
+    0%, 100% { transform: scale(0.88); opacity: 0.55; }
+    50% { transform: scale(1.22); opacity: 1; }
+  }
+  .vitrine-stats-glint {
+    animation: vitrine-stats-glint 5s ease-in-out infinite;
+  }
+  .vitrine-stat-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-stat-pulse 3.6s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Catppuccin gradient outer border -->
+<rect x="1" y="1" width="838" height="96" rx="12" fill="url(#card-bg)" stroke="url(#cat-accent)" stroke-width="1.5"/>
+
+<!-- Bright animated Catppuccin light glint along top edge -->
+<g clip-path="url(#stats-top-clip)">
+  <rect x="0" y="0.25" width="170" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-stats-glint"/>
+</g>
+
+<g>
+  <circle cx="84" cy="22" r="3.4" fill="#df8e1d" class="vitrine-stat-dot" style="animation-delay:0s"/>
+  <text x="84" y="54" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">26,238</text>
+  <text x="84" y="76" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#6c6f85">STARS</text>
+</g><line x1="168" y1="22" x2="168" y2="76" stroke="#bcc0cc" stroke-width="1"/><g>
+  <circle cx="252" cy="22" r="3.4" fill="#40a02b" class="vitrine-stat-dot" style="animation-delay:0.45s"/>
+  <text x="252" y="54" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">49,683</text>
+  <text x="252" y="76" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#6c6f85">COMMITS</text>
+</g><line x1="336" y1="22" x2="336" y2="76" stroke="#bcc0cc" stroke-width="1"/><g>
+  <circle cx="420" cy="22" r="3.4" fill="#8839ef" class="vitrine-stat-dot" style="animation-delay:0.90s"/>
+  <text x="420" y="54" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">2,452</text>
+  <text x="420" y="76" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#6c6f85">PULL REQUESTS</text>
+</g><line x1="504" y1="22" x2="504" y2="76" stroke="#bcc0cc" stroke-width="1"/><g>
+  <circle cx="588" cy="22" r="3.4" fill="#fe640b" class="vitrine-stat-dot" style="animation-delay:1.35s"/>
+  <text x="588" y="54" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">2,237</text>
+  <text x="588" y="76" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#6c6f85">ISSUES</text>
+</g><line x1="672" y1="22" x2="672" y2="76" stroke="#bcc0cc" stroke-width="1"/><g>
+  <circle cx="756" cy="22" r="3.4" fill="#209fb5" class="vitrine-stat-dot" style="animation-delay:1.80s"/>
+  <text x="756" y="54" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">897</text>
+  <text x="756" y="76" text-anchor="middle" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#6c6f85">FOLLOWERS</text>
+</g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="Deb Get">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="card-clip">
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-fresh-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    75% { transform: scale(2.2); opacity: 0; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes vitrine-wave {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.72; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+  @keyframes vitrine-card-glint {
+    0% { transform: translateX(-140px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(430px); opacity: 1; }
+    66%, 100% { transform: translateX(430px); opacity: 0; }
+  }
+  .vitrine-fresh-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-fresh-pulse 2.2s ease-out infinite;
+  }
+  .vitrine-wave-bar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-wave 1.8s ease-in-out infinite;
+  }
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out 0.55s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="#bcc0cc" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#card-clip)">
+  <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
+</g>
+
+<!-- Unframed 64x64 project logo -->
+<svg x="20" y="34" width="64" height="64" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet"><title id="vlogo-9be8a772-debget-title">deb-get</title><rect x="2" y="2" width="60" height="60" rx="14" fill="#E93578" stroke="#B81D59" stroke-width="1.5"/><g id="vlogo-9be8a772-ribbon-and-arrow"><rect x="26" y="3" width="12" height="58" fill="#F472B6"/><path d="M26 3h12v23h9.5L32 45.5 16.5 26H26Z" fill="#FCE7F3"/></g><g id="vlogo-9be8a772-barcode"><rect x="9" y="45" width="15" height="10" rx="1.6" fill="#FFFFFF"/><rect x="11" y="47.2" width="2.2" height="5.6" fill="#374151"/><rect x="14.4" y="47.2" width="1.2" height="5.6" fill="#374151"/><rect x="16.8" y="47.2" width="2.4" height="5.6" fill="#374151"/><rect x="20.4" y="47.2" width="1.4" height="5.6" fill="#374151"/></g><g id="vlogo-9be8a772-swirl" fill="none" stroke="#9D0A3E" stroke-linecap="round"><path d="M47 56.5c-4.5-.8-7.5-4.4-7.5-8.7 0-4.8 3.8-8.3 8.5-8.3 4.3 0 7.3 3 7.3 6.8 0 3.3-2.5 5.6-5.6 5.6-2.7 0-4.5-1.9-4.5-4.2 0-1.9 1.5-3.2 3.3-3.2 1.4 0 2.3.9 2.3 2.1" stroke-width="2.6"/></g></svg>
+
+<!-- Top-right release version pill -->
+<g>
+  <rect x="334" y="22" width="54" height="22" rx="11" fill="#ccd0da" stroke="#bcc0cc" stroke-width="1"/>
+  <text x="361" y="36.5" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#4c4f69">0.4.7</text>
+</g>
+
+<!-- Project title and wrapped 4-line description -->
+<text x="100" y="42" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">Deb Get</text>
+<text x="100" y="68" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">apt-get for .debs published via GitHub or</text><text x="100" y="86" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">direct download 📦</text>
+
+<!-- Clean 1px Surface0 footer separator -->
+<line x1="20" y1="142" x2="388" y2="142" stroke="#ccd0da" stroke-width="1"/>
+
+<!-- Clean 3-part footer: language, stars, release age -->
+<g>
+  <circle cx="24" cy="159" r="4" fill="#89e051"/><text x="35" y="163" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#4c4f69">Shell</text>
+  <text x="204" y="163" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#4c4f69"><tspan fill="#df8e1d">★</tspan> 1.8k</text>
+  <text x="388" y="163" text-anchor="end" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#9ca0b0">5mo ago</text>
+</g>
+</svg>

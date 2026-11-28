@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="138" viewBox="0 0 840 138" role="img" aria-label="GitHub Sponsors - Sponsor on GitHub">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="sponsors-clip">
+    <rect x="1.75" y="1.75" width="836.5" height="134.50" rx="11.25"/>
+  </clipPath>
+  <linearGradient id="sponsors-text-scrim" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#eff1f5" stop-opacity="0.56"/>
+    <stop offset="78%" stop-color="#eff1f5" stop-opacity="0.56"/>
+    <stop offset="100%" stop-color="#eff1f5" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="sponsors-cta-border" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="100%" stop-color="#d20f39"/>
+  </linearGradient>
+  <linearGradient id="sponsors-cta-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ea76cb" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#d20f39" stop-opacity="0.10"/>
+  </linearGradient>
+</defs>
+<style>
+  @keyframes vitrine-heart-rise-a {
+    0% { transform: translateY(138px); opacity: 0; }
+    10% { opacity: 1; }
+    88% { opacity: 1; }
+    100% { transform: translateY(-77.28px); opacity: 0; }
+  }
+  @keyframes vitrine-heart-rise-b {
+    0% { transform: translateY(99.36px); opacity: 0; }
+    10% { opacity: 1; }
+    88% { opacity: 1; }
+    100% { transform: translateY(-115.92px); opacity: 0; }
+  }
+  @keyframes vitrine-heart-rise-c {
+    0% { transform: translateY(63.48px); opacity: 0; }
+    10% { opacity: 1; }
+    88% { opacity: 1; }
+    100% { transform: translateY(-151.80px); opacity: 0; }
+  }
+  @keyframes vitrine-heart-sway-l {
+    0%, 100% { transform: translateX(-6px) rotate(-5deg); }
+    50% { transform: translateX(6px) rotate(5deg); }
+  }
+  @keyframes vitrine-heart-sway-r {
+    0%, 100% { transform: translateX(6px) rotate(5deg); }
+    50% { transform: translateX(-6px) rotate(-5deg); }
+  }
+  @keyframes vitrine-heart-beat {
+    0%, 100% { transform: scale(1); }
+    10% { transform: scale(1.22); }
+    20% { transform: scale(1); }
+    30% { transform: scale(1.15); }
+    44% { transform: scale(1); }
+  }
+  .vitrine-heart-rise-a { animation: vitrine-heart-rise-a 10s linear infinite; }
+  .vitrine-heart-rise-b { animation: vitrine-heart-rise-b 10s linear infinite; }
+  .vitrine-heart-rise-c { animation: vitrine-heart-rise-c 10s linear infinite; }
+  .vitrine-heart-sway-l { animation: vitrine-heart-sway-l 4.2s ease-in-out infinite; }
+  .vitrine-heart-sway-r { animation: vitrine-heart-sway-r 4.2s ease-in-out infinite; }
+  .vitrine-heart-beat {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-heart-beat 2.6s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px neutral Surface1 outer border -->
+<rect x="1" y="1" width="838" height="136" rx="12" fill="url(#card-bg)" stroke="#bcc0cc" stroke-width="1.5"/>
+
+<!-- Upward-drifting Catppuccin balloon hearts clipped to card bounds -->
+<g clip-path="url(#sponsors-clip)" class="vitrine-sponsors-hearts">
+  <g transform="translate(16,107.64)" opacity="0.72">
+    <g class="vitrine-heart-rise-c" style="animation-duration:9.20s;animation-delay:-2.10s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4.20s;animation-delay:-1.10s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.62)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(24,33.12)" opacity="0.58">
+    <g class="vitrine-heart-rise-a" style="animation-duration:11.40s;animation-delay:-7.80s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:4.80s;animation-delay:-2.60s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.46)" fill="#fe640b"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(13,71.76)" opacity="0.66">
+    <g class="vitrine-heart-rise-b" style="animation-duration:8.40s;animation-delay:-5.20s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:3.80s;animation-delay:-0.70s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.50)" fill="#d20f39"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(78,71.76)" opacity="0.18">
+    <g class="vitrine-heart-rise-b" style="animation-duration:12.40s;animation-delay:-3.40s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:5.10s;animation-delay:-1.80s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.78)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(152,33.12)" opacity="0.16">
+    <g class="vitrine-heart-rise-a" style="animation-duration:10.20s;animation-delay:-8.10s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4.40s;animation-delay:-3s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.56)" fill="#8839ef"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(232,107.64)" opacity="0.15">
+    <g class="vitrine-heart-rise-c" style="animation-duration:12.80s;animation-delay:-1.50s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:5.30s;animation-delay:-0.90s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.88)" fill="#d20f39"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(318,71.76)" opacity="0.20">
+    <g class="vitrine-heart-rise-b" style="animation-duration:9.80s;animation-delay:-6.20s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4s;animation-delay:-2.20s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.60)" fill="#fe640b"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(404,33.12)" opacity="0.16">
+    <g class="vitrine-heart-rise-a" style="animation-duration:11.60s;animation-delay:-4.90s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:4.70s;animation-delay:-1.50s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.74)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(482,107.64)" opacity="0.22">
+    <g class="vitrine-heart-rise-c" style="animation-duration:8.80s;animation-delay:-7.10s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:3.90s;animation-delay:-2.80s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.54)" fill="#8839ef"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(552,71.76)" opacity="0.24">
+    <g class="vitrine-heart-rise-b" style="animation-duration:10.60s;animation-delay:-2.80s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:4.50s;animation-delay:-1.20s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.68)" fill="#d20f39"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(602,33.12)" opacity="0.58">
+    <g class="vitrine-heart-rise-a" style="animation-duration:8.60s;animation-delay:-1.20s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:3.70s;animation-delay:-0.50s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.72)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(618,107.64)" opacity="0.72">
+    <g class="vitrine-heart-rise-c" style="animation-duration:7.60s;animation-delay:-4.50s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:3.40s;animation-delay:-1.90s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.52)" fill="#fe640b"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(654,33.12)" opacity="0.62">
+    <g class="vitrine-heart-rise-a" style="animation-duration:9.40s;animation-delay:-6.80s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4.30s;animation-delay:-2.40s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.86)" fill="#d20f39"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(694,107.64)" opacity="0.76">
+    <g class="vitrine-heart-rise-c" style="animation-duration:10.80s;animation-delay:-3.10s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:4.60s;animation-delay:-1.40s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.64)" fill="#8839ef"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(736,71.76)" opacity="0.54">
+    <g class="vitrine-heart-rise-b" style="animation-duration:11.80s;animation-delay:-9.20s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:5s;animation-delay:-3.30s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.96)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(774,33.12)" opacity="0.82">
+    <g class="vitrine-heart-rise-a" style="animation-duration:7.40s;animation-delay:-2.40s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:3.50s;animation-delay:-0.80s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.58)" fill="#d20f39"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(804,107.64)" opacity="0.78">
+    <g class="vitrine-heart-rise-c" style="animation-duration:8.90s;animation-delay:-5.60s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4.10s;animation-delay:-2.10s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.82)" fill="#fe640b"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(822,71.76)" opacity="0.85">
+    <g class="vitrine-heart-rise-b" style="animation-duration:7.80s;animation-delay:-0.90s">
+      <g class="vitrine-heart-sway-r" style="animation-duration:3.60s;animation-delay:-1.30s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.54)" fill="#ea76cb"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(816,33.12)" opacity="0.68">
+    <g class="vitrine-heart-rise-a" style="animation-duration:10s;animation-delay:-7.50s">
+      <g class="vitrine-heart-sway-l" style="animation-duration:4.40s;animation-delay:-2.90s">
+        <path d="M0 -4.5 C-3.2 -9.5,-10.5 -8.5,-10.5 -2.2 C-10.5 3.4,-4.4 6.6,0 10 C4.4 6.6,10.5 3.4,10.5 -2.2 C10.5 -8.5,3.2 -9.5,0 -4.5 Z" transform="scale(0.66)" fill="#8839ef"/>
+      </g>
+    </g>
+  </g>
+</g>
+
+<!-- Soft readability scrim behind left text column -->
+<rect x="24" y="6" width="610" height="126" rx="10" fill="url(#sponsors-text-scrim)"/>
+
+<!-- Left sponsor headline and wrapped sponsor lists -->
+<g class="vitrine-sponsors-text">
+  <text x="34" y="36" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="-0.15" fill="#4c4f69">Enjoy my work?</text>
+  <text x="34" y="58" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">Support ongoing open-source tools, packages, and projects on GitHub.</text>
+  <text x="34" y="79" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#6c6f85"><tspan font-weight="600" fill="#9ca0b0">Past sponsors: </tspan>fredre, jmelahman, da-moon, mmartial, castrojo, roryrjb,</text>
+  <text x="34" y="96" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#6c6f85">sonwh98, casmokey, the-shank, ipkpjersi, AlbanDAVID, Simmonz, CreeperLKF,</text>
+  <text x="34" y="113" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#6c6f85">v-nils, gthelding, edgeform, user8446</text>
+</g>
+
+<!-- Right Sponsor on GitHub call-to-action pill -->
+<g class="vitrine-sponsors-cta">
+  <rect x="628" y="50" width="188" height="38" rx="19" fill="#eff1f5"/>
+  <rect x="628" y="50" width="188" height="38" rx="19" fill="url(#sponsors-cta-fill)" stroke="url(#sponsors-cta-border)" stroke-width="1.5"/>
+  <svg x="647.95" y="61" width="16" height="16" viewBox="0 0 24 24" overflow="visible"><path class="vitrine-heart-beat" d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z" fill="#d20f39"/></svg>
+  <text x="671.95" y="73.50" text-anchor="start" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="0.1" fill="#4c4f69">Sponsor on GitHub</text>
+</g>
+</svg>

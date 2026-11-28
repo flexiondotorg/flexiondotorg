@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="78" viewBox="0 0 198 78" role="img" aria-label="NIX package repository">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1e1e2e"/>
+    <stop offset="100%" stop-color="#181825"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="100%" stop-color="#94e2d5"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#f5c2e7"/>
+    <stop offset="25%" stop-color="#cba6f7"/>
+    <stop offset="50%" stop-color="#89b4fa"/>
+    <stop offset="75%" stop-color="#94e2d5"/>
+    <stop offset="100%" stop-color="#a6e3a1"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.34"/>
+    <stop offset="68%" stop-color="#cba6f7" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#cba6f7" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#cba6f7" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#94e2d5" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#94e2d5" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="host-clip">
+    <rect x="1.75" y="1.75" width="194.5" height="74.5" rx="9.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-host-glint {
+    0% { transform: translateX(-90px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(220px); opacity: 1; }
+    66%, 100% { transform: translateX(220px); opacity: 0; }
+  }
+  .vitrine-host-glint {
+    animation: vitrine-host-glint 6.5s ease-in-out 3.15s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="196" height="76" rx="10" fill="url(#card-bg)" stroke="#45475a" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#host-clip)">
+  <rect x="0" y="1" width="198" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="76" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-host-glint"/>
+</g>
+
+<!-- Unframed 40x40 host logo -->
+<svg x="14" y="20" width="40" height="40" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><title>Nix</title><style>path{fill:#5277C3}@media (prefers-color-scheme:dark){path{fill:#7EBAE4}}</style><path d="M7.352 1.592l-1.364.002L5.32 2.75l1.557 2.713-3.137-.008-1.32 2.34H14.11l-1.353-2.332-3.192-.006-2.214-3.865zm6.175 0l-2.687.025 5.846 10.127 1.341-2.34-1.59-2.765 2.24-3.85-.683-1.182h-1.336l-1.57 2.705-1.56-2.72zm6.887 4.195l-5.846 10.125 2.696-.008 1.601-2.76 4.453.016.682-1.183-.666-1.157-3.13-.008L21.778 8.1l-1.365-2.313zM9.432 8.086l-2.696.008-1.601 2.76-4.453-.016L0 12.02l.666 1.157 3.13.008-1.575 2.71 1.365 2.315L9.432 8.086zM7.33 12.25l-.006.01-.002-.004-1.342 2.34 1.59 2.765-2.24 3.85.684 1.182H7.35l.004-.006h.001l1.567-2.698 1.558 2.72 2.688-.026-.004-.006h.01L7.33 12.25zm2.55 3.93l1.354 2.332 3.192.006 2.215 3.865 1.363-.002.668-1.156-1.557-2.713 3.137.008 1.32-2.34H9.881Z"/></svg>
+
+<!-- Host name, domain subtitle, and Surface0 package count pill -->
+<text x="64" y="27" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.6" fill="#cdd6f4">NIX</text>
+<text x="64" y="42" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9.5" fill="#6c7086">nix.wimpys.world</text>
+
+<g>
+  <rect x="64" y="49" width="60" height="19" rx="9.5" fill="#313244"/>
+  <text x="94" y="62" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="600" fill="#cba6f7">11 pkgs</text>
+</g>
+</svg>

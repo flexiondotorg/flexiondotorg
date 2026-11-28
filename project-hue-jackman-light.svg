@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="Hue Jackman">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="card-clip">
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-fresh-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    75% { transform: scale(2.2); opacity: 0; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes vitrine-wave {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.72; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+  @keyframes vitrine-card-glint {
+    0% { transform: translateX(-140px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(430px); opacity: 1; }
+    66%, 100% { transform: translateX(430px); opacity: 0; }
+  }
+  .vitrine-fresh-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-fresh-pulse 2.2s ease-out infinite;
+  }
+  .vitrine-wave-bar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-wave 1.8s ease-in-out infinite;
+  }
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out 8.80s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="#bcc0cc" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#card-clip)">
+  <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
+</g>
+
+<!-- Unframed 64x64 project logo -->
+<svg x="20" y="34" width="64" height="64" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet"><title id="vlogo-01fe0637-hj-a-title">hue-jackman: dark-slate gamepad with warm left and cool right Chroma light strips</title><defs><linearGradient id="vlogo-01fe0637-hj-a-face" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#334155"/><stop offset="1" stop-color="#111827"/></linearGradient><linearGradient id="vlogo-01fe0637-hj-a-left" x1="20" y1="18" x2="10" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#ff6492"/><stop offset="1" stop-color="#ffd166"/></linearGradient><linearGradient id="vlogo-01fe0637-hj-a-right" x1="44" y1="18" x2="54" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#6ee7b7"/><stop offset=".5" stop-color="#56ccff"/><stop offset="1" stop-color="#b58aff"/></linearGradient></defs><g id="vlogo-01fe0637-hj-a-chassis"><path d="M22 16.5H42C49 16.5 54.5 21 56 27.5L59 45.5C60 51.5 56 56.5 51 56.5C45 56.5 42 51.5 39 44.5C38 42 36 41.5 32 41.5C28 41.5 26 42 25 44.5C22 51.5 19 56.5 13 56.5C8 56.5 4 51.5 5 45.5L8 27.5C9.5 21 15 16.5 22 16.5Z" fill="#0b1120"/><path d="M22 13H42C49 13 54.5 17.5 56 24L59 42C60 48 56 53 51 53C45 53 42 48 39 41C38 38.5 36 38 32 38C28 38 26 38.5 25 41C22 48 19 53 13 53C8 53 4 48 5 42L8 24C9.5 17.5 15 13 22 13Z" fill="url(#vlogo-01fe0637-hj-a-face)" stroke="#64748b" stroke-width="1.5" stroke-linejoin="round"/><path d="M23 16.5H41" fill="none" stroke="#94a3b8" stroke-opacity=".4" stroke-width="1.75" stroke-linecap="round"/></g><g id="vlogo-01fe0637-hj-a-strips" fill="none" stroke-linecap="round"><path d="M20 18.5C15.8 19.2 13.3 21.5 12.7 26L10.7 41" stroke="#0b1120" stroke-width="6.2"/><path d="M20 18.5C15.8 19.2 13.3 21.5 12.7 26L10.7 41" stroke="url(#vlogo-01fe0637-hj-a-left)" stroke-width="4.2"/><path d="M20 18.5C15.8 19.2 13.3 21.5 12.7 26L10.7 41" stroke="#ffffff" stroke-opacity=".4" stroke-width="1.1"/><path d="M44 18.5C48.2 19.2 50.7 21.5 51.3 26L53.3 41" stroke="#0b1120" stroke-width="6.2"/><path d="M44 18.5C48.2 19.2 50.7 21.5 51.3 26L53.3 41" stroke="url(#vlogo-01fe0637-hj-a-right)" stroke-width="4.2"/><path d="M44 18.5C48.2 19.2 50.7 21.5 51.3 26L53.3 41" stroke="#ffffff" stroke-opacity=".4" stroke-width="1.1"/></g><g id="vlogo-01fe0637-hj-a-controls"><path d="M20.5 27.5H27.5M24 24V31" fill="none" stroke="#f8fafc" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="29.5" r="2.2" fill="#f8fafc"/><circle cx="42.5" cy="25.5" r="2.2" fill="#f8fafc"/></g></svg>
+
+<!-- Top-right release version pill -->
+<g>
+  <rect x="317" y="22" width="71" height="22" rx="11" fill="#ccd0da" stroke="#40a02b" stroke-width="1"/>
+  <circle cx="329" cy="33" r="3.4" fill="#40a02b" opacity="0.45" class="vitrine-fresh-ring"/>
+  <circle cx="329" cy="33" r="3.1" fill="#40a02b"/>
+  <text x="338" y="36.5" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#4c4f69">v0.1.0</text>
+</g>
+
+<!-- Project title and wrapped 4-line description -->
+<text x="100" y="42" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">Hue Jackman</text>
+<text x="100" y="68" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">Razer Wolverine V2 Chroma RGB control for</text><text x="100" y="86" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">Linux. Hijack the hues, bub 🎮</text>
+
+<!-- Clean 1px Surface0 footer separator -->
+<line x1="20" y1="142" x2="388" y2="142" stroke="#ccd0da" stroke-width="1"/>
+
+<!-- Clean 3-part footer: language, stars, release age -->
+<g>
+  <circle cx="24" cy="159" r="4" fill="#00add8"/><text x="35" y="163" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#4c4f69">Go</text>
+  <text x="204" y="163" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#4c4f69"><tspan fill="#df8e1d">★</tspan> 1</text>
+  <text x="388" y="163" text-anchor="end" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#9ca0b0">4d ago</text>
+</g>
+</svg>

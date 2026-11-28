@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="182" viewBox="0 0 408 182" role="img" aria-label="Tailor">
+<defs>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#eff1f5"/>
+    <stop offset="100%" stop-color="#e6e9ef"/>
+  </linearGradient>
+  <linearGradient id="cat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="100%" stop-color="#179299"/>
+  </linearGradient>
+  <linearGradient id="cat-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ea76cb"/>
+    <stop offset="25%" stop-color="#8839ef"/>
+    <stop offset="50%" stop-color="#1e66f5"/>
+    <stop offset="75%" stop-color="#179299"/>
+    <stop offset="100%" stop-color="#40a02b"/>
+  </linearGradient>
+  <linearGradient id="cat-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="32%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="68%" stop-color="#8839ef" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="cat-glint" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8839ef" stop-opacity="0"/>
+    <stop offset="28%" stop-color="#8839ef" stop-opacity="0.88"/>
+    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.96"/>
+    <stop offset="72%" stop-color="#179299" stop-opacity="0.88"/>
+    <stop offset="100%" stop-color="#179299" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="card-clip">
+    <rect x="1.75" y="1.75" width="404.5" height="178.5" rx="11.25"/>
+  </clipPath>
+</defs>
+<style>
+  @keyframes vitrine-fresh-pulse {
+    0% { transform: scale(1); opacity: 0.85; }
+    75% { transform: scale(2.2); opacity: 0; }
+    100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes vitrine-wave {
+    0%, 100% { transform: scaleY(0.45); opacity: 0.72; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+  @keyframes vitrine-card-glint {
+    0% { transform: translateX(-140px); opacity: 0; }
+    10% { opacity: 1; }
+    55% { transform: translateX(430px); opacity: 1; }
+    66%, 100% { transform: translateX(430px); opacity: 0; }
+  }
+  .vitrine-fresh-ring {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-fresh-pulse 2.2s ease-out infinite;
+  }
+  .vitrine-wave-bar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: vitrine-wave 1.8s ease-in-out infinite;
+  }
+  .vitrine-card-glint {
+    animation: vitrine-card-glint 6.5s ease-in-out 4.40s infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- Single 1.5px Surface1 outer border -->
+<rect x="1" y="1" width="406" height="180" rx="12" fill="url(#card-bg)" stroke="#bcc0cc" stroke-width="1.5"/>
+
+<!-- Clipped slim 2.5px Catppuccin top bar with staggered top-edge glint -->
+<g clip-path="url(#card-clip)">
+  <rect x="0" y="1" width="408" height="3.25" fill="url(#cat-accent)"/>
+  <rect x="0" y="1.75" width="120" height="2.5" rx="1.25" fill="url(#cat-glint)" class="vitrine-card-glint"/>
+</g>
+
+<!-- Unframed 64x64 project logo -->
+<svg x="20" y="34" width="64" height="64" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet"><title id="vlogo-8c1859d1-tailor-title">Tailor</title><rect x="2" y="2" width="60" height="60" rx="14" fill="#1B2432" stroke="#37475E" stroke-width="1.5"/><path id="vlogo-8c1859d1-stitch-line" d="M12 52c14-1 28-8 40-20" fill="none" stroke="#F5EFE6" stroke-opacity=".55" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/><g id="vlogo-8c1859d1-shears" transform="translate(8 7) scale(1.22)"><path d="M14 27 17.5 19.5 31 3 25 19.5 20 29Z" fill="#B88A44"/><path d="M17.5 19.5 31 3 23 18.5Z" fill="#F0CB78"/><path d="M11 18.5 19 19 37 9 25 21.5Q20 25 12 23Z" fill="#B88A44"/><path d="M11 18.5 19 19 37 9 22 19.5Z" fill="#F0CB78"/><path fill="#B88A44" fill-rule="evenodd" d="M14 20a6 5.5 0 1 0-12 0 6 5.5 0 1 0 12 0Zm-3 0a3 2.7 0 1 1-6 0 3 2.7 0 1 1 6 0Z" transform="rotate(-20 8 20)"/><path fill="#F0CB78" fill-rule="evenodd" d="M22 31a8 5.6 0 1 0-16 0 8 5.6 0 1 0 16 0Zm-3 0a5 2.8 0 1 1-10 0 5 2.8 0 1 1 10 0Z" transform="rotate(-40 14 31)"/><circle cx="20.5" cy="21" r="2.1" fill="#594020"/><circle cx="20.5" cy="21" r=".9" fill="#F5EFE6"/></g></svg>
+
+<!-- Top-right release version pill -->
+<g>
+  <rect x="317" y="22" width="71" height="22" rx="11" fill="#ccd0da" stroke="#40a02b" stroke-width="1"/>
+  <circle cx="329" cy="33" r="3.4" fill="#40a02b" opacity="0.45" class="vitrine-fresh-ring"/>
+  <circle cx="329" cy="33" r="3.1" fill="#40a02b"/>
+  <text x="338" y="36.5" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600" fill="#4c4f69">v0.8.1</text>
+</g>
+
+<!-- Project title and wrapped 4-line description -->
+<text x="100" y="42" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.2" fill="#4c4f69">Tailor</text>
+<text x="100" y="68" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">Ready-to-wear project templates for GitHub</text><text x="100" y="86" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#6c6f85">repositories 👔</text>
+
+<!-- Clean 1px Surface0 footer separator -->
+<line x1="20" y1="142" x2="388" y2="142" stroke="#ccd0da" stroke-width="1"/>
+
+<!-- Clean 3-part footer: language, stars, release age -->
+<g>
+  <circle cx="24" cy="159" r="4" fill="#00add8"/><text x="35" y="163" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#4c4f69">Go</text>
+  <text x="204" y="163" text-anchor="middle" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#4c4f69"><tspan fill="#df8e1d">★</tspan> 39</text>
+  <text x="388" y="163" text-anchor="end" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#9ca0b0">today</text>
+</g>
+</svg>
